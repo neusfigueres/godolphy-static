@@ -5,6 +5,7 @@
 <script>
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
   posthog.init('phc_t3RTrad2yBcZJ9qunm42UXtgxSjqNXe9cEyyw7GcYFYE', {
+    persistence: (function(){try{return localStorage.getItem('gd_consent')==='granted'?'localStorage+cookie':'memory'}catch(e){return 'memory'}})(),
     api_host: 'https://eu.i.posthog.com',
     cross_subdomain_cookie: true,
     capture_pageview: true,
@@ -12,6 +13,7 @@
     defaults: '2026-01-30'
   });
 </script>
+<script src="/assets/tracking.js"></script>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Cookies - Godolphy</title>
   <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
@@ -126,7 +128,7 @@ function toggleMobileNav(){
   <div style="max-width:800px;margin:0 auto;">
     <p style="font-size:13px;color:rgba(2,2,30,.4);margin:0 0 12px;"><a href="/legal/" style="color:rgba(2,2,30,.4);text-decoration:none;">Legal</a> / Política de Cookies</p>
     <h1 class="font-gabarito" style="font-size:40px;font-weight:700;margin:0 0 12px;line-height:1.1;">Política de Cookies</h1>
-    <p style="font-size:15px;color:rgba(2,2,30,.5);margin:0;">Última actualización: 8 de mayo de 2026</p>
+    <p style="font-size:15px;color:rgba(2,2,30,.5);margin:0;">Última actualización: 11 de octubre de 2026</p>
   </div>
 </div>
 
@@ -168,13 +170,15 @@ function toggleMobileNav(){
       </thead>
       <tbody>
         <tr><td>Google Analytics (<code>_ga</code>, <code>_gid</code>, <code>_gat</code>)</td><td>godolphy.com</td><td>Medir el tráfico y comportamiento de los usuarios en la web pública</td><td>Hasta 2 años</td></tr>
-        <tr><td>PostHog (instancia EU)</td><td>dashboard.godolphy.com</td><td>Analizar el uso del dashboard, identificar problemas y mejorar el producto</td><td>Hasta 1 año</td></tr>
+        <tr><td>PostHog (instancia EU)</td><td>godolphy.com / dashboard.godolphy.com</td><td>Analizar el uso de la web y del dashboard, identificar problemas y mejorar el producto. Sin consentimiento, solo se usa memoria de sesión y no se guardan cookies</td><td>Hasta 1 año</td></tr>
       </tbody>
     </table>
     <p>PostHog se utiliza desde su instancia europea (<code>eu.posthog.com</code>), por lo que los datos recopilados se almacenan dentro de la Unión Europea.</p>
 
     <h3>2.3 Cookies de marketing</h3>
-    <p>Actualmente Godolphy <strong>no utiliza cookies de marketing ni publicidad</strong>. En el momento en que se incorporen este tipo de cookies, esta política se actualizará para reflejarlo.</p>
+    <p>Requieren consentimiento. Solo se activan si aceptas las cookies en el banner.</p>
+    <table><tr><th>Cookie</th><th>Servicio</th><th>Finalidad</th><th>Duración</th></tr><tr><td>Meta Pixel (<code>_fbp</code>)</td><td>godolphy.com</td><td>Medir la eficacia de nuestros anuncios en Instagram y Facebook y mostrar publicidad a personas que han visitado la web</td><td>3 meses</td></tr><tr><td>Google (<code>_gcl_au</code>)</td><td>godolphy.com</td><td>Medir las conversiones de los anuncios de Google</td><td>3 meses</td></tr></table>
+    <p>Puedes cambiar tu elección en cualquier momento: <a href="#" onclick="return gdCookies()" style="color:#631cff;font-weight:600;">cambiar preferencias de cookies</a>.</p>
 
     <h2>3. Cookies de terceros</h2>
     <p>Algunas de las cookies anteriores son instaladas por terceros que prestan servicios a Godolphy:</p>
