@@ -72,12 +72,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://www.godolphy.com/sectores/software-para-empresas-de-limpieza/</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
   <!-- Funcionalidades -->
   <url>
@@ -311,12 +305,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.godolphy.com/lampistas-fontaneros-reparaciones-software/</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.godolphy.com/como-contratar-una-manicurista-consejos-requisitos-y-mas/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>yearly</changefreq>
@@ -523,12 +511,6 @@
   </url>
   <url>
     <loc>https://godolphy.com/cuanto-cuesta-software-centro-estetica/</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://godolphy.com/software-gestion-empresa-limpieza-domicilio/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
