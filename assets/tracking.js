@@ -1,7 +1,7 @@
 /* Godolphy · consentimiento de cookies + GA4 + Meta Pixel + evento de lead.
    GA4 y Meta solo guardan cookies si la persona acepta (Consent Mode v2). */
 (function () {
-  var GA_ID = 'G-QP43GQ9V08';
+  var GA_ID = 'G-8JZDWMXKD9';
   var META_PIXEL_ID = ''; // pendiente: ID del Pixel de Meta
   var KEY = 'gd_consent'; // 'granted' | 'denied'
 
