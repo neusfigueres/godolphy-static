@@ -2,7 +2,7 @@
    GA4 y Meta solo guardan cookies si la persona acepta (Consent Mode v2). */
 (function () {
   var GA_ID = 'G-8JZDWMXKD9';
-  var META_PIXEL_ID = ''; // pendiente: ID del Pixel de Meta
+  var META_PIXEL_ID = '1468217345164128'; // Píxel 'Godolphy web' (Godolphy Software LLC)
   var KEY = 'gd_consent'; // 'granted' | 'denied'
 
   function getChoice() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
