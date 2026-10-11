@@ -15,10 +15,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Software para servicios a domicilio — peluquería, estética y limpieza | Godolphy</title>
-  <meta name="description" content="Gestiona reservas, rutas y profesionales para servicios a domicilio. Cálculo automático de desplazamientos con Google Maps." />
+  <meta name="description" content="Gestiona reservas, desplazamientos y profesionales para servicios a domicilio. Cálculo automático de desplazamientos con Google Maps." />
   <link rel="canonical" href="https://www.godolphy.com/funcionalidades/servicios-a-domicilio/" />
   <meta property="og:title" content="Software para servicios a domicilio — peluquería, estética y limpieza | Godolphy" />
-  <meta property="og:description" content="Gestiona reservas, rutas y profesionales para servicios a domicilio. Cálculo automático de desplazamientos con Google Maps." />
+  <meta property="og:description" content="Gestiona reservas, desplazamientos y profesionales para servicios a domicilio. Cálculo automático de desplazamientos con Google Maps." />
   <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -92,18 +92,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Cómo se calculan las rutas?",
+      "name": "¿Cómo se calculan los desplazamientos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mediante la API de Google Maps. El sistema calcula la ruta óptima para cada profesional según las citas del día."
+        "text": "Mediante la API de Google Maps. El sistema calcula el tiempo de desplazamiento entre la cita anterior y la siguiente, y solo ofrece las horas a las que el profesional puede llegar."
       }
     },
     {
       "@type": "Question",
-      "name": "¿El cliente puede ver cuándo llega el profesional?",
+      "name": "¿Qué recibe el cliente al reservar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Puedes enviar la confirmación con la hora estimada de llegada automáticamente."
+        "text": "El cliente recibe una confirmación automática con la hora de la cita y el profesional asignado."
       }
     },
     {
@@ -166,8 +166,8 @@ function toggleMobileNav(){
   <div style="display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;background:rgba(255,255,255,.15);border-radius:20px;margin-bottom:28px;">
     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
   </div>
-  <h1 class="font-gabarito" style="color:#fff;font-size:56px;font-weight:700;margin:0 0 20px;line-height:1.05;">Gestión de servicios a domicilio — Rutas, reservas y cobros automáticos</h1>
-  <p style="color:rgba(255,255,255,.85);font-size:20px;line-height:1.6;max-width:680px;margin:0 auto;">Flexibiliza los servicios tanto en el local como a domicilio. Organiza a tu equipo, gestiona rutas y ofrece la mejor experiencia a los clientes sin importar dónde estén.</p>
+  <h1 class="font-gabarito" style="color:#fff;font-size:56px;font-weight:700;margin:0 0 20px;line-height:1.05;">Gestión de servicios a domicilio — Reservas, desplazamientos y cobros automáticos</h1>
+  <p style="color:rgba(255,255,255,.85);font-size:20px;line-height:1.6;max-width:680px;margin:0 auto;">Flexibiliza los servicios tanto en el local como a domicilio. Organiza a tu equipo, controla los desplazamientos y ofrece la mejor experiencia a los clientes sin importar dónde estén.</p>
   <div style="margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
     <a href="/lista-de-espera/" style="background:#EEFE3A;color:#02021e;font-size:16px;font-weight:700;padding:14px 36px;border-radius:20px;text-decoration:none;">Apúntate a la lista de espera</a>
     
@@ -193,7 +193,7 @@ function toggleMobileNav(){
   <div class="feat-content rev">
     <div class="feat-text">
       <h2>Los clientes reservan el servicio a domicilio online 24/7.</h2>
-      <p>Tus clientes pueden reservar un servicio a domicilio desde tu web, WhatsApp o código QR a cualquier hora del día. El sistema muestra la disponibilidad real de los profesionales en movilidad y confirma la reserva automáticamente con todos los detalles: dirección, profesional asignado y hora estimada de llegada.</p>
+      <p>Tus clientes pueden reservar un servicio a domicilio desde tu web, Instagram o Google a cualquier hora del día. La dirección se valida con Google y solo se aceptan reservas dentro de tu zona. El sistema muestra la disponibilidad real de los profesionales en movilidad y confirma la reserva automáticamente con la dirección, el profesional asignado y la hora.</p>
     </div>
     <img src="img/s2-reserva-online.png" alt="Reservas online para servicios a domicilio" style="max-height:500px;width:auto;display:block;margin:0 auto;" loading="lazy" />
   </div>
@@ -204,9 +204,9 @@ function toggleMobileNav(){
   <div class="feat-content">
     <div class="feat-text">
       <h2>Configura zonas de cobertura y precios por desplazamiento.</h2>
-      <p>Define las zonas donde ofreces servicio a domicilio (por ejemplo, en un radio de X km desde tu local) y establece tarifas diferenciadas por desplazamiento. El sistema aplica automáticamente el precio correcto según la dirección del cliente, evitando confusiones y garantizando rentabilidad.</p>
-      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Zonas por radio, código postal o barrios específicos.</span></div>
-      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Recargo automático por desplazamiento configurable.</span></div>
+      <p>Define el radio en km en el que trabaja cada profesional y el precio por km de desplazamiento. El sistema calcula automáticamente el coste según la dirección del cliente y lo suma al total, sin que tengas que calcular nada a mano.</p>
+      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Radio en km por profesional, visible en el mapa.</span></div>
+      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Precio por km y recargo según el tipo de ubicación (hotel, hospital, otros).</span></div>
     </div>
     <div style="border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(2,2,30,.1);"><img src="img/s3-zonas-cobertura.png" alt="Configurar zonas de cobertura y precios" style="width:100%;display:block;" loading="lazy" /></div>
   </div>
@@ -227,10 +227,10 @@ function toggleMobileNav(){
 <section class="feat-section">
   <div class="feat-content">
     <div class="feat-text">
-      <h2>Cálculo de distancia a pie o en transporte público.</h2>
-      <p>Gracias a la integración con Google Maps podrás marcar si el profesional se desplaza en transporte público, privado o a pie, y así los tiempos se calcularán perfectamente para que no tengas retrasos.</p>
+      <h2>Desplazamiento en coche o transporte público <span style="display:inline-block;background:#EEFE3A;color:#02021e;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;vertical-align:middle;">PRÓXIMAMENTE</span></h2>
+      <p>Muy pronto podrás indicar si cada profesional se desplaza en coche o en transporte público, y los tiempos de trayecto se calcularán según su medio de transporte.</p>
     </div>
-    <img src="img/s5-google-maps.png" alt="Cálculo de distancia a pie o en transporte público" style="width:100%;display:block;" loading="lazy" />
+    <img src="img/s5-google-maps.png" alt="Desplazamiento en coche o transporte público" style="width:100%;display:block;" loading="lazy" />
   </div>
 </section>
 
@@ -251,24 +251,24 @@ function toggleMobileNav(){
 <section style="background:#fff;padding:80px 40px;">
   <div style="max-width:780px;margin:0 auto;">
     <h2 style="font-family:'Gabarito',sans-serif;font-size:32px;font-weight:700;color:#02021e;margin:0 0 28px;line-height:1.2;">Software para servicios a domicilio — Peluquería, estética y limpieza</h2>
-    <p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Ofrecer <strong>servicios a domicilio de peluquería</strong> o estética implica coordinar profesionales, desplazamientos, horarios y cobros de forma simultánea. El módulo de servicios a domicilio de Godolphy centraliza todo en un panel.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Tus clientes reservan el servicio a domicilio igual que uno en el centro: eligen profesional, hora y dirección. El sistema calcula automáticamente la ruta mediante Google Maps y carga la dirección en la agenda del profesional.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">La <strong>gestión de rutas para servicios a domicilio</strong> permite al profesional ver el orden óptimo de sus visitas del día desde su móvil. Tú como administrador ves en tiempo real dónde está cada miembro del equipo y cuándo llegará al siguiente cliente.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Los cobros también se gestionan desde Godolphy: depósito al reservar, pago completo o pago a la entrega. Al finalizar el servicio se genera la factura automáticamente.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0;">Compatible con peluquería a domicilio, estética, masajes, limpieza y cualquier tipo de servicio desplazado. Prueba gratis 30 días.</p>
+    <p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Ofrecer <strong>servicios a domicilio de peluquería</strong> o estética implica coordinar profesionales, desplazamientos, horarios y cobros de forma simultánea. El módulo de servicios a domicilio de Godolphy centraliza todo en un panel.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Tus clientes reservan el servicio a domicilio igual que uno en el centro: eligen profesional, hora y dirección. El sistema calcula el desplazamiento con Google Maps y carga la dirección en la agenda del profesional.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">La <strong>gestión de servicios a domicilio</strong> tiene en cuenta el tiempo de desplazamiento entre citas, así que solo se ofrecen horas a las que el profesional puede llegar. Además, puedes aplicar un recargo según el tipo de ubicación: hotel, hospital u otros.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Los cobros también se gestionan desde Godolphy: depósito al reservar o pago completo, y el resto se cobra automáticamente el día de la cita. El dinero llega directo a tu cuenta de Stripe.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0;">Ideal para peluquería, estética, maquillaje de bodas y eventos, manicura y masajes a domicilio. Prueba gratis 30 días.</p>
   </div>
 </section>
 
 <!-- FAQ section -->
 <section style="background:#fff;padding:96px 40px;"><div style="max-width:780px;margin:0 auto;"><div style="text-align:center;margin-bottom:56px;"><h2 class="font-gabarito" style="background:linear-gradient(90deg,#9B4FE8,#631cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:42px;font-weight:700;margin:0;">Preguntas frecuentes</h2></div>
-<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Cómo se calculan las rutas?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Mediante la API de Google Maps. El sistema calcula la ruta óptima para cada profesional según las citas del día.</p></div></div>
-<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿El cliente puede ver cuándo llega el profesional?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Puedes enviar la confirmación con la hora estimada de llegada automáticamente.</p></div></div>
+<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Cómo se calculan los desplazamientos?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Mediante la API de Google Maps. El sistema calcula el tiempo de desplazamiento entre la cita anterior y la siguiente, y solo ofrece las horas a las que el profesional puede llegar.</p></div></div>
+<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Qué recibe el cliente al reservar?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">El cliente recibe una confirmación automática con la hora de la cita y el profesional asignado.</p></div></div>
 <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Funciona para empresas de limpieza?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Sí. Godolphy está diseñado para cualquier servicio a domicilio: peluquería, estética, limpieza, técnicos de campo y más.</p></div></div>
 </div></section>
 <script>function toggleFaq(btn){var body=btn.nextElementSibling;var icon=btn.querySelector(".faq-icon");body.classList.toggle("open");icon.classList.toggle("open");}</script>
 <section style="background:#fff;padding:80px 40px;">
   <!-- SEO_TEXT_BLOCK -->
   <div style="max-width:780px;margin:0 auto;">
-    <h2 class="font-gabarito" style="font-size:32px;font-weight:700;color:#02021e;margin:0 0 24px;">Software para servicios a domicilio — Rutas inteligentes y reservas automáticas</h2>
-    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">Ofrecer servicios de peluquería, estética o cuidado personal a domicilio implica coordinar desplazamientos, tiempos de viaje y disponibilidad de profesionales en tiempo real. Godolphy resuelve este reto con un módulo específico para negocios a domicilio que integra la planificación de rutas directamente con el calendario de reservas. La <a href="/funcionalidades/geolocalizacion-equipo/" style="color:#631cff;text-decoration:none;font-weight:600;">geolocalización del equipo en tiempo real</a> te permite saber dónde está cada profesional y asignar la siguiente cita al que esté más cerca, optimizando los desplazamientos y reduciendo tiempos muertos entre servicio y servicio.</p>
-    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">Los clientes reservan igual que si acudieran al salón: a través del <a href="/funcionalidades/reservas-online/" style="color:#631cff;text-decoration:none;font-weight:600;">sistema de reservas online</a> con su dirección, el servicio que necesitan y el profesional preferido. El sistema valida automáticamente si el profesional puede llegar a tiempo según su ubicación actual y la duración del servicio anterior. Una vez confirmada la reserva, el cliente recibe la confirmación y los recordatorios habituales, y el profesional ve el itinerario del día actualizado en su aplicación móvil.</p>
-    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0;">Gestionar un equipo itinerante sin las herramientas adecuadas genera confusión, retrasos y clientes insatisfechos. Godolphy elimina esa fricción al centralizar en un solo lugar la agenda, las rutas, los pagos y la comunicación con el cliente. Si además ofreces servicios a empresas o tienes varios profesionales en ruta simultáneamente, el panel de control te da una visión global de todas las operaciones para intervenir rápidamente ante cualquier imprevisto.</p>
+    <h2 class="font-gabarito" style="font-size:32px;font-weight:700;color:#02021e;margin:0 0 24px;">Software para servicios a domicilio — Desplazamientos calculados y reservas automáticas</h2>
+    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">Ofrecer servicios de peluquería, estética o cuidado personal a domicilio implica coordinar desplazamientos, tiempos de viaje y disponibilidad de profesionales. Godolphy resuelve este reto con un módulo específico para negocios a domicilio que integra el cálculo de desplazamientos directamente en el calendario de reservas: cada profesional tiene su radio de trabajo, el precio por km se aplica solo y nunca se ofrece una hora a la que no se pueda llegar.</p>
+    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">Los clientes reservan igual que si acudieran al salón: a través del <a href="/funcionalidades/reservas-online/" style="color:#631cff;text-decoration:none;font-weight:600;">sistema de reservas online</a> con su dirección, el servicio que necesitan y el profesional preferido. El sistema valida automáticamente si el profesional puede llegar a tiempo según la dirección y la duración de la cita anterior. Una vez confirmada la reserva, el cliente recibe la confirmación por email y el profesional ve la cita con la dirección en su agenda.</p>
+    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0;">Gestionar un equipo itinerante sin las herramientas adecuadas genera confusión, retrasos y clientes insatisfechos. Godolphy elimina esa fricción al centralizar en un solo lugar la agenda, los desplazamientos, los pagos y la comunicación con el cliente. Si tienes varios profesionales a domicilio, el calendario te da una visión global de todas las citas del día.</p>
   </div>
 </section>
 </main>

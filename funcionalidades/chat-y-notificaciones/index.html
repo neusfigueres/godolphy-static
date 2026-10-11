@@ -96,7 +96,7 @@
       "name": "¿Cuándo se envía el recordatorio de WhatsApp?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Por defecto se envía 24 horas antes de la cita. Puedes configurar el momento exacto del envío."
+        "text": "Se envía automáticamente 24 horas antes de la cita."
       }
     },
     {
@@ -112,7 +112,7 @@
       "name": "¿El cliente puede confirmar la cita desde el WhatsApp?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. El cliente puede confirmar o cancelar la cita respondiendo al mensaje de WhatsApp, y la agenda se actualiza automáticamente."
+        "text": "Sí. El mensaje incluye un botón “Confirmo” para que la clienta confirme su asistencia."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "¿También se envían confirmaciones cuando el cliente reserva?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Al reservar el cliente recibe confirmación inmediata por WhatsApp y email. También recibes un aviso tú como administrador."
+        "text": "Sí. Al reservar, la clienta recibe la confirmación inmediata por email, y tú y el profesional recibís un aviso."
       }
     }
   ]
@@ -176,7 +176,7 @@ function toggleMobileNav(){
     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </div>
   <h1 class="font-gabarito" style="color:#fff;font-size:56px;font-weight:700;margin:0 0 20px;line-height:1.05;">Recordatorios automáticos por WhatsApp y email para citas — Sin no-shows</h1>
-  <p style="color:rgba(255,255,255,.85);font-size:20px;line-height:1.6;max-width:680px;margin:0 auto;">Envía notificaciones automáticas vía email y WhatsApp para recordar las citas a los clientes y comunícate con ellos directamente.</p>
+  <p style="color:rgba(255,255,255,.85);font-size:20px;line-height:1.6;max-width:680px;margin:0 auto;">Envía notificaciones automáticas vía email y WhatsApp para recordar las citas a los clientes y que confirmen su asistencia con un clic.</p>
   <div style="margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
     <a href="/lista-de-espera/" style="background:#EEFE3A;color:#02021e;font-size:16px;font-weight:700;padding:14px 36px;border-radius:20px;text-decoration:none;">Apúntate a la lista de espera</a>
     
@@ -189,9 +189,9 @@ function toggleMobileNav(){
   <div class="feat-content">
     <div class="feat-text">
       <h2>Envía recordatorios automáticos vía WhatsApp e email.</h2>
-      <p>Olvídate de las tareas manuales y del tiempo perdido en llamadas. Nuestro sistema envía automáticamente confirmaciones, recordatorios de citas y notificaciones de cancelación a través de WhatsApp y email. Así, tus clientes estarán siempre informados y tu equipo podrá enfocarse en lo que realmente importa.</p>
+      <p>Olvídate de las tareas manuales y del tiempo perdido en llamadas. Nuestro sistema envía automáticamente por email la confirmación, los cambios y las cancelaciones a la clienta, al profesional y a ti, y un recordatorio por WhatsApp 24 horas antes de la cita. Así, tus clientes estarán siempre informados y tu equipo podrá enfocarse en lo que realmente importa.</p>
       <h3>Personaliza tus mensajes</h3>
-      <p>Adapta el contenido, el momento y la frecuencia de los recordatorios según las necesidades de tu negocio. Incluye detalles personalizados como la hora de la cita, el nombre del profesional asignado o cualquier información relevante para que tus clientes no olviden su compromiso.</p>
+      <p>Cada mensaje incluye la hora de la cita, el servicio y el profesional asignado, para que tus clientes no olviden su compromiso. Con el recordatorio de WhatsApp, la clienta confirma su asistencia con un solo botón.</p>
       <h3>Aumenta tus ingresos</h3>
       <p>Al mejorar la asistencia de tus clientes, reducirás las citas perdidas y maximizarás la ocupación de tu agenda. Esto se traduce directamente en un aumento de los ingresos para tu negocio.</p>
     </div>
@@ -203,9 +203,9 @@ function toggleMobileNav(){
 <section class="feat-section alt">
   <div class="feat-content rev">
     <div class="feat-text">
-      <h2>Chat directo vía WhatsApp con tus clientes.</h2>
-      <p>En un mundo donde la comunicación rápida y efectiva es clave, poder contactarte directamente a través de WhatsApp es una ventaja competitiva que no puedes ignorar. Con nuestra herramienta, podrás clicar dentro del perfil del cliente e iniciar una comunicación mediante WhatsApp Web de manera instantánea y sin complicaciones.</p>
-      <p>El chat directo vía WhatsApp no solo simplifica la interacción, sino que también te permite ofrecer un servicio al cliente excepcional. Ya sea para responder preguntas frecuentes, confirmar citas o gestionar pedidos, esta herramienta se convierte en un aliado estratégico para tu negocio.</p>
+      <h2>Botón de WhatsApp en tu página de reservas.</h2>
+      <p>Tus clientas pueden escribirte por WhatsApp directamente desde tu página de reservas si tienen alguna duda antes de reservar. Si prefieres no mostrarlo, puedes ocultar el botón.</p>
+      <p>Así resuelves dudas rápidas sin perder reservas y sin que tus clientas tengan que buscar tu número.</p>
     </div>
     <img src="img/s2-chat-whatsapp.png" alt="Chat directo vía WhatsApp" style="width:100%;display:block;" loading="lazy" />
   </div>
@@ -216,10 +216,10 @@ function toggleMobileNav(){
   <div class="feat-content">
     <div class="feat-text">
       <h2>Notificaciones personalizadas con tu marca.</h2>
-      <p>Todas las comunicaciones automáticas que salen de Godolphy pueden llevar el logo y los colores de tu negocio. Crea una experiencia de comunicación profesional y coherente con tu identidad de marca, desde la confirmación de reserva hasta el recordatorio de la cita.</p>
-      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Añade tu logo y colores en el widget de reservas y comunicaciones.</span></div>
-      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Personaliza el tono y el texto de cada tipo de notificación.</span></div>
-      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Diferénciate con mensajes que reflejan la personalidad de tu negocio.</span></div>
+      <p>Tu página de reservas lleva el logo y los colores de tu negocio, y las comunicaciones salen con su nombre. Una experiencia profesional y coherente con tu marca, desde la reserva hasta el recordatorio de la cita.</p>
+      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Logo y colores de tu marca en la página de reservas.</span></div>
+      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>El nombre de tu negocio en cada mensaje.</span></div>
+      <div class="bullet"><svg width="18" height="18" viewBox="0 0 20 20" fill="#631cff"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Sin marcas de terceros ni marketplace.</span></div>
     </div>
     <img src="img/s3-notificaciones-marca.png" alt="Notificaciones personalizadas con tu marca" style="max-height:500px;width:auto;display:block;margin:0 auto;" loading="lazy" />
   </div>
@@ -232,25 +232,25 @@ function toggleMobileNav(){
 <section style="background:#fff;padding:80px 40px;">
   <div style="max-width:780px;margin:0 auto;">
     <h2 style="font-family:'Gabarito',sans-serif;font-size:32px;font-weight:700;color:#02021e;margin:0 0 28px;line-height:1.2;">Recordatorios automáticos que reducen las citas perdidas</h2>
-    <p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Cada cita perdida es dinero que no entra. El <strong>recordatorio de WhatsApp para citas</strong> de Godolphy se envía automáticamente 24 horas antes de cada reserva para que el cliente no se olvide. Sin que tengas que hacer nada.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Las <strong>notificaciones automáticas para peluquería</strong> incluyen confirmación de reserva al instante, recordatorio previo a la cita y aviso de cancelación si el cliente anula. Todo por WhatsApp y email, con tu nombre y logo de marca.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">El <strong>recordatorio de cita automático</strong> reduce las ausencias de forma significativa.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">El cliente puede confirmar o cancelar respondiendo al propio WhatsApp, y la agenda se actualiza automáticamente. Si cancela, el sistema puede ofrecer el hueco automáticamente a clientes en lista de espera.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0;">Para <strong>reducir ausencias en salón</strong> no hay nada más eficaz que un buen sistema de recordatorios. Incluido en todos los planes de Godolphy sin coste adicional. Prueba gratis 30 días.</p>
+    <p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Cada cita perdida es dinero que no entra. El <strong>recordatorio de WhatsApp para citas</strong> de Godolphy se envía automáticamente 24 horas antes de cada reserva para que el cliente no se olvide. Sin que tengas que hacer nada.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">Las <strong>notificaciones automáticas para peluquería</strong> incluyen confirmación de reserva al instante, recordatorio previo a la cita y aviso de cancelación si el cliente anula. Por email, más el recordatorio por WhatsApp, con el nombre de tu negocio.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">El <strong>recordatorio de cita automático</strong> reduce las ausencias de forma significativa.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0 0 20px;">La clienta confirma su asistencia con el botón “Confirmo” del propio WhatsApp.</p><p style="color:rgba(2,2,30,.7);font-size:16px;line-height:1.75;margin:0;">Para <strong>reducir ausencias en salón</strong> no hay nada más eficaz que un buen sistema de recordatorios. Incluido en todos los planes de Godolphy sin coste adicional. Prueba gratis 30 días.</p>
   </div>
 </section>
 
 <!-- FAQ section -->
 <section style="background:#fff;padding:96px 40px;"><div style="max-width:780px;margin:0 auto;"><div style="text-align:center;margin-bottom:56px;"><h2 class="font-gabarito" style="background:linear-gradient(90deg,#9B4FE8,#631cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:42px;font-weight:700;margin:0;">Preguntas frecuentes</h2></div>
-<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Cuándo se envía el recordatorio de WhatsApp?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Por defecto se envía 24 horas antes de la cita. Puedes configurar el momento exacto del envío.</p></div></div>
+<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Cuándo se envía el recordatorio de WhatsApp?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Se envía automáticamente 24 horas antes de la cita.</p></div></div>
 <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Tiene coste adicional el WhatsApp?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">No. El recordatorio de WhatsApp previo a la cita está incluido en todos los planes sin coste adicional.</p></div></div>
-<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿El cliente puede confirmar la cita desde el WhatsApp?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Sí. El cliente puede confirmar o cancelar la cita respondiendo al mensaje de WhatsApp, y la agenda se actualiza automáticamente.</p></div></div>
-<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿También se envían confirmaciones cuando el cliente reserva?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Sí. Al reservar el cliente recibe confirmación inmediata por WhatsApp y email. También recibes un aviso tú como administrador.</p></div></div>
+<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿El cliente puede confirmar la cita desde el WhatsApp?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Sí. El mensaje incluye un botón “Confirmo” para que la clienta confirme su asistencia.</p></div></div>
+<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿También se envían confirmaciones cuando el cliente reserva?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Sí. Al reservar, la clienta recibe la confirmación inmediata por email, y tú y el profesional recibís un aviso.</p></div></div>
 </div></section>
 <script>function toggleFaq(btn){var body=btn.nextElementSibling;var icon=btn.querySelector(".faq-icon");body.classList.toggle("open");icon.classList.toggle("open");}</script>
 <section style="background:#fff;padding:80px 40px;">
   <!-- SEO_TEXT_BLOCK -->
   <div style="max-width:780px;margin:0 auto;">
     <h2 class="font-gabarito" style="font-size:32px;font-weight:700;color:#02021e;margin:0 0 24px;">Recordatorios automáticos que reducen las citas perdidas</h2>
-    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">Cada cita perdida es dinero que no entra y un hueco difícil de rellenar a última hora. Godolphy automatiza los recordatorios por WhatsApp y correo electrónico para que tus clientes no olviden sus citas en la peluquería o el centro de estética. Puedes configurar cuándo se envía cada recordatorio —24 horas antes, 2 horas antes o ambos— y personalizar el mensaje con el nombre del cliente, el servicio y el profesional asignado. Todo conectado con las <a href="/funcionalidades/reservas-online/" style="color:#631cff;text-decoration:none;font-weight:600;">reservas online</a> para que la información sea siempre exacta.</p>
-    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">El sistema de notificaciones va más allá de los simples recordatorios. Godolphy también avisa a los clientes cuando una cita ha sido modificada o cancelada, y envía confirmaciones instantáneas en cuanto se realiza una nueva reserva. Así reduces las llamadas entrantes al salón, liberas tiempo en recepción y ofreces una comunicación más ágil y profesional que la competencia. Además, los mensajes automatizados pueden activarse también para campañas de <a href="/funcionalidades/fidelizacion-ai/" style="color:#631cff;text-decoration:none;font-weight:600;">fidelización automática con IA</a>, multiplicando su impacto.</p>
-    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0;">Configurar las notificaciones en Godolphy no requiere conocimientos técnicos. Desde el panel de administración, defines las plantillas de mensaje, los canales preferidos y las reglas de envío en pocos pasos. El historial de comunicaciones queda registrado en la ficha de cada cliente, lo que te permite ver qué mensajes ha recibido, cuándo y si ha respondido. Una solución completa para mantener tu agenda llena y tus clientes bien informados en todo momento.</p>
+    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">Cada cita perdida es dinero que no entra y un hueco difícil de rellenar a última hora. Godolphy automatiza los recordatorios por WhatsApp y correo electrónico para que tus clientes no olviden sus citas en la peluquería o el centro de estética. El recordatorio se envía 24 horas antes e incluye el nombre del cliente, el servicio y el profesional asignado. Todo conectado con las <a href="/funcionalidades/reservas-online/" style="color:#631cff;text-decoration:none;font-weight:600;">reservas online</a> para que la información sea siempre exacta.</p>
+    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0 0 20px;">El sistema de notificaciones va más allá de los simples recordatorios. Godolphy también avisa a los clientes cuando una cita ha sido modificada o cancelada, y envía confirmaciones instantáneas en cuanto se realiza una nueva reserva. Así reduces las llamadas entrantes al salón, liberas tiempo en recepción y ofreces una comunicación más ágil y profesional que la competencia. Y combinado con la <a href="/funcionalidades/fidelizacion-ai/" style="color:#631cff;text-decoration:none;font-weight:600;">fidelización con IA</a>, sabrás también qué clientas están en riesgo de no volver.</p>
+    <p style="color:rgba(2,2,30,.75);font-size:17px;line-height:1.75;margin:0;">Configurar las notificaciones en Godolphy no requiere conocimientos técnicos. Los emails y el recordatorio se activan solos con cada reserva, sin configurar nada. Una solución completa para mantener tu agenda llena y tus clientes bien informados en todo momento.</p>
   </div>
 </section>
 </main>
