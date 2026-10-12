@@ -327,28 +327,38 @@ function toggleMobileNav(){
   </div>
 
   <script>
+  // Alta → ActiveCampaign, formulario 11 "excel facturación plantilla 2" (lista "Inbound - descarga contenidos")
+  function plantillaDone(){
+    document.getElementById('plantilla-form-wrapper').style.display='none';
+    document.getElementById('plantilla-thanks').style.display='block';
+    if(!window._gdLeadSent && window.gdTrackLead){ window._gdLeadSent=true; window.gdTrackLead({form:'plantilla-facturacion'}); }
+  }
+  window._show_thank_you=function(){ plantillaDone(); };
+  window._show_error=function(id,message){
+    var btn=document.getElementById('pf-submit');
+    btn.disabled=false; btn.textContent='Empieza ahora — Es gratis';
+    var el=document.getElementById('pf-error');
+    if(!el){ el=document.createElement('p'); el.id='pf-error'; el.style.cssText='color:#dc2626;font-size:13px;text-align:center;margin:8px 0 0;'; btn.parentNode.insertBefore(el,btn.nextSibling); }
+    el.textContent=message||'Ha ocurrido un error. Inténtalo de nuevo.';
+  };
   function handlePlantillaSubmit(e){
     e.preventDefault();
     var btn=document.getElementById('pf-submit');
     if(btn.disabled)return false;
+    if(document.getElementById('pf-website').value){ plantillaDone(); return false; } // honeypot
     btn.disabled=true;
     btn.textContent='Enviando...';
-    var params=new URLSearchParams();
-    params.append('nombre',document.getElementById('pf-nombre').value);
-    params.append('email',document.getElementById('pf-email').value);
-    params.append('negocio',document.getElementById('pf-negocio').value);
-    params.append('consentimiento','si');
-    params.append('pagina',location.pathname);
-    params.append('website',document.getElementById('pf-website').value);
-    fetch('https://script.google.com/macros/s/AKfycbwGo8wz6_xvfoZhj9u8Ug6aHWXLE9FjSBdEdLH96z0MVuqc3l_zLdU7PRWptRrL8c8/exec',{
-      method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:params.toString()
-    }).then(function(){
-      document.getElementById('plantilla-form-wrapper').style.display='none';
-      document.getElementById('plantilla-thanks').style.display='block';
-    }).catch(function(){
-      document.getElementById('plantilla-form-wrapper').style.display='none';
-      document.getElementById('plantilla-thanks').style.display='block';
-    });
+    var q=new URLSearchParams();
+    q.append('u','11'); q.append('f','11'); q.append('s',''); q.append('c','0'); q.append('m','0'); q.append('act','sub'); q.append('v','2');
+    q.append('firstname',document.getElementById('pf-nombre').value.trim());
+    q.append('email',document.getElementById('pf-email').value.trim());
+    var utm=window.gdGetUtm?window.gdGetUtm():{};
+    [['14','utm_source'],['15','utm_medium'],['16','utm_campaign'],['17','utm_content'],['18','utm_term']].forEach(function(x){ if(utm[x[1]]) q.append('field['+x[0]+']',utm[x[1]]); });
+    q.append('jsonp','true');
+    var sc=document.createElement('script');
+    sc.src='https://godolphy.activehosted.com/proc.php?'+q.toString();
+    document.head.appendChild(sc);
+    setTimeout(function(){ if(document.getElementById('plantilla-thanks').style.display!=='block' && !document.getElementById('pf-error')) plantillaDone(); },6000);
     return false;
   }
   </script>
