@@ -413,56 +413,7 @@
   <div style="position:absolute;inset:0;background:linear-gradient(to right,#fff 0%,transparent 18%,transparent 82%,#fff 100%);pointer-events:none;"></div>
 </div>
 
-<!-- ═══════════════════════════════════════ TESTIMONIALS ═══════════════════════════════════════ -->
-<section style="background:#fff;padding:95px 40px 100px;">
-  <div style="max-width:1320px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:48px;">
-      <h3 class="font-gabarito" style="color:#331378;font-size:60px;line-height:72px;font-weight:600;margin:0;">La confianza de nuestros<br>clientes</h3>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
 
-      <!-- Card 1 -->
-      <div style="background:#faf8fb;border-radius:16px;padding:32px;">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Neus Figueres" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;" />
-          <div>
-            <p style="font-weight:600;font-size:16px;color:#02021e;margin:0 0 2px;">Neus Figueres</p>
-            <p style="font-size:13px;color:rgba(2,2,30,.6);margin:0;">CEO Orgasmi</p>
-          </div>
-        </div>
-        <div style="color:#EEFE3A;font-size:18px;margin-bottom:12px;">★★★★★</div>
-        <p style="font-size:15px;line-height:24px;color:rgba(2,2,30,.8);margin:0;">"Hemos mejorado muchísimo el tiempo de transporte entre servicio y aumentado el número de servicios diarios por profesional. La experiencia del cliente ha mejorado notablemente."</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div style="background:#faf8fb;border-radius:16px;padding:32px;">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Silvia Gonzalo" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;" />
-          <div>
-            <p style="font-weight:600;font-size:16px;color:#02021e;margin:0 0 2px;">Silvia Gonzalo</p>
-            <p style="font-size:13px;color:rgba(2,2,30,.6);margin:0;">Terapeuta</p>
-          </div>
-        </div>
-        <div style="color:#EEFE3A;font-size:18px;margin-bottom:12px;">★★★★★</div>
-        <p style="font-size:15px;line-height:24px;color:rgba(2,2,30,.8);margin:0;">"Mis clientes pueden agendar citas y cambiar las horas todo dentro de la política y sin tener que llamarme. He ganado en tranquilidad y mis clientes están mucho más satisfechos."</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div style="background:#faf8fb;border-radius:16px;padding:32px;">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ricardo Alemany" style="width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;" />
-          <div>
-            <p style="font-weight:600;font-size:16px;color:#02021e;margin:0 0 2px;">Ricardo Alemany</p>
-            <p style="font-size:13px;color:rgba(2,2,30,.6);margin:0;">Businessman</p>
-          </div>
-        </div>
-        <div style="color:#EEFE3A;font-size:18px;margin-bottom:12px;">★★★★★</div>
-        <p style="font-size:15px;line-height:24px;color:rgba(2,2,30,.8);margin:0;">"Las rutas de mis empleados son mucho más óptimas, ellos mismos pueden comunicarse con los clientes y ofrecer una mejor experiencia de trabajo."</p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════════════════════════════ CTA FINAL ═══════════════════════════════════════ -->
 <section style="background:#fff;padding:60px 40px 80px;">
@@ -619,6 +570,7 @@
   function goToSlide(n) {
     slide = n;
     const track = document.getElementById('testimonial-track');
+    if (!track) return;
     track.style.transform = `translateX(calc(-${n * 442}px))`;
     document.querySelectorAll('.dot').forEach((d, i) => {
       d.classList.toggle('active', i === n);
