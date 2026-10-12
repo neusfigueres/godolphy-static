@@ -81,6 +81,196 @@
       "source": "/darme-de-alta/",
       "destination": "/lista-de-espera/",
       "permanent": false
+    },
+    {
+      "source": "/pages",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/legal-dpa",
+      "destination": "/dpa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/legal-dpa/",
+      "destination": "/dpa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sectores",
+      "destination": "/sectores/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sectores/",
+      "destination": "/sectores/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-peluquerias",
+      "destination": "/sectores/software-para-peluquerias/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-peluquerias/",
+      "destination": "/sectores/software-para-peluquerias/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/marketing-local-salones-de-estetica",
+      "destination": "/marketing-local-para-salones-de-estetica/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/marketing-local-salones-de-estetica/",
+      "destination": "/marketing-local-para-salones-de-estetica/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/salones-de-estetica",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/salones-de-estetica/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/software-para-centro-de-estetica-y-salones",
+      "destination": "/sectores/software-para-centro-de-estetica-y-salones/",
+      "permanent": true
+    },
+    {
+      "source": "/software-para-centro-de-estetica-y-salones/",
+      "destination": "/sectores/software-para-centro-de-estetica-y-salones/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-centro-de-estetica-y-salones",
+      "destination": "/sectores/software-para-centro-de-estetica-y-salones/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-centro-de-estetica-y-salones/",
+      "destination": "/sectores/software-para-centro-de-estetica-y-salones/",
+      "permanent": true
+    },
+    {
+      "source": "/obligaciones-fiscales-centro-estetica-espana",
+      "destination": "/cual-es-el-iva-para-un-servicio-de-estetica/",
+      "permanent": true
+    },
+    {
+      "source": "/obligaciones-fiscales-centro-estetica-espana/",
+      "destination": "/cual-es-el-iva-para-un-servicio-de-estetica/",
+      "permanent": true
+    },
+    {
+      "source": "/funcionalidades-godolphy",
+      "destination": "/funcionalidades/",
+      "permanent": true
+    },
+    {
+      "source": "/funcionalidades-godolphy/",
+      "destination": "/funcionalidades/",
+      "permanent": true
+    },
+    {
+      "source": "/funcionalidades/page/2",
+      "destination": "/funcionalidades/",
+      "permanent": true
+    },
+    {
+      "source": "/funcionalidades/page/2/",
+      "destination": "/funcionalidades/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/terminos-y-condiciones",
+      "destination": "/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/terminos-y-condiciones/",
+      "destination": "/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/terminos-y-condiciones-del-visitante-de-la-web",
+      "destination": "/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/terminos-y-condiciones-del-visitante-de-la-web/",
+      "destination": "/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pop-up-nail-bar-barcelona-madrid",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pop-up-nail-bar-barcelona-madrid/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-de-estetica-a-domicilio",
+      "destination": "/sectores/software-para-profesionales-a-domicilio/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-de-estetica-a-domicilio/",
+      "destination": "/sectores/software-para-profesionales-a-domicilio/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades/equipo-y-horarios",
+      "destination": "/funcionalidades/equipo-y-horarios/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades/equipo-y-horarios/",
+      "destination": "/funcionalidades/equipo-y-horarios/",
+      "permanent": true
+    },
+    {
+      "source": "/que-es-verifactu-y-como-me-afecta-a-mi-salon",
+      "destination": "/funcionalidades/facturacion-y-reporte/",
+      "permanent": true
+    },
+    {
+      "source": "/que-es-verifactu-y-como-me-afecta-a-mi-salon/",
+      "destination": "/funcionalidades/facturacion-y-reporte/",
+      "permanent": true
     }
   ]
 }
