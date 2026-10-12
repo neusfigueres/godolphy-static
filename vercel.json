@@ -3,6 +3,11 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/borrador/:path*",
+      "destination": "/blog/",
+      "permanent": false
+    },
+    {
       "source": "/cookies",
       "destination": "/politica-de-cookies/",
       "permanent": true
