@@ -48,10 +48,21 @@
     loadTikTok();
   }
 
+  // ── UTMs: se guardan durante la visita (sessionStorage, sin cookies) para no perderlas al cambiar de página ──
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  window.gdGetUtm = function () {
+    var saved = {}, p = new URLSearchParams(location.search), fromUrl = {};
+    try { saved = JSON.parse(sessionStorage.getItem('gd_utm') || '{}'); } catch (e) {}
+    UTM_KEYS.forEach(function (k) { if (p.get(k)) fromUrl[k] = p.get(k); });
+    if (Object.keys(fromUrl).length) { saved = fromUrl; try { sessionStorage.setItem('gd_utm', JSON.stringify(saved)); } catch (e) {} }
+    return saved;
+  };
+  window.gdGetUtm();
+
   // ── Lead: alta en la lista de espera ──
   window.gdTrackLead = function (extra) {
-    var p = new URLSearchParams(location.search), props = extra || {};
-    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) { if (p.get(k)) props[k] = p.get(k); });
+    var props = extra || {}, u = window.gdGetUtm();
+    UTM_KEYS.forEach(function (k) { if (u[k]) props[k] = u[k]; });
     try { gtag('event', 'generate_lead', props); } catch (e) {}
     try { if (window.fbq) fbq('track', 'Lead', props); } catch (e) {}
     try { if (window.ttq) ttq.track('SubmitForm', props); } catch (e) {}
