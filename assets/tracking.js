@@ -1,8 +1,9 @@
-/* Godolphy · consentimiento de cookies + GA4 + Meta Pixel + evento de lead.
+/* Godolphy · consentimiento de cookies + GA4 + Meta Pixel + TikTok Pixel + evento de lead.
    GA4 y Meta solo guardan cookies si la persona acepta (Consent Mode v2). */
 (function () {
   var GA_ID = 'G-8JZDWMXKD9';
   var META_PIXEL_ID = '1468217345164128'; // Píxel 'Godolphy web' (Godolphy Software LLC)
+  var TIKTOK_PIXEL_ID = 'DB6B743C77UAU0U4EKF0'; // Píxel 'Godolphy web' (TikTok Ads)
   var KEY = 'gd_consent'; // 'granted' | 'denied'
 
   function getChoice() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
@@ -30,6 +31,13 @@
     fbq('track', 'PageView');
   }
 
+  // ── TikTok Pixel (solo con consentimiento) ──
+  function loadTikTok() {
+    if (!TIKTOK_PIXEL_ID || window.ttq) return;
+    !function (w, d, t) { w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; n = document.createElement("script"); n.type = "text/javascript", n.async = !0, n.src = r + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(n, e) };
+      ttq.load(TIKTOK_PIXEL_ID); ttq.page(); }(window, document, 'ttq');
+  }
+
   function grant() {
     gtag('consent', 'update', {
       ad_storage: 'granted', analytics_storage: 'granted',
@@ -37,6 +45,7 @@
     });
     if (window.posthog && posthog.set_config) posthog.set_config({ persistence: 'localStorage+cookie' });
     loadMeta();
+    loadTikTok();
   }
 
   // ── Lead: alta en la lista de espera ──
@@ -45,6 +54,7 @@
     ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) { if (p.get(k)) props[k] = p.get(k); });
     try { gtag('event', 'generate_lead', props); } catch (e) {}
     try { if (window.fbq) fbq('track', 'Lead', props); } catch (e) {}
+    try { if (window.ttq) ttq.track('SubmitForm', props); } catch (e) {}
     try { if (window.posthog) posthog.capture('waitlist_submitted', props); } catch (e) {}
   };
 
