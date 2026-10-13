@@ -91,28 +91,32 @@ def run(job):
     print("saved:", job["out"], os.path.getsize(job["out"]), "bytes")
 
 
+def process(path):
+    job = json.load(open(path))
+    print("==>", path, job.get("model"), flush=True)
+    dest = "imagegen/done"
+    if os.path.exists(job["out"]):
+        print("ya existe, se salta")
+    else:
+        try:
+            run(job)
+        except Exception as e:
+            print("ERROR:", path, e)
+            job["error"] = str(e)[:1500]
+            json.dump(job, open(path, "w"), ensure_ascii=False, indent=2)
+            dest = "imagegen/failed"
+    os.makedirs(dest, exist_ok=True)
+    shutil.move(path, os.path.join(dest, os.path.basename(path)))
+
+
 def main():
     if not KEY:
         sys.exit("Falta APIMART_API_KEY")
-    changed = False
-    for path in sorted(glob.glob("imagegen/*.json")):
-        job = json.load(open(path))
-        print("==>", path, job.get("model"))
-        dest = "imagegen/done"
-        if os.path.exists(job["out"]):
-            print("ya existe, se salta")
-        else:
-            try:
-                run(job)
-            except Exception as e:
-                print("ERROR:", e)
-                job["error"] = str(e)[:1500]
-                json.dump(job, open(path, "w"), ensure_ascii=False, indent=2)
-                dest = "imagegen/failed"
-        os.makedirs(dest, exist_ok=True)
-        shutil.move(path, os.path.join(dest, os.path.basename(path)))
-        changed = True
-    print("CHANGED=" + ("1" if changed else "0"))
+    from concurrent.futures import ThreadPoolExecutor
+    paths = sorted(glob.glob("imagegen/*.json"))
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        list(ex.map(process, paths))
+    print("CHANGED=" + ("1" if paths else "0"))
 
 
 if __name__ == "__main__":
