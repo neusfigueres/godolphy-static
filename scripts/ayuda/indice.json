@@ -6,10 +6,24 @@
       "titulo": "Primeros pasos",
       "descripcion": "Tu cuenta, tu perfil y los datos de tu negocio.",
       "articulos": [
-        {"slug": "prueba-gratuita", "titulo": "Tu prueba gratuita de 30 días"},
-        {"slug": "completar-tu-perfil", "titulo": "Completa tu perfil y los datos de tu negocio"},
-        {"slug": "logo-color-y-empresa", "titulo": "Logo, color y datos de tu empresa"},
-        {"slug": "notificaciones-y-recordatorios", "titulo": "Notificaciones y recordatorios"}
+        {
+          "slug": "prueba-gratuita",
+          "titulo": "Tu prueba gratuita de 30 días"
+        },
+        {
+          "slug": "completar-tu-perfil",
+          "titulo": "Completa tu perfil y los datos de tu negocio",
+          "publicado": true
+        },
+        {
+          "slug": "logo-color-y-empresa",
+          "titulo": "Logo, color y datos de tu empresa",
+          "publicado": true
+        },
+        {
+          "slug": "notificaciones-y-recordatorios",
+          "titulo": "Notificaciones y recordatorios"
+        }
       ]
     },
     {
@@ -17,7 +31,11 @@
       "titulo": "Tu local",
       "descripcion": "Dónde atiendes a tus clientas.",
       "articulos": [
-        {"slug": "crear-tu-local", "titulo": "Crear tu local"}
+        {
+          "slug": "crear-tu-local",
+          "titulo": "Crear tu local",
+          "publicado": true
+        }
       ]
     },
     {
@@ -25,9 +43,19 @@
       "titulo": "Servicios",
       "descripcion": "Tu carta de servicios: categorías, precios, duración y extras.",
       "articulos": [
-        {"slug": "crear-categorias-y-servicios", "titulo": "Crear categorías y servicios", "publicado": true},
-        {"slug": "importar-servicios", "titulo": "Importar servicios desde Excel o una captura"},
-        {"slug": "extras-de-servicio", "titulo": "Extras y opciones de los servicios"}
+        {
+          "slug": "crear-categorias-y-servicios",
+          "titulo": "Crear categorías y servicios",
+          "publicado": true
+        },
+        {
+          "slug": "importar-servicios",
+          "titulo": "Importar servicios desde Excel o una captura"
+        },
+        {
+          "slug": "extras-de-servicio",
+          "titulo": "Extras y opciones de los servicios"
+        }
       ]
     },
     {
@@ -35,11 +63,26 @@
       "titulo": "Equipo",
       "descripcion": "Profesionales, horarios y qué servicios hace cada una.",
       "articulos": [
-        {"slug": "anadir-profesional", "titulo": "Añadir una profesional"},
-        {"slug": "horarios-del-equipo", "titulo": "Asignar el local y crear los horarios"},
-        {"slug": "festivos-y-horarios-especiales", "titulo": "Festivos y horarios especiales"},
-        {"slug": "servicios-por-profesional", "titulo": "Asignar servicios a cada profesional"},
-        {"slug": "acceso-de-las-profesionales", "titulo": "Qué ve una profesional en su acceso"}
+        {
+          "slug": "anadir-profesional",
+          "titulo": "Añadir una profesional"
+        },
+        {
+          "slug": "horarios-del-equipo",
+          "titulo": "Asignar el local y crear los horarios"
+        },
+        {
+          "slug": "festivos-y-horarios-especiales",
+          "titulo": "Festivos y horarios especiales"
+        },
+        {
+          "slug": "servicios-por-profesional",
+          "titulo": "Asignar servicios a cada profesional"
+        },
+        {
+          "slug": "acceso-de-las-profesionales",
+          "titulo": "Qué ve una profesional en su acceso"
+        }
       ]
     },
     {
@@ -47,10 +90,22 @@
       "titulo": "Servicio a domicilio",
       "descripcion": "Zonas, alcance de cada profesional y precio del desplazamiento.",
       "articulos": [
-        {"slug": "activar-servicio-a-domicilio", "titulo": "Activar el servicio a domicilio"},
-        {"slug": "zonas-de-domicilio", "titulo": "Zonas donde ofreces domicilio"},
-        {"slug": "precio-desplazamiento", "titulo": "Desplazamiento: kilómetros gratis y precio por km"},
-        {"slug": "recargos-por-ubicacion", "titulo": "Recargos por tipo de ubicación"}
+        {
+          "slug": "activar-servicio-a-domicilio",
+          "titulo": "Activar el servicio a domicilio"
+        },
+        {
+          "slug": "zonas-de-domicilio",
+          "titulo": "Zonas donde ofreces domicilio"
+        },
+        {
+          "slug": "precio-desplazamiento",
+          "titulo": "Desplazamiento: kilómetros gratis y precio por km"
+        },
+        {
+          "slug": "recargos-por-ubicacion",
+          "titulo": "Recargos por tipo de ubicación"
+        }
       ]
     },
     {
@@ -58,9 +113,18 @@
       "titulo": "Cobros y políticas",
       "descripcion": "Stripe, depósitos y cancelaciones.",
       "articulos": [
-        {"slug": "conectar-stripe", "titulo": "Conectar Stripe para cobrar online"},
-        {"slug": "pago-o-deposito", "titulo": "Cobro al reservar: pago completo o depósito"},
-        {"slug": "politicas-de-cancelacion", "titulo": "Políticas de cancelación y no-show"}
+        {
+          "slug": "conectar-stripe",
+          "titulo": "Conectar Stripe para cobrar online"
+        },
+        {
+          "slug": "pago-o-deposito",
+          "titulo": "Cobro al reservar: pago completo o depósito"
+        },
+        {
+          "slug": "politicas-de-cancelacion",
+          "titulo": "Políticas de cancelación y no-show"
+        }
       ]
     },
     {
@@ -68,10 +132,22 @@
       "titulo": "Clientas y reservas",
       "descripcion": "El trabajo de cada día en la agenda.",
       "articulos": [
-        {"slug": "clientas", "titulo": "Crear y gestionar clientas"},
-        {"slug": "crear-reserva", "titulo": "Crear una reserva desde el calendario"},
-        {"slug": "reprogramar-y-cancelar", "titulo": "Reprogramar y cancelar citas"},
-        {"slug": "ventas-y-reembolsos", "titulo": "Ventas y reembolsos"}
+        {
+          "slug": "clientas",
+          "titulo": "Crear y gestionar clientas"
+        },
+        {
+          "slug": "crear-reserva",
+          "titulo": "Crear una reserva desde el calendario"
+        },
+        {
+          "slug": "reprogramar-y-cancelar",
+          "titulo": "Reprogramar y cancelar citas"
+        },
+        {
+          "slug": "ventas-y-reembolsos",
+          "titulo": "Ventas y reembolsos"
+        }
       ]
     },
     {
@@ -79,8 +155,14 @@
       "titulo": "Tu web de reservas",
       "descripcion": "El enlace que compartes con tus clientas.",
       "articulos": [
-        {"slug": "enlace-de-reservas", "titulo": "Tu enlace de reservas"},
-        {"slug": "tarjetas-regalo-online", "titulo": "Vender tarjetas regalo online"}
+        {
+          "slug": "enlace-de-reservas",
+          "titulo": "Tu enlace de reservas"
+        },
+        {
+          "slug": "tarjetas-regalo-online",
+          "titulo": "Vender tarjetas regalo online"
+        }
       ]
     },
     {
@@ -88,8 +170,14 @@
       "titulo": "Marketing",
       "descripcion": "Cupones y tarjetas regalo.",
       "articulos": [
-        {"slug": "cupones", "titulo": "Cupones de descuento"},
-        {"slug": "tarjetas-regalo", "titulo": "Tarjetas regalo"}
+        {
+          "slug": "cupones",
+          "titulo": "Cupones de descuento"
+        },
+        {
+          "slug": "tarjetas-regalo",
+          "titulo": "Tarjetas regalo"
+        }
       ]
     },
     {
@@ -97,7 +185,10 @@
       "titulo": "Análisis",
       "descripcion": "Cómo va tu negocio.",
       "articulos": [
-        {"slug": "analisis-ia", "titulo": "Análisis IA y gastos del negocio"}
+        {
+          "slug": "analisis-ia",
+          "titulo": "Análisis IA y gastos del negocio"
+        }
       ]
     },
     {
@@ -105,7 +196,10 @@
       "titulo": "Tu cuenta",
       "descripcion": "Tu plan y tu factura de Godolphy.",
       "articulos": [
-        {"slug": "plan-y-facturacion", "titulo": "Tu plan y tu factura de Godolphy"}
+        {
+          "slug": "plan-y-facturacion",
+          "titulo": "Tu plan y tu factura de Godolphy"
+        }
       ]
     }
   ]
