@@ -8,6 +8,126 @@
       "permanent": false
     },
     {
+      "source": "/godolphy-landing",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-landing.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-landing/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-sectores",
+      "destination": "/sectores/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-sectores.html",
+      "destination": "/sectores/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-sectores/",
+      "destination": "/sectores/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-centro-estetica",
+      "destination": "/sectores/software-para-centro-de-estetica-y-salones/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-centro-estetica.html",
+      "destination": "/sectores/software-para-centro-de-estetica-y-salones/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-centro-estetica/",
+      "destination": "/sectores/software-para-centro-de-estetica-y-salones/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-salon-unas",
+      "destination": "/sectores/software-para-salones-de-unas/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-salon-unas.html",
+      "destination": "/sectores/software-para-salones-de-unas/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-salon-unas/",
+      "destination": "/sectores/software-para-salones-de-unas/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-peluqueria",
+      "destination": "/sectores/software-para-peluquerias/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-peluqueria.html",
+      "destination": "/sectores/software-para-peluquerias/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-peluqueria/",
+      "destination": "/sectores/software-para-peluquerias/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-spa",
+      "destination": "/sectores/software-para-spa-y-masajes/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-spa.html",
+      "destination": "/sectores/software-para-spa-y-masajes/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-spa/",
+      "destination": "/sectores/software-para-spa-y-masajes/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-barberia",
+      "destination": "/sectores/software-para-barberias/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-barberia.html",
+      "destination": "/sectores/software-para-barberias/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-barberia/",
+      "destination": "/sectores/software-para-barberias/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-empresa-limpieza",
+      "destination": "/sectores/software-para-empresas-de-limpieza/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-empresa-limpieza.html",
+      "destination": "/sectores/software-para-empresas-de-limpieza/",
+      "permanent": true
+    },
+    {
+      "source": "/godolphy-empresa-limpieza/",
+      "destination": "/sectores/software-para-empresas-de-limpieza/",
+      "permanent": true
+    },
+    {
       "source": "/cookies",
       "destination": "/politica-de-cookies/",
       "permanent": true
