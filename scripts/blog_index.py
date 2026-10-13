@@ -26,8 +26,13 @@ def card_for(path):
     cat = cat.group(1).strip() if cat else 'Consejos de negocio'
     date = re.search(r'<span style="font-size:14px;color:rgba\(2,2,30,\.45\);">([^<]*\d{4})</span>', s)
     date = date.group(1).strip() if date else ''
+    hero = re.search(r'<img class="post-hero" src="([^"]+)"', s)
+    if hero:
+        thumb = f'<div style="aspect-ratio:16/9;overflow:hidden;"><img src="{hero.group(1)}" alt="" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>'
+    else:
+        thumb = f'<div style="aspect-ratio:16/9;background:{GRAD};display:flex;align-items:center;justify-content:center;"><img src="/wp-images/logo-blanco.png" alt="" style="width:auto;height:36px;aspect-ratio:auto;object-fit:contain;" loading="lazy" /></div>'
     return f'''    <a href="/{slug}/" class="post-card">
-      <div style="aspect-ratio:16/9;background:{GRAD};display:flex;align-items:center;justify-content:center;"><img src="/wp-images/logo-blanco.png" alt="" style="width:auto;height:36px;aspect-ratio:auto;object-fit:contain;" loading="lazy" /></div>
+      {thumb}
       <div style="padding:24px;">
         <span style="font-size:12px;font-weight:600;color:#631cff;text-transform:uppercase;letter-spacing:.06em;">{cat}</span>
         <h2 class="font-gabarito" style="font-size:19px;font-weight:700;color:#02021e;margin:8px 0 10px;line-height:1.25;">{title}</h2>
