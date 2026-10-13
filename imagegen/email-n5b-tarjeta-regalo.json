@@ -1,0 +1,9 @@
+{
+  "out": "images/email/raw/n5b-tarjeta-regalo.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business email header. An aesthetics center reception with a gift card envelope with violet ribbon on the counter, treatment cabin softly lit in the background; a laptop shows the sales list. The screen shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful to the reference. Warm natural light, realistic Spanish small business, subtle violet accents (#7835C3), shallow depth of field, wide composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/08-ventas-facturacion.png"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "out": "images/email/raw/w1-bienvenida.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business email header. Wide view of a bright aesthetics center reception; in the background open doors to treatment cabins with facial beds and soft lighting; the owner smiles at a large desktop monitor on the reception counter. The screen shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful to the reference. Warm natural light, realistic Spanish small business, subtle violet accents (#7835C3), shallow depth of field, wide composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/05-calendario-semana.png"
+  ]
+}

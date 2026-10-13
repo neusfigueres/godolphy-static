@@ -1,0 +1,9 @@
+{
+  "out": "images/email/raw/n4-dinero.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business email header. A stylish barbershop with leather barber chairs, wooden details and a barber trimming a beard in the background; on the counter a desktop monitor with the payments settings. The screen shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful to the reference. Warm natural light, realistic Spanish small business, subtle violet accents (#7835C3), shallow depth of field, wide composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/01-config-pagos.png"
+  ]
+}

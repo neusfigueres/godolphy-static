@@ -1,0 +1,9 @@
+{
+  "out": "images/email/raw/n1-tu-clienta-es-tuya.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business email header. A modern hair salon with styling chairs, round mirrors and a hairdresser blow-drying a client in the background; at the front desk the owner checks a client profile on a laptop. The screen shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful to the reference. Warm natural light, realistic Spanish small business, subtle violet accents (#7835C3), shallow depth of field, wide composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/07-clientes-ficha.png"
+  ]
+}

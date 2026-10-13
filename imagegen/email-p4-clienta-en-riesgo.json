@@ -1,0 +1,9 @@
+{
+  "out": "images/email/raw/p4-clienta-en-riesgo.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business email header. A massage therapist at the reception of a massage center, with a massage cabin and towels in the background, looking at a client profile with past bookings on a desktop monitor. The screen shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful to the reference. Warm natural light, realistic Spanish small business, subtle violet accents (#7835C3), shallow depth of field, wide composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/07-clientes-ficha-reservas.png"
+  ]
+}

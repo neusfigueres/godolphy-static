@@ -1,0 +1,9 @@
+{
+  "out": "images/email/raw/p5-lista-espera.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business email header. Wide view of a modern hair and beauty salon at opening time, chairs and mirrors and a treatment cabin door in the background; the owner turns on the desktop monitor at reception showing the day calendar. The screen shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful to the reference. Warm natural light, realistic Spanish small business, subtle violet accents (#7835C3), shallow depth of field, wide composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/05-calendario-dia.png"
+  ]
+}
