@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/test/desktop-tarjetas-regalo-v2.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business blog. A salon receptionist in her 30s works on a laptop at a marble reception counter; next to the laptop an elegant gift card envelope with a violet ribbon; seen over her shoulder so the laptop screen is clearly visible. The screen shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area). Keep the screen content faithful to the reference. Soft natural light, warm neutral tones with subtle violet accents (#7835C3), shallow depth of field, empty space on the left. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/08-ventas-facturacion.png"
+  ]
+}
