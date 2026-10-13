@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/raw/abrir-centro-de-estetica-en-espana.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "A woman in her 40s, owner of a newly opened small aesthetics center in Spain, standing at the reception desk and pointing at the desktop monitor while looking at the camera with a calm smile. Behind her, a corridor with two treatment cabins with white curtains and a facial treatment bed visible through an open door, some unopened boxes of products still on a shelf. The monitor shows exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful to the reference. Warm natural light, subtle violet accents (#7835C3), wide 16:9 composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/01-config-empresa.png"
+  ]
+}

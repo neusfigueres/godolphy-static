@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/raw/cuanto-cuesta-abrir-centro-de-estetica.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "A woman in her 30s sitting at a small table inside an aesthetics center still being set up (a facial treatment bed wrapped in plastic, paint tins, a ladder), reviewing a budget: a laptop open showing exactly the software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area, charts), a printed invoice and a calculator next to it. She has a thoughtful, focused expression. Natural daylight from a shop window, subtle violet accents (#7835C3), wide 16:9 composition. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/desktop/09-analisis-ia-resumen.png"
+  ]
+}
