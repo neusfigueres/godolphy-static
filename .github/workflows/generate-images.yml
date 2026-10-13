@@ -1,0 +1,33 @@
+name: Generate images (Apimart)
+on:
+  push:
+    branches: [main]
+    paths: ['imagegen/*.json']
+  workflow_dispatch:
+
+concurrency:
+  group: generate-images
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate
+        env:
+          APIMART_API_KEY: ${{ secrets.APIMART_API_KEY }}
+        run: python3 scripts/apimart_generate.py
+
+      - name: Commit results
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A images imagegen
+          if git diff --cached --quiet; then echo "Nada que guardar"; exit 0; fi
+          git commit -m "Imágenes generadas con Apimart"
+          git pull --rebase
+          git push
