@@ -22,7 +22,8 @@
         },
         {
           "slug": "notificaciones-y-recordatorios",
-          "titulo": "Notificaciones y recordatorios"
+          "titulo": "Recordatorios de cita por WhatsApp",
+          "publicado": true
         }
       ]
     },
