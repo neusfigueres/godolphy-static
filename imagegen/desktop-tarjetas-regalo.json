@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/test/desktop-tarjetas-regalo.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business blog. A salon receptionist in her 30s works on a laptop at a marble reception counter; next to the laptop there is an elegant gift card envelope with a violet ribbon; seen from behind her shoulder so the laptop screen is visible. The screen clearly shows the booking software interface from the reference image (purple sidebar, calendar with appointments, appointment detail panel on the right). Soft natural light, warm neutral tones with subtle violet accents (#7835C3), shallow depth of field, empty space on the left. No text overlays, no logos, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "images/mockups/desktop-agenda.png"
+  ]
+}

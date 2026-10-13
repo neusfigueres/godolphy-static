@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/test/desktop-deposito.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business blog. At the reception desk of a bright modern beauty salon, the female owner (30s) sits in front of a large desktop monitor while a client with a scarf stands at the counter smiling; seen from a slight side angle so the monitor screen is visible. The screen clearly shows the booking software interface from the reference image (purple sidebar, calendar with appointments, appointment detail panel on the right). Soft natural light, warm neutral tones with subtle violet accents (#7835C3), shallow depth of field, empty space on the left. No text overlays, no logos, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "images/mockups/desktop-agenda.png"
+  ]
+}
