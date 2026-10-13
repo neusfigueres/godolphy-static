@@ -66,23 +66,28 @@
       "articulos": [
         {
           "slug": "anadir-profesional",
-          "titulo": "Añadir una profesional"
+          "titulo": "Añadir una profesional",
+          "publicado": true
         },
         {
           "slug": "horarios-del-equipo",
-          "titulo": "Asignar el local y crear los horarios"
+          "titulo": "Asignar el local y crear los horarios",
+          "publicado": true
         },
         {
           "slug": "festivos-y-horarios-especiales",
-          "titulo": "Festivos y horarios especiales"
+          "titulo": "Festivos y horarios especiales",
+          "publicado": true
         },
         {
           "slug": "servicios-por-profesional",
-          "titulo": "Asignar servicios a cada profesional"
+          "titulo": "Asignar servicios a cada profesional",
+          "publicado": true
         },
         {
           "slug": "acceso-de-las-profesionales",
-          "titulo": "Qué ve una profesional en su acceso"
+          "titulo": "Qué ve una profesional en su acceso",
+          "publicado": true
         }
       ]
     },
