@@ -19,7 +19,7 @@ jobs:
 
       - name: Generate
         env:
-          APIMART_API_KEY: ${{ secrets.APIMART_API_KEY }}
+          APIMART_API_KEY: ${{ secrets.APIMART }}
         run: python3 scripts/apimart_generate.py
 
       - name: Commit results
