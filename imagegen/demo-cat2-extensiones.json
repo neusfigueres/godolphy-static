@@ -1,0 +1,7 @@
+{
+  "out": "images/demo/cat2-extensiones.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Close-up of a woman's hand with long almond-shaped gel nail extensions in milky pink, fingers gracefully resting on a soft white fabric. Soft, airy beauty photography, close-up, pastel and nude tones, clean light background, gentle diffused daylight, shallow depth of field, elegant and calm, high resolution, no text, no logos.",
+  "size": "3:4",
+  "no_style": true
+}

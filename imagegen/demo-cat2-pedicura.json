@@ -1,0 +1,7 @@
+{
+  "out": "images/demo/cat2-pedicura.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Close-up of a woman's feet with a fresh pedicure, toenails painted in soft coral, resting on a light stone surface next to a few rose petals. Soft, airy beauty photography, close-up, pastel and nude tones, clean light background, gentle diffused daylight, shallow depth of field, elegant and calm, high resolution, no text, no logos.",
+  "size": "3:4",
+  "no_style": true
+}

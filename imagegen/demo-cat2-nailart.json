@@ -1,0 +1,7 @@
+{
+  "out": "images/demo/cat2-nailart.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Close-up of a woman's hand showing delicate minimalist nail art: tiny lilac flowers and fine gold lines on nude nails, holding a small sprig of dried flowers. Soft, airy beauty photography, close-up, pastel and nude tones, clean light background, gentle diffused daylight, shallow depth of field, elegant and calm, high resolution, no text, no logos.",
+  "size": "3:4",
+  "no_style": true
+}
