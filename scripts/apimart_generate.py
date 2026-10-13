@@ -51,8 +51,14 @@ def data_url(path):
     return f"data:{mime};base64," + base64.b64encode(open(path, "rb").read()).decode()
 
 
+STYLE = (" People must look like ordinary, real people, not models: varied ages and body types, natural skin with "
+         "texture and imperfections, everyday hair and clothes, candid unposed expressions. Realistic, slightly lived-in "
+         "spaces, documentary photo style, natural light, no glossy advertising look.")
+
+
 def run(job):
-    body = {"model": job["model"], "prompt": job["prompt"], "n": 1}
+    prompt = job["prompt"] if job.get("no_style") else job["prompt"] + STYLE
+    body = {"model": job["model"], "prompt": prompt, "n": 1}
     if job.get("size"):
         body["size"] = job["size"]
     refs = list(job.get("image_urls", [])) + [data_url(p) for p in job.get("ref_files", [])]
