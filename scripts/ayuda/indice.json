@@ -97,20 +97,24 @@
       "descripcion": "Zonas, alcance de cada profesional y precio del desplazamiento.",
       "articulos": [
         {
-          "slug": "activar-servicio-a-domicilio",
-          "titulo": "Activar el servicio a domicilio"
+          "slug": "zonas-de-domicilio",
+          "titulo": "Zonas donde ofreces domicilio",
+          "publicado": true
         },
         {
-          "slug": "zonas-de-domicilio",
-          "titulo": "Zonas donde ofreces domicilio"
+          "slug": "activar-servicio-a-domicilio",
+          "titulo": "Activar el servicio a domicilio",
+          "publicado": true
         },
         {
           "slug": "precio-desplazamiento",
-          "titulo": "Desplazamiento: kilómetros gratis y precio por km"
+          "titulo": "Desplazamiento: kilómetros gratis y precio por km",
+          "publicado": true
         },
         {
           "slug": "recargos-por-ubicacion",
-          "titulo": "Recargos por tipo de ubicación"
+          "titulo": "Recargos por tipo de ubicación",
+          "publicado": true
         }
       ]
     },
