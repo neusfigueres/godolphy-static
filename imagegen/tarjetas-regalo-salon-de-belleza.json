@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/tarjetas-regalo-salon-de-belleza.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business blog. A cheerful woman in her 30s at a modern beauty salon reception receives an elegant gift card in a small envelope with a violet ribbon from the salon owner; the owner holds a smartphone showing the booking app screen from the reference image. Soft natural light, warm neutral tones with subtle violet accents (#7835C3), shallow depth of field, clean composition with empty space on the left. No text, no logos, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "images/mockups/app-cita.png"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/anadir-servicios-a-domicilio-salon.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic editorial photo for a Spanish beauty-business blog. A professional female beautician in her 30s arrives at a bright, cozy Spanish apartment carrying a compact manicure kit; she checks a smartphone showing the booking app screen from the reference image; a client greets her at the door, slightly out of focus. Soft natural light, warm neutral tones with subtle violet accents (#7835C3), shallow depth of field, clean composition with empty space on the left. No text, no logos, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "images/mockups/app-cita.png"
+  ]
+}
