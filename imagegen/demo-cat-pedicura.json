@@ -1,0 +1,6 @@
+{
+  "out": "images/demo/cat-pedicura.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photo of a relaxing pedicure at a modern salon: a technician holding a client's foot over a small basin, toenails painted in soft coral, towels and plants around, bright natural light.",
+  "size": "4:3"
+}

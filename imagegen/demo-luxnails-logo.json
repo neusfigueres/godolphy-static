@@ -1,0 +1,7 @@
+{
+  "out": "images/demo/luxnails-logo.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Minimal elegant logo for a nail salon called 'Lux Nails': the words LUX NAILS in a refined modern serif typeface, small stylized nail-polish drop icon above, deep violet (#6230FB) on a plain white background, flat vector style, centered, lots of white space, no mockup, no other text.",
+  "size": "1:1",
+  "no_style": true
+}

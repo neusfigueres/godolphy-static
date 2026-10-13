@@ -1,0 +1,6 @@
+{
+  "out": "images/demo/cat-nailart.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Close-up photo of a client's hand showing colourful hand-painted nail art (small flowers and fine lines in lilac, white and gold) on medium-length nails, salon table, bright natural light.",
+  "size": "4:3"
+}

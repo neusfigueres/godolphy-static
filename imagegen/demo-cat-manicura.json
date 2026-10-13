@@ -1,0 +1,6 @@
+{
+  "out": "images/demo/cat-manicura.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Close-up photo of a classic manicure in progress: a nail technician painting a client's short natural nails with a soft nude-pink polish, clean bright salon table, natural light.",
+  "size": "4:3"
+}
