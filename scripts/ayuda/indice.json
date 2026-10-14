@@ -144,15 +144,18 @@
       "articulos": [
         {
           "slug": "clientas",
-          "titulo": "Crear y gestionar clientas"
+          "titulo": "Crear y gestionar clientas",
+          "publicado": true
         },
         {
           "slug": "crear-reserva",
-          "titulo": "Crear una reserva desde el calendario"
+          "titulo": "Crear una reserva desde el calendario",
+          "publicado": true
         },
         {
           "slug": "reprogramar-y-cancelar",
-          "titulo": "Reprogramar y cancelar citas"
+          "titulo": "Reprogramar y cancelar citas",
+          "publicado": true
         },
         {
           "slug": "ventas-y-reembolsos",
