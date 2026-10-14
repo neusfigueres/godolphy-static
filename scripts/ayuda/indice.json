@@ -189,7 +189,8 @@
       "articulos": [
         {
           "slug": "cupones",
-          "titulo": "Cupones de descuento"
+          "titulo": "Cupones de descuento",
+          "publicado": true
         },
         {
           "slug": "tarjetas-regalo",
@@ -206,7 +207,7 @@
         {
           "slug": "analisis-ia",
           "titulo": "Análisis IA y gastos del negocio",
-          "publicado": false
+          "publicado": true
         }
       ]
     },
