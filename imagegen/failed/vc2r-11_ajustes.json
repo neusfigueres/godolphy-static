@@ -7,5 +7,6 @@
   "ref_files": [
     "imagegen/refs/video-calculo/escena_11.jpg",
     "imagegen/video-calculo/cara_nano.png"
-  ]
+  ],
+  "error": "tarea fallida: {\"code\": 200, \"data\": {\"actual_time\": 15, \"completed\": 1791987011, \"cost\": 0, \"created\": 1791986996, \"credits_cost\": 0, \"error\": {\"code\": \"task_failed\", \"message\": \"Your request did not pass content safety review. Please adjust your prompt or input files and try again.\", \"param\": \"\", \"type\": \"task_failed\"}, \"estimated_time\": 60, \"id\": \"task_01M4XBZ4Y821JHAMKXPAN50793\", \"progress\": 100, \"status\": \"failed\"}}"
 }
