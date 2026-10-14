@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c04_preocupada.mp4",
+  "model": "kling-v3",
+  "prompt": "The man in the suit taps his finger on the receipts; she sighs, worried, and rubs her temple. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/04.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 58,
+      "completed": 1791991463,
+      "cost": 0.336,
+      "created": 1791991405,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XG5QBBJ35AJ6YTK2XHFZSV",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792077863,
+            "url": [
+              "https://getapib.org/video/9998208008536757-4b41377b-0ccd-4e4c-a316-39a248ff679e-video_task_01M4XG5QBBJ35AJ6YTK2XHFZSV.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

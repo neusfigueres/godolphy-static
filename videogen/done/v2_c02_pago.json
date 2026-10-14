@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c02_pago.mp4",
+  "model": "kling-v3",
+  "prompt": "The hand taps the gold card on the card payment terminal, the terminal screen lights up and beeps, flowers sway softly in the background. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/02.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 80,
+      "completed": 1791991408,
+      "cost": 0.336,
+      "created": 1791991328,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XG3BDJPDC2K3FHQKH1ER31",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792077808,
+            "url": [
+              "https://getapib.org/video/9998208008591808-4a8d1f6d-9fa0-48de-b731-93c51ec3286d-video_task_01M4XG3BDJPDC2K3FHQKH1ER31.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c16_sorpresa.mp4",
+  "model": "kling-v3",
+  "prompt": "She looks up at something wonderful, her face lights up with a big surprised happy smile, violet light reflects on her face. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/12_sorpresa.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 58,
+      "completed": 1791991750,
+      "cost": 0.336,
+      "created": 1791991692,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XGEF9MJYKAC403HEDW3WGQ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792078150,
+            "url": [
+              "https://getapib.org/video/9998208008250025-356673ed-c4ed-460d-864c-d057ec424f09-video_task_01M4XGEF9MJYKAC403HEDW3WGQ.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

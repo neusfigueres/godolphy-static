@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c13_iconos.mp4",
+  "model": "kling-v3",
+  "prompt": "The glowing icon cards float and slowly rotate, the gift box lid pops open slightly, the gold coins shine and the green arrow rises, light trails swirl. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/10_iconos.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 57,
+      "completed": 1791991687,
+      "cost": 0.336,
+      "created": 1791991630,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XGCJWQ55TAH5JECDSW5AKC",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792078087,
+            "url": [
+              "https://getapib.org/video/9998208008312599-e794f5c0-a5fe-46e9-a3b9-37851bcf19e6-video_task_01M4XGCJWQ55TAH5JECDSW5AKC.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

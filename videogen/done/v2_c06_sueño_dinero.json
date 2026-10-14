@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c06_sueño_dinero.mp4",
+  "model": "kling-v3",
+  "prompt": "The dreamy thought cloud above her glows, gold coins sparkle and gently pile up; she looks up hopefully and smiles. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/06.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 67,
+      "completed": 1791991483,
+      "cost": 0.336,
+      "created": 1791991416,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XG61F43END7DBNNZ6VHW3F",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792077883,
+            "url": [
+              "https://getapib.org/video/9998208008516741-450d37e7-5557-4021-9b96-a68f381e7e3c-video_task_01M4XG61F43END7DBNNZ6VHW3F.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

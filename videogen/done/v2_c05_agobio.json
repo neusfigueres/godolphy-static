@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c05_agobio.mp4",
+  "model": "kling-v3",
+  "prompt": "Overwhelmed, she pushes her hands through her hair and exhales, receipts slightly flutter on the desk, slow camera push-in. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/05.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 58,
+      "completed": 1791991469,
+      "cost": 0.336,
+      "created": 1791991411,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XG5WGYQZ1W1NZQ26FHFJK5",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792077869,
+            "url": [
+              "https://getapib.org/video/9998208008530991-f54d0ee1-07e8-4fa2-88e7-8c628a6d87da-video_task_01M4XG5WGYQZ1W1NZQ26FHFJK5.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

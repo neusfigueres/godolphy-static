@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c01_manicura.mp4",
+  "model": "kling-v3",
+  "prompt": "She files the client's nails carefully with a gentle smile, small natural hand movements, slight slow push-in of the camera. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/01.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 70,
+      "completed": 1791991398,
+      "cost": 0.336,
+      "created": 1791991328,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XG3BA2EE6KTHKHC959XE1Q",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792077798,
+            "url": [
+              "https://getapib.org/video/9998208008601474-1d196452-c439-4c84-9d11-34954a21f501-video_task_01M4XG3BA2EE6KTHKHC959XE1Q.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

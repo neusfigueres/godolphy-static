@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c11_servicios.mp4",
+  "model": "kling-v3",
+  "prompt": "She points at the two glowing service cards, the cards light up and the small bar charts grow, particles drift in the violet universe. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/08_servicios.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 60,
+      "completed": 1791991623,
+      "cost": 0.336,
+      "created": 1791991563,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XGAH9DW7J5AEC1D3Y5FBJR",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792078023,
+            "url": [
+              "https://getapib.org/video/9998208008376753-d09d59f5-49b9-4d4e-90d0-a5e4c35db462-video_task_01M4XGAH9DW7J5AEC1D3Y5FBJR.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

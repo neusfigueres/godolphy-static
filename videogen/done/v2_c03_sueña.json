@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c03_sueña.mp4",
+  "model": "kling-v3",
+  "prompt": "She daydreams, slowly tilts her head on her hand and her hopeful smile grows, soft light flickers. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/03.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 78,
+      "completed": 1791991406,
+      "cost": 0.336,
+      "created": 1791991328,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XG3BAA8HNTXQ3D7MVR5YK7",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792077806,
+            "url": [
+              "https://getapib.org/video/9998208008593319-9c363c75-3061-4247-bf65-99fe58f9fe80-video_task_01M4XG3BAA8HNTXQ3D7MVR5YK7.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

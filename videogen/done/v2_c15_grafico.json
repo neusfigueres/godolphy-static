@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c15_grafico.mp4",
+  "model": "kling-v3",
+  "prompt": "The holographic bar chart grows bar by bar and the arrow rises and glows, gentle camera move in the salon. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/12_grafico.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 57,
+      "completed": 1791991705,
+      "cost": 0.336,
+      "created": 1791991648,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XGD4MF44W1QAJSBZTWQM3N",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792078105,
+            "url": [
+              "https://getapib.org/video/9998208008294319-101a6ed5-b40a-4521-ab96-3c4194783054-video_task_01M4XGD4MF44W1QAJSBZTWQM3N.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

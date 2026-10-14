@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c10_universo.mp4",
+  "model": "kling-v3",
+  "prompt": "She floats in the violet data universe and reaches out to touch a glowing panel, the panels gently orbit around her, particles drift. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/08_universo.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 78,
+      "completed": 1791991640,
+      "cost": 0.336,
+      "created": 1791991562,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4XGAGEGCGXBVFWRX1FRJXGW",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792078040,
+            "url": [
+              "https://getapib.org/video/9998208008359557-3e38547f-977b-4ed4-b79f-e162094831f2-video_task_01M4XGAGEGCGXBVFWRX1FRJXGW.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
