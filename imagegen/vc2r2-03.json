@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/v2/03.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Photorealistic vertical photo. The same woman as in the reference image: keep her face exactly (curly brown hair with faded violet strands, freckles, small gold hoops, lilac overshirt over white t-shirt, black apron). Natural skin with pores, freckles and small imperfections, not retouched, candid phone photo, natural light. No text, no logos, no watermarks. She is not working now: she sits at her manicure table with no tools in her hands, elbow on the table and cheek resting on her palm, looking up and to the side, daydreaming with a dreamy hopeful half smile. Warm nail salon behind.",
+  "ref_files": [
+    "imagegen/video-calculo/cara_nano.png"
+  ]
+}

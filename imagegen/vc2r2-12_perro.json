@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/v2/12_perro.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Photorealistic vertical photo. The same woman as in the reference image: keep her face exactly (curly brown hair with faded violet strands, freckles, small gold hoops, lilac overshirt over white t-shirt, black apron). Natural skin with pores, freckles and small imperfections, not retouched, candid phone photo, natural light. No text, no logos, no watermarks. She is not working: she stands in her salon, eyes closed, happy relieved smile, hugging tightly against her chest with both arms a real, photorealistic small brown dachshund dog wearing a lilac bandana. Behind her a soft glowing violet holographic bar chart rising.",
+  "ref_files": [
+    "imagegen/video-calculo/cara_nano.png"
+  ]
+}
