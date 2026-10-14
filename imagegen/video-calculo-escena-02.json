@@ -1,0 +1,9 @@
+{
+  "out": "imagegen/video-calculo/escena_02.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "prompt": "Use the reference image (a cartoon storyboard frame) only for composition. Photorealistic vertical photo. Close-up: a client's hand with manicured nails hands a gold card towards a white card payment terminal on the salon counter, pink flowers and plants blurred behind. No faces visible. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_02.jpg"
+  ]
+}

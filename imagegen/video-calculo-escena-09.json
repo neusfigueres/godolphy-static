@@ -1,0 +1,9 @@
+{
+  "out": "imagegen/video-calculo/escena_09.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "prompt": "Use the reference image (a cartoon storyboard frame) only for composition. Photorealistic vertical photo. Floating translucent glowing cards in a softly lit salon: portraits of three different real women clients, the middle one with a red warning icon and a red progress bar, the others with green check icons, violet holographic glow, realistic photo background. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_09.jpg"
+  ]
+}

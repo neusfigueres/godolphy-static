@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/escena_03.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "prompt": "Recreate the composition, pose and framing of the second reference image (a cartoon storyboard frame) as a photorealistic vertical photo in the same warm nail salon. Same woman as in the first reference image (the realistic nail technician: about 32, shoulder-length curly brown hair with a few subtle violet strands, light olive skin with freckles, small gold hoop earrings, loose lilac overshirt with rolled sleeves over a white t-shirt, black work apron). Keep her face and look identical. She sits at her table, cheek resting on her hand, looking up and to the side with a dreamy hopeful half smile, daydreaming. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/protagonista_a.png",
+    "imagegen/refs/video-calculo/escena_03.jpg"
+  ]
+}
