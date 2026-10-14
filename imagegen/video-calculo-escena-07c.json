@@ -1,0 +1,9 @@
+{
+  "out": "imagegen/video-calculo/escena_07c.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "prompt": "Same woman as in the reference image (realistic nail technician: about 32, shoulder-length curly brown hair with a few subtle violet strands, light olive skin with freckles, small gold hoop earrings, loose lilac overshirt with rolled sleeves over a white t-shirt, black work apron). Keep her face and look identical. Photorealistic vertical photo, front three-quarter view: she sits at the salon reception desk looking with wonder at an open silver laptop, the laptop screen turned towards the camera, flat evenly lit plain white, nothing displayed, a soft violet glow starting to come out of the screen edges onto her face. Warm salon background blurred. No text, no letters, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/protagonista_a.png"
+  ]
+}
