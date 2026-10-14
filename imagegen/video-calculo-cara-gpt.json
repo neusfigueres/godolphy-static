@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/cara_gpt.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Candid amateur photo taken with a phone, not a professional shoot. The same woman as in the reference image (a nail technician about 32, shoulder-length curly brown hair, a few faded violet strands, small gold hoops, loose lilac overshirt over a white t-shirt, black work apron), sitting at her manicure table filing a client's nails in a busy nail salon. Make her look like a real ordinary person, not an AI render: visible skin pores, uneven skin tone, some freckles and small blemishes, slight under-eye shadows, faint expression lines, light natural makeup only, slightly asymmetric face, eyebrows not perfect, frizzy flyaway hairs, real teeth. Natural mixed indoor light, slight phone camera noise, not retouched, no beauty filter, no glossy look, no perfect symmetry, slightly imperfect framing. Vertical 9:16. No text, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/protagonista_a.png"
+  ]
+}
