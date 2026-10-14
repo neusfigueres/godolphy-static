@@ -194,6 +194,39 @@ function toggleMobileNav(){
 
     <p>Tras sumar estos conceptos, obtienes el coste real de tu servicio, tu punto de equilibrio. Revisa estos costes periódicamente, pues los precios de los materiales y otros gastos pueden variar.</p>
 
+
+    <!-- Calculadora de precios: descarga con alta en ActiveCampaign (form 21 -> automatización 14) -->
+    <div id="calc-descarga" style="margin:40px 0;background:#f8f7ff;border-radius:20px;padding:32px 28px;border:1.5px solid rgba(99,28,255,.12);">
+      <div id="calc-form-wrapper">
+        <p style="font-size:12px;font-weight:700;color:#631cff;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px;">Gratis · Excel · 2027</p>
+        <h3 class="font-gabarito" style="font-family:'Gabarito',sans-serif;font-size:24px;font-weight:700;color:#02021e;margin:0 0 10px;">Calculadora de precios para tu centro</h3>
+        <p style="font-size:15px;line-height:1.7;color:rgba(2,2,30,.65);margin:0 0 20px;">Pon tus costes fijos, tus productos y la duración de cada servicio: te dice cuánto te cuesta de verdad y qué precio cobrar para ganar el margen que quieres. Si ya tienes precios, te avisa de los que te hacen perder dinero.</p>
+        <form id="calc-form" style="display:flex;flex-direction:column;gap:12px;" onsubmit="return handleCalcSubmit(event)">
+          <input id="cf-nombre" type="text" required placeholder="Tu nombre" style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;box-sizing:border-box;" />
+          <input id="cf-email" type="email" required placeholder="Tu email" style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;box-sizing:border-box;" />
+          <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true"><input id="cf-website" type="text" tabindex="-1" autocomplete="off" /></div>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;"><input id="cf-consent" type="checkbox" required style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" /><span>Acepto la <a href="/politica-de-privacidad/" target="_blank" style="color:#631cff;text-decoration:underline;">política de privacidad</a> y recibir comunicaciones de Godolphy.</span></label>
+          <button id="cf-submit" type="submit" style="background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:14px 32px;border-radius:20px;border:none;cursor:pointer;font-family:inherit;">Descargar la calculadora</button>
+        </form>
+      </div>
+      <div id="calc-thanks" style="display:none;text-align:center;">
+        <h3 class="font-gabarito" style="font-family:'Gabarito',sans-serif;font-size:22px;font-weight:700;color:#02021e;margin:0 0 10px;">¡Listo! Ya puedes descargarla</h3>
+        <p style="font-size:15px;color:rgba(2,2,30,.6);margin:0 0 20px;">También te la hemos enviado por email.</p>
+        <a href="/descargas/calculadora-precios-centros-estetica-2027.xlsx" download="Calculadora-precios-centros-estetica-2027.xlsx" style="display:inline-block;background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:14px 32px;border-radius:20px;text-decoration:none;">Descargar calculadora</a>
+      </div>
+    </div>
+    <script>
+    function calcDone(){document.getElementById('calc-form-wrapper').style.display='none';document.getElementById('calc-thanks').style.display='block';if(!window._gdCalcSent&&window.gdTrackLead){window._gdCalcSent=true;window.gdTrackLead({form:'calculadora-precios'});}}
+    function handleCalcSubmit(e){e.preventDefault();var b=document.getElementById('cf-submit');if(b.disabled)return false;if(document.getElementById('cf-website').value){calcDone();return false;}
+      b.disabled=true;b.textContent='Enviando...';var q=new URLSearchParams();
+      q.append('u','21');q.append('f','21');q.append('s','');q.append('c','0');q.append('m','0');q.append('act','sub');q.append('v','2');
+      q.append('firstname',document.getElementById('cf-nombre').value.trim());q.append('email',document.getElementById('cf-email').value.trim());
+      var utm=window.gdGetUtm?window.gdGetUtm():{};[['14','utm_source'],['15','utm_medium'],['16','utm_campaign'],['17','utm_content'],['18','utm_term']].forEach(function(x){if(utm[x[1]])q.append('field['+x[0]+']',utm[x[1]]);});
+      q.append('jsonp','true');window._show_thank_you=function(){calcDone();};window._show_error=function(id,m){b.disabled=false;b.textContent='Descargar la calculadora';var el=document.getElementById('cf-error');if(!el){el=document.createElement('p');el.id='cf-error';el.style.cssText='color:#dc2626;font-size:13px;margin:4px 0 0;';b.parentNode.appendChild(el);}el.textContent=m||'Ha ocurrido un error. Inténtalo de nuevo.';};
+      var sc=document.createElement('script');sc.src='https://godolphy.activehosted.com/proc.php?'+q.toString();document.head.appendChild(sc);
+      setTimeout(function(){if(document.getElementById('calc-thanks').style.display!=='block'&&!document.getElementById('cf-error'))calcDone();},6000);return false;}
+    </script>
+
     <h2>Métodos para calcular los precios de manicura</h2>
 
     <h3>Método 1. Coste + Margen de beneficio</h3>
