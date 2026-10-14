@@ -1,0 +1,11 @@
+{
+  "out": "images/email/raw/excel-materiales-2027.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic product photo for an email header, wide 16:9 composition with empty space on both sides. On the wooden reception desk of a small, real beauty/aesthetics salon (treatment cabin and shelves softly blurred in the background), an open silver laptop seen at a slight angle shows a spreadsheet: faithfully reproduce the spreadsheet from the first reference image (lilac rows, purple 'Godolphy' logo top-left, monthly columns, the title '2027'). Next to the laptop, a tablet lying on the desk shows a simple price calculator table with purple headers. The Godolphy logo from the second reference image appears clearly and legibly as a small printed card or sticker standing on the desk next to the laptop, keep the logo shape and violet color exactly. A coffee cup and a small plant. Natural daylight, realistic, not glossy, subtle violet accents (#7835C3). No people. No other text, no watermarks.",
+  "size": "16:9",
+  "no_style": true,
+  "ref_files": [
+    "imagegen/refs/excel/plan-2027.png",
+    "imagegen/refs/excel/logo-violeta.png"
+  ]
+}
