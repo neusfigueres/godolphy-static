@@ -51,11 +51,13 @@
         },
         {
           "slug": "importar-servicios",
-          "titulo": "Importar servicios desde Excel o una captura"
+          "titulo": "Importar servicios desde Excel o una captura",
+          "publicado": true
         },
         {
           "slug": "extras-de-servicio",
-          "titulo": "Extras y opciones de los servicios"
+          "titulo": "Extras y opciones de los servicios",
+          "publicado": true
         }
       ]
     },
@@ -203,7 +205,8 @@
       "articulos": [
         {
           "slug": "analisis-ia",
-          "titulo": "Análisis IA y gastos del negocio"
+          "titulo": "Análisis IA y gastos del negocio",
+          "publicado": true
         }
       ]
     },
