@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/videos/01_succion_prueba.mp4",
+  "model": "kling-v3",
+  "prompt": "Cinematic photorealistic shot. The woman at the salon desk looks at the laptop showing a business analytics dashboard. Suddenly the laptop screen glows violet and turns into a powerful swirling vortex portal; strong wind pulls her hair and lilac overshirt towards the screen, she grabs the edge of the desk, astonished, her body is pulled forward and stretched towards the laptop while glowing data panels and charts spiral out of the screen and receipts fly. Smooth continuous camera, magical special effects, violet and magenta light.",
+  "negative_prompt": "cartoon, distorted face, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/escena_07b_godolphy.png",
+    "imagegen/video-calculo/escena_succion_b.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}
