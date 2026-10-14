@@ -170,11 +170,13 @@
       "articulos": [
         {
           "slug": "enlace-de-reservas",
-          "titulo": "Tu enlace de reservas"
+          "titulo": "Tu enlace de reservas",
+          "publicado": true
         },
         {
           "slug": "tarjetas-regalo-online",
-          "titulo": "Vender tarjetas regalo online"
+          "titulo": "Vender tarjetas regalo online",
+          "publicado": true
         }
       ]
     },
@@ -189,7 +191,8 @@
         },
         {
           "slug": "tarjetas-regalo",
-          "titulo": "Tarjetas regalo"
+          "titulo": "Tarjetas regalo",
+          "publicado": true
         }
       ]
     },
