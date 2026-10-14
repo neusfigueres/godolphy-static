@@ -15,7 +15,7 @@ import json
 import re
 from pathlib import Path
 
-INDEXABLE = False  # cambiar a True cuando Neus valide el centro de ayuda
+INDEXABLE = True
 
 ROOT = Path(__file__).resolve().parents[2]
 SRC = Path(__file__).resolve().parent
@@ -192,10 +192,10 @@ def shots(content):
     """Si existe la captura en ayuda/img/<data-shot>.png, la inserta; si no, deja el hueco."""
     def repl(m):
         name, cap = m.group(1), m.group(2)
-        img = OUT / "img" / f"{name}.png"
-        if img.exists():
-            return f'<figure class="shot has-img"><img src="/ayuda/img/{name}.png" alt="{esc(cap)}" loading="lazy"/><figcaption>{cap}</figcaption></figure>'
-        return m.group(0)
+        for ext in ("png", "jpg", "webp"):
+            if (OUT / "img" / f"{name}.{ext}").exists():
+                return f'<figure class="shot has-img"><img src="/ayuda/img/{name}.{ext}" alt="{esc(cap)}" loading="lazy"/><figcaption>{cap}</figcaption></figure>'
+        return ""
     return re.sub(r'<figure class="shot" data-shot="([^"]+)"><figcaption>(.*?)</figcaption></figure>', repl, content)
 
 
@@ -289,6 +289,19 @@ q.addEventListener('input',function(){{var t=norm(q.value.trim()),any=false;secs
     (OUT / "index.html").write_text(page("Centro de ayuda | Godolphy", "Guías paso a paso para configurar tu salón en Godolphy: servicios, equipo, horarios, domicilio, cobros y reservas, con consejos para tu negocio.", url, body, jsonld), encoding="utf-8")
 
 
+def sitemap(slugs):
+    sm = ROOT / "sitemap.xml"
+    x = sm.read_text(encoding="utf-8")
+    x = re.sub(r"\n  <!-- Centro de ayuda -->.*?<!-- /Centro de ayuda -->", "", x, flags=re.S)
+    if not INDEXABLE:
+        sm.write_text(x, encoding="utf-8"); return
+    urls = ["/ayuda/"] + [f"/ayuda/{s}/" for s in slugs]
+    block = "\n  <!-- Centro de ayuda -->\n" + "".join(
+        f"  <url>\n    <loc>{BASE_URL}{u}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>{'0.7' if u == '/ayuda/' else '0.6'}</priority>\n  </url>\n" for u in urls) + "  <!-- /Centro de ayuda -->"
+    x = x.replace("</urlset>", block + "\n</urlset>")
+    sm.write_text(x, encoding="utf-8")
+
+
 def main():
     data, flat = load_index()
     build_index(data)
@@ -297,6 +310,7 @@ def main():
         if a["publicado"]:
             build_article(data, flat, slug)
             built.append(slug)
+    sitemap(built)
     print(f"Índice + {len(built)} artículo(s): {', '.join(built)}  (indexable={INDEXABLE})")
 
 
