@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/v2/02.png",
+  "model": "nano-banana-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Use the reference image only for composition. Close-up: a client's hand with manicured nails hands a plain gold card towards a white card payment terminal on the salon counter, pink flowers and plants blurred behind. No faces. Candid realistic photo, she looks like a real ordinary person: visible skin pores, uneven skin tone, freckles, slight under-eye shadows, faint expression lines, flyaway hairs, no beauty filter, not retouched, natural light, slight phone camera noise. Vertical 9:16. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_02.jpg"
+  ]
+}

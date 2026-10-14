@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/v2/07_succion.png",
+  "model": "nano-banana-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "The same woman as in the first reference image, keep her face, hair and clothes identical (nail technician about 32, curly brown hair with a few faded violet strands, freckles, small gold hoops, loose lilac overshirt over a white t-shirt, black work apron). Same desk and laptop as the second reference image. A powerful swirling violet vortex bursts out of the laptop screen and pulls her in: she leans forward, one hand gripping the edge of the desk, body stretched towards the screen, hair whipping into the portal, astonished open mouth, small glowing data panels and charts spiralling out of the screen, receipts flying. Cinematic special effects. Candid realistic photo, she looks like a real ordinary person: visible skin pores, uneven skin tone, freckles, slight under-eye shadows, faint expression lines, flyaway hairs, no beauty filter, not retouched, natural light, slight phone camera noise. Vertical 9:16. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/cara_nano.png",
+    "imagegen/video-calculo/escena_succion_b.png"
+  ]
+}

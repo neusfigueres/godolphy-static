@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/v2/08_universo.png",
+  "model": "nano-banana-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "The same woman as in the first reference image, keep her face, hair and clothes identical (nail technician about 32, curly brown hair with a few faded violet strands, freckles, small gold hoops, loose lilac overshirt over a white t-shirt, black work apron). She floats upright inside the violet data universe, amazed and smiling, reaching out to touch one of many glowing translucent panels floating around her: bar charts, a calendar, client photo cards, a gift box icon, euro coins. Background: an immense deep violet digital universe, a cosmic space made of glowing light trails, particles and floating translucent data panels, no salon. Candid realistic photo, she looks like a real ordinary person: visible skin pores, uneven skin tone, freckles, slight under-eye shadows, faint expression lines, flyaway hairs, no beauty filter, not retouched, natural light, slight phone camera noise. Vertical 9:16. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/cara_nano.png",
+    "imagegen/refs/video-calculo/escena_08.jpg"
+  ]
+}
