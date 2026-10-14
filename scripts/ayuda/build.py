@@ -292,13 +292,14 @@ q.addEventListener('input',function(){{var t=norm(q.value.trim()),any=false;secs
 def sitemap(slugs):
     sm = ROOT / "sitemap.xml"
     x = sm.read_text(encoding="utf-8")
-    x = re.sub(r"\n  <!-- Centro de ayuda -->.*?<!-- /Centro de ayuda -->", "", x, flags=re.S)
+    x = re.sub(r"\s*<!-- Centro de ayuda -->.*?<!-- /Centro de ayuda -->", "", x, flags=re.S)
+    x = re.sub(r"\s*</urlset>", "\n</urlset>", x)
     if not INDEXABLE:
         sm.write_text(x, encoding="utf-8"); return
     urls = ["/ayuda/"] + [f"/ayuda/{s}/" for s in slugs]
-    block = "\n  <!-- Centro de ayuda -->\n" + "".join(
+    block = "\n\n  <!-- Centro de ayuda -->\n" + "".join(
         f"  <url>\n    <loc>{BASE_URL}{u}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>{'0.7' if u == '/ayuda/' else '0.6'}</priority>\n  </url>\n" for u in urls) + "  <!-- /Centro de ayuda -->"
-    x = x.replace("</urlset>", block + "\n</urlset>")
+    x = x.replace("\n</urlset>", block + "\n</urlset>")
     sm.write_text(x, encoding="utf-8")
 
 
