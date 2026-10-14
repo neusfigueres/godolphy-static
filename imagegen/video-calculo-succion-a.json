@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/escena_succion_a.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Same woman as in the first reference image (realistic nail technician, about 32, shoulder-length curly brown hair with subtle violet strands, freckles, gold hoop earrings, lilac overshirt over white t-shirt, black apron); keep her face identical. Same salon reception desk and same silver laptop as in the second reference image. The laptop screen has turned into a glowing swirling violet vortex portal that is sucking her in: her head, arms and upper body are already stretching and spiralling into the screen, her legs lifting off the chair, hair and overshirt pulled towards the screen, receipts and papers from the desk flying into the vortex, light streaks spiralling into the screen. Side view so we clearly see her being swallowed by the laptop. Photorealistic cinematic vertical frame with special effects, warm salon background, violet and magenta light. No readable text, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/protagonista_a.png",
+    "imagegen/video-calculo/escena_07b_godolphy.png"
+  ]
+}

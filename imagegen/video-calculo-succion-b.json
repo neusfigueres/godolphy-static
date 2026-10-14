@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/escena_succion_b.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Same woman as in the first reference image (realistic nail technician, about 32, shoulder-length curly brown hair with subtle violet strands, freckles, gold hoop earrings, lilac overshirt over white t-shirt, black apron); keep her face identical. Same salon reception desk and same silver laptop as in the second reference image. Dramatic moment: a powerful swirling violet vortex bursts out of the laptop screen and pulls her in; she is leaning forward, both hands gripping the edge of the desk, body stretched horizontally towards the screen, hair whipping into the portal, astonished open-mouth expression, small glowing data panels and charts spiralling out of the screen around her. Photorealistic cinematic vertical frame with special effects, warm salon background, violet and magenta light. No readable text, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/protagonista_a.png",
+    "imagegen/video-calculo/escena_07b_godolphy.png"
+  ]
+}
