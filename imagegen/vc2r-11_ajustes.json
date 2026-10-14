@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/v2/11_ajustes.png",
+  "model": "nano-banana-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Use the first reference image for the pose and composition, and the second reference image ONLY for the woman's identity (face, curly brown hair with faded violet strands, lilac overshirt, white t-shirt, black apron). Do NOT copy the pose of the second image; she is NOT filing nails. Side view in her salon: she stands and touches with her index finger a large floating translucent violet holographic panel in front of her, the panel shows toggle switches and simple icons (clock, lotus, people, refresh), focused confident expression, hands not holding any tool. Candid realistic photo, she looks like a real ordinary person: visible skin pores, uneven skin tone, freckles, flyaway hairs, no beauty filter, not retouched, natural light. Vertical 9:16. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_11.jpg",
+    "imagegen/video-calculo/cara_nano.png"
+  ]
+}

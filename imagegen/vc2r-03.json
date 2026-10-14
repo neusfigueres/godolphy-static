@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/v2/03.png",
+  "model": "nano-banana-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Use the first reference image for the pose and composition, and the second reference image ONLY for the woman's identity (face, curly brown hair with faded violet strands, lilac overshirt, white t-shirt, black apron). Do NOT copy the pose of the second image; she is NOT filing nails. She sits at her table, elbow on the table and cheek resting on her hand, looking up and to the side, daydreaming with a dreamy hopeful half smile, hands empty. Warm nail salon behind. Candid realistic photo, she looks like a real ordinary person: visible skin pores, uneven skin tone, freckles, flyaway hairs, no beauty filter, not retouched, natural light. Vertical 9:16. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_03.jpg",
+    "imagegen/video-calculo/cara_nano.png"
+  ]
+}

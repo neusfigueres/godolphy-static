@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/v2/10_iconos.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Use the reference image only for composition. Floating glowing translucent icon cards in an immense deep violet digital universe made of light trails and particles: a calendar with a clock, a wrapped gift box, a megaphone, a group of people icon, a stack of gold coins with a green up arrow. Cinematic, photorealistic render. No people, no text, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_10.jpg"
+  ]
+}

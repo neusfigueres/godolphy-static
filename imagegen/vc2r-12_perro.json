@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/v2/12_perro.png",
+  "model": "nano-banana-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Use the first reference image for the pose and composition, and the second reference image ONLY for the woman's identity (face, curly brown hair with faded violet strands, lilac overshirt, white t-shirt, black apron). Do NOT copy the pose of the second image; she is NOT filing nails. Eyes closed, happy relieved smile, she hugs tightly against her chest with both arms a real small brown dachshund dog wearing a lilac bandana, photorealistic dog. In her salon, behind her a soft glowing holographic bar chart rising. Candid realistic photo, she looks like a real ordinary person: visible skin pores, uneven skin tone, freckles, flyaway hairs, no beauty filter, not retouched, natural light. Vertical 9:16. No text, no letters, no numbers, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_12.jpg",
+    "imagegen/video-calculo/cara_nano.png"
+  ]
+}
