@@ -11,5 +11,29 @@
     "duration": 5,
     "mode": "std",
     "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 100,
+      "completed": 1791979864,
+      "cost": 0.336,
+      "created": 1791979764,
+      "credits_cost": 3.3600000000000003,
+      "estimated_time": 300,
+      "id": "task_01M4X52EE4ABQNYN47Q2KFBYE9",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792066264,
+            "url": [
+              "https://getapib.org/video/9998208020135688-dd3917b9-ab67-4bc7-9198-c4a13bf29586-video_task_01M4X52EE4ABQNYN47Q2KFBYE9.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
   }
 }
