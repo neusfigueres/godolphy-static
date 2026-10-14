@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c16_sorpresa.mp4",
+  "model": "kling-v3",
+  "prompt": "She looks up at something wonderful, her face lights up with a big surprised happy smile, violet light reflects on her face. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/12_sorpresa.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

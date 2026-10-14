@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c17_perro.mp4",
+  "model": "kling-v3",
+  "prompt": "She hugs the dachshund tightly with eyes closed and a happy relieved smile, the dog wags its tail and nuzzles her cheek, the holographic chart glows behind. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/12_perro.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

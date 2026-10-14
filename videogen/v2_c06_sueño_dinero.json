@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c06_sueño_dinero.mp4",
+  "model": "kling-v3",
+  "prompt": "The dreamy thought cloud above her glows, gold coins sparkle and gently pile up; she looks up hopefully and smiles. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/06.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c08_entra.mp4",
+  "model": "kling-v3",
+  "prompt": "The vortex swallows her completely: she is sucked through the laptop screen and flies spinning into a giant violet tunnel made of glowing data panels and charts, hair flying, amazed. Continuous dynamic camera following her, special effects. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/07_succion.png",
+    "imagegen/video-calculo/v2/07_remolino.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

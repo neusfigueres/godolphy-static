@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c07_succion.mp4",
+  "model": "kling-v3",
+  "prompt": "She looks at the laptop showing a business analytics dashboard. Suddenly the laptop screen glows violet and turns into a powerful swirling vortex portal; strong wind pulls her hair and lilac overshirt towards the screen, she grabs the edge of the desk, astonished, her body is pulled towards the laptop while glowing data panels spiral out and receipts fly. Magical special effects, violet and magenta light. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/07_portatil_godolphy.png",
+    "imagegen/video-calculo/v2/07_succion.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

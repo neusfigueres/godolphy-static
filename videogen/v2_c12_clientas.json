@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c12_clientas.mp4",
+  "model": "kling-v3",
+  "prompt": "The three client cards float gently towards the camera, the red warning icon on the middle card pulses, the green checks glow. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/09_clientas.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

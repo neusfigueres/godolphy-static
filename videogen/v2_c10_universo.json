@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c10_universo.mp4",
+  "model": "kling-v3",
+  "prompt": "She floats in the violet data universe and reaches out to touch a glowing panel, the panels gently orbit around her, particles drift. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/08_universo.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

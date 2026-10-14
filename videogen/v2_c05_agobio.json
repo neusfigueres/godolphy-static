@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c05_agobio.mp4",
+  "model": "kling-v3",
+  "prompt": "Overwhelmed, she pushes her hands through her hair and exhales, receipts slightly flutter on the desk, slow camera push-in. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/05.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}

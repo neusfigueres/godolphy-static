@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c09_aterriza.mp4",
+  "model": "kling-v3",
+  "prompt": "She spirals out of the vortex and floats gently into a calm immense violet digital universe, stabilises upright, smiling with wonder as glowing translucent data panels float around her. Photorealistic, natural subtle movement, cinematic, smooth camera, keep her face consistent.",
+  "negative_prompt": "cartoon, distorted face, different person, extra fingers, extra limbs, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/07_remolino.png",
+    "imagegen/video-calculo/v2/08_universo.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  }
+}
