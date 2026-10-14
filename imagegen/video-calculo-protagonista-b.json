@@ -1,0 +1,9 @@
+{
+  "out": "imagegen/video-calculo/protagonista_b.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "prompt": "Photorealistic vertical photo, real-life version of the cartoon character in the reference image, same scene and composition: a Spanish nail technician sitting at her manicure table in a warm, slightly lived-in nail salon, filing a client's nails, client's hands resting on a lilac cushion, UV lamp and nail polish bottles on the table, plants and shelves blurred in the background, warm afternoon light. Wardrobe like the reference: loose lilac overshirt with rolled sleeves over a white t-shirt and a black work apron. She is about 40, wavy chestnut hair tied loosely with some strands falling, a few grey hairs, soft wrinkles around the eyes, slightly fuller face, focused expression. No text, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/escena_01.jpg"
+  ]
+}
