@@ -1,0 +1,11 @@
+{
+  "out": "imagegen/video-calculo/escena_remolino.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Same woman as in the first reference image (realistic nail technician, about 32, curly brown hair with subtle violet strands, lilac overshirt, white t-shirt, black apron), keep her face identical. Photorealistic cinematic vertical frame with special effects: she is being sucked inside a giant swirling violet vortex tunnel, her whole body floating and spiralling into the center, hair flying, amazed expression. The walls of the vortex are made of glowing translucent floating screens and data panels like the second reference image: revenue bar charts, line charts, calendar, client cards, euro symbols, purple and lilac light streaks, sparkles. Deep violet and magenta palette, motion blur, dramatic light. No readable text, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/protagonista_a.png",
+    "imagegen/refs/desktop/09-analisis-ia-resumen.png"
+  ]
+}
