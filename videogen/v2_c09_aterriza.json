@@ -11,6 +11,5 @@
     "duration": 5,
     "mode": "std",
     "aspect_ratio": "9:16"
-  },
-  "error": "HTTP 522: "
+  }
 }
