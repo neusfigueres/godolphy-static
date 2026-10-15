@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c07_succion_pro5.mp4",
+  "model": "kling-v3",
+  "prompt": "Cinematic photorealistic shot, keep her face consistent. She looks at the laptop showing a business dashboard; the screen bursts into a glowing violet swirling vortex portal. A strong force pulls her: hair and lilac overshirt whip towards the screen, papers fly into the portal, she grabs the desk edge with one hand, her body is lifted off the chair and stretched horizontally towards the screen, her head and arm already entering the glowing screen. Fluid motion, dramatic special effects, violet and magenta light.",
+  "negative_prompt": "cartoon, distorted face, different person, face melting, body disappearing, extra limbs, extra fingers, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/07_portatil_godolphy_hd.png",
+    "imagegen/video-calculo/v2/07_succion_hd.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}

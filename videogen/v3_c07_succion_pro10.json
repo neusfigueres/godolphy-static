@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/v2/videos/c07_succion_pro10.mp4",
+  "model": "kling-v3",
+  "prompt": "Cinematic photorealistic one continuous shot, keep her face consistent. She sits at the salon desk looking at the laptop showing a business dashboard. The laptop screen bursts into a glowing violet swirling vortex portal. A strong force pulls her: her hair and lilac overshirt whip towards the screen, she grabs the desk edge, then lets go; her whole body stretches and is sucked head-first into the laptop screen, shrinking as she passes through it, her feet disappear last into the glowing screen. Receipts and papers fly into the portal. Then the camera dives after her through the screen into a huge violet tunnel of glowing data panels and charts, where she flies spinning, amazed. Smooth fluid motion, dramatic special effects, violet and magenta light.",
+  "negative_prompt": "cartoon, distorted face, different person, face melting, body disappearing, extra limbs, extra fingers, text, watermark",
+  "frames": [
+    "imagegen/video-calculo/v2/07_portatil_godolphy_hd.png",
+    "imagegen/video-calculo/v2/07_remolino_hd.png"
+  ],
+  "body": {
+    "duration": 10,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}
