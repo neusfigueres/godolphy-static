@@ -171,6 +171,11 @@
           "slug": "cierre-de-caja",
           "titulo": "Caja: entradas, retiradas y cierre",
           "publicado": true
+        },
+        {
+          "slug": "verifactu",
+          "titulo": "Verifactu: tiques y facturas en Godolphy",
+          "publicado": true
         }
       ]
     },

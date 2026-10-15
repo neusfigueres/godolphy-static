@@ -6,7 +6,7 @@
   "resumen": "Registra lo que te paga cada clienta, con uno o varios medios, y devuelve un importe cuando haga falta.",
   "tiempo": "6 min",
   "actualizado": "2026-10-15",
-  "relacionados": ["cierre-de-caja", "pago-o-deposito", "reprogramar-y-cancelar"]
+  "relacionados": ["verifactu", "cierre-de-caja", "pago-o-deposito"]
 }
 -->
 
@@ -44,8 +44,12 @@
 <p>Si la clienta dejó un depósito retenido en su tarjeta, verás un aviso con la fecha en que Stripe lo liberará. La retención se libera sola cuando cobras la cita entera, por el medio que sea. Desde el panel de la cita en el calendario también puedes <strong>Cobrar</strong> el total con la tarjeta o <strong>Capturar retención</strong> para quedarte solo con el depósito.</p><!--pendiente-->
 <p>Si la retención caduca sin cobrarse, verás el aviso «La retención … caducó sin cobrarse» y el depósito aparecerá como <strong>Retención caducada</strong>: la tarjeta ya no garantiza la cita. Cobra el servicio en el salón.</p><!--/pendiente-->
 
-<h2 id="tique">Imprimir el justificante</h2>
-<p>Cada cobro y cada devolución tiene un botón <strong>Tique</strong> que abre un <strong>Justificante de cobro</strong> listo para imprimir, con tus datos, los servicios, el desglose de IVA y el medio de pago. <strong>No es una factura.</strong></p>
+<h2 id="tique">Imprimir o enviar el tique</h2>
+<p>Cada cobro y cada devolución tiene un botón <strong>Tique</strong> para imprimirlo y otro <strong>Enviar</strong> para mandarlo por email.</p>
+<ul>
+  <li>Si tu salón tiene <strong>Verifactu</strong>, el tique es una factura simplificada con código QR, enviada a Hacienda. Lo explicamos en <a href="/ayuda/verifactu/">Verifactu: tiques y facturas en Godolphy</a>.</li>
+  <li>Si no, es un <strong>Justificante de cobro</strong> con tus datos, los servicios, el desglose de IVA y el medio de pago. No es una factura.</li>
+</ul>
 
 <h2 id="devoluciones">Hacer una devolución</h2>
 <p>Hay dos tipos, según cómo se pagó.</p>
