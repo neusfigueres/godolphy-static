@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/v3/servicios_final.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Photorealistic cinematic render in the style of the reference image but WITHOUT any person and without hands: two large glowing translucent service cards floating big in the center of an immense violet digital universe, surrounded by smaller blurred floating cards (Pedicura, Depilación, Masaje, Cejas, Peluquería). Left card, slightly smaller, with a red circle and down arrow, a real photo of a woman receiving a facial treatment, title 'Tratamiento facial', rows: 'Ingresos 75 €', 'Coste productos 28 €', 'Tiempo 60 min', 'Demanda Alta', and a red box 'Beneficio por servicio 12 €' with a small red bar chart. Right card, bigger, glowing green border, green circle with up arrow, a real photo of a manicure with pink nails, title 'Manicura semipermanente', rows: 'Ingresos 35 €', 'Coste productos 6 €', 'Tiempo 45 min', 'Demanda Muy alta', and a green box 'Beneficio por servicio 24 €' with a rising green bar chart and arrow. All text in Spanish, crisp, correctly spelled, exactly as written. Violet light trails and particles. Vertical 9:16. No logos, no watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/nuevas/servicios_cartas.png"
+  ]
+}

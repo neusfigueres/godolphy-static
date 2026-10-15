@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/v3/servicios_panel.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Photorealistic cinematic render in the style of the reference image, no people: a big floating translucent violet dashboard panel titled 'Servicios' in a violet digital universe, listing four services with real photos: 'Manicura semipermanente' 'Beneficio 24 €' green bars; 'Diseño de cejas' 'Beneficio 18 €' green bars; 'Tratamiento facial' 'Beneficio 12 €' yellow bars; 'Pedicura spa' 'Beneficio 28 €' green bars. Around it smaller floating panels: 'Clientas', 'Oportunidades', 'Equipo', and a 'Rentabilidad' bar chart with '↑ 62%'. All text in Spanish, crisp and exactly as written. Vertical 9:16. No watermarks.",
+  "ref_files": [
+    "imagegen/refs/video-calculo/nuevas/panel_servicios.png"
+  ]
+}
