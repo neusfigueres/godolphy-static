@@ -145,9 +145,9 @@ a.ay-card:hover{border-color:var(--lila);box-shadow:0 6px 20px rgba(99,28,255,.1
 @media(max-width:960px){.ay-wrap{grid-template-columns:1fr;gap:32px}.ay-side{position:static;max-height:none;order:2;border-top:1px solid var(--line);padding-top:24px}}
 @media(max-width:768px){.ay-hero{padding:104px 20px 40px}.ay-hero h1{font-size:30px}.ay-hero p{font-size:15px}.ay-wrap,.ay-index-wrap{padding:36px 20px 64px}.ay-art h2{font-size:24px}.tip{padding:24px 20px 10px}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Tarjetas regalo", "description": "Crea tarjetas regalo desde el panel de Godolphy cuando una clienta te las compra en el salón: código, importe, caducidad y cómo se usan después.", "dateModified": "2026-10-14", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/tarjetas-regalo/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Tarjetas regalo", "description": "Crea tarjetas regalo desde el panel de Godolphy cuando una clienta te las compra en el salón: código, importe, caducidad y cómo se usan después.", "dateModified": "2026-10-15", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/tarjetas-regalo/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Centro de ayuda", "item": "https://www.godolphy.com/ayuda/"}, {"@type": "ListItem", "position": 2, "name": "Tarjetas regalo", "item": "https://www.godolphy.com/ayuda/tarjetas-regalo/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "No encuentro a la clienta en «Comprador»", "acceptedAnswer": {"@type": "Answer", "text": "Tiene que estar en tu lista de clientas. Créala primero en Clientes."}}, {"@type": "Question", "name": "¿Se puede usar una tarjeta regalo para pagar una cita en el salón?", "acceptedAnswer": {"@type": "Answer", "text": "Por ahora, el saldo se usa al reservar en tu página de reservas, introduciendo el código."}}, {"@type": "Question", "name": "Me sale «Límite de tu plan alcanzado»", "acceptedAnswer": {"@type": "Answer", "text": "Las tarjetas regalo no están incluidas en el plan Solo. Pulsa Ver planes para ver las opciones."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "No encuentro a la clienta en «Comprador»", "acceptedAnswer": {"@type": "Answer", "text": "Tiene que estar en tu lista de clientas. Créala primero en Clientes."}}, {"@type": "Question", "name": "¿Se puede usar una tarjeta regalo para pagar una cita en el salón?", "acceptedAnswer": {"@type": "Answer", "text": "Por ahora, el saldo se usa al reservar en tu página de reservas, introduciendo el código."}}, {"@type": "Question", "name": "El botón «Nueva tarjeta regalo» está bloqueado", "acceptedAnswer": {"@type": "Answer", "text": "Las tarjetas regalo están disponibles en los planes Pro y Max. Con el plan Solo verás el botón bloqueado."}}, {"@type": "Question", "name": "No me deja crear la tarjeta", "acceptedAnswer": {"@type": "Answer", "text": "Revisa que hayas elegido Cobrado con. Si no es física, también hacen falta el comprador y el email del destinatario."}}]}</script>
 </head>
 <body style="overflow-x:hidden">
 
@@ -199,7 +199,7 @@ function toggleMobileNav(){
 <p class="ay-crumbs"><a href="/ayuda/">Centro de ayuda</a> › Marketing</p>
 <h1>Tarjetas regalo</h1>
 <p>Crea una tarjeta regalo cuando una clienta te la compra en el salón. Godolphy genera el código y la persona que la recibe la usa al reservar online.</p>
-<p class="ay-meta">Lectura: 4 min · Actualizado el 14 de octubre de 2026</p>
+<p class="ay-meta">Lectura: 4 min · Actualizado el 15 de octubre de 2026</p>
 </div></section>
 <div class="ay-wrap">
 <nav class="ay-side" aria-label="Índice del centro de ayuda">
@@ -270,19 +270,20 @@ function toggleMobileNav(){
 <h2 id="crear">Crear una tarjeta regalo</h2>
 <ol class="steps">
   <li>En el menú lateral, entra en <strong>Marketing → Tarjetas</strong> y pulsa <strong>Nueva tarjeta regalo</strong>.</li>
-  <li>En <strong>Comprador</strong>, busca a la clienta que la paga. Tiene que estar en tu lista de <a href="/ayuda/clientas/">clientas</a>; si no está, créala primero.</li>
-  <li>Rellena <strong>Nombre del destinatario</strong> y <strong>Email del destinatario</strong>: la persona que la va a usar.</li>
+  <li>Si la vas a entregar en mano, marca <strong>Tarjeta física</strong>: no hace falta clienta ni email y no se envía ningún correo. Si no, en <strong>Comprador</strong> busca a la clienta que la paga (tiene que estar en tu lista de <a href="/ayuda/clientas/">clientas</a>) y rellena <strong>Nombre del destinatario</strong> y <strong>Email del destinatario</strong>.</li>
   <li>Si quieres, añade un <strong>Mensaje</strong>.</li>
   <li>Escribe el <strong>Importe</strong> en euros.</li>
+  <li>En <strong>Cobrado con</strong>, elige cómo te la han pagado: efectivo, Bizum, TPV… Es obligatorio. Si tienes varios locales, elige también el <strong>Local</strong>.</li>
   <li>En <strong>Fecha de caducidad</strong>, pon una fecha o déjala en blanco para usar la caducidad general de tu salón.</li>
   <li>Pulsa <strong>Crear tarjeta</strong>.</li>
 </ol>
 <figure class="shot has-img"><img src="/ayuda/img/marketing-nueva-tarjeta.jpg" alt="Modal «Crear tarjeta regalo»" loading="lazy"/><figcaption>Modal «Crear tarjeta regalo»</figcaption></figure>
-<p>Al crearla verás el código de la tarjeta, con un botón para copiarlo. Puedes dárselo a tu clienta en el momento. Además, Godolphy envía el código por email a la persona destinataria.</p>
-<p>Las tarjetas creadas desde el panel quedan como <strong>Pagado</strong>: se entiende que te la han pagado en el salón. Recuerda registrar ese dinero en tu caja.</p>
+<p>Al crearla verás el código de la tarjeta, con un botón para copiarlo. Si es física, apúntalo en la tarjeta. Si no, Godolphy envía además el código por email a la persona destinataria.</p>
+<p>Las tarjetas creadas desde el panel quedan como <strong>Pagado</strong>. La venta se registra sola en <a href="/ayuda/cierre-de-caja/">Caja</a>, en <strong>Tarjetas regalo vendidas</strong>, con el medio de pago que elegiste.</p>
 
 <h2 id="seguimiento">Ver el saldo y el uso</h2>
-<p>En <strong>Marketing → Tarjetas</strong> ves todas tus tarjetas con su importe, lo gastado y el estado de pago. Pulsa el <strong>ojo</strong> para ver el detalle y, en <strong>Histórico de uso</strong>, en qué reservas se ha usado.</p>
+<p>En <strong>Marketing → Tarjetas</strong> ves todas tus tarjetas con su importe, lo gastado y el estado de pago. Las tarjetas físicas aparecen con el comprador «Tarjeta física (venta en el salón)». Pulsa el <strong>ojo</strong> para ver el detalle (email del comprador, caducidad y mensaje) y, en <strong>Histórico de uso</strong>, en qué reservas se ha usado.</p>
+<p>Si eliminas una tarjeta pagada que aún tiene saldo, Godolphy te avisa: después ya no se podrá canjear.</p>
 
 <h2 id="caducidad">Caducidad general</h2>
 <p>En <strong>Configuración → Web</strong>, en <strong>Las tarjetas caducan a los ___ meses</strong>, defines cuánto duran por defecto. Déjalo en blanco para que no caduquen. La caducidad se cuenta desde el día en que se crea la tarjeta.</p>
@@ -302,8 +303,10 @@ function toggleMobileNav(){
   <dd>Tiene que estar en tu lista de clientas. Créala primero en <strong>Clientes</strong>.</dd>
   <dt>¿Se puede usar una tarjeta regalo para pagar una cita en el salón?</dt>
   <dd>Por ahora, el saldo se usa al reservar en tu página de reservas, introduciendo el código.</dd>
-  <dt>Me sale «Límite de tu plan alcanzado»</dt>
-  <dd>Las tarjetas regalo no están incluidas en el plan Solo. Pulsa <strong>Ver planes</strong> para ver las opciones.</dd>
+  <dt>El botón «Nueva tarjeta regalo» está bloqueado</dt>
+  <dd>Las tarjetas regalo están disponibles en los planes Pro y Max. Con el plan Solo verás el botón bloqueado.</dd>
+  <dt>No me deja crear la tarjeta</dt>
+  <dd>Revisa que hayas elegido <strong>Cobrado con</strong>. Si no es física, también hacen falta el comprador y el email del destinatario.</dd>
 </dl>
 <section class="ay-related"><h2>Artículos relacionados</h2><div class="ay-cards"><a class="ay-card" href="/ayuda/tarjetas-regalo-online/">Vender tarjetas regalo online<small>Tu web de reservas</small></a><a class="ay-card" href="/ayuda/clientas/">Crear y gestionar clientas<small>Clientas y reservas</small></a><a class="ay-card" href="/ayuda/enlace-de-reservas/">Tu enlace de reservas<small>Tu web de reservas</small></a></div></section>
 <div class="ay-help">¿Te has quedado con alguna duda? Escríbenos a <a href="mailto:hello@godolphy.com">hello@godolphy.com</a> y te ayudamos.</div>
