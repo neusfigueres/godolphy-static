@@ -211,6 +211,16 @@ def unlink_unpublished(content, flat):
     return re.sub(r'<a href="/ayuda/([^/"]+)/">(.*?)</a>', repl, content)
 
 
+def faq_items(content):
+    """Preguntas de los bloques <dl class="faq"> (Errores habituales) para el FAQPage."""
+    out = []
+    for dl in re.findall(r'<dl class="faq">(.*?)</dl>', content, re.S):
+        for q, a in re.findall(r"<dt>(.*?)</dt>\s*<dd>(.*?)</dd>", dl, re.S):
+            clean = lambda t: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", t)).strip()
+            out.append((clean(q), clean(a)))
+    return out
+
+
 def build_article(data, flat, slug):
     meta, content = load_article(slug)
     content = unlink_unpublished(content, flat)
@@ -249,6 +259,10 @@ def build_article(data, flat, slug):
             {"@type": "ListItem", "position": 1, "name": "Centro de ayuda", "item": f"{BASE_URL}/ayuda/"},
             {"@type": "ListItem", "position": 2, "name": meta["titulo"], "item": url}]},
     ]
+    faq = faq_items(content)
+    if faq:
+        jsonld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     d = OUT / slug
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(page(meta["seo_title"], meta["descripcion"], url, body, jsonld), encoding="utf-8")
