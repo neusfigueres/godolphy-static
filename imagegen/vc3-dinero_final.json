@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/video-calculo/v3/dinero_final.png",
+  "model": "gpt-image-2-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Exactly the same scene, same salon, same clients, same camera angle and same cash drawer as the reference image. Change only this: a magical wind blows the euro banknotes and coins out of the cash drawer, they fly up through the air towards the back of the salon and the entrance door, the drawer is now almost empty, the hand is gone. Cinematic special effect, motion blur on flying banknotes. Photorealistic. No readable text, no logos, no watermarks.",
+  "ref_files": [
+    "imagegen/video-calculo/v3/dinero_inicio.png"
+  ]
+}
