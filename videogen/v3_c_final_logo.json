@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/v3/videos/c_final_logo.mp4",
+  "model": "kling-v3",
+  "prompt": "She hugs the dachshund with eyes closed and a happy smile in her salon; violet light particles start swirling around them, the scene gently dissolves into glowing violet light streaks that flow into a dark violet space and form the Godolphy logo floating above a reflective floor. Smooth elegant transition, cinematic.",
+  "negative_prompt": "cartoon, distorted face, extra limbs, extra fingers, watermark, garbled text",
+  "frames": [
+    "imagegen/video-calculo/v3/perro_hd.png",
+    "imagegen/video-calculo/v3/logo_hd.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}

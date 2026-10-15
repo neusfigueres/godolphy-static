@@ -1,0 +1,15 @@
+{
+  "out": "imagegen/video-calculo/v3/videos/c_dinero.mp4",
+  "model": "kling-v3",
+  "prompt": "Busy beauty salon full of clients, the cash drawer full of euro banknotes in the foreground. Suddenly a magical wind starts blowing the banknotes and coins out of the drawer; they fly away through the air over the clients towards the entrance door and disappear, leaving the drawer almost empty while the salon keeps working. Photorealistic, cinematic, motion blur on the money.",
+  "negative_prompt": "cartoon, distorted face, extra limbs, extra fingers, watermark, garbled text",
+  "frames": [
+    "imagegen/video-calculo/v3/dinero_inicio_hd.png",
+    "imagegen/video-calculo/v3/dinero_final_hd.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}
