@@ -52,7 +52,7 @@
 <p>Pulsa <strong>Guardar datos</strong>. Verás «Claves de Stripe añadidas con éxito».</p>
 <p>Una vez guardadas, las claves secretas se muestran ocultas: solo verás los últimos caracteres. Para cambiar una clave, pega la nueva encima y vuelve a guardar.</p>
 
-<h2 id="comprobar">3. Comprueba que el webhook funciona</h2>
+<!--pendiente--><h2 id="comprobar">3. Comprueba que el webhook funciona</h2>
 <p>Debajo de los eventos, en el bloque <strong>Webhook de Stripe</strong>, Godolphy te dice cómo está la conexión:</p>
 <ul>
   <li><strong>«Conectado: último aviso de Stripe recibido el…»</strong>: todo funciona.</li>
@@ -60,7 +60,7 @@
   <li><strong>Aviso en rojo «la firma no coincide»</strong>: Stripe está enviando avisos, pero el <strong>Endpoint secret</strong> que has pegado no es el de ese webhook. Mientras no coincida, las reservas pagadas no se confirman. Copia otra vez el «Secreto de firma» del webhook y guarda.</li>
 </ul>
 
-<h2 id="modo-prueba">4. Si quieres probar antes: el modo de prueba</h2>
+<!--/pendiente--><h2 id="modo-prueba">3. Si quieres probar antes: el modo de prueba</h2>
 <p>Stripe tiene un modo de prueba con tarjetas ficticias, sin cargos reales. Para usarlo:</p>
 <ol class="steps">
   <li>En Stripe, cambia a modo de prueba y crea también allí el webhook (con la misma URL y los mismos eventos).</li>
@@ -69,14 +69,14 @@
 </ol>
 <p><strong>Acuérdate de desactivarlo</strong> cuando acabes de probar. Mientras esté activo, tus clientas no pagan de verdad.</p>
 
-<h2 id="desconectar">Desconectar Stripe</h2>
+<!--pendiente--><h2 id="desconectar">Desconectar Stripe</h2>
 <p>Pulsa <strong>Desconectar claves de producción</strong> o <strong>Desconectar claves de test</strong> y confirma con <strong>Sí, desconectar</strong>.</p>
 <ul>
   <li>Sin claves de producción, <strong>dejas de cobrar las reservas online</strong>. Si tienes el cobro al reservar activado, desactívalo en <strong>Configuración → Pagos</strong> para que tus clientas puedan seguir reservando.</li>
   <li>Si quitas las de test, el modo de prueba se desactiva.</li>
 </ul>
 
-<h2 id="siguiente-paso">Siguiente paso</h2>
+<!--/pendiente--><h2 id="siguiente-paso">Siguiente paso</h2>
 <p>Con Stripe conectado, decide cuánto cobras al reservar en <a href="/ayuda/pago-o-deposito/">Cobro al reservar: pago completo o depósito</a>.</p>
 
 <div class="tip">
@@ -95,7 +95,7 @@
   <dt>No me deja activar o desactivar el modo de prueba</dt>
   <dd>Para cambiar de modo, el modo al que pasas tiene que tener sus tres claves. El mensaje te dice cuáles faltan.</dd>
   <dt>Las clientas pagan pero la reserva no se confirma</dt>
-  <dd>Casi siempre es el webhook. Mira el estado debajo del bloque <strong>Webhook de Stripe</strong>: si sale el aviso de que la firma no coincide, el <strong>Endpoint secret</strong> no es el de ese webhook o es de otro modo (producción o prueba). Si no ha llegado ningún aviso, revisa en Stripe que el webhook tenga la URL de tu salón y todos los eventos de la lista.</dd>
+  <dd>Casi siempre es el webhook. Revisa que en Stripe esté creado con la URL de tu salón, que tenga todos los eventos de la lista y que el <strong>Endpoint secret</strong> que has pegado en Godolphy sea el de ese webhook y del mismo modo (producción o prueba).</dd>
   <dt>Una clienta no puede pagar al reservar</dt>
   <dd>Si pides el pago al reservar y Stripe no está conectado, tus clientas no pueden terminar el pago online. Conecta Stripe o desactiva el pago al reservar en <strong>Configuración → Pagos</strong>.</dd>
 </dl>

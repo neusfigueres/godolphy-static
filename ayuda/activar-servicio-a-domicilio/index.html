@@ -145,7 +145,7 @@ a.ay-card:hover{border-color:var(--lila);box-shadow:0 6px 20px rgba(99,28,255,.1
 @media(max-width:960px){.ay-wrap{grid-template-columns:1fr;gap:32px}.ay-side{position:static;max-height:none;order:2;border-top:1px solid var(--line);padding-top:24px}}
 @media(max-width:768px){.ay-hero{padding:104px 20px 40px}.ay-hero h1{font-size:30px}.ay-hero p{font-size:15px}.ay-wrap,.ay-index-wrap{padding:36px 20px 64px}.ay-art h2{font-size:24px}.tip{padding:24px 20px 10px}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Activar el servicio a domicilio", "description": "Paso a paso para que una profesional ofrezca servicios a domicilio en Godolphy: su dirección de salida, su radio en km y su horario a domicilio.", "dateModified": "2026-10-13", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/activar-servicio-a-domicilio/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Activar el servicio a domicilio", "description": "Paso a paso para que una profesional ofrezca servicios a domicilio en Godolphy: su dirección de salida, su radio en km y su horario a domicilio.", "dateModified": "2026-10-15", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/activar-servicio-a-domicilio/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Centro de ayuda", "item": "https://www.godolphy.com/ayuda/"}, {"@type": "ListItem", "position": 2, "name": "Activar el servicio a domicilio", "item": "https://www.godolphy.com/ayuda/activar-servicio-a-domicilio/"}]}</script>
 </head>
 <body style="overflow-x:hidden">
@@ -198,7 +198,7 @@ function toggleMobileNav(){
 <p class="ay-crumbs"><a href="/ayuda/">Centro de ayuda</a> › Servicio a domicilio</p>
 <h1>Activar el servicio a domicilio</h1>
 <p>Para que una profesional reciba reservas a domicilio necesita su dirección de salida, el servicio a domicilio activado y un horario a domicilio.</p>
-<p class="ay-meta">Lectura: 5 min · Actualizado el 13 de octubre de 2026</p>
+<p class="ay-meta">Lectura: 5 min · Actualizado el 15 de octubre de 2026</p>
 </div></section>
 <div class="ay-wrap">
 <nav class="ay-side" aria-label="Índice del centro de ayuda">
@@ -289,7 +289,14 @@ function toggleMobileNav(){
 <p>Si también trabaja en un local, tendrá un horario para el local y otro para domicilio. Así puedes organizar, por ejemplo, mañanas en el salón y tardes a domicilio.</p>
 
 <h2 id="desplazamientos">Cómo se cuentan los desplazamientos entre citas</h2>
-<p>Godolphy calcula el tiempo en coche entre una cita y la siguiente. Si no da tiempo a llegar, ese hueco no se ofrece. No hace falta que dejes márgenes a mano.</p>
+<p>Godolphy calcula el tiempo de trayecto en coche y solo ofrece horas a las que da tiempo a llegar. No hace falta que dejes márgenes a mano. Tiene en cuenta:</p>
+<ul>
+  <li>El trayecto <strong>desde la cita anterior</strong> de la profesional ese día, sea a domicilio o en el salón.</li>
+  <li>El trayecto <strong>hasta la cita siguiente</strong>.</li>
+  <li>Para la <strong>primera cita a domicilio del día</strong>, el trayecto desde su dirección de salida.</li>
+</ul>
+<p>Cuentan todas las citas: las de tu web de reservas, las que creas desde el panel y las reprogramadas.</p>
+<p>En el <strong>Calendario</strong> verás el trayecto antes de cada cita a domicilio, como una franja rayada pegada a la cita: <strong>🚲 X min desplazamiento</strong>, o <strong>🏠 X min desde casa</strong> si es la primera del día.</p>
 
 <div class="tip">
   <span class="tip-label">Consejo</span>
@@ -305,6 +312,8 @@ function toggleMobileNav(){
   <dd>Aparece cuando la profesional tiene al menos una dirección. Añade primero su dirección en <strong>Direcciones → Domicilio</strong>.</dd>
   <dt>«La dirección no se encuentra en la zona…»</dt>
   <dd>Su dirección queda fuera de las zonas del negocio. Crea o amplía una <a href="/ayuda/zonas-de-domicilio/">zona</a> que la incluya.</dd>
+  <dt>No se ve el tiempo de desplazamiento</dt>
+  <dd>Para calcular el trayecto, las direcciones tienen que estar confirmadas. Revisa que la dirección de la profesional, la del local y la de la clienta se eligieran de las sugerencias al escribirlas.</dd>
   <dt>La profesional no sale en las reservas a domicilio</dt>
   <dd>Comprueba que tiene <strong>Servicios a domicilio</strong> activado, horario en <strong>Domicilio</strong> ese día, el servicio asignado y que la dirección de la clienta está dentro de su radio.</dd>
 </dl>

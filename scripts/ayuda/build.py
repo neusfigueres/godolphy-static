@@ -167,7 +167,11 @@ def load_article(slug):
     raw = (SRC / "articulos" / f"{slug}.html").read_text(encoding="utf-8")
     m = re.match(r"\s*<!--meta\s*(\{.*?\})\s*-->", raw, re.S)
     meta = json.loads(m.group(1))
-    return meta, raw[m.end():].strip()
+    body = raw[m.end():]
+    # Texto de funciones aún no desplegadas: se escribe ya, pero no se publica
+    # hasta quitar las marcas <!--pendiente--> ... <!--/pendiente-->.
+    body = re.sub(r"<!--pendiente-->.*?<!--/pendiente-->", "", body, flags=re.S)
+    return meta, body.strip()
 
 
 def link_or_span(a, current=None):
