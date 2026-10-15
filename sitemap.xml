@@ -685,6 +685,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/conectar-stripe/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/pago-o-deposito/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/politicas-de-cancelacion/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/clientas/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -696,6 +711,16 @@
   </url>
   <url>
     <loc>https://www.godolphy.com/ayuda/reprogramar-y-cancelar/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/ventas-y-reembolsos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/cierre-de-caja/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

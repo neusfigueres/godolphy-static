@@ -127,15 +127,18 @@
       "articulos": [
         {
           "slug": "conectar-stripe",
-          "titulo": "Conectar Stripe para cobrar online"
+          "titulo": "Conectar Stripe para cobrar online",
+          "publicado": true
         },
         {
           "slug": "pago-o-deposito",
-          "titulo": "Cobro al reservar: pago completo o depósito"
+          "titulo": "Cobro al reservar: pago completo o depósito",
+          "publicado": true
         },
         {
           "slug": "politicas-de-cancelacion",
-          "titulo": "Políticas de cancelación y no-show"
+          "titulo": "Políticas de cancelación y no-show",
+          "publicado": true
         }
       ]
     },
@@ -161,7 +164,13 @@
         },
         {
           "slug": "ventas-y-reembolsos",
-          "titulo": "Ventas y reembolsos"
+          "titulo": "Cobrar una cita y hacer devoluciones",
+          "publicado": true
+        },
+        {
+          "slug": "cierre-de-caja",
+          "titulo": "Caja: entradas, retiradas y cierre",
+          "publicado": true
         }
       ]
     },

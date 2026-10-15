@@ -1,0 +1,87 @@
+<!--meta
+{
+  "titulo": "Cobrar una cita y hacer devoluciones",
+  "seo_title": "Cobrar una cita, ver tus ventas y hacer devoluciones en Godolphy | Centro de ayuda",
+  "descripcion": "Cómo cobrar una cita en Godolphy en efectivo, TPV, Bizum o con la tarjeta guardada, dividir el pago, imprimir el justificante y devolver un cobro.",
+  "resumen": "Registra lo que te paga cada clienta, con uno o varios medios, y devuelve un importe cuando haga falta.",
+  "tiempo": "6 min",
+  "actualizado": "2026-10-15",
+  "relacionados": ["cierre-de-caja", "pago-o-deposito", "reprogramar-y-cancelar"]
+}
+-->
+
+<h2 id="que-es">Dónde están tus ventas</h2>
+<p>En el menú lateral, <strong>Ventas</strong> tiene dos apartados:</p>
+<ul>
+  <li><strong>Facturación</strong>: la lista de citas con su estado de pago. Desde aquí entras al detalle de cada una para cobrarla o hacer una devolución.</li>
+  <li><strong>Caja</strong>: el efectivo y el cierre del día. Lo explicamos en <a href="/ayuda/cierre-de-caja/">Caja: entradas, retiradas y cierre</a>.</li>
+</ul>
+
+<h2 id="abrir-cita">Abrir el detalle de pago de una cita</h2>
+<p>Tienes dos caminos:</p>
+<ul>
+  <li>Desde el <strong>Calendario</strong>: abre la cita y, en <strong>Resumen de pago</strong>, pulsa <strong>Gestionar pago</strong>.</li>
+  <li>Desde <strong>Ventas → Facturación</strong>: pulsa el <strong>ojo</strong> de la cita.</li>
+</ul>
+<p>En la pestaña <strong>General</strong> verás el <strong>Resumen de pago</strong> (Total, Pagado y Pendiente) y debajo el bloque <strong>Cobros</strong>, con todo lo cobrado y devuelto.</p>
+<figure class="shot" data-shot="ventas-detalle-cobros"><figcaption>Detalle de la cita → Cobros</figcaption></figure>
+
+<h2 id="cobrar">Cobrar una cita</h2>
+<ol class="steps">
+  <li>En el bloque <strong>Cobros</strong>, pulsa <strong>Cobrar</strong>.</li>
+  <li>Elige el <strong>Tipo de pago</strong>. El <strong>Importe (€)</strong> viene relleno con lo que falta por pagar; puedes cambiarlo.</li>
+  <li>Si la clienta paga con dos medios (por ejemplo, una parte en efectivo y otra con Bizum), pulsa <strong>Añadir otro pago</strong> y reparte el importe. Abajo verás <strong>Cobras ahora</strong> y <strong>Quedará pendiente</strong>.</li>
+  <li>Pulsa <strong>Cobrar</strong>. Verás «Cobro registrado».</li>
+</ol>
+<p>Puedes cobrar una parte ahora y el resto otro día: la cita queda como pago parcial hasta que esté pagada del todo.</p>
+<p>Solo se pueden cobrar citas confirmadas, en curso, completadas o marcadas como no presentadas.</p>
+
+<h3 id="tarjeta-guardada">Cobrar con la tarjeta guardada</h3>
+<p>Si la clienta guardó su tarjeta al reservar online y queda algo pendiente, verás <strong>Cobrar con la tarjeta guardada</strong>. Pulsa <strong>Cobrar ahora</strong> y el cobro se envía a Stripe; aparecerá en la lista en unos segundos.</p>
+<p>Si el banco pide que la clienta confirme el pago, no se podrá cobrar así: cóbralo por otro medio.</p>
+
+<h3 id="retencion">Si hay un depósito retenido</h3>
+<p>Si la clienta dejó un depósito retenido en su tarjeta, verás un aviso con la fecha en que Stripe lo liberará. La retención se libera sola cuando cobras la cita entera, por el medio que sea. Desde el panel de la cita en el calendario también puedes <strong>Cobrar</strong> el total con la tarjeta o <strong>Capturar retención</strong> para quedarte solo con el depósito.</p>
+
+<h2 id="tique">Imprimir el justificante</h2>
+<p>Cada cobro y cada devolución tiene un botón <strong>Tique</strong> que abre un <strong>Justificante de cobro</strong> listo para imprimir, con tus datos, los servicios, el desglose de IVA y el medio de pago. <strong>No es una factura.</strong></p>
+
+<h2 id="devoluciones">Hacer una devolución</h2>
+<p>Hay dos tipos, según cómo se pagó.</p>
+<h3 id="devolver">Cobros en el salón: «Devolver»</h3>
+<ol class="steps">
+  <li>En el bloque <strong>Cobros</strong>, pulsa <strong>Devolver</strong> en el cobro.</li>
+  <li>Indica el <strong>Importe (€)</strong> (puede ser una parte) y en <strong>Se devuelve en</strong> el medio con el que devuelves el dinero.</li>
+  <li>Pulsa <strong>Confirmar devolución</strong>. Verás «Devolución registrada».</li>
+</ol>
+<p>Esto <strong>registra</strong> la devolución: el dinero se lo das tú a la clienta.</p>
+<h3 id="reembolsar">Pagos online con tarjeta: «Reembolsar»</h3>
+<ol class="steps">
+  <li>Junto al <strong>Resumen de pago</strong>, pulsa <strong>Reembolsar</strong>.</li>
+  <li>Indica el <strong>Importe a reembolsar (€)</strong> (puede ser una parte) y, si quieres, el <strong>Motivo</strong>.</li>
+  <li>Pulsa <strong>Confirmar reembolso</strong>. Verás «Reembolso procesado correctamente».</li>
+</ol>
+<p>Stripe devuelve el dinero a la tarjeta de la clienta. <strong>No se puede deshacer.</strong> Si la reserva online tenía varias citas, el reembolso se reparte entre ellas.</p>
+
+<h2 id="lista">La lista de Facturación</h2>
+<p>En <strong>Ventas → Facturación</strong> verás cada cita con su fecha, clienta, profesional, servicio y estado de pago: <strong>Pagado</strong>, <strong>Pendiente</strong>, <strong>Parcialmente</strong>, <strong>Pago fallido</strong> o <strong>Reembolsado</strong>. Con <strong>Filtros</strong> puedes filtrar por ubicación, clienta, servicio, estado o profesional, y con <strong>Exportar</strong> descargas la lista en PDF.</p>
+
+<div class="tip">
+  <span class="tip-label">Consejo</span>
+  <h2 id="consejo">Cobra cada cita en el momento</h2>
+  <p><strong>Registra el cobro antes de que la clienta se vaya.</strong> Si lo dejas para el final del día, se olvidan cobros y el cierre de caja no cuadra.</p>
+  <p><strong>Usa el medio de pago real.</strong> Saber cuánto entra en efectivo, por TPV o por Bizum te ayuda a cuadrar la caja y el banco, y a entender las comisiones que pagas.</p>
+  <p><strong>Revisa la lista de pendientes cada semana.</strong> Filtra por estado <strong>Pendiente</strong> o <strong>Parcialmente</strong> para no dejar dinero por cobrar. Para ver cómo va tu negocio, te lo contamos en <a href="/analisis-financiero-centro-estetica/">el análisis financiero de un centro de estética</a>.</p>
+</div>
+
+<h2 id="errores">Errores habituales</h2>
+<dl class="faq">
+  <dt>El botón «Cobrar» está desactivado</dt>
+  <dd>No tienes ningún tipo de pago activo. Actívalos en <strong>Configuración → Pagos → Tipos de pago</strong>.</dd>
+  <dt>Me sale «El importe supera lo pendiente»</dt>
+  <dd>Estás cobrando más de lo que falta. Revisa el importe.</dd>
+  <dt>No me deja devolver un pago con tarjeta desde «Devolver»</dt>
+  <dd>Los pagos online con Stripe se devuelven con <strong>Reembolsar</strong>, y los de tarjeta regalo desde su propio flujo.</dd>
+  <dt>No me deja reembolsar el depósito</dt>
+  <dd>Si el depósito todavía está retenido y no cobrado, no hay nada que reembolsar: cancela la cita para liberarlo entero.</dd>
+</dl>

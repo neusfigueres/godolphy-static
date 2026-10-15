@@ -1,0 +1,86 @@
+<!--meta
+{
+  "titulo": "Conectar Stripe para cobrar online",
+  "seo_title": "Cómo conectar Stripe a Godolphy para cobrar las reservas online | Centro de ayuda",
+  "descripcion": "Paso a paso para conectar tu cuenta de Stripe a Godolphy: claves, webhook, modo de prueba y qué revisar si los pagos no se confirman.",
+  "resumen": "Stripe es la pasarela con la que tus clientas pagan con tarjeta al reservar. El dinero va directo a tu cuenta de Stripe.",
+  "tiempo": "8 min",
+  "actualizado": "2026-10-15",
+  "relacionados": ["pago-o-deposito", "politicas-de-cancelacion", "ventas-y-reembolsos"]
+}
+-->
+
+<h2 id="que-es">Qué es Stripe y para qué lo necesitas</h2>
+<p><strong>Stripe</strong> es la pasarela de pago con la que tus clientas pagan con tarjeta cuando reservan en tu web. Los cobros van <strong>directamente a tu cuenta de Stripe</strong>, no a Godolphy.</p>
+<p>Lo necesitas si quieres <strong>cobrar el servicio o un depósito al reservar</strong>, cobrar el resto con la tarjeta guardada o aplicar tu política de cancelación y no-show a la tarjeta. Si prefieres que tus clientas paguen siempre en el salón, no hace falta conectarlo.</p>
+
+<div class="callout">
+  <strong>Antes de empezar</strong>
+  <p>Necesitas una cuenta de Stripe activada. Si no la tienes, créala en <a href="https://stripe.com/es" rel="noopener" target="_blank">stripe.com</a>. Ten abiertos a la vez el panel de Godolphy y el de Stripe: vas a copiar datos de uno a otro.</p>
+</div>
+
+<h2 id="donde">Dónde se conecta</h2>
+<p>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>Configuración</strong>. Baja hasta el bloque <strong>Integración Stripe</strong>.</p>
+<figure class="shot" data-shot="configuracion-stripe"><figcaption>Configuración → Configuración → Integración Stripe</figcaption></figure>
+
+<h2 id="webhook">1. Crea el webhook en Stripe</h2>
+<p>El webhook es el aviso que Stripe envía a Godolphy cada vez que se paga, se retiene o se devuelve un importe. <strong>Sin él, las reservas pagadas con tarjeta no se confirman.</strong></p>
+<ol class="steps">
+  <li>En Godolphy, en el bloque <strong>Webhook de Stripe</strong>, pulsa <strong>Copiar</strong> para copiar la URL de tu salón.</li>
+  <li>En Stripe, ve a <strong>Desarrolladores → Webhooks → Añadir destino</strong> y pega esa URL.</li>
+  <li>Selecciona los eventos que aparecen en Godolphy debajo de la URL:
+    <ul>
+      <li><code>payment_intent.succeeded</code></li>
+      <li><code>payment_intent.amount_capturable_updated</code></li>
+      <li><code>payment_intent.payment_failed</code></li>
+      <li><code>payment_intent.canceled</code></li>
+      <li><code>charge.refunded</code></li>
+      <li><code>payment_method.attached</code></li>
+      <li><code>payment_method.detached</code></li>
+    </ul>
+  </li>
+  <li>Guarda el destino en Stripe y copia su <strong>Secreto de firma</strong> (empieza por <code>whsec_</code>). Lo pegarás en el paso siguiente.</li>
+</ol>
+
+<h2 id="claves">2. Pega las claves en Godolphy</h2>
+<p>Las claves están en Stripe, en <strong>dashboard.stripe.com/apikeys</strong> (en Godolphy tienes el enlace debajo de los campos). En el bloque <strong>Claves de producción</strong> rellena:</p>
+<ul>
+  <li><strong>Clave pública de producción (pk_live_...)</strong>.</li>
+  <li><strong>Clave secreta de producción (sk_live_...)</strong>.</li>
+  <li><strong>Endpoint secret de producción (whsec_...)</strong>: el secreto de firma del webhook.</li>
+</ul>
+<p>Pulsa <strong>Guardar datos</strong>. Verás «Claves de Stripe añadidas con éxito».</p>
+<p>Una vez guardadas, las claves secretas se muestran ocultas: solo verás los últimos caracteres. Para cambiar una clave, pega la nueva encima y vuelve a guardar.</p>
+
+<h2 id="modo-prueba">3. Si quieres probar antes: el modo de prueba</h2>
+<p>Stripe tiene un modo de prueba con tarjetas ficticias, sin cargos reales. Para usarlo:</p>
+<ol class="steps">
+  <li>En Stripe, cambia a modo de prueba y crea también allí el webhook (con la misma URL y los mismos eventos).</li>
+  <li>En Godolphy, rellena las tres <strong>Claves de prueba</strong> (<code>pk_test_</code>, <code>sk_test_</code> y su <code>whsec_</code>) y pulsa <strong>Guardar datos</strong>.</li>
+  <li>Activa <strong>Modo de prueba</strong>. Se guarda al momento y verás el aviso «Modo de prueba activado. Los pagos no son reales.».</li>
+</ol>
+<p><strong>Acuérdate de desactivarlo</strong> cuando acabes de probar. Mientras esté activo, tus clientas no pagan de verdad.</p>
+
+<h2 id="siguiente-paso">Siguiente paso</h2>
+<p>Con Stripe conectado, decide cuánto cobras al reservar en <a href="/ayuda/pago-o-deposito/">Cobro al reservar: pago completo o depósito</a>.</p>
+
+<div class="tip">
+  <span class="tip-label">Consejo</span>
+  <h2 id="consejo">Haz una reserva de prueba antes de anunciarlo</h2>
+  <p><strong>Prueba el recorrido completo como si fueras una clienta.</strong> Con el modo de prueba activado, reserva en tu propia web con una tarjeta de prueba de Stripe y comprueba que la cita aparece en tu calendario como pagada. Así sabes que el webhook funciona antes de que una clienta real se encuentre un problema.</p>
+  <p><strong>Cobrar al reservar reduce las citas perdidas.</strong> Una clienta que ya ha pagado o ha dejado un depósito falta mucho menos. Te lo contamos en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas en tu salón</a> y en la página de <a href="/funcionalidades/pagos-y-depositos/">pagos y depósitos</a>.</p>
+</div>
+
+<h2 id="errores">Errores habituales</h2>
+<dl class="faq">
+  <dt>Me sale «… debe empezar por …» al guardar</dt>
+  <dd>Has pegado una clave en el campo que no toca. Las públicas empiezan por <code>pk_</code>, las secretas por <code>sk_</code> y el endpoint secret por <code>whsec_</code>. Las de producción llevan <code>live</code> y las de prueba <code>test</code>.</dd>
+  <dt>Me sale «Stripe dice que la clave no es válida»</dt>
+  <dd>La clave secreta está mal copiada o es de otra cuenta. Cópiala de nuevo desde Stripe, entera.</dd>
+  <dt>No me deja activar o desactivar el modo de prueba</dt>
+  <dd>Para cambiar de modo, el modo al que pasas tiene que tener sus tres claves. El mensaje te dice cuáles faltan.</dd>
+  <dt>Las clientas pagan pero la reserva no se confirma</dt>
+  <dd>Casi siempre es el webhook. Revisa que en Stripe esté creado con la URL de tu salón, que tenga todos los eventos de la lista y que el <strong>Endpoint secret</strong> que has pegado en Godolphy sea el de ese webhook y del mismo modo (producción o prueba).</dd>
+  <dt>Una clienta no puede pagar al reservar</dt>
+  <dd>Si pides el pago al reservar y Stripe no está conectado, tus clientas no pueden terminar el pago online. Conecta Stripe o desactiva el pago al reservar en <strong>Configuración → Pagos</strong>.</dd>
+</dl>

@@ -1,0 +1,83 @@
+<!--meta
+{
+  "titulo": "Cobro al reservar: pago completo o depósito",
+  "seo_title": "Cobrar al reservar: pago completo o depósito en Godolphy | Centro de ayuda",
+  "descripcion": "Cómo decidir qué paga tu clienta al reservar en Godolphy: nada, el servicio completo o un depósito, y cómo se cobra el resto con la tarjeta guardada.",
+  "resumen": "Decide si tus clientas pagan al reservar, cuánto, y cómo se cobra lo que falte después de la cita.",
+  "tiempo": "6 min",
+  "actualizado": "2026-10-15",
+  "relacionados": ["conectar-stripe", "politicas-de-cancelacion", "ventas-y-reembolsos"]
+}
+-->
+
+<h2 id="que-es">Qué puedes configurar</h2>
+<p>Cuando una clienta reserva en tu web, puedes pedirle:</p>
+<ul>
+  <li><strong>Nada</strong>: reserva sin pagar y paga en el salón.</li>
+  <li><strong>El servicio completo</strong>.</li>
+  <li><strong>Un depósito</strong>: un porcentaje o un importe fijo. El resto se paga después.</li>
+</ul>
+<p>La configuración es la misma para todos tus servicios. Para cobrar online necesitas <a href="/ayuda/conectar-stripe/">conectar Stripe</a>.</p>
+
+<h2 id="donde">Dónde se configura</h2>
+<p>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>Pagos</strong>.</p>
+<figure class="shot" data-shot="configuracion-pagos"><figcaption>Configuración → Pagos</figcaption></figure>
+
+<h2 id="tipos-de-pago">Los tipos de pago</h2>
+<p>Arriba verás <strong>Tipos de pago</strong>: los medios con los que cobras en el salón, como efectivo, TPV, Bizum o transferencia. Son los que podrás elegir al cobrar una cita. Puedes añadir los tuyos con <strong>Añadir tipo de pago</strong> (por ejemplo «Bono» o «PayPal»), cambiarles el nombre o desactivarlos. Los que llevan la etiqueta <strong>Sistema</strong> (Stripe y tarjeta regalo) se usan solos y no se pueden editar.</p>
+
+<h2 id="pago-al-reservar">1. Pedir el pago al reservar</h2>
+<p>Activa <strong>Solicitud del pago en el momento de la reserva</strong> y elige una opción:</p>
+<ul>
+  <li><strong>Pago íntegro</strong>: la clienta paga el servicio entero al reservar.</li>
+  <li><strong>Pago parcial (depósito)</strong>: paga una parte al reservar. Rellena <strong>uno</strong> de los dos campos:
+    <ul>
+      <li><strong>% del total de la reserva</strong>: por ejemplo, 30.</li>
+      <li><strong>Importe fijo por reserva</strong>: por ejemplo, 10 €.</li>
+    </ul>
+  </li>
+</ul>
+<p>Pulsa <strong>Guardar datos</strong>. Verás «Configuración actualizada con éxito».</p>
+<p>Si dejas el interruptor apagado, la reserva se confirma sin pagar y la clienta paga en el salón.</p>
+
+<h3 id="retencion">Depósito retenido o cobrado</h3>
+<p>Cuando la cita es en los próximos <strong>6 días</strong>, el depósito no se cobra: se <strong>retiene</strong> en la tarjeta de la clienta como garantía. Si la cita es más adelante, el depósito se cobra al momento.</p>
+<p>La retención se libera sola cuando la cita queda pagada del todo, por el medio que sea. Mientras está retenida, en el resumen de pago de la cita verás <strong>Retenido (se libera al cobrar)</strong>.</p>
+
+<h2 id="resto">2. Cómo se cobra lo que falta</h2>
+<p>Con <strong>Pago parcial (depósito)</strong> aparece el bloque <strong>Pago restante</strong>. Si la tarjeta de la clienta quedó guardada al reservar, puedes elegir:</p>
+<ul>
+  <li><strong>Cobro automático a través de la tarjeta vinculada del usuario</strong>, y cuándo:
+    <ul>
+      <li><strong>15 min después de empezar la cita</strong>, o</li>
+      <li><strong>Pago al finalizar la hora de la cita</strong>.</li>
+    </ul>
+  </li>
+  <li><strong>Pago una vez finaliza el servicio</strong>: se cobra cuando la cita se marca como <strong>Completada</strong> en el calendario.</li>
+</ul>
+<p>Si no activas ninguna, el resto se paga en el salón y lo registras al <a href="/ayuda/ventas-y-reembolsos/">cobrar la cita</a>. Desde ahí también puedes cobrarlo con la tarjeta guardada cuando quieras.</p>
+
+<div class="callout">
+  <strong>Según tu plan</strong>
+  <p>Algunos planes tienen el depósito fijado y no incluyen el cobro automático con la tarjeta. Si es tu caso, lo verás indicado en la propia pantalla.</p>
+</div>
+
+<div class="tip">
+  <span class="tip-label">Consejo</span>
+  <h2 id="consejo">Un depósito que proteja sin asustar</h2>
+  <p><strong>Pide depósito en los servicios largos o caros.</strong> Una hora y media vacía por una clienta que no viene es mucho dinero perdido. Un depósito del 20–30 % suele bastar para que la clienta se comprometa sin echarla atrás.</p>
+  <p><strong>Combínalo con tu política de cancelación.</strong> El depósito solo protege si dejas claro qué pasa cuando alguien cancela tarde o no se presenta. Configúralo en <a href="/ayuda/politicas-de-cancelacion/">Políticas de cancelación y no-show</a>.</p>
+  <p>Más ideas en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas</a> y en <a href="/consejos-evitar-cancelaciones-turnos-clientes/">consejos para evitar cancelaciones</a>.</p>
+</div>
+
+<h2 id="errores">Errores habituales</h2>
+<dl class="faq">
+  <dt>Me sale «Solo se puede especificar un tipo de depósito»</dt>
+  <dd>Has rellenado el porcentaje y el importe fijo. Deja solo uno.</dd>
+  <dt>Me sale «Se requiere un importe de depósito»</dt>
+  <dd>Con <strong>Pago parcial (depósito)</strong> tienes que poner un porcentaje o un importe fijo.</dd>
+  <dt>Me pide elegir cuándo cobrar</dt>
+  <dd>Si activas el cobro automático, elige una sola opción: 15 minutos después de empezar o al finalizar la hora de la cita.</dd>
+  <dt>El resto no se ha cobrado solo</dt>
+  <dd>El cobro automático solo funciona si la tarjeta de la clienta quedó guardada al reservar. Con <strong>Pago una vez finaliza el servicio</strong>, se cobra al pulsar <strong>Completada</strong>: si nadie la marca, no se cobra. En cualquier caso, puedes cobrarlo a mano desde <a href="/ayuda/ventas-y-reembolsos/">el detalle de la cita</a>.</dd>
+</dl>

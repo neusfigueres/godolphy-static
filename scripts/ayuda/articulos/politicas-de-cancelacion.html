@@ -1,0 +1,70 @@
+<!--meta
+{
+  "titulo": "Políticas de cancelación y no-show",
+  "seo_title": "Política de cancelación y no-show en Godolphy | Centro de ayuda",
+  "descripcion": "Cómo configurar en Godolphy el plazo para cancelar sin penalización y qué pasa con el depósito si la clienta cancela tarde o no se presenta.",
+  "resumen": "Define hasta cuándo se puede cancelar gratis y qué pasa con el dinero si la clienta avisa tarde o no viene.",
+  "tiempo": "5 min",
+  "actualizado": "2026-10-15",
+  "relacionados": ["pago-o-deposito", "reprogramar-y-cancelar", "conectar-stripe"]
+}
+-->
+
+<h2 id="que-es">Qué es la política de cancelación</h2>
+<p>Es la regla que decide qué pasa con lo que ha pagado tu clienta si cancela tarde o no se presenta. Funciona junto con el <a href="/ayuda/pago-o-deposito/">cobro al reservar</a>: si la clienta no ha pagado nada ni ha dejado tarjeta, no hay nada que retener.</p>
+
+<h2 id="configurar">Configurar la política</h2>
+<ol class="steps">
+  <li>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>Políticas de cancelación</strong>.</li>
+  <li>En <strong>1. Tiempo de cancelación sin penalización</strong>, elige <strong>24 horas</strong>, <strong>48 horas</strong> o <strong>72 horas</strong>. Es la antelación mínima para cancelar gratis.</li>
+  <li>En <strong>1.1. Qué pasa si el cliente cancela con menos antelación de la indicada arriba</strong>, elige una opción.</li>
+  <li>En <strong>1.2. Qué pasa si el cliente no cancela y no se presenta a la cita</strong>, elige una opción.</li>
+  <li>Pulsa <strong>Guardar datos</strong>. Verás «Política de cancelación creada con éxito».</li>
+</ol>
+<figure class="shot" data-shot="configuracion-politicas"><figcaption>Configuración → Políticas de cancelación</figcaption></figure>
+<p>Las opciones de 1.1 y 1.2 son:</p>
+<ul>
+  <li><strong>Se devuelve el depósito</strong>: la clienta no pierde nada.</li>
+  <li><strong>Pierde el depósito</strong>: te quedas el depósito y se le devuelve el resto si había pagado más.</li>
+  <li><strong>Se le cobra el servicio íntegro</strong>: te quedas el importe del servicio entero.</li>
+</ul>
+<p>Si eliges <strong>Ninguno</strong> en el plazo, no hay penalización y las dos preguntas desaparecen.</p>
+
+<h2 id="clienta-cancela">Cuando la clienta cancela desde su reserva</h2>
+<ul>
+  <li><strong>Con tiempo</strong> (antes del plazo): se le devuelve lo pagado o se libera la retención de su tarjeta.</li>
+  <li><strong>Tarde</strong> (dentro del plazo): se aplica lo que hayas elegido en 1.1.</li>
+</ul>
+<p>Si pagó una parte con tarjeta regalo, ese importe vuelve primero al saldo de su tarjeta regalo.</p>
+<p>Dentro del plazo, la clienta tampoco puede cambiar la cita de hora desde su reserva. Tú sí puedes <a href="/ayuda/reprogramar-y-cancelar/">reprogramarla desde el calendario</a>.</p>
+
+<h2 id="salon-cancela">Cuando cancelas tú desde el calendario</h2>
+<p>Al pulsar <strong>Cancelar cita</strong>, Godolphy te pregunta <strong>¿Quién cancela la cita?</strong>:</p>
+<ul>
+  <li><strong>El salón</strong>: se devuelve todo lo pagado.</li>
+  <li><strong>La clienta</strong>: se aplica tu política, igual que si cancelara ella.</li>
+</ul>
+<p>Úsalo cuando la clienta te avisa por teléfono o WhatsApp en lugar de cancelar desde su reserva.</p>
+
+<h2 id="no-show">Cuando la clienta no se presenta</h2>
+<p>A partir de la hora de inicio de la cita, en su panel del calendario aparece el botón <strong>No se presentó</strong>. Al pulsarlo se aplica lo que hayas elegido en 1.2.</p>
+<p>Si te equivocas, durante 7 días puedes cambiarlo con <strong>Marcar como "Completada"</strong>. Ten en cuenta que el cobro de la penalización, si ya se ha hecho, no se deshace solo: si corresponde, haz una devolución desde <a href="/ayuda/ventas-y-reembolsos/">el detalle de la cita</a>.</p>
+
+<div class="tip">
+  <span class="tip-label">Consejo</span>
+  <h2 id="consejo">Una política clara que se cumpla</h2>
+  <p><strong>Elige un plazo que puedas rellenar.</strong> Si con 24 horas te da tiempo a dar el hueco a otra clienta, no pidas 72: una política demasiado dura echa atrás reservas.</p>
+  <p><strong>Cuéntala antes de que haga falta.</strong> Ponla en tu web, en tu Instagram y recuérdala al confirmar la cita. Cuando la clienta la conoce, casi nunca hay discusión.</p>
+  <p><strong>Aplícala siempre igual.</strong> Si la perdonas a unas sí y a otras no, deja de funcionar. Para casos excepcionales, cancela como <strong>El salón</strong>.</p>
+  <p>Más ideas en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas en tu salón</a>.</p>
+</div>
+
+<h2 id="errores">Errores habituales</h2>
+<dl class="faq">
+  <dt>Me sale «Por favor, seleccione una política de cancelación tardía»</dt>
+  <dd>Si eliges un plazo, tienes que responder las dos preguntas, 1.1 y 1.2.</dd>
+  <dt>He puesto «Pierde el depósito» pero no he cobrado nada</dt>
+  <dd>La política solo puede quedarse con lo que la clienta pagó o dejó retenido al reservar. Revisa que tengas el <a href="/ayuda/pago-o-deposito/">cobro al reservar</a> activado y <a href="/ayuda/conectar-stripe/">Stripe conectado</a>.</dd>
+  <dt>No me aparece el botón «No se presentó»</dt>
+  <dd>Aparece a partir de la hora de inicio de la cita.</dd>
+</dl>
