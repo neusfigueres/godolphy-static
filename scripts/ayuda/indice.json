@@ -91,6 +91,11 @@
           "slug": "acceso-de-las-profesionales",
           "titulo": "Qué ve una profesional en su acceso",
           "publicado": true
+        },
+        {
+          "slug": "recepcionista",
+          "titulo": "Invitar a una recepcionista",
+          "publicado": true
         }
       ]
     },

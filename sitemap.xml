@@ -676,6 +676,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/recepcionista/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/zonas-de-domicilio/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
