@@ -88,6 +88,11 @@
           "publicado": true
         },
         {
+          "slug": "usuarios-y-permisos",
+          "titulo": "Usuarios y permisos: quién puede hacer qué",
+          "publicado": true
+        },
+        {
           "slug": "acceso-de-las-profesionales",
           "titulo": "Qué ve una profesional en su acceso",
           "publicado": true

@@ -276,13 +276,24 @@ def fecha(iso):
     return f"{int(d)} de {MESES[int(m) - 1]} de {y}"
 
 
+def search_text(a):
+    """Texto en el que busca el buscador: título, resumen, descripción, palabras «buscar» y títulos de sección."""
+    try:
+        meta, body = load_article(a["slug"])[:2]
+    except Exception:
+        return a["titulo"].lower()
+    heads = " ".join(re.sub(r"<[^>]+>", "", h) for h in re.findall(r"<h[23][^>]*>(.*?)</h[23]>", body, re.S))
+    parts = [a["titulo"], meta.get("resumen", ""), meta.get("descripcion", ""), meta.get("buscar", ""), heads]
+    return " ".join(parts).lower()
+
+
 def build_index(data):
     secs = []
     for i, sec in enumerate(data["secciones"], 1):
         items = []
         for a in sec["articulos"]:
             if a["publicado"]:
-                items.append(f'<li data-q="{esc(a["titulo"].lower())}"><a href="/ayuda/{a["slug"]}/">{esc(a["titulo"])}</a></li>')
+                items.append(f'<li data-q="{esc(search_text(a))}"><a href="/ayuda/{a["slug"]}/">{esc(a["titulo"])}</a></li>')
             else:
                 items.append(f'<li data-q="{esc(a["titulo"].lower())}">{esc(a["titulo"])}<span class="soon-tag">· próximamente</span></li>')
         secs.append(f'<section class="ay-sec"><span class="num">{i}</span><h2>{esc(sec["titulo"])}</h2><p>{esc(sec["descripcion"])}</p><ol>{"".join(items)}</ol></section>')
@@ -299,7 +310,8 @@ def build_index(data):
 <script>
 (function(){{var q=document.getElementById('ay-q'),secs=document.querySelectorAll('.ay-sec'),empty=document.getElementById('ay-empty');
 function norm(s){{return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'');}}
-q.addEventListener('input',function(){{var t=norm(q.value.trim()),any=false;secs.forEach(function(s){{var hit=0;s.querySelectorAll('li').forEach(function(li){{var ok=!t||norm(li.getAttribute('data-q')).indexOf(t)>-1||norm(s.querySelector('h2').textContent).indexOf(t)>-1;li.style.display=ok?'':'none';if(ok)hit++;}});s.style.display=hit?'':'none';if(hit)any=true;}});empty.style.display=any?'none':'block';}});}})();
+var stop=' de la el los las del al un una y o en con para por que como mi tu se lo '.split(' ');
+q.addEventListener('input',function(){{var t=norm(q.value.trim()),w=t.split(/\\s+/).filter(function(x){{return x.length>1&&stop.indexOf(x)<0;}}),any=false;secs.forEach(function(s){{var hit=0,h=norm(s.querySelector('h2').textContent);s.querySelectorAll('li').forEach(function(li){{var d=norm(li.getAttribute('data-q'))+' '+h;var ok=!w.length||w.every(function(x){{return d.indexOf(x)>-1||(x.length>4&&d.indexOf(x.slice(0,-1))>-1);}});li.style.display=ok?'':'none';if(ok)hit++;}});s.style.display=hit?'':'none';if(hit)any=true;}});empty.style.display=any?'none':'block';}});}})();
 </script>"""
     url = f"{BASE_URL}/ayuda/"
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Centro de ayuda de Godolphy", "url": url, "inLanguage": "es"}]

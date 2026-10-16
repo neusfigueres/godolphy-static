@@ -671,6 +671,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/usuarios-y-permisos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/acceso-de-las-profesionales/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
