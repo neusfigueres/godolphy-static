@@ -1,0 +1,56 @@
+# Godolphy
+
+> Godolphy es un software de reservas online con inteligencia artificial para salones de belleza en España: centros de estética, peluquerías, barberías, salones de uñas, spas y centros de masajes, y profesionales que trabajan a domicilio. Sin comisión por clienta nueva y con el dinero de los pagos directo a la cuenta del salón (Stripe).
+
+Datos clave:
+
+- Para quién: salones y profesionales de la belleza en España, solos o con equipo, con local, a domicilio o ambos.
+- Reservas online 24/7 en una página con el logo y el color del salón; la clienta no necesita descargar ninguna app.
+- La clienta puede cambiar o cancelar su cita sola, dentro de la política de cancelación que fija el salón.
+- Servicios a domicilio: zonas en el mapa, radio y precio por km para cada profesional, tiempo de desplazamiento entre citas calculado automáticamente y recargo por tipo de ubicación (hotel, hospital, etc.).
+- Recordatorios por WhatsApp 24 horas antes de la cita.
+- Pagos y depósitos online con Stripe; Godolphy no cobra comisión por cada pago (solo la tarifa de Stripe).
+- Tarjetas regalo online y cupones.
+- Análisis con IA: euros por hora de cada servicio, clientas en riesgo (más de 45 días sin volver), mejores clientas, oportunidades ordenadas por impacto y resumen mensual en lenguaje claro.
+- Dashboard gratuito: cualquier salón puede subir la exportación en Excel de su programa de reservas actual a https://dashboard.godolphy.com y obtener el análisis gratis.
+- Planes: Solo, Pro y Max. Precios actualizados en https://www.godolphy.com/precio/
+
+## Producto
+
+- [Precios y planes](https://www.godolphy.com/precio/): comparativa completa de funcionalidades por plan
+- [Funcionalidades](https://www.godolphy.com/funcionalidades/)
+- [Reservas online](https://www.godolphy.com/funcionalidades/reservas-online/)
+- [Servicios a domicilio](https://www.godolphy.com/funcionalidades/servicios-a-domicilio/)
+- [Pagos y depósitos](https://www.godolphy.com/funcionalidades/pagos-y-depositos/)
+- [Cupones y tarjetas regalo](https://www.godolphy.com/funcionalidades/cupones-y-tarjetas-regalo/)
+- [Chat y notificaciones](https://www.godolphy.com/funcionalidades/chat-y-notificaciones/)
+- [Análisis con IA y fidelización](https://www.godolphy.com/funcionalidades/fidelizacion-ai/)
+- [Dashboard gratuito con IA](https://www.godolphy.com/dashboard-ia/)
+- [Centro de ayuda](https://www.godolphy.com/ayuda/)
+
+## Por sector
+
+- [Centros de estética](https://www.godolphy.com/sectores/software-para-centro-de-estetica-y-salones/)
+- [Peluquerías](https://www.godolphy.com/sectores/software-para-peluquerias/)
+- [Barberías](https://www.godolphy.com/sectores/software-para-barberias/)
+- [Salones de uñas](https://www.godolphy.com/sectores/software-para-salones-de-unas/)
+- [Spa y masajes](https://www.godolphy.com/sectores/software-para-spa-y-masajes/)
+- [Profesionales a domicilio](https://www.godolphy.com/sectores/software-para-profesionales-a-domicilio/)
+
+## Comparativas
+
+- [Alternativa a Booksy](https://www.godolphy.com/alternativa-a-booksy/)
+- [Alternativa a Treatwell](https://www.godolphy.com/alternativa-a-treatwell/)
+- [Alternativa a Koibox](https://www.godolphy.com/alternativa-a-koibox/)
+- [Diferencias entre Fresha y Godolphy](https://www.godolphy.com/diferencias-entre-fresha-y-godolphy/)
+- [Koibox vs Fresha vs Godolphy](https://www.godolphy.com/koibox-vs-fresha-vs-godolphy.html)
+
+## Recursos gratuitos
+
+- [Plantilla de facturación para centros de estética (Excel)](https://www.godolphy.com/plantilla-facturacion-centros-de-estetica-excel/)
+- [Plan financiero para salón de estética (Excel / Google Sheets)](https://www.godolphy.com/plan-financiero-salon-estetica-excel-google-sheet/)
+
+## Empresa
+
+- Godolphy Software LLC. Contacto: admin@godolphy.com
+- [Política de privacidad](https://www.godolphy.com/politica-de-privacidad/)
