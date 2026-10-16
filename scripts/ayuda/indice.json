@@ -164,6 +164,11 @@
           "publicado": true
         },
         {
+          "slug": "calendario",
+          "titulo": "El calendario: vistas, colores y estados",
+          "publicado": true
+        },
+        {
           "slug": "crear-reserva",
           "titulo": "Crear una reserva desde el calendario",
           "publicado": true
