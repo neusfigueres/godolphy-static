@@ -611,6 +611,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/prueba-gratuita/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/completar-tu-perfil/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -757,6 +762,11 @@
   </url>
   <url>
     <loc>https://www.godolphy.com/ayuda/analisis-ia/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/plan-y-facturacion/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

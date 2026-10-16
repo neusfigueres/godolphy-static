@@ -8,7 +8,8 @@
       "articulos": [
         {
           "slug": "prueba-gratuita",
-          "titulo": "Tu prueba gratuita de 30 días"
+          "titulo": "Tu prueba gratuita de 30 días",
+          "publicado": true
         },
         {
           "slug": "completar-tu-perfil",
@@ -232,7 +233,8 @@
       "articulos": [
         {
           "slug": "plan-y-facturacion",
-          "titulo": "Tu plan y tu factura de Godolphy"
+          "titulo": "Tu plan y tu factura de Godolphy",
+          "publicado": true
         }
       ]
     }
