@@ -145,3 +145,8 @@ main > article img{border-radius:20px;}
   main > article h1{font-size:32px!important;}
   .post-content h2{font-size:23px!important;}
 }
+
+/* Distintivo VERI*FACTU */
+.gx-vf{display:inline-flex;align-items:center;opacity:.92;transition:opacity .2s,transform .2s;}
+.gx-vf:hover{opacity:1;transform:translateY(-1px);}
+.gx-vf img{display:block;height:33px;width:auto;}

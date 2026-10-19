@@ -123,6 +123,14 @@
         "@type": "Answer",
         "text": "No. Godolphy cobra una cuota mensual y no se queda comisión por clienta nueva ni por pago. Stripe no cobra nada por las retenciones; solo aplica su tarifa estándar cuando se hace un cobro con tarjeta."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Godolphy cumple con Verifactu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Godolphy tiene Verifactu integrado: cada cobro se envía automáticamente a Hacienda a través de un proveedor especializado y genera el tique con el código QR VERI*FACTU. No necesitas otro programa ni certificado digital. Se activa con tu suscripción de pago; durante la prueba gratuita no está activo."
+      }
     }
   ]
 }
@@ -289,6 +297,7 @@ function toggleMobileNav(){
 <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Puedo cobrar solo un depósito y el resto en el centro?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Sí. Al reservar se retiene en la tarjeta el porcentaje que configures (por ejemplo el 30 %) y el servicio lo cobras en el centro como siempre; la retención se libera. Si la cita está a más de 6 días, ese porcentaje se cobra como depósito y se descuenta del total.</p></div></div>
 <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Qué pasa si la clienta cancela o no aparece?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Defines tu política de cancelación. Si cancela dentro del plazo, la retención se libera (o el depósito se devuelve). Si cancela tarde o no aparece, puedes cobrar la señal o el servicio completo con su tarjeta.</p></div></div>
 <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Godolphy cobra comisión por cada reserva?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">No. Godolphy cobra una cuota mensual y no se queda comisión por clienta nueva ni por pago. Stripe no cobra nada por las retenciones; solo aplica su tarifa estándar cuando se hace un cobro con tarjeta.</p></div></div>
+    <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Godolphy cumple con Verifactu?</span><svg class="faq-icon" width="20" height="20" fill="none" stroke="#631cff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-body"><p style="color:rgba(2,2,30,.65);font-size:16px;line-height:1.65;margin:0;">Sí. Godolphy tiene Verifactu integrado: cada cobro se envía automáticamente a Hacienda a través de un proveedor especializado y genera el tique con el código QR VERI*FACTU. No necesitas otro programa ni certificado digital. Se activa con tu suscripción de pago; durante la prueba gratuita no está activo. <a href="/ayuda/verifactu/" style="color:#631cff;">Cómo funciona Verifactu en Godolphy</a>.</p></div></div>
 </div></section>
 <script>function toggleFaq(btn){var body=btn.nextElementSibling;var icon=btn.querySelector(".faq-icon");body.classList.toggle("open");icon.classList.toggle("open");}</script>
 

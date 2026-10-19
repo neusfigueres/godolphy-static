@@ -14,6 +14,15 @@
     img.removeAttribute('width');img.removeAttribute('height');
   });
 
+  // 1b) Distintivo VERI*FACTU en el pie de página
+  (function(){
+    var f=d.querySelector('footer'); if(!f||f.querySelector('.gx-vf')) return;
+    var a=d.createElement('a'); a.href='/ayuda/verifactu/'; a.className='gx-vf'; a.title='Facturación con VERI*FACTU';
+    a.innerHTML='<img src="/assets/verifactu.svg" alt="VERI*FACTU" width="132" height="33" loading="lazy">';
+    var row=f.querySelector('div[style*="justify-content:space-between"]');
+    if(row){ row.insertBefore(a,row.children[1]||null); } else { (f.firstElementChild||f).appendChild(a); }
+  })();
+
   // 2) Pasadores automáticos
   d.querySelectorAll('.gx-slider').forEach(function(sl){
     var btns=sl.querySelectorAll('.gx-slider-tabs button'),track=sl.querySelector('.gx-track'),n=btns.length,i=0,t=null,paused=false;
