@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="176" height="44" viewBox="0 0 176 44" role="img" aria-label="VERI*FACTU">
-  <title>VERI*FACTU</title>
-  <rect x="1" y="1" width="174" height="42" rx="21" fill="#ffffff" stroke="#e3e0ee" stroke-width="2"/>
-  <g transform="translate(16 11)">
-    <path d="M11 0 L21 4 V11 C21 17 16.8 21.2 11 22.5 C5.2 21.2 1 17 1 11 V4 Z" fill="#02021e"/>
-    <path d="M6.6 11.2 L9.7 14.2 L15.6 8.2" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="46" y="28.5" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="800" letter-spacing="1.2" fill="#02021e">VERI<tspan fill="#631cff">*</tspan>FACTU</text>
-</svg>
