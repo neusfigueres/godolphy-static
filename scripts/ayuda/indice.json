@@ -194,6 +194,11 @@
           "publicado": true
         },
         {
+          "slug": "comisiones",
+          "titulo": "Comisiones de las profesionales",
+          "publicado": true
+        },
+        {
           "slug": "verifactu",
           "titulo": "Verifactu: tiques y facturas en Godolphy",
           "publicado": true
