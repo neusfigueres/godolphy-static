@@ -1,0 +1,10 @@
+{
+  "out": "images/blog/raw/v2/organizar-rutas-servicios-domicilio-estetica.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header image for a Spanish blog about beauty businesses. No people: a laptop on a light wood desk showing the day agenda with travel time between home appointments, a folded paper street map of Barcelona, car keys and a coffee next to it; the screen in sharp focus. The screen shows exactly the Godolphy software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful and legible; it is the only purple element. Editorial photography like a real salon's Instagram: warm neutral palette (cream, beige, light oak, slatted wood, concrete), soft warm natural light, shallow depth of field. Absolutely no purple or lilac objects, clothing, towels or decor. Any hands must be anatomically correct. No brand names, logos or readable text anywhere except the Godolphy screen. No text overlays, no watermarks.",
+  "size": "16:9",
+  "no_style": true,
+  "ref_files": [
+    "imagegen/refs/v2/cal-desplazamiento.png"
+  ]
+}

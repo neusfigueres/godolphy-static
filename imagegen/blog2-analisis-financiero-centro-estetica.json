@@ -1,0 +1,10 @@
+{
+  "out": "images/blog/raw/v2/analisis-financiero-centro-estetica.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header image for a Spanish blog about beauty businesses. Extreme close-up of a desktop monitor in a salon, focused on the revenue bar chart and KPI cards of the analysis screen, with the rest falling into soft focus; warm light reflections; no people. The screen shows exactly the Godolphy software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful and legible; it is the only purple element. Editorial photography like a real salon's Instagram: warm neutral palette (cream, beige, light oak, slatted wood, concrete), soft warm natural light, shallow depth of field. Absolutely no purple or lilac objects, clothing, towels or decor. Any hands must be anatomically correct. No brand names, logos or readable text anywhere except the Godolphy screen. No text overlays, no watermarks.",
+  "size": "16:9",
+  "no_style": true,
+  "ref_files": [
+    "imagegen/refs/v2/analisis.png"
+  ]
+}

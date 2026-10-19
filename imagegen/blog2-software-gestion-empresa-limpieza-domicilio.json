@@ -1,0 +1,7 @@
+{
+  "out": "images/blog/raw/v2/software-gestion-empresa-limpieza-domicilio.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header image for a Spanish blog about beauty businesses. No people: a neat professional cleaning cart with spray bottles in grey and white, folded microfiber cloths and a mop, standing in the bright hallway of a freshly cleaned modern apartment with light wood floor and plants. Editorial photography like a real salon's Instagram: warm neutral palette (cream, beige, light oak, slatted wood, concrete), soft warm natural light, shallow depth of field. Absolutely no purple or lilac objects, clothing, towels or decor. Any hands must be anatomically correct. No brand names, logos or readable text anywhere except the Godolphy screen. No text overlays, no watermarks.",
+  "size": "16:9",
+  "no_style": true
+}

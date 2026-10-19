@@ -1,0 +1,7 @@
+{
+  "out": "images/blog/raw/v2/declaracion-renta-peluquera-autonoma.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header image for a Spanish blog about beauty businesses. Detail shot, no faces: a light oak table in the back room of a hair salon with a neat pile of receipts, a calculator, reading glasses, an open ring binder and a cup of tea; a hand holding a pen at the edge of the frame; hairdressing scissors resting on the table. Editorial photography like a real salon's Instagram: warm neutral palette (cream, beige, light oak, slatted wood, concrete), soft warm natural light, shallow depth of field. Absolutely no purple or lilac objects, clothing, towels or decor. Any hands must be anatomically correct. No brand names, logos or readable text anywhere except the Godolphy screen. No text overlays, no watermarks.",
+  "size": "16:9",
+  "no_style": true
+}

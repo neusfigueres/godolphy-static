@@ -1,0 +1,10 @@
+{
+  "out": "images/blog/raw/v2/como-recuperar-clientes-peluqueria.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header image for a Spanish blog about beauty businesses. No people and no hands: a smartphone leaning against a round mirror on a salon styling station, its screen showing the analysis with clients at risk, next to a hairbrush and a small bottle of unbranded hair oil; warm afternoon light. The screen shows exactly the Godolphy software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful and legible; it is the only purple element. Editorial photography like a real salon's Instagram: warm neutral palette (cream, beige, light oak, slatted wood, concrete), soft warm natural light, shallow depth of field. Absolutely no purple or lilac objects, clothing, towels or decor. Any hands must be anatomically correct. No brand names, logos or readable text anywhere except the Godolphy screen. No text overlays, no watermarks.",
+  "size": "16:9",
+  "no_style": true,
+  "ref_files": [
+    "imagegen/refs/v2/movil-analisis.png"
+  ]
+}
