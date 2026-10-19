@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/raw/obligaciones-fiscales-centro-estetica.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header photo for a Spanish blog about beauty businesses. Owner of an aesthetics clinic, woman in her 50s with dark bob haircut, white shirt, at her reception desk reviewing a printed invoice next to a desktop monitor that shows the business analysis; a treatment cabin door behind her. A screen in the scene shows exactly the Godolphy software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful; it is the only purple element. Editorial lifestyle photography like a real salon's Instagram: warm neutral interior (cream and beige walls, light oak, slatted wood, concrete or light wood floor), soft warm natural light, candid genuine moment, shallow depth of field. People wear neutral real clothes (black, white, beige, denim); absolutely no purple or lilac clothing, towels, products or decor. Hands and fingers anatomically correct and relaxed. No brand names, logos or readable text on walls, products, papers or clothing. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/v2/analisis.png"
+  ]
+}

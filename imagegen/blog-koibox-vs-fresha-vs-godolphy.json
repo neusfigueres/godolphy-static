@@ -1,0 +1,6 @@
+{
+  "out": "images/blog/raw/koibox-vs-fresha-vs-godolphy.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header photo for a Spanish blog about beauty businesses. No people: overhead flat lay on a light oak desk of three smartphones and a laptop with blurred, unreadable generic booking screens, a notebook with a hand-drawn comparison table (no readable words), a pen and a cup of coffee; neutral tones. Editorial lifestyle photography like a real salon's Instagram: warm neutral interior (cream and beige walls, light oak, slatted wood, concrete or light wood floor), soft warm natural light, candid genuine moment, shallow depth of field. People wear neutral real clothes (black, white, beige, denim); absolutely no purple or lilac clothing, towels, products or decor. Hands and fingers anatomically correct and relaxed. No brand names, logos or readable text on walls, products, papers or clothing. No text overlays, no watermarks.",
+  "size": "16:9"
+}

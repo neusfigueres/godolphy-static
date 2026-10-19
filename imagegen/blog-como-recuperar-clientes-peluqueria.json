@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/raw/como-recuperar-clientes-peluqueria.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header photo for a Spanish blog about beauty businesses. A hair stylist in her 40s with wavy dark-brown hair and a black shirt, sitting at her salon's styling chair during a quiet moment, writing a personal message on her smartphone; the phone shows the business analysis; soft afternoon light, empty salon behind. A screen in the scene shows exactly the Godolphy software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful; it is the only purple element. Editorial lifestyle photography like a real salon's Instagram: warm neutral interior (cream and beige walls, light oak, slatted wood, concrete or light wood floor), soft warm natural light, candid genuine moment, shallow depth of field. People wear neutral real clothes (black, white, beige, denim); absolutely no purple or lilac clothing, towels, products or decor. Hands and fingers anatomically correct and relaxed. No brand names, logos or readable text on walls, products, papers or clothing. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/v2/movil-analisis.png"
+  ]
+}

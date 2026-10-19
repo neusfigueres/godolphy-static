@@ -1,0 +1,9 @@
+{
+  "out": "images/blog/raw/app-peluqueria-domicilio.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic 16:9 header photo for a Spanish blog about beauty businesses. A mobile hairdresser in his 30s with a buzz cut and black t-shirt, cutting the hair of an elderly man sitting in his own kitchen; his smartphone with the agenda rests on the kitchen counter in the foreground, screen visible. A screen in the scene shows exactly the Godolphy software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful; it is the only purple element. Editorial lifestyle photography like a real salon's Instagram: warm neutral interior (cream and beige walls, light oak, slatted wood, concrete or light wood floor), soft warm natural light, candid genuine moment, shallow depth of field. People wear neutral real clothes (black, white, beige, denim); absolutely no purple or lilac clothing, towels, products or decor. Hands and fingers anatomically correct and relaxed. No brand names, logos or readable text on walls, products, papers or clothing. No text overlays, no watermarks.",
+  "size": "16:9",
+  "ref_files": [
+    "imagegen/refs/v2/movil-calendario.png"
+  ]
+}
