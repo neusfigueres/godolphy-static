@@ -1,0 +1,91 @@
+<!--
+BORRADOR — NO PUBLICAR.
+Sustituye a scripts/ayuda/articulos/conectar-stripe.html cuando la Neus confirme
+que Stripe Connect funciona en modo real (a 19/10/2026 solo funciona en modo de prueba).
+Para publicar: copiar este archivo encima de articulos/conectar-stripe.html (sin este
+comentario), poner la fecha de "actualizado", hacer las capturas en Orgasmi
+(Configuración → Pagos, «Stripe conectado · Modo de prueba») y ejecutar build.py.
+Textos comprobados en el código del panel (stripe-connect-card.tsx) y del backend
+(stripe-connect.service.ts) el 19/10/2026; falta verlos en directo.
+-->
+<!--meta
+{
+  "titulo": "Conectar Stripe para cobrar online",
+  "seo_title": "Cómo conectar Stripe a Godolphy para cobrar las reservas online | Centro de ayuda",
+  "descripcion": "Conecta tu cuenta de Stripe a Godolphy en unos minutos, sin claves ni webhooks: crea tu cuenta desde el panel o conecta la que ya tienes. El dinero llega directo a tu cuenta.",
+  "resumen": "Conecta Stripe desde Configuración → Pagos con un botón. El dinero de las reservas llega directamente a tu cuenta de Stripe y Godolphy no cobra comisión.",
+  "buscar": "stripe conectar cuenta cobros online tarjeta pago reserva depósito iban alta",
+  "tiempo": "4 min",
+  "actualizado": "2026-10-19",
+  "relacionados": ["pago-o-deposito", "cobrar-con-tarjeta", "politicas-de-cancelacion"]
+}
+-->
+
+<h2 id="que-es">Qué es Stripe y para qué lo necesitas</h2>
+<p><strong>Stripe</strong> es la pasarela de pago con la que tu clientela paga con tarjeta cuando reserva en tu web. Lo necesitas si quieres:</p>
+<ul>
+  <li>Cobrar el servicio o un <strong>depósito al reservar</strong>.</li>
+  <li>Cobrar el resto con la <strong>tarjeta guardada</strong>.</li>
+  <li>Aplicar tu <a href="/ayuda/politicas-de-cancelacion/">política de cancelación y no-show</a> a la tarjeta.</li>
+</ul>
+<p>Si prefieres que te paguen siempre en el centro, no hace falta conectarlo.</p>
+<p><strong>El dinero de cada reserva llega directamente a tu cuenta de Stripe. Godolphy no cobra comisión por cada pago.</strong> Las únicas comisiones son las de tu tarifa de Stripe, y las pagas tú a Stripe.</p>
+
+<h2 id="donde">Dónde se conecta</h2>
+<p>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>Pagos</strong>. Arriba del todo verás la tarjeta <strong>Cobros online con Stripe</strong>, con dos botones. Elige el tuyo:</p>
+<figure class="shot" data-shot="configuracion-stripe-connect"><figcaption>Configuración → Pagos → Cobros online con Stripe</figcaption></figure>
+
+<h3 id="sin-cuenta">Si no tienes cuenta de Stripe: «Conectar con Stripe»</h3>
+<ol class="steps">
+  <li>Pulsa <strong>Conectar con Stripe</strong>. Se abre el formulario de alta de Stripe.</li>
+  <li>Rellena los datos de tu negocio, tu DNI o CIF, tu dirección y el <strong>IBAN</strong> de la cuenta donde quieres recibir el dinero.</li>
+  <li>Al terminar, Stripe te devuelve a tu panel de Godolphy.</li>
+</ol>
+<p>Se hace una sola vez y se tarda unos 5 minutos.</p>
+
+<h3 id="con-cuenta">Si ya tienes cuenta de Stripe: «Ya tengo cuenta de Stripe»</h3>
+<ol class="steps">
+  <li>Pulsa <strong>Ya tengo cuenta de Stripe</strong>.</li>
+  <li>Entra en tu cuenta de Stripe y autoriza a Godolphy.</li>
+</ol>
+<p>No tienes que rellenar nada más.</p>
+
+<h2 id="estado">Cómo saber si está listo</h2>
+<p>En la misma tarjeta verás en qué punto estás:</p>
+<ul>
+  <li><strong>«Stripe conectado»</strong> y «Ya puedes cobrar las reservas online»: todo listo. Tienes los botones <strong>Abrir mi panel de Stripe</strong> y <strong>Desconectar</strong>.</li>
+  <li><strong>«Faltan datos para activar los cobros. Termina el alta en Stripe; solo se tarda unos minutos.»</strong>: dejaste el alta a medias. Pulsa <strong>Completar datos en Stripe</strong> y termínala.</li>
+  <li><strong>«Stripe está revisando tus datos»</strong>: Stripe está comprobando lo que has enviado. Puede tardar unos minutos y, mientras tanto, no se cobra online.</li>
+  <li><strong>«Stripe te pide algún dato más»</strong>: tu cuenta funciona, pero Stripe necesita algo nuevo. Pulsa <strong>Completar datos en Stripe</strong> para no quedarte sin cobros.</li>
+</ul>
+
+<h2 id="siguiente-paso">Siguiente paso: decide cuánto cobras al reservar</h2>
+<p>Con Stripe conectado, ya puedes activar <strong>Solicitud del pago en el momento de la reserva</strong>, en la misma pestaña <strong>Pagos</strong>: el servicio completo o un depósito. Sin Stripe conectado no se puede activar. Lo explicamos en <a href="/ayuda/pago-o-deposito/">Cobro al reservar: pago completo o depósito</a>.</p>
+
+<h2 id="desconectar">Desconectar Stripe</h2>
+<p>Pulsa <strong>Desconectar</strong> y confirma con <strong>Sí, desconectar</strong>. Dejarás de cobrar online hasta que vuelvas a conectar Stripe.</p>
+<p>Si tienes reservas con un <strong>depósito retenido o un pago pendiente</strong> hechas con esa cuenta, Godolphy no te deja desconectar: espera a que se cobren o se liberen y vuelve a intentarlo.</p>
+
+<div class="tip">
+  <span class="tip-label">Consejo</span>
+  <h2 id="consejo">Haz una reserva tú antes de anunciarlo</h2>
+  <p><strong>Prueba el recorrido completo como si fueras tu clientela.</strong> Reserva en tu propia web y comprueba que la cita aparece en tu calendario como pagada.</p>
+  <p><strong>Cobrar al reservar reduce las citas perdidas.</strong> Quien ya ha pagado o ha dejado un depósito falta mucho menos. Te lo contamos en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas en tu salón</a> y en la página de <a href="/funcionalidades/pagos-y-depositos/">pagos y depósitos</a>.</p>
+</div>
+
+<h2 id="errores">Errores habituales</h2>
+<dl class="faq">
+  <dt>He conectado Stripe, pero no puedo cobrar online</dt>
+  <dd>Mira el estado en la tarjeta <strong>Cobros online con Stripe</strong>. Si dice que faltan datos o que Stripe te pide algún dato más, pulsa <strong>Completar datos en Stripe</strong>. Si dice que Stripe está revisando tus datos, espera unos minutos.</dd>
+  <dt>No me deja desconectar Stripe</dt>
+  <dd>Tienes reservas con un depósito retenido o un pago pendiente en esa cuenta. Cuando se cobren o se liberen, podrás desconectar.</dd>
+  <dt>¿Godolphy se queda una parte de cada pago?</dt>
+  <dd>No. El dinero va directo a tu cuenta de Stripe. Solo pagas las comisiones de tu tarifa de Stripe.</dd>
+  <dt>¿Dónde veo el dinero que he cobrado?</dt>
+  <dd>En tu panel de Stripe. Desde Godolphy llegas con <strong>Abrir mi panel de Stripe</strong>.</dd>
+</dl>
+
+<div class="callout">
+  <strong>Para casos avanzados: claves manuales</strong>
+  <p>Si ya tenías Stripe conectado con claves, siguen funcionando. Están en <strong>Configuración → General</strong>, en el apartado plegado «Avanzado: claves manuales de Stripe». Con Stripe conectado desde el botón no hace falta tocarlas.</p>
+</div>
