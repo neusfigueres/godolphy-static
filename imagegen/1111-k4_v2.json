@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/1111/frames/k4_v2.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "3D animated film style, exactly the same art style, rendering, lighting and colors as the reference image. Keep exactly the same character ANA from the reference: young manicurist, black curly hair in a low ponytail, white t-shirt, black apron, fine tattoos, gold hoop earrings; and her beagle puppy with a lilac bandana. Setting: Ana's modern bright nail salon early in the morning before opening, warm soft light with lilac/violet accents, nail polish shelves, a well-equipped manicure table. Vertical 9:16, cinematic. No text, no numbers, no logos, no watermark, natural hands with five fingers. Medium close shot from the front: Ana holds her smartphone flat in both hands at chest height with the screen facing up towards her face; from the glowing violet screen, holographic dashboard panels, small charts and blank floating label cards (no text) pour upwards like a magical fountain between Ana and the camera; Ana looks down at them amazed, face lit by violet light.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/refs/ana_personatge_ref.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
