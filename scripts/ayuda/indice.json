@@ -147,6 +147,11 @@
           "publicado": true
         },
         {
+          "slug": "cobrar-con-tarjeta",
+          "titulo": "Cobrar con tarjeta: pagos online y pagos en el centro",
+          "publicado": true
+        },
+        {
           "slug": "politicas-de-cancelacion",
           "titulo": "Políticas de cancelación y no-show",
           "publicado": true

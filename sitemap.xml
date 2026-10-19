@@ -716,6 +716,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/cobrar-con-tarjeta/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/politicas-de-cancelacion/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
