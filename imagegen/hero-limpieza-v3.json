@@ -1,0 +1,10 @@
+{
+  "out": "images/sectores/v3/hero-limpieza.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic photo for the hero of a Spanish website for beauty businesses. Coordinator of a small cleaning company, man in his 40s with short grey hair, in a plain navy polo shirt and jeans, in a bright modern office with concrete floor and light wood shelving holding neatly stacked unbranded cleaning supplies, standing and holding a smartphone toward the camera that shows the team agenda, friendly natural expression. Editorial lifestyle photography like a real salon's Instagram: warm neutral interior (cream and beige walls, light oak wood, fluted or slatted wood panels, polished concrete or light wood floor), soft warm natural light, candid genuine moment, shallow depth of field. Staff wear neutral real clothes (black shirt or black t-shirt, beige blazer, cream knitwear, jeans); absolutely no purple or lilac clothing, towels, products or decor anywhere. The only purple in the image is the Godolphy software on the screen, which shows exactly the interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful and legible. Hands and fingers must be anatomically correct and relaxed. No brand names, logos or text on walls, products or clothing. No text overlays, no watermarks.",
+  "size": "4:3",
+  "ref_files": [
+    "imagegen/refs/v2/movil-calendario.png"
+  ],
+  "no_style": false
+}

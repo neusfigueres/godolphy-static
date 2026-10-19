@@ -1,0 +1,10 @@
+{
+  "out": "images/sectores/v3/hero-estetica.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic photo for the hero of a Spanish website for beauty businesses. Owner of a calm aesthetics clinic, woman in her 40s with shoulder-length light brown hair, wearing an oversized cream blazer over a black top and wide white trousers, standing beside a fluted light-wood reception desk against a warm limewash plaster wall, one hand resting on the desk next to a desktop monitor showing the business analysis, looking at the camera with a relaxed confident smile; a vase of dried branches on the desk, a white boucle armchair in the corner. Editorial lifestyle photography like a real salon's Instagram: warm neutral interior (cream and beige walls, light oak wood, fluted or slatted wood panels, polished concrete or light wood floor), soft warm natural light, candid genuine moment, shallow depth of field. Staff wear neutral real clothes (black shirt or black t-shirt, beige blazer, cream knitwear, jeans); absolutely no purple or lilac clothing, towels, products or decor anywhere. The only purple in the image is the Godolphy software on the screen, which shows exactly the interface from the reference image (purple sidebar with yellow Godolphy logo, white content area); keep it faithful and legible. Hands and fingers must be anatomically correct and relaxed. No brand names, logos or text on walls, products or clothing. No text overlays, no watermarks.",
+  "size": "4:3",
+  "ref_files": [
+    "imagegen/refs/v2/analisis.png"
+  ],
+  "no_style": false
+}

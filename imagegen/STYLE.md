@@ -11,3 +11,4 @@
 - Revisar manos y dedos antes de usar una imagen: si hay una mano girada o deformada, se descarta.
 - Variar las personas entre imágenes de una misma serie (edad, pelo, rasgos); no repetir la misma cara en todos los sectores.
 - Referencia de lo que funciona (oct. 2026): images/sectores/v2/hero-barberia.png — local real, sin lila, el color lo pone solo el móvil.
+- Línea visual elegida por Neus (oct. 2026, referencias de Pinterest): interiores cálidos y neutros (crema, beige, roble claro, listones de madera, hormigón pulido, espejos orgánicos, lámparas de globo o de papel), equipo vestido de negro o con ropa neutra de calle, escenas espontáneas en recepción o trabajando, luz natural cálida, estilo foto editorial de Instagram de un salón real. No se pasan sus fotos de Pinterest a la IA (personas reales y marcas): se describe el estilo en el prompt.
