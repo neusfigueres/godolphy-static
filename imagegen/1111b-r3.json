@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/1111/frames2/r3.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "3D animated film style, exactly the same art style, rendering and colors as the first reference image. Keep exactly the same character ANA: young manicurist, black curly hair in a low ponytail, white t-shirt, black apron, fine tattoos, gold hoop earrings. Same nail salon as the second reference image (warm morning light, lilac/violet accents, nail polish shelves, plants), softly blurred. Vertical 9:16. No text, no numbers, no logos, no watermark, natural hands with five fingers. Close-up point-of-view shot: Ana's hand (manicured nails, a fine tattoo on the wrist) holds a smartphone vertically in the center of the frame, screen facing the camera, the screen is a plain bright white rectangle, empty; background is the nail salon very blurred with warm bokeh.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/refs/ana_personatge_ref.png",
+  "imagegen/refs/ana_1111_salon.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
