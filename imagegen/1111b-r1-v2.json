@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/1111/frames2/r1_v2.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Edit the reference image: keep EXACTLY the same image, same character, pose, expression, framing, camera angle, lighting, colors and background. Only add, on the table on the right side (in front of Ana, lower right of the frame), a modern white LED/UV nail lamp (dome-shaped manicure lamp with a soft violet glow inside) and next to it a small tidy row of nail polish bottles. Do not change anything else. No text, no logos, natural hands with five fingers. Vertical 9:16, 3D animated film style.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/1111/frames2/r1.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
