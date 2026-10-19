@@ -1,0 +1,39 @@
+{
+  "out": "imagegen/verifactu-meme/videos/c1.mp4",
+  "model": "kling-v3",
+  "prompt": "3D animated film style. Keep exactly the same characters (Ana the massage therapist with black curly hair and black tunic; Verifactu, the short chubby man with grey mustache, glasses and the white VERIFACTU t-shirt; the client with auburn bob hair), the same massage cabin, art style and colors as the start frame. One single continuous shot with no cuts, fixed camera with a very subtle push-in, comedic expressive cartoon acting. Ana opens the door with a welcoming smile; Verifactu stands on the threshold, puffs out his chest, then confidently steps inside, puts his briefcase down on the chair; Ana picks up a rolled towel and gestures with an open hand towards the massage table, inviting him to lie down. Ending exactly as the end frame. Keep the word VERIFACTU on his shirt unchanged. No new text, no logos, no morphing of the faces, no extra fingers.",
+  "negative_prompt": "distorted face, different person, extra fingers, extra limbs, new text, watermark, cut, scene change",
+  "frames": [
+    "imagegen/verifactu-meme/frames-masaje/final/k1.png",
+    "imagegen/verifactu-meme/frames-masaje/final/k2.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 162,
+      "completed": 1792423863,
+      "cost": 0.448,
+      "created": 1792423701,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M5ACEAWGF73F8P2KG54X4YWT",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792510263,
+            "url": [
+              "https://getapib.org/video/9998207576137027-bcba9ab5-9b53-48f0-9846-8035496a71f2-video_task_01M5ACEAWGF73F8P2KG54X4YWT.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
