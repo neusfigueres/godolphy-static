@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/1111/videos/c3.mp4",
+ "model": "kling-v3",
+ "prompt": "3D animated film style. Keep exactly the same character Ana (black curly hair, white t-shirt, black apron), the same nail salon, table, coffee mug, LED nail lamp, art style and colors as the start frame. One single continuous shot with no cuts, static camera, subtle natural movement, expressive cartoon acting. Ana keeps her eyes closed with her hands together making a wish, breathing calmly; the beagle also has its paws together; then the phone lying on the table starts glowing and suddenly bursts with a strong magical violet light, Ana opens her eyes wide amazed, ending exactly as the end frame. No text, no numbers on any screen, no logos, no morphing of the face, no extra fingers.",
+ "negative_prompt": "distorted face, different person, extra fingers, text, numbers, watermark, cut, scene change",
+ "frames": [
+  "imagegen/1111/frames2/r4b.png",
+  "imagegen/1111/frames2/r5b.png"
+ ],
+ "body": {
+  "duration": 5,
+  "mode": "pro",
+  "aspect_ratio": "9:16"
+ }
+}
