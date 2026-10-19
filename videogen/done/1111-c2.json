@@ -1,0 +1,38 @@
+{
+  "out": "imagegen/1111/videos/c2.mp4",
+  "model": "kling-v3",
+  "prompt": "3D animated film style. Keep exactly the same character Ana (black curly hair, white t-shirt, black apron), the same nail salon, table, coffee mug, LED nail lamp, art style and colors as the start frame. One single continuous shot with no cuts, static camera, subtle natural movement, expressive cartoon acting. Close-up of Ana's hand holding the phone steady, the screen stays plain white and still, tiny natural hand movement, soft bokeh in the background slowly shifting, gentle slow push-in. No text, no numbers on any screen, no logos, no morphing of the face, no extra fingers.",
+  "negative_prompt": "distorted face, different person, extra fingers, text, numbers, watermark, cut, scene change",
+  "frames": [
+    "imagegen/1111/frames2/r3.png"
+  ],
+  "body": {
+    "duration": 3,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 68,
+      "completed": 1792438261,
+      "cost": 0.2688,
+      "created": 1792438193,
+      "credits_cost": 2.6879999999999997,
+      "estimated_time": 300,
+      "id": "task_01M5AT8JZ3QHY5VR4D3H66SW3D",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792524661,
+            "url": [
+              "https://getapib.org/video/9998207561738799-26aca879-d9a0-43b9-bd7d-2445c013e5a0-video_task_01M5AT8JZ3QHY5VR4D3H66SW3D.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

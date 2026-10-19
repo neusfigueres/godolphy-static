@@ -1,0 +1,39 @@
+{
+  "out": "imagegen/1111/videos/c1.mp4",
+  "model": "kling-v3",
+  "prompt": "3D animated film style. Keep exactly the same character Ana (black curly hair, white t-shirt, black apron), the same nail salon, table, coffee mug, LED nail lamp, art style and colors as the start frame. One single continuous shot with no cuts, static camera, subtle natural movement, expressive cartoon acting. Ana calmly looks at her phone and sips coffee, then suddenly notices something on the screen: her eyes go wide and her mouth opens in surprise, ending exactly as the end frame. No text, no numbers on any screen, no logos, no morphing of the face, no extra fingers.",
+  "negative_prompt": "distorted face, different person, extra fingers, text, numbers, watermark, cut, scene change",
+  "frames": [
+    "imagegen/1111/frames2/r1_v2.png",
+    "imagegen/1111/frames2/r2b.png"
+  ],
+  "body": {
+    "duration": 3,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 215,
+      "completed": 1792438408,
+      "cost": 0.2688,
+      "created": 1792438193,
+      "credits_cost": 2.6879999999999997,
+      "estimated_time": 300,
+      "id": "task_01M5AT8KA7JX5V8E6T5BN6MPK8",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792524808,
+            "url": [
+              "https://getapib.org/video/9998207561591189-328750ba-2f18-4af5-bf18-4c17dcd1a688-video_task_01M5AT8KA7JX5V8E6T5BN6MPK8.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
