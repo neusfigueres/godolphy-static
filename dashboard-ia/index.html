@@ -17,256 +17,175 @@
 <meta charset="UTF-8">
 <title>Godolphy · Descubre dónde tu salón pierde dinero</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sube la exportación de tu agenda y la IA de Godolphy te dice cuánto ganas de verdad, qué clientas estás perdiendo y qué servicios no son rentables. Gratis y sin tarjeta.">
+<link rel="canonical" href="https://www.godolphy.com/dashboard-ia/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --violet:#5B2EE5; --violet-2:#7B4DFF; --violet-deep:#3A1C9E; --violet-ink:#4B1FE8;
-    --ink:#160B2E; --ink-2:#0A0420;
-    --cream:#F5D6B8; --cream-deep:#E8B98C;
-    --lime:#E8FF00; --lime-ink:#1B1438;
-    --paper:#F7F2E9; --paper-2:#EFE7D8;
-    --muted:#6B5E8E; --muted-2:#8A7DAE;
-    --line:#E3DACB;
-    --pos:#1FA678; --neg:#E0556F;
-    --card:#FFFFFF;
-  }
+  :root{--v:#631cff;--v2:#9B4FE8;--vd:#3a0aaa;--ink:#02021e;--soft:#f8f7ff;--line:rgba(99,28,255,.10);--muted:rgba(2,2,30,.64);--pos:#16a34a;}
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Inter Tight",system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+  .h{font-family:'Gabarito',sans-serif;font-weight:700;letter-spacing:-.02em;}
+  .grad{background:linear-gradient(90deg,var(--v2),var(--v));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--v);background:#efe9ff;padding:6px 12px;border-radius:999px;}
+  .h2{font-family:'Gabarito',sans-serif;font-weight:700;font-size:clamp(34px,4.6vw,56px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 16px;}
+  .lead{font-size:18px;line-height:1.6;color:var(--muted);margin:0;max-width:640px;}
+  .center{text-align:center;}.center .lead{margin:0 auto;}
+  .sec{padding:110px 0;}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;padding:15px 28px;border-radius:999px;transition:transform .2s,box-shadow .2s;white-space:nowrap;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-v{background:var(--v);color:#fff;box-shadow:0 10px 26px rgba(99,28,255,.30);}
+  .btn-w{background:#fff;color:var(--v);}
+  .btn-o{border:2px solid rgba(255,255,255,.85);color:#fff;}
+  .note{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.75;}
+
+  /* header */
+  header{position:absolute;top:0;left:0;right:0;z-index:50;}
+  .nav{display:flex;align-items:center;gap:32px;height:84px;}
+  .nav .logo{height:34px;}
+  .nav .links{display:flex;gap:28px;margin-left:12px;}
+  .nav .links a{color:rgba(255,255,255,.82);font-weight:600;font-size:15px;}
+  .nav .links a:hover{color:#fff;}
+  .nav .right{margin-left:auto;display:flex;align-items:center;gap:18px;}
+  .nav .right .in{color:#fff;font-weight:600;}
+  .nav .btn{padding:11px 20px;font-size:15px;}
+
+  /* hero */
+  .hero{background:linear-gradient(160deg,#9B4FE8 0%,#7835C3 30%,#631cff 65%,#3a0aaa 100%);color:#fff;text-align:center;padding:170px 0 340px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:180px;background:linear-gradient(to bottom,transparent,rgba(58,10,170,.35));pointer-events:none;}
+  .hero .eyebrow{background:rgba(255,255,255,.14);color:#fff;}
+  .hero h1{font-family:'Gabarito',sans-serif;font-weight:700;font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:-.02em;margin:22px auto 20px;max-width:900px;}
+  .hero p{font-size:19px;line-height:1.55;max-width:700px;margin:0 auto 36px;color:rgba(255,255,255,.88);}
+  .hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .hero .note{margin-top:18px;display:block;}
+  .shot{position:relative;z-index:5;margin:-290px auto 0;max-width:1040px;padding:0 32px;}
+  .frame{background:#fff;border-radius:22px;padding:10px;box-shadow:0 40px 90px rgba(30,10,90,.28);}
+  .frame .bar{display:flex;gap:6px;padding:6px 8px 12px;}
+  .frame .bar i{width:10px;height:10px;border-radius:50%;background:#e6e1f7;}
+  .frame img{display:block;width:100%;border-radius:14px;}
+  .shot .frame img{max-height:560px;object-fit:cover;object-position:top;}
+  .chip-float{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 20px 50px rgba(30,10,90,.18);text-align:left;font-size:13px;color:var(--muted);}
+  .chip-float b{display:block;font-family:'Gabarito',sans-serif;font-size:24px;color:var(--ink);}
+  .cf1{left:-24px;top:58%;}.cf2{right:-24px;top:30%;}
+  .platforms{padding:56px 0 0;text-align:center;}
+  .platforms .lab{font-size:13px;font-weight:600;color:var(--muted);}
+  .platforms .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:16px;}
+  .platforms .row span{padding:9px 16px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-weight:700;font-size:14px;}
+
+  /* problem */
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;}
+  .pcard{background:var(--soft);border:1px solid var(--line);border-radius:28px;padding:32px;}
+  .pcard .ic{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;background:#fff;box-shadow:0 8px 20px rgba(99,28,255,.10);margin-bottom:22px;}
+  .pcard h3{font-family:'Gabarito',sans-serif;font-size:24px;margin:0 0 10px;}
+  .pcard p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0 0 18px;}
+  .pcard .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--v);background:#efe9ff;padding:5px 10px;border-radius:8px;}
+
+  /* era mask */
+  .era{background:radial-gradient(700px 380px at 50% 72%,rgba(123,77,255,.16),transparent 70%),#fff;}
+  .era .h2{font-size:clamp(38px,5.6vw,74px);max-width:940px;margin-left:auto;margin-right:auto;background:linear-gradient(90deg,#02021e 0%,#631cff 55%,#9B4FE8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .mask{max-width:760px;margin:60px auto 0;}
+  .mask svg{width:100%;height:auto;display:block;overflow:visible;animation:mfloat 6s ease-in-out infinite;filter:drop-shadow(0 40px 60px rgba(99,28,255,.35));}
+  @keyframes mfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .tick{animation:tick 12s cubic-bezier(.7,0,.3,1) infinite;}
+  @keyframes tick{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-70px)}50%,70%{transform:translateY(-140px)}75%,95%{transform:translateY(-210px)}100%{transform:translateY(-280px)}}
+  .tick2{animation:tick2 12s cubic-bezier(.7,0,.3,1) infinite;}
+  @keyframes tick2{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-120px)}50%,70%{transform:translateY(-240px)}75%,95%{transform:translateY(-360px)}100%{transform:translateY(-480px)}}
+  .shine{animation:shine 5s ease-in-out infinite;}
+  @keyframes shine{0%,100%{transform:translateX(-300px) skewX(-18deg)}50%{transform:translateX(420px) skewX(-18deg)}}
+
+  /* steps */
+  .steps{background:var(--soft);}
+  .step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;}
+  .step .n{font-family:'Gabarito',sans-serif;font-size:60px;line-height:1;font-weight:800;margin-bottom:16px;}
+  .step h3{font-family:'Gabarito',sans-serif;font-size:24px;margin:0 0 10px;}
+  .step p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0;}
+
+  /* dark showcase */
+  .dark{background:radial-gradient(900px 500px at 85% 10%,rgba(155,79,232,.35),transparent 60%),radial-gradient(700px 500px at 5% 95%,rgba(99,28,255,.30),transparent 60%),#0c0628;color:#fff;}
+  .dark .eyebrow{background:rgba(255,255,255,.08);color:#d9c8ff;}
+  .dark .lead{color:rgba(255,255,255,.72);}
+  .tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:44px 0 26px;}
+  .tabs button{font:inherit;font-weight:600;font-size:14.5px;color:rgba(255,255,255,.72);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px 18px;border-radius:999px;cursor:pointer;transition:all .2s;}
+  .tabs button.on{background:#fff;color:var(--v);border-color:#fff;}
+  .panes{position:relative;max-width:1060px;margin:0 auto;}
+  .pane{display:none;}
+  .pane.on{display:block;animation:fade .5s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .pane .frame{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px rgba(0,0,0,.4);}
+  .pane .frame .bar i{background:rgba(255,255,255,.18);}
+  .pane .cap{text-align:center;margin-top:18px;font-size:15px;color:rgba(255,255,255,.75);}
+
+  /* bento */
+  .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:56px;}
+  .card{position:relative;background:var(--soft);border:1px solid var(--line);border-radius:28px;padding:30px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(99,28,255,.10);}
+  .card h3{font-family:'Gabarito',sans-serif;font-size:25px;line-height:1.1;margin:0 0 10px;}
+  .card p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0;}
+  .c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}
+  .card.v{background:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%,#3a0aaa 100%);border:none;color:#fff;}
+  .card.v p{color:rgba(255,255,255,.85);}
+  .ui{background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(2,2,30,.08);padding:16px;margin:0 0 22px;font-size:13px;color:var(--ink);}
+  .card.v .ui{background:rgba(255,255,255,.12);box-shadow:none;color:#fff;}
+  .row{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;border-radius:12px;}
+  .row+.row{margin-top:4px;}
+  .mut{color:rgba(2,2,30,.5);font-size:12px;}
+  .pill{font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;}
+  .ok{background:#dcfce7;color:#15803d;}.warn{background:#fef3c7;color:#b45309;}.bad{background:#ffe4e6;color:#be123c;}
+  .ai-line{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5;}
+  .orb{flex:0 0 26px;height:26px;border-radius:50%;background:conic-gradient(from 0deg,#9B4FE8,#631cff,#c9a8ff,#9B4FE8);animation:spin 6s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .bars{display:flex;align-items:flex-end;gap:8px;height:90px;padding:6px 4px 0;}
+  .bars span{flex:1;border-radius:6px 6px 2px 2px;background:#d9cdff;}
+  .bars span.on{background:linear-gradient(180deg,#9B4FE8,#631cff);}
+  .fc{display:flex;height:14px;border-radius:999px;overflow:hidden;margin:10px 0 8px;}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:rgba(2,2,30,.6);}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;}
+  .soon{position:absolute;top:22px;right:22px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:#fff;padding:5px 10px;border-radius:999px;}
+  .link{display:inline-flex;gap:6px;margin-top:16px;font-weight:700;font-size:14px;color:var(--v);}
+  .card.v .link{color:#fff;}
+
+  /* final */
+  .final{padding:40px 0 110px;}
+  .final-box{background:linear-gradient(160deg,#9B4FE8 0%,#7835C3 30%,#631cff 65%,#3a0aaa 100%);border-radius:32px;padding:70px 40px;text-align:center;color:#fff;box-shadow:0 20px 60px rgba(99,28,255,.30);}
+  .final-box h2{font-family:'Gabarito',sans-serif;font-size:clamp(32px,4.6vw,56px);line-height:1.04;margin:0 auto 18px;max-width:820px;}
+  .final-box p{font-size:18px;color:rgba(255,255,255,.88);max-width:620px;margin:0 auto 32px;line-height:1.55;}
+
+  footer{background:#02021e;color:rgba(255,255,255,.7);padding:64px 0 28px;font-size:15px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .fgrid h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 14px;}
+  .fgrid a{display:block;margin-bottom:10px;}
+  .fgrid a:hover{color:#fff;}
+  .fbot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:13.5px;color:rgba(255,255,255,.45);}
+
+  .reveal{opacity:1;}
+  html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  html.js .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}.mask svg,.tick,.tick2,.shine,.orb{animation:none}}
+
+  @media(max-width:960px){
+    .cards3{grid-template-columns:1fr;}
+    .c4,.c5,.c6,.c7,.c8{grid-column:span 12}
+    .fgrid{grid-template-columns:1fr 1fr;}
+    .chip-float{display:none;}
   }
-  a{color:inherit; text-decoration:none;}
-  .serif{font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-weight:400;}
-  .mono{font-family:"JetBrains Mono",monospace;}
-  .wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
-  .kicker{
-    font-family:"JetBrains Mono",monospace; font-size:13px; font-weight:600;
-    letter-spacing:0.16em; text-transform:uppercase; color:var(--violet);
-    display:inline-flex; align-items:center; gap:10px;
-  }
-  .kicker::before{content:"//"; opacity:.5;}
-
-  /* ===== buttons ===== */
-  .btn{
-    display:inline-flex; align-items:center; gap:10px; cursor:pointer;
-    font-family:"Inter Tight",sans-serif; font-weight:700; font-size:17px;
-    padding:16px 26px; border-radius:14px; border:none; white-space:nowrap; transition:transform .16s, box-shadow .16s;
-  }
-  .btn .arr{transition:transform .2s;}
-  .btn:hover .arr{transform:translateX(4px);}
-  .btn-primary{
-    background:linear-gradient(135deg,var(--violet) 0%,var(--violet-2) 100%); color:#fff;
-    box-shadow:0 18px 38px -16px rgba(91,46,229,.75);
-  }
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 24px 46px -16px rgba(91,46,229,.85);}
-  .btn-ghost{background:transparent; color:var(--ink); padding:14px 20px;}
-  .btn-ghost:hover{color:var(--violet);}
-  .cta-foot{
-    font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--muted-2); font-weight:500;
-  }
-
-  /* ===== header ===== */
-  header{position:sticky; top:0; z-index:60; background:rgba(247,242,233,.82); backdrop-filter:blur(14px); border-bottom:1px solid var(--line);}
-  .nav{display:flex; align-items:center; gap:30px; height:74px;}
-  .nav .logo{height:30px; width:auto; display:block;}
-  .nav .links{display:flex; gap:30px; margin-left:18px;}
-  .nav .links a{font-size:15.5px; font-weight:500; color:var(--muted); transition:color .15s;}
-  .nav .links a:hover{color:var(--ink);}
-  .nav .right{margin-left:auto; display:flex; align-items:center; gap:8px;}
-  .nav-cta{background:var(--ink); color:#fff; padding:12px 22px; border-radius:12px; font-weight:700; font-size:15.5px; white-space:nowrap; transition:background .15s, transform .15s;}
-  .nav-cta:hover{background:var(--violet); transform:translateY(-1px);}
-  .burger{display:none;}
-
-  /* ===== hero ===== */
-  .hero{position:relative; padding:78px 0 40px;}
-  .hero-glow{position:absolute; inset:0; z-index:0; pointer-events:none;
-    background:radial-gradient(46% 50% at 78% 8%,rgba(123,77,255,.22) 0%,transparent 62%),
-              radial-gradient(40% 44% at 6% 88%,rgba(245,214,184,.5) 0%,transparent 60%);}
-  .hero .wrap{position:relative; z-index:1;}
-  .hero-top{max-width:920px;}
-  .hero h1{
-    font-size:clamp(44px,6.6vw,88px); line-height:.98; letter-spacing:-.035em; font-weight:800;
-    margin:22px 0 0; text-wrap:balance;
-  }
-  .hero h1 .serif{font-size:1.02em; letter-spacing:-.01em; color:var(--violet);}
-  .hero-sub{
-    font-size:clamp(18px,2.1vw,23px); line-height:1.5; color:var(--muted); font-weight:500;
-    max-width:660px; margin:26px 0 0; text-wrap:pretty;
-  }
-  .hero-sub b{color:var(--ink); font-weight:700;}
-  .hero-actions{display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-top:34px;}
-  .hero-trust{display:flex; align-items:center; gap:22px; margin-top:30px; flex-wrap:wrap;}
-  .hero-trust .stat{display:flex; flex-direction:column; gap:2px;}
-  .hero-trust .stat .n{font-size:26px; font-weight:800; letter-spacing:-.02em; line-height:1;}
-  .hero-trust .stat .n .serif{color:var(--violet);}
-  .hero-trust .stat .l{font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted-2);}
-  .hero-trust .sep{width:1px; height:38px; background:var(--line);}
-
-  /* hero visual */
-  .hero-visual{position:relative; margin-top:54px;}
-  .browser{
-    border-radius:20px 20px 18px 18px; overflow:hidden; background:#fff;
-    border:1px solid var(--line);
-    box-shadow:0 50px 90px -40px rgba(45,27,105,.5), 0 8px 24px -16px rgba(45,27,105,.4);
-  }
-  .browser .bar{display:flex; align-items:center; gap:8px; padding:13px 18px; background:#fff; border-bottom:1px solid var(--line);}
-  .browser .dot{width:11px; height:11px; border-radius:50%;}
-  .browser .url{margin-left:14px; flex:1; height:26px; border-radius:8px; background:var(--paper-2);
-    display:flex; align-items:center; padding:0 14px; font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--muted-2); max-width:320px;}
-  .browser img{display:block; width:100%; height:auto;}
-  .float-tag{
-    position:absolute; background:#fff; border:1px solid var(--line); border-radius:16px;
-    padding:14px 18px; box-shadow:0 24px 50px -22px rgba(45,27,105,.5); z-index:3;
-  }
-  .float-tag .ft-lab{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted-2); margin-bottom:6px;}
-  .float-tag .ft-val{font-size:24px; font-weight:800; letter-spacing:-.02em; display:flex; align-items:center; gap:8px;}
-  .float-tag .ft-val .pos{color:var(--pos); font-size:14px; font-family:"JetBrains Mono",monospace;}
-  .ft-a{top:-26px; left:-30px;}
-  .ft-b{bottom:40px; right:-32px;}
-  .ft-c{bottom:-24px; left:90px; display:flex; align-items:center; gap:12px;}
-  .ft-c .ia{font-family:"JetBrains Mono",monospace; font-size:11px; font-weight:700; letter-spacing:.1em; padding:4px 9px; border-radius:999px; background:var(--lime); color:var(--lime-ink);}
-  .ft-c .txt{font-size:14.5px; font-weight:600; max-width:200px; line-height:1.3;}
-
-  /* logos strip */
-  .strip{padding:46px 0 8px; }
-  .strip .lab{text-align:center; font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-2);}
-  .strip .row{display:flex; justify-content:center; gap:46px; flex-wrap:wrap; margin-top:20px; opacity:.65;}
-  .strip .row span{font-size:21px; font-weight:800; letter-spacing:-.01em; color:var(--ink);}
-
-  /* ===== section frame ===== */
-  section{position:relative;}
-  .sec{padding:96px 0;}
-  .sec-head{max-width:760px;}
-  .sec-head h2{font-size:clamp(32px,4.2vw,54px); line-height:1.02; letter-spacing:-.03em; font-weight:800; margin:16px 0 0; text-wrap:balance;}
-  .sec-head h2 .serif{color:var(--violet);}
-  .sec-head p{font-size:clamp(17px,1.9vw,20px); line-height:1.55; color:var(--muted); margin:18px 0 0; max-width:620px; text-wrap:pretty;}
-
-  /* ===== problem ===== */
-  .problem{background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
-  .prob-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:52px;}
-  .prob-card{border:1px solid var(--line); border-radius:22px; padding:34px 30px; background:var(--paper); position:relative; overflow:hidden;}
-  .prob-card .big{font-size:64px; font-weight:800; letter-spacing:-.04em; line-height:.9; color:var(--violet);}
-  .prob-card h3{font-size:23px; font-weight:700; letter-spacing:-.01em; margin:18px 0 0;}
-  .prob-card p{font-size:16px; line-height:1.55; color:var(--muted); margin:12px 0 0;}
-  .prob-card .tagline{display:inline-block; margin-top:22px; font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); background:linear-gradient(transparent 50%, var(--lime) 50%); padding:1px 7px 2px; box-decoration-break:clone; -webkit-box-decoration-break:clone;}
-
-  /* ===== how ===== */
-  .how{background:var(--paper);}
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:56px;}
-  .step{position:relative; padding-top:30px;}
-  .step .num{font-family:"JetBrains Mono",monospace; font-size:14px; font-weight:700; color:var(--violet); letter-spacing:.1em;}
-  .step .line{height:2px; background:linear-gradient(90deg,var(--violet),transparent); margin:14px 0 22px; border-radius:2px;}
-  .step h3{font-size:25px; font-weight:700; letter-spacing:-.01em; margin:0;}
-  .step p{font-size:16.5px; line-height:1.55; color:var(--muted); margin:12px 0 0;}
-  .step .ic{width:54px; height:54px; border-radius:16px; display:grid; place-items:center; background:linear-gradient(150deg,var(--violet),var(--violet-2)); color:#fff; margin-bottom:22px; box-shadow:0 16px 30px -16px rgba(91,46,229,.8);}
-  .step .ic svg{width:26px; height:26px;}
-
-  /* ===== showcase (dark) ===== */
-  .showcase{background:radial-gradient(120% 120% at 80% 0%,#2A1660 0%,#150A33 55%,#0A0420 100%); color:#fff; overflow:hidden;}
-  .showcase .kicker{color:#C9B6FF;}
-  .showcase .sec-head h2{color:#fff;}
-  .showcase .sec-head h2 .serif{color:var(--cream);}
-  .showcase .sec-head p{color:rgba(255,255,255,.72);}
-  .show-stage{margin-top:48px; position:relative;}
-  .show-callouts{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-bottom:48px;}
-  .show-frame{border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.12); box-shadow:0 60px 110px -40px rgba(0,0,0,.7); background:#EDEAF7;}
-  .show-frame img{display:block; width:100%; height:auto;}
-  .show-item{margin-top:40px;}
-  .show-item:first-of-type{margin-top:0;}
-  .cap{display:flex; align-items:center; gap:11px; margin-bottom:16px;}
-  .cap i{width:8px; height:8px; border-radius:50%; background:var(--lime); box-shadow:0 0 0 4px rgba(232,255,0,.16); flex:none;}
-  .cap .ct{font-family:"JetBrains Mono",monospace; font-size:12.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#C9B6FF;}
-  .cap .cd{font-size:15px; color:rgba(255,255,255,.62);}
-  .callout{background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:16px; padding:22px 20px; backdrop-filter:blur(6px);}
-  .callout .c-lab{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#C9B6FF; margin-bottom:10px;}
-  .callout .c-val{font-size:30px; font-weight:800; letter-spacing:-.03em;}
-  .callout .c-sub{font-size:13.5px; color:rgba(255,255,255,.6); margin-top:6px;}
-  .callout .c-val .pos{color:#4FE3A5; font-size:14px; font-family:"JetBrains Mono",monospace;}
-
-  /* ===== features ===== */
-  .features{background:#fff; border-top:1px solid var(--line);}
-  .feat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:54px; background:var(--line); border:1px solid var(--line); border-radius:24px; overflow:hidden;}
-  .feat{background:#fff; padding:36px 32px; transition:background .2s;}
-  .feat:hover{background:var(--paper);}
-  .feat .ic{width:48px; height:48px; border-radius:13px; display:grid; place-items:center; background:var(--paper-2); color:var(--violet); margin-bottom:20px;}
-  .feat .ic svg{width:24px; height:24px;}
-  .feat h3{font-size:21px; font-weight:700; letter-spacing:-.01em; margin:0;}
-  .feat p{font-size:15.5px; line-height:1.55; color:var(--muted); margin:10px 0 0;}
-
-  /* ===== testimonials ===== */
-  .testi{background:var(--paper);}
-  .testi-grid{display:grid; grid-template-columns:1.15fr 1fr; gap:24px; margin-top:54px;}
-  .testi-feature{border-radius:24px; overflow:hidden; position:relative; min-height:440px; display:flex; align-items:flex-end; color:#fff;}
-  .testi-feature img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
-  .testi-feature .scrim{position:absolute; inset:0; background:linear-gradient(180deg,transparent 30%,rgba(10,4,32,.86) 100%);}
-  .testi-feature .body{position:relative; z-index:1; padding:38px;}
-  .testi-feature .q{font-size:25px; line-height:1.34; font-weight:600; letter-spacing:-.01em; text-wrap:pretty;}
-  .testi-feature .q .serif{color:var(--cream);}
-  .testi-feature .who{margin-top:20px; display:flex; align-items:center; gap:12px;}
-  .testi-feature .who .nm{font-weight:700;}
-  .testi-feature .who .rl{font-size:13.5px; color:rgba(255,255,255,.7);}
-  .testi-col{display:flex; flex-direction:column; gap:24px;}
-  .testi-card{background:#fff; border:1px solid var(--line); border-radius:24px; padding:32px; flex:1;}
-  .testi-card .q{font-size:18.5px; line-height:1.5; font-weight:500; letter-spacing:-.005em;}
-  .testi-card .q .hl{color:var(--violet); font-weight:700;}
-  .testi-card .who{margin-top:22px; display:flex; align-items:center; gap:12px;}
-  .av{width:46px; height:46px; border-radius:13px; display:grid; place-items:center; color:#fff; font-weight:800; font-size:16px; flex:none;}
-  .testi-card .nm{font-weight:700; font-size:15.5px;}
-  .testi-card .rl{font-size:13px; color:var(--muted-2); font-family:"JetBrains Mono",monospace; letter-spacing:.04em;}
-
-  /* ===== final cta ===== */
-  .final{padding:30px 0 96px;}
-  .final-box{position:relative; overflow:hidden; border-radius:34px; padding:74px 60px;
-    background:radial-gradient(120% 150% at 100% 0%,rgba(199,125,255,.5) 0%,transparent 55%),linear-gradient(105deg,#4B22D6 0%,#6B34E8 60%,#8B3BE0 100%);
-    color:#fff; box-shadow:0 50px 100px -40px rgba(75,34,214,.7);}
-  .final-box .kicker{color:var(--cream);}
-  .final-box .kicker::before{color:var(--cream); opacity:.6;}
-  .final-box h2{font-size:clamp(32px,4.6vw,58px); line-height:1; letter-spacing:-.03em; font-weight:800; margin:18px 0 0; max-width:760px; text-wrap:balance;}
-  .final-box h2 .serif{color:var(--cream);}
-  .final-box p{font-size:19px; line-height:1.5; color:rgba(255,255,255,.85); margin:20px 0 0; max-width:540px;}
-  .final-actions{display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-top:36px;}
-  .btn-cream{background:var(--cream); color:var(--ink-2); box-shadow:0 18px 38px -16px rgba(0,0,0,.4);}
-  .btn-cream:hover{transform:translateY(-2px);}
-  .final-box .cta-foot{color:rgba(255,255,255,.7);}
-
-  /* ===== footer ===== */
-  footer{background:var(--ink-2); color:#fff; padding:64px 0 40px;}
-  .foot-top{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,.1);}
-  .foot-brand{max-width:320px;}
-  .foot-brand img{height:28px; margin-bottom:18px;}
-  .foot-brand p{color:rgba(255,255,255,.6); font-size:15px; line-height:1.55;}
-  .foot-cols{display:flex; gap:60px; flex-wrap:wrap;}
-  .foot-col h4{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted-2); margin:0 0 16px;}
-  .foot-col a{display:block; color:rgba(255,255,255,.78); font-size:15px; margin-bottom:11px; transition:color .15s;}
-  .foot-col a:hover{color:#fff;}
-  .foot-bot{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-top:26px; color:rgba(255,255,255,.45); font-size:13.5px; font-family:"JetBrains Mono",monospace; letter-spacing:.04em;}
-
-  /* ===== reveal ===== */
-  .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
-  .reveal.in{opacity:1; transform:none;}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none;}}
-
-  /* ===== responsive ===== */
-  @media(max-width:900px){
-    .nav .links{display:none;}
-    .prob-grid,.steps,.show-callouts,.feat-grid{grid-template-columns:1fr 1fr;}
-    .testi-grid{grid-template-columns:1fr;}
-    .float-tag{display:none;}
-    .final-box{padding:54px 32px;}
-  }
-  @media(max-width:620px){
+  @media(max-width:720px){
     .wrap{padding:0 20px;}
-    .prob-grid,.steps,.show-callouts,.feat-grid{grid-template-columns:1fr;}
-    .feat-grid{border-radius:20px;}
-    .sec{padding:72px 0;}
-    .hero{padding:48px 0 20px;}
-    .hero-trust .sep{display:none;}
-    .nav-cta{padding:10px 16px; font-size:14px;}
+    .nav .links,.nav .right .in{display:none;}
+    .hero{padding:130px 0 200px;}
+    .hero p{font-size:16px;}
+    .shot{margin-top:-170px;padding:0 16px;}
+    .sec{padding:76px 0;}
+    .lead{font-size:16px;}
+    .card,.pcard,.step{padding:22px;border-radius:22px;}
+    .fgrid{grid-template-columns:1fr;}
+    .btn{white-space:normal;text-align:center;justify-content:center;}
+    .shot .frame img{max-height:none;}
   }
 </style>
 </head>
@@ -274,308 +193,269 @@
 
 <header>
   <div class="wrap nav">
-    <img class="logo" src="img/godolphy-violet.png" alt="Godolphy">
+    <a href="https://www.godolphy.com/"><img class="logo" src="img/godolphy-white.png" alt="Godolphy"></a>
     <nav class="links">
       <a href="#problema">El problema</a>
       <a href="#como">Cómo funciona</a>
       <a href="#dashboard">El dashboard</a>
     </nav>
     <div class="right">
-      <a class="btn-ghost btn" href="https://dashboard.godolphy.com">Entrar</a>
-      <a class="nav-cta cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón</a>
+      <a class="in" href="https://dashboard.godolphy.com">Entrar</a>
+      <a class="btn btn-w cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón</a>
     </div>
   </div>
 </header>
 
+<main>
 <!-- ===================== HERO ===================== -->
 <section class="hero">
-  <div class="hero-glow"></div>
   <div class="wrap">
-    <div class="hero-top">
-      <span class="kicker">Tu copiloto financiero con IA</span>
-      <h1>Descubre dónde tu salón está <span class="serif">perdiendo dinero.</span></h1>
-      <p class="hero-sub">Godolphy analiza tu salón con inteligencia artificial y te dice <b>exactamente qué cambiar este mes</b>. Clientas en riesgo, servicios que no son rentables, horas muertas. Todo en un dashboard.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón gratis <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#como">Ver cómo funciona</a>
-      </div>
-      <span class="cta-foot" style="display:block; margin-top:16px;">gratis · sin tarjeta · 30 segundos</span>
+    <span class="eyebrow">✦ Tu copiloto financiero con IA</span>
+    <h1>Descubre dónde tu salón está perdiendo dinero.</h1>
+    <p>Sube la exportación de tu agenda y la IA te dice cuánto ganas de verdad, qué clientas se están yendo y qué servicios no te salen a cuenta.</p>
+    <div class="ctas">
+      <a class="btn btn-w cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón gratis →</a>
+      <a class="btn btn-o" href="#como">Ver cómo funciona</a>
     </div>
-
-    <div class="hero-trust">
-      <div class="stat"><span class="n">+672 €</span><span class="l">recuperables / mes</span></div>
-      <div class="sep"></div>
-      <div class="stat"><span class="n">30<span class="serif" style="font-size:.8em"> días</span></span><span class="l">gratis, sin tarjeta</span></div>
-      <div class="sep"></div>
-      <div class="stat"><span class="n">478<span class="serif" style="font-size:.8em"> +</span></span><span class="l">salones analizados</span></div>
-    </div>
-
-    <div class="hero-visual reveal">
-      <div class="float-tag ft-a">
-        <div class="ft-lab">Facturación</div>
-        <div class="ft-val">12.730 € <span class="pos">↑ +1%</span></div>
-      </div>
-      <div class="float-tag ft-b">
-        <div class="ft-lab">Beneficio real</div>
-        <div class="ft-val">3.480 € <span class="pos">↑</span></div>
-      </div>
-      <div class="float-tag ft-c">
-        <span class="ia">IA</span>
-        <span class="txt">12 clientas en riesgo de abandono</span>
-      </div>
-      <div class="browser">
-        <div class="bar">
-          <span class="dot" style="background:#FF6058"></span>
-          <span class="dot" style="background:#FEBC2E"></span>
-          <span class="dot" style="background:#28C840"></span>
-          <span class="url">app.godolphy.com/dashboard</span>
-        </div>
-        <img src="img/dashboard-shot.png" alt="Dashboard de Godolphy">
-      </div>
-    </div>
+    <span class="note">gratis · sin tarjeta · 30 segundos</span>
   </div>
 </section>
 
-<div class="strip wrap">
-  <div class="lab">Pensado para salones de peluquería, uñas, estética y barberías</div>
-  <div class="row">
-    <span>Peluquería</span><span>Uñas</span><span>Estética</span><span>Barbería</span><span>Spa</span>
-  </div>
+<div class="shot reveal">
+  <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/dashboard-shot.png" alt="Dashboard de análisis con IA de Godolphy" width="1974" height="1266"></div>
+  <div class="chip-float cf1">Beneficio estimado<b>después de gastos</b></div>
+  <div class="chip-float cf2">Clientas en riesgo<b>quién se está yendo</b></div>
 </div>
 
-<!-- ===================== PROBLEM ===================== -->
-<section class="sec problem" id="problema">
+<div class="platforms wrap">
+  <div class="lab">Funciona con la exportación de tu agenda actual</div>
+  <div class="row"><span>Booksy</span><span>Fresha</span><span>Treatwell</span><span>Koibox</span><span>Flowww</span><span>Bewe</span><span>Square</span></div>
+</div>
+
+<!-- ===================== PROBLEMA ===================== -->
+<section class="sec" id="problema">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">Dónde se escapa el dinero</span>
-      <h2>Tu salón factura. Pero <span class="serif">¿de verdad gana?</span></h2>
-      <p>El dinero no se pierde de golpe. Se escapa en pequeñas fugas que no ves en la caja del día a día.</p>
+    <div class="center reveal">
+      <span class="eyebrow">Dónde se escapa el dinero</span>
+      <h2 class="h2">Tu salón factura. Pero <span class="grad">¿de verdad gana?</span></h2>
+      <p class="lead">El dinero no se pierde de golpe. Se escapa en pequeñas fugas que no ves en la caja del día a día.</p>
     </div>
-    <div class="prob-grid">
-      <div class="prob-card reveal">
-        <div class="big">3 de 10</div>
-        <h3>Clientas que no vuelven</h3>
-        <p>No es desinterés, es vida. Tu salón compite con 200 mensajes al día en su móvil. Cuando te das cuenta, ya se han ido.</p>
-        <div class="tagline">Hoy no sabes quiénes son</div>
-      </div>
-      <div class="prob-card reveal">
-        <div class="big">−€</div>
-        <h3>Servicios que no son rentables</h3>
-        <p>Hay servicios que crees que tiran del salón y, en euros por hora, te dejan mucho menos de lo que crees.</p>
-        <div class="tagline">Lo que te deja por hora, no la tarifa</div>
-      </div>
-      <div class="prob-card reveal">
-        <div class="big">∅</div>
-        <h3>Horas muertas en la agenda</h3>
-        <p>Huecos que nadie llena, días flojos que se repiten siempre igual. Cada hueco vacío es dinero que no vuelve.</p>
-        <div class="tagline">Patrones que se repiten</div>
-      </div>
+    <div class="cards3">
+      <div class="pcard reveal"><div class="ic">💔</div><h3>Clientas que no vuelven</h3><p>No es desinterés, es vida. Cuando te das cuenta de que una clienta habitual ya no viene, hace semanas que se fue.</p><span class="tag">Hoy no sabes quiénes son</span></div>
+      <div class="pcard reveal"><div class="ic">⏱️</div><h3>Servicios que no son rentables</h3><p>Hay servicios que crees que tiran del salón y, en euros por hora, te dejan mucho menos de lo que crees.</p><span class="tag">Lo que deja por hora, no la tarifa</span></div>
+      <div class="pcard reveal"><div class="ic">📉</div><h3>Gastos que no cuentas</h3><p>Facturar más no sirve si los gastos suben igual. Sin restar alquiler, equipo y producto, no sabes si el mes va bien.</p><span class="tag">Beneficio, no solo facturación</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== HOW ===================== -->
-<section class="sec how" id="como">
+<!-- ===================== NUEVA ERA · MÁSCARA ===================== -->
+<section class="sec era center" id="nueva-era">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">Cómo funciona</span>
-      <h2>De tu agenda a un plan claro <span class="serif">en 3 pasos.</span></h2>
-      <p>Sin instalar nada, sin hojas de cálculo imposibles. La información ya está en tu salón — solo hay que mirarla bien.</p>
+    <div class="reveal">
+      <span class="eyebrow">La nueva era</span>
+      <h2 class="h2">Una nueva era para los centros de estética, con IA</h2>
+      <p class="lead">Con la máscara de Godolphy ves tu salón con otros ojos: lo que ganas de verdad, quién se está yendo y dónde se escapa el dinero.</p>
     </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
-        <div class="num">PASO 01</div>
-        <div class="line"></div>
-        <h3>Sube tu agenda</h3>
-        <p>Sube la exportación de tu sistema de reservas (Booksy y más). 30 segundos y listo.</p>
-      </div>
-      <div class="step reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M16 2.5 22 8"/></svg></div>
-        <div class="num">PASO 02</div>
-        <div class="line"></div>
-        <h3>La IA analiza tu salón</h3>
-        <p>Cruza facturación, costes reales, clientas y ocupación. Aprende de tu salón concreto, no del promedio.</p>
-      </div>
-      <div class="step reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <div class="num">PASO 03</div>
-        <div class="line"></div>
-        <h3>Recibes tu plan del mes</h3>
-        <p>Insights claros y acciones concretas para ganar más este mes. Qué tocar, a quién llamar, qué subir.</p>
-      </div>
+    <div class="mask reveal" aria-hidden="true">
+      <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="mG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#d9c8ff"/><stop offset=".3" stop-color="#9B4FE8"/><stop offset=".7" stop-color="#631cff"/><stop offset="1" stop-color="#3a0aaa"/>
+          </linearGradient>
+          <linearGradient id="mGloss" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="mShine" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".32"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <path id="eL" d="M126 128 H246 C270 128 282 146 282 170 V184 C282 214 258 234 226 234 H150 C112 234 86 212 86 180 C86 150 100 128 126 128 Z"/>
+          <path id="eR" d="M554 128 H434 C410 128 398 146 398 170 V184 C398 214 422 234 454 234 H530 C568 234 594 212 594 180 C594 150 580 128 554 128 Z"/>
+          <clipPath id="cL"><use href="#eL"/></clipPath>
+          <clipPath id="cR"><use href="#eR"/></clipPath>
+          <path id="mS" fill-rule="evenodd" d="M44 8 H636 Q676 8 676 48 V262 C676 318 634 352 560 352 C486 352 440 326 404 288 Q376 258 340 258 Q304 258 276 288 C240 326 194 352 120 352 C46 352 4 318 4 262 V48 Q4 8 44 8 Z M126 128 H246 C270 128 282 146 282 170 V184 C282 214 258 234 226 234 H150 C112 234 86 212 86 180 C86 150 100 128 126 128 Z M554 128 H434 C410 128 398 146 398 170 V184 C398 214 422 234 454 234 H530 C568 234 594 212 594 180 C594 150 580 128 554 128 Z"/>
+          <clipPath id="cS"><use href="#mS"/></clipPath>
+        </defs>
+
+        <g clip-path="url(#cL)">
+          <rect x="80" y="120" width="210" height="120" fill="#0c0628"/>
+          <g class="tick2" font-family="Plus Jakarta Sans, sans-serif" text-anchor="middle">
+            <text x="184" y="168" fill="#9cf0c6" font-size="12" font-weight="700" letter-spacing="2">BENEFICIO ESTIMADO</text><text x="184" y="200" fill="#fff" font-size="30" font-weight="800">3.480 €</text>
+            <text x="184" y="288" fill="#ffd98a" font-size="12" font-weight="700" letter-spacing="2">€ POR HORA</text><text x="184" y="320" fill="#fff" font-size="30" font-weight="800">28 €/h</text>
+            <text x="184" y="408" fill="#ffb3c4" font-size="12" font-weight="700" letter-spacing="2">EN RIESGO</text><text x="184" y="440" fill="#fff" font-size="30" font-weight="800">4 clientas</text>
+            <text x="184" y="528" fill="#d9c8ff" font-size="12" font-weight="700" letter-spacing="2">OCUPACIÓN</text><text x="184" y="560" fill="#fff" font-size="30" font-weight="800">72 %</text>
+            <text x="184" y="648" fill="#9cf0c6" font-size="12" font-weight="700" letter-spacing="2">BENEFICIO ESTIMADO</text><text x="184" y="680" fill="#fff" font-size="30" font-weight="800">3.480 €</text>
+          </g>
+        </g>
+        <g clip-path="url(#cR)">
+          <rect x="390" y="120" width="210" height="120" fill="#0c0628"/>
+          <g transform="translate(422 150)"><g class="tick2">
+            <g><rect x="0" y="22" width="18" height="34" rx="3" fill="#631cff"/><rect x="26" y="10" width="18" height="46" rx="3" fill="#7B4DFF"/><rect x="52" y="-2" width="18" height="58" rx="3" fill="#9B4FE8"/><rect x="78" y="16" width="18" height="40" rx="3" fill="#631cff"/><rect x="104" y="2" width="18" height="54" rx="3" fill="#d9c8ff"/><rect x="130" y="26" width="18" height="30" rx="3" fill="#7B4DFF"/></g>
+            <g transform="translate(0 120)"><polyline points="0,48 30,36 60,40 90,16 120,22 148,2" fill="none" stroke="#9cf0c6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="148" cy="2" r="5" fill="#9cf0c6"/></g>
+            <g transform="translate(0 240)"><circle cx="18" cy="28" r="15" fill="#f6c6d6"/><circle cx="55" cy="28" r="15" fill="#ffe1a8"/><circle cx="92" cy="28" r="15" fill="#c7f0dc"/><circle cx="129" cy="28" r="15" fill="#c7d7ff"/></g>
+            <g transform="translate(0 360)"><rect x="0" y="12" width="148" height="10" rx="5" fill="#2A1660"/><rect x="0" y="12" width="58" height="10" rx="5" fill="#ffd98a"/><rect x="0" y="36" width="148" height="10" rx="5" fill="#2A1660"/><rect x="0" y="36" width="112" height="10" rx="5" fill="#9B4FE8"/></g>
+            <g transform="translate(0 480)"><rect x="0" y="22" width="18" height="34" rx="3" fill="#631cff"/><rect x="26" y="10" width="18" height="46" rx="3" fill="#7B4DFF"/><rect x="52" y="-2" width="18" height="58" rx="3" fill="#9B4FE8"/><rect x="78" y="16" width="18" height="40" rx="3" fill="#631cff"/><rect x="104" y="2" width="18" height="54" rx="3" fill="#d9c8ff"/><rect x="130" y="26" width="18" height="30" rx="3" fill="#7B4DFF"/></g>
+          </g></g>
+        </g>
+
+        <use href="#mS" fill="url(#mG)"/>
+        <use href="#mS" fill="url(#mGloss)"/>
+        <g clip-path="url(#cS)"><rect class="shine" x="0" y="-20" width="130" height="400" fill="url(#mShine)"/></g>
+        <use href="#eL" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3"/>
+        <use href="#eR" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3"/>
+      </svg>
+    </div>
+    <div class="reveal" style="margin-top:44px;">
+      <a class="btn btn-v cta-dashboard" href="https://dashboard.godolphy.com/upload">Ponte la máscara: analiza tu salón gratis →</a>
     </div>
   </div>
 </section>
 
-<!-- ===================== SHOWCASE ===================== -->
-<section class="sec showcase" id="dashboard">
+<!-- ===================== CÓMO FUNCIONA ===================== -->
+<section class="sec steps" id="como">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">El dashboard</span>
-      <h2>Por fin, tus números <span class="serif">claros.</span></h2>
-      <p>Un vistazo y sabes cómo va tu salón. Cada cifra que te sorprende responde a algo concreto que puedes cambiar.</p>
+    <div class="center reveal">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2 class="h2">De tu agenda a un plan claro en <span class="grad">3 pasos</span></h2>
+      <p class="lead">Sin instalar nada y sin hojas de cálculo. La información ya está en tu salón: solo hay que mirarla bien.</p>
     </div>
-    <div class="show-stage reveal">
-      <div class="show-callouts">
-        <div class="callout">
-          <div class="c-lab">Facturación</div>
-          <div class="c-val">12.730 € <span class="pos">↑1%</span></div>
-          <div class="c-sub">vs. periodo anterior</div>
-        </div>
-        <div class="callout">
-          <div class="c-lab">Precio medio / hora</div>
-          <div class="c-val">28 €/h</div>
-          <div class="c-sub">Basado en 478 reservas</div>
-        </div>
-        <div class="callout">
-          <div class="c-lab">Ocupación agenda</div>
-          <div class="c-val">100%</div>
-          <div class="c-sub">47% clientas recurrentes</div>
-        </div>
-        <div class="callout">
-          <div class="c-lab">Beneficio real</div>
-          <div class="c-val">3.480 € <span class="pos">↑</span></div>
-          <div class="c-sub">Después de nóminas</div>
-        </div>
-      </div>
-
-      <div class="show-item reveal">
-        <div class="cap"><i></i><span class="ct">Clientas en riesgo</span><span class="cd">Quién se está yendo y cuánto puedes recuperar</span></div>
-        <div class="show-frame"><img src="img/dash-clientes.png" alt="Clientas más valiosas, clientas en riesgo y oportunidades en Godolphy"></div>
-      </div>
-
-      <div class="show-item reveal">
-        <div class="cap"><i></i><span class="ct">Rentabilidad por servicio</span><span class="cd">Qué servicio tira del salón y cuál te resta</span></div>
-        <div class="show-frame"><img src="img/dash-servicios.png" alt="Alertas prioritarias y rendimiento por servicio en Godolphy"></div>
-      </div>
-
-      <div class="show-item reveal">
-        <div class="cap"><i></i><span class="ct">Margen por profesional</span><span class="cd">El rendimiento real de tu equipo, hora a hora</span></div>
-        <div class="show-frame"><img src="img/dash-profesionales.png" alt="Rendimiento por profesional en Godolphy"></div>
-      </div>
+    <div class="cards3">
+      <div class="step reveal"><div class="n grad">01</div><h3>Sube tu agenda</h3><p>Exporta las citas de tu sistema de reservas (Booksy, Fresha, Treatwell, Koibox y más) y súbelas. En 30 segundos está listo.</p></div>
+      <div class="step reveal"><div class="n grad">02</div><h3>Añade tus gastos</h3><p>Alquiler, equipo, producto, marketing… Con tus gastos fijos ves el beneficio real, no solo lo que facturas.</p></div>
+      <div class="step reveal"><div class="n grad">03</div><h3>La IA te dice qué hacer</h3><p>Un resumen del mes en lenguaje claro, alertas y oportunidades concretas: a quién escribir, qué servicio revisar, qué cambiar.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== FEATURES ===================== -->
-<section class="sec features">
+<!-- ===================== DASHBOARD (oscuro) ===================== -->
+<section class="sec dark" id="dashboard">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">Qué te dice Godolphy</span>
-      <h2>El consultor financiero que tu salón <span class="serif">nunca tuvo.</span></h2>
+    <div class="center reveal">
+      <span class="eyebrow">El dashboard</span>
+      <h2 class="h2">Por fin, tus números claros.</h2>
+      <p class="lead">Un vistazo y sabes cómo va tu salón. Cada cifra que te sorprende responde a algo concreto que puedes cambiar.</p>
     </div>
-    <div class="feat-grid">
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.29 3.86-8.47 14A2 2 0 0 0 3.53 21h16.94a2 2 0 0 0 1.71-3l-8.47-14a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
-        <h3>Clientas en riesgo</h3>
-        <p>Detecta quién no ha vuelto en 45+ días antes de perderlas. Una campaña de reactivación recupera cientos de euros.</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
-        <h3>Servicios no rentables</h3>
-        <p>Ve cuánto te deja cada servicio por hora. Cuáles tiran del salón y cuáles te restan.</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h3>Beneficio estimado con tus gastos fijos</h3>
-        <p>Una estimación de lo que te queda después de tus gastos fijos. El número que casi nadie mira.</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Horas muertas</h3>
-        <p>Identifica los huecos y días flojos que se repiten. Dónde mover promociones para llenar la agenda.</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/><path d="m6.34 17.66 11.32-11.32"/></svg></div>
+    <div class="tabs reveal" role="tablist">
+      <button class="on" data-tab="0">Resumen del mes</button>
+      <button data-tab="1">Clientas</button>
+      <button data-tab="2">Servicios</button>
+      <button data-tab="3">Equipo</button>
+    </div>
+    <div class="panes reveal">
+      <div class="pane on"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/dashboard-shot.png" alt="Resumen del mes: insight con IA, facturación, beneficio y ocupación" loading="lazy"></div><div class="cap">Insight del mes con IA, facturación, € por hora, ocupación y beneficio estimado.</div></div>
+      <div class="pane"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/dash-clientes.png" alt="Clientas más valiosas, clientas en riesgo y oportunidades" loading="lazy"></div><div class="cap">Tus clientas más valiosas, las que están en riesgo y las oportunidades que detecta la IA.</div></div>
+      <div class="pane"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/dash-servicios.png" alt="Alertas prioritarias y rendimiento por servicio" loading="lazy"></div><div class="cap">Alertas prioritarias y lo que te deja cada servicio por hora.</div></div>
+      <div class="pane"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/dash-profesionales.png" alt="Rendimiento por profesional" loading="lazy"></div><div class="cap">Facturación, citas, horas y € por hora de cada profesional.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUÉ TE DICE ===================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Qué te dice Godolphy</span>
+      <h2 class="h2">El consultor financiero que <span class="grad">tu salón nunca tuvo.</span></h2>
+    </div>
+    <div class="bento">
+      <article class="card c7 reveal">
+        <div class="ui"><div class="ai-line"><span class="orb"></span><div><b>Insight del mes</b><div class="mut" style="font-size:13.5px;margin-top:4px;color:rgba(2,2,30,.7)">Este mes has facturado más, pero la manicura semipermanente te deja menos por hora que el resto. Escribe a las clientas que llevan más de 45 días sin venir.</div></div></div></div>
         <h3>Insight del mes con IA</h3>
-        <p>Cada mes, un resumen en lenguaje claro: qué pasó, por qué y qué hacer. Como tener un analista en plantilla.</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7a4 4 0 1 0-8 0"/><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 12v3"/></svg></div>
-        <h3>Tus datos, tuyos</h3>
-        <p>Sin instalación, sin compromiso. Tus números privados y seguros.</p>
-      </div>
+        <p>Un resumen escrito de cómo va tu salón: qué ha pasado, por qué y qué hacer. Como tener una analista en plantilla.</p>
+      </article>
+      <article class="card c5 reveal">
+        <div class="ui"><div class="row"><span>Facturación</span><b>12.730 €</b></div><div class="row" style="background:var(--soft)"><span>Gastos fijos</span><b>− 9.250 €</b></div><div class="row"><span><b>Beneficio estimado</b></span><b style="color:var(--pos)">3.480 €</b></div></div>
+        <h3>Beneficio estimado</h3>
+        <p>Añade equipo, alquiler, producto y otros gastos, y verás lo que te queda de verdad.</p>
+      </article>
+
+      <article class="card c4 reveal">
+        <div class="ui"><div class="row"><span>Pedicura spa</span><span class="pill warn">24 €/h</span></div><div class="row"><span>Manicura</span><span class="pill ok">31 €/h</span></div><div class="row"><span>Tratamiento facial</span><span class="pill ok">36 €/h</span></div></div>
+        <h3>€ por hora de cada servicio</h3>
+        <p>En verde, los que están en tu media o por encima; en ámbar, los que se quedan por debajo.</p>
+      </article>
+      <article class="card v c4 reveal">
+        <div class="ui"><div class="row"><span>Marta G.</span><span class="pill" style="background:#fff;color:var(--v)">62 días</span></div><div class="row"><span>Laia P.</span><span class="pill" style="background:#fff;color:var(--v)">51 días</span></div><div class="row"><span>Núria S.</span><span class="pill" style="background:#fff;color:var(--v)">47 días</span></div></div>
+        <h3>Clientas en riesgo</h3>
+        <p>Quién lleva 45 días o más sin venir. Pasados los 60, el riesgo es alto: es el momento de escribirle.</p>
+      </article>
+      <article class="card c4 reveal">
+        <div class="ui"><div class="row" style="background:var(--soft)"><span>💡 Llenar los martes por la tarde</span></div><div class="row"><span>🔁 Recuperar clientas en riesgo</span></div><div class="row"><span>💶 Revisar precio de pedicura</span></div></div>
+        <h3>Alertas y oportunidades</h3>
+        <p>Los avisos más importantes y las ideas con más impacto, con una estimación hecha con tu ticket medio.</p>
+      </article>
+
+      <article class="card c6 reveal">
+        <div class="ui"><div class="bars"><span style="height:48%"></span><span style="height:62%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:66%"></span><span class="on" style="height:84%"></span></div><div class="legend" style="margin-top:10px"><span><i style="background:#631cff"></i>Ingresos de los últimos 6 meses</span></div></div>
+        <h3>Ingresos, clientas nuevas y ocupación</h3>
+        <p>Cómo evoluciona tu facturación mes a mes, cuántas clientas nuevas llegan, qué parte de tu tiempo está reservada y cuántas clientas repiten.</p>
+      </article>
+      <article class="card c6 reveal">
+        <div class="ui"><div class="row"><span>Laia</span><span class="mut">32 €/h</span></div><div class="row" style="background:var(--soft)"><span>Marc</span><span class="mut">29 €/h</span></div><div class="row"><span>Sara</span><span class="mut">35 €/h</span></div></div>
+        <h3>Rendimiento por profesional y clientas más valiosas</h3>
+        <p>Facturación, citas, horas y € por hora de cada persona del equipo, y las clientas que más gastan en tu salón.</p>
+      </article>
+
+      <article class="card c12 reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;">
+        <div>
+          <span class="eyebrow" style="margin-bottom:16px;">Dentro de Godolphy</span>
+          <h3 style="font-size:30px;margin-top:14px;">Y si gestionas tus reservas con Godolphy, el análisis se actualiza solo</h3>
+          <p>En el panel tienes la pestaña <b>Análisis IA</b> con tus reservas reales, sin exportar nada, y además la <b>previsión del mes</b>: lo que ya tienes reservado más lo que suelen dejar tus clientas habituales y las nuevas.</p>
+          <a class="link" href="/ayuda/analisis-ia/">Ver cómo funciona en el centro de ayuda →</a>
+        </div>
+        <div class="ui" style="margin:0;">
+          <div style="font-weight:700;margin-bottom:4px;">Previsión de este mes</div>
+          <div class="fc"><span style="width:52%;background:#631cff"></span><span style="width:30%;background:#9B4FE8"></span><span style="width:18%;background:#d9c8ff"></span></div>
+          <div class="legend"><span><i style="background:#631cff"></i>Ya reservado</span><span><i style="background:#9B4FE8"></i>Clientas habituales</span><span><i style="background:#d9c8ff"></i>Clientas nuevas</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-
-
-<!-- ===================== FINAL CTA ===================== -->
+<!-- ===================== CTA FINAL ===================== -->
 <section class="final" id="cta">
   <div class="wrap">
     <div class="final-box reveal">
-      <span class="kicker">Empieza hoy</span>
-      <h2>Tu salón ya tiene los números. <span class="serif">Solo hay que mirarlos bien.</span></h2>
-      <p>Conecta tu agenda y descubre en minutos dónde estás perdiendo dinero — y cuánto puedes recuperar este mes.</p>
-      <div class="final-actions">
-        <a class="btn btn-cream cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón gratis <span class="arr">→</span></a>
-        <span class="cta-foot">gratis · sin tarjeta · 30 segundos</span>
-      </div>
+      <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff;">Empieza hoy</span>
+      <h2 style="margin-top:20px;">Tu salón ya tiene los números. Solo hay que mirarlos bien.</h2>
+      <p>Sube tu agenda y descubre en minutos dónde estás perdiendo dinero y qué puedes cambiar este mes.</p>
+      <a class="btn btn-w cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón gratis →</a>
+      <div class="note" style="margin-top:18px;">gratis · sin tarjeta · 30 segundos</div>
     </div>
   </div>
 </section>
+</main>
 
-<!-- ===================== FOOTER ===================== -->
 <footer>
   <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <img src="img/godolphy-white.png" alt="Godolphy">
-        <p>El copiloto financiero con IA para salones. Convierte tus números en decisiones que ganan dinero.</p>
-      </div>
-      <div class="foot-cols">
-        <div class="foot-col">
-          <h4>Producto</h4>
-          <a href="#dashboard">El dashboard</a>
-          <a href="#como">Cómo funciona</a>
-          <a href="#problema">El problema</a>
-        </div>
-        <div class="foot-col">
-          <h4>Recursos</h4>
-          <a href="/blog/">Blog</a>
-          <a href="#">Guías para salones</a>
-          <a href="/ayuda/">Centro de ayuda</a>
-        </div>
-        <div class="foot-col">
-          <h4>Empieza</h4>
-          <a class="cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón</a>
-          <a href="https://dashboard.godolphy.com">Entrar</a>
-          <a href="#">Hablar con Neus</a>
-        </div>
-      </div>
+    <div class="fgrid">
+      <div><img src="img/godolphy-white.png" alt="Godolphy" style="height:34px;margin-bottom:16px;"><p style="margin:0;max-width:320px;line-height:1.6;">El copiloto financiero con IA para salones. Convierte tus números en decisiones.</p></div>
+      <div><h4>Producto</h4><a href="#dashboard">El dashboard</a><a href="#como">Cómo funciona</a><a href="#problema">El problema</a></div>
+      <div><h4>Recursos</h4><a href="/blog/">Blog</a><a href="/ayuda/">Centro de ayuda</a><a href="/ayuda/analisis-ia/">Análisis IA</a></div>
+      <div><h4>Empieza</h4><a class="cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón</a><a href="https://dashboard.godolphy.com">Entrar</a><a href="https://www.godolphy.com/">Godolphy</a></div>
     </div>
-    <div class="foot-bot">
-      <span>© 2026 Godolphy · Hecho para salones</span>
-      <span>Privacidad · Términos</span>
-    </div>
+    <div class="fbot"><span>© 2026 Godolphy</span><span><a href="/politica-de-privacidad/">Privacidad</a> · <a href="/terminos-y-condiciones/">Términos</a></span></div>
   </div>
 </footer>
 
 <script>
-  // scroll reveal
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:0.14, rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  // UTM forwarding: append utm_* and dest params from current URL to all dashboard CTAs
+  document.documentElement.classList.add('js');
   (function(){
-    var params = new URLSearchParams(window.location.search);
-    var forward = new URLSearchParams();
-    params.forEach(function(v, k){
-      if(k.indexOf('utm_') === 0 || k === 'dest'){
-        forward.set(k, v);
-      }
-    });
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}
+    else{var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)});}
+    // pestañas del dashboard
+    var btns=document.querySelectorAll('.tabs button'),panes=document.querySelectorAll('.pane');
+    btns.forEach(function(b){b.addEventListener('click',function(){var i=+b.dataset.tab;btns.forEach(function(x,j){x.classList.toggle('on',j===i)});panes.forEach(function(p,j){p.classList.toggle('on',j===i)});if(window.posthog)posthog.capture('dashboard_landing_tab',{tab:i});});});
+  })();
+  // UTM forwarding a los CTA del dashboard
+  (function(){
+    var params=new URLSearchParams(window.location.search),forward=new URLSearchParams();
+    params.forEach(function(v,k){if(k.indexOf('utm_')===0||k==='dest'){forward.set(k,v);}});
     if(forward.toString()){
       document.querySelectorAll('.cta-dashboard').forEach(function(a){
-        var href = a.getAttribute('href');
-        if(href && href.indexOf('dashboard.godolphy.com') !== -1){
-          var sep = href.indexOf('?') === -1 ? '?' : '&';
-          a.setAttribute('href', href + sep + forward.toString());
-        }
+        var href=a.getAttribute('href');
+        if(href&&href.indexOf('dashboard.godolphy.com')!==-1){a.setAttribute('href',href+(href.indexOf('?')===-1?'?':'&')+forward.toString());}
       });
     }
   })();
