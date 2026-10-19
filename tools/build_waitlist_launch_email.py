@@ -37,7 +37,7 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 <tr><td class="px" align="center" bgcolor="#631cff" style="background:#631cff;background-image:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);padding:36px 40px 0 40px;">
 <img src="{LOGO}" width="150" alt="Godolphy" style="width:150px;height:auto;margin:0 auto 30px auto;" />
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td style="background:rgba(255,255,255,0.16);border-radius:999px;padding:7px 16px;{B}font-size:12px;letter-spacing:1.4px;font-weight:700;color:#FFFFFF;text-transform:uppercase;">Abrimos el 26 de octubre</td></tr></table>
-<p class="claim" style="margin:22px 0 0 0;{H}font-size:42px;line-height:46px;font-weight:800;letter-spacing:-0.8px;color:#FFFFFF;">Tu agenda, tus cobros y tus números. En un solo sitio.</p>
+<p class="claim" style="margin:22px 0 0 0;{H}font-size:42px;line-height:46px;font-weight:800;letter-spacing:-0.8px;color:#FFFFFF;">Tu agenda, tus cobros y tus números, con IA.</p>
 <p style="margin:18px auto 0 auto;max-width:470px;{B}font-size:17px;line-height:26px;color:#EFE9FF;">Godolphy es el programa de reservas para profesionales de la belleza, en salón o a domicilio. Abrimos el 26 y eres de las primeras en saberlo.</p>
 <img src="{IMG}calendario.jpg" width="520" alt="Calendario de Godolphy con las citas del día por profesional" style="width:100%;max-width:520px;height:auto;margin:32px auto 0 auto;border-radius:14px 14px 0 0;" />
 </td></tr>
@@ -75,7 +75,7 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 </body></html>
 '''
 
-text = '\n'.join([PRE, '', 'ABRIMOS EL 26 DE OCTUBRE', '', 'Tu agenda, tus cobros y tus números. En un solo sitio.', '',
+text = '\n'.join([PRE, '', 'ABRIMOS EL 26 DE OCTUBRE', '', 'Tu agenda, tus cobros y tus números, con IA.', '',
   'Godolphy es el programa de reservas para profesionales de la belleza, en salón o a domicilio. Abrimos el 26 y eres de las primeras en saberlo.', '',
   'Qué hace Godolphy:'] + [f'- {f}' for f in FEATS] + [f'Todo en https://godolphy.com/?{U}', '',
   'MIENTRAS TANTO, DESCUBRE DÓNDE PIERDE DINERO TU SALÓN', 'Sube la exportación de tu agenda al dashboard IA y te dice cuánto ganas de verdad, qué clientas no han vuelto y qué servicios no te salen a cuenta.',
