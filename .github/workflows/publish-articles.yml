@@ -40,6 +40,10 @@ jobs:
 
           echo "PUBLISHED=$PUBLISHED" >> $GITHUB_ENV
 
+      - name: Apply site style layer
+        if: env.PUBLISHED == '1'
+        run: python3 scripts/gx_inject.py
+
       - name: Update blog index
         if: env.PUBLISHED == '1'
         run: python3 scripts/blog_index.py

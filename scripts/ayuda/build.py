@@ -136,7 +136,8 @@ def page(title, description, canonical, body, jsonld):
   <meta property="og:type" content="article" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/gx-pages.css">
   <style>{site_css}
 {CSS}</style>
 {ld}
@@ -147,6 +148,7 @@ def page(title, description, canonical, body, jsonld):
 {body}
 </main>
 {footer}
+<script src="/assets/gx-pages.js" defer></script>
 </body>
 </html>
 """
