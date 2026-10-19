@@ -1,0 +1,39 @@
+{
+  "out": "imagegen/verifactu-meme/videos/c5.mp4",
+  "model": "kling-v3",
+  "prompt": "3D animated film style. Keep exactly the same characters (Ana the massage therapist with black curly hair and black tunic; Verifactu, the short chubby man with grey mustache, glasses and the white VERIFACTU t-shirt; the client with auburn bob hair), the same massage cabin, art style and colors as the start frame. One single continuous shot with no cuts, fixed camera with a very subtle push-in, comedic expressive cartoon acting. Ana keeps massaging calmly without even turning her head, then casually takes her smartphone and raises it towards Verifactu with the screen facing the camera, and winks; Verifactu blinks, surprised. Ending exactly as the end frame. Keep the word VERIFACTU on his shirt unchanged. No new text, no logos, no morphing of the faces, no extra fingers.",
+  "negative_prompt": "distorted face, different person, extra fingers, extra limbs, new text, watermark, cut, scene change",
+  "frames": [
+    "imagegen/verifactu-meme/frames-masaje/final/k5.png",
+    "imagegen/verifactu-meme/frames-masaje/final/k6.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 162,
+      "completed": 1792419067,
+      "cost": 0.448,
+      "created": 1792418905,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M5A7VZ85Q4WR58726CWS0G0M",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792505467,
+            "url": [
+              "https://getapib.org/video/9998207580932693-981b89ac-00e2-48bc-b5bf-1d8cd91930e3-video_task_01M5A7VZ85Q4WR58726CWS0G0M.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
