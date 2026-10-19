@@ -1,0 +1,9 @@
+{
+  "out": "images/sectores/v2/hero-barberia.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic photo for the hero of a Spanish SaaS website for beauty businesses. A barber in his 30s with a beard and tattoos on his forearms, in a modern minimalist barbershop (concrete wall, black barber chairs, warm wood shelves, plants; NOT vintage, no old-fashioned decor) holds a smartphone towards the camera showing the app, smiling. The screen shows exactly the Godolphy software interface from the reference image (purple sidebar with yellow Godolphy logo, white content area, violet appointment blocks); keep the screen content faithful and legible. Modern, recently renovated premises, clean and well equipped, not old-fashioned. Brand palette: subtle violet accents (#631cff, #9B4FE8) in decor or uniform, avoid all-yellow or warm-orange color casts. Natural daylight, documentary photo style. No text overlays, no watermarks, no extra logos.",
+  "size": "4:3",
+  "ref_files": [
+    "imagegen/refs/v2/movil-calendario.png"
+  ]
+}
