@@ -7,3 +7,7 @@
 - Fondos variados por sector: estética con cabinas, peluquería, uñas, barbería, masajes/spa, domicilio.
 - Pantallas: siempre una captura real de Godolphy (imagegen/refs/). Escritorio en la recepción, móvil fuera del salón.
 - El script añade automáticamente la instrucción de realismo a cada prompt (se puede desactivar con "no_style": true).
+- Nada de lila "de decorado": ni uniformes, ni camisetas, ni productos o toallas lilas en el fondo; se ve falso. Ropa neutra o de calle (negro, blanco, gris, beige, vaqueros). El violeta de marca solo aparece en la pantalla de Godolphy.
+- Revisar manos y dedos antes de usar una imagen: si hay una mano girada o deformada, se descarta.
+- Variar las personas entre imágenes de una misma serie (edad, pelo, rasgos); no repetir la misma cara en todos los sectores.
+- Referencia de lo que funciona (oct. 2026): images/sectores/v2/hero-barberia.png — local real, sin lila, el color lo pone solo el móvil.
