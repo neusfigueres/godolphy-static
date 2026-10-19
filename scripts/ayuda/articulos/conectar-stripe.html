@@ -5,7 +5,7 @@
   "descripcion": "Paso a paso para conectar tu cuenta de Stripe a Godolphy: claves, webhook, modo de prueba y qué revisar si los pagos no se confirman.",
   "resumen": "Stripe es la pasarela con la que tus clientas pagan con tarjeta al reservar. El dinero va directo a tu cuenta de Stripe.",
   "tiempo": "8 min",
-  "actualizado": "2026-10-15",
+  "actualizado": "2026-10-19",
   "relacionados": ["pago-o-deposito", "politicas-de-cancelacion", "ventas-y-reembolsos"]
 }
 -->
@@ -19,9 +19,15 @@
   <p>Necesitas una cuenta de Stripe activada. Si no la tienes, créala en <a href="https://stripe.com/es" rel="noopener" target="_blank">stripe.com</a>. Ten abiertos a la vez el panel de Godolphy y el de Stripe: vas a copiar datos de uno a otro.</p>
 </div>
 
+<!--pendiente-->
+<!-- Stripe Connect: programado (backend 4364f6c, booking 4e6f1c6, panel 7fcf57a), sin desplegar ni configurar a 19/10. Verificar en directo antes de publicar y rehacer la captura. -->
+<h2 id="connect">Conectar con un clic</h2>
+<p>En <strong>Configuración → Pagos</strong> pulsa <strong>Conectar con Stripe</strong> para crear tu cuenta, o <strong>Ya tengo cuenta de Stripe</strong> si ya tienes una. Los cobros llegan directamente a tu cuenta de Stripe y Godolphy no se queda ninguna comisión. Las claves manuales siguen disponibles en «Avanzado: claves manuales de Stripe».</p>
+<!--/pendiente-->
+
 <h2 id="donde">Dónde se conecta</h2>
-<p>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>Configuración</strong>. Baja hasta el bloque <strong>Integración Stripe</strong>.</p>
-<figure class="shot" data-shot="configuracion-stripe"><figcaption>Configuración → Configuración → Integración Stripe</figcaption></figure>
+<p>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>General</strong>. Baja hasta el bloque <strong>Integración Stripe</strong>.</p>
+<figure class="shot" data-shot="configuracion-stripe"><figcaption>Configuración → General → Integración Stripe</figcaption></figure>
 
 <h2 id="webhook">1. Crea el webhook en Stripe</h2>
 <p>El webhook es el aviso que Stripe envía a Godolphy cada vez que se paga, se retiene o se devuelve un importe. <strong>Sin él, las reservas pagadas con tarjeta no se confirman.</strong></p>
@@ -97,5 +103,5 @@
   <dt>Las clientas pagan pero la reserva no se confirma</dt>
   <dd>Casi siempre es el webhook. Mira el estado debajo del bloque <strong>Webhook de Stripe</strong>: si sale el aviso de que la firma no coincide, el <strong>Endpoint secret</strong> no es el de ese webhook o es de otro modo (producción o prueba). Si no ha llegado ningún aviso, revisa en Stripe que el webhook tenga la URL de tu salón y todos los eventos de la lista.</dd>
   <dt>Una clienta no puede pagar al reservar</dt>
-  <dd>Si pides el pago al reservar y Stripe no está conectado, tus clientas no pueden terminar el pago online. Conecta Stripe o desactiva el pago al reservar en <strong>Configuración → Pagos</strong>.</dd>
+  <dd>Sin Stripe conectado no se puede cobrar online. Godolphy ya no te deja activar el cobro al reservar sin Stripe, pero si lo tenías activado y desconectaste Stripe, desactívalo en <strong>Configuración → Pagos</strong> o vuelve a conectar Stripe.</dd>
 </dl>
