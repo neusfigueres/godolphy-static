@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/verifactu-meme/frames-masaje/k5.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "3D animated film style, exactly the same art style, rendering, lighting and colors as the reference images. Keep exactly the same two characters as the references: ANA (young woman, same face, black curly hair in a low ponytail, gold hoop earrings, fine arm tattoos) now working as a massage therapist, wearing a simple black short-sleeve tunic and black trousers (no apron); and VERIFACTU (short chubby middle-aged man, thin comb-over, thick grey mustache, small rectangular glasses, oversized white t-shirt with \"VERIFACTU\" in huge bold dark navy capital letters, grey slacks, brown shoes, leather briefcase), cocky and a bit smug. Setting: a modern, calm massage cabin in a beauty center: cream and beige walls, light wood slats, warm soft light with subtle lilac/violet accents, a padded massage table with a folded white towel, rolled towels, massage oils, hot stones, lit candles, a plant; a wooden cabin door with a handle clearly visible on the LEFT side of the frame. A small beagle puppy with a lilac bandana lies on a cushion in the corner. Vertical 9:16, cinematic medium-wide shot, same camera angle and same cabin layout in every frame. Comedic, expressive poses. The word VERIFACTU on his shirt must be perfectly legible; no other text, no logos, no watermark, natural hands with five fingers. A female client (ordinary woman, around 45, hair in a towel turban) now lies face down on the massage table covered with a towel, and Ana calmly massages her back with a relaxed smile, not even turning. The door is half open and Verifactu peeks in only his head and shoulders, smug raised eyebrow.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/refs/ana_personatge_ref.png",
+  "imagegen/refs/verifactu_personaje_ref.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
