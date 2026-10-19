@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/1111/frames2/r4b.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Edit of the reference image: keep EXACTLY the same character, framing, camera angle, table, coffee mug, white LED nail lamp with violet glow, row of nail polish bottles, lighting and background as the reference. 3D animated film style, vertical 9:16. No text, no numbers, no logos, no watermark, natural hands with five fingers. Only change: Ana has closed her eyes and holds her hands together in front of her chest as if praying, making a wish, hopeful expression; the coffee mug stays; the smartphone now lies flat on the table between the mug and the lamp, screen up, showing a plain bright white screen. Her beagle puppy with a lilac bandana peeks over the table edge with its paws together.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/1111/frames2/r1_v2.png",
+  "imagegen/refs/ana_personatge_ref.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
