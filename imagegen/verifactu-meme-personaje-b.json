@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/verifactu-meme/personaje_verifactu_b.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "3D animated film style character design, exactly the same art style, rendering, lighting and color palette as the reference image (stylized 3D animated feature film look, soft warm salon lighting, lilac/violet accents in the background). Full body shot, standing, front three-quarter view, vertical 9:16 composition with the whole character visible from head to shoes. New character: a short, chubby, middle-aged Spanish man, around 55 years old, comically unattractive but likeable, round belly, short legs. He wears a very wide, oversized plain WHITE t-shirt stretched over his belly with the word \"VERIFACTU\" printed huge in bold dark navy capital letters across the chest, perfectly legible, spelled exactly V-E-R-I-F-A-C-T-U, nothing else written on the shirt. Grey slacks, scuffed brown shoes. Background: the entrance of a modern bright nail salon with lilac armchairs and nail polish shelves, softly blurred. No other text, no logos, no watermark, natural hands with five fingers. Almost bald head with grey hair on the sides, big round glasses, double chin, a pen behind his ear, holding a thick folder of papers under his arm, hesitant doubtful expression.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/refs/ana_personatge_ref.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
