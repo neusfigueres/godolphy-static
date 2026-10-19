@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════════════
+   Godolphy · capa de estilo 2026-10 para sectores y funcionalidades
+   Misma estética que la home: Gabarito + Plus Jakarta Sans,
+   degradado violeta, tarjetas suaves y capturas enmarcadas.
+   ═══════════════════════════════════════════════════════════════ */
+:root{--gx-v:#631cff;--gx-v2:#9B4FE8;--gx-ink:#02021e;--gx-soft:#f8f7ff;--gx-line:rgba(99,28,255,.10);}
+
+body,body p,body li,body span,body a,body button,body input{font-family:'Plus Jakarta Sans',system-ui,sans-serif;}
+.font-gabarito,h1,h2,.feat-text h2{font-family:'Gabarito',sans-serif;letter-spacing:-.02em;}
+
+/* ── Hero ─────────────────────────────────────────────────── */
+section.hero-bg{position:relative;}
+section.hero-bg::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(600px 320px at 85% 15%,rgba(255,255,255,.16),transparent 70%),radial-gradient(700px 400px at 10% 100%,rgba(58,10,170,.45),transparent 70%);}
+section.hero-bg > *{position:relative;z-index:1;}
+section.hero-bg h1{letter-spacing:-.025em;text-wrap:balance;}
+section.hero-bg p{text-wrap:pretty;}
+section.hero-bg > div:first-child[style*="width:72px"]{background:rgba(255,255,255,.14)!important;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:22px!important;}
+
+/* Botones: píldora; los amarillos sobre degradado pasan a blanco/violeta como en la home */
+a[style*="border-radius:20px"],a[style*="border-radius: 20px"]{border-radius:999px!important;transition:transform .2s,box-shadow .2s;}
+a[style*="border-radius:20px"]:hover{transform:translateY(-2px);}
+section.hero-bg a[style*="#EEFE3A"],[style*="linear-gradient(160deg"] a[style*="#EEFE3A"]{background:#fff!important;color:var(--gx-v)!important;box-shadow:0 10px 26px rgba(30,10,90,.25);}
+
+/* ── Títulos de sección ───────────────────────────────────── */
+h2[style*="background-clip"],h3[style*="background-clip"]{
+  background:linear-gradient(90deg,#02021e 0%,#3a0aaa 45%,#631cff 75%,#9B4FE8 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;
+  letter-spacing:-.02em;text-wrap:balance;}
+.feat-text h2{font-size:40px;line-height:1.08;text-wrap:balance;}
+
+/* ── Bloques de funcionalidad (zig-zag) ───────────────────── */
+.feat-section{padding:110px 40px;}
+.feat-section.alt{background:var(--gx-soft);}
+.feat-content{gap:72px;}
+main{counter-reset:gxs;}
+.feat-text{counter-increment:gxs;}
+.feat-text::before{content:counter(gxs,decimal-leading-zero);display:inline-flex;align-items:center;justify-content:center;
+  min-width:44px;height:28px;padding:0 10px;margin-bottom:18px;border-radius:999px;background:#efe9ff;color:var(--gx-v);
+  font:700 12px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:.12em;}
+.feat-text p{color:rgba(2,2,30,.64);}
+.bullet{background:#fff;border:1px solid var(--gx-line);border-radius:14px;padding:10px 14px;margin-bottom:8px;align-items:center;}
+.feat-section.alt .bullet{background:#fff;}
+.bullet svg{margin-top:0;}
+.bullet span{color:rgba(2,2,30,.75);font-size:14.5px;}
+.feat-img{background:linear-gradient(160deg,#f3eeff 0%,#e9e1ff 100%);border-radius:28px;border:1px solid var(--gx-line);}
+
+/* ── Capturas de producto enmarcadas ──────────────────────── */
+.gx-shot{background:#fff;border-radius:20px;padding:8px;box-shadow:0 30px 70px rgba(30,10,90,.16);border:1px solid var(--gx-line);transition:transform .4s ease,box-shadow .4s ease;}
+.gx-shot:hover{transform:translateY(-4px);box-shadow:0 40px 80px rgba(30,10,90,.22);}
+.gx-shot .gx-dots{display:flex;gap:6px;padding:5px 8px 10px;}
+.gx-shot .gx-dots i{width:9px;height:9px;border-radius:50%;background:#e6e1f7;}
+.gx-shot img{display:block;width:100%!important;max-height:none!important;height:auto!important;border-radius:13px;margin:0!important;}
+.gx-phone{max-width:300px;margin:0 auto;background:#0c0628;border-radius:38px;padding:10px;box-shadow:0 30px 70px rgba(30,10,90,.28);}
+.gx-phone img{display:block;width:100%!important;height:auto!important;border-radius:30px;margin:0!important;}
+
+/* ── Pasador de pantallas (sectores) ──────────────────────── */
+.gx-slider{max-width:1000px;margin:8px auto 0;}
+.gx-slider-tabs{display:flex;gap:6px;justify-content:center;margin:0 auto 22px;padding:6px;width:max-content;max-width:100%;border-radius:999px;background:var(--gx-soft);border:1px solid var(--gx-line);}
+.gx-slider-tabs button{position:relative;overflow:hidden;flex:0 0 auto;border:0;background:transparent;border-radius:999px;padding:10px 18px;font:600 14.5px 'Plus Jakarta Sans',sans-serif;color:rgba(2,2,30,.6);cursor:pointer;transition:all .25s;}
+.gx-slider-tabs button.on{background:var(--gx-v);color:#fff;box-shadow:0 8px 20px rgba(99,28,255,.30);}
+.gx-slider-tabs button .b{position:absolute;left:14px;right:14px;bottom:5px;height:2px;border-radius:2px;background:rgba(255,255,255,.25);opacity:0;}
+.gx-slider-tabs button.on .b{opacity:1;}
+.gx-slider-tabs button .b i{display:block;height:100%;width:0;background:#fff;border-radius:2px;}
+.gx-slider-tabs button.on.run .b i{animation:gxfill 5s linear forwards;}
+.gx-slider:hover .gx-slider-tabs button.on.run .b i{animation-play-state:paused;}
+@keyframes gxfill{to{width:100%}}
+.gx-slider .gx-view{overflow:hidden;border-radius:13px;}
+.gx-slider .gx-track{display:flex;transition:transform .7s cubic-bezier(.65,0,.35,1);}
+.gx-slider .gx-track img{flex:0 0 100%;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;display:block;}
+
+/* ── Tarjetas genéricas ───────────────────────────────────── */
+div[style*="background:#f8f7ff;border-radius"],div[style*="background:#fff;border-radius:20px"],div[style*="background:#fff;border-radius:16px"]{transition:transform .3s,box-shadow .3s;}
+a > div[style*="border-radius"]:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(99,28,255,.10);}
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.faq-item{border-bottom:1px solid var(--gx-line)!important;}
+.faq-btn span,.faq-btn{font-family:'Plus Jakarta Sans',sans-serif;}
+
+/* ── Aparición suave al hacer scroll ──────────────────────── */
+html.gx-js .gx-rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+html.gx-js .gx-rv.gx-in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){html.gx-js .gx-rv{opacity:1;transform:none;transition:none}.gx-slider .gx-track{transition:none}.gx-slider-tabs button.on.run .b i{animation:none;width:100%}}
+
+/* imágenes con width/height en atributos: que no queden estiradas */
+main img{height:auto;}
+
+/* evita desbordes horizontales en móvil */
+.feat-content>*{min-width:0;}
+.feat-content img{max-width:100%;height:auto;}
+main [style*="flex:1"]{min-width:0;}
+@media(max-width:768px){
+  main section div[style*="grid-template-columns:1fr 1fr"],main section div[style*="grid-template-columns:repeat(2"],main section div[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;}
+  main section div[style*="display:flex"][style*="gap:80px"],main section div[style*="display:flex"][style*="gap:64px"],main section div[style*="display:flex"][style*="gap:60px"],main section div[style*="display:flex"][style*="gap:48px"]{flex-direction:column!important;gap:32px!important;}
+  main section div[style*="padding:40px"]{padding:24px!important;}
+  main section div[style*="padding:36px"]{padding:24px!important;}
+  .feat-section{padding:64px 20px;}
+  .feat-text h2{font-size:28px;}
+  .gx-shot{padding:5px;border-radius:14px;}
+  .gx-shot .gx-dots{display:none;}
+  .gx-shot img{border-radius:10px;}
+  .gx-phone{max-width:240px;border-radius:30px;padding:8px;}
+  .gx-phone img{border-radius:23px;}
+  .gx-slider-tabs{width:100%;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;}
+  .gx-slider-tabs::-webkit-scrollbar{display:none;}
+  .gx-slider-tabs button{padding:9px 14px;font-size:13.5px;}
+}
