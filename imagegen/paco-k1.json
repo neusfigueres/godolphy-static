@@ -1,0 +1,9 @@
+{
+ "out": "imagegen/paco/k1.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Photorealistic vertical 9:16 smartphone photo, handheld point of view of a coworker standing in a modern beauty salon at night (9 pm): a real capuchin monkey named Paco works as a manicurist, sitting at a well-equipped manicure table (LED nail lamp, tidy polish rack, files, cotton pads, hand cushion) filing the nails of a female client whose hands rest on the cushion in the foreground (client only partially visible, ordinary woman's hands). Paco wears a plain black salon apron over a light grey t-shirt and a small white towel on his shoulder; he looks exhausted, droopy eyes, deadpan, not looking at the camera. Salon interior: warm neutral tones, cream walls, light wood slats, soft warm lamps, mostly empty, evening light through the window, slightly messy end-of-day. Natural phone-camera look, slight grain, realistic fur detail. No text, no logos, no lilac or purple clothing.",
+ "size": "9:16",
+ "extra": {
+  "resolution": "2K"
+ }
+}
