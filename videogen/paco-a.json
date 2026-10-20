@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/paco/videos/a.mp4",
+ "model": "veo3.1-fast",
+ "prompt": "Realistic handheld smartphone video, vertical, filmed by a coworker standing in a modern beauty salon at night. A real capuchin monkey named Paco, wearing a black apron and a towel on his shoulder, is exhausted and keeps filing a client's nails slowly, not looking up. The coworker, a woman off-camera, speaks in Spanish from Spain, casual tone: \"Paco, cierra ya, que son las nueve.\" Paco answers without looking up, in a tired, deadpan, deep male voice, Spanish from Spain, mouth moving in sync: \"Una más, reina. Este mes vamos a tope.\" Quiet salon ambience, the soft scratch of the nail file. Subtle handheld camera shake. No music, no subtitles, no text on screen.",
+ "frames": [
+  "imagegen/paco/k1.png"
+ ],
+ "body": {
+  "duration": 8,
+  "aspect_ratio": "9:16",
+  "resolution": "1080p"
+ }
+}
