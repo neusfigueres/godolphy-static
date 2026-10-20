@@ -14,5 +14,6 @@
     "resolution": "720p",
     "size": "9:16",
     "generate_audio": true
-  }
+  },
+  "error": "HTTP 400: {\"error\":{\"code\":\"invalid_request\",\"message\":\"first_frame/last_frame tasks only support ratio=adaptive for this model (the output follows the first frame's aspect ratio); got: 9:16.\",\"param\":\"\",\"type\":\"invalid_request\"}}"
 }
