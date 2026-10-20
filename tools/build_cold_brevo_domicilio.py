@@ -6,10 +6,10 @@ spec = importlib.util.spec_from_file_location('w', os.path.join(here, 'build_wai
 LOGO, H, B = w.LOGO, w.H, w.B
 OUT = '/home/claude/emails-out/brevo'
 IMG = 'https://godolphy.com/img/email/frio/domicilio-bici.png'
-SUBJECT = '¿Y si tu salón también fuera a domicilio?'
-PRE = 'Novias, clientas mayores, hoteles: dinero extra para tu salón.'
-CLAIM = 'Hay clientas que no pueden venir. Ve tú.'
-ONE = 'Novias, clientas mayores, mamás recientes, hoteles… El domicilio es dinero extra para tu salón. Godolphy calcula el desplazamiento y solo ofrece las horas a las que llegas a tiempo.'
+SUBJECT = 'Gana más con citas a domicilio'
+PRE = 'Y llena los huecos de tu agenda con clientas que no pueden venir.'
+CLAIM = 'Gana más con citas a domicilio.'
+ONE = 'Y aprovecha tus huecos de agenda. Novias, clientas mayores, hoteles… reservan online y Godolphy les suma el desplazamiento al precio.'
 FEATS = ['Eliges tu zona y tu precio por km.', 'Recargo de hotel u hospital, automático.', 'Reservas de grupo: novia, madre e invitadas en un solo pago.']
 U = 'utm_source=brevo&utm_medium=email&utm_campaign=frio-domicilio&utm_content=c1'
 LINK = f'https://godolphy.com/sectores/software-para-profesionales-a-domicilio/?{U}'
