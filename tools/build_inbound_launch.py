@@ -36,7 +36,7 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 <tr><td class="px" align="center" bgcolor="#631cff" style="background:#631cff;background-image:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);padding:36px 40px 0 40px;">
 <img src="{LOGO}" width="150" alt="Godolphy" style="width:150px;height:auto;margin:0 auto 30px auto;" />
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td style="background:#EEFE3A;border-radius:999px;padding:7px 16px;{B}font-size:12px;letter-spacing:1.4px;font-weight:700;color:#02021e;text-transform:uppercase;">Dashboard IA · gratis</td></tr></table>
-<p class="claim" style="margin:22px 0 0 0;{H}font-size:44px;line-height:48px;font-weight:800;letter-spacing:-0.9px;color:#FFFFFF;">Tus reservas saben dónde pierdes dinero.</p>
+<p class="claim" style="margin:22px 0 0 0;{H}font-size:44px;line-height:48px;font-weight:800;letter-spacing:-0.9px;color:#FFFFFF;">El consultor financiero que tu salón nunca tuvo.</p>
 <p style="margin:16px auto 0 auto;max-width:470px;{B}font-size:17px;line-height:26px;color:#EFE9FF;">Sube la exportación de tu agenda al dashboard IA y te dice cuánto ganas de verdad, qué clientas no han vuelto y qué servicios no te salen a cuenta.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin-top:26px;"><tr><td align="center">
 <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{dia}" style="height:54px;v-text-anchor:middle;width:300px;" arcsize="30%" stroke="f" fillcolor="#FFFFFF"><w:anchorlock/><center style="color:#631cff;font-family:'Segoe UI',Arial,sans-serif;font-size:17px;font-weight:bold;">Analizar mi salón gratis &rarr;</center></v:roundrect><![endif]-->
@@ -64,7 +64,7 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 </table></td></tr></table>
 </body></html>
 '''
-    text = '\n'.join([pre, '', 'DASHBOARD IA · GRATIS', '', 'Tus reservas saben dónde pierdes dinero.', '',
+    text = '\n'.join([pre, '', 'DASHBOARD IA · GRATIS', '', 'El consultor financiero que tu salón nunca tuvo.', '',
         'Sube la exportación de tu agenda al dashboard IA y te dice cuánto ganas de verdad, qué clientas no han vuelto y qué servicios no te salen a cuenta.', '',
         f'Analizar mi salón gratis → {dia}', 'Gratis · sin tarjeta · 30 segundos', '', 'EL LUNES 26 ABRIMOS',
         'Godolphy, el programa de reservas para profesionales de la belleza.'] + [f'- {f}' for f in FEATS] +
