@@ -1,0 +1,18 @@
+{
+  "out": "imagegen/paco/videos/final5.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/paco/k3.png"
+  ],
+  "prompt": "Realistic smartphone video, vertical, at night at the entrance door of a modern beauty salon. Paco, a pale-faced capuchin monkey in a grey t-shirt with a white towel on his shoulder, stands upright facing the camera, serious and dignified, holding a smartphone up with the screen facing the camera, keeping it steady. He looks straight into the lens and says calmly in a deep tired male voice, Spanish from Spain accent, natural lip sync: \"No hagas el mono. Analiza tu negocio con Godolphy.\" Subtle handheld camera, quiet night street ambience. The phone screen stays plain white. No music, no subtitles, no text on screen.",
+  "body": {
+    "duration": 5,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": true
+  }
+}
