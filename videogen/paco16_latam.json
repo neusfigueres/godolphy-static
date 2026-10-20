@@ -1,0 +1,18 @@
+{
+  "out": "imagegen/paco/videos/paco16_latam.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/paco/k1.png"
+  ],
+  "prompt": "Realistic handheld smartphone mockumentary video, vertical, filmed by a coworker in a modern beauty salon at night. A real capuchin monkey named Paco, black apron, towel on his shoulder, tired, files a client's nails slowly. Latin American Spanish dialogue (neutral Mexican accent), Paco has a tired deadpan deep male voice with lip sync. Off-camera woman coworker, Latin American accent: \"Paco, cierra ya, que son las nueve.\" Paco, without looking up: \"Una más, mi reina. Este mes vamos con todo.\" Coworker: \"¿Y cuánto has ganado?\" Paco pauses, slowly turns and looks straight at the camera: \"Muchísimo.\" Coworker: \"¿Cuánto es muchísimo?\" Paco: \"Lo sé porque estoy cansadísimo.\" Then Paco pulls a shoebox full of crumpled paper receipts from under the table and shakes it at the camera: \"Las cuentas, aquí. Algo habrá.\" Sarcastic deadpan humor, quiet salon ambience, sound of the nail file. No music, no subtitles, no text on screen.",
+  "body": {
+    "duration": 16,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": true
+  }
+}
