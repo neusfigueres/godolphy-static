@@ -6,11 +6,11 @@ spec = importlib.util.spec_from_file_location('w', os.path.join(here, 'build_wai
 LOGO, H, B = w.LOGO, w.H, w.B
 OUT = '/home/claude/emails-out/brevo'
 IMG = 'https://godolphy.com/img/email/frio/domicilio-bici.png'
-SUBJECT = 'Tus servicios a domicilio, sin calcular nada'
-PRE = 'Precio por km y solo las horas a las que llegas a tiempo.'
-CLAIM = 'El único cálculo que ya no tendrás que hacer: el del desplazamiento.'
-ONE = 'Godolphy calcula el precio por km, añade el recargo de hotel u hospital y solo ofrece las horas a las que llegas a tiempo desde la cita anterior.'
-FEATS = ['Reservas de grupo: novia, madre e invitadas en un solo pago.', 'Tu marca y tu enlace, sin comisión por clienta nueva.', 'Solo aceptas reservas dentro de tu zona.']
+SUBJECT = '¿Y si tu salón también fuera a domicilio?'
+PRE = 'Novias, clientas mayores, hoteles: dinero extra para tu salón.'
+CLAIM = 'Hay clientas que no pueden venir. Ve tú.'
+ONE = 'Novias, clientas mayores, mamás recientes, hoteles… El domicilio es dinero extra para tu salón. Godolphy calcula el desplazamiento y solo ofrece las horas a las que llegas a tiempo.'
+FEATS = ['Eliges tu zona y tu precio por km.', 'Recargo de hotel u hospital, automático.', 'Reservas de grupo: novia, madre e invitadas en un solo pago.']
 U = 'utm_source=brevo&utm_medium=email&utm_campaign=frio-domicilio&utm_content=c1'
 LINK = f'https://godolphy.com/sectores/software-para-profesionales-a-domicilio/?{U}'
 HOME = f'https://godolphy.com/?{U}'
@@ -41,14 +41,14 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 <tr><td class="px" align="center" bgcolor="#631cff" style="background:#631cff;background-image:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);padding:36px 40px 34px 40px;">
 <img src="{LOGO}" width="150" alt="Godolphy" style="width:150px;height:auto;margin:0 auto 30px auto;" />
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td style="background:#EEFE3A;border-radius:999px;padding:7px 16px;{B}font-size:12px;letter-spacing:1.4px;font-weight:700;color:#02021e;text-transform:uppercase;">Servicios a domicilio</td></tr></table>
-<p class="claim" style="margin:22px 0 0 0;{H}font-size:38px;line-height:42px;font-weight:800;letter-spacing:-0.8px;color:#FFFFFF;">{CLAIM}</p>
+<p class="claim" style="margin:22px 0 0 0;{H}font-size:44px;line-height:48px;font-weight:800;letter-spacing:-0.8px;color:#FFFFFF;">{CLAIM}</p>
 <p style="margin:16px auto 0 auto;max-width:470px;{B}font-size:17px;line-height:26px;color:#EFE9FF;">{ONE}</p>
 <a href="{LINK}" style="text-decoration:none;"><img src="{IMG}" width="520" alt="Profesional en bici con una reserva a domicilio confirmada en Godolphy" style="width:100%;max-width:520px;height:auto;margin:28px auto 4px auto;" /></a>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin-top:22px;"><tr><td align="center">{btn('#FFFFFF', '#631cff')}</td></tr></table>
 </td></tr>
 <tr><td class="px" style="padding:30px 40px 8px 40px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f3efff;border-radius:20px;"><tr><td style="padding:26px 26px 18px 26px;">
-<p style="margin:0 0 16px 0;{H}font-size:24px;line-height:28px;font-weight:800;color:#02021e;">Hecho para quien trabaja en casa de sus clientas.</p>
+<p style="margin:0 0 16px 0;{H}font-size:24px;line-height:28px;font-weight:800;color:#02021e;">Empezar a hacer domicilios es fácil.</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table>
 <p style="margin:6px 0 0 0;{B}font-size:15px;line-height:22px;color:#3d3858;"><b>30 días gratis, sin tarjeta.</b> Todo en <a href="{HOME}" style="color:#631cff;font-weight:700;text-decoration:underline;">godolphy.com</a></p>
 </td></tr></table>
