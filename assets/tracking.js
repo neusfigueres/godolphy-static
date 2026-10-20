@@ -59,6 +59,22 @@
   };
   window.gdGetUtm();
 
+  // Pasa las UTMs a los enlaces del dashboard (otro subdominio: allí no llega el sessionStorage)
+  function decorateDashboardLinks() {
+    var u = window.gdGetUtm();
+    if (!Object.keys(u).length) return;
+    var links = document.querySelectorAll('a[href*="dashboard.godolphy.com"]');
+    for (var i = 0; i < links.length; i++) {
+      try {
+        var url = new URL(links[i].href);
+        UTM_KEYS.forEach(function (k) { if (u[k] && !url.searchParams.get(k)) url.searchParams.set(k, u[k]); });
+        links[i].href = url.toString();
+      } catch (e) {}
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', decorateDashboardLinks);
+  else decorateDashboardLinks();
+
   // ── Lead: alta en la lista de espera ──
   window.gdTrackLead = function (extra) {
     var props = extra || {}, u = window.gdGetUtm();
