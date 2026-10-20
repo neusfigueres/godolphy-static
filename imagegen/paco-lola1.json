@@ -1,0 +1,12 @@
+{
+  "out": "imagegen/paco/lola1.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic vertical 9:16 smartphone photo, same handheld point of view of a coworker in the same modern beauty salon at night as the reference image (same manicure table, LED nail lamp, polish rack, warm neutral interior, cream walls, light wood slats). Paco, the same capuchin monkey from the reference (black apron over light grey t-shirt, white towel on shoulder, exhausted deadpan face), sits at the manicure table holding an open cardboard shoebox overflowing with crumpled paper receipts. Next to him stands Lola, a second real female capuchin monkey, slightly smaller, lighter face, wearing a plain black salon apron over a white t-shirt and a small black hair clip on her head; she has an unimpressed, sarcastic expression with one raised eyebrow, and holds a smartphone up with its screen facing the camera, the screen is plain bright white (blank). Natural phone-camera look, slight grain, realistic fur detail, natural monkey hands with correct anatomy. No text, no logos, no lilac or purple clothing.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/paco/k1.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  }
+}
