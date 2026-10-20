@@ -69,6 +69,10 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 </table></td></tr></table>
 </body></html>
 '''
+    if v == 'a':
+        old = f'<a href="{dia}" style="text-decoration:none;"><img src="{IMG}resumen.jpg" width="520" alt="Dashboard IA de Godolphy" style="width:100%;max-width:520px;height:auto;margin:30px auto 0 auto;border-radius:14px 14px 0 0;" /></a>\n</td></tr>'
+        assert old in html
+        html = html.replace(old, '<div style="height:36px;line-height:36px;font-size:1px;">&nbsp;</div>\n</td></tr>' + w.mask_row(dict(mask=True), dia))
     return html
 
 if __name__ == '__main__':

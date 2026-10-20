@@ -19,7 +19,7 @@ E = [
       close='El lunes te escribo con el enlace para entrar.'),
  dict(id='e3', subject='Ya puedes entrar en Godolphy', pre='30 días gratis, sin tarjeta.', pill='Ya disponible',
       claim='Una nueva era para los centros de estética, con IA.', one='Crea tu cuenta y prueba Godolphy 30 días gratis. Sin tarjeta.',
-      img='calendario', alt='Calendario de Godolphy con las citas del día por profesional', cta='Crear mi cuenta', url=SIGNUP,
+      img='calendario', alt='Calendario de Godolphy con las citas del día por profesional', mask=True, cta='Crear mi cuenta', url=SIGNUP,
       more=[('Plan Pro completo', ' durante la prueba.'), ('Al terminar,', ' eliges el plan que te encaje. Sin permanencia.')],
       close='¿Dudas? Responde a este email: lo leo yo.',
       why=[('El dinero, directo a tu cuenta', 'Conectas tu Stripe y cada pago va a ti. Sin comisión por reserva ni por pago.'),
@@ -36,6 +36,17 @@ def why(e):
     return (f'<tr><td class="px" style="padding:26px 34px 0 34px;"><p class="h2" style="margin:0 6px 12px 6px;{H}font-size:26px;line-height:30px;font-weight:800;color:#02021e;">Por qué Godolphy y no otro programa</p>'
             f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table>'
             f'<p style="margin:8px 6px 0 6px;{B}font-size:14px;line-height:21px;color:#5b5675;">Y sin permanencia de 12 meses. <a href="{u("https://godolphy.com/", e["id"])}" style="color:#631cff;font-weight:700;text-decoration:underline;">Ver todo en godolphy.com</a></p></td></tr>')
+
+def hero_img(e, cta):
+    if e.get('mask'): return '<div style="height:36px;line-height:36px;font-size:1px;">&nbsp;</div>'
+    return (f'<a href="{cta}" style="text-decoration:none;"><img src="{IMG}{e['img']}.jpg" width="520" alt="{H_.escape(e['alt'])}" '
+            f'style="width:100%;max-width:520px;height:auto;margin:30px auto 0 auto;border-radius:14px 14px 0 0;" /></a>')
+
+def mask_row(e, cta):
+    if not e.get('mask'): return ''
+    return (f'\n<tr><td class="px" align="center" style="padding:34px 40px 0 40px;">'
+            f'<a href="{cta}" style="text-decoration:none;"><img src="{IMG}mascara.gif" width="480" alt="La máscara de Godolphy: tu salón visto con IA" style="width:100%;max-width:480px;height:auto;margin:0 auto;" /></a>'
+            f'<p style="margin:14px auto 0 auto;max-width:440px;{B}font-size:15px;line-height:22px;color:#5b5675;">Con la máscara de Godolphy ves tu salón con otros ojos: lo que ganas de verdad, quién se está yendo y dónde se escapa el dinero.</p></td></tr>')
 
 def build(e):
     cta = u(e['url'], e['id']); dia = u('https://godolphy.com/dashboard-ia/', e['id']); home = u('https://godolphy.com/', e['id'])
@@ -69,8 +80,8 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 <!--[if !mso]><!-- --><a href="{cta}" style="display:inline-block;padding:17px 30px;background:#FFFFFF;color:#631cff;{B}font-size:17px;line-height:20px;font-weight:700;text-decoration:none;border-radius:16px;">{H_.escape(e['cta'])} &rarr;</a><!--<![endif]-->
 </td></tr></table>
 <p style="margin:12px 0 0 0;{B}font-size:11px;letter-spacing:1.3px;font-weight:700;color:#E3D9FF;text-transform:uppercase;">30 días gratis · sin tarjeta · sin permanencia</p>
-<a href="{cta}" style="text-decoration:none;"><img src="{IMG}{e['img']}.jpg" width="520" alt="{H_.escape(e['alt'])}" style="width:100%;max-width:520px;height:auto;margin:30px auto 0 auto;border-radius:14px 14px 0 0;" /></a>
-</td></tr>
+{hero_img(e, cta)}
+</td></tr>{mask_row(e, cta)}
 <tr><td class="px" style="padding:32px 40px 6px 40px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table>
 </td></tr>
