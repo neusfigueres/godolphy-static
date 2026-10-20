@@ -1,0 +1,12 @@
+{
+  "out": "imagegen/paco/k3.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic vertical 9:16 smartphone photo, at night at the glass entrance door of the same modern beauty salon as the reference image (warm neutral interior, cream walls, light wood slats, soft lamps behind him, dark street outside). Paco, the same pale-faced capuchin monkey from the reference, now without apron, in his light grey t-shirt, the white towel over his shoulder, stands upright full body facing the camera, serious, dignified expression, looking straight into the lens, holding a smartphone up in one hand with its screen facing the camera, the screen is plain bright white (blank). Medium shot, centred, room for text at the top. Natural phone-camera look, slight grain, realistic fur, natural monkey hands with correct anatomy. No text, no logos, no lilac or purple clothing.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/paco/k1.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  }
+}
