@@ -1,0 +1,12 @@
+{
+  "out": "imagegen/paco/lola3.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic vertical 9:16 smartphone photo, same handheld point of view of a coworker in the same modern beauty salon at night as the reference image (same manicure table, LED nail lamp, polish rack, warm neutral interior, cream walls, light wood slats). Paco, the same pale-faced capuchin monkey from the reference (black apron over light grey t-shirt, white towel on shoulder, exhausted deadpan face), sits at the manicure table holding an open cardboard shoebox overflowing with crumpled paper receipts. Next to him stands Lola, a clearly female monkey: a small, slender, elegant female squirrel-like capuchin with soft light golden-brown fur, a delicate small face, big expressive eyes with long lashes; she wears a fitted black sleeveless little dress with a white collar, a thin pearl necklace, small gold hoop earrings and a black velvet bow on her head; her look reads unmistakably feminine and stylish, like the salon manager. She has a sharp, unimpressed, sarcastic expression with one raised eyebrow looking at Paco, and holds a smartphone up with its screen facing the camera, the screen is plain bright white (blank). Paco and Lola must look obviously different. Natural phone-camera look, slight grain, realistic fur detail, natural monkey hands with correct anatomy. No text, no logos, no lilac or purple clothing.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/paco/k1.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  }
+}
