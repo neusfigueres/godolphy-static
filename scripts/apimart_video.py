@@ -46,7 +46,9 @@ def find(obj, pred):
 def run(job):
     body = {"model": job["model"], "prompt": job["prompt"]}
     frames = [f"https://raw.githubusercontent.com/{REPO}/{SHA}/{p}" for p in job.get("frames", [])]
-    if frames:
+    if frames and job.get("roles"):
+        body["image_with_roles"] = [{"url": u, "role": r} for u, r in zip(frames, job["roles"])]
+    elif frames:
         body["image_urls"] = frames
     body.update(job.get("body", {}))
     sub = call("POST", "/videos/generations", body)
@@ -54,7 +56,7 @@ def run(job):
     ids = find(sub, lambda k, v: k == "task_id" and isinstance(v, str))
     if not ids:
         raise RuntimeError("sin task_id: " + json.dumps(sub)[:500])
-    for _ in range(240):  # ~20 min
+    for _ in range(int(job.get("poll", 240))):  # 240 = ~20 min
         time.sleep(5)
         t = call("GET", f"/tasks/{ids[0]}")
         status = (find(t, lambda k, v: k == "status" and isinstance(v, str)) or ["?"])[0].lower()
