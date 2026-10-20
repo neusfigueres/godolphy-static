@@ -801,4 +801,10 @@
     <priority>0.6</priority>
   </url>
   <!-- /Centro de ayuda -->
+  <url>
+    <loc>https://godolphy.com/tarjetas-regalo-salon-de-belleza/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
