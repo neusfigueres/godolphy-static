@@ -21,8 +21,21 @@ E = [
       claim='Ya está abierto.', one='Crea tu cuenta y prueba Godolphy 30 días gratis. Sin tarjeta.',
       img='calendario', alt='Calendario de Godolphy con las citas del día por profesional', cta='Crear mi cuenta', url=SIGNUP,
       more=[('Plan Pro completo', ' durante la prueba.'), ('Al terminar,', ' eliges el plan que te encaje. Sin permanencia.')],
-      close='¿Dudas? Responde a este email: lo leo yo.'),
+      close='¿Dudas? Responde a este email: lo leo yo.',
+      why=[('El dinero, directo a tu cuenta', 'Conectas tu Stripe y cada pago va a ti. Sin comisión por reserva ni por pago.'),
+           ('Tu marca, no un marketplace', 'Tus clientas reservan con tu enlace, sin descargar ninguna app y sin comisión por clienta nueva.'),
+           ('Copiloto IA incluido', 'Cada mes te dice cuánto ganas de verdad, qué clientas no han vuelto y qué mejorar.'),
+           ('A domicilio, de verdad', 'Precio por km y solo las horas a las que llegas a tiempo. Y reservas de grupo para bodas y eventos.')]),
 ]
+
+def why(e):
+    if not e.get('why'): return ''
+    cell = lambda t, d: (f'<td class="wcell" width="50%" valign="top" style="width:50%;padding:6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f3efff;border-radius:16px;"><tr><td style="padding:18px 18px 18px 18px;">'
+                         f'<p style="margin:0 0 6px 0;{H}font-size:18px;line-height:22px;font-weight:800;color:#02021e;">{t}</p><p style="margin:0;{B}font-size:14px;line-height:21px;color:#3d3858;">{d}</p></td></tr></table></td>')
+    w = e['why']; rows = ''.join(f'<tr>{cell(*w[i])}{cell(*w[i+1])}</tr>' for i in range(0, len(w), 2))
+    return (f'<tr><td class="px" style="padding:26px 34px 0 34px;"><p class="h2" style="margin:0 6px 12px 6px;{H}font-size:26px;line-height:30px;font-weight:800;color:#02021e;">Por qué Godolphy y no otro programa</p>'
+            f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table>'
+            f'<p style="margin:8px 6px 0 6px;{B}font-size:14px;line-height:21px;color:#5b5675;">Y sin permanencia de 12 meses. <a href="{u("https://godolphy.com/", e["id"])}" style="color:#631cff;font-weight:700;text-decoration:underline;">Ver todo en godolphy.com</a></p></td></tr>')
 
 def build(e):
     cta = u(e['url'], e['id']); dia = u('https://godolphy.com/dashboard-ia/', e['id']); home = u('https://godolphy.com/', e['id'])
@@ -37,7 +50,7 @@ def build(e):
 <style type="text/css">
 body,table,td,a{{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}} table,td{{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;}}
 img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-mode:bicubic;}} body{{margin:0!important;padding:0!important;width:100%!important;}}
-@media screen and (max-width:620px){{.container{{width:100%!important;}} .px{{padding-left:22px!important;padding-right:22px!important;}} .claim{{font-size:40px!important;line-height:44px!important;}}}}
+@media screen and (max-width:620px){{.container{{width:100%!important;}} .px{{padding-left:22px!important;padding-right:22px!important;}} .claim{{font-size:40px!important;line-height:44px!important;}} .wcell{{display:block!important;width:100%!important;}}}}
 </style>
 <!--[if mso]><style type="text/css">table,td,p,a{{font-family:'Segoe UI',Arial,sans-serif!important;}}</style><![endif]-->
 </head>
@@ -61,6 +74,7 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 <tr><td class="px" style="padding:32px 40px 6px 40px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table>
 </td></tr>
+{why(e)}
 <tr><td class="px" style="padding:20px 40px 34px 40px;"><p style="margin:0;{B}font-size:16px;line-height:24px;color:#3d3858;">{H_.escape(e['close'])}</p>
 <p style="margin:16px 0 0 0;{B}font-size:16px;color:#3d3858;">Un abrazo,<br /><span style="{H}font-size:22px;font-weight:800;color:#631cff;">Neus</span><br /><span style="font-size:13px;color:#7d77a0;">Fundadora de Godolphy</span></p></td></tr>
 <tr><td class="px" align="center" style="background:#02021e;padding:26px 40px 28px 40px;">
@@ -78,6 +92,7 @@ def text(e):
     cta = u(e['url'], e['id']); dia = u('https://godolphy.com/dashboard-ia/', e['id'])
     lines = [e['pre'], '', e['pill'].upper(), '', e['claim'], '', e['one'], '', f"{e['cta']} → {cta}", '30 días gratis · sin tarjeta · sin permanencia', '']
     lines += ['- ' + re.sub('<[^>]+>', '', a + b.format(dia=dia)) + (f' ({dia})' if 'dia' in b else '') for a, b in e['more']]
+    if e.get('why'): lines += ['', 'POR QUÉ GODOLPHY Y NO OTRO PROGRAMA'] + [f'- {t}: {d}' for t, d in e['why']] + ['Y sin permanencia de 12 meses.']
     lines += ['', e['close'], '', 'Un abrazo,', 'Neus', 'Fundadora de Godolphy', '', 'Recibes este email porque te apuntaste a la lista de espera de Godolphy.',
               '¿No quieres recibir más? Date de baja aquí: %UNSUBSCRIBELINK%', '', 'Godolphy · %ACCOUNT_ADDRESS%']
     return '\n'.join(lines)
