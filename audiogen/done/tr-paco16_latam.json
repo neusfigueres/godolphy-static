@@ -1,0 +1,6 @@
+{
+  "type": "transcribe",
+  "file": "imagegen/paco/audio/paco16_latam.mp3",
+  "out": "imagegen/paco/audio/paco16_latam.txt",
+  "language": "es"
+}
