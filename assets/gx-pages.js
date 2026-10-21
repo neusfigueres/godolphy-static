@@ -17,7 +17,7 @@
   // 1b) Distintivo VERI*FACTU en el pie de página
   (function(){
     var f=d.querySelector('footer'); if(!f||f.querySelector('.gx-vf')) return;
-    var a=d.createElement('a'); a.href='/ayuda/verifactu/'; a.className='gx-vf'; a.title='Facturación con VERI*FACTU';
+    var a=d.createElement('a'); a.href='/verifactu/'; a.className='gx-vf'; a.title='Facturación con VERI*FACTU';
     a.innerHTML='<img src="/assets/verifactu-white-sm.png" alt="VERI*FACTU" width="123" height="30" loading="lazy">';
     var row=f.querySelector('div[style*="justify-content:space-between"]');
     if(row){ row.insertBefore(a,row.children[1]||null); } else { (f.firstElementChild||f).appendChild(a); }
