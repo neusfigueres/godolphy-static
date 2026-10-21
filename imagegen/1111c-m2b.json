@@ -1,0 +1,13 @@
+{
+  "out": "imagegen/1111/frames3/m2b.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Edit of the reference image: keep EXACTLY the same character Ana, her pose and expression, the beagle, the violet digital world background, framing and camera angle, 3D animated film style. Only change the content inside the big floating frosted glass card above her: it now looks like a clean modern app screen in violet and white (Godolphy style), glowing softly inside the glass panel. Any text must be tiny blurred illegible grey placeholder lines, never readable words. No logos. Natural hands with five fingers. Vertical 9:16. Card content: a list of 4 service rows, each with a small round service icon (nail polish, hair dryer, face mask, lash), a thin horizontal progress bar and a small coloured badge on the right: two rows have green badges and two rows have red downward arrow badges highlighted with a soft red glow; illegible tiny text lines.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/1111/frames3/m2.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}
