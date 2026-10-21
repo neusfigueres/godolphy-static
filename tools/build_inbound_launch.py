@@ -53,6 +53,10 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 <p style="margin:6px 0 0 0;{B}font-size:15px;line-height:22px;color:#3d3858;"><b>30 días gratis, sin tarjeta.</b> Todo en <a href="{home}" style="color:#631cff;font-weight:700;text-decoration:underline;">godolphy.com</a></p>
 </td></tr></table>
 </td></tr>
+<tr><td class="px" align="center" style="padding:28px 40px 0 40px;">
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{dia}" style="height:54px;v-text-anchor:middle;width:300px;" arcsize="30%" stroke="f" fillcolor="#631cff"><w:anchorlock/><center style="color:#FFFFFF;font-family:'Segoe UI',Arial,sans-serif;font-size:17px;font-weight:bold;">Analizar mi salón gratis &rarr;</center></v:roundrect><![endif]-->
+<!--[if !mso]><!-- --><a href="{dia}" style="display:inline-block;padding:17px 30px;background:#631cff;color:#FFFFFF;{B}font-size:17px;line-height:20px;font-weight:700;text-decoration:none;border-radius:16px;">Analizar mi salón gratis &rarr;</a><!--<![endif]-->
+</td></tr>
 <tr><td class="px" style="padding:26px 40px 34px 40px;"><p style="margin:0;{B}font-size:16px;line-height:24px;color:#3d3858;">¿Dudas? Responde a este email: lo leo yo.</p>
 <p style="margin:16px 0 0 0;{B}font-size:16px;color:#3d3858;">Un abrazo,<br /><span style="{H}font-size:22px;font-weight:800;color:#631cff;">Neus</span><br /><span style="font-size:13px;color:#7d77a0;">Fundadora de Godolphy</span></p></td></tr>
 <tr><td class="px" align="center" style="background:#02021e;padding:26px 40px 28px 40px;">
@@ -68,7 +72,7 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
         'Sube la exportación de tu agenda al dashboard IA y te dice cuánto ganas de verdad, qué clientas no han vuelto y qué servicios no te salen a cuenta.', '',
         f'Analizar mi salón gratis → {dia}', 'Gratis · sin tarjeta · 30 segundos', '', 'EL LUNES 26 ABRIMOS',
         'Godolphy, el programa de reservas para profesionales de la belleza.'] + [f'- {f}' for f in FEATS] +
-        ['30 días gratis, sin tarjeta. Todo en ' + home, '', '¿Dudas? Responde a este email: lo leo yo.', '', 'Un abrazo,', 'Neus', 'Fundadora de Godolphy', '',
+        ['30 días gratis, sin tarjeta. Todo en ' + home, '', f'Analizar mi salón gratis → {dia}', '', '¿Dudas? Responde a este email: lo leo yo.', '', 'Un abrazo,', 'Neus', 'Fundadora de Godolphy', '',
          FOOT_NEW, '¿No quieres recibir más? Date de baja aquí: %UNSUBSCRIBELINK%', '', 'Godolphy · %ACCOUNT_ADDRESS%'])
     return html, text
 
