@@ -1,0 +1,34 @@
+name: Generate audio (Apimart)
+on:
+  push:
+    branches: [main]
+    paths: ['audiogen/*.json']
+  workflow_dispatch:
+
+concurrency:
+  group: generate-audio
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate
+        env:
+          APIMART_API_KEY: ${{ secrets.APIMART }}
+        run: python3 scripts/apimart_audio.py
+
+      - name: Commit results
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A imagegen audiogen
+          if git diff --cached --quiet; then echo "Nada que guardar"; exit 0; fi
+          git commit -m "Audio generado con Apimart"
+          git pull --rebase
+          git push
