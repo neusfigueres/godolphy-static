@@ -1,0 +1,18 @@
+{
+  "out": "imagegen/1111/videos/m2b.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/1111/frames3/m2b.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Inside a magical violet digital world, Ana, a young curly-haired manicurist, and her beagle puppy float in front of a big glowing frosted glass card that shows an app screen. Gentle floating motion, slow subtle camera push-in, soft particles drifting. The app screen inside the card stays sharp and stable, its elements animate subtly: the progress bars fill in one by one, the green arrows bounce up and the two red arrows blink down with a soft red glow. Ana, arms crossed, frowns thoughtfully and raises an eyebrow; the beagle looks up. No readable text.",
+  "body": {
+    "duration": 4,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}
