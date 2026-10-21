@@ -35,9 +35,22 @@ def transcribe(job):
     t=req("POST","/audio/transcriptions",data=b"".join(parts),ctype=f"multipart/form-data; boundary={b}")
     lines=[f'{s.get("start",0):6.2f}-{s.get("end",0):6.2f}  {s.get("text","").strip()}' for s in t.get("segments",[])] or [t.get("text","")]
     os.makedirs(os.path.dirname(job["out"]),exist_ok=True); open(job["out"],"w").write("\n".join(lines)+"\n"); print("\n".join(lines))
+def tts(job):
+    errs=[]
+    for model in job.get("models",["gpt-4o-mini-tts","tts-1"]):
+        body=dict(job["body"]); body["model"]=model
+        if model=="tts-1": body.pop("instructions",None)
+        r=urllib.request.Request(API+"/audio/speech",method="POST",data=json.dumps(body).encode(),headers={"Authorization":f"Bearer {KEY}","Content-Type":"application/json"})
+        try:
+            with urllib.request.urlopen(r,timeout=300) as x: data=x.read(); ct=x.headers.get("Content-Type","")
+        except urllib.error.HTTPError as e:
+            errs.append(f"{model}: HTTP {e.code} {e.read().decode()[:300]}"); continue
+        if "json" in ct: errs.append(f"{model}: {data[:300]}"); continue
+        os.makedirs(os.path.dirname(job["out"]),exist_ok=True); open(job["out"],"wb").write(data); job["model_used"]=model; print("saved",job["out"],len(data)); return
+    raise RuntimeError(" | ".join(errs))
 def process(p):
     job=json.load(open(p)); dest="audiogen/done"
-    try: (music if job["type"]=="music" else transcribe)(job)
+    try: {"music":music,"transcribe":transcribe,"tts":tts}[job["type"]](job)
     except Exception as e: print("ERROR",p,e); job["error"]=str(e)[:1500]; dest="audiogen/failed"
     os.makedirs(dest,exist_ok=True); json.dump(job,open(os.path.join(dest,os.path.basename(p)),"w"),ensure_ascii=False,indent=2); os.remove(p)
 if __name__=="__main__":
