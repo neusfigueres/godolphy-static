@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/1111/frames3/n4.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "3D animated film style, exactly the same art style, rendering and colors as the references. Keep exactly the same character ANA: young manicurist, black curly hair in a low ponytail, white t-shirt, black apron, fine tattoos, gold hoop earrings; and her beagle puppy with a lilac bandana. Vertical 9:16, cinematic. No text, no numbers, no letters, no logos, no watermark, natural hands with five fingers. Edit of the first reference image: keep exactly the same framing, camera angle, table, coffee mug, white LED nail lamp with violet glow, nail polish bottles, lighting and salon background. Only change: Ana is back sitting in her chair, slightly dishevelled hair with a few tiny violet sparkles still floating around her, holding her smartphone in one hand against her chest, looking straight at the camera with a big confident satisfied smile and a playful wink, giving an OK sign with her other hand; the beagle sits on the table edge wagging its tail, also with a few sparkles.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/1111/frames2/r1_v2.png",
+    "imagegen/refs/ana_personatge_ref.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}

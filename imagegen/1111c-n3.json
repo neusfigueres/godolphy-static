@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/1111/frames3/n3.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "3D animated film style, exactly the same art style, rendering and colors as the references. Keep exactly the same character ANA: young manicurist, black curly hair in a low ponytail, white t-shirt, black apron, fine tattoos, gold hoop earrings; and her beagle puppy with a lilac bandana. Vertical 9:16, cinematic. No text, no numbers, no letters, no logos, no watermark, natural hands with five fingers. Medium shot inside the smartphone digital world (deep violet to lilac gradient background, glowing grid, floating particles): Ana floats in the lower half of the frame, seen from the waist up, turned three-quarters towards a big rounded frosted glass card that floats in the upper half of the frame in front of her (large blank white translucent panel with violet glowing edges, completely empty, no text); she points at it with one finger and nods with a determined, motivated smile, as if understanding what she has to do. The beagle floats beside her looking at the card too.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/refs/ana_personatge_ref.png",
+    "imagegen/1111/frames2/r1_v2.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}

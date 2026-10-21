@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/1111/frames3/n1.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "3D animated film style, exactly the same art style, rendering and colors as the references. Keep exactly the same character ANA: young manicurist, black curly hair in a low ponytail, white t-shirt, black apron, fine tattoos, gold hoop earrings; and her beagle puppy with a lilac bandana. Vertical 9:16, cinematic. No text, no numbers, no letters, no logos, no watermark, natural hands with five fingers. Edit of the first reference image: same framing, camera angle, table, coffee mug, white LED nail lamp, nail polish bottles and salon background. Only change: the smartphone lying flat on the table has become a magical portal; a swirling vortex of bright violet and magenta light spirals out of its screen and is sucking Ana into it: Ana is lifted off her chair, her body stretched and slightly blurred with motion streaks, flying head-first and diving into the glowing phone screen, hair and apron fluttering towards it, a surprised but excited expression; sparkles and small light particles spin around; the beagle holds on to the table edge with its ears blown towards the phone.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/1111/frames2/r5b.png",
+    "imagegen/refs/ana_personatge_ref.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}
