@@ -16,5 +16,32 @@
     "resolution": "720p",
     "size": "adaptive",
     "generate_audio": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 208,
+      "completed": 1792600575,
+      "cost": 1.73157,
+      "created": 1792600367,
+      "credits_cost": 17.3157,
+      "estimated_time": 300,
+      "id": "task_01M5FMXRD595R0N8X59KQ25CMD",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792686975,
+            "url": [
+              "https://getapib.org/video/9998207399428340-ddf9aad7-8ea0-4483-8cdc-55558cf78bed-video_task_01M5FMXRD595R0N8X59KQ25CMD.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed",
+      "usage": {
+        "completion_tokens": 173157
+      }
+    }
   }
 }
