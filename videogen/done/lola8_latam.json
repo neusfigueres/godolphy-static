@@ -14,5 +14,32 @@
     "resolution": "720p",
     "size": "adaptive",
     "generate_audio": true
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 329,
+      "completed": 1792568891,
+      "cost": 1.737,
+      "created": 1792568562,
+      "credits_cost": 17.37,
+      "estimated_time": 300,
+      "id": "task_01M5EPK4M6SXHN10CVRGQX0Q33",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792655291,
+            "url": [
+              "https://getapib.org/video/9998207431111894-809b3a0a-734a-4357-babe-bb1807515294-video_task_01M5EPK4M6SXHN10CVRGQX0Q33.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed",
+      "usage": {
+        "completion_tokens": 173700
+      }
+    }
   }
 }
