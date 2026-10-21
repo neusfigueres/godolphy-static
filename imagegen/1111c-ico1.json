@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/1111/icons/ico1.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "A single cute glossy 3D icon in Pixar / 3D animated film style, soft studio lighting, rounded shapes, colour palette of violet, lilac and white with one accent colour, centred, isolated on a plain pure white background, no shadow on the background, no text, no letters, no numbers. Three small rounded people figures (customer silhouettes) standing together, the middle one slightly faded and walking away, with a small red alarm clock badge with an exclamation mark floating next to them, meaning clients at risk of leaving.",
+  "size": "1:1",
+  "extra": {
+    "resolution": "1K"
+  },
+  "no_style": true
+}

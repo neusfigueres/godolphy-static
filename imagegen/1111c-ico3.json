@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/1111/icons/ico3.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "A single cute glossy 3D icon in Pixar / 3D animated film style, soft studio lighting, rounded shapes, colour palette of violet, lilac and white with one accent colour, centred, isolated on a plain pure white background, no shadow on the background, no text, no letters, no numbers. A cute small house with a violet roof and a location map pin above it, with a small green euro coin and an upward arrow, meaning home services that increase revenue.",
+  "size": "1:1",
+  "extra": {
+    "resolution": "1K"
+  },
+  "no_style": true
+}

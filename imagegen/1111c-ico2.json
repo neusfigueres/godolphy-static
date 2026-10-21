@@ -1,0 +1,10 @@
+{
+  "out": "imagegen/1111/icons/ico2.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "A single cute glossy 3D icon in Pixar / 3D animated film style, soft studio lighting, rounded shapes, colour palette of violet, lilac and white with one accent colour, centred, isolated on a plain pure white background, no shadow on the background, no text, no letters, no numbers. A small bar chart with three rounded violet bars going down and a red curved arrow pointing downwards, with a small euro coin, meaning services with no profit margin.",
+  "size": "1:1",
+  "extra": {
+    "resolution": "1K"
+  },
+  "no_style": true
+}
