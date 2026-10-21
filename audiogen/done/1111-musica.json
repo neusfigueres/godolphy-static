@@ -1,0 +1,59 @@
+{
+  "type": "music",
+  "out": "imagegen/1111/audio/musica.mp3",
+  "body": {
+    "custom": true,
+    "instrumental": true,
+    "version": "v6",
+    "title": "Godolphy 1111",
+    "duration": 45,
+    "style": "soft magical and uplifting background music for an animated short about a manicurist, gentle chill pop with light plucked synths, warm pads, soft sparkly bells, light beat, hopeful, modern salon vibe, unobtrusive under voice-over, instrumental",
+    "negative_tags": "vocals, singing, epic orchestra, heavy drums, edm drop"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 22,
+      "completed": 1792618305,
+      "cost": 0.05,
+      "created": 1792618283,
+      "credits_cost": 0.5,
+      "estimated_time": 180,
+      "id": "task_01M5G60G3WCBRCFRBBPJ9SVV7B",
+      "progress": 100,
+      "result": {
+        "music": [
+          {
+            "audio_id": "90dca48e-b86f-4c22-b2c2-1a6064dad3bc",
+            "audio_url": "https://getapib.org/audio/9998207381697355-04aa3e7e-a182-4524-8dcf-3af9aaf72933-90dca48e-b86f-4c22-b2c2-1a6064dad3bc.mp3",
+            "created_at": "2026-10-21T21:31:23.980Z",
+            "display_tags": "pop, instrumental",
+            "duration": 46.4,
+            "image_large_url": "https://cdn2.suno.ai/image_large_90dca48e-b86f-4c22-b2c2-1a6064dad3bc.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_90dca48e-b86f-4c22-b2c2-1a6064dad3bc.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, epic orchestra, heavy drums, edm drop",
+            "status": "complete",
+            "tags": "Chill pop with light plucked synths, warm pads, and soft sparkly bells over a light beat; gentle, buoyant pace; instrumental; clean, unobtrusive mix for voice-over.",
+            "title": "Godolphy 1111"
+          },
+          {
+            "audio_id": "d88309ec-635f-4317-95d9-727e3925f12b",
+            "audio_url": "https://getapib.org/audio/9998207381695858-81a4cf92-4ff6-4594-b149-15aa8255c7d5-d88309ec-635f-4317-95d9-727e3925f12b.mp3",
+            "created_at": "2026-10-21T21:31:23.980Z",
+            "display_tags": "chill pop, instrumental",
+            "duration": 44.72,
+            "image_large_url": "https://cdn2.suno.ai/image_large_d88309ec-635f-4317-95d9-727e3925f12b.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_d88309ec-635f-4317-95d9-727e3925f12b.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, epic orchestra, heavy drums, edm drop",
+            "status": "complete",
+            "tags": "Chill pop, instrumental; light plucked synths, warm pads, soft sparkly bells, and a light beat; clean, unobtrusive production tucked beneath voice-over with a modern salon sheen; gentle, unhurried pulse.",
+            "title": "Godolphy 1111"
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
