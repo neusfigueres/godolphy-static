@@ -1,0 +1,14 @@
+{
+  "out": "imagegen/1111/frames3/m2.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Edit of the first reference image: keep exactly the same 3D animated film style, the same character Ana (curly black hair, white t-shirt, black apron, gold hoops), the same beagle puppy with lilac bandana, the same violet digital world background with glowing grid and particles, same framing and camera angle. Only change: inside the big floating frosted glass card above her, there is now a glossy 3D object that looks exactly like the second reference image (same design and colours), floating inside the glass panel and glowing softly, well integrated in the card with violet light reflections. Absolutely no text, no letters, no numbers anywhere. Natural hands with five fingers. Vertical 9:16. Ana looks up at it frowning and thoughtful, arms crossed; the beagle looks up too.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/1111/frames3/n3.png",
+    "imagegen/1111/icons/ico2.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}
