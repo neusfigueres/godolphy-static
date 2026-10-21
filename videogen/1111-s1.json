@@ -1,0 +1,20 @@
+{
+  "out": "imagegen/1111/videos/s1_succio.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame",
+    "last_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/1111/frames2/r5b.png",
+    "imagegen/1111/frames3/n2.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frames. Ana, a young curly-haired manicurist, sits at her manicure table with her hands together; the smartphone lying flat on the table glows with intense violet light. Suddenly the phone screen becomes a magical portal: a swirling vortex of violet and magenta light spirals out of it and sucks Ana in. She is lifted from her chair and pulled head-first into the glowing screen, hair and apron fluttering, surprised and excited; her beagle puppy holds on to the table, ears blown towards the phone, then jumps in after her. The camera follows her through the screen into a magical violet digital world with a glowing grid floor, floating particles and four blank glowing frosted cards, where Ana and the beagle float weightless, amazed. Smooth, fun, magical motion. No text, no letters.",
+  "body": {
+    "duration": 6,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}
