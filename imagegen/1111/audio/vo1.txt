@@ -1,0 +1,3 @@
+  0.00-  3.12  Tienes 5 clientas en riesgo.
+  3.12-  5.80  Hace más de 90 días que no vienen.
+  5.80-  7.84  Recupéralas.

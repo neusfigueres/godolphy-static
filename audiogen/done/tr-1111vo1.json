@@ -1,0 +1,6 @@
+{
+  "type": "transcribe",
+  "file": "imagegen/1111/audio/vo1.mp3",
+  "out": "imagegen/1111/audio/vo1.txt",
+  "language": "es"
+}
