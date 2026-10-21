@@ -1,0 +1,59 @@
+{
+  "type": "music",
+  "out": "imagegen/paco/audio/musica.mp3",
+  "body": {
+    "custom": true,
+    "instrumental": true,
+    "version": "v6",
+    "title": "Paco salon",
+    "duration": 40,
+    "style": "quiet background music for a deadpan comedy sketch in a beauty salon at night, light lounge bossa nova, soft muted guitar, brushed drums, warm upright bass, subtle playful pizzicato accents, slow 90 bpm, relaxed, ironic, unobtrusive under dialogue, instrumental",
+    "negative_tags": "vocals, singing, epic, loud drums, edm, dubstep"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 25,
+      "completed": 1792568685,
+      "cost": 0.05,
+      "created": 1792568660,
+      "credits_cost": 0.5,
+      "estimated_time": 180,
+      "id": "task_01M5EPP422PR9E7216Y7NEFVP5",
+      "progress": 100,
+      "result": {
+        "music": [
+          {
+            "audio_id": "a65a42c2-a2db-41e5-a5d7-d0d10b784e0a",
+            "audio_url": "https://getapib.org/audio/9998207431317351-09d4951e-557b-4fdb-afd0-0d5111082c1a-a65a42c2-a2db-41e5-a5d7-d0d10b784e0a.mp3",
+            "created_at": "2026-10-21T07:44:20.915Z",
+            "display_tags": "Bossa nova, instrumental",
+            "duration": 119.96,
+            "image_large_url": "https://cdn2.suno.ai/image_a65a42c2-a2db-41e5-a5d7-d0d10b784e0a.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_a65a42c2-a2db-41e5-a5d7-d0d10b784e0a.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, epic, loud drums, edm, dubstep",
+            "status": "complete",
+            "tags": "Bossa nova, soft tape saturation, relaxed slow 90 BPM sway, soft muted guitar, brushed drums, warm upright bass and subtle playful pizzicato accents, instrumental.",
+            "title": "Paco salon"
+          },
+          {
+            "audio_id": "3fddb16a-9cf9-4e9e-a861-174d2ff2f846",
+            "audio_url": "https://getapib.org/audio/9998207431315690-3f389b36-b5d9-41b9-b85d-5d62a8a66c40-3fddb16a-9cf9-4e9e-a861-174d2ff2f846.mp3",
+            "created_at": "2026-10-21T07:44:20.915Z",
+            "display_tags": "lounge, bossa nova",
+            "duration": 43.16,
+            "image_large_url": "https://cdn2.suno.ai/image_3fddb16a-9cf9-4e9e-a861-174d2ff2f846.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_3fddb16a-9cf9-4e9e-a861-174d2ff2f846.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, epic, loud drums, edm, dubstep",
+            "status": "complete",
+            "tags": "Light lounge bossa nova, relaxed 90 BPM sway, soft muted guitar, brushed drums, warm upright bass and playful pizzicato accents, warm mono room tone, quiet instrumental under dialogue.",
+            "title": "Paco salon"
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
