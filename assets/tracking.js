@@ -3,6 +3,7 @@
 (function () {
   var GA_ID = 'G-8JZDWMXKD9';
   var META_PIXEL_ID = '1468217345164128'; // Píxel 'Godolphy web' (Godolphy Software LLC)
+  var META_PIXEL_ID_2 = '1116719227671218'; // Píxel 'Godolphy web 2' (portfolio 'Godolphy', cuenta publicitaria de campañas)
   var TIKTOK_PIXEL_ID = 'DB6B743C77UAU0U4EKF0'; // Píxel 'Godolphy web' (TikTok Ads)
   var KEY = 'gd_consent'; // 'granted' | 'denied'
 
@@ -28,6 +29,7 @@
     if (!META_PIXEL_ID || window.fbq) return;
     !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', META_PIXEL_ID);
+    if (META_PIXEL_ID_2) fbq('init', META_PIXEL_ID_2);
     fbq('track', 'PageView');
   }
 
