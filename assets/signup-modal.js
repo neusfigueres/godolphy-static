@@ -156,6 +156,13 @@
   }
 
   window.gdOpenSignup = open;
+  // Enlace directo: cualquier página con ?alta=1 abre el modal al cargar (las UTM de la URL se conservan)
+  try {
+    if (new URLSearchParams(location.search).get('alta') === '1') {
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { open(); });
+      else open();
+    }
+  } catch (e) {}
   document.addEventListener('click', function (e) {
     var t = e.target && e.target.closest && e.target.closest('[data-gd-signup]');
     if (t) open(e);
