@@ -1,0 +1,20 @@
+{
+  "out": "imagegen/1111/videos/s3_tornada.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame",
+    "last_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/1111/frames3/n3.png",
+    "imagegen/1111/frames3/n4.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frames. Inside the violet digital world Ana, pointing at a glowing blank card, smiles with determination; then a swirl of violet light spins around her and her beagle and they are shot back out of the smartphone screen into her bright nail salon, landing softly back in her chair at the manicure table with a few violet sparkles floating around. She holds the smartphone against her chest, looks at the camera with a big confident satisfied smile, winks and makes an OK sign; the beagle sits on the table edge wagging its tail. Smooth, fun, magical motion. No text, no letters.",
+  "body": {
+    "duration": 5,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}

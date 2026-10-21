@@ -1,0 +1,20 @@
+{
+  "out": "imagegen/1111/videos/s2_dins.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame",
+    "last_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/1111/frames3/n2.png",
+    "imagegen/1111/frames3/n3.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frames. Inside a magical violet digital world with a glowing grid floor and floating particles, Ana, a young curly-haired manicurist, and her beagle puppy float weightless among four large blank glowing frosted glass cards. The cards float gently and stay mostly in place. Ana looks at the cards one by one, curious and amazed, then the camera slowly and smoothly moves closer as she turns towards one big card in front of her, points at it with one finger and nods with a determined, motivated smile; the beagle floats beside her looking at the card. Slow, calm camera movement, gentle floating motion. The cards remain completely blank: no text, no letters, no numbers.",
+  "body": {
+    "duration": 8,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}
