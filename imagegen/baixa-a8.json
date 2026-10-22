@@ -1,0 +1,13 @@
+{
+  "out": "imagegen/baixa/a8.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "3D animated film style, exactly the same art style, rendering and colors as the first reference image. Keep exactly the same character ANA: young woman, black curly hair in a low ponytail, white t-shirt, black apron, fine tattoos, gold hoop earrings; and her beagle puppy with a lilac bandana. Setting: the same modern bright nail salon as the second reference image (warm light, lilac/violet accents, nail polish shelves, plants), now with a reception desk at the entrance. Vertical 9:16, cinematic. No text, no numbers, no letters, no logos, no watermark, natural hands with five fingers. A different character: a friendly ordinary woman client in her thirties (short brown hair, casual beige sweater) sitting on a sofa at home in the morning with a cup of tea, holding her smartphone up with the screen facing the camera (plain bright white rectangle), she smiles pleasantly surprised. Same 3D animated film style and warm lighting. The phone screen is large and clearly visible.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/refs/ana_personatge_ref.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}
