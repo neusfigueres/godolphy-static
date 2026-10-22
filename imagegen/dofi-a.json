@@ -1,0 +1,7 @@
+{
+ "out": "images/mascota/dofi-a.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Original 3D mascot character design, Pixar-style animated feature film quality, full body, three-quarter view, floating slightly above the ground with a soft shadow below, plain light cream studio background, soft studio lighting. The character is DOFI: a small friendly ROBOT DOLPHIN, cute, warm and approachable, modern tech. Brand colors: violet-to-purple gradient (#6C3BE0 to #A97BFF) combined with white. No text, no letters, no logos. Smooth rounded glossy body: white ceramic-like panels with the violet gradient on the back, dorsal fin and tail; subtle panel seams and small chrome joints at the fins; face is a dark glass visor screen with big glowing cyan-white LED eyes and a small happy LED smile; tiny glowing antenna on the head.",
+ "size": "1:1",
+ "no_style": true
+}
