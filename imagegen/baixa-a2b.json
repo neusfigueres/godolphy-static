@@ -1,0 +1,13 @@
+{
+  "out": "imagegen/baixa/a2b.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Edit of the reference image: keep exactly the same character Ana, the beagle, the salon, reception desk, framing, lighting and 3D animated film style. No text, no letters, no logos, natural hands with five fingers. Vertical 9:16. Only change: Ana now holds her smartphone in front of her chest with the screen facing HER (we only see the back of the phone, a plain lilac phone case, no screen visible to the camera), she looks down at it with a shocked, worried face, eyebrows raised, mouth open; the beagle looks up at her.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/baixa/a2.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}

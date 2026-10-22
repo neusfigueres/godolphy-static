@@ -1,0 +1,13 @@
+{
+  "out": "imagegen/baixa/a3b.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Edit of the reference image: keep exactly the same character Ana, the beagle, the salon, reception desk, framing, lighting and 3D animated film style. No text, no letters, no logos, natural hands with five fingers. Vertical 9:16. Only change: the white all-in-one desktop computer on the reception desk is now turned so that its screen faces Ana and its plain white BACK faces the camera (we see only the smooth white rear of the monitor with its stand, no screen visible); Ana stands behind the desk holding her head with one hand, stressed, looking at the screen; the beagle peeks over the desk.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/baixa/a3.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}
