@@ -1,0 +1,59 @@
+{
+  "type": "music",
+  "out": "imagegen/1111/audio/emo1.mp3",
+  "body": {
+    "custom": true,
+    "instrumental": true,
+    "version": "v6",
+    "title": "Godolphy wish",
+    "duration": 40,
+    "style": "emotional uplifting cinematic electronic pop, the moment a dream comes true, starts with a magical sparkling rise then a confident driving beat at 118 bpm, warm synth pads, plucked arpeggios, soaring hopeful melody, goosebumps, modern, instrumental",
+    "negative_tags": "vocals, singing, lo-fi, sleepy, dark, horror"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 31,
+      "completed": 1792678402,
+      "cost": 0.05,
+      "created": 1792678371,
+      "credits_cost": 0.5,
+      "estimated_time": 180,
+      "id": "task_01M5HZA8165BNT7FCFK3Z7TTN2",
+      "progress": 100,
+      "result": {
+        "music": [
+          {
+            "audio_id": "a9a8fc50-053e-4511-9fff-19a24f5930f9",
+            "audio_url": "https://getapib.org/audio/9998207321600590-dc395c8d-4070-46d2-a520-2add15e49838-a9a8fc50-053e-4511-9fff-19a24f5930f9.mp3",
+            "created_at": "2026-10-22T14:12:51.873Z",
+            "display_tags": "Electronic pop",
+            "duration": 40,
+            "image_large_url": "https://cdn2.suno.ai/image_large_a9a8fc50-053e-4511-9fff-19a24f5930f9.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_a9a8fc50-053e-4511-9fff-19a24f5930f9.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, lo-fi, sleepy, dark, horror",
+            "status": "complete",
+            "tags": "Electronic pop, modern production opens with a magical sparkling rise into a confident driving 118 bpm beat, warm synth pads and plucked arpeggios carry a soaring hopeful melody; emotional, uplifting, goosebumps.",
+            "title": "Godolphy wish"
+          },
+          {
+            "audio_id": "a87ed8a3-81ef-4a41-a981-e2d5fa0eafce",
+            "audio_url": "https://getapib.org/audio/9998207321598467-317417cb-d9b6-4b01-8a7e-c785c0b4430a-a87ed8a3-81ef-4a41-a981-e2d5fa0eafce.mp3",
+            "created_at": "2026-10-22T14:12:51.873Z",
+            "display_tags": "Electronic pop",
+            "duration": 41.92,
+            "image_large_url": "https://cdn2.suno.ai/image_large_a87ed8a3-81ef-4a41-a981-e2d5fa0eafce.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_a87ed8a3-81ef-4a41-a981-e2d5fa0eafce.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, lo-fi, sleepy, dark, horror",
+            "status": "complete",
+            "tags": "Electronic pop, a magical sparkling rise opens into a confident driving beat at 118 bpm; warm synth pads support plucked arpeggios as a soaring hopeful melody builds the lift. Modern production gives it a polished, wide feel, with a chorus that opens fuller around the lead; emotional uplifting, instrumental.",
+            "title": "Godolphy wish"
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

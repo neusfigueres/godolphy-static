@@ -1,0 +1,59 @@
+{
+  "type": "music",
+  "out": "imagegen/1111/audio/emo2.mp3",
+  "body": {
+    "custom": true,
+    "instrumental": true,
+    "version": "v6",
+    "title": "Godolphy wish",
+    "duration": 40,
+    "style": "inspiring feel-good indie electronic, euphoric and emotional, bright piano chords and claps, steady four-on-the-floor beat 122 bpm, uplifting build, happy tears, modern advert music, instrumental",
+    "negative_tags": "vocals, singing, lo-fi, sleepy, dark, horror"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 23,
+      "completed": 1792678432,
+      "cost": 0.05,
+      "created": 1792678409,
+      "credits_cost": 0.5,
+      "estimated_time": 180,
+      "id": "task_01M5HZBDJPQ7SH4Y69EJ1Q9S8J",
+      "progress": 100,
+      "result": {
+        "music": [
+          {
+            "audio_id": "0d743ae1-94d2-4611-a3e9-d1f4173b860f",
+            "audio_url": "https://getapib.org/audio/9998207321570446-6599dae3-dc57-4a38-90da-dedffdabef39-0d743ae1-94d2-4611-a3e9-d1f4173b860f.mp3",
+            "created_at": "2026-10-22T14:13:30.596Z",
+            "display_tags": "indie electronic, instrumental",
+            "duration": 39.96,
+            "image_large_url": "https://cdn2.suno.ai/image_large_0d743ae1-94d2-4611-a3e9-d1f4173b860f.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_0d743ae1-94d2-4611-a3e9-d1f4173b860f.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, lo-fi, sleepy, dark, horror",
+            "status": "complete",
+            "tags": "Indie electronic, instrumental; bright piano chords and claps drive a euphoric and emotional uplifting build, with a modern advert music finish; steady four-on-the-floor at 122 bpm, carrying happy tears.",
+            "title": "Godolphy wish"
+          },
+          {
+            "audio_id": "90cf4c50-f9f0-44be-b163-e0b4241bb861",
+            "audio_url": "https://getapib.org/audio/9998207321568900-fc20f25e-da94-46ce-bcc5-d7e61c9b08b6-90cf4c50-f9f0-44be-b163-e0b4241bb861.mp3",
+            "created_at": "2026-10-22T14:13:30.596Z",
+            "display_tags": "indie electronic, instrumental",
+            "duration": 39.6,
+            "image_large_url": "https://cdn2.suno.ai/image_large_90cf4c50-f9f0-44be-b163-e0b4241bb861.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_90cf4c50-f9f0-44be-b163-e0b4241bb861.jpeg",
+            "lyrics": "",
+            "negative_tags": "vocals, singing, lo-fi, sleepy, dark, horror",
+            "status": "complete",
+            "tags": "Indie electronic, instrumental; euphoric and emotional, with an uplifting build and happy tears, steady four-on-the-floor beat at 122 bpm; modern advert music production opens with bright piano chords and claps, then expands into a full, buoyant final refrain.",
+            "title": "Godolphy wish"
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
