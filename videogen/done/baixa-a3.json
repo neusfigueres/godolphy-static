@@ -1,0 +1,45 @@
+{
+  "out": "imagegen/baixa/videos/a3.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a3.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. Ana stares at the computer screen, stressed, rubbing her forehead and sighing; the beagle peeks worried over the desk. Static camera, the computer screen stays plain white and still. No text, no letters.",
+  "body": {
+    "duration": 4,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 164,
+      "completed": 1792696118,
+      "cost": 0.873,
+      "created": 1792695954,
+      "credits_cost": 8.73,
+      "estimated_time": 300,
+      "id": "task_01M5JG2VE9PDX73PWHHQ752S1W",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792782518,
+            "url": [
+              "https://getapib.org/video/9998207303884688-332136e6-a8fe-42e4-aa92-5d826052c62a-video_task_01M5JG2VE9PDX73PWHHQ752S1W.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed",
+      "usage": {
+        "completion_tokens": 87300
+      }
+    }
+  }
+}

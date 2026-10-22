@@ -1,0 +1,45 @@
+{
+  "out": "imagegen/baixa/videos/a6.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a6.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. Over-the-shoulder shot: Ana calmly moves the mouse and clicks, focused, relaxed breathing; very slow subtle camera push-in towards the computer screen. The screen stays plain white, perfectly still and fully visible. No text, no letters.",
+  "body": {
+    "duration": 6,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 129,
+      "completed": 1792696252,
+      "cost": 1.305,
+      "created": 1792696123,
+      "credits_cost": 13.049999999999999,
+      "estimated_time": 300,
+      "id": "task_01M5JG8086JNRN72AAVB9STCEG",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792782652,
+            "url": [
+              "https://getapib.org/video/9998207303750530-50351116-d429-4691-abb1-54b40dace302-video_task_01M5JG8086JNRN72AAVB9STCEG.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed",
+      "usage": {
+        "completion_tokens": 130500
+      }
+    }
+  }
+}

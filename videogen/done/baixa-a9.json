@@ -1,0 +1,45 @@
+{
+  "out": "imagegen/baixa/videos/a9.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a9.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. Ana leans back relaxed, sips her coffee and smiles with satisfaction; the beagle sleeps peacefully, breathing slowly, one ear twitching. Calm morning light, gentle camera. No text, no letters.",
+  "body": {
+    "duration": 4,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 148,
+      "completed": 1792696408,
+      "cost": 0.873,
+      "created": 1792696260,
+      "credits_cost": 8.73,
+      "estimated_time": 300,
+      "id": "task_01M5JGC5V74JHTNEA623F2VGXE",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792782808,
+            "url": [
+              "https://getapib.org/video/9998207303595080-6937e34b-1501-412d-bf3a-fd1372ec54eb-video_task_01M5JGC5V74JHTNEA623F2VGXE.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed",
+      "usage": {
+        "completion_tokens": 87300
+      }
+    }
+  }
+}

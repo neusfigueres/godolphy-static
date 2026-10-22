@@ -1,0 +1,45 @@
+{
+  "out": "imagegen/baixa/videos/a8.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a8.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. The woman on the sofa looks at her phone, reads, smiles happily and taps the screen with her thumb, then sips her tea, relieved. She keeps the phone steady with the screen facing the camera, the screen stays plain white. No text, no letters.",
+  "body": {
+    "duration": 5,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 169,
+      "completed": 1792696329,
+      "cost": 1.089,
+      "created": 1792696160,
+      "credits_cost": 10.89,
+      "estimated_time": 300,
+      "id": "task_01M5JG93VJD6S19PDRC7D7HNSQ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792782729,
+            "url": [
+              "https://getapib.org/video/9998207303673456-c284a3d1-4755-44e1-b609-c0c4aac1f0e2-video_task_01M5JG93VJD6S19PDRC7D7HNSQ.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed",
+      "usage": {
+        "completion_tokens": 108900
+      }
+    }
+  }
+}

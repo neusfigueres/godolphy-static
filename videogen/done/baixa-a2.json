@@ -1,0 +1,45 @@
+{
+  "out": "imagegen/baixa/videos/a2.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a2.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. Ana's phone vibrates; she looks at it and her face changes to shock and worry, she slowly lowers her shoulders; the beagle tilts its head. She keeps the phone steady with the screen facing the camera, the screen stays plain white. No text, no letters.",
+  "body": {
+    "duration": 4,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 165,
+      "completed": 1792696119,
+      "cost": 0.873,
+      "created": 1792695954,
+      "credits_cost": 8.73,
+      "estimated_time": 300,
+      "id": "task_01M5JG2V5E45BJ585HD90N201E",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792782519,
+            "url": [
+              "https://getapib.org/video/9998207303883538-bdb97dd3-0327-46ce-ab5a-b9b362e41103-video_task_01M5JG2V5E45BJ585HD90N201E.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed",
+      "usage": {
+        "completion_tokens": 87300
+      }
+    }
+  }
+}
