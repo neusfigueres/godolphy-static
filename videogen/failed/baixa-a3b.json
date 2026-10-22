@@ -14,5 +14,6 @@
     "resolution": "720p",
     "size": "adaptive",
     "generate_audio": false
-  }
+  },
+  "error": "HTTP 402: {\"error\":{\"code\":\"payment_required\",\"message\":\"Insufficient account balance. Please top up and try again.\",\"param\":\"\",\"type\":\"payment_required\"}}"
 }
