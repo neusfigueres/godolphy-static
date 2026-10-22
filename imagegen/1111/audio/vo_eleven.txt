@@ -1,0 +1,8 @@
+  0.00-  2.24  Tienes cinco clientas en riesgo.
+  2.24-  4.56  Hace más de 90 días que no vienen.
+  4.56-  5.96  Recupéralas.
+  5.96-  8.24  Dos servicios no te dejan margen.
+  8.24- 10.52  Sube el precio o baja el tiempo.
+ 10.52- 14.04  Activa Servicios a domicilio y aumenta tu facturación.
+ 14.04- 17.84  Añade extras a tus servicios y saca más de cada cita.
+ 17.84- 22.16  GoDolfi, la IA que te ayuda con tu negocio.
