@@ -1,0 +1,13 @@
+{
+  "out": "imagegen/baixa/a8.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "3D animated film style like a Pixar movie, warm soft lighting, vertical 9:16. A friendly ordinary woman in her thirties (short brown bob hair, casual beige knit sweater) sits alone on the sofa in her cosy living room at home in the morning (window light, plants, cream and wood tones), holding a cup of tea in one hand and her smartphone in the other, the phone held up with its screen facing the camera, the screen is a plain bright white rectangle, large and clearly visible in the upper half of the frame; she smiles, pleasantly surprised. She is alone: no other people, no animals. No text, no letters, no logos, natural hands with five fingers.",
+  "size": "9:16",
+  "ref_files": [
+    "imagegen/baixa/a1.png"
+  ],
+  "extra": {
+    "resolution": "2K"
+  },
+  "no_style": true
+}
