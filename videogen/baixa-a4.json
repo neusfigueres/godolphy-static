@@ -1,0 +1,18 @@
+{
+  "out": "imagegen/baixa/videos/a4.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a4.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. Ana talks on the phone, stressed, shaking her head, crossing out a line in her notebook, then hangs up and sighs dramatically; the beagle covers its ears with its paws, comically. Static camera. No text, no letters.",
+  "body": {
+    "duration": 5,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "out": "imagegen/baixa/videos/a1.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a1.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. Ana walks into her salon in the morning, smiling, sips her coffee and switches on the lights; the beagle trots happily beside her wagging its tail. Gentle camera follow. No text, no letters.",
+  "body": {
+    "duration": 4,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}

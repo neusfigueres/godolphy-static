@@ -1,0 +1,18 @@
+{
+  "out": "imagegen/baixa/videos/a8.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a8.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. The woman on the sofa looks at her phone, reads, smiles happily and taps the screen with her thumb, then sips her tea, relieved. She keeps the phone steady with the screen facing the camera, the screen stays plain white. No text, no letters.",
+  "body": {
+    "duration": 5,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}
