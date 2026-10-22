@@ -1,0 +1,39 @@
+{
+  "out": "imagegen/baixa/videos/a2b.mp4",
+  "model": "kling-v3",
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a2b.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. No text, no letters. Ana reads the message on her phone, her face changes from surprise to worry, she sighs and her shoulders drop; the beagle tilts its head. The back of the phone faces the camera.",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "negative_prompt": "text, letters, morphing, distorted hands, extra fingers",
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 97,
+      "completed": 1792705126,
+      "cost": 0.448,
+      "created": 1792705029,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M5JRQS89HJ31Z9EWP4MKDJAX",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792791526,
+            "url": [
+              "https://getapib.org/video/9998207294874090-41ca56b3-85d5-4ca6-8f3d-45e052cc9200-video_task_01M5JRQS89HJ31Z9EWP4MKDJAX.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

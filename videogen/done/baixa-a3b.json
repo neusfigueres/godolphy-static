@@ -1,0 +1,39 @@
+{
+  "out": "imagegen/baixa/videos/a3b.mp4",
+  "model": "kling-v3",
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a3b.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. No text, no letters. Ana stares at the computer screen (we only see the back of the monitor), stressed, rubbing her forehead and sighing; the beagle peeks worried over the desk. Static camera.",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "negative_prompt": "text, letters, morphing, distorted hands, extra fingers",
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 86,
+      "completed": 1792705115,
+      "cost": 0.448,
+      "created": 1792705029,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M5JRQS8EFY57XB6Q5YB9A4X4",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1792791515,
+            "url": [
+              "https://getapib.org/video/9998207294884426-d184dba6-247b-479d-a653-220c69092553-video_task_01M5JRQS8EFY57XB6Q5YB9A4X4.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
