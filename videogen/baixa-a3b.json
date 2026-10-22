@@ -1,19 +1,15 @@
 {
   "out": "imagegen/baixa/videos/a3b.mp4",
-  "model": "seedance-2.5",
-  "roles": [
-    "first_frame"
-  ],
+  "model": "kling-v3",
   "poll": 600,
   "frames": [
     "imagegen/baixa/a3b.png"
   ],
   "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. No text, no letters. Ana stares at the computer screen (we only see the back of the monitor), stressed, rubbing her forehead and sighing; the beagle peeks worried over the desk. Static camera.",
   "body": {
-    "duration": 4,
-    "resolution": "720p",
-    "size": "adaptive",
-    "generate_audio": false
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
   },
-  "error": "HTTP 402: {\"error\":{\"code\":\"payment_required\",\"message\":\"Insufficient account balance. Please top up and try again.\",\"param\":\"\",\"type\":\"payment_required\"}}"
+  "negative_prompt": "text, letters, morphing, distorted hands, extra fingers"
 }
