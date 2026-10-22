@@ -5,7 +5,7 @@ IMG = 'https://godolphy.com/img/email/dashboard-funnel/'
 LOGO = 'https://godolphy.com/wp-images/logo-blanco.png'
 H = "font-family:'Gabarito','Plus Jakarta Sans','Segoe UI',Helvetica,Arial,sans-serif;"
 B = "font-family:'Plus Jakarta Sans','Segoe UI',Helvetica,Arial,sans-serif;"
-SIGNUP = os.environ.get('SIGNUP_URL', 'https://app.godolphy.com/')  # pendiente de confirmar por Neus
+SIGNUP = os.environ.get('SIGNUP_URL', 'https://godolphy.com/empieza/')
 
 def utm(c): return f'utm_source=email&utm_medium=campaign&utm_campaign=lista-espera-lanzamiento&utm_content={c}'
 def u(url, c): return url + ('&' if '?' in url else '?') + utm(c)
