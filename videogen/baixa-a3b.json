@@ -1,0 +1,18 @@
+{
+  "out": "imagegen/baixa/videos/a3b.mp4",
+  "model": "seedance-2.5",
+  "roles": [
+    "first_frame"
+  ],
+  "poll": 600,
+  "frames": [
+    "imagegen/baixa/a3b.png"
+  ],
+  "prompt": "3D animated film style, same characters and look as the frame. Smooth natural motion, no morphing. No text, no letters. Ana stares at the computer screen (we only see the back of the monitor), stressed, rubbing her forehead and sighing; the beagle peeks worried over the desk. Static camera.",
+  "body": {
+    "duration": 4,
+    "resolution": "720p",
+    "size": "adaptive",
+    "generate_audio": false
+  }
+}
