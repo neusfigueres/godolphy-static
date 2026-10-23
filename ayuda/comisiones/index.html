@@ -146,9 +146,9 @@ a.ay-card:hover{border-color:var(--lila);box-shadow:0 6px 20px rgba(99,28,255,.1
 @media(max-width:960px){.ay-wrap{grid-template-columns:1fr;gap:32px}.ay-side{position:static;max-height:none;order:2;border-top:1px solid var(--line);padding-top:24px}}
 @media(max-width:768px){.ay-hero{padding:104px 20px 40px}.ay-hero h1{font-size:30px}.ay-hero p{font-size:15px}.ay-wrap,.ay-index-wrap{padding:36px 20px 64px}.ay-art h2{font-size:24px}.tip{padding:24px 20px 10px}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Comisiones de las profesionales", "description": "Cómo configurar y consultar las comisiones de cada profesional en Godolphy: porcentaje fijo o por tramos, qué genera comisión, el informe mensual y cómo exportarlo para la nómina.", "dateModified": "2026-10-19", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/comisiones/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Comisiones de las profesionales", "description": "Cómo configurar y consultar las comisiones de cada profesional en Godolphy: porcentaje fijo o por tramos, qué genera comisión, el informe mensual y cómo exportarlo para la nómina.", "dateModified": "2026-10-23", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/comisiones/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Centro de ayuda", "item": "https://www.godolphy.com/ayuda/"}, {"@type": "ListItem", "position": 2, "name": "Comisiones de las profesionales", "item": "https://www.godolphy.com/ayuda/comisiones/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Una profesional sale con 0 € de comisión", "acceptedAnswer": {"@type": "Answer", "text": "No tiene la comisión configurada. En la pestaña Configuración, pulsa Editar junto a su nombre."}}, {"@type": "Question", "name": "La comisión de una cita de este mes no sale", "acceptedAnswer": {"@type": "Answer", "text": "La comisión cuenta cuando se cobra la cita, no cuando se hace. Si aún no está cobrada, saldrá el mes en que la cobres."}}, {"@type": "Question", "name": "He cambiado el porcentaje y los meses anteriores no cambian", "acceptedAnswer": {"@type": "Answer", "text": "Es normal: los cambios se aplican desde el mes actual, para que lo ya calculado no se mueva."}}, {"@type": "Question", "name": "Mi recepcionista no ve las comisiones", "acceptedAnswer": {"@type": "Answer", "text": "Es normal: solo las ve la propietaria del salón, porque son datos de sueldo."}}, {"@type": "Question", "name": "¿Puedo poner un porcentaje distinto para cada servicio?", "acceptedAnswer": {"@type": "Answer", "text": "Por ahora no. La comisión se configura por profesional."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Una profesional sale con 0 € de comisión", "acceptedAnswer": {"@type": "Answer", "text": "No tiene la comisión configurada. En la pestaña Configuración, pulsa Editar junto a su nombre."}}, {"@type": "Question", "name": "La comisión de una cita no sale", "acceptedAnswer": {"@type": "Answer", "text": "Mira si la cita está completada (lo hace sola al día siguiente) y si tiene el cobro apuntado en el panel. Las citas canceladas y las no presentadas no generan comisión."}}, {"@type": "Question", "name": "He hecho una devolución este mes y ha cambiado la comisión de un mes anterior", "acceptedAnswer": {"@type": "Answer", "text": "Es normal: la devolución resta en el mes de la cita a la que corresponde."}}, {"@type": "Question", "name": "He cambiado el porcentaje y los meses anteriores no cambian", "acceptedAnswer": {"@type": "Answer", "text": "Es normal: los cambios se aplican desde el mes actual, para que lo ya calculado no se mueva."}}, {"@type": "Question", "name": "Mi recepcionista no ve las comisiones", "acceptedAnswer": {"@type": "Answer", "text": "Es normal: solo las ve la propietaria del salón, porque son datos de sueldo."}}, {"@type": "Question", "name": "¿Puedo poner un porcentaje distinto para cada servicio?", "acceptedAnswer": {"@type": "Answer", "text": "Por ahora no. La comisión se configura por profesional."}}]}</script>
 </head>
 <body style="overflow-x:hidden">
 
@@ -199,8 +199,8 @@ function toggleMobileNav(){
 <section class="ay-hero"><div class="ay-hero-in">
 <p class="ay-crumbs"><a href="/ayuda/">Centro de ayuda</a> › Clientas y reservas</p>
 <h1>Comisiones de las profesionales</h1>
-<p>Godolphy calcula cada mes lo que gana cada profesional según lo cobrado de sus citas, con un porcentaje fijo o por tramos.</p>
-<p class="ay-meta">Lectura: 6 min · Actualizado el 19 de octubre de 2026</p>
+<p>Godolphy calcula cada mes lo que gana cada profesional según lo cobrado de sus citas completadas, con un porcentaje fijo o por tramos.</p>
+<p class="ay-meta">Lectura: 6 min · Actualizado el 23 de octubre de 2026</p>
 </div></section>
 <div class="ay-wrap">
 <nav class="ay-side" aria-label="Índice del centro de ayuda">
@@ -280,14 +280,26 @@ function toggleMobileNav(){
 <p>Las comisiones están en los planes <strong>Pro</strong> y <strong>Max</strong>, y también durante la <a href="/ayuda/prueba-gratuita/">prueba gratuita</a>. En el plan Solo verás un aviso de que no están incluidas.</p>
 
 <h2 id="como-se-calcula">Cómo se calcula</h2>
-<p>Las reglas son siempre las mismas:</p>
 <ul>
-  <li>Se calcula sobre lo que se ha <strong>cobrado</strong> de las citas de cada profesional, <strong>sin IVA</strong>.</li>
-  <li>Cuenta el <strong>mes en que se cobra</strong>, no el mes de la cita.</li>
-  <li>Las <strong>devoluciones</strong> restan en el mes en que se hacen.</li>
-  <li>Con un <a href="/ayuda/cupones/">cupón</a>, se calcula sobre el precio ya descontado.</li>
-  <li>Lo que se paga con <strong>tarjeta regalo</strong> sí genera comisión. La <strong>venta</strong> de una tarjeta regalo no genera comisión.</li>
+  <li>Solo generan comisión las citas <strong>completadas</strong>. Las canceladas y las no presentadas no generan comisión, aunque se hayan cobrado.</li>
+  <li>La comisión cuenta en el <strong>mes de la cita</strong>, no en el mes del cobro.</li>
+  <li>La base es lo que se ha <strong>cobrado</strong> de la cita, <strong>sin IVA</strong>, menos las <strong>devoluciones</strong>. Cuentan todos los cobros de la cita (depósito, resto…), aunque se hagan en días o meses distintos.</li>
   <li>La comisión es de la <strong>profesional asignada a la cita</strong>, no de quien la ha cobrado.</li>
+</ul>
+
+<div class="callout">
+  <strong>Ejemplo</strong>
+  <p>Una cita del 28 de octubre tiene un depósito de 30 € el 10 de octubre y se cobran 70 € el mismo día de la cita. Todo cuenta en octubre: 100 €. Si el 5 de noviembre devuelves 10 €, la base de octubre pasa a 90 €.</p>
+</div>
+
+<h3 id="completada">Cuándo una cita queda completada</h3>
+<p>Una cita queda completada sola al día siguiente. Si la marcas como no presentada dentro de los 7 días que tienes para corregirlo, deja de generar comisión.</p>
+
+<h3 id="otros-casos">Cupones, tarjetas regalo y bonos</h3>
+<ul>
+  <li>Con un <a href="/ayuda/cupones/">cupón</a>, se calcula sobre el precio ya descontado.</li>
+  <li>Lo que se paga con <strong>tarjeta regalo</strong> o con una <strong>sesión de bono</strong> sí genera comisión. En el bono, sobre el <a href="/ayuda/crear-y-vender-bonos/#valor">valor de la sesión</a>.</li>
+  <li>La <strong>venta</strong> de tarjetas regalo y de bonos no genera comisión, porque no son citas.</li>
 </ul>
 
 <h2 id="configurar">Configurar las comisiones</h2>
@@ -330,11 +342,19 @@ function toggleMobileNav(){
   <li>Para cada profesional: la <strong>Base sin IVA</strong>, su comisión y el sistema que se le ha aplicado. Si eliges varios meses, lo verás mes a mes.</li>
 </ul>
 <figure class="shot has-img"><img src="/ayuda/img/comisiones-informe.jpg" alt="Ventas → Comisiones → Informe" loading="lazy"/><figcaption>Ventas → Comisiones → Informe</figcaption></figure>
-<p>Pulsa <strong>Ver detalle</strong> para ver los cobros que generan comisión: fecha, cliente, conceptos y base sin IVA. Las devoluciones salen en negativo.</p>
-<figure class="shot has-img"><img src="/ayuda/img/comisiones-detalle.jpg" alt="Ver detalle: los cobros de una profesional" loading="lazy"/><figcaption>Ver detalle: los cobros de una profesional</figcaption></figure>
+<div class="callout">
+  <strong>«Hay N citas completadas sin cobrar»</strong>
+  <p>Este aviso sale cuando una cita está completada pero no tiene ningún cobro apuntado en Godolphy. Por ejemplo, si se cobró con el TPV del banco y no se apuntó en la cita. Esas citas no generan comisión hasta que apuntes el cobro: lo explicamos en <a href="/ayuda/cobrar-con-tarjeta/#registrar">Apuntar en Godolphy un cobro hecho en el centro</a>.</p>
+</div>
+<p>Pulsa <strong>Ver detalle</strong> para ver una línea por cita: fecha de la cita, cliente, servicios y base sin IVA. Las citas sin cobrar llevan la etiqueta <strong>Completada sin cobrar</strong>.</p>
+<figure class="shot has-img"><img src="/ayuda/img/comisiones-detalle.jpg" alt="Ver detalle: una línea por cita, con las citas sin cobrar marcadas" loading="lazy"/><figcaption>Ver detalle: una línea por cita, con las citas sin cobrar marcadas</figcaption></figure>
 
 <h3 id="exportar">Exportar para la nómina</h3>
-<p>Con <strong>Exportar</strong> descargas el informe en CSV, que se abre con Excel. También puedes exportar el detalle de cada profesional. Así lo pasas a la nómina o a la factura de una profesional freelance.</p>
+<p>Con <strong>Exportar</strong> descargas el informe en CSV, que se abre con Excel. Así lo pasas a la nómina o a la factura de una profesional freelance.</p>
+<ul>
+  <li><strong>El informe</strong>: profesional, mes, citas completadas, citas sin cobrar, cobrado sin IVA, devoluciones, base, comisión y sistema.</li>
+  <li><strong>El detalle de cada profesional</strong>: fecha de la cita, cliente, servicios, cobros, base sin IVA y una nota si la cita está sin cobrar.</li>
+</ul>
 
 <h2 id="mis-comisiones">Lo que ve cada profesional</h2>
 <p>Cada profesional entra en <strong>Mis comisiones</strong> y ve lo que ha generado según lo cobrado de sus citas: su comisión y sus cobros. No ve los datos de nadie más.</p>
@@ -343,7 +363,9 @@ function toggleMobileNav(){
 <div class="tip">
   <span class="tip-label">Consejo</span>
   <h2 id="consejo">Que las comisiones motiven, no que generen dudas</h2>
-  <p><strong>Explica las reglas a tu equipo desde el principio.</strong> Sobre lo cobrado, sin IVA y en el mes del cobro. Con <strong>Mis comisiones</strong>, cada profesional lo comprueba sin preguntarte.</p>
+  <p><strong>Explica las reglas a tu equipo desde el principio.</strong> Sobre lo cobrado de las citas completadas, sin IVA y en el mes de la cita. Con <strong>Mis comisiones</strong>, cada profesional lo comprueba sin preguntarte.</p>
+  <p><strong>Apunta siempre el cobro de cada cita en el panel</strong>, también lo cobrado con el TPV del banco o en efectivo. Si no, la cita no genera comisión.</p>
+  <p><strong>Para compensar a alguien sin restar comisión a la profesional</strong>, puedes darle un cupón de descuento para otra visita en lugar de hacer una devolución. Ten en cuenta que el cupón también baja la base de la cita en la que se usa.</p>
   <p><strong>Los tramos premian a quien más factura.</strong> Un porcentaje un poco más alto a partir de cierto importe anima a llenar la agenda, sin subir el coste de los meses flojos.</p>
 </div>
 
@@ -351,8 +373,10 @@ function toggleMobileNav(){
 <dl class="faq">
   <dt>Una profesional sale con 0 € de comisión</dt>
   <dd>No tiene la comisión configurada. En la pestaña <strong>Configuración</strong>, pulsa <strong>Editar</strong> junto a su nombre.</dd>
-  <dt>La comisión de una cita de este mes no sale</dt>
-  <dd>La comisión cuenta cuando se cobra la cita, no cuando se hace. Si aún no está cobrada, saldrá el mes en que la cobres.</dd>
+  <dt>La comisión de una cita no sale</dt>
+  <dd>Mira si la cita está completada (lo hace sola al día siguiente) y si tiene el cobro apuntado en el panel. Las citas canceladas y las no presentadas no generan comisión.</dd>
+  <dt>He hecho una devolución este mes y ha cambiado la comisión de un mes anterior</dt>
+  <dd>Es normal: la devolución resta en el mes de la cita a la que corresponde.</dd>
   <dt>He cambiado el porcentaje y los meses anteriores no cambian</dt>
   <dd>Es normal: los cambios se aplican desde el mes actual, para que lo ya calculado no se mueva.</dd>
   <dt>Mi recepcionista no ve las comisiones</dt>
