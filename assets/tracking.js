@@ -65,7 +65,7 @@
   function decorateDashboardLinks() {
     var u = window.gdGetUtm();
     if (!Object.keys(u).length) return;
-    var links = document.querySelectorAll('a[href*="dashboard.godolphy.com"]');
+    var links = document.querySelectorAll('a[href*="dashboard.godolphy.com"], a[href*="app.godolphy.com/auth/sign-up"]');
     for (var i = 0; i < links.length; i++) {
       try {
         var url = new URL(links[i].href);

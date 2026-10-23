@@ -4,12 +4,12 @@
   "redirects": [
     {
       "source": "/lista-de-espera",
-      "destination": "/empieza/",
+      "destination": "https://app.godolphy.com/auth/sign-up",
       "permanent": false
     },
     {
       "source": "/lista-de-espera/",
-      "destination": "/empieza/",
+      "destination": "https://app.godolphy.com/auth/sign-up",
       "permanent": false
     },
     {
