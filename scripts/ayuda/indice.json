@@ -229,6 +229,11 @@
           "slug": "tarjetas-regalo-online",
           "titulo": "Vender tarjetas regalo online",
           "publicado": true
+        },
+        {
+          "slug": "bonos-en-el-booking",
+          "titulo": "Vender bonos en el booking",
+          "publicado": true
         }
       ]
     },
@@ -245,6 +250,21 @@
         {
           "slug": "tarjetas-regalo",
           "titulo": "Tarjetas regalo",
+          "publicado": true
+        },
+        {
+          "slug": "crear-y-vender-bonos",
+          "titulo": "Crear y vender bonos",
+          "publicado": true
+        },
+        {
+          "slug": "usar-bono-en-una-cita",
+          "titulo": "Usar un bono en una cita (y devolver una sesión)",
+          "publicado": true
+        },
+        {
+          "slug": "bonos-caducidad-y-cancelaciones",
+          "titulo": "Bonos: caducidad, cancelaciones y avisos",
           "publicado": true
         }
       ]
