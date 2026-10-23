@@ -1,0 +1,56 @@
+<!--meta
+{
+  "titulo": "Vender bonos en el booking",
+  "seo_title": "Vender bonos de sesiones online en tu web de reservas | Centro de ayuda Godolphy",
+  "descripcion": "Activa la venta de bonos en tu web de reservas de Godolphy: tu clientela los compra con tarjeta y, al reservar, el bono paga la sesión solo.",
+  "resumen": "Tu clientela puede comprar bonos en tu web de reservas y, cuando reserva, el bono paga la sesión sin que hagas nada.",
+  "buscar": "bono bonos online booking web de reservas comprar bono pagar con bono perfil sesiones",
+  "tiempo": "4 min",
+  "actualizado": "2026-10-23",
+  "relacionados": ["crear-y-vender-bonos", "usar-bono-en-una-cita", "conectar-stripe"]
+}
+-->
+
+<h2 id="activar">Activar la venta online</h2>
+<p>Para cobrar online necesitas tener <a href="/ayuda/conectar-stripe/">Stripe conectado</a>.</p>
+<p>Abre el tipo de bono en <strong>Marketing → Bonos → Tipos de bono</strong> y activa <strong>Vender en el booking</strong>. En cuanto un tipo de bono lo tenga activado, tu web de reservas muestra el menú <strong>Bonos</strong>.</p>
+
+<h2 id="comprar">Cómo lo compra tu clientela</h2>
+<ol class="steps">
+  <li>Entra en el menú <strong>Bonos</strong> de tu web de reservas y elige uno.</li>
+  <li>Inicia sesión. Hace falta para que el bono quede a su nombre.</li>
+  <li>Paga con tarjeta. El dinero va a tu cuenta de Stripe.</li>
+  <li>Recibe el email «Tu bono está listo».</li>
+</ol>
+<p>Después ve sus bonos en su perfil, en <strong>Bonos</strong>: las sesiones que le quedan, la caducidad y el código.</p>
+<p>En tu panel, estos bonos salen con la etiqueta <strong>Comprado en el booking</strong>. No entran en el <a href="/ayuda/cierre-de-caja/">cierre de caja</a>, porque se han pagado online.</p>
+
+<h2 id="reservar">Reservar con un bono</h2>
+<p>Si quien reserva tiene la sesión iniciada y un bono activo que sirve para un servicio del carrito, <strong>el bono paga ese servicio solo</strong>. En el resumen verá:</p>
+<ul>
+  <li>Una línea «Bono «…» · servicio (sesión n de N)» con el importe descontado.</li>
+  <li><strong>A pagar ahora</strong>, con lo que queda: extras, recargos u otros servicios.</li>
+</ul>
+<p>Si pides <a href="/ayuda/pago-o-deposito/">depósito al reservar</a>, se calcula solo sobre lo que queda. Si el bono lo cubre todo, no se pide tarjeta.</p>
+
+<h3 id="reglas">Cómo elige el bono</h3>
+<ul>
+  <li>Si tiene varios bonos que sirven, se usa primero <strong>el que caduca antes</strong>.</li>
+  <li>Se usa <strong>una sesión por servicio</strong>. Los servicios con varias unidades no se pagan con bono.</li>
+</ul>
+
+<div class="tip">
+  <span class="tip-label">Consejo</span>
+  <h2 id="consejo">Recuerda iniciar sesión</h2>
+  <p><strong>El bono solo se aplica con la sesión iniciada.</strong> Si alguien con bono te dice que le han pedido pagar el servicio, seguramente reservó sin entrar en su cuenta.</p>
+</div>
+
+<h2 id="errores">Preguntas habituales</h2>
+<dl class="faq">
+  <dt>No sale el menú Bonos en mi web</dt>
+  <dd>Ningún tipo de bono tiene activado <strong>Vender en el booking</strong>. Actívalo en <strong>Marketing → Bonos → Tipos de bono</strong>.</dd>
+  <dt>Tiene un bono y al reservar no se le ha aplicado</dt>
+  <dd>Revisa que haya iniciado sesión, que el bono no esté caducado ni agotado y que incluya ese servicio. Los servicios con varias unidades no se pagan con bono. Si la cita ya está hecha, puedes usar el bono desde el panel: lo explicamos en <a href="/ayuda/usar-bono-en-una-cita/">Usar un bono en una cita</a>.</dd>
+  <dt>¿Dónde ve las sesiones que le quedan?</dt>
+  <dd>En su perfil de tu web de reservas, en <strong>Bonos</strong>. También recibe un email cada vez que se gasta una sesión.</dd>
+</dl>

@@ -804,12 +804,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/bonos-en-el-booking/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/cupones/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.godolphy.com/ayuda/tarjetas-regalo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/crear-y-vender-bonos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/usar-bono-en-una-cita/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/bonos-caducidad-y-cancelaciones/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
