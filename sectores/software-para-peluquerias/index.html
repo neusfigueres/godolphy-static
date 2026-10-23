@@ -14,6 +14,7 @@
   });
 </script>
 <script src="/assets/tracking.js"></script>
+<script src="/assets/signup-modal.js" defer></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Software para peluquerías — Reservas y gestión con IA | Godolphy</title>
@@ -266,7 +267,7 @@
     </ul>
     <div style="display:flex;gap:12px;">
       
-      <a href="/lista-de-espera/" style="border:2px solid #fff;color:#fff;font-size:14px;font-weight:600;padding:8px 28px;border-radius:20px;text-decoration:none;">Lista de espera</a>
+      <a href="/empieza/" data-gd-signup style="border:2px solid #fff;color:#fff;font-size:14px;font-weight:600;padding:8px 28px;border-radius:20px;text-decoration:none;">Prueba gratis 30 días</a>
     </div>
     <!-- Hamburger (mobile only) -->
     <button id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Abrir menú" style="display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;">
@@ -293,7 +294,7 @@
   </nav>
   <div style="display:flex;flex-direction:column;gap:12px;margin-top:32px;">
     
-    <a href="/lista-de-espera/" style="border:2px solid #fff;color:#fff;font-size:16px;font-weight:700;padding:14px 24px;border-radius:20px;text-decoration:none;text-align:center;">Lista de espera</a>
+    <a href="/empieza/" data-gd-signup style="border:2px solid #fff;color:#fff;font-size:16px;font-weight:700;padding:14px 24px;border-radius:20px;text-decoration:none;text-align:center;">Prueba gratis 30 días</a>
   </div>
 </div>
 
@@ -317,7 +318,7 @@ function toggleMobileNav(){
       <h1 class="font-gabarito" style="color:#fff;font-size:58px;line-height:1.05;font-weight:700;margin:0 0 20px;">Software para peluquerías — Reservas, agenda y gestión con IA</h1>
       <p style="color:rgba(255,255,255,.85);font-size:18px;line-height:1.6;margin:0 0 36px;">Reservas online, gestión de equipo, cobros y recordatorios. Todo desde una sola plataforma.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="/lista-de-espera/" style="background:#fff;color:#631cff;font-size:16px;font-weight:600;padding:14px 32px;border-radius:20px;text-decoration:none;">Apúntate a la lista de espera</a>
+        <a href="/empieza/" data-gd-signup style="background:#fff;color:#631cff;font-size:16px;font-weight:600;padding:14px 32px;border-radius:20px;text-decoration:none;">Prueba gratis 30 días</a>
         
       </div>
       <p style="color:rgba(255,255,255,.6);font-size:13px;margin:16px 0 0;">30 días gratis · Sin tarjeta de crédito</p>
@@ -481,7 +482,7 @@ function toggleMobileNav(){
     <h2 class="font-gabarito" style="color:#fff;font-size:46px;line-height:1.1;font-weight:700;margin:0 0 20px;">Da de alta tu peluquería y empieza a optimizar tu tiempo</h2>
     <p style="color:rgba(255,255,255,.85);font-size:18px;line-height:1.6;max-width:600px;margin:0 auto 40px;">Carga tus servicios y profesionales, sube su agenda, los precios según salón o domicilio, y empieza a tomar control de tu agenda.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="/lista-de-espera/" style="background:#EEFE3A;color:#02021e;font-size:18px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Apúntate a la lista de espera</a>
+      <a href="/empieza/" data-gd-signup style="background:#EEFE3A;color:#02021e;font-size:18px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Prueba gratis 30 días</a>
       
     </div>
     <p style="color:rgba(255,255,255,.6);font-size:14px;margin:20px 0 0;">30 días gratis · Sin tarjeta de crédito</p>
@@ -504,7 +505,7 @@ function toggleMobileNav(){
       <div><img src="/wp-images/logo.png" alt="Godolphy" style="height:36px;margin-bottom:20px;display:block;width:auto;"/><p style="color:rgba(255,255,255,.5);font-size:14px;line-height:1.7;max-width:280px;margin:0;">El software de reservas con IA para negocios de servicios.</p></div>
       <div><h3 style="color:#fff;font-size:13px;font-weight:600;margin:0 0 20px;letter-spacing:.05em;">INDUSTRIAS</h3><ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;"><li><a href="/sectores/software-para-peluquerias/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Peluquería</a></li><li><a href="/sectores/software-para-barberias/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Barbería</a></li><li><a href="/sectores/software-para-centro-de-estetica-y-salones/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Centro de estética</a></li><li><a href="/sectores/software-para-salones-de-unas/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Salón de uñas</a></li><li><a href="/sectores/software-para-profesionales-a-domicilio/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Servicio a domicilio</a></li><li><a href="/sectores/software-para-spa-y-masajes/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Spa y masajes</a></li></ul></div>
       <div><h3 style="color:#fff;font-size:13px;font-weight:600;margin:0 0 20px;letter-spacing:.05em;">FUNCIONALIDADES</h3><ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;"><li><a href="/funcionalidades/reservas-online/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Reservas online</a></li><li><a href="/funcionalidades/calendario/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Calendario</a></li><li><a href="/funcionalidades/equipo-y-horarios/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Equipo y horarios</a></li><li><a href="/funcionalidades/pagos-y-depositos/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Pagos y depósitos</a></li><li><a href="/funcionalidades/gestion-de-clientes/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Gestión de clientes</a></li><li><a href="/funcionalidades/chat-y-notificaciones/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Chat y notificaciones</a></li><li><a href="/funcionalidades/fidelizacion-ai/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Fidelización AI</a></li><li><a href="/funcionalidades/facturacion-y-reporte/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Facturación y reporte</a></li><li><a href="/funcionalidades/servicios-a-domicilio/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Servicios a domicilio</a></li><li><a href="/funcionalidades/cupones-y-tarjetas-regalo/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Cupones y tarjetas regalo</a></li><li><a href="/funcionalidades/multiples-ubicaciones/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Múltiples ubicaciones</a></li><li><a href="/funcionalidades/geolocalizacion-equipo/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Geolocalización del equipo</a></li></ul></div>
-      <div><h3 style="color:#fff;font-size:13px;font-weight:600;margin:0 0 20px;letter-spacing:.05em;">RECURSOS</h3><ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;"><li><a href="/blog/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Blog</a></li><li><a href="/ayuda/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Centro de ayuda</a></li><li></li><li><a href="/precio/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Precio</a></li><li><a href="https://www.godolphy.com/lista-de-espera/" target="_blank" style="color:#EEFE3A;font-size:14px;text-decoration:none;font-weight:600;">Lista de espera</a></li></ul></div>
+      <div><h3 style="color:#fff;font-size:13px;font-weight:600;margin:0 0 20px;letter-spacing:.05em;">RECURSOS</h3><ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;"><li><a href="/blog/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Blog</a></li><li><a href="/ayuda/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Centro de ayuda</a></li><li></li><li><a href="/precio/" style="color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;">Precio</a></li><li><a href="/empieza/" data-gd-signup target="_blank" style="color:#EEFE3A;font-size:14px;text-decoration:none;font-weight:600;">Prueba gratis 30 días</a></li></ul></div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:32px;display:flex;justify-content:space-between;align-items:center;">
       <p style="color:rgba(255,255,255,.3);font-size:13px;margin:0;">© 2026 Godolphy. Todos los derechos reservados.</p>
