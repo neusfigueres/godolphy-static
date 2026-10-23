@@ -1,0 +1,3 @@
+  0.00-  5.00  No puede ser. ¿Marta? Lorena no podrá atenderte. ¿A las 5?
+  5.00-  9.00  No, está completo. Hoy me paso el día llamando.
+  9.00- 10.00  Pues ya estaría.

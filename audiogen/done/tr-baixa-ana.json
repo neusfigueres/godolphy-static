@@ -1,0 +1,6 @@
+{
+  "type": "transcribe",
+  "file": "imagegen/baixa/vo_ana.mp3",
+  "out": "imagegen/baixa/vo_ana.txt",
+  "language": "es"
+}
