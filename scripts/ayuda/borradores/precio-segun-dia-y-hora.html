@@ -1,0 +1,84 @@
+<!--
+BORRADOR — NO PUBLICAR hasta que «Precio según día y hora» esté desplegado y probado en producción.
+Textos comprobados en el código del panel (time-price-rules-section.tsx) y del backend (TimePriceRuleService.ts) el 24/10/2026.
+Para publicar: mover a articulos/, añadir a indice.json (sección "domicilio" o "servicios", junto a recargos-por-ubicacion),
+cambiar «Recargos a domicilio» por «Precios especiales» en los artículos que lo citan (grep), hacer las capturas (data-shot precio-dia-hora-lista y precio-dia-hora-franja) y ejecutar build.py.
+-->
+<!--meta
+{
+  "titulo": "Precio según día y hora",
+  "seo_title": "Cobrar más caro en fin de semana o hacer descuento en horas valle | Centro de ayuda Godolphy",
+  "descripcion": "Sube o baja el precio de tus servicios según el día y la hora de la cita: un recargo los sábados por la mañana o un descuento para llenar las horas flojas.",
+  "resumen": "Pon un recargo o un descuento automático a las citas de ciertos días y horas: por ejemplo, +10 % los sábados por la mañana o −15 % los martes por la tarde.",
+  "buscar": "precio día hora franja horaria fin de semana sábado recargo descuento horas valle horas flojas tarifa dinámica",
+  "tiempo": "4 min",
+  "actualizado": "2026-10-24",
+  "relacionados": ["recargos-por-ubicacion", "precio-desplazamiento", "comisiones"]
+}
+-->
+
+<h2 id="que-es">Qué es</h2>
+<p>Puedes subir o bajar el precio de tus servicios y extras según el <strong>día de la semana</strong> y la <strong>hora en la que empieza la cita</strong>. Por ejemplo:</p>
+<ul>
+  <li><strong>+10 % los sábados de 9:00 a 14:00</strong>, las horas que más se piden.</li>
+  <li><strong>−15 % los martes de 15:00 a 19:00</strong>, para llenar las horas flojas.</li>
+</ul>
+<p>Está en los planes <strong>Pro</strong> y <strong>Max</strong>, y también durante la <a href="/ayuda/prueba-gratuita/">prueba gratuita</a>. En el plan Solo verás el aviso «Disponible en los planes Pro y Max».</p>
+
+<h2 id="donde">Dónde se configura</h2>
+<p>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>Precios especiales</strong>. Debajo de los recargos a domicilio verás la tarjeta <strong>Precio según día y hora</strong>.</p>
+<p>Solo la propietaria del salón puede configurarlo. La recepcionista no tiene acceso.</p>
+<figure class="shot" data-shot="precio-dia-hora-lista"><figcaption>Configuración → Precios especiales → Precio según día y hora</figcaption></figure>
+
+<h2 id="crear">Crear una franja</h2>
+<ol class="steps">
+  <li>Pulsa <strong>Añadir franja</strong>.</li>
+  <li>En <strong>Días</strong>, marca los días (L M X J V S D). También puedes elegir <strong>Lunes a viernes</strong>, <strong>Fin de semana</strong> o <strong>Todos los días</strong>.</li>
+  <li>Indica <strong>Desde</strong> y <strong>Hasta</strong>: la hora de inicio y la de fin.</li>
+  <li>En <strong>Ajuste</strong>, elige <strong>Recargo</strong> o <strong>Descuento</strong> y escribe el <strong>Porcentaje</strong>.</li>
+  <li>Pulsa <strong>Guardar franja</strong>. Verás «Franja guardada».</li>
+</ol>
+<figure class="shot" data-shot="precio-dia-hora-franja"><figcaption>Añadir una franja con recargo</figcaption></figure>
+<p>Cada franja se puede editar con el <strong>lápiz</strong>, activar o desactivar con el interruptor, o eliminar con la <strong>papelera</strong>.</p>
+
+<h2 id="reglas">Cómo se aplica</h2>
+<ul>
+  <li>Cuenta la <strong>hora en la que empieza la cita</strong>: desde la hora de inicio hasta <strong>antes</strong> de la hora de fin. En una franja de 9:00 a 14:00, una cita a las 14:00 ya no entra.</li>
+  <li>El porcentaje se aplica al precio de <strong>cada servicio y cada extra</strong>: el del catálogo o el de la profesional, si tiene uno propio. Se redondea al céntimo: 25,00 € con +10 % son 27,50 €.</li>
+  <li>Los <a href="/ayuda/precio-desplazamiento/">recargos a domicilio</a> (distancia y tipo de lugar) se suman después, sobre el precio ya ajustado.</li>
+  <li>En el ticket, el servicio sale con el precio ajustado, no como una línea aparte. Las <a href="/ayuda/comisiones/">comisiones</a> se calculan sobre ese precio.</li>
+</ul>
+
+<h3 id="limites">Límites</h3>
+<ul>
+  <li>Dos franjas activas no pueden coincidir el mismo día en horas que se cruzan. Si pasa, verás «Esta franja se solapa con otra ya existente».</li>
+  <li>El porcentaje va de −90 % a +100 %, y no puede ser 0.</li>
+  <li>Una franja no puede pasar de medianoche. Si la necesitas, crea dos.</li>
+</ul>
+
+<h2 id="clientela">Qué ve tu clientela</h2>
+<p>En tu web de reservas, al elegir la hora ve directamente el <strong>precio final</strong>, sin etiquetas ni precio tachado. En las fichas de los servicios sigue saliendo el precio del catálogo.</p>
+
+<h2 id="citas-reservadas">Citas ya reservadas</h2>
+<ul>
+  <li>Si creas, cambias o eliminas una franja, <strong>las citas ya reservadas mantienen su precio</strong>.</li>
+  <li>Si desde el panel mueves una cita a otra hora (al editarla o con <strong>Reprogramar</strong>) y la nueva hora tiene otro porcentaje, el precio se recalcula.</li>
+  <li>Si solo cambias servicios o extras sin mover la hora, se mantiene el porcentaje que tenía.</li>
+</ul>
+
+<div class="tip">
+  <span class="tip-label">Consejo</span>
+  <h2 id="consejo">Empieza con poco</h2>
+  <p><strong>Un descuento en tus horas más flojas suele funcionar mejor que un recargo.</strong> Mira en tu agenda qué días y horas se quedan vacíos y prueba con un 10 o un 15 %.</p>
+  <p><strong>Avisa a tu clientela habitual</strong> si subes el precio del fin de semana, para que no se lleve una sorpresa al reservar.</p>
+</div>
+
+<h2 id="errores">Preguntas habituales</h2>
+<dl class="faq">
+  <dt>Me sale «Esta franja se solapa con otra ya existente»</dt>
+  <dd>Ya tienes una franja activa ese día en horas que se cruzan. Cambia los días o las horas, o desactiva la otra franja.</dd>
+  <dt>He creado una franja y una cita ya reservada no ha cambiado de precio</dt>
+  <dd>Es normal: las franjas solo afectan a las citas nuevas o a las que muevas de hora.</dd>
+  <dt>Una cita a las 14:00 no lleva el recargo de mi franja de 9:00 a 14:00</dt>
+  <dd>La franja se aplica hasta antes de la hora de fin. Si quieres incluir las 14:00, pon como fin las 14:30 o la hora que necesites.</dd>
+</dl>
