@@ -1,9 +1,3 @@
-<!--
-BORRADOR — NO PUBLICAR hasta que «Precio según día y hora» esté desplegado y probado en producción.
-Textos comprobados en el código del panel (time-price-rules-section.tsx) y del backend (TimePriceRuleService.ts) el 24/10/2026.
-Para publicar: mover a articulos/, añadir a indice.json (sección "domicilio" o "servicios", junto a recargos-por-ubicacion),
-cambiar «Recargos a domicilio» por «Precios especiales» en los artículos que lo citan (grep), hacer las capturas (data-shot precio-dia-hora-lista y precio-dia-hora-franja) y ejecutar build.py.
--->
 <!--meta
 {
   "titulo": "Precio según día y hora",
@@ -33,7 +27,7 @@ cambiar «Recargos a domicilio» por «Precios especiales» en los artículos qu
 <h2 id="crear">Crear una franja</h2>
 <ol class="steps">
   <li>Pulsa <strong>Añadir franja</strong>.</li>
-  <li>En <strong>Días</strong>, marca los días (L M X J V S D). También puedes elegir <strong>Lunes a viernes</strong>, <strong>Fin de semana</strong> o <strong>Todos los días</strong>.</li>
+  <li>En <strong>Días</strong>, marca los días (L M X J V S D).</li>
   <li>Indica <strong>Desde</strong> y <strong>Hasta</strong>: la hora de inicio y la de fin.</li>
   <li>En <strong>Ajuste</strong>, elige <strong>Recargo</strong> o <strong>Descuento</strong> y escribe el <strong>Porcentaje</strong>.</li>
   <li>Pulsa <strong>Guardar franja</strong>. Verás «Franja guardada».</li>
@@ -58,6 +52,7 @@ cambiar «Recargos a domicilio» por «Precios especiales» en los artículos qu
 
 <h2 id="clientela">Qué ve tu clientela</h2>
 <p>En tu web de reservas, al elegir la hora ve directamente el <strong>precio final</strong>, sin etiquetas ni precio tachado. En las fichas de los servicios sigue saliendo el precio del catálogo.</p>
+<figure class="shot" data-shot="precio-dia-hora-booking"><figcaption>Una manicura de 25,00 € reservada el martes a las 17:00, con −15 %: 21,25 €</figcaption></figure>
 
 <h2 id="citas-reservadas">Citas ya reservadas</h2>
 <ul>

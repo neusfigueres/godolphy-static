@@ -133,6 +133,11 @@
           "slug": "recargos-por-ubicacion",
           "titulo": "Recargos por tipo de ubicación",
           "publicado": true
+        },
+        {
+          "slug": "precio-segun-dia-y-hora",
+          "titulo": "Precio según día y hora",
+          "publicado": true
         }
       ]
     },
