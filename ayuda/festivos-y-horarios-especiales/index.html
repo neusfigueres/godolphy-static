@@ -146,9 +146,9 @@ a.ay-card:hover{border-color:var(--lila);box-shadow:0 6px 20px rgba(99,28,255,.1
 @media(max-width:960px){.ay-wrap{grid-template-columns:1fr;gap:32px}.ay-side{position:static;max-height:none;order:2;border-top:1px solid var(--line);padding-top:24px}}
 @media(max-width:768px){.ay-hero{padding:104px 20px 40px}.ay-hero h1{font-size:30px}.ay-hero p{font-size:15px}.ay-wrap,.ay-index-wrap{padding:36px 20px 64px}.ay-art h2{font-size:24px}.tip{padding:24px 20px 10px}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Festivos y horarios especiales", "description": "Cómo bloquear vacaciones y festivos de una profesional y cómo abrir un horario distinto en fechas concretas, como Navidad o rebajas, en Godolphy.", "dateModified": "2026-10-13", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/festivos-y-horarios-especiales/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Centro de ayuda", "item": "https://www.godolphy.com/ayuda/"}, {"@type": "ListItem", "position": 2, "name": "Festivos y horarios especiales", "item": "https://www.godolphy.com/ayuda/festivos-y-horarios-especiales/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "No puedo elegir una fecha", "acceptedAnswer": {"@type": "Answer", "text": "No se pueden elegir fechas pasadas, ni días que ya tienen un festivo o un horario especial. Revisa la lista."}}, {"@type": "Question", "name": "He puesto vacaciones y la profesional tenía citas esos días", "acceptedAnswer": {"@type": "Answer", "text": "Añadir un festivo no mueve las citas que ya estaban reservadas. Revisa esos días en el Calendario y reprográmalas."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Ausencias y horarios especiales", "description": "Cómo bloquear vacaciones y festivos de una profesional y cómo abrir un horario distinto en fechas concretas, como Navidad o rebajas, en Godolphy.", "dateModified": "2026-10-24", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/festivos-y-horarios-especiales/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Centro de ayuda", "item": "https://www.godolphy.com/ayuda/"}, {"@type": "ListItem", "position": 2, "name": "Ausencias y horarios especiales", "item": "https://www.godolphy.com/ayuda/festivos-y-horarios-especiales/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "No puedo elegir una fecha", "acceptedAnswer": {"@type": "Answer", "text": "No se pueden elegir fechas pasadas, ni días que ya tienen una ausencia o un horario especial. Revisa la lista."}}, {"@type": "Question", "name": "He puesto vacaciones y la profesional tenía citas esos días", "acceptedAnswer": {"@type": "Answer", "text": "Al guardar la ausencia se abre «Citas afectadas». Lo explicamos en Ausencias del equipo."}}]}</script>
 </head>
 <body style="overflow-x:hidden">
 
@@ -198,9 +198,9 @@ function toggleMobileNav(){
 <main>
 <section class="ay-hero"><div class="ay-hero-in">
 <p class="ay-crumbs"><a href="/ayuda/">Centro de ayuda</a> › Equipo</p>
-<h1>Festivos y horarios especiales</h1>
+<h1>Ausencias y horarios especiales</h1>
 <p>Las excepciones al horario de siempre: días que una profesional no trabaja y fechas en las que trabaja en otro horario.</p>
-<p class="ay-meta">Lectura: 3 min · Actualizado el 13 de octubre de 2026</p>
+<p class="ay-meta">Lectura: 3 min · Actualizado el 24 de octubre de 2026</p>
 </div></section>
 <div class="ay-wrap">
 <nav class="ay-side" aria-label="Índice del centro de ayuda">
@@ -222,10 +222,12 @@ function toggleMobileNav(){
 <li><a href="/ayuda/anadir-profesional/">Añadir una profesional</a></li>
 <li><a href="/ayuda/importar-equipo/">Importar tu equipo desde Excel o una captura</a></li>
 <li><a href="/ayuda/horarios-del-equipo/">Crear los horarios del equipo</a></li>
-<li><a href="/ayuda/festivos-y-horarios-especiales/" class="current">Festivos y horarios especiales</a></li>
+<li><a href="/ayuda/festivos-y-horarios-especiales/" class="current">Ausencias y horarios especiales</a></li>
+<li><a href="/ayuda/ausencias-del-equipo/">Ausencias del equipo: vacaciones, baja o permiso</a></li>
 <li><a href="/ayuda/servicios-por-profesional/">Asignar servicios a cada profesional</a></li>
 <li><a href="/ayuda/usuarios-y-permisos/">Usuarios y permisos: quién puede hacer qué</a></li>
 <li><a href="/ayuda/acceso-de-las-profesionales/">Qué ve una profesional en su acceso</a></li>
+<li><a href="/ayuda/desactivar-profesional/">Desactivar a una persona del equipo</a></li>
 <li><a href="/ayuda/recepcionista/">Invitar a una recepcionista</a></li>
 </ul>
 <h3>Servicio a domicilio</h3><ul>
@@ -272,22 +274,15 @@ function toggleMobileNav(){
 </ul>
 </nav>
 <article class="ay-art">
-<h2 id="diferencia">Festivos u horarios especiales</h2>
+<h2 id="diferencia">Ausencias u horarios especiales</h2>
 <ul>
-  <li><strong>Festivos</strong>: días en los que la profesional <strong>no trabaja</strong>. Vacaciones, un festivo local, un día de asuntos propios.</li>
+  <li><strong>Ausencias</strong>: días en los que la profesional <strong>no trabaja</strong>. Vacaciones, una baja, un permiso o un festivo local.</li>
   <li><strong>Horarios especiales</strong>: fechas en las que <strong>trabaja con otro horario</strong> distinto al habitual. Por ejemplo, abrir hasta más tarde en Navidad.</li>
 </ul>
 <p>Los dos se configuran por profesional, en su ficha de <strong>Equipo</strong>.</p>
 
-<h2 id="festivos">Añadir un festivo o vacaciones</h2>
-<ol class="steps">
-  <li>En <strong>Equipo</strong>, abre la ficha de la profesional y entra en la pestaña <strong>Festivos</strong>.</li>
-  <li>Pulsa <strong>Añadir día de descanso</strong>.</li>
-  <li>En <strong>Rango de fechas</strong>, elige el primer y el último día. Para un solo día, elige el mismo día dos veces.</li>
-  <li>Pulsa <strong>Crear</strong>.</li>
-</ol>
-<p>En la lista verás las fechas con la hora «Cerrado».</p>
-<figure class="shot has-img"><img src="/ayuda/img/profesional-festivos.jpg" alt="Ficha de profesional → Festivos" loading="lazy"/><figcaption>Ficha de profesional → Festivos</figcaption></figure>
+<h2 id="festivos">Añadir una ausencia</h2>
+<p>En <strong>Equipo</strong>, abre la ficha de la profesional, entra en la pestaña <strong>Ausencias</strong> y pulsa <strong>Añadir ausencia</strong>. Si ya tenía citas esos días, Godolphy te ayuda a pasarlas a otra persona o a enviar un enlace para que cada cliente elija. Lo explicamos paso a paso en <a href="/ayuda/ausencias-del-equipo/">Ausencias del equipo: vacaciones, baja o permiso</a>.</p>
 
 <h2 id="especiales">Añadir un horario especial</h2>
 <ol class="steps">
@@ -297,23 +292,23 @@ function toggleMobileNav(){
   <li>Pulsa <strong>Crear</strong>.</li>
 </ol>
 
-<p>Para cambiar o borrar un festivo o un horario especial, usa el <strong>lápiz</strong> o la <strong>papelera</strong> de su fila.</p>
+<p>Para cambiar o borrar una ausencia o un horario especial, usa el <strong>lápiz</strong> o la <strong>papelera</strong> de su fila.</p>
 
 <div class="tip">
   <span class="tip-label">Consejo</span>
   <h2 id="consejo">Planifica las vacaciones antes de que te reserven</h2>
-  <p><strong>Bloquea las vacaciones en cuanto las sepas.</strong> Si las añades tarde, puede que ya haya citas reservadas esos días y tendrás que llamar a cada clienta para cambiarlas.</p>
+  <p><strong>Marca las vacaciones en cuanto las sepas.</strong> Cuanto antes lo hagas, menos citas tendrás que mover.</p>
   <p><strong>Usa los horarios especiales para las fechas fuertes.</strong> Antes de Navidad, bodas o el inicio del verano la demanda sube. Ampliar unas horas esos días es la forma más fácil de facturar más sin cambiar tu horario de todo el año.</p>
 </div>
 
 <h2 id="errores">Errores habituales</h2>
 <dl class="faq">
   <dt>No puedo elegir una fecha</dt>
-  <dd>No se pueden elegir fechas pasadas, ni días que ya tienen un festivo o un horario especial. Revisa la lista.</dd>
+  <dd>No se pueden elegir fechas pasadas, ni días que ya tienen una ausencia o un horario especial. Revisa la lista.</dd>
   <dt>He puesto vacaciones y la profesional tenía citas esos días</dt>
-  <dd>Añadir un festivo no mueve las citas que ya estaban reservadas. Revisa esos días en el <strong>Calendario</strong> y reprográmalas.</dd>
+  <dd>Al guardar la ausencia se abre «Citas afectadas». Lo explicamos en <a href="/ayuda/ausencias-del-equipo/#citas-afectadas">Ausencias del equipo</a>.</dd>
 </dl>
-<section class="ay-related"><h2>Artículos relacionados</h2><div class="ay-cards"><a class="ay-card" href="/ayuda/horarios-del-equipo/">Crear los horarios del equipo<small>Equipo</small></a><a class="ay-card" href="/ayuda/anadir-profesional/">Añadir una profesional<small>Equipo</small></a><a class="ay-card" href="/ayuda/crear-reserva/">Crear una reserva desde el calendario<small>Clientas y reservas</small></a></div></section>
+<section class="ay-related"><h2>Artículos relacionados</h2><div class="ay-cards"><a class="ay-card" href="/ayuda/ausencias-del-equipo/">Ausencias del equipo: vacaciones, baja o permiso<small>Equipo</small></a><a class="ay-card" href="/ayuda/horarios-del-equipo/">Crear los horarios del equipo<small>Equipo</small></a><a class="ay-card" href="/ayuda/anadir-profesional/">Añadir una profesional<small>Equipo</small></a></div></section>
 <div class="ay-help">¿Te has quedado con alguna duda? Escríbenos a <a href="mailto:hello@godolphy.com">hello@godolphy.com</a> y te ayudamos.</div>
 </article>
 </div>

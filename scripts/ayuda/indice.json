@@ -84,7 +84,12 @@
         },
         {
           "slug": "festivos-y-horarios-especiales",
-          "titulo": "Festivos y horarios especiales",
+          "titulo": "Ausencias y horarios especiales",
+          "publicado": true
+        },
+        {
+          "slug": "ausencias-del-equipo",
+          "titulo": "Ausencias del equipo: vacaciones, baja o permiso",
           "publicado": true
         },
         {
@@ -100,6 +105,11 @@
         {
           "slug": "acceso-de-las-profesionales",
           "titulo": "Qué ve una profesional en su acceso",
+          "publicado": true
+        },
+        {
+          "slug": "desactivar-profesional",
+          "titulo": "Desactivar a una persona del equipo",
           "publicado": true
         },
         {
