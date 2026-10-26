@@ -149,6 +149,7 @@ def page(title, description, canonical, body, jsonld):
 </main>
 {footer}
 <script src="/assets/gx-pages.js" defer></script>
+<script src="/assets/signup-modal.js" defer></script>
 </body>
 </html>
 """
