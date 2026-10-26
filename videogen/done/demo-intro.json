@@ -1,0 +1,40 @@
+{
+  "out": "imagegen/demo/videos/intro.mp4",
+  "model": "kling-v3",
+  "poll": 600,
+  "frames": [
+    "imagegen/demo/intro0.png",
+    "imagegen/demo/panel_ia_16x9.jpg"
+  ],
+  "prompt": "Photorealistic cinematic shot. Smooth, steady dolly-in toward the laptop on the reception desk: the camera glides forward and slightly down, the warm bokeh lights drift softly, until the laptop screen fills the entire frame and becomes the dashboard shown in the last frame. The screen content stays sharp, stable and unchanged, no morphing of the interface. No people, no added text.",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "16:9"
+  },
+  "negative_prompt": "morphing, warped interface, distorted text, people, hands, camera shake",
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 223,
+      "completed": 1793045245,
+      "cost": 0.448,
+      "created": 1793045022,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M5WWZHGFYAQXQP99HDHZXB0V",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793131645,
+            "url": [
+              "https://getapib.org/video/9998206954755217-b3f1c042-8223-4bcf-8847-29b893571489-video_task_01M5WWZHGFYAQXQP99HDHZXB0V.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

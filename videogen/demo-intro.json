@@ -1,9 +1,0 @@
-{
-  "out": "imagegen/demo/videos/intro.mp4",
-  "model": "kling-v3",
-  "poll": 600,
-  "frames": ["imagegen/demo/intro0.png", "imagegen/demo/panel_ia_16x9.jpg"],
-  "prompt": "Photorealistic cinematic shot. Smooth, steady dolly-in toward the laptop on the reception desk: the camera glides forward and slightly down, the warm bokeh lights drift softly, until the laptop screen fills the entire frame and becomes the dashboard shown in the last frame. The screen content stays sharp, stable and unchanged, no morphing of the interface. No people, no added text.",
-  "body": {"duration": 5, "mode": "pro", "aspect_ratio": "16:9"},
-  "negative_prompt": "morphing, warped interface, distorted text, people, hands, camera shake"
-}
