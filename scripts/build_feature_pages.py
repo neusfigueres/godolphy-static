@@ -19,6 +19,9 @@ ICONS = {
     'clock': '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
     'plane': '<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
     'upload': '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',
+    'cash': '<rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>',
+    'users': '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    'shield': '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
 }
 
 CHIP = '<a href="{href}" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#f3eeff;color:#631cff;font-weight:600;font-size:15px;text-decoration:none;">{text}</a>'
@@ -29,6 +32,14 @@ def img(src, alt, mobile=False):
     w = 'max-width:340px;' if mobile else ''
     return (f'<div class="feat-img" style="padding:24px;min-height:0;"><img src="{src}" alt="{html.escape(alt)}" loading="lazy" '
             f'style="width:100%;{w}height:auto;display:block;border-radius:14px;box-shadow:0 18px 50px rgba(2,2,30,.12);background:#fff;" /></div>')
+
+
+def roles_card():
+    rows=[('Propietaria','Lo puede hacer todo: configuración, servicios, equipo, ventas, marketing, análisis y el plan.'),
+          ('Recepcionista','Agenda, citas, clientes, cobros y caja. Sin configuración ni borrar datos.'),
+          ('Profesional','Su calendario y su perfil. Nada más.')]
+    li=''.join(f'<div style="padding:18px 20px;border-radius:16px;background:#fff;border:1px solid rgba(99,28,255,.12);margin-bottom:12px;"><div style="font-weight:700;color:#631cff;font-size:15px;margin-bottom:4px;">{a}</div><div style="color:rgba(2,2,30,.7);font-size:15px;line-height:1.55;">{b}</div></div>' for a,b in rows)
+    return f'<div class="feat-img" style="padding:28px;min-height:0;display:block;">{li}</div>'
 
 
 PAGES = [
@@ -244,6 +255,55 @@ PAGES = [
       ('¿Tiene coste?', 'No. La importación está incluida en todos los planes.'),
     ],
     links=[('/ayuda/importar-servicios/', 'Importar servicios'), ('/ayuda/importar-equipo/', 'Importar el equipo')]),
+  dict(slug='caja-y-cobros', icon='cash', card='Cobros y cierre de caja',
+    title='Cobros en el salón y cierre de caja | Godolphy',
+    desc='Cobra cada cita en efectivo, TPV, Bizum o con la tarjeta guardada, divide el pago, imprime o envía el tique y cierra la caja cada día comparando lo esperado con lo contado.',
+    h1='Cobra en el salón y cierra la caja en minutos',
+    lead='Apunta cada cobro en su cita, con el medio real, y al final del día cierra la caja sabiendo exactamente qué tiene que haber.',
+    plan='Incluido en todos los planes.',
+    sections=[
+      ('Cobra cada cita en segundos.', ['Desde la cita, en efectivo, TPV, Bizum, transferencia o con la tarjeta que se guardó al reservar online. Si paga con dos medios, repartes el importe; si paga una parte, el resto queda pendiente.',
+        'Cada cobro tiene su tique para imprimirlo o enviarlo por email.'], img('/ayuda/img/ventas-detalle-cobros.jpg', 'Cobros de una cita en Godolphy')),
+      ('Devoluciones sin líos.', ['Devuelve un cobro hecho en el salón, entero o una parte, o reembolsa un pago online: Stripe devuelve el dinero a la tarjeta.',
+        'Con <a href="/verifactu/" style="color:#631cff;font-weight:600;text-decoration:none;">Verifactu</a>, cada cobro y cada devolución genera su tique con QR enviado a Hacienda.'], img('/ayuda/img/verifactu-tique.jpg', 'Tique con código QR de Verifactu')),
+      ('Una caja que cuadra cada día.', ['Apunta las entradas y retiradas de efectivo, como el fondo inicial o un pago a un proveedor. Al cerrar, escribe el efectivo contado y verás al momento la diferencia con lo esperado.',
+        'El informe de cierre se descarga en CSV o se imprime. Un cierre hecho ya no se puede modificar.'], img('/ayuda/img/ventas-caja.jpg', 'Caja del día y cierre de caja')),
+    ],
+    seo=('Cobros y cierre de caja para peluquerías y centros de estética', [
+      'Un <strong>cierre de caja</strong> que no cuadra suele venir de cobros que no se apuntaron o de salidas de efectivo olvidadas. Con Godolphy, cada cobro queda en su cita y la caja sabe qué debería haber en cada medio de pago.',
+      'Godolphy no se conecta a ningún datáfono: cobras con el TPV de tu banco como siempre, lo apuntas en la cita en un clic y en el cierre lo comparas con lo que dice el datáfono. Los depósitos y los pagos online van aparte, con <a href="/funcionalidades/pagos-y-depositos/" style="color:#631cff;font-weight:600;text-decoration:none;">pagos y depósitos</a>.']),
+    faq=[
+      ('¿Qué medios de pago puedo usar?', 'Vienen Efectivo, TPV, Bizum y Transferencia, y puedes añadir los tuyos. También puedes cobrar con la tarjeta que se guardó al reservar online.'),
+      ('¿Godolphy se conecta con mi datáfono?', 'No. Cobras con tu datáfono como siempre y apuntas el cobro en la cita. En el cierre de caja comparas lo apuntado con lo que dice el datáfono.'),
+      ('¿Se puede modificar un cierre de caja?', 'No. Un cierre hecho no se modifica, y los movimientos de caja no se borran: se anulan con un movimiento contrario.'),
+      ('¿Qué planes lo incluyen?', 'Todos los planes.'),
+    ],
+    links=[('/ayuda/ventas-y-reembolsos/', 'Cobrar una cita y hacer devoluciones'), ('/ayuda/cierre-de-caja/', 'Caja: entradas, retiradas y cierre'), ('/ayuda/cobrar-con-tarjeta/', 'Cobrar con tarjeta'), ('/verifactu/', 'Verifactu')]),
+
+  dict(slug='recepcionista-y-permisos', icon='users', card='Recepcionista y permisos',
+    title='Recepcionista y permisos del equipo de tu salón | Godolphy',
+    desc='Da a cada persona su propio acceso: la recepcionista gestiona la agenda, las citas, los clientes, los cobros y la caja sin tocar la configuración, y cada profesional ve solo su agenda.',
+    h1='Cada persona, su acceso',
+    lead='Invita a tu recepcionista y da acceso a tu equipo sin compartir contraseñas. Cada persona ve solo lo que necesita.',
+    plan='Incluido en todos los planes.',
+    sections=[
+      ('Tres tipos de usuario.', ['Cada persona entra con su propio email y contraseña, y lo que ve depende de su tipo de usuario.',
+        'Así nadie toca la configuración por error, y puedes quitar un acceso sin cambiar el tuyo.'], roles_card()),
+      ('Una recepcionista que no toca la configuración.', ['Gestiona la agenda, las citas, los clientes, los cobros y la caja. No ve la configuración del salón ni las comisiones, y no puede borrar datos.',
+        'La invitas con su email desde Configuración → Equipo y le llega un enlace para crear su contraseña. Si deja de trabajar contigo, le quitas el acceso en un clic.'], img('/ayuda/img/calendario-diario.jpg', 'Calendario del panel de Godolphy')),
+      ('Cada profesional, su agenda.', ['Al darla de alta, cada profesional recibe un email para entrar con su propio usuario. Ve sus citas en el calendario y su perfil, sin ver tus clientes, tus ventas ni la configuración.',
+        'Los cambios de citas pasan por ti o por recepción, así nadie toca la misma cita a la vez.'], img('/ayuda/img/equipo-nuevo-profesional.jpg', 'Alta de una profesional en el equipo')),
+    ],
+    seo=('Permisos del equipo en peluquerías y centros de estética', [
+      'Compartir una contraseña entre todo el equipo es cómodo hasta el día que alguien cambia algo por error o deja el salón. Con <strong>usuarios y permisos</strong> separados, cada persona entra con su acceso y tú decides qué ve.',
+      'Encaja con la <a href="/funcionalidades/equipo-y-horarios/" style="color:#631cff;font-weight:600;text-decoration:none;">gestión del equipo y los horarios</a>, los <a href="/funcionalidades/caja-y-cobros/" style="color:#631cff;font-weight:600;text-decoration:none;">cobros y la caja</a> y las <a href="/funcionalidades/comisiones/" style="color:#631cff;font-weight:600;text-decoration:none;">comisiones</a>.']),
+    faq=[
+      ('¿Puede haber más de una recepcionista?', 'Sí. Invita a cada persona con su email desde Configuración → Equipo.'),
+      ('¿Qué no puede hacer la recepcionista?', 'Cambiar la configuración del salón, borrar datos ni ver las comisiones.'),
+      ('¿Las profesionales pueden mover citas?', 'No. Consultan sus citas; los cambios los haces tú o la recepcionista desde el calendario.'),
+      ('¿Tiene coste?', 'No. Está incluido en todos los planes.'),
+    ],
+    links=[('/ayuda/usuarios-y-permisos/', 'Usuarios y permisos'), ('/ayuda/recepcionista/', 'Invitar a una recepcionista'), ('/ayuda/acceso-de-las-profesionales/', 'Qué ve una profesional')]),
 ]
 
 

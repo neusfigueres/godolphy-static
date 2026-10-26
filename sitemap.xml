@@ -183,6 +183,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/funcionalidades/caja-y-cobros/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/funcionalidades/recepcionista-y-permisos/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/funcionalidades/servicios-a-domicilio/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
