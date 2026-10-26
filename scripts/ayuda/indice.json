@@ -255,8 +255,13 @@
     {
       "id": "marketing",
       "titulo": "Marketing",
-      "descripcion": "Cupones y tarjetas regalo.",
+      "descripcion": "Campañas, cupones, tarjetas regalo y bonos.",
       "articulos": [
+        {
+          "slug": "campanas",
+          "titulo": "Campañas: escribe a tus clientes para que vuelvan",
+          "publicado": true
+        },
         {
           "slug": "cupones",
           "titulo": "Cupones de descuento",
