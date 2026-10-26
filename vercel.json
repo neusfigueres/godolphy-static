@@ -3,6 +3,16 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/lista-de-espera",
+      "destination": "https://app.godolphy.com/auth/sign-up",
+      "permanent": false
+    },
+    {
+      "source": "/lista-de-espera/",
+      "destination": "https://app.godolphy.com/auth/sign-up",
+      "permanent": false
+    },
+    {
       "source": "/borrador/:path*",
       "destination": "/blog/",
       "permanent": false
