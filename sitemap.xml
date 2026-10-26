@@ -830,7 +830,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.godolphy.com/ayuda/clientas/</loc>
+    <loc>https://www.godolphy.com/ayuda/clientes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -875,7 +875,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.godolphy.com/ayuda/como-reserva-tu-clienta/</loc>
+    <loc>https://www.godolphy.com/ayuda/como-reserva-tu-cliente/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

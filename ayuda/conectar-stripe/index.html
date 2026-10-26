@@ -148,7 +148,7 @@ a.ay-card:hover{border-color:var(--lila);box-shadow:0 6px 20px rgba(99,28,255,.1
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Conectar Stripe para cobrar online", "description": "Paso a paso para conectar tu cuenta de Stripe a Godolphy: claves, webhook, modo de prueba y qué revisar si los pagos no se confirman.", "dateModified": "2026-10-19", "inLanguage": "es", "mainEntityOfPage": "https://www.godolphy.com/ayuda/conectar-stripe/", "publisher": {"@type": "Organization", "name": "Godolphy", "url": "https://www.godolphy.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Centro de ayuda", "item": "https://www.godolphy.com/ayuda/"}, {"@type": "ListItem", "position": 2, "name": "Conectar Stripe para cobrar online", "item": "https://www.godolphy.com/ayuda/conectar-stripe/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Me sale «… debe empezar por …» al guardar", "acceptedAnswer": {"@type": "Answer", "text": "Has pegado una clave en el campo que no toca. Las públicas empiezan por pk_, las secretas por sk_ y el endpoint secret por whsec_. Las de producción llevan live y las de prueba test."}}, {"@type": "Question", "name": "Me sale «Stripe dice que la clave no es válida»", "acceptedAnswer": {"@type": "Answer", "text": "La clave secreta está mal copiada o es de otra cuenta. Cópiala de nuevo desde Stripe, entera."}}, {"@type": "Question", "name": "No me deja activar o desactivar el modo de prueba", "acceptedAnswer": {"@type": "Answer", "text": "Para cambiar de modo, el modo al que pasas tiene que tener sus tres claves. El mensaje te dice cuáles faltan."}}, {"@type": "Question", "name": "Las clientas pagan pero la reserva no se confirma", "acceptedAnswer": {"@type": "Answer", "text": "Casi siempre es el webhook. Mira el estado debajo del bloque Webhook de Stripe: si sale el aviso de que la firma no coincide, el Endpoint secret no es el de ese webhook o es de otro modo (producción o prueba). Si no ha llegado ningún aviso, revisa en Stripe que el webhook tenga la URL de tu salón y todos los eventos de la lista."}}, {"@type": "Question", "name": "Una clienta no puede pagar al reservar", "acceptedAnswer": {"@type": "Answer", "text": "Sin Stripe conectado no se puede cobrar online. Godolphy ya no te deja activar el cobro al reservar sin Stripe, pero si lo tenías activado y desconectaste Stripe, desactívalo en Configuración → Pagos o vuelve a conectar Stripe."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Me sale «… debe empezar por …» al guardar", "acceptedAnswer": {"@type": "Answer", "text": "Has pegado una clave en el campo que no toca. Las públicas empiezan por pk_, las secretas por sk_ y el endpoint secret por whsec_. Las de producción llevan live y las de prueba test."}}, {"@type": "Question", "name": "Me sale «Stripe dice que la clave no es válida»", "acceptedAnswer": {"@type": "Answer", "text": "La clave secreta está mal copiada o es de otra cuenta. Cópiala de nuevo desde Stripe, entera."}}, {"@type": "Question", "name": "No me deja activar o desactivar el modo de prueba", "acceptedAnswer": {"@type": "Answer", "text": "Para cambiar de modo, el modo al que pasas tiene que tener sus tres claves. El mensaje te dice cuáles faltan."}}, {"@type": "Question", "name": "Los clientes pagan pero la reserva no se confirma", "acceptedAnswer": {"@type": "Answer", "text": "Casi siempre es el webhook. Mira el estado debajo del bloque Webhook de Stripe: si sale el aviso de que la firma no coincide, el Endpoint secret no es el de ese webhook o es de otro modo (producción o prueba). Si no ha llegado ningún aviso, revisa en Stripe que el webhook tenga la URL de tu salón y todos los eventos de la lista."}}, {"@type": "Question", "name": "Un cliente no puede pagar al reservar", "acceptedAnswer": {"@type": "Answer", "text": "Sin Stripe conectado no se puede cobrar online. Godolphy ya no te deja activar el cobro al reservar sin Stripe, pero si lo tenías activado y desconectaste Stripe, desactívalo en Configuración → Pagos o vuelve a conectar Stripe."}}]}</script>
 </head>
 <body style="overflow-x:hidden">
 
@@ -199,7 +199,7 @@ function toggleMobileNav(){
 <section class="ay-hero"><div class="ay-hero-in">
 <p class="ay-crumbs"><a href="/ayuda/">Centro de ayuda</a> › Cobros y políticas</p>
 <h1>Conectar Stripe para cobrar online</h1>
-<p>Stripe es la pasarela con la que tus clientas pagan con tarjeta al reservar. El dinero va directo a tu cuenta de Stripe.</p>
+<p>Stripe es la pasarela con la que tus clientes pagan con tarjeta al reservar. El dinero va directo a tu cuenta de Stripe.</p>
 <p class="ay-meta">Lectura: 8 min · Actualizado el 19 de octubre de 2026</p>
 </div></section>
 <div class="ay-wrap">
@@ -243,8 +243,8 @@ function toggleMobileNav(){
 <li><a href="/ayuda/cobrar-con-tarjeta/">Cobrar con tarjeta: pagos online y pagos en el centro</a></li>
 <li><a href="/ayuda/politicas-de-cancelacion/">Políticas de cancelación y no-show</a></li>
 </ul>
-<h3>Clientas y reservas</h3><ul>
-<li><a href="/ayuda/clientas/">Crear y gestionar clientas</a></li>
+<h3>Clientes y reservas</h3><ul>
+<li><a href="/ayuda/clientes/">Crear y gestionar clientes</a></li>
 <li><a href="/ayuda/calendario/">El calendario: vistas, colores y estados</a></li>
 <li><a href="/ayuda/crear-reserva/">Crear una reserva desde el calendario</a></li>
 <li><a href="/ayuda/reprogramar-y-cancelar/">Reprogramar y cancelar citas</a></li>
@@ -255,7 +255,7 @@ function toggleMobileNav(){
 </ul>
 <h3>Tu web de reservas</h3><ul>
 <li><a href="/ayuda/enlace-de-reservas/">Tu enlace de reservas</a></li>
-<li><a href="/ayuda/como-reserva-tu-clienta/">Cómo reserva tu clienta paso a paso</a></li>
+<li><a href="/ayuda/como-reserva-tu-cliente/">Cómo reserva tu cliente paso a paso</a></li>
 <li><a href="/ayuda/tarjetas-regalo-online/">Vender tarjetas regalo online</a></li>
 <li><a href="/ayuda/bonos-en-el-booking/">Vender bonos en el booking</a></li>
 </ul>
@@ -281,8 +281,8 @@ function toggleMobileNav(){
 </nav>
 <article class="ay-art">
 <h2 id="que-es">Qué es Stripe y para qué lo necesitas</h2>
-<p><strong>Stripe</strong> es la pasarela de pago con la que tus clientas pagan con tarjeta cuando reservan en tu web. Los cobros van <strong>directamente a tu cuenta de Stripe</strong>, no a Godolphy.</p>
-<p>Lo necesitas si quieres <strong>cobrar el servicio o un depósito al reservar</strong>, cobrar el resto con la tarjeta guardada o aplicar tu política de cancelación y no-show a la tarjeta. Si prefieres que tus clientas paguen siempre en el salón, no hace falta conectarlo.</p>
+<p><strong>Stripe</strong> es la pasarela de pago con la que tus clientes pagan con tarjeta cuando reservan en tu web. Los cobros van <strong>directamente a tu cuenta de Stripe</strong>, no a Godolphy.</p>
+<p>Lo necesitas si quieres <strong>cobrar el servicio o un depósito al reservar</strong>, cobrar el resto con la tarjeta guardada o aplicar tu política de cancelación y no-show a la tarjeta. Si prefieres que tus clientes paguen siempre en el salón, no hace falta conectarlo.</p>
 
 <div class="callout">
   <strong>Antes de empezar</strong>
@@ -337,12 +337,12 @@ function toggleMobileNav(){
   <li>En Godolphy, rellena las tres <strong>Claves de prueba</strong> (<code>pk_test_</code>, <code>sk_test_</code> y su <code>whsec_</code>) y pulsa <strong>Guardar datos</strong>.</li>
   <li>Activa <strong>Modo de prueba</strong>. Se guarda al momento y verás el aviso «Modo de prueba activado. Los pagos no son reales.».</li>
 </ol>
-<p><strong>Acuérdate de desactivarlo</strong> cuando acabes de probar. Mientras esté activo, tus clientas no pagan de verdad.</p>
+<p><strong>Acuérdate de desactivarlo</strong> cuando acabes de probar. Mientras esté activo, tus clientes no pagan de verdad.</p>
 
 <h2 id="desconectar">Desconectar Stripe</h2>
 <p>Pulsa <strong>Desconectar claves de producción</strong> o <strong>Desconectar claves de test</strong> y confirma con <strong>Sí, desconectar</strong>.</p>
 <ul>
-  <li>Sin claves de producción, <strong>dejas de cobrar las reservas online</strong>. Si tienes el cobro al reservar activado, desactívalo en <strong>Configuración → Pagos</strong> para que tus clientas puedan seguir reservando.</li>
+  <li>Sin claves de producción, <strong>dejas de cobrar las reservas online</strong>. Si tienes el cobro al reservar activado, desactívalo en <strong>Configuración → Pagos</strong> para que tus clientes puedan seguir reservando.</li>
   <li>Si quitas las de test, el modo de prueba se desactiva.</li>
 </ul>
 
@@ -352,8 +352,8 @@ function toggleMobileNav(){
 <div class="tip">
   <span class="tip-label">Consejo</span>
   <h2 id="consejo">Haz una reserva de prueba antes de anunciarlo</h2>
-  <p><strong>Prueba el recorrido completo como si fueras una clienta.</strong> Con el modo de prueba activado, reserva en tu propia web con una tarjeta de prueba de Stripe y comprueba que la cita aparece en tu calendario como pagada. Así sabes que el webhook funciona antes de que una clienta real se encuentre un problema.</p>
-  <p><strong>Cobrar al reservar reduce las citas perdidas.</strong> Una clienta que ya ha pagado o ha dejado un depósito falta mucho menos. Te lo contamos en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas en tu salón</a> y en la página de <a href="/funcionalidades/pagos-y-depositos/">pagos y depósitos</a>.</p>
+  <p><strong>Prueba el recorrido completo como si fueras un cliente.</strong> Con el modo de prueba activado, reserva en tu propia web con una tarjeta de prueba de Stripe y comprueba que la cita aparece en tu calendario como pagada. Así sabes que el webhook funciona antes de que un cliente real se encuentre un problema.</p>
+  <p><strong>Cobrar al reservar reduce las citas perdidas.</strong> Un cliente que ya ha pagado o ha dejado un depósito falta mucho menos. Te lo contamos en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas en tu salón</a> y en la página de <a href="/funcionalidades/pagos-y-depositos/">pagos y depósitos</a>.</p>
 </div>
 
 <h2 id="errores">Errores habituales</h2>
@@ -364,12 +364,12 @@ function toggleMobileNav(){
   <dd>La clave secreta está mal copiada o es de otra cuenta. Cópiala de nuevo desde Stripe, entera.</dd>
   <dt>No me deja activar o desactivar el modo de prueba</dt>
   <dd>Para cambiar de modo, el modo al que pasas tiene que tener sus tres claves. El mensaje te dice cuáles faltan.</dd>
-  <dt>Las clientas pagan pero la reserva no se confirma</dt>
+  <dt>Los clientes pagan pero la reserva no se confirma</dt>
   <dd>Casi siempre es el webhook. Mira el estado debajo del bloque <strong>Webhook de Stripe</strong>: si sale el aviso de que la firma no coincide, el <strong>Endpoint secret</strong> no es el de ese webhook o es de otro modo (producción o prueba). Si no ha llegado ningún aviso, revisa en Stripe que el webhook tenga la URL de tu salón y todos los eventos de la lista.</dd>
-  <dt>Una clienta no puede pagar al reservar</dt>
+  <dt>Un cliente no puede pagar al reservar</dt>
   <dd>Sin Stripe conectado no se puede cobrar online. Godolphy ya no te deja activar el cobro al reservar sin Stripe, pero si lo tenías activado y desconectaste Stripe, desactívalo en <strong>Configuración → Pagos</strong> o vuelve a conectar Stripe.</dd>
 </dl>
-<section class="ay-related"><h2>Artículos relacionados</h2><div class="ay-cards"><a class="ay-card" href="/ayuda/pago-o-deposito/">Cobro al reservar: pago completo o depósito<small>Cobros y políticas</small></a><a class="ay-card" href="/ayuda/politicas-de-cancelacion/">Políticas de cancelación y no-show<small>Cobros y políticas</small></a><a class="ay-card" href="/ayuda/ventas-y-reembolsos/">Cobrar una cita y hacer devoluciones<small>Clientas y reservas</small></a></div></section>
+<section class="ay-related"><h2>Artículos relacionados</h2><div class="ay-cards"><a class="ay-card" href="/ayuda/pago-o-deposito/">Cobro al reservar: pago completo o depósito<small>Cobros y políticas</small></a><a class="ay-card" href="/ayuda/politicas-de-cancelacion/">Políticas de cancelación y no-show<small>Cobros y políticas</small></a><a class="ay-card" href="/ayuda/ventas-y-reembolsos/">Cobrar una cita y hacer devoluciones<small>Clientes y reservas</small></a></div></section>
 <div class="ay-help">¿Te has quedado con alguna duda? Escríbenos a <a href="mailto:hello@godolphy.com">hello@godolphy.com</a> y te ayudamos.</div>
 </article>
 </div>

@@ -31,7 +31,7 @@
     {
       "id": "local",
       "titulo": "Tu local",
-      "descripcion": "Dónde atiendes a tus clientas.",
+      "descripcion": "Dónde atiendes a tus clientes.",
       "articulos": [
         {
           "slug": "crear-tu-local",
@@ -180,12 +180,12 @@
     },
     {
       "id": "dia-a-dia",
-      "titulo": "Clientas y reservas",
+      "titulo": "Clientes y reservas",
       "descripcion": "El trabajo de cada día en la agenda.",
       "articulos": [
         {
-          "slug": "clientas",
-          "titulo": "Crear y gestionar clientas",
+          "slug": "clientes",
+          "titulo": "Crear y gestionar clientes",
           "publicado": true
         },
         {
@@ -228,7 +228,7 @@
     {
       "id": "web-de-reservas",
       "titulo": "Tu web de reservas",
-      "descripcion": "El enlace que compartes con tus clientas.",
+      "descripcion": "El enlace que compartes con tus clientes.",
       "articulos": [
         {
           "slug": "enlace-de-reservas",
@@ -236,8 +236,8 @@
           "publicado": true
         },
         {
-          "slug": "como-reserva-tu-clienta",
-          "titulo": "Cómo reserva tu clienta paso a paso",
+          "slug": "como-reserva-tu-cliente",
+          "titulo": "Cómo reserva tu cliente paso a paso",
           "publicado": true
         },
         {

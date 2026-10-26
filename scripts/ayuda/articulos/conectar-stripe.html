@@ -3,7 +3,7 @@
   "titulo": "Conectar Stripe para cobrar online",
   "seo_title": "Cómo conectar Stripe a Godolphy para cobrar las reservas online | Centro de ayuda",
   "descripcion": "Paso a paso para conectar tu cuenta de Stripe a Godolphy: claves, webhook, modo de prueba y qué revisar si los pagos no se confirman.",
-  "resumen": "Stripe es la pasarela con la que tus clientas pagan con tarjeta al reservar. El dinero va directo a tu cuenta de Stripe.",
+  "resumen": "Stripe es la pasarela con la que tus clientes pagan con tarjeta al reservar. El dinero va directo a tu cuenta de Stripe.",
   "tiempo": "8 min",
   "actualizado": "2026-10-19",
   "relacionados": ["pago-o-deposito", "politicas-de-cancelacion", "ventas-y-reembolsos"]
@@ -11,8 +11,8 @@
 -->
 
 <h2 id="que-es">Qué es Stripe y para qué lo necesitas</h2>
-<p><strong>Stripe</strong> es la pasarela de pago con la que tus clientas pagan con tarjeta cuando reservan en tu web. Los cobros van <strong>directamente a tu cuenta de Stripe</strong>, no a Godolphy.</p>
-<p>Lo necesitas si quieres <strong>cobrar el servicio o un depósito al reservar</strong>, cobrar el resto con la tarjeta guardada o aplicar tu política de cancelación y no-show a la tarjeta. Si prefieres que tus clientas paguen siempre en el salón, no hace falta conectarlo.</p>
+<p><strong>Stripe</strong> es la pasarela de pago con la que tus clientes pagan con tarjeta cuando reservan en tu web. Los cobros van <strong>directamente a tu cuenta de Stripe</strong>, no a Godolphy.</p>
+<p>Lo necesitas si quieres <strong>cobrar el servicio o un depósito al reservar</strong>, cobrar el resto con la tarjeta guardada o aplicar tu política de cancelación y no-show a la tarjeta. Si prefieres que tus clientes paguen siempre en el salón, no hace falta conectarlo.</p>
 
 <div class="callout">
   <strong>Antes de empezar</strong>
@@ -67,12 +67,12 @@
   <li>En Godolphy, rellena las tres <strong>Claves de prueba</strong> (<code>pk_test_</code>, <code>sk_test_</code> y su <code>whsec_</code>) y pulsa <strong>Guardar datos</strong>.</li>
   <li>Activa <strong>Modo de prueba</strong>. Se guarda al momento y verás el aviso «Modo de prueba activado. Los pagos no son reales.».</li>
 </ol>
-<p><strong>Acuérdate de desactivarlo</strong> cuando acabes de probar. Mientras esté activo, tus clientas no pagan de verdad.</p>
+<p><strong>Acuérdate de desactivarlo</strong> cuando acabes de probar. Mientras esté activo, tus clientes no pagan de verdad.</p>
 
 <h2 id="desconectar">Desconectar Stripe</h2>
 <p>Pulsa <strong>Desconectar claves de producción</strong> o <strong>Desconectar claves de test</strong> y confirma con <strong>Sí, desconectar</strong>.</p>
 <ul>
-  <li>Sin claves de producción, <strong>dejas de cobrar las reservas online</strong>. Si tienes el cobro al reservar activado, desactívalo en <strong>Configuración → Pagos</strong> para que tus clientas puedan seguir reservando.</li>
+  <li>Sin claves de producción, <strong>dejas de cobrar las reservas online</strong>. Si tienes el cobro al reservar activado, desactívalo en <strong>Configuración → Pagos</strong> para que tus clientes puedan seguir reservando.</li>
   <li>Si quitas las de test, el modo de prueba se desactiva.</li>
 </ul>
 
@@ -82,8 +82,8 @@
 <div class="tip">
   <span class="tip-label">Consejo</span>
   <h2 id="consejo">Haz una reserva de prueba antes de anunciarlo</h2>
-  <p><strong>Prueba el recorrido completo como si fueras una clienta.</strong> Con el modo de prueba activado, reserva en tu propia web con una tarjeta de prueba de Stripe y comprueba que la cita aparece en tu calendario como pagada. Así sabes que el webhook funciona antes de que una clienta real se encuentre un problema.</p>
-  <p><strong>Cobrar al reservar reduce las citas perdidas.</strong> Una clienta que ya ha pagado o ha dejado un depósito falta mucho menos. Te lo contamos en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas en tu salón</a> y en la página de <a href="/funcionalidades/pagos-y-depositos/">pagos y depósitos</a>.</p>
+  <p><strong>Prueba el recorrido completo como si fueras un cliente.</strong> Con el modo de prueba activado, reserva en tu propia web con una tarjeta de prueba de Stripe y comprueba que la cita aparece en tu calendario como pagada. Así sabes que el webhook funciona antes de que un cliente real se encuentre un problema.</p>
+  <p><strong>Cobrar al reservar reduce las citas perdidas.</strong> Un cliente que ya ha pagado o ha dejado un depósito falta mucho menos. Te lo contamos en <a href="/como-evitar-las-citas-canceladas-de-mi-salon/">cómo evitar las citas canceladas en tu salón</a> y en la página de <a href="/funcionalidades/pagos-y-depositos/">pagos y depósitos</a>.</p>
 </div>
 
 <h2 id="errores">Errores habituales</h2>
@@ -94,8 +94,8 @@
   <dd>La clave secreta está mal copiada o es de otra cuenta. Cópiala de nuevo desde Stripe, entera.</dd>
   <dt>No me deja activar o desactivar el modo de prueba</dt>
   <dd>Para cambiar de modo, el modo al que pasas tiene que tener sus tres claves. El mensaje te dice cuáles faltan.</dd>
-  <dt>Las clientas pagan pero la reserva no se confirma</dt>
+  <dt>Los clientes pagan pero la reserva no se confirma</dt>
   <dd>Casi siempre es el webhook. Mira el estado debajo del bloque <strong>Webhook de Stripe</strong>: si sale el aviso de que la firma no coincide, el <strong>Endpoint secret</strong> no es el de ese webhook o es de otro modo (producción o prueba). Si no ha llegado ningún aviso, revisa en Stripe que el webhook tenga la URL de tu salón y todos los eventos de la lista.</dd>
-  <dt>Una clienta no puede pagar al reservar</dt>
+  <dt>Un cliente no puede pagar al reservar</dt>
   <dd>Sin Stripe conectado no se puede cobrar online. Godolphy ya no te deja activar el cobro al reservar sin Stripe, pero si lo tenías activado y desconectaste Stripe, desactívalo en <strong>Configuración → Pagos</strong> o vuelve a conectar Stripe.</dd>
 </dl>

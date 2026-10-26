@@ -406,6 +406,26 @@
       "source": "/que-es-verifactu-y-como-me-afecta-a-mi-salon/",
       "destination": "/funcionalidades/facturacion-y-reporte/",
       "permanent": true
+    },
+    {
+      "source": "/ayuda/clientas",
+      "destination": "/ayuda/clientes/",
+      "permanent": true
+    },
+    {
+      "source": "/ayuda/clientas/",
+      "destination": "/ayuda/clientes/",
+      "permanent": true
+    },
+    {
+      "source": "/ayuda/como-reserva-tu-clienta",
+      "destination": "/ayuda/como-reserva-tu-cliente/",
+      "permanent": true
+    },
+    {
+      "source": "/ayuda/como-reserva-tu-clienta/",
+      "destination": "/ayuda/como-reserva-tu-cliente/",
+      "permanent": true
     }
   ]
 }
