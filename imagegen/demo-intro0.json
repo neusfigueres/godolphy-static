@@ -1,0 +1,9 @@
+{
+  "out": "imagegen/demo/intro0.png",
+  "model": "gpt-image-2-ext",
+  "prompt": "Photorealistic cinematic photo, 16:9. A modern aesthetic clinic reception at dusk: warm neutral interior with cream walls, light oak wooden slats, soft indirect warm lighting, a few green plants, elegant and real (not luxury-fake). On the reception desk, slightly off-center, a sleek silver laptop seen from a 3/4 front angle; its screen clearly displays the exact dashboard from the reference image (violet sidebar, white panels, purple insight banner). Shallow depth of field, subtle bokeh lights in the background, no people, no text overlays, no logos other than what is on the laptop screen.",
+  "size": "16:9",
+  "ref_files": ["imagegen/demo/panel_ia_16x9.jpg"],
+  "extra": {"resolution": "2K"},
+  "no_style": true
+}
