@@ -854,6 +854,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/gastos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/precios/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/plan-financiero/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/gestor-diario/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/plan-y-facturacion/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

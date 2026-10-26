@@ -297,6 +297,33 @@
       ]
     },
     {
+      "id": "negocio",
+      "titulo": "Negocio",
+      "descripcion": "Gastos, precios y objetivos.",
+      "articulos": [
+        {
+          "slug": "gastos",
+          "titulo": "Gastos: sube tus facturas y el extracto del banco",
+          "publicado": true
+        },
+        {
+          "slug": "precios",
+          "titulo": "Precios: cuánto te cuesta cada servicio y qué cobrar",
+          "publicado": true
+        },
+        {
+          "slug": "plan-financiero",
+          "titulo": "Plan financiero: tus objetivos mes a mes",
+          "publicado": true
+        },
+        {
+          "slug": "gestor-diario",
+          "titulo": "Hoy te recomendamos: tu gestor diario",
+          "publicado": true
+        }
+      ]
+    },
+    {
       "id": "cuenta",
       "titulo": "Tu cuenta",
       "descripcion": "Tu plan y tu factura de Godolphy.",
