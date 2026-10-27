@@ -50,6 +50,7 @@ def run(job):
         body["image_with_roles"] = [{"url": u, "role": r} for u, r in zip(frames, job["roles"])]
     elif frames:
         body["image_urls"] = frames
+    if job.get("negative_prompt"): body["negative_prompt"] = job["negative_prompt"]
     body.update(job.get("body", {}))
     sub = call("POST", "/videos/generations", body)
     print("submit:", json.dumps(sub)[:600], flush=True)
