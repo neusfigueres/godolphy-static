@@ -1,0 +1,34 @@
+name: Fetch media
+on:
+  push:
+    branches: [main]
+    paths: ['fetch/*.json']
+  workflow_dispatch:
+concurrency:
+  group: fetch-media
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, urllib.request
+          for p in sorted(glob.glob("fetch/*.json")):
+              for it in json.load(open(p)):
+                  os.makedirs(os.path.dirname(it["out"]), exist_ok=True)
+                  r = urllib.request.Request(it["url"], headers={"User-Agent": "Mozilla/5.0"})
+                  with urllib.request.urlopen(r, timeout=300) as x: open(it["out"], "wb").write(x.read())
+                  print("saved", it["out"], os.path.getsize(it["out"]))
+              os.makedirs("fetch/done", exist_ok=True); os.rename(p, "fetch/done/" + os.path.basename(p))
+          PY
+      - name: Commit
+        run: |
+          git config user.name "GitHub Actions"; git config user.email "actions@github.com"
+          git add -A imagegen fetch
+          git diff --cached --quiet && exit 0
+          git commit -m "Media descargada"; git pull --rebase; git push
