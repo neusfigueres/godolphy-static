@@ -1,0 +1,7 @@
+{
+  "type": "transcribe",
+  "file": "imagegen/demo/audio/vo_ia.mp3",
+  "out": "imagegen/demo/audio/vo_ia_w.txt",
+  "language": "es",
+  "words": true
+}
