@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/p3g_2.mp4",
+  "model": "wan2.7",
+  "poll": 360,
+  "frames": [
+    "imagegen/demo/presenter_3.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "The woman in image 1 talks naturally and warmly to the camera, like a real person on a video call. Photorealistic, lips perfectly synchronized with the audio, natural blinking, natural head movements. Once or twice she makes a small spontaneous gesture: tucks her hair behind her ear or briefly touches her hair, with one natural, anatomically correct hand, then lowers it. Static camera. Keep her face, hair, clothes and background exactly as in the image.",
+  "negative_prompt": "objects in hands, products, phone, text, extra fingers, deformed hands, distorted face, camera shake",
+  "body": {
+    "duration": 14,
+    "resolution": "720P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/4f7efe861423e0894022a2c01ca05ba012967b71/imagegen/demo/audio/sheila/sh_2.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 115,
+      "completed": 1793116039,
+      "cost": 0.9296,
+      "created": 1793115924,
+      "credits_cost": 9.296,
+      "estimated_time": 100,
+      "id": "task_01M5Z0KAE2VMDRWZ7RQW1BZ21A",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793202439,
+            "url": [
+              "https://getapib.org/video/9998206883960836-64c0c81b-9ae1-4ad0-87cb-4b7e8fae7e49-video_wan26_0f2c0a21-e18c-48de-84b4-7345d6011a8e_1793116038820121576.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
