@@ -115,7 +115,7 @@
 .tip h2{color:#fff;margin-top:0!important}
 .tip p{color:rgba(255,255,255,.78)}.tip strong{color:#fff}.tip a{color:var(--yellow)}
 .shot{margin:20px 0 28px;border:1.5px dashed rgba(99,28,255,.35);border-radius:14px;background:var(--lila-50);min-height:140px;display:flex;align-items:flex-end;padding:14px 16px}
-.shot img{display:block;width:100%;height:auto;border-radius:10px}
+.shot img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:10px}
 .shot figcaption{font-size:13px;color:var(--ink-3)}
 .shot.has-img{border:1px solid var(--line);background:#fff;padding:0;display:block}
 .shot.has-img figcaption{padding:10px 14px}
@@ -292,7 +292,7 @@ function toggleMobileNav(){
 
 <h2 id="donde">Dónde se conecta</h2>
 <p>En el menú lateral, entra en <strong>Configuración</strong> y abre la pestaña <strong>General</strong>. Baja hasta el bloque <strong>Integración Stripe</strong>.</p>
-<figure class="shot has-img"><img src="/ayuda/img/configuracion-stripe.jpg" alt="Configuración → General → Integración Stripe" loading="lazy"/><figcaption>Configuración → General → Integración Stripe</figcaption></figure>
+<figure class="shot has-img"><img src="/ayuda/img/configuracion-stripe.jpg" width="1568" height="752" alt="Configuración → General → Integración Stripe" loading="lazy"/><figcaption>Configuración → General → Integración Stripe</figcaption></figure>
 
 <h2 id="webhook">1. Crea el webhook en Stripe</h2>
 <p>El webhook es el aviso que Stripe envía a Godolphy cada vez que se paga, se retiene o se devuelve un importe. <strong>Sin él, las reservas pagadas con tarjeta no se confirman.</strong></p>

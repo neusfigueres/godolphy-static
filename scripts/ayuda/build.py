@@ -77,7 +77,7 @@ CSS = """
 .tip h2{color:#fff;margin-top:0!important}
 .tip p{color:rgba(255,255,255,.78)}.tip strong{color:#fff}.tip a{color:var(--yellow)}
 .shot{margin:20px 0 28px;border:1.5px dashed rgba(99,28,255,.35);border-radius:14px;background:var(--lila-50);min-height:140px;display:flex;align-items:flex-end;padding:14px 16px}
-.shot img{display:block;width:100%;height:auto;border-radius:10px}
+.shot img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:10px}
 .shot figcaption{font-size:13px;color:var(--ink-3)}
 .shot.has-img{border:1px solid var(--line);background:#fff;padding:0;display:block}
 .shot.has-img figcaption{padding:10px 14px}
@@ -195,13 +195,32 @@ def sidebar(data, current):
     return "\n".join(out)
 
 
+try:
+    HIDPI = json.load(open(OUT / "img" / "hidpi.json", encoding="utf-8"))  # {captura: factor}
+except Exception:
+    HIDPI = {}
+
+
 def shots(content):
     """Si existe la captura en ayuda/img/<data-shot>.png, la inserta; si no, deja el hueco."""
     def repl(m):
         name, cap = m.group(1), m.group(2)
         for ext in ("png", "jpg", "webp"):
-            if (OUT / "img" / f"{name}.{ext}").exists():
-                return f'<figure class="shot has-img"><img src="/ayuda/img/{name}.{ext}" alt="{esc(cap)}" loading="lazy"/><figcaption>{cap}</figcaption></figure>'
+            f = OUT / "img" / f"{name}.{ext}"
+            if f.exists():
+                # Nunca se amplía por encima de su tamaño real (se vería pixelada).
+                # Las capturas de alta resolución (hidpi.json: nombre → factor) se muestran a su tamaño real.
+                size = ""
+                try:
+                    from PIL import Image
+                    w, h = Image.open(f).size
+                    if name in HIDPI:
+                        k = float(HIDPI[name])
+                        w, h = round(w / k), round(h / k)
+                    size = f' width="{w}" height="{h}"'
+                except Exception:
+                    pass
+                return f'<figure class="shot has-img"><img src="/ayuda/img/{name}.{ext}"{size} alt="{esc(cap)}" loading="lazy"/><figcaption>{cap}</figcaption></figure>'
         return ""
     return re.sub(r'<figure class="shot" data-shot="([^"]+)"><figcaption>(.*?)</figcaption></figure>', repl, content)
 
