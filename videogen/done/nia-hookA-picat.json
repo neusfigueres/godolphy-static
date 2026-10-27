@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_hookA_picat.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_picat.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "High-angle shot from above: the woman in image 1 looks up into the camera and talks like a friendly, confident influencer starting a reel. Photorealistic, lips perfectly synchronized with the audio, natural blinking, natural head movements, no hand gestures. The camera stays above her with a very subtle slow push-in. Keep her face, hair, clothes and the salon exactly as in the image.",
+  "negative_prompt": "objects in hands, phone, text, extra fingers, deformed hands, distorted face, camera shake, hands touching hair",
+  "body": {
+    "duration": 5,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/1e900bbd35191166de17fd764ae9e9a564536924/imagegen/demo/audio/ia/ia_0.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 63,
+      "completed": 1793133912,
+      "cost": 0.548,
+      "created": 1793133849,
+      "credits_cost": 5.48,
+      "estimated_time": 100,
+      "id": "task_01M5ZHPAN4XVF6HEXQV7G01H9S",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793220312,
+            "url": [
+              "https://getapib.org/video/9998206866087871-3c103b44-c900-4cf9-8dc6-7c8742573cb2-video_wan26_50372df1-d2e6-46ac-a480-ec4051592bad_1793133911642977040.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
