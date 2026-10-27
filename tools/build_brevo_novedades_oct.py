@@ -40,7 +40,7 @@ def build(e):
         body = (f'<tr><td class="px" style="padding:30px 40px 8px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f3efff;border-radius:20px;"><tr><td style="padding:26px 26px 18px 26px;">'
                 f'<p style="margin:0 0 16px 0;{H}font-size:24px;line-height:28px;font-weight:800;color:#02021e;">{e["box_title"]}</p>'
                 f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{checks(e["items"])}</table>'
-                f'<p style="margin:6px 0 0 0;{B}font-size:15px;line-height:22px;color:#3d3858;"><b>Pruébalo 30 días gratis, sin tarjeta.</b> <a href="{url(SIGNUP, c, "pie")}" style="color:#631cff;font-weight:700;text-decoration:underline;">Empezar ahora</a></p>'
+                f'<p style="margin:6px 0 0 0;{B}font-size:15px;line-height:22px;color:#3d3858;">{e.get("foot","<b>Pruébalo 30 días gratis, sin tarjeta.</b>")} <a href="{url(SIGNUP, c, "pie")}" style="color:#631cff;font-weight:700;text-decoration:underline;">Empezar ahora</a></p>'
                 f'</td></tr></table></td></tr>')
         hero_btn = f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin-top:22px;"><tr><td align="center">{btn(main, e["cta"], "#FFFFFF", "#631cff")}</td></tr></table>'
     html = f'''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -93,12 +93,16 @@ E = [
       items=['Pásalas a otra persona del equipo, a la misma hora y al mismo precio.',
              'O envía un enlace para que cada cliente elija a otra persona, otro día o cancele sin coste.',
              'Si no responde, 24 h antes Godolphy pasa la cita a quien esté libre o la cancela y lo devuelve todo.']),
- dict(id='n2-tarjetas', camp='novedades-tarjetas-regalo', subject='Has vendido una tarjeta regalo 🎁', pre='Este es el aviso que recibirás con cada venta. Llegas a tiempo para Navidad.',
-      pill='Tarjetas regalo', claim='Has vendido una tarjeta regalo. Mientras dormías.',
-      msg='Este es el mensaje que te llegará con cada venta. Tus clientes compran la tarjeta desde tu web de reservas, a cualquier hora y aunque el salón esté cerrado.',
+ dict(id='n2-tarjetas', camp='novedades-tarjetas-regalo', subject='Has vendido una tarjeta regalo 🎁', pre='Vende en Navidad y llena tu agenda de enero y febrero.',
+      pill='Tarjetas regalo', claim='Vende en Navidad. Llena tu agenda en enero.',
+      msg='Diciembre es cuando más se regala. Vende tarjetas regalo desde tu web de reservas y tus clientes las canjearán en enero y febrero, justo cuando la agenda está más floja.',
       img=f'{G}/funcionalidades/cupones-y-tarjetas-regalo/img/s1-tarjeta-regalo.png', alt='Tarjeta regalo de Godolphy',
       cta='Activar tarjetas regalo', cta_url=f'{G}/funcionalidades/cupones-y-tarjetas-regalo/', box_title='Llegas a tiempo para Navidad.',
-      items=['Se venden solas desde tu web de reservas, 24 horas.', 'El dinero va directo a tu cuenta.', 'La persona que la recibe la tiene en su email, lista para regalar.']),
+      foot='<b>Incluido en los planes Pro y Max y en la prueba gratis de 30 días.</b>',
+      items=['Tus clientes la compran desde tu web de reservas, a cualquier hora, aunque el salón esté cerrado.',
+             'Eligen el importe y la fecha de envío, y dejan un mensaje para quien la recibe.',
+             'Quien la recibe tiene el código en su email y lo usa al reservar contigo.',
+             'El dinero va directo a tu cuenta.']),
  dict(id='n3-plan2027', camp='novedades-plan-financiero-2027', subject='Empieza tu plan financiero 2027', pre='Gratis en Excel, o automático con Godolphy. Tú eliges.',
       pill='Plan financiero 2027', claim='Este año sí: crea tu plan financiero 2027.',
       msg='Citas, facturación y gastos, mes a mes. Hay dos maneras de hacer tu plan financiero:',
