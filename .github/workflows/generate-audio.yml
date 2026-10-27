@@ -21,6 +21,7 @@ jobs:
       - name: Generate
         env:
           APIMART_API_KEY: ${{ secrets.APIMART }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python3 scripts/apimart_audio.py
 
       - name: Commit results

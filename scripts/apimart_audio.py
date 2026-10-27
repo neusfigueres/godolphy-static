@@ -51,9 +51,22 @@ def tts(job):
         if "json" in ct: errs.append(f"{model}: {data[:300]}"); continue
         os.makedirs(os.path.dirname(job["out"]),exist_ok=True); open(job["out"],"wb").write(data); job["model_used"]=model; print("saved",job["out"],len(data)); return
     raise RuntimeError(" | ".join(errs))
+def eleven(job):
+    """{"type":"eleven","out":"…/x.mp3","voice_id":"…","text":"…","settings":{…}}"""
+    ek=os.environ.get("ELEVENLABS_API_KEY","")
+    if not ek: raise RuntimeError("Falta ELEVENLABS_API_KEY")
+    body={"text":job["text"],"model_id":job.get("model_id","eleven_multilingual_v2"),"language_code":job.get("language","es"),
+          "voice_settings":job.get("settings",{"stability":0.5,"similarity_boost":0.8,"style":0.2,"use_speaker_boost":True})}
+    if body["model_id"]=="eleven_multilingual_v2": body.pop("language_code")
+    r=urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{job['voice_id']}?output_format=mp3_44100_128",method="POST",
+        data=json.dumps(body).encode(),headers={"xi-api-key":ek,"Content-Type":"application/json"})
+    try:
+        with urllib.request.urlopen(r,timeout=300) as x: data=x.read()
+    except urllib.error.HTTPError as e: raise RuntimeError(f"HTTP {e.code}: {e.read().decode()[:600]}")
+    os.makedirs(os.path.dirname(job["out"]),exist_ok=True); open(job["out"],"wb").write(data); print("saved",job["out"],len(data))
 def process(p):
     job=json.load(open(p)); dest="audiogen/done"
-    try: {"music":music,"transcribe":transcribe,"tts":tts}[job["type"]](job)
+    try: {"music":music,"transcribe":transcribe,"tts":tts,"eleven":eleven}[job["type"]](job)
     except Exception as e: print("ERROR",p,e); job["error"]=str(e)[:1500]; dest="audiogen/failed"
     os.makedirs(dest,exist_ok=True); json.dump(job,open(os.path.join(dest,os.path.basename(p)),"w"),ensure_ascii=False,indent=2); os.remove(p)
 if __name__=="__main__":
