@@ -100,7 +100,7 @@ E = [
       cta='Activar tarjetas regalo', cta_url=f'{G}/funcionalidades/cupones-y-tarjetas-regalo/', box_title='Llegas a tiempo para Navidad.',
       items=['Se venden solas desde tu web de reservas, 24 horas.', 'El dinero va directo a tu cuenta.', 'La persona que la recibe la tiene en su email, lista para regalar.']),
  dict(id='n3-plan2027', camp='novedades-plan-financiero-2027', subject='Empieza tu plan financiero 2027', pre='Gratis en Excel, o automático con Godolphy. Tú eliges.',
-      pill='Plan financiero 2027', claim='Empieza 2027 sabiendo cuánto vas a ganar.',
+      pill='Plan financiero 2027', claim='Este año sí: crea tu plan financiero 2027.',
       msg='Citas, facturación y gastos, mes a mes. Hay dos maneras de hacer tu plan financiero:',
       img=f'{G}/img/email/novedades/email-plan-2027.png', alt='Plan financiero mes a mes en Godolphy', cta='', cta_url=f'{G}/funcionalidades/plan-financiero/',
       options=[dict(title='Plantilla gratis en Excel', text='La rellenas tú, mes a mes.', label='Descargar plantilla', url=f'{G}/plan-financiero-salon-estetica-excel-google-sheet/'),
