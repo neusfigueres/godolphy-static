@@ -28,13 +28,16 @@ def music(job):
     raise RuntimeError("timeout")
 def transcribe(job):
     b=uuid.uuid4().hex; fn=os.path.basename(job["file"]); parts=[]
-    for k,v in [("model","whisper-1"),("language",job.get("language","es")),("response_format","verbose_json")]:
+    kv=[("model","whisper-1"),("language",job.get("language","es")),("response_format","verbose_json")]
+    if job.get("words"): kv+=[("timestamp_granularities[]","word"),("timestamp_granularities[]","segment")]
+    for k,v in kv:
         parts.append(f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode())
     parts.append(f'--{b}\r\nContent-Disposition: form-data; name="file"; filename="{fn}"\r\nContent-Type: application/octet-stream\r\n\r\n'.encode()+open(job["file"],"rb").read()+b"\r\n")
     parts.append(f"--{b}--\r\n".encode())
     t=req("POST","/audio/transcriptions",data=b"".join(parts),ctype=f"multipart/form-data; boundary={b}")
     lines=[f'{s.get("start",0):6.2f}-{s.get("end",0):6.2f}  {s.get("text","").strip()}' for s in t.get("segments",[])] or [t.get("text","")]
     os.makedirs(os.path.dirname(job["out"]),exist_ok=True); open(job["out"],"w").write("\n".join(lines)+"\n"); print("\n".join(lines))
+    if job.get("words"): open(os.path.splitext(job["out"])[0]+".json","w").write(json.dumps(t,ensure_ascii=False))
 def tts(job):
     errs=[]
     for model in job.get("models",["gpt-4o-mini-tts","tts-1"]):
