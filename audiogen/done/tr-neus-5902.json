@@ -1,0 +1,6 @@
+{
+  "type": "transcribe",
+  "file": "imagegen/demo/audio/neus_5902.mp3",
+  "out": "imagegen/demo/audio/neus_5902.txt",
+  "language": "es"
+}
