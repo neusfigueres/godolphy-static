@@ -86,7 +86,7 @@ img{{border:0;outline:none;text-decoration:none;display:block;-ms-interpolation-
 G = 'https://godolphy.com'
 E = [
  dict(id='n1-ausencias', camp='novedades-ausencias', subject='Mañana no vendré a trabajar', pre='Lo que pasa en tu agenda cuando alguien del equipo se pone de baja.',
-      pill='Ausencias del equipo', claim='«Mañana no vendré a trabajar.» Y tu agenda se arregla sola.',
+      pill='Ausencias del equipo', claim='Si tu empleada está de baja, no pierdas el tiempo contactando a los clientes.',
       msg='Marca la ausencia y Godolphy te enseña las citas afectadas. Tú eliges qué hacer con ellas.',
       img=f'{G}/img/email/novedades/email-ausencias.png', alt='Citas afectadas por una ausencia en Godolphy',
       cta='Ver cómo funciona', cta_url=f'{G}/funcionalidades/vacaciones-y-ausencias/', box_title='Sin llamar a nadie.',
