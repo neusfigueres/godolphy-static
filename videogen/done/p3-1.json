@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/p3_1.mp4",
+  "model": "wan2.7",
+  "poll": 360,
+  "frames": [
+    "imagegen/demo/presenter_3.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "The woman in image 1 talks naturally and warmly to the camera, presenting her salon software. Photorealistic, lips perfectly synchronized with the audio, natural blinking, subtle natural head movements. Static camera, hands out of frame, holding nothing. Keep her face, hair, clothes and background exactly as in the image.",
+  "negative_prompt": "objects in hands, products, text, distorted face, camera shake",
+  "body": {
+    "duration": 14,
+    "resolution": "720P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/4f7efe861423e0894022a2c01ca05ba012967b71/imagegen/demo/audio/sheila/sh_1.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 185,
+      "completed": 1793115604,
+      "cost": 0.9296,
+      "created": 1793115419,
+      "credits_cost": 9.296,
+      "estimated_time": 100,
+      "id": "task_01M5Z03WS1C894BPY08RSDWWRS",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793202004,
+            "url": [
+              "https://getapib.org/video/9998206884396375-0259bed2-0a49-4bce-97dd-e36db9be417f-video_wan26_62890a0e-3b00-4c60-a51d-a780cbb5af56_1793115603505487497.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
