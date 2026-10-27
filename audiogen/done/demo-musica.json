@@ -1,0 +1,56 @@
+{
+  "type": "music",
+  "out": "imagegen/demo/audio/musica.mp3",
+  "body": {
+    "custom": true,
+    "instrumental": true,
+    "version": "v6",
+    "title": "Godolphy demo tour",
+    "duration": 95,
+    "style": "modern corporate tech background music for a SaaS product tour, upbeat but understated, light electronic pop, soft plucked synths, warm pads, gentle four-on-the-floor beat, confident and optimistic, no vocals, steady energy for voice-over"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 25,
+      "completed": 1793101669,
+      "cost": 0.05,
+      "created": 1793101644,
+      "credits_cost": 0.5,
+      "estimated_time": 180,
+      "id": "task_01M5YJZGS3D4F6GNMBNNPH6MTP",
+      "progress": 100,
+      "result": {
+        "music": [
+          {
+            "audio_id": "39fec446-964a-4b31-9638-2815a1137cda",
+            "audio_url": "https://getapib.org/audio/9998206898333521-66932d7c-9f78-4e50-999f-6f7a2b5849d6-39fec446-964a-4b31-9638-2815a1137cda.mp3",
+            "created_at": "2026-10-27T11:47:25.150Z",
+            "display_tags": "electronic pop, instrumental",
+            "duration": 94.2,
+            "image_large_url": "https://cdn2.suno.ai/image_large_39fec446-964a-4b31-9638-2815a1137cda.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_39fec446-964a-4b31-9638-2815a1137cda.jpeg",
+            "lyrics": "",
+            "status": "complete",
+            "tags": "Light electronic pop, instrumental; smooth synth bus compression rounds the attack, softens the transients, and keeps the synth layers even beneath the voice-over; upbeat but understated, steady four-on-the-floor beat, soft plucked synths and warm pads, confident and optimistic.",
+            "title": "Godolphy demo tour"
+          },
+          {
+            "audio_id": "14b098b0-6438-46e4-91e3-ed91307de001",
+            "audio_url": "https://getapib.org/audio/9998206898331842-06afb4c6-7c8c-447e-a1c1-d48a21b89d9a-14b098b0-6438-46e4-91e3-ed91307de001.mp3",
+            "created_at": "2026-10-27T11:47:25.150Z",
+            "display_tags": "electronic pop, instrumental",
+            "duration": 94.8,
+            "image_large_url": "https://cdn2.suno.ai/image_large_14b098b0-6438-46e4-91e3-ed91307de001.jpeg",
+            "image_url": "https://cdn2.suno.ai/image_14b098b0-6438-46e4-91e3-ed91307de001.jpeg",
+            "lyrics": "",
+            "status": "complete",
+            "tags": "Light electronic pop, instrumental; upbeat but understated, confident and optimistic, with steady energy for voice-over; soft plucked synths over warm pads and a gentle four-on-the-floor beat; short plate reverb gives each pluck a brief tail, while pads and drums stay clear and even.",
+            "title": "Godolphy demo tour"
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
