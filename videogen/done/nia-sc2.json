@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_sc2_silla.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_silla.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "Fun energetic social media ad. The woman in image 1 rolls smoothly across the hair salon on the swivel office chair, gliding towards the camera while she talks happily to the camera; the camera tracks backwards in front of her. Photorealistic, lips perfectly synchronized with the audio, natural expressions, hair moving with the motion. Keep her face, clothes and the salon exactly as in the image.",
+  "negative_prompt": "objects in hands, phone, text, extra fingers, deformed hands, extra legs, distorted face, camera shake",
+  "body": {
+    "duration": 6,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/9ce4bf068a98dfdc05de383625e5914bc58de9e7/imagegen/demo/audio/ia/sc2.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 63,
+      "completed": 1793135541,
+      "cost": 0.6576,
+      "created": 1793135478,
+      "credits_cost": 6.576,
+      "estimated_time": 100,
+      "id": "task_01M5ZK8207E0EH9ACTX62X1BE3",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793221941,
+            "url": [
+              "https://getapib.org/video/9998206864458839-d1a330d2-b024-4458-acaf-8a976f1ecf73-video_wan26_a33f9423-082e-4840-9353-f371f821c2f8_1793135540839374294.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
