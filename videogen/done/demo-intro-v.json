@@ -1,0 +1,39 @@
+{
+  "out": "imagegen/demo/videos/intro_v.mp4",
+  "model": "kling-v3",
+  "poll": 600,
+  "frames": [
+    "imagegen/demo/intro0_v.png"
+  ],
+  "prompt": "Photorealistic cinematic vertical shot. Smooth, steady dolly-in toward the laptop on the reception desk: the camera glides forward and slightly down, the warm bokeh lights drift softly, until the laptop screen fills the whole width of the frame. The dashboard on the screen stays sharp, stable and unchanged, no morphing of the interface. No people, no added text.",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "negative_prompt": "morphing, warped interface, distorted text, people, hands, camera shake",
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 160,
+      "completed": 1793113545,
+      "cost": 0.448,
+      "created": 1793113385,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M5YY5TSRAFGAYA3EGQ9DM14K",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793199945,
+            "url": [
+              "https://getapib.org/video/9998206886454538-60948539-d2af-45fd-b711-87e423c9dfc9-video_task_01M5YY5TSRAFGAYA3EGQ9DM14K.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
