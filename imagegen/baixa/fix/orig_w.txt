@@ -1,0 +1,15 @@
+  0.00-  2.72  Son las ocho y media, todo listo para empezar el día.
+  3.78-  4.32  No puede ser.
+  4.62-  7.22  Hasta que Lorena, una de tus maniquiristas, se pone enferma
+  7.22-  8.92  y tiene siete clientas citadas hoy.
+  9.14- 10.96  Hola Marta, Lorena está enferma y hoy no podrá atenderte.
+ 11.10- 11.92  No, a las cinco está completo.
+ 12.38- 13.04  Genial, hoy no trabajo.
+ 13.28- 14.12  Hoy me paso el día llamando.
+ 15.58- 17.58  O puedes hacerlo de otra manera.
+ 18.20- 19.86  Godofic detecta las citas afectadas
+ 19.86- 22.08  y busca alternativas con el resto del equipo.
+ 22.78- 24.32  Tú revisas, tú autorizas.
+ 24.60- 26.56  Y cada clienta confirma su nueva cita.
+ 26.96- 28.02  Pues ya estaría.
+ 30.00- 30.06  ¡Gracias!
