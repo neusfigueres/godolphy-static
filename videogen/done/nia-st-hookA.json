@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_st_hookA.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_picat_nb.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "High-angle static shot from above. The woman in image 1 stands still and looks up into the camera, talking like a friendly confident influencer. Photorealistic, lips perfectly synchronized with the audio, natural blinking, small natural head movements only. She stays in place. Static camera. Keep her face, clothes and the salon exactly as in the image.",
+  "negative_prompt": "camera movement, stool moving, rolling, walking, objects appearing, text, extra fingers, deformed hands, distorted face, camera shake, hands touching hair",
+  "body": {
+    "duration": 5,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/9ce4bf068a98dfdc05de383625e5914bc58de9e7/imagegen/demo/audio/ia/ia_0.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 53,
+      "completed": 1793171261,
+      "cost": 0.548,
+      "created": 1793171208,
+      "credits_cost": 5.48,
+      "estimated_time": 100,
+      "id": "task_01M60NADSXR43FAFNER88Z0XDY",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793257661,
+            "url": [
+              "https://getapib.org/video/9998206828739342-737378f4-947a-40f9-a3ba-c274b6841315-video_wan26_be279ab9-d77d-4b05-acd4-4edae896e6d2_1793171260122097687.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

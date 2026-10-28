@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_st_1.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_taburete_cafe.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "Static tripod shot. The woman in image 1 stays seated still on the stool in the hair salon, holding her coffee cup, and talks warmly and naturally to the camera. The stool does not move at all. Photorealistic, lips perfectly synchronized with the audio, natural blinking, small natural head movements and expressions. The hairdresser in the background keeps working calmly. Keep her face, clothes and the salon exactly as in the image.",
+  "negative_prompt": "camera movement, stool moving, rolling, walking, objects appearing, text, extra fingers, deformed hands, distorted face, camera shake, hands touching hair",
+  "body": {
+    "duration": 11,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/9ce4bf068a98dfdc05de383625e5914bc58de9e7/imagegen/demo/audio/ia/ia_1.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 103,
+      "completed": 1793171311,
+      "cost": 1.2056,
+      "created": 1793171208,
+      "credits_cost": 12.056000000000001,
+      "estimated_time": 100,
+      "id": "task_01M60NADT8GJEK48N7JX7RFXMQ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793257711,
+            "url": [
+              "https://getapib.org/video/9998206828688624-4d6bf0ea-3f0d-4691-be05-d9921f5688f3-video_wan26_b7ac904a-af1a-4118-af84-aefdded8a38d_1793171310965873219.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
