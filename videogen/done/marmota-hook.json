@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/marmota/videos/hook.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/marmota/s0.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "The woman in image 1, sitting behind the reception desk with her hand under her chin, asks the camera a pointed, slightly sceptical question, then keeps looking into the lens with a knowing look. Photorealistic, natural real person, lips perfectly synchronized with the audio, natural blinking, small natural head movements. Static camera on a tripod, no camera movement. Keep her face, hair, clothes and the centre exactly as in the image.",
+  "negative_prompt": "walking, standing up, objects appearing, text, extra fingers, deformed hands, distorted face, camera shake, zoom",
+  "body": {
+    "duration": 4,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/acbe561feecf6d4a7a92234309515c0373789bbd/imagegen/marmota/audio/hook.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 32,
+      "completed": 1793214795,
+      "cost": 0.4384,
+      "created": 1793214763,
+      "credits_cost": 4.384,
+      "estimated_time": 100,
+      "id": "task_01M61YVMJRN9QWS0RW5PBKMF7E",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793301195,
+            "url": [
+              "https://getapib.org/video/9998206785204414-0276816f-18c3-4bde-ae9e-12f27b4e4d6c-video_1ebae0fe-28e5-4d7b-82d7-db281ca696ef_1793214795030859061.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
