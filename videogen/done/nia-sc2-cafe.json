@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_sc2_cafe.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_taburete_cafe.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "Phone-style video in a real hair salon. At the start, the woman in image 1 pushes herself away from the wooden counter with her hand, and the rolling stool glides smoothly across the floor towards the camera and slightly to the right, while she keeps holding her coffee cup and talks happily to the camera. Realistic physics: the stool moves because of her push and gradually slows down. Photorealistic, lips perfectly synchronized with the audio, natural expressions. The hairdresser in the background keeps working. Keep her face, clothes and the salon exactly as in the image.",
+  "negative_prompt": "stool moving by itself without push, spilling, text, extra fingers, deformed hands, extra legs, distorted face, camera shake, logo on cup",
+  "body": {
+    "duration": 6,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/9ce4bf068a98dfdc05de383625e5914bc58de9e7/imagegen/demo/audio/ia/sc2.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 124,
+      "completed": 1793169539,
+      "cost": 0.6576,
+      "created": 1793169415,
+      "credits_cost": 6.576,
+      "estimated_time": 100,
+      "id": "task_01M60KKQ7QR4C9V51Q1QQ6W7KW",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793255939,
+            "url": [
+              "https://getapib.org/video/9998206830461051-c2b095b1-ad17-4e43-b710-48948c30b55c-video_wan26_709eeff6-66b9-404a-8f12-3ec5437e307e_1793169538835607889.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
