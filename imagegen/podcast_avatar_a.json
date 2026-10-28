@@ -1,0 +1,10 @@
+{
+ "out": "imagegen/podcast/avatar_a.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Photorealistic vertical 9:16 still from a Spanish business podcast. A Spanish woman around 32, light freckles, subtle under-eye shadows, dark brown hair in a low sleek bun. Plain black sleeveless top, thin gold necklace, small hoop earrings. She sits behind a black broadcast dynamic microphone on a boom arm, mid-sentence, looking slightly off-camera at an interviewer. Warm beige linen curtain backdrop, a large green plant softly out of focus, warm soft key light, shallow depth of field, shot on a cinema camera, natural colour grade, subtle film grain. Natural ordinary face (not a model, not perfect): visible skin texture and pores, small asymmetries, minimal makeup. No text, no logos on the microphone, no watermark.",
+ "size": "9:16",
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
