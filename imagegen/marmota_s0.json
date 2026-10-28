@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota/s0.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Use the woman from the reference photo as the exact same person: keep her face 100% identical (same facial proportions, nose, eyes, eyebrows, freckles, skin texture and small imperfections), same slicked-back dark low bun, same winged eyeliner, same gold huggie earrings, thin gold chain and black scoop-neck sleeveless top. Do not beautify, do not retouch, do not make her younger or slimmer. Vertical 9:16 iPhone-style video still, natural light, slight grain, candid editorial feel, same modern aesthetics centre (cream walls, light oak wood slats, white treatment equipment, plants). No purple clothing, no text, no logos, no watermark, natural hands with five fingers. Eye-level medium close-up, she sits behind the light oak reception desk, looking straight into the camera with one eyebrow slightly raised and a half-sceptical, knowing expression, as if asking a pointed question, one hand resting under her chin.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota/avatar_c.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
