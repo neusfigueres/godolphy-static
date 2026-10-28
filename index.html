@@ -493,6 +493,44 @@ function toggleMobileNav(){
   }
 </style>
 
+<!-- ═══════════════════════════════════════ VÍDEO TOUR ═══════════════════════════════════════ -->
+<style>
+.gx-tour{background:#fff;padding:110px 40px 40px;text-align:center;}
+.gx-tour__frame{position:relative;max-width:1080px;margin:44px auto 0;border-radius:24px;overflow:hidden;background:#0c0628;box-shadow:0 30px 80px rgba(60,20,160,.22);aspect-ratio:16/9;}
+.gx-tour__frame video{display:block;width:100%;height:100%;object-fit:cover;}
+.gx-tour__snd{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);color:#631cff;border:0;border-radius:999px;padding:10px 16px;font:600 14px 'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(2,2,30,.25);}
+.gx-tour__snd:hover{background:#fff;}
+@media(max-width:768px){.gx-tour{padding:70px 16px 20px;}.gx-tour__frame{border-radius:16px;margin-top:28px;}.gx-tour__snd{right:10px;bottom:10px;padding:8px 12px;font-size:13px;}}
+</style>
+<section class="gx-tour" aria-label="Vídeo: Godolphy en 90 segundos">
+  <div class="gx-wrap">
+    <span class="gx-eyebrow">Tour del producto</span>
+    <h2 class="gx-h2">Godolphy en <span class="gx-grad">90 segundos</span></h2>
+    <p class="gx-lead" style="margin:0 auto;">Reservas, agenda, cobros y el gestor que cada mañana te dice qué hacer. Míralo por dentro.</p>
+    <div class="gx-tour__frame">
+      <video id="gx-tour-v" muted loop playsinline preload="none" poster="/videos/godolphy-tour-poster.jpg" data-hd="/videos/godolphy-tour.mp4" data-sd="/videos/godolphy-tour-720.mp4" aria-label="Tour de Godolphy"></video>
+      <button type="button" class="gx-tour__snd" id="gx-tour-snd" aria-label="Activar sonido">🔊 Activar sonido</button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var v=document.getElementById('gx-tour-v'),b=document.getElementById('gx-tour-snd');if(!v)return;
+  var loaded=false;
+  function load(){if(loaded)return;loaded=true;v.src=(window.innerWidth<900?v.dataset.sd:v.dataset.hd);}
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){load();var p=v.play();if(p&&p.catch)p.catch(function(){});}else if(!v.paused){v.pause();}
+    });},{threshold:.35}).observe(v);
+  }else{load();v.play();}
+  b.addEventListener('click',function(){
+    load();
+    if(v.muted){v.muted=false;v.currentTime=0;v.play();b.textContent='🔇 Silenciar';b.setAttribute('aria-label','Silenciar');}
+    else{v.muted=true;b.textContent='🔊 Activar sonido';b.setAttribute('aria-label','Activar sonido');}
+  });
+})();
+</script>
+
 <!-- ═══════════════════════════════════════ COPILOTO IA ═══════════════════════════════════════ -->
 <section class="gx-ai">
   <div class="gx-wrap gx-ai__grid">
