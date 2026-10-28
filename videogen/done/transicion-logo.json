@@ -1,0 +1,40 @@
+{
+  "out": "imagegen/demo/videos/transicion_logo.mp4",
+  "model": "kling-v3",
+  "poll": 600,
+  "frames": [
+    "imagegen/demo/nia_s6_last.jpg",
+    "imagegen/demo/logo_futurista_end.jpg"
+  ],
+  "prompt": "Cinematic vertical transition. The woman smiles at the camera, then the scene smoothly dissolves into flowing streams of violet neon light that sweep across the frame and converge, transforming the hair salon into a dark futuristic violet space where the Godolphy logo appears glowing in the center, exactly as in the last frame. Smooth, elegant, no glitches.",
+  "negative_prompt": "distorted logo, extra text, morphing face artifacts, camera shake",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 762,
+      "completed": 1793191989,
+      "cost": 0.448,
+      "created": 1793191227,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M618DCHDZHENPK5Q9YABDMR3",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793278389,
+            "url": [
+              "https://getapib.org/video/9998206808011221-900804b0-1a30-4791-b1c2-50cbc7da9669-video_task_01M618DCHDZHENPK5Q9YABDMR3.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
