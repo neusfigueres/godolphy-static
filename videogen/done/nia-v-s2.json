@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_v_s2.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_s2.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "The woman in image 1, leaning on the reception desk, talks warmly to the camera with small natural open-hand gestures. Photorealistic, natural real person, lips perfectly synchronized with the audio, natural blinking, natural head movements. Static camera on a tripod, no camera movement, she stays in the same place. Keep her face, hair, clothes and the salon exactly as in the image.",
+  "negative_prompt": "walking, standing up, objects appearing, phone, text, extra fingers, deformed hands, distorted face, camera shake, zoom",
+  "body": {
+    "duration": 6,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/48cc06c171dec7355e00235a77ad71a567bc26ed/imagegen/demo/audio/ia/n_s2.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 73,
+      "completed": 1793190988,
+      "cost": 0.6576,
+      "created": 1793190915,
+      "credits_cost": 6.576,
+      "estimated_time": 100,
+      "id": "task_01M6183V6KKAM0YCWXSSC51F9G",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793277388,
+            "url": [
+              "https://getapib.org/video/9998206809011820-b9039117-6f89-4084-8a3e-acb6235f3b88-video_ec925216-8e6a-4c5d-bcb4-f0c0da46c6f2_1793190988067353990.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_v_s3.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_s3.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "The woman in image 1, sitting relaxed on the sofa, talks to the camera with small natural hand gestures, as in a casual chat. Photorealistic, natural real person, lips perfectly synchronized with the audio, natural blinking, natural head movements. Static camera on a tripod, no camera movement, she stays in the same place. Keep her face, hair, clothes and the salon exactly as in the image.",
+  "negative_prompt": "walking, standing up, objects appearing, phone, text, extra fingers, deformed hands, distorted face, camera shake, zoom",
+  "body": {
+    "duration": 6,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/48cc06c171dec7355e00235a77ad71a567bc26ed/imagegen/demo/audio/ia/n_s3.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 84,
+      "completed": 1793190999,
+      "cost": 0.6576,
+      "created": 1793190915,
+      "credits_cost": 6.576,
+      "estimated_time": 100,
+      "id": "task_01M6183V6ANY9YP7MFTBX340N9",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793277399,
+            "url": [
+              "https://getapib.org/video/9998206809001842-7d7756e3-e968-40d0-ae59-2e6760fb16ed-video_4f11e519-c734-4a7a-8a7e-336d08127a83_1793190998023637091.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

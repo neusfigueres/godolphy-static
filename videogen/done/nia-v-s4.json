@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_v_s4.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_s4.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "The woman in image 1, standing next to the styling station, talks to the camera and keeps pointing with her raised hand towards the upper right of the frame, then lowers it slightly and points again. Photorealistic, natural real person, lips perfectly synchronized with the audio, natural blinking, natural head movements. Static camera on a tripod, no camera movement, she stays in the same place. Keep her face, hair, clothes and the salon exactly as in the image.",
+  "negative_prompt": "walking, standing up, objects appearing, phone, text, extra fingers, deformed hands, distorted face, camera shake, zoom",
+  "body": {
+    "duration": 6,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/48cc06c171dec7355e00235a77ad71a567bc26ed/imagegen/demo/audio/ia/n_s4.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 74,
+      "completed": 1793190989,
+      "cost": 0.6576,
+      "created": 1793190915,
+      "credits_cost": 6.576,
+      "estimated_time": 100,
+      "id": "task_01M6183V6HBX2WHF595KGB2WH2",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793277389,
+            "url": [
+              "https://getapib.org/video/9998206809011393-1978781d-bbb5-4aa5-b231-206931ef01df-video_8e73b8b1-30d2-4b5b-95f8-bce6e023a50b_1793190988227427070.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

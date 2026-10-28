@@ -1,0 +1,43 @@
+{
+  "out": "imagegen/demo/videos/nia_v_s6.mp4",
+  "model": "wan2.7",
+  "poll": 400,
+  "frames": [
+    "imagegen/demo/nia_s6.png"
+  ],
+  "roles": [
+    "first_frame"
+  ],
+  "prompt": "Close-up. The woman in image 1 looks straight into the lens and finishes her sentence with a confident, knowing smile. Photorealistic, natural real person, lips perfectly synchronized with the audio, natural blinking, natural head movements. Static camera on a tripod, no camera movement, she stays in the same place. Keep her face, hair, clothes and the salon exactly as in the image.",
+  "negative_prompt": "walking, standing up, objects appearing, phone, text, extra fingers, deformed hands, distorted face, camera shake, zoom",
+  "body": {
+    "duration": 4,
+    "resolution": "1080P",
+    "audio_url": "https://raw.githubusercontent.com/neusfigueres/godolphy-static/48cc06c171dec7355e00235a77ad71a567bc26ed/imagegen/demo/audio/ia/n_s6.mp3",
+    "prompt_extend": false
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 54,
+      "completed": 1793191046,
+      "cost": 0.4384,
+      "created": 1793190992,
+      "credits_cost": 4.384,
+      "estimated_time": 100,
+      "id": "task_01M61866MN2VWRZ252N0N8EYWX",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793277446,
+            "url": [
+              "https://getapib.org/video/9998206808954316-bc450df6-d2bb-4ffa-954b-3fc4a03f852e-video_089f2390-29d0-49cb-8d52-0876c91c8b51_1793191045564249852.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
