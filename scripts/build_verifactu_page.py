@@ -59,7 +59,7 @@ MAIN = f'''<main>
   <h1 class="font-gabarito" style="color:#fff;font-size:56px;font-weight:700;margin:0 auto 20px;line-height:1.05;max-width:900px;">Verifactu para peluquerías y centros de estética</h1>
   <p style="color:rgba(255,255,255,.85);font-size:20px;line-height:1.6;max-width:680px;margin:0 auto;">Qué es, cuándo es obligatorio y qué cambia en tu salón. Con Godolphy, cobras la cita y el tique ya está en Hacienda.</p>
   <div style="margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-    <a href="/lista-de-espera/" style="background:#EEFE3A;color:#02021e;font-size:16px;font-weight:700;padding:14px 36px;border-radius:20px;text-decoration:none;">Apúntate a la lista de espera</a>
+    <a href="https://app.godolphy.com/auth/sign-up" style="background:#EEFE3A;color:#02021e;font-size:16px;font-weight:700;padding:14px 36px;border-radius:20px;text-decoration:none;">Prueba gratis 30 días</a>
   </div>
   <p style="color:rgba(255,255,255,.6);font-size:13px;margin:22px 0 0;">Actualizado el {UPDATED}</p>
   <div style="position:absolute;bottom:-1px;left:0;right:0;line-height:0;"><svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#fff"/></svg></div>
@@ -145,7 +145,7 @@ MAIN = f'''<main>
 {faq_html()}
 </div></section>
 
-<section style="background:#f8f7ff;padding:80px 40px;"><div style="max-width:900px;margin:0 auto;background:linear-gradient(160deg,#9B4FE8 0%,#7835C3 30%,#631cff 65%,#3a0aaa 100%);border-radius:32px;padding:80px 60px;text-align:center;"><h2 class="font-gabarito" style="color:#fff;font-size:46px;line-height:1.1;font-weight:700;margin:0 0 20px;">Olvídate de Verifactu. Cobra y listo.</h2><p style="color:rgba(255,255,255,.85);font-size:18px;line-height:1.6;max-width:560px;margin:0 auto 40px;">Reservas, agenda, cobros y tiques con Verifactu en un solo sitio. 30 días para probarlo todo.</p><div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;"><a href="/lista-de-espera/" style="background:#EEFE3A;color:#02021e;font-size:18px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Apúntate a la lista de espera</a></div></div></section>
+<section style="background:#f8f7ff;padding:80px 40px;"><div style="max-width:900px;margin:0 auto;background:linear-gradient(160deg,#9B4FE8 0%,#7835C3 30%,#631cff 65%,#3a0aaa 100%);border-radius:32px;padding:80px 60px;text-align:center;"><h2 class="font-gabarito" style="color:#fff;font-size:46px;line-height:1.1;font-weight:700;margin:0 0 20px;">Olvídate de Verifactu. Cobra y listo.</h2><p style="color:rgba(255,255,255,.85);font-size:18px;line-height:1.6;max-width:560px;margin:0 auto 40px;">Reservas, agenda, cobros y tiques con Verifactu en un solo sitio. 30 días para probarlo todo.</p><div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;"><a href="https://app.godolphy.com/auth/sign-up" style="background:#EEFE3A;color:#02021e;font-size:18px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Prueba gratis 30 días</a></div></div></section>
 
 <section style="background:#fff;padding:70px 40px 90px;"><div class="gx-wrap" style="max-width:900px;">
   <h2 class="font-gabarito" style="font-size:26px;color:#02021e;margin:0 0 20px;">Sigue leyendo</h2>
