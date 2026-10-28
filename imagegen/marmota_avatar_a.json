@@ -1,0 +1,10 @@
+{
+ "out": "imagegen/marmota/avatar_a.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Photorealistic vertical 9:16 iPhone-style video still, eye-level medium close-up. A Spanish woman around 27, dark brown hair pulled back tight into a sleek low bun with a centre parting, thin black winged eyeliner, small gold hoop earrings and ear studs, thin gold necklace. Black halter-neck top. She is the owner of a modern beauty and aesthetics centre, talking straight to camera mid-sentence with a natural open hand gesture, confident and relatable. Natural ordinary face (not a model, not perfect): visible skin texture and pores, small asymmetries, light realistic makeup. Background softly out of focus: modern aesthetics centre with treatment cabins, cream walls, light oak wood slats, a white treatment bed, soft warm lighting, a plant. Natural daylight mixed with warm spots, slight grain, candid editorial feel. No purple clothing, no text, no logos, no watermark.",
+ "size": "9:16",
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
