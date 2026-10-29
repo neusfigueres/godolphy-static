@@ -1,0 +1,16 @@
+{
+ "out": "imagegen/marmota2/videos/t2_noche.mp4",
+ "frames": [
+  "imagegen/marmota2/pollo2.png",
+  "imagegen/marmota2/pz_ini.png"
+ ],
+ "prompt": "Continuous single shot, time-lapse feeling. The hairdresser with the hen head keeps running around the salon while time speeds up: the clients leave one by one, the daylight outside the windows fades into dark blue night, the backlit round mirrors and the brass desk lamp glow warmly. Finally she collapses exhausted onto a caramel leather styling chair and starts lifting the mask with both hands. Same elegant hair salon, smooth camera, premium commercial look.",
+ "model": "kling-v3",
+ "poll": 600,
+ "negative_prompt": "cuts, scene change, distorted body, extra limbs, deformed hands, distorted face, text, logos, flicker",
+ "body": {
+  "duration": 5,
+  "mode": "pro",
+  "aspect_ratio": "9:16"
+ }
+}
