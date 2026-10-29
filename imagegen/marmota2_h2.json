@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/marmota2/h2.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the person and her outfit; image 2 shows the location. Create a new photo of the exact same woman from image 1 — keep her face 100% identical (facial proportions, nose, eyes, eyebrows, freckles, skin texture, small imperfections), same slicked-back dark low bun, winged eyeliner, small gold huggie earrings, and the same elegant black wrap-style jacket with structured shoulders and black tailored trousers. Do not beautify, do not make her younger or slimmer. Place her standing BEHIND the curved travertine and light-oak front desk from image 2, in the same hair salon (backlit round mirrors, caramel leather chairs, big window, dried flowers in a vase). On the desk: an open silver laptop turned slightly towards her, a small notebook and a pen. Medium close-up from the chest up, slight three-quarter angle, one hand on the laptop, she looks straight into the camera with one eyebrow slightly raised, a knowing half-smile, as if asking a pointed question. Vertical 9:16, photorealistic, cinema camera, natural soft light, subtle grain, high-end editorial look. No text, no logos on the laptop, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/u2.png",
+  "imagegen/marmota2/u3.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
