@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota2/pollo2.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Edit of the reference photo, keep the same composition, salon, pose, clothes (black work top, black trousers, sneakers), hairdryer and phone. Surreal humorous twist: instead of her human head she has a realistic brown hen's head (a woman's body with a chicken head), the hen head looking frantic, beak open, a few feathers flying around. Remove the separate hen on top. The salon is now busy: two female clients sit in the caramel leather styling chairs wearing black salon capes, one with wet hair and one with foils, both turning their heads to watch her run past, surprised; another client waits on a sofa by the window. Vertical 9:16, photorealistic, cinema camera, natural light, subtle grain, motion blur on her legs, playful but premium look. No purple clothing, no text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/pollo1.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
