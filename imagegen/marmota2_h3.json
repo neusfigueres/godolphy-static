@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota2/h3.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the person. Keep exactly the same woman from image 1 — identical face (facial proportions, nose, eyes, eyebrows, freckles, skin texture, small imperfections), same slicked-back dark low bun, winged eyeliner, small gold huggie earrings, same elegant black wrap-style jacket with structured shoulders. Do not beautify, do not make her younger or slimmer. Same framing and pose as image 1 (medium close-up from the chest up, slight three-quarter angle, one hand on an open silver laptop, looking straight into the camera with one eyebrow slightly raised and a knowing half-smile, as if asking a pointed question), but she now stands behind the front desk of a different, upscale hair salon with a darker, moodier palette: walnut wood panelling, dark green-veined marble front desk with brushed brass edges, warm golden pendant lights, a large arched mirror with brass frame, dark olive velvet styling chairs, a tall plant, evening-warm lighting.  Vertical 9:16, photorealistic, cinema camera, warm soft light, subtle grain, high-end editorial look. No purple, no text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/h2.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
