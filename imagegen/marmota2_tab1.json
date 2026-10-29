@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/marmota2/tab1.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the person and her outfit; image 2 shows the hair salon. Keep exactly the same woman from image 1 — identical face (facial proportions, nose, eyes, eyebrows, freckles, skin texture), same slicked-back dark low bun, winged eyeliner, small gold huggie earrings, same elegant black wrap-style jacket. Do not beautify. In the same elegant hair salon as image 2, calm morning light, she stands at the curved travertine and oak front desk holding a tablet (screen facing her, not visible), calmly reviewing her plan, focused and in control, a slight confident smile, a cup of coffee on the desk. Medium shot, three-quarter angle, the salon tidy and peaceful behind her. Vertical 9:16, photorealistic, cinema camera, natural soft light, subtle grain, high-end editorial look. No text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/h2.png",
+  "imagegen/marmota2/u3.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}

@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/marmota2/cl_ini.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the hairdresser: keep exactly the same woman — identical face (same features, nose, eyes, eyebrows, skin) and the same dark curly hair, same plain black salon work top. Image 2 shows the elegant hair salon. New morning in the same elegant salon with bright fresh daylight. She looks rested and confident now, curly hair neat and tied back in a half-up style, light natural makeup. The brown hen-head mask lies on the travertine front desk in front of her; she looks down at it with a determined little smile, picking it up with one hand. A small modern oak waste bin stands next to the desk. Medium shot, eye level. Vertical 9:16, photorealistic, cinema camera, natural soft light, subtle grain, high-end editorial look. No text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/pz_fin2.png",
+  "imagegen/marmota2/u3.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
