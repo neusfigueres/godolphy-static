@@ -1,0 +1,39 @@
+{
+  "out": "imagegen/marmota2/videos/tab2.mp4",
+  "frames": [
+    "imagegen/marmota2/tab2.png"
+  ],
+  "prompt": "The woman calmly scrolls through her plan on the tablet with her thumb, nods slightly with a confident satisfied smile, takes a relaxed breath. Static camera on a tripod, no zoom. Photorealistic, natural subtle movements, mouth closed. Keep her face, clothes and the salon exactly as in the image.",
+  "model": "kling-v3",
+  "poll": 600,
+  "negative_prompt": "cuts, scene change, zoom, camera shake, distorted face, extra fingers, deformed hands, text, logos, flicker, talking",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 75,
+      "completed": 1793313795,
+      "cost": 0.448,
+      "created": 1793313720,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M64X7HPCYGWCBD8R936NV6Q5",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793400195,
+            "url": [
+              "https://getapib.org/video/9998206686204541-1f347380-007b-4cb7-9af3-48229eae88d6-video_task_01M64X7HPCYGWCBD8R936NV6Q5.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

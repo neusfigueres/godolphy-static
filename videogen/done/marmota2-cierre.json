@@ -1,0 +1,40 @@
+{
+  "out": "imagegen/marmota2/videos/cierre.mp4",
+  "frames": [
+    "imagegen/marmota2/cl_ini.png",
+    "imagegen/marmota2/cl_fin.png"
+  ],
+  "prompt": "Continuous single shot in the bright elegant salon in the morning. The rested, confident hairdresser picks up the hen-head mask from the front desk, looks at it with a little smile, and drops it decisively into the small oak waste bin next to the desk, then dusts off her hands and smiles proudly at the camera. Static camera, natural movements, premium commercial look.",
+  "model": "kling-v3",
+  "poll": 600,
+  "negative_prompt": "cuts, scene change, zoom, camera shake, distorted face, extra fingers, deformed hands, text, logos, flicker, talking",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 139,
+      "completed": 1793313858,
+      "cost": 0.448,
+      "created": 1793313719,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M64X7HERH8RV30E5FQRAC5ZX",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793400258,
+            "url": [
+              "https://getapib.org/video/9998206686141224-8d598926-8f95-4d46-bbe4-b61bdf099195-video_task_01M64X7HERH8RV30E5FQRAC5ZX.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
