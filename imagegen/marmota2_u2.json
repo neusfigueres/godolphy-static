@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota2/u2.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Use the woman from the reference photo as the exact same person: keep her face 100% identical (same facial proportions, nose, eyes, eyebrows, freckles, skin texture and small imperfections), same slicked-back dark low bun, same winged eyeliner, same small gold huggie earrings. Do not beautify, do not make her younger or slimmer. She wears an elegant black salon uniform: a sleek black wrap-style top with a structured shoulder and long sleeves, black tailored trousers. She stands behind the front desk, one hand resting on the desk, looking straight at the camera with a confident, slightly sceptical expression. Medium shot. Setting: an upscale, elegant modern hair salon in Barcelona: warm cream walls, light oak and travertine, brushed brass details, large round mirrors with soft backlight, styling chairs in caramel leather, a sculptural front desk in travertine and oak with a vase of dried flowers, big window with soft daylight. Luxurious but warm, editorial interior photography. Vertical 9:16, photorealistic, shot on a cinema camera, natural soft light, subtle grain, high-end editorial look. No purple clothing, no text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota/avatar_c.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
