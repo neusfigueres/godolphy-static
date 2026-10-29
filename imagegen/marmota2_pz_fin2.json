@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/marmota2/pz_fin2.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the scene: keep it exactly the same (same woman, same face, same messy curly hair, same pose with notebook and pen, same night salon, same framing). Only change the yellow chicken mask on her lap: replace it with a realistic brown hen-head mask matching the hen head in image 2 (brown feathers, red comb). Vertical 9:16, photorealistic, cinema camera, subtle grain, premium look. No text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/pz_fin.png",
+  "imagegen/marmota2/pollo2.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}

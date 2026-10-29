@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota2/pollo3.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the scene. Keep the same elegant hair salon in daylight, the same hairdresser body and clothes (black work top, black trousers, black sneakers) with the same realistic brown hen head, and the same clients. New action: she now stands behind a client seated in a caramel leather styling chair (the client with long wet hair, wearing a black salon cape) and blow-dries her hair with the black hairdryer and a round brush, hurried and frantic, a few feathers floating. The other clients watch from the background. Medium-wide shot, eye level. Vertical 9:16, photorealistic, cinema camera, subtle grain, premium look. No text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/pollo2.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
