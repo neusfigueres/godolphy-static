@@ -1,0 +1,40 @@
+{
+  "out": "imagegen/marmota2/videos/t3_quita_mascara.mp4",
+  "frames": [
+    "imagegen/marmota2/pz_ini.png",
+    "imagegen/marmota2/pz_fin.png"
+  ],
+  "prompt": "Continuous single shot at night in the empty elegant hair salon. Sitting on the caramel leather styling chair, the hairdresser slowly takes off the chicken-head mask with both hands, revealing her tired face and messy curly hair, rests the mask on her lap, picks up the small notebook and pen and looks down at the empty page, pensive and a bit lost. Slow, calm, static camera, warm low light.",
+  "model": "kling-v3",
+  "poll": 600,
+  "negative_prompt": "cuts, scene change, distorted body, extra limbs, deformed hands, distorted face, text, logos, flicker",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 170,
+      "completed": 1793307967,
+      "cost": 0.448,
+      "created": 1793307797,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M64QJSTPM0M98H2ERWS3TASM",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793394367,
+            "url": [
+              "https://getapib.org/video/9998206692032495-92ef9498-c533-4f8a-99d9-bcda94dc53f8-video_task_01M64QJSTPM0M98H2ERWS3TASM.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
