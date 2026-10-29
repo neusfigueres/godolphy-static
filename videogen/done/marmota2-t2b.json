@@ -1,0 +1,40 @@
+{
+  "out": "imagegen/marmota2/videos/t2b_noche.mp4",
+  "frames": [
+    "imagegen/marmota2/pollo3.png",
+    "imagegen/marmota2/pz_on.png"
+  ],
+  "prompt": "Continuous single shot, time-lapse. The hairdresser with the hen head keeps working while time speeds up: the clients finish and leave one by one, the daylight outside the windows gradually fades into dark blue night, the backlit round mirrors and the brass desk lamp glow warmly. Finally she drops exhausted onto a caramel leather styling chair, still wearing the hen head, hands on her knees. Same elegant hair salon, smooth gradual light change, premium commercial look.",
+  "model": "kling-v3",
+  "poll": 600,
+  "negative_prompt": "cuts, scene change, walking backwards, moving back and forth, distorted body, extra limbs, deformed hands, distorted face, text, logos, flicker",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 140,
+      "completed": 1793309880,
+      "cost": 0.448,
+      "created": 1793309740,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M64SE3SVTV5Z0ECD2CB1E5H2",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793396280,
+            "url": [
+              "https://getapib.org/video/9998206690119377-c5a43b3e-08b2-448d-9960-cb3a88d9f7de-video_task_01M64SE3SVTV5Z0ECD2CB1E5H2.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

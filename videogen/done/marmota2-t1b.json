@@ -1,0 +1,40 @@
+{
+  "out": "imagegen/marmota2/videos/t1b_suelo_secador.mp4",
+  "frames": [
+    "imagegen/marmota2/p2.png",
+    "imagegen/marmota2/pollo3.png"
+  ],
+  "prompt": "Continuous single shot. The exhausted hairdresser lying on the salon floor gets up quickly, picks up the hairdryer and a round brush, and walks fast straight to a client seated in a styling chair; the camera smoothly moves from the overhead view down to eye level. As she starts blow-drying the client's long wet hair, her head turns into a brown hen's head in a small comic puff of feathers. The other clients watch surprised. Natural, forward movement only, same daylight, same elegant hair salon, premium commercial look.",
+  "model": "kling-v3",
+  "poll": 600,
+  "negative_prompt": "cuts, scene change, walking backwards, moving back and forth, distorted body, extra limbs, deformed hands, distorted face, text, logos, flicker",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 141,
+      "completed": 1793309881,
+      "cost": 0.448,
+      "created": 1793309740,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M64SE3SRX3W05GW8G0AT8K6R",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793396281,
+            "url": [
+              "https://getapib.org/video/9998206690118973-ae8fb079-9c4a-45af-b2f2-9d91b785ab8a-video_task_01M64SE3SRX3W05GW8G0AT8K6R.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
