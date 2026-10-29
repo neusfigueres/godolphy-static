@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/marmota2/pz_ini.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the hairdresser: keep exactly the same woman — identical face (same features, nose, eyes, eyebrows, skin), same messy dishevelled dark curly hair, same plain black salon work top and black trousers and black sneakers. Setting like image 2: the same elegant hair salon at night after closing, empty, only the backlit round mirrors and a warm brass desk lamp on, dark blue night outside the big windows, caramel leather styling chairs, travertine and light oak. She sits alone on a caramel leather styling chair wearing a realistic rubber chicken-head mask that covers her whole head (her messy curly hair sticking out below it), both hands lifting the mask up to take it off, a small notebook resting on her lap. Same framing as a medium-wide shot, slight side angle. Vertical 9:16, photorealistic, cinema camera, moody warm low light, subtle grain, high-end editorial look. No text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/p2.png",
+  "imagegen/marmota2/n1.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
