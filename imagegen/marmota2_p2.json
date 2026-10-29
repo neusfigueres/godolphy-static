@@ -1,0 +1,10 @@
+{
+ "out": "imagegen/marmota2/p2.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Photorealistic vertical 9:16 editorial photo, top-down overhead shot (bird's-eye view, camera directly above), framed from the head to the waist. A Spanish hairdresser around 30, ordinary realistic face (not a model), visible skin texture, lies on her back on the light oak floor of an elegant modern hair salon, exhausted and stressed, both hands pressed to her temples, eyes open staring at the ceiling, overwhelmed expression, mouth closed. Her dark hair is messy and dishevelled, spread on the floor, loose strands across her face. She wears a plain black salon work top. Around her on the floor, scattered: a round brush, a hairdryer with its cable, combs, hair clips, scissors, a spray bottle, a cape and an open appointment book. Soft natural daylight, slight grain, high-end editorial look, muted warm cream and oak palette. No purple clothing, no text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
