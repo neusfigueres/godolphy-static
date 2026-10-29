@@ -1,0 +1,40 @@
+{
+  "out": "imagegen/marmota2/videos/t1_suelo_pollo.mp4",
+  "model": "kling-v3",
+  "poll": 600,
+  "frames": [
+    "imagegen/marmota2/p2.png",
+    "imagegen/marmota2/pollo2.png"
+  ],
+  "prompt": "Continuous single shot, no cuts. The exhausted hairdresser lying on the salon floor suddenly jumps up, grabs the hairdryer and her phone from the floor; the camera smoothly swoops down from the overhead view to eye level as she starts running frantically across the busy salon from left to right. In a comic puff of flying feathers her head turns into a brown hen's head while she keeps running past the surprised clients in the styling chairs. Same daylight, same hair salon, smooth and fluid camera move, playful premium commercial look.",
+  "negative_prompt": "cuts, scene change, extra people appearing from nowhere, distorted body, extra limbs, deformed hands, text, logos, flicker",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 139,
+      "completed": 1793305977,
+      "cost": 0.448,
+      "created": 1793305838,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M64NQ0N4VWWDYMJYTRJ3QG67",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1793392377,
+            "url": [
+              "https://getapib.org/video/9998206694022998-4bf77afe-8c93-4dc9-925d-73ebfc673936-video_task_01M64NQ0N4VWWDYMJYTRJ3QG67.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
