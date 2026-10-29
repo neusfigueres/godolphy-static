@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota2/pollo1.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Use the woman from the reference photo as the exact same person: keep her face identical (ordinary realistic face, same features), same messy dishevelled dark hair, same plain black salon work top. Humorous editorial photo: she runs frantically across an elegant modern hair salon from one side to the other, like a headless chicken, holding a hairdryer in one hand and a phone in the other, a comb in her mouth, stressed wide eyes. A real live brown hen is sitting on top of her head, flapping its wings, a couple of feathers floating in the air. Motion blur on her legs, she is caught mid-stride. Setting: elegant hair salon with light oak floor, cream walls, backlit round mirrors, caramel leather styling chairs, travertine details, big windows with daylight. Wide shot, eye level, she crosses the frame from left to right. Vertical 9:16, photorealistic, cinema camera, natural light, subtle grain, playful but premium look. No purple clothing, no text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/p2.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
