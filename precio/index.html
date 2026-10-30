@@ -207,6 +207,17 @@ function toggleMobileNav(){
         <button onclick="changeProfs(1)" style="background:none;border:none;cursor:pointer;padding:8px 13px;font-size:18px;color:#631cff;line-height:1;font-weight:700;">+</button>
       </div>
     </div>
+    <!-- Moneda (30/10/2026): precios fijos por moneda, se detecta por país -->
+    <div style="display:flex;align-items:center;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:100px;overflow:hidden;backdrop-filter:blur(8px);">
+      <span style="color:rgba(255,255,255,.75);font-size:15px;font-weight:600;padding:12px 16px 12px 22px;">Moneda</span>
+      <div style="background:#fff;border-radius:100px;margin:5px;padding:0 4px;">
+        <select id="sel-currency" aria-label="Moneda" onchange="setCurrency(this.value, true)" style="background:none;border:none;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:#02021e;cursor:pointer;outline:none;padding:8px 10px;appearance:none;-webkit-appearance:none;">
+          <option value="EUR" selected>EUR €</option>
+          <option value="USD">USD $</option>
+          <option value="MXN">MXN $</option>
+        </select>
+      </div>
+    </div>
     <!-- Reservas / mes -->
     <div style="display:flex;align-items:center;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:100px;overflow:hidden;backdrop-filter:blur(8px);">
       <span style="color:rgba(255,255,255,.75);font-size:15px;font-weight:600;padding:12px 16px 12px 22px;">Reservas/mes</span>
@@ -238,8 +249,8 @@ function toggleMobileNav(){
       <p style="color:rgba(2,2,30,.55);font-size:14px;line-height:1.6;margin:0 0 20px;">Para profesionales que trabajan solos.</p>
       <span id="solo-strike" class="strike-price"></span>
       <div>
-        <span id="solo-price" style="font-size:52px;font-weight:800;color:#02021e;line-height:1;">33</span>
-        <span style="font-size:26px;font-weight:700;color:#02021e;">€</span>
+        <span class="cur-pre" style="font-size:26px;font-weight:700;color:#02021e;display:none;">$</span><span id="solo-price" style="font-size:52px;font-weight:800;color:#02021e;line-height:1;">33</span>
+        <span class="cur-suf" style="font-size:26px;font-weight:700;color:#02021e;">€</span>
         <span style="font-size:14px;color:rgba(2,2,30,.45);margin-left:4px;">/ mes</span>
       </div>
       <div style="display:flex;align-items:center;gap:6px;margin:16px 0 24px;">
@@ -264,8 +275,8 @@ function toggleMobileNav(){
       <p style="color:rgba(2,2,30,.55);font-size:14px;line-height:1.6;margin:0 0 20px;">Para equipos que quieren crecer con IA.</p>
       <span id="pro-strike" class="strike-price"></span>
       <div>
-        <span id="pro-price" style="font-size:52px;font-weight:800;color:#631cff;line-height:1;">45</span>
-        <span style="font-size:26px;font-weight:700;color:#631cff;">€</span>
+        <span class="cur-pre" style="font-size:26px;font-weight:700;color:#631cff;display:none;">$</span><span id="pro-price" style="font-size:52px;font-weight:800;color:#631cff;line-height:1;">45</span>
+        <span class="cur-suf" style="font-size:26px;font-weight:700;color:#631cff;">€</span>
         <span style="font-size:14px;color:rgba(2,2,30,.45);margin-left:4px;">/ mes</span>
       </div>
       <div style="display:flex;align-items:center;gap:6px;margin:16px 0 24px;">
@@ -289,8 +300,8 @@ function toggleMobileNav(){
       <p style="color:rgba(2,2,30,.55);font-size:14px;line-height:1.6;margin:0 0 20px;">Para cadenas y franquicias.</p>
       <span id="max-strike" class="strike-price"></span>
       <div>
-        <span id="max-price" style="font-size:52px;font-weight:800;color:#02021e;line-height:1;">360</span>
-        <span style="font-size:26px;font-weight:700;color:#02021e;">€</span>
+        <span class="cur-pre" style="font-size:26px;font-weight:700;color:#02021e;display:none;">$</span><span id="max-price" style="font-size:52px;font-weight:800;color:#02021e;line-height:1;">360</span>
+        <span class="cur-suf" style="font-size:26px;font-weight:700;color:#02021e;">€</span>
         <span style="font-size:14px;color:rgba(2,2,30,.45);margin-left:4px;">/ mes</span>
       </div>
       <div style="display:flex;align-items:center;gap:6px;margin:16px 0 24px;">
@@ -456,11 +467,74 @@ function toggleMobileNav(){
   var reservasLabels = ['50','100','150','200','300','500','750','1.000+'];
 
   // ── Planes y precios ────────────────────────────────────
-  var PLANS = {
-    solo: { base: 33, profMin: 1, profMax: 1, resIncluded: 200,  extraProf: 0,  extraRes: 0 },
-    pro:  { base: 45, profMin: 2,             resIncluded: 400, extraProf: 10, extraRes: 0.15 },
-    max:  { base: 360, profMin: 20,            resIncluded: 2500, extraProf: 10, extraRes: 0.15 }
+  // Precios fijos por moneda (30/10/2026). Deben coincidir con los de Stripe
+  // (currency_options de cada precio). extraRes = precio por reserva extra.
+  var PRICES = {
+    EUR: { solo: 33, pro: 45, max: 360,  extraProf: 10,  extraRes: 0.15 },
+    USD: { solo: 35, pro: 49, max: 399,  extraProf: 10,  extraRes: 0.15 },
+    MXN: { solo: 649, pro: 899, max: 6999, extraProf: 199, extraRes: 2.99 }
   };
+  var currency = 'EUR';
+  var PLANS = {};
+
+  function buildPlans() {
+    var p = PRICES[currency];
+    PLANS = {
+      solo: { base: p.solo, profMin: 1, profMax: 1, resIncluded: 200,  extraProf: 0,           extraRes: 0 },
+      pro:  { base: p.pro,  profMin: 2,             resIncluded: 400,  extraProf: p.extraProf, extraRes: p.extraRes },
+      max:  { base: p.max,  profMin: 20,            resIncluded: 2500, extraProf: p.extraProf, extraRes: p.extraRes }
+    };
+  }
+
+  function setCurrency(code, byUser) {
+    if (!PRICES[code]) code = 'EUR';
+    currency = code;
+    if (byUser) { try { localStorage.setItem('gx-currency', code); } catch (e) {} }
+    var sel = document.getElementById('sel-currency');
+    if (sel) sel.value = code;
+    var euro = code === 'EUR';
+    document.querySelectorAll('.cur-pre').forEach(function(el){ el.style.display = euro ? 'none' : 'inline'; });
+    document.querySelectorAll('.cur-suf').forEach(function(el){
+      el.textContent = euro ? '€' : code;
+      el.style.fontSize = euro ? '26px' : '16px';
+    });
+    buildPlans();
+    updateUI();
+  }
+
+  // Euro area (and nearby) → EUR; Mexico → MXN; everything else → USD.
+  var EUR_COUNTRIES = ['ES','AD','PT','FR','IT','DE','AT','BE','NL','LU','IE','FI','GR','CY','MT','SI','SK','EE','LV','LT','HR','MC','SM','VA','ME','XK'];
+  function currencyForCountry(cc) {
+    cc = String(cc || '').toUpperCase();
+    if (cc === 'MX') return 'MXN';
+    if (EUR_COUNTRIES.indexOf(cc) >= 0) return 'EUR';
+    return cc ? 'USD' : null;
+  }
+  function currencyFromTimezone() {
+    try {
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      if (/^America\/(Mexico_City|Cancun|Merida|Monterrey|Matamoros|Chihuahua|Ciudad_Juarez|Ojinaga|Mazatlan|Bahia_Banderas|Hermosillo|Tijuana)$/.test(tz)) return 'MXN';
+      if (/^(America|Pacific|Asia|Australia)\//.test(tz)) return 'USD';
+    } catch (e) {}
+    return 'EUR';
+  }
+  function detectCurrency() {
+    var saved = null;
+    try { saved = localStorage.getItem('gx-currency'); } catch (e) {}
+    if (saved && PRICES[saved]) { setCurrency(saved, false); return; }
+    var done = false;
+    var fallback = setTimeout(function(){ if (!done) { done = true; setCurrency(currencyFromTimezone(), false); } }, 1500);
+    fetch('/api/geo').then(function(r){ return r.json(); }).then(function(d){
+      if (done) return;
+      done = true; clearTimeout(fallback);
+      setCurrency(currencyForCountry(d && d.country) || currencyFromTimezone(), false);
+    }).catch(function(){
+      if (done) return;
+      done = true; clearTimeout(fallback);
+      setCurrency(currencyFromTimezone(), false);
+    });
+  }
+  buildPlans();
 
   function calcPrice(planId, p, res, anual) {
     var plan = PLANS[planId];
@@ -473,7 +547,11 @@ function toggleMobileNav(){
     return anual ? Math.round(total * 0.75 * 100) / 100 : Math.round(total * 100) / 100;
   }
 
-  function fmt(n) { return n % 1 === 0 ? String(n) : n.toFixed(2).replace('.', ','); }
+  function fmt(n) {
+    var whole = n % 1 === 0;
+    return n.toLocaleString('de-DE', { minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: 2 });
+  }
+  function money(n) { return currency === 'EUR' ? fmt(n) + '€' : '$' + fmt(n) + ' ' + currency; }
 
   // ── Selección de plan ───────────────────────────────────
   function selectPlan(planId) {
@@ -509,7 +587,7 @@ function toggleMobileNav(){
       document.getElementById(item.priceEl).textContent = fmt(price);
       var strikeEl = document.getElementById(item.strikeEl);
       if (isAnnual) {
-        strikeEl.textContent = fmt(monthly) + '€/mes';
+        strikeEl.textContent = money(monthly) + '/mes';
         strikeEl.style.display = 'block';
       } else {
         strikeEl.style.display = 'none';
@@ -584,6 +662,7 @@ function toggleMobileNav(){
 
   // ── Init ────────────────────────────────────────────────
   updateUI();
+  detectCurrency();
 </script>
 <script src="/assets/gx-pages.js" defer></script>
 </body>
