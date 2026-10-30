@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota2/cl_papelera.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Image 1 shows the scene: the small modern light-oak waste bin next to the travertine front desk and the brown hen-head mask on the desk. Create a close-up shot looking down into that same oak waste bin: the same realistic brown hen-head mask (brown feathers, red comb) lies crumpled inside the bin, tossed away. Soft bright morning daylight, the light oak floor and the base of the travertine desk slightly visible and out of focus around it. Vertical 9:16, photorealistic, cinema camera, shallow depth of field, subtle grain, premium editorial look. No people, no text, no logos, no watermark.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/cl_ini.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
