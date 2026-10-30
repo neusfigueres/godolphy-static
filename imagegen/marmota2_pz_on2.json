@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/marmota2/pz_on2.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Edit of the reference photo: keep exactly the same night scene, salon, chair, lamp, pose, black clothes, notebook and framing. Change only the head: she wears a full realistic rubber hen-head mask (brown feathers, red comb, beak) that completely covers her entire head and neck down to the collar of her black top, like a full overhead latex mask. No human hair visible at all, no hair sticking out anywhere. The mask sits naturally on her shoulders with realistic folds where it meets the collar. Vertical 9:16, photorealistic, cinema camera, moody warm low light, subtle grain. No text, no logos, no watermark, natural hands with five fingers.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/marmota2/pz_on.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
