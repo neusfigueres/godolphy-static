@@ -426,6 +426,11 @@
       "source": "/ayuda/como-reserva-tu-clienta/",
       "destination": "/ayuda/como-reserva-tu-cliente/",
       "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/blog/",
+      "permanent": true
     }
   ]
 }
