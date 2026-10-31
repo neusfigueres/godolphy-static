@@ -31,7 +31,7 @@ jobs:
               PUBLISHED=1
 
               slug="${newname%.html}"
-              url="https://godolphy.com/${slug}/"
+              url="https://www.godolphy.com/${slug}/"
               if ! grep -q "$url" sitemap.xml; then
                 sed -i "s|</urlset>|  <url>\n    <loc>${url}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n</urlset>|" sitemap.xml
               fi

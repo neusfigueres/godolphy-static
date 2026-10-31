@@ -23,12 +23,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.godolphy.com/lista-de-espera/</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.godolphy.com/blog/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -257,12 +251,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.godolphy.com/que-debo-tener-en-cuenta-antes-de-abrir-mi-salon-de-unas-o-centro-de-estetica/</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.godolphy.com/cuanto-gana-un-salon-de-unas-en-espana/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>yearly</changefreq>
@@ -282,12 +270,6 @@
   </url>
   <url>
     <loc>https://www.godolphy.com/como-calcular-los-precios-de-mis-servicios-de-belleza/</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.godolphy.com/diferencias-entre-fresha-y-godolphy/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -461,12 +443,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.godolphy.com/casos-de-exito-de-campanas-de-marketing-de-salones-es-estetica/</loc>
-    <lastmod>2026-05-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.godolphy.com/franquicias-de-estetica-rentables/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>yearly</changefreq>
@@ -540,121 +516,121 @@
   <!-- Integraciones -->
 
   <url>
-    <loc>https://godolphy.com/dashboard-ia/</loc>
+    <loc>https://www.godolphy.com/dashboard-ia/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/mejor-software-peluquerias-espana/</loc>
+    <loc>https://www.godolphy.com/mejor-software-peluquerias-espana/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/como-usar-inteligencia-artificial-peluqueria/</loc>
+    <loc>https://www.godolphy.com/como-usar-inteligencia-artificial-peluqueria/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/software-peluqueria-gratis-vs-pago/</loc>
+    <loc>https://www.godolphy.com/software-peluqueria-gratis-vs-pago/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/como-recuperar-clientes-peluqueria/</loc>
+    <loc>https://www.godolphy.com/como-recuperar-clientes-peluqueria/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/cuanto-cuesta-software-centro-estetica/</loc>
+    <loc>https://www.godolphy.com/cuanto-cuesta-software-centro-estetica/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/app-peluqueria-domicilio/</loc>
+    <loc>https://www.godolphy.com/app-peluqueria-domicilio/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/como-subir-ticket-medio-salon/</loc>
+    <loc>https://www.godolphy.com/como-subir-ticket-medio-salon/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/koibox-vs-fresha-vs-godolphy/</loc>
+    <loc>https://www.godolphy.com/koibox-vs-fresha-vs-godolphy/</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/como-digitalizar-peluqueria/</loc>
+    <loc>https://www.godolphy.com/como-digitalizar-peluqueria/</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/organizar-rutas-servicios-domicilio-estetica/</loc>
+    <loc>https://www.godolphy.com/organizar-rutas-servicios-domicilio-estetica/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/que-es-ticket-medio-peluqueria/</loc>
+    <loc>https://www.godolphy.com/que-es-ticket-medio-peluqueria/</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/gestionar-freelances-centro-estetica/</loc>
+    <loc>https://www.godolphy.com/gestionar-freelances-centro-estetica/</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/analisis-financiero-centro-estetica/</loc>
+    <loc>https://www.godolphy.com/analisis-financiero-centro-estetica/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/automatizar-recordatorios-citas-salon/</loc>
+    <loc>https://www.godolphy.com/automatizar-recordatorios-citas-salon/</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/calcular-precio-desplazamiento-domicilio/</loc>
+    <loc>https://www.godolphy.com/calcular-precio-desplazamiento-domicilio/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/cuanto-gana-barberia-espana/</loc>
+    <loc>https://www.godolphy.com/cuanto-gana-barberia-espana/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/cuanto-cobra-gestor-peluqueria/</loc>
+    <loc>https://www.godolphy.com/cuanto-cobra-gestor-peluqueria/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/obligaciones-fiscales-centro-estetica/</loc>
+    <loc>https://www.godolphy.com/obligaciones-fiscales-centro-estetica/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/declaracion-renta-peluquera-autonoma/</loc>
+    <loc>https://www.godolphy.com/declaracion-renta-peluquera-autonoma/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -664,13 +640,13 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://godolphy.com/cobrar-deposito-reservas-salon/</loc>
+    <loc>https://www.godolphy.com/cobrar-deposito-reservas-salon/</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/tarjetas-regalo-salon-de-belleza/</loc>
+    <loc>https://www.godolphy.com/tarjetas-regalo-salon-de-belleza/</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -682,10 +658,30 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://godolphy.com/anadir-servicios-a-domicilio-salon/</loc>
+    <loc>https://www.godolphy.com/anadir-servicios-a-domicilio-salon/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/obligaciones-fiscales-centro-estetica/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/lampistas-fontaneros-reparaciones-software/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/sectores/software-para-empresas-de-limpieza/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/software-gestion-empresa-limpieza-domicilio/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Centro de ayuda -->
@@ -951,7 +947,7 @@
   </url>
   <!-- /Centro de ayuda -->
   <url>
-    <loc>https://godolphy.com/cuanto-cuesta-abrir-centro-de-estetica/</loc>
+    <loc>https://www.godolphy.com/cuanto-cuesta-abrir-centro-de-estetica/</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
