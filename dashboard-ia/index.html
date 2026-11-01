@@ -65,6 +65,16 @@
   .hero p{font-size:19px;line-height:1.55;max-width:700px;margin:0 auto 36px;color:rgba(255,255,255,.88);}
   .hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
   .hero .note{margin-top:18px;display:block;}
+  .hero-bul{list-style:none;padding:0;margin:-12px auto 34px;max-width:780px;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;text-align:left;}
+  .hero-bul li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.45;color:rgba(255,255,255,.92);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:11px 14px;}
+  .hero-bul li::before{content:"✦";color:#EEFE3A;flex:0 0 auto;font-size:13px;margin-top:2px;}
+  @media(max-width:700px){.hero-bul{grid-template-columns:1fr;margin-top:-16px;}}
+  .why{padding:20px 0 40px;}
+  .why-box{max-width:820px;margin:0 auto;background:var(--soft);border:1px solid var(--line);border-radius:28px;padding:44px 48px;text-align:center;}
+  .why-box h2{font-family:'Gabarito',sans-serif;font-size:clamp(28px,3.6vw,40px);line-height:1.08;margin:16px 0 16px;color:var(--ink);}
+  .why-box p{font-size:18px;line-height:1.65;color:rgba(2,2,30,.75);margin:0 auto;max-width:640px;}
+  .why-box .sign{display:block;margin-top:18px;font-size:14px;font-weight:700;color:var(--v);}
+  @media(max-width:700px){.why-box{padding:32px 22px;border-radius:22px;}}
   .shot{position:relative;z-index:5;margin:-290px auto 0;max-width:1040px;padding:0 32px;}
   .frame{background:#fff;border-radius:22px;padding:10px;box-shadow:0 40px 90px rgba(30,10,90,.28);}
   .frame .bar{display:flex;gap:6px;padding:6px 8px 12px;}
@@ -214,11 +224,17 @@
     <span class="eyebrow">✦ Tu copiloto financiero con IA</span>
     <h1>Descubre dónde tu salón está perdiendo dinero.</h1>
     <p>Sube la exportación de tu agenda y la IA te dice cuánto ganas de verdad, qué clientes se están yendo y qué servicios no te salen a cuenta.</p>
+    <ul class="hero-bul">
+      <li>Qué servicio te deja menos por hora (casi nunca es el que crees)</li>
+      <li>Qué clientes están a punto de irse, con nombre</li>
+      <li>Cuánto te queda de verdad después del alquiler y los gastos</li>
+      <li>Qué profesional rinde más por hora</li>
+    </ul>
     <div class="ctas">
       <a class="btn btn-w cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón gratis →</a>
       <a class="btn btn-o" href="#como">Ver cómo funciona</a>
     </div>
-    <span class="note">gratis · sin tarjeta · 30 segundos</span>
+    <span class="note">gratis · sin tarjeta · en 2 minutos</span>
   </div>
 </section>
 
@@ -242,9 +258,9 @@
       <p class="lead">El dinero no se pierde de golpe. Se escapa en pequeñas fugas que no ves en la caja del día a día.</p>
     </div>
     <div class="cards3">
-      <div class="pcard reveal"><div class="ic">💔</div><h3>Clientes que no vuelven</h3><p>No es desinterés, es vida. Cuando te das cuenta de que un cliente habitual ya no viene, hace semanas que se fue.</p><span class="tag">Hoy no sabes quiénes son</span></div>
+      <div class="pcard reveal"><div class="ic">💔</div><h3>Clientes que no vuelven</h3><p>No es desinterés, es vida. Cuando te das cuenta de que alguien de tu clientela fija ya no viene, hace semanas que se fue.</p><span class="tag">Hoy no sabes quiénes son</span></div>
       <div class="pcard reveal"><div class="ic">⏱️</div><h3>Servicios que no son rentables</h3><p>Hay servicios que crees que tiran del salón y, en euros por hora, te dejan mucho menos de lo que crees.</p><span class="tag">Lo que deja por hora, no la tarifa</span></div>
-      <div class="pcard reveal"><div class="ic">📉</div><h3>Gastos que no cuentas</h3><p>Facturar más no sirve si los gastos suben igual. Sin restar alquiler, equipo y producto, no sabes si el mes va bien.</p><span class="tag">Beneficio, no solo facturación</span></div>
+      <div class="pcard reveal"><div class="ic">📉</div><h3>Gastos que no cuentas</h3><p>Facturar más no sirve si los gastos suben igual. Sin restar alquiler, equipo y producto, no sabes si el mes va bien. ¿Cubres gastos o te queda algo?</p><span class="tag">Beneficio, no solo facturación</span></div>
     </div>
   </div>
 </section>
@@ -306,7 +322,7 @@
       </svg>
     </div>
     <div class="reveal" style="margin-top:44px;">
-      <a class="btn btn-v cta-dashboard" href="https://dashboard.godolphy.com/upload">Ponte la máscara: analiza tu salón gratis →</a>
+      <a class="btn btn-v cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón gratis →</a>
     </div>
   </div>
 </section>
@@ -320,7 +336,7 @@
       <p class="lead">Sin instalar nada y sin hojas de cálculo. La información ya está en tu salón: solo hay que mirarla bien.</p>
     </div>
     <div class="cards3">
-      <div class="step reveal"><div class="n grad">01</div><h3>Sube tu agenda</h3><p>Exporta las citas de tu sistema de reservas (Booksy, Fresha, Treatwell, Koibox y más) y súbelas. En 30 segundos está listo.</p></div>
+      <div class="step reveal"><div class="n grad">01</div><h3>Sube tu agenda</h3><p>Exporta las citas de tu sistema de reservas (Booksy, Fresha, Treatwell, Koibox y más) y súbelas. En 2 minutos tienes tu análisis.</p></div>
       <div class="step reveal"><div class="n grad">02</div><h3>Añade tus gastos</h3><p>Alquiler, equipo, producto, marketing… Con tus gastos fijos ves el beneficio real, no solo lo que facturas.</p></div>
       <div class="step reveal"><div class="n grad">03</div><h3>La IA te dice qué hacer</h3><p>Un resumen del mes en lenguaje claro, alertas y oportunidades concretas: a quién escribir, qué servicio revisar, qué cambiar.</p></div>
     </div>
@@ -409,15 +425,27 @@
   </div>
 </section>
 
+<!-- ===================== POR QUÉ ES GRATIS ===================== -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-box reveal">
+      <span class="eyebrow">Sin letra pequeña</span>
+      <h2>¿Por qué es gratis?</h2>
+      <p>Yo también tenía un salón y nunca sabía si el mes había dado dinero. Por eso hice esta herramienta: para que tú sí lo sepas. Es gratis porque, si te ayuda, quizá un día quieras probar Godolphy para gestionar tus reservas.</p>
+      <span class="sign">Neus, fundadora de Godolphy</span>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== CTA FINAL ===================== -->
 <section class="final" id="cta">
   <div class="wrap">
     <div class="final-box reveal">
       <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff;">Empieza hoy</span>
       <h2 style="margin-top:20px;">Tu salón ya tiene los números. Solo hay que mirarlos bien.</h2>
-      <p>Sube tu agenda y descubre en minutos dónde estás perdiendo dinero y qué puedes cambiar este mes.</p>
+      <p>Sube tu agenda y descubre en 2 minutos dónde estás perdiendo dinero y qué puedes cambiar este mes.</p>
       <a class="btn btn-w cta-dashboard" href="https://dashboard.godolphy.com/upload">Analizar mi salón gratis →</a>
-      <div class="note" style="margin-top:18px;">gratis · sin tarjeta · 30 segundos</div>
+      <div class="note" style="margin-top:18px;">gratis · sin tarjeta · en 2 minutos</div>
     </div>
   </div>
 </section>
