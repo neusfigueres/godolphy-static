@@ -432,5 +432,11 @@
       "destination": "/blog/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/lead",
+      "destination": "https://dashboard.godolphy.com/api/activecampaign-signup"
+    }
   ]
 }

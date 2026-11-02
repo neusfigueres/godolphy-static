@@ -12,7 +12,7 @@ import glob, os, re, sys
 
 SKIP_DIRS = ('.git/', 'node_modules/', 'scripts/', 'imagegen/', 'videogen/', 'social/', 'descargas/')
 # Páginas con diseño propio ya renovado o que no deben tocarse
-SKIP_FILES = {'index.html', 'dashboard-ia/index.html'}
+SKIP_FILES = {'index.html', 'dashboard-ia/index.html', 'guia-precios/index.html'}
 
 CSS = '<link rel="stylesheet" href="/assets/gx-pages.css">'
 JS = '<script src="/assets/gx-pages.js" defer></script>'
