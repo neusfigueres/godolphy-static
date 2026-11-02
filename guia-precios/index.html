@@ -62,8 +62,13 @@
 
   
   /* hero guía */
-  .gp-hero{background:linear-gradient(160deg,#9B4FE8 0%,#7835C3 30%,#631cff 65%,#3a0aaa 100%);color:#fff;padding:150px 0 110px;position:relative;overflow:hidden;}
-  .gp-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;}
+  .gp-hero{background:linear-gradient(160deg,#9B4FE8 0%,#7835C3 30%,#631cff 65%,#3a0aaa 100%);color:#fff;padding:120px 0 110px;position:relative;overflow:hidden;}
+  .gp-grid{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"text mock" "text card";column-gap:56px;row-gap:0;align-items:start;}
+  .gp-text{grid-area:text;align-self:center;}
+  .gp-mock{grid-area:mock;margin:-20px -40px -24px;position:relative;z-index:2;pointer-events:none;}
+  .gp-mock img{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(20,5,60,.35));}
+  .gp-card{grid-area:card;}
+  .gp-meta{margin:16px 0 0;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);}
   .gp-hero .eyebrow{background:rgba(255,255,255,.14);color:#fff;}
   .gp-hero h1{font-family:'Gabarito',sans-serif;font-weight:700;font-size:clamp(36px,4.8vw,58px);line-height:1.04;letter-spacing:-.02em;margin:20px 0 18px;}
   .gp-hero h1 .warn{color:#EEFE3A;}
@@ -111,8 +116,8 @@
   .fbot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:13.5px;color:rgba(255,255,255,.45);}
 
 
-  @media(max-width:960px){.gp-grid{grid-template-columns:1fr;gap:80px;}.gp-why .cards{grid-template-columns:1fr;}.fgrid{grid-template-columns:1fr 1fr;}}
-  @media(max-width:720px){.wrap{padding:0 20px;}.nav .links,.nav .right .in{display:none;}.gp-hero{padding:120px 0 70px;}.gp-sub{font-size:16.5px;}.gp-card{padding:24px 20px;border-radius:22px;}.gp-book .cover{width:160px;}.fgrid{grid-template-columns:1fr;}.btn{white-space:normal;text-align:center;}}
+  @media(max-width:960px){.gp-grid{grid-template-columns:1fr;grid-template-areas:"mock" "text" "card";row-gap:36px;}.gp-mock{margin:0 -10px -10px;max-width:620px;justify-self:center;}.gp-why .cards{grid-template-columns:1fr;}.fgrid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:720px){.wrap{padding:0 20px;}.nav .links,.nav .right .in{display:none;}.gp-hero{padding:100px 0 70px;}.gp-sub{font-size:16.5px;}.gp-card{padding:24px 20px;border-radius:22px;}.gp-book .cover{width:160px;}.fgrid{grid-template-columns:1fr;}.btn{white-space:normal;text-align:center;}}
 </style>
 </head>
 <body>
@@ -129,7 +134,8 @@
 <main>
 <section class="gp-hero" id="guia">
   <div class="wrap gp-grid">
-    <div>
+    <div class="gp-mock"><img src="/guia-precios/mockup-guia-precios.webp" alt="La guía «No subas los precios de tu salón sin leer esto antes»: portada y dos páginas interiores" width="1100" height="814" fetchpriority="high"></div>
+    <div class="gp-text">
       <span class="eyebrow">Guía gratuita</span>
       <h1><span class="warn">AVISO:</span> no subas los precios de tu salón sin leer esto antes</h1>
       <p class="gp-sub">Los 5 errores que hacen que subir precios te cueste clientes (o no te sirva de nada), y cómo calcular el precio justo de cada servicio en una tarde.</p>
@@ -139,11 +145,10 @@
         <li>Qué precio subir, cuánto y cómo, sin miedo</li>
         <li>Checklist para hacerlo en una tarde</li>
       </ul>
+      <p class="gp-meta">7 páginas · con ejemplo calculado y checklist</p>
     </div>
 
     <div class="gp-card">
-      <div class="gp-book" aria-hidden="true"><div class="cover" id="gp-cover"><img src="/guia-precios/portada.webp" alt="Portada de la guía «No subas los precios de tu salón sin leer esto antes»" width="420" height="594"></div></div>
-
       <form class="gp-f" id="gp-form" novalidate>
         <h2>Descárgala gratis</h2>
         <p class="muted">Te la damos al momento, aquí mismo.</p>
