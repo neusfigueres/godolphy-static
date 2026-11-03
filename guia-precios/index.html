@@ -215,15 +215,26 @@
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showErr('Revisa tu email.');return;}
     if(!priv){showErr('Para descargar la guía, acepta la política de privacidad.');return;}
     btn.disabled=true;btn.textContent='Un momento…';
-    fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({source:'guia-precios',nombre:nombre,email:email,privacy_accepted:true,marketing_consent:mkt})})
-      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
-      .then(function(x){
-        if(!x.ok||!x.j||!x.j.download){throw new Error('fail');}
-        document.getElementById('gp-dl').href=x.j.download;
-        f.style.display='none';document.getElementById('gp-ok').style.display='block';
-        try{if(window.posthog){posthog.identify(email,{name:nombre});posthog.capture('lead_magnet_signup',{magnet:'guia-precios',marketing_consent:mkt});}}catch(_){}
+    // El lead queda registrado en la analítica aunque falle el envío
+    try{if(window.posthog){posthog.identify(email,{name:nombre});posthog.capture('lead_magnet_submit',{magnet:'guia-precios',marketing_consent:mkt});}}catch(_){}
+    var payload=JSON.stringify({source:'guia-precios',nombre:nombre,email:email,privacy_accepted:true,marketing_consent:mkt});
+    function post(url){return fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:payload}).then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!j||!j.download){var e=new Error('http '+r.status);e.status=r.status;throw e;}return j;});});}
+    function done(url,saved,how){
+      document.getElementById('gp-dl').href=url;
+      f.style.display='none';document.getElementById('gp-ok').style.display='block';
+      try{if(window.posthog)posthog.capture(saved?'lead_magnet_signup':'lead_magnet_signup_unsaved',{magnet:'guia-precios',marketing_consent:mkt,via:how});}catch(_){}
+    }
+    post('/api/lead')
+      .then(function(j){done(j.download,j.saved!==false,'api');})
+      .catch(function(e){
+        if(e&&e.status===400){throw e;}
+        return post('https://dashboard.godolphy.com/api/activecampaign-signup').then(function(j){done(j.download,j.saved!==false,'direct');});
       })
-      .catch(function(){showErr('No hemos podido enviarlo. Inténtalo de nuevo en unos segundos.');})
+      .catch(function(e){
+        if(e&&e.status===400){showErr('Revisa tu nombre y tu email.');return;}
+        // Último recurso: que nadie se quede sin la guía por un fallo técnico
+        done(atob('aHR0cHM6Ly9kYXNoYm9hcmQuZ29kb2xwaHkuY29tL2QvZ3AtZTFhMjAxMzkzOGYyYzcyNS9Hb2RvbHBoeS1uby1zdWJhcy1sb3MtcHJlY2lvcy1kZS10dS1zYWxvbi5wZGY='),false,'fallback');
+      })
       .finally(function(){btn.disabled=false;btn.textContent='Quiero la guía gratis';});
   });
   document.getElementById('gp-dl').addEventListener('click',function(){try{if(window.posthog)posthog.capture('lead_magnet_download',{magnet:'guia-precios'});}catch(_){}});
