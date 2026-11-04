@@ -683,6 +683,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.godolphy.com/cuanto-cuesta-abrir-centro-de-estetica/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/guia-precios/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/titulacion-abrir-centro-de-estetica/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/tarjetas-regalo-navidad-salon-de-belleza/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Centro de ayuda -->
   <url>
@@ -846,6 +870,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/ayuda/estado-de-la-cita/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/ayuda/ventas-y-reembolsos/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -946,28 +975,4 @@
     <priority>0.6</priority>
   </url>
   <!-- /Centro de ayuda -->
-  <url>
-    <loc>https://www.godolphy.com/cuanto-cuesta-abrir-centro-de-estetica/</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.godolphy.com/guia-precios/</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.godolphy.com/titulacion-abrir-centro-de-estetica/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.godolphy.com/tarjetas-regalo-navidad-salon-de-belleza/</loc>
-    <lastmod>2026-11-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 </urlset>

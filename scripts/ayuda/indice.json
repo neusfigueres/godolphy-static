@@ -190,7 +190,7 @@
         },
         {
           "slug": "calendario",
-          "titulo": "El calendario: vistas, colores y estados",
+          "titulo": "El calendario: vistas, franjas, colores y estados",
           "publicado": true
         },
         {
@@ -200,7 +200,12 @@
         },
         {
           "slug": "reprogramar-y-cancelar",
-          "titulo": "Reprogramar y cancelar citas",
+          "titulo": "Mover, reprogramar y cancelar citas",
+          "publicado": true
+        },
+        {
+          "slug": "estado-de-la-cita",
+          "titulo": "Marcar la llegada y cerrar una cita",
           "publicado": true
         },
         {
