@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/neus/neus_salon_b.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Photorealistic editorial portrait of the SAME real woman shown in both reference photos: keep her face, facial features, age, skin, long straight dark-blonde hair and her black rectangular acetate glasses exactly as in the references (clean lenses, no green reflections). She is the founder of a beauty-salon software company. Natural, ordinary, real look, not a model: visible skin texture, minimal makeup. Neutral clothing: cream knit cardigan (no purple or lilac clothes). Setting: a real modern beauty salon with warm neutral interior — cream walls, beige tones, light oak wood and vertical wooden slats, soft daylight, spontaneous editorial photo style, shallow depth of field. Vertical 4:5. No text, no logos, no watermark, natural hands with five fingers. She sits at the light-wood reception desk with an open laptop beside her (screen not visible), turned towards the camera, smiling naturally, one forearm resting on the desk.",
+ "size": "4:5",
+ "ref_files": [
+  "imagegen/refs/neus/neus_ref1.jpg",
+  "imagegen/refs/neus/neus_ref2.jpg"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
