@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/neus/hero_h2.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Design a high-end editorial email hero graphic (vertical 4:5) for the beauty-salon software brand Godolphy, in the style of modern Instagram ad posters with juxtaposed typography: use the woman from the reference photo (keep her face, hair, smile and beige knit top exactly; she can keep the black Røde microphone and the black GODOLPHY mug), cut out cleanly and placed IN FRONT of a huge bold rounded sans-serif word, so her head and hair overlap part of the giant letters while the word stays clearly readable. Exact Spanish text, spelled correctly with accents, nothing else written: small bold headline at top left 'Lo que hacen las grandes empresas, ahora en tu' ; giant word 'salón' behind her ; small rounded pill label 'con IA'. Font: rounded geometric bold like Gabarito/Poppins Bold. Clean flat background, soft studio shadow under her, professional retouch, sharp, no extra logos, no other text, no watermark. Colours: flat warm cream background #FBF6F1, giant word 'salón' in electric violet #631CFF, headline in near-black #02021E, pill violet #631CFF with neon-lime text #EEFE3A.",
+ "size": "4:5",
+ "ref_files": [
+  "imagegen/refs/neus/neus_podcast.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
