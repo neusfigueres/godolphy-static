@@ -10,7 +10,7 @@ Es idempotente: se puede ejecutar varias veces sin duplicar nada.
 """
 import glob, os, re, sys
 
-SKIP_DIRS = ('.git/', 'node_modules/', 'scripts/', 'imagegen/', 'videogen/', 'social/', 'descargas/')
+SKIP_DIRS = ('.git/', 'node_modules/', 'scripts/', 'imagegen/', 'videogen/', 'social/', 'descargas/', 'lp/')
 # Páginas con diseño propio ya renovado o que no deben tocarse
 SKIP_FILES = {'index.html', 'dashboard-ia/index.html', 'guia-precios/index.html'}
 

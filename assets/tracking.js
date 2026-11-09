@@ -93,11 +93,11 @@
     d.id = 'gd-cookies';
     d.setAttribute('role', 'dialog');
     d.setAttribute('aria-label', 'Preferencias de cookies');
-    d.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:560px;margin:0 auto;background:#02021e;color:#fff;border-radius:16px;padding:18px 20px;box-shadow:0 12px 40px rgba(0,0,0,.25);font-family:Poppins,system-ui,sans-serif;font-size:14px;line-height:1.5;';
-    d.innerHTML = '<p style="margin:0 0 14px;color:rgba(255,255,255,.85);">Usamos cookies propias y de terceros para analizar el uso de la web y mostrarte publicidad relevante. Puedes aceptarlas o rechazarlas. <a href="/politica-de-cookies/" style="color:#EEFE3A;">Más información</a></p>' +
-      '<div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;">' +
-      '<button type="button" data-c="denied" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);border-radius:12px;padding:9px 18px;font:inherit;font-weight:600;cursor:pointer;">Rechazar</button>' +
-      '<button type="button" data-c="granted" style="background:#EEFE3A;color:#02021e;border:0;border-radius:12px;padding:9px 18px;font:inherit;font-weight:700;cursor:pointer;">Aceptar</button></div>';
+    d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#02021e;color:#fff;padding:10px 14px;box-shadow:0 -6px 24px rgba(0,0,0,.18);font-family:system-ui,sans-serif;font-size:12.5px;line-height:1.4;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;';
+    d.innerHTML = '<p style="margin:0;color:rgba(255,255,255,.85);flex:1 1 220px;max-width:640px;">Usamos cookies para analizar la web y mostrarte publicidad relevante. <a href="/politica-de-cookies/" style="color:#EEFE3A;">Más info</a></p>' +
+      '<div style="display:flex;gap:8px;flex:0 0 auto;">' +
+      '<button type="button" data-c="denied" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer;">Rechazar</button>' +
+      '<button type="button" data-c="granted" style="background:#EEFE3A;color:#02021e;border:0;border-radius:10px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer;">Aceptar</button></div>';
     d.addEventListener('click', function (e) {
       var c = e.target && e.target.getAttribute && e.target.getAttribute('data-c');
       if (!c) return;
