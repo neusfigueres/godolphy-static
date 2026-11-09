@@ -1,11 +1,11 @@
 {
-  "out": "videogen/out/neus-despatx-full-0.mp4",
+  "out": "videogen/out/neus-despatx-full-2.mp4",
   "model": "kling-video-o1",
   "prompt": "Edit the video: replace the whole room with the office from <<<image_1>>> (cream walls, light-oak vertical slat panel, plant, light wooden desk, window daylight from the left). Remove the kitchen, dining table, chairs and baby high chair. Keep the woman exactly identical: same face, hair, grey cardigan with yellow flowers, jeans, gestures, body position and lip movements. Same camera framing, realistic photographic look.",
   "body": {
     "video_list": [
       {
-        "video_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/d212fa22-d5f5-47b4-aac8-b0a03d03cd52.mp4",
+        "video_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/419aea67-d997-471b-b4a6-15f8f575f87b.mp4",
         "refer_type": "base",
         "keep_original_sound": "yes"
       }
@@ -15,5 +15,29 @@
     ],
     "mode": "pro",
     "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 187,
+      "completed": 1794262427,
+      "cost": 1.344,
+      "created": 1794262240,
+      "credits_cost": 13.440000000000001,
+      "estimated_time": 300,
+      "id": "task_01M715T2W0805JNS7KNMGJV2WZ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794348827,
+            "url": [
+              "https://getapib.org/video/9998205737576696-3ee1b3ad-6649-4c44-a2c7-c4581cf09b01-video_task_01M715T2W0805JNS7KNMGJV2WZ.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
   }
 }
