@@ -1,9 +1,0 @@
-{
-  "out": "videogen/out/neus-despatx-1.mp4",
-  "model": "kling-o1-video-edit",
-  "prompt": "Replace the background and room with the office shown in the reference image: cream walls, light-oak vertical slat panel, plant, light wooden desk, window daylight from the left. Keep the woman exactly identical: same face, hair, grey cardigan with yellow flowers, jeans, gestures, body position and lip movements. Remove the kitchen, dining table, chairs and baby high chair. Realistic photographic look, same camera framing.",
-  "body": {
-    "video_urls": ["https://d2ol7oe51mr4n9.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/327b7a59-33a9-4170-8051-5f16bc075ae5.mp4"],
-    "image_urls": ["https://d8j0ntlcm91z4.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/hf_20261109_164950_d8431657-6a81-4566-b306-16541d184d45.png"]
-  }
-}
