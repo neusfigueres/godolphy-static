@@ -118,8 +118,18 @@ a{color:inherit;}
 .ge-top{background:#fff;padding:18px 0;text-align:center;}
 .ge-top img{height:30px;width:auto;margin:0 auto;}
 .ge-hero{background:#fff;padding:4px 0 8px;}
-.ge-hero .w{max-width:620px;}
+.ge-hero .w{max-width:1240px;}
 .ge-hero img{width:100%;border-radius:28px;}
+.ge-zz__img{position:relative;overflow:hidden;display:flex;justify-content:center;padding:34px 10px 10px;}
+.ge-sun{position:absolute;width:62%;aspect-ratio:1;top:0;right:4%;border-radius:50%;background:radial-gradient(circle,#EEFE3A 0 64%,transparent 65%);}
+.ge-sun::before{content:"";position:absolute;inset:-14%;background:repeating-conic-gradient(from 8deg,#EEFE3A 0 3deg,transparent 3deg 30deg);-webkit-mask:radial-gradient(circle,transparent 0 58%,#000 59% 70%,transparent 71%);mask:radial-gradient(circle,transparent 0 58%,#000 59% 70%,transparent 71%);}
+.ge-card{position:relative;background:#fff;border-radius:16px;padding:10px;box-shadow:0 24px 60px rgba(40,20,90,.18);transform:rotate(-3deg);max-width:380px;width:92%;}
+.ge-zz:nth-child(even) .ge-card{transform:rotate(3deg);}
+.ge-card img{width:100%;border-radius:10px;border:1px solid rgba(2,2,30,.06);}
+.ge-lap{max-width:900px;margin:26px auto 0;padding:0 4%;}
+.ge-lap__scr{background:#0d0627;border-radius:18px 18px 0 0;padding:12px 12px 14px;box-shadow:0 30px 70px rgba(60,20,160,.2);}
+.ge-lap__scr img{width:100%;border-radius:6px;}
+.ge-lap__base{height:16px;margin:0 -4%;background:linear-gradient(#e6e3ef,#c9c5d6);border-radius:0 0 18px 18px;}
 .ge-intro{max-width:620px;}
 .ge-intro p{font-size:18px;line-height:1.65;color:rgba(2,2,30,.8);margin:0 0 14px;}
 .ge-intro b{color:var(--ink);}
@@ -130,7 +140,6 @@ a{color:inherit;}
 .ge-cap{font-size:12.5px;color:var(--muted);text-align:center;margin-top:6px;}
 .ge-zz{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;max-width:860px;margin:0 auto 48px;}
 .ge-zz:nth-child(even) .ge-zz__img{order:2;}
-.ge-zz__img img{width:100%;max-width:340px;margin:0 auto;}
 .ge-zz h3{font-family:'Gabarito',sans-serif;font-size:clamp(23px,2.6vw,28px);line-height:1.15;color:var(--v);margin:0 0 10px;}
 .ge-zz p{margin:0;font-size:16.5px;line-height:1.6;color:rgba(2,2,30,.75);}
 .ge-more{max-width:640px;margin:0 auto;text-align:center;color:var(--muted);line-height:1.6;}
@@ -151,7 +160,10 @@ a{color:inherit;}
 <section class="ge-hero">
   <div class="w">
     <h1 class="sr">Lo que hacen las grandes empresas, ahora en tu salón, con IA</h1>
-    <img src="/lp/grandes-empresas/hero-ia-2.webp" alt="Neus, fundadora de Godolphy. Lo que hacen las grandes empresas, ahora en tu salón, con IA" width="1080" height="1350" fetchpriority="high">
+    <picture>
+      <source media="(min-width: 761px)" srcset="/lp/grandes-empresas/hero-ancho.webp" width="2048" height="1152">
+      <img src="/lp/grandes-empresas/hero-movil.webp" alt="Neus, fundadora de Godolphy. Lo que hacen las grandes empresas, ahora en tu salón, con IA" width="1080" height="1350" fetchpriority="high">
+    </picture>
   </div>
 </section>
 
@@ -168,7 +180,7 @@ a{color:inherit;}
   <div class="w">
     <p class="ge-eyebrow">Así se ve por dentro</p>
     <h2 class="h2 ge-center">Tu negocio, analizado con IA</h2>
-    <div class="ge-laptop"><img src="/lp/grandes-empresas/v5-laptop.webp" alt="Panel de Godolphy con el análisis del negocio con IA" width="1080" height="640" loading="lazy"><p class="ge-cap">Datos de ejemplo.</p></div>
+    <div class="ge-lap"><div class="ge-lap__scr"><img src="/lp/grandes-empresas/panel.webp" alt="Panel de Godolphy con el análisis del negocio con IA" width="1600" height="1000" loading="lazy"></div><div class="ge-lap__base"></div><p class="ge-cap">Datos de ejemplo.</p></div>
   </div>
 </section>
 
@@ -176,7 +188,7 @@ a{color:inherit;}
   <div class="w">
     <h2 class="h2 ge-center" style="color:var(--v);margin-bottom:8px;">Todo lo que al tuyo le falta</h2>
     <p class="ge-more" style="margin-bottom:44px;">Lo que hacen las grandes empresas y tu programa actual no te deja hacer.</p>
-    <div class="ge-zz"><div class="ge-zz__img"><img src="/lp/grandes-empresas/v6-d1.webp" alt="" width="520" height="600" loading="lazy"></div><div><h3>La IA te dice qué servicio te hace ganar dinero</h3><p>Cuánto te deja de verdad cada servicio, por hora, después de producto y tiempo. Para que sepas qué promocionar y qué precio subir.</p></div></div><div class="ge-zz"><div class="ge-zz__img"><img src="/lp/grandes-empresas/v6-d2.webp" alt="" width="520" height="600" loading="lazy"></div><div><h3>Tu plan financiero, hecho con tus datos</h3><p>Eliges cuánto quieres crecer y cada mes ves si vas por delante o por detrás… y qué tocar para llegar.</p></div></div><div class="ge-zz"><div class="ge-zz__img"><img src="/lp/grandes-empresas/v6-d3.webp" alt="" width="520" height="600" loading="lazy"></div><div><h3>Precio según el día y la hora</h3><p>Más caro en horas punta, más barato para llenar las horas flojas. Tus clientes ven siempre el precio final.</p></div></div><div class="ge-zz"><div class="ge-zz__img"><img src="/lp/grandes-empresas/v6-d4.webp" alt="" width="520" height="600" loading="lazy"></div><div><h3>Domicilios con el desplazamiento calculado</h3><p>Tus zonas, tu precio por desplazamiento y el tiempo entre citas, calculado solo en tu agenda.</p></div></div>
+    <div class="ge-zz"><div class="ge-zz__img"><span class="ge-sun" aria-hidden="true"></span><div class="ge-card"><img src="/lp/grandes-empresas/f-servicios.webp" alt="La IA te dice qué servicio te hace ganar dinero en Godolphy" loading="lazy"></div></div><div><h3>La IA te dice qué servicio te hace ganar dinero</h3><p>Cuánto te deja de verdad cada servicio, por hora, después de producto y tiempo. Para que sepas qué promocionar y qué precio subir.</p></div></div><div class="ge-zz"><div class="ge-zz__img"><span class="ge-sun" aria-hidden="true"></span><div class="ge-card"><img src="/lp/grandes-empresas/f-plan.webp" alt="Tu plan financiero, hecho con tus datos en Godolphy" loading="lazy"></div></div><div><h3>Tu plan financiero, hecho con tus datos</h3><p>Eliges cuánto quieres crecer y cada mes ves si vas por delante o por detrás… y qué tocar para llegar.</p></div></div><div class="ge-zz"><div class="ge-zz__img"><span class="ge-sun" aria-hidden="true"></span><div class="ge-card"><img src="/lp/grandes-empresas/f-precio-hora.webp" alt="Precio según el día y la hora en Godolphy" loading="lazy"></div></div><div><h3>Precio según el día y la hora</h3><p>Más caro en horas punta, más barato para llenar las horas flojas. Tus clientes ven siempre el precio final.</p></div></div><div class="ge-zz"><div class="ge-zz__img"><span class="ge-sun" aria-hidden="true"></span><div class="ge-card"><img src="/lp/grandes-empresas/f-domicilio.webp" alt="Domicilios con el desplazamiento calculado en Godolphy" loading="lazy"></div></div><div><h3>Domicilios con el desplazamiento calculado</h3><p>Tus zonas, tu precio por desplazamiento y el tiempo entre citas, calculado solo en tu agenda.</p></div></div>
     <p class="ge-more">Y además: reservas online 24/7, recordatorios por WhatsApp, cobros, tarjetas regalo y todo lo que ya esperas de un software de gestión.</p>
   </div>
 </section>
