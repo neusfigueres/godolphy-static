@@ -3,6 +3,116 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/blog/funcionalidades/:slug",
+      "destination": "/funcionalidades/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades/:slug/",
+      "destination": "/funcionalidades/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/darme-de-alta",
+      "destination": "/empieza/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/darme-de-alta/",
+      "destination": "/empieza/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-spa-masajes",
+      "destination": "/sectores/software-para-spa-y-masajes/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-spa-masajes/",
+      "destination": "/sectores/software-para-spa-y-masajes/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/plantilla-facturacion-centros-de-estetica-excel",
+      "destination": "/plantilla-facturacion-centros-de-estetica-excel/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/plantilla-facturacion-centros-de-estetica-excel/",
+      "destination": "/plantilla-facturacion-centros-de-estetica-excel/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-empresas-de-limpieza",
+      "destination": "/sectores/software-para-empresas-de-limpieza/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-empresas-de-limpieza/",
+      "destination": "/sectores/software-para-empresas-de-limpieza/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/politica-de-privacidad",
+      "destination": "/politica-de-privacidad/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/politica-de-privacidad/",
+      "destination": "/politica-de-privacidad/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-salones-de-unas",
+      "destination": "/sectores/software-para-salones-de-unas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-salones-de-unas/",
+      "destination": "/sectores/software-para-salones-de-unas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-barberias",
+      "destination": "/sectores/software-para-barberias/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/software-para-barberias/",
+      "destination": "/sectores/software-para-barberias/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cookies",
+      "destination": "/politica-de-cookies/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cookies/",
+      "destination": "/politica-de-cookies/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lampistas-fontaneros-reparaciones-software",
+      "destination": "/lampistas-fontaneros-reparaciones-software/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lampistas-fontaneros-reparaciones-software/",
+      "destination": "/lampistas-fontaneros-reparaciones-software/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
       "source": "/lista-de-espera",
       "destination": "https://app.godolphy.com/auth/sign-up",
       "permanent": false
@@ -198,23 +308,13 @@
       "permanent": true
     },
     {
-      "source": "/diferencias-entre-fresha-y-godolphy",
-      "destination": "/alternativa-a-fresha/",
-      "permanent": true
-    },
-    {
-      "source": "/diferencias-entre-fresha-y-godolphy/",
-      "destination": "/alternativa-a-fresha/",
-      "permanent": true
-    },
-    {
       "source": "/darme-de-alta",
-      "destination": "/lista-de-espera/",
+      "destination": "/empieza/",
       "permanent": false
     },
     {
       "source": "/darme-de-alta/",
-      "destination": "/lista-de-espera/",
+      "destination": "/empieza/",
       "permanent": false
     },
     {
