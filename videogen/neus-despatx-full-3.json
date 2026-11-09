@@ -1,0 +1,19 @@
+{
+  "out": "videogen/out/neus-despatx-full-3.mp4",
+  "model": "kling-video-o1",
+  "prompt": "Edit the video: replace the whole room with the office from <<<image_1>>> (cream walls, light-oak vertical slat panel, plant, light wooden desk, window daylight from the left). Remove the kitchen, dining table, chairs and baby high chair. Keep the woman exactly identical: same face, hair, grey cardigan with yellow flowers, jeans, gestures, body position and lip movements. Same camera framing, realistic photographic look.",
+  "body": {
+    "video_list": [
+      {
+        "video_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/bf2bb2c6-401f-4088-a85d-0fdbd31652ab.mp4",
+        "refer_type": "base",
+        "keep_original_sound": "yes"
+      }
+    ],
+    "image_urls": [
+      "https://d8j0ntlcm91z4.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/hf_20261109_164950_d8431657-6a81-4566-b306-16541d184d45.png"
+    ],
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}
