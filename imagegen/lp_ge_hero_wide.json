@@ -1,0 +1,9 @@
+{
+ "out": "imagegen/neus/lp_ge_hero_wide.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Wide landscape website hero banner (16:9) for the beauty-salon software brand Godolphy, same design language as the reference poster: flat warm cream background #FBF6F1. RIGHT HALF: the woman from the reference (keep her face, hair, smile, beige knit top, black Røde microphone on its arm and the black GODOLPHY mug exactly), cut out cleanly, sitting at a table, framed from the waist up, soft studio shadow. LEFT HALF, left-aligned with generous margins: small bold near-black #02021E headline on two lines 'Lo que hacen las grandes empresas,' / 'ahora en tu' ; below it the huge bold rounded word 'salón' in electric violet #631CFF, so big that its last letters pass BEHIND the woman (her hair and shoulder overlap the end of the word) while the word stays clearly readable ; under the word a rounded pill label 'con IA' in violet #631CFF with neon-lime #EEFE3A text. Exact Spanish text spelled correctly with accents, nothing else written anywhere, no logos, no watermark. Font: rounded geometric bold like Gabarito. Professional retouch, sharp, high resolution, plenty of empty cream space around the text.",
+ "size": "16:9",
+ "ref_files": ["imagegen/neus/hero_h2.png", "imagegen/refs/neus/neus_podcast.png"],
+ "extra": {"resolution": "2K"},
+ "no_style": true
+}
