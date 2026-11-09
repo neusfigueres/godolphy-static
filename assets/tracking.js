@@ -61,6 +61,16 @@
   };
   window.gdGetUtm();
 
+  // ── fbclid del clic en el anuncio de Meta: se guarda durante la visita (sessionStorage, sin cookies)
+  //    para que la API de Conversiones pueda atribuir el lead al anuncio aunque no se acepten cookies ──
+  window.gdGetFbc = function () {
+    var p = new URLSearchParams(location.search), id = p.get('fbclid'), fbc = null;
+    try { fbc = sessionStorage.getItem('gd_fbc'); } catch (e) {}
+    if (id) { fbc = 'fb.1.' + Date.now() + '.' + id; try { sessionStorage.setItem('gd_fbc', fbc); } catch (e) {} }
+    return fbc;
+  };
+  window.gdGetFbc();
+
   // Pasa las UTMs a los enlaces del dashboard (otro subdominio: allí no llega el sessionStorage)
   function decorateDashboardLinks() {
     var u = window.gdGetUtm();
@@ -81,8 +91,20 @@
   window.gdTrackLead = function (extra) {
     var props = extra || {}, u = window.gdGetUtm();
     UTM_KEYS.forEach(function (k) { if (u[k]) props[k] = u[k]; });
+    var email = props.email;
+    if (!email) { var inp = document.querySelector('input[type=email]'); if (inp && inp.value) email = inp.value.trim(); }
+    delete props.email; // el email nunca va en claro a GA, al píxel ni a PostHog desde aquí
+    var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
     try { gtag('event', 'generate_lead', props); } catch (e) {}
-    try { if (window.fbq) fbq('track', 'Lead', props); } catch (e) {}
+    try { if (window.fbq) fbq('track', 'Lead', props, { eventID: eventId }); } catch (e) {}
+    // API de Conversiones de Meta (servidor): cuenta el lead aunque no se hayan aceptado cookies.
+    // Solo se llama al enviar un formulario, donde ya se ha aceptado la política de privacidad.
+    try {
+      var fbp = (document.cookie.match(/(?:^|; )_fbp=([^;]+)/) || [])[1];
+      var body = JSON.stringify(Object.assign({ event_name: 'Lead', event_id: eventId, email: email, fbc: window.gdGetFbc(), fbp: fbp, url: location.href }, props));
+      if (navigator.sendBeacon) navigator.sendBeacon('/api/capi', new Blob([body], { type: 'application/json' }));
+      else fetch('/api/capi', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body, keepalive: true });
+    } catch (e) {}
     try { if (window.ttq) ttq.track('SubmitForm', props); } catch (e) {}
     try { if (window.posthog) posthog.capture('waitlist_submitted', props); } catch (e) {}
   };

@@ -222,6 +222,7 @@
     function done(url,saved,how){
       document.getElementById('gp-dl').href=url;
       f.style.display='none';document.getElementById('gp-ok').style.display='block';
+      try{if(!window._gdLeadSent&&window.gdTrackLead){window._gdLeadSent=true;window.gdTrackLead({form:'guia-precios',email:email});}}catch(_){}
       try{if(window.posthog)posthog.capture(saved?'lead_magnet_signup':'lead_magnet_signup_unsaved',{magnet:'guia-precios',marketing_consent:mkt,via:how});}catch(_){}
     }
     post('/api/lead')
