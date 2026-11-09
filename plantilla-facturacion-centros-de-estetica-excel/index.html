@@ -309,7 +309,7 @@ function toggleMobileNav(){
           <input id="pf-consent" type="checkbox" required style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" />
           <label for="pf-consent" style="font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;">Acepto la <a href="/politica-de-privacidad/" target="_blank" style="color:#631cff;text-decoration:underline;">política de privacidad</a> y recibir comunicaciones de Godolphy.</label>
         </div>
-        <button id="pf-submit" type="submit" style="background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;border:none;cursor:pointer;font-family:inherit;margin-top:8px;">Empieza ahora — Es gratis</button>
+        <button id="pf-submit" type="submit" style="background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;border:none;cursor:pointer;font-family:inherit;margin-top:8px;">Descargar la plantilla gratis</button>
       </form>
     </div>
 
@@ -332,7 +332,7 @@ function toggleMobileNav(){
   window._show_thank_you=function(){ plantillaDone(); };
   window._show_error=function(id,message){
     var btn=document.getElementById('pf-submit');
-    btn.disabled=false; btn.textContent='Empieza ahora — Es gratis';
+    btn.disabled=false; btn.textContent='Descargar la plantilla gratis';
     var el=document.getElementById('pf-error');
     if(!el){ el=document.createElement('p'); el.id='pf-error'; el.style.cssText='color:#dc2626;font-size:13px;text-align:center;margin:8px 0 0;'; btn.parentNode.insertBefore(el,btn.nextSibling); }
     el.textContent=message||'Ha ocurrido un error. Inténtalo de nuevo.';
