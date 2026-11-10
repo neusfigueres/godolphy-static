@@ -272,6 +272,19 @@ html{scroll-behavior:smooth;}
   .hero .txt{padding-bottom:0;}
 }
 @media(max-width:520px){.why{grid-template-columns:1fr;}}
+
+.era{background:radial-gradient(700px 380px at 50% 72%,rgba(123,77,255,.16),transparent 70%),#fff;}
+.era .h2{font-size:clamp(38px,5.6vw,74px);max-width:940px;margin-left:auto;margin-right:auto;background:linear-gradient(90deg,#02021e 0%,#631cff 55%,#9B4FE8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.mask{max-width:760px;margin:60px auto 0;}
+.mask svg{width:100%;height:auto;display:block;overflow:visible;animation:mfloat 6s ease-in-out infinite;filter:drop-shadow(0 40px 60px rgba(99,28,255,.35));}
+@keyframes mfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.tick{animation:tick 12s cubic-bezier(.7,0,.3,1) infinite;}
+@keyframes tick{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-70px)}50%,70%{transform:translateY(-140px)}75%,95%{transform:translateY(-210px)}100%{transform:translateY(-280px)}}
+.tick2{animation:tick2 12s cubic-bezier(.7,0,.3,1) infinite;}
+@keyframes tick2{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-120px)}50%,70%{transform:translateY(-240px)}75%,95%{transform:translateY(-360px)}100%{transform:translateY(-480px)}}
+.shine{animation:shine 5s ease-in-out infinite;}
+@keyframes shine{0%,100%{transform:translateX(-300px) skewX(-18deg)}50%{transform:translateX(420px) skewX(-18deg)}}
+@media (prefers-reduced-motion:reduce){.mask svg,.tick,.tick2,.shine{animation:none}}
 </style>
 </head>
 <body data-lp="salones">
@@ -307,7 +320,69 @@ html{scroll-behavior:smooth;}
   </div>
 </section>
 
-<section class="sec" id="neus">
+<!-- ===================== NUEVA ERA · MÁSCARA ===================== -->
+<section class="sec era ctr" id="nueva-era">
+  <div class="w">
+    <div class="rv">
+      <span class="eb">La nueva era</span>
+      <h2 class="h2">Una nueva era para los salones, con IA</h2>
+      <p class="lead2">Con la máscara de Godolphy ves tu salón con otros ojos: lo que ganas de verdad, quién se está yendo y dónde se escapa el dinero.</p>
+    </div>
+    <div class="mask rv" aria-hidden="true">
+      <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="mG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#d9c8ff"/><stop offset=".3" stop-color="#9B4FE8"/><stop offset=".7" stop-color="#631cff"/><stop offset="1" stop-color="#3a0aaa"/>
+          </linearGradient>
+          <linearGradient id="mGloss" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="mShine" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".32"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <path id="eL" d="M126 128 H246 C270 128 282 146 282 170 V184 C282 214 258 234 226 234 H150 C112 234 86 212 86 180 C86 150 100 128 126 128 Z"/>
+          <path id="eR" d="M554 128 H434 C410 128 398 146 398 170 V184 C398 214 422 234 454 234 H530 C568 234 594 212 594 180 C594 150 580 128 554 128 Z"/>
+          <clipPath id="cL"><use href="#eL"/></clipPath>
+          <clipPath id="cR"><use href="#eR"/></clipPath>
+          <path id="mS" fill-rule="evenodd" d="M44 8 H636 Q676 8 676 48 V262 C676 318 634 352 560 352 C486 352 440 326 404 288 Q376 258 340 258 Q304 258 276 288 C240 326 194 352 120 352 C46 352 4 318 4 262 V48 Q4 8 44 8 Z M126 128 H246 C270 128 282 146 282 170 V184 C282 214 258 234 226 234 H150 C112 234 86 212 86 180 C86 150 100 128 126 128 Z M554 128 H434 C410 128 398 146 398 170 V184 C398 214 422 234 454 234 H530 C568 234 594 212 594 180 C594 150 580 128 554 128 Z"/>
+          <clipPath id="cS"><use href="#mS"/></clipPath>
+        </defs>
+
+        <g clip-path="url(#cL)">
+          <rect x="80" y="120" width="210" height="120" fill="#0c0628"/>
+          <g class="tick2" font-family="Plus Jakarta Sans, sans-serif" text-anchor="middle">
+            <text x="184" y="168" fill="#9cf0c6" font-size="12" font-weight="700" letter-spacing="2">BENEFICIO ESTIMADO</text><text x="184" y="200" fill="#fff" font-size="30" font-weight="800">3.480 €</text>
+            <text x="184" y="288" fill="#ffd98a" font-size="12" font-weight="700" letter-spacing="2">€ POR HORA</text><text x="184" y="320" fill="#fff" font-size="30" font-weight="800">28 €/h</text>
+            <text x="184" y="408" fill="#ffb3c4" font-size="12" font-weight="700" letter-spacing="2">EN RIESGO</text><text x="184" y="440" fill="#fff" font-size="30" font-weight="800">4 clientes</text>
+            <text x="184" y="528" fill="#d9c8ff" font-size="12" font-weight="700" letter-spacing="2">OCUPACIÓN</text><text x="184" y="560" fill="#fff" font-size="30" font-weight="800">72 %</text>
+            <text x="184" y="648" fill="#9cf0c6" font-size="12" font-weight="700" letter-spacing="2">BENEFICIO ESTIMADO</text><text x="184" y="680" fill="#fff" font-size="30" font-weight="800">3.480 €</text>
+          </g>
+        </g>
+        <g clip-path="url(#cR)">
+          <rect x="390" y="120" width="210" height="120" fill="#0c0628"/>
+          <g transform="translate(422 150)"><g class="tick2">
+            <g><rect x="0" y="22" width="18" height="34" rx="3" fill="#631cff"/><rect x="26" y="10" width="18" height="46" rx="3" fill="#7B4DFF"/><rect x="52" y="-2" width="18" height="58" rx="3" fill="#9B4FE8"/><rect x="78" y="16" width="18" height="40" rx="3" fill="#631cff"/><rect x="104" y="2" width="18" height="54" rx="3" fill="#d9c8ff"/><rect x="130" y="26" width="18" height="30" rx="3" fill="#7B4DFF"/></g>
+            <g transform="translate(0 120)"><polyline points="0,48 30,36 60,40 90,16 120,22 148,2" fill="none" stroke="#9cf0c6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="148" cy="2" r="5" fill="#9cf0c6"/></g>
+            <g transform="translate(0 240)"><circle cx="18" cy="28" r="15" fill="#f6c6d6"/><circle cx="55" cy="28" r="15" fill="#ffe1a8"/><circle cx="92" cy="28" r="15" fill="#c7f0dc"/><circle cx="129" cy="28" r="15" fill="#c7d7ff"/></g>
+            <g transform="translate(0 360)"><rect x="0" y="12" width="148" height="10" rx="5" fill="#2A1660"/><rect x="0" y="12" width="58" height="10" rx="5" fill="#ffd98a"/><rect x="0" y="36" width="148" height="10" rx="5" fill="#2A1660"/><rect x="0" y="36" width="112" height="10" rx="5" fill="#9B4FE8"/></g>
+            <g transform="translate(0 480)"><rect x="0" y="22" width="18" height="34" rx="3" fill="#631cff"/><rect x="26" y="10" width="18" height="46" rx="3" fill="#7B4DFF"/><rect x="52" y="-2" width="18" height="58" rx="3" fill="#9B4FE8"/><rect x="78" y="16" width="18" height="40" rx="3" fill="#631cff"/><rect x="104" y="2" width="18" height="54" rx="3" fill="#d9c8ff"/><rect x="130" y="26" width="18" height="30" rx="3" fill="#7B4DFF"/></g>
+          </g></g>
+        </g>
+
+        <use href="#mS" fill="url(#mG)"/>
+        <use href="#mS" fill="url(#mGloss)"/>
+        <g clip-path="url(#cS)"><rect class="shine" x="0" y="-20" width="130" height="400" fill="url(#mShine)"/></g>
+        <use href="#eL" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3"/>
+        <use href="#eR" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3"/>
+      </svg>
+    </div>
+    <div class="rv" style="margin-top:44px;">
+      <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up" data-cta="era">Prueba gratis 30 días →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--soft" id="neus">
   <div class="w story">
     <img class="rv" src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
     <div class="rv">
@@ -492,8 +567,8 @@ html{scroll-behavior:smooth;}
 <section class="sec">
   <div class="w">
     <div class="final rv">
-      <h2>Una nueva era para los salones, con IA</h2>
-      <p>Lo que hacen las grandes empresas, ahora en tu salón. Empieza hoy y llega a 2027 sabiendo a dónde vas.</p>
+      <h2>Lo que hacen las grandes empresas, ahora en tu salón</h2>
+      <p>Empieza hoy y llega a 2027 sabiendo a dónde vas.</p>
       <a class="btn" href="https://app.godolphy.com/auth/sign-up" data-cta="final">Prueba gratis 30 días →</a>
       <a class="alt" href="https://dashboard.godolphy.com/" data-cta="dashboard">¿Aún no? <span>Analiza tu salón gratis en 2 minutos</span></a>
     </div>
