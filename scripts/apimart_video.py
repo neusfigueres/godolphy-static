@@ -44,6 +44,13 @@ def find(obj, pred):
 
 
 def run(job):
+    if job.get("fetch_url"):  # recuperar un resultat ja generat (sense tornar a pagar)
+        os.makedirs(os.path.dirname(job["out"]), exist_ok=True)
+        req = urllib.request.Request(job["fetch_url"], headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=300) as r:
+            open(job["out"], "wb").write(r.read())
+        print("fetched:", job["out"], os.path.getsize(job["out"]), "bytes")
+        return
     body = {"model": job["model"], "prompt": job["prompt"]}
     frames = [f"https://raw.githubusercontent.com/{REPO}/{SHA}/{p}" for p in job.get("frames", [])]
     if frames and job.get("roles"):
