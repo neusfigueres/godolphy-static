@@ -1,0 +1,8 @@
+{
+  "out": "imagegen/hook-growth/videos/growth.mp4",
+  "model": "kling-v3",
+  "prompt": "Cinematic 3D motion graphic. Glossy translucent violet glass bar chart on a dark purple futuristic grid floor. The bars rise up with energy and a glowing yellow neon growth line climbs, but then the growth slows down and stalls, the line flattens into a plateau. Slow smooth camera orbit around the chart, soft volumetric violet light, subtle floating particles, shallow depth of field, premium Apple-style product commercial look. Empty dark space at the top of the frame.",
+  "negative_prompt": "text, numbers, letters, logos, watermark, people, hands, cut, scene change, distortion, flicker",
+  "frames": ["imagegen/hook-growth/bars_start.png", "imagegen/hook-growth/bars_end.png"],
+  "body": {"duration": 5, "mode": "pro", "aspect_ratio": "9:16"}
+}
