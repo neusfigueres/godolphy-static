@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/zappos-p08.mp4",
+  "model": "kling-v3",
+  "prompt": "The esthetician gently massages the client's hand with slow circular movements, the client breathes calmly, plants sway softly. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/zappos/p08.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 177,
+      "billing_status": "settled",
+      "completed": 1794310836,
+      "cost": 0.448,
+      "created": 1794310659,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M72KZQN8AVMMFA479XPEVMKA",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794397236,
+            "url": [
+              "https://getapib.org/video/9998205689166964-525add2f-211c-446f-9476-16f41e487f93-video_task_01M72KZQN8AVMMFA479XPEVMKA.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

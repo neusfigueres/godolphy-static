@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/zappos-p07.mp4",
+  "model": "kling-v3",
+  "prompt": "Envelopes and email icons fly happily through the air, the employees cheer and raise their arms, star bursts pop. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/zappos/p07.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 116,
+      "billing_status": "settled",
+      "completed": 1794310743,
+      "cost": 0.448,
+      "created": 1794310627,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M72KYRJXKJP02KPTVR9211SH",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794397143,
+            "url": [
+              "https://getapib.org/video/9998205689259852-6f134f42-1ace-4ef9-a6c3-2d9e3fc431eb-video_task_01M72KYRJXKJP02KPTVR9211SH.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

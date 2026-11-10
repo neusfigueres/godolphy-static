@@ -1,8 +1,0 @@
-{
-  "out": "imagegen/v3cosas/videos/p01.mp4",
-  "model": "kling-v3",
-  "prompt": "Fast, energetic cinematic dolly push-in through the glass door into this modern beauty salon, smooth gimbal motion gliding forward past the reception desk towards the illuminated round mirrors, warm lights glowing and flickering on, subtle lens flare, reflections on the polished floor, premium commercial look, realistic.",
-  "negative_prompt": "people, text, letters, logos, watermark, distortion, warping, flicker, cut, scene change, slow motion",
-  "frames": ["imagegen/v3cosas/p01_lit.png"],
-  "body": {"duration": 5, "mode": "pro", "aspect_ratio": "9:16"}
-}

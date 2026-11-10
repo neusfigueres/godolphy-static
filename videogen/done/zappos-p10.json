@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/zappos-p10.mp4",
+  "model": "kling-v3",
+  "prompt": "The woman shows her phone, the two friends react excited with hands on cheeks, small hearts float up around them. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/zappos/p10.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 188,
+      "billing_status": "settled",
+      "completed": 1794310938,
+      "cost": 0.448,
+      "created": 1794310750,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M72M2G5CM9G0RJWSCXRS43JM",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794397338,
+            "url": [
+              "https://getapib.org/video/9998205689066348-fda51006-294b-46e1-9d17-922cf65b7d75-video_task_01M72M2G5CM9G0RJWSCXRS43JM.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

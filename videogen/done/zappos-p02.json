@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/zappos-p02.mp4",
+  "model": "kling-v3",
+  "prompt": "The client walks along the street with natural steps, the empty speech bubble above her gently floats and wobbles, leaves move in the breeze. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/zappos/p02.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 160,
+      "billing_status": "settled",
+      "completed": 1794310371,
+      "cost": 0.448,
+      "created": 1794310211,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M72KJ1TMKC2RT4S5VWMTDYMP",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794396771,
+            "url": [
+              "https://getapib.org/video/9998205689635728-bab7023f-7bd1-4a89-b1e8-badcac2e4119-video_task_01M72KJ1TMKC2RT4S5VWMTDYMP.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

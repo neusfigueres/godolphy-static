@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/zappos-p09.mp4",
+  "model": "kling-v3",
+  "prompt": "The professional hands the small gift box to the client, who receives it with a big smile, the ribbon shines. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/zappos/p09.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 169,
+      "billing_status": "settled",
+      "completed": 1794310877,
+      "cost": 0.448,
+      "created": 1794310708,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M72M17J0TABX02W64HG58PBK",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794397277,
+            "url": [
+              "https://getapib.org/video/9998205689128176-c7cce81f-8c26-44ef-853b-91c9e6359a98-video_task_01M72M17J0TABX02W64HG58PBK.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

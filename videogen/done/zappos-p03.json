@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/zappos-p03.mp4",
+  "model": "kling-v3",
+  "prompt": "The three dots inside the speech bubble pulse one after another like typing, then the bubble slowly fades and shrinks a little. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/zappos/p03.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 136,
+      "billing_status": "settled",
+      "completed": 1794310511,
+      "cost": 0.448,
+      "created": 1794310375,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M72KQ27J2BH8FX2STYSGMC7J",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794396911,
+            "url": [
+              "https://getapib.org/video/9998205689491688-2349a51c-3a51-4a0b-bc1d-6c1b325fd45b-video_task_01M72KQ27J2BH8FX2STYSGMC7J.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
