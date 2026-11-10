@@ -1,0 +1,14 @@
+{
+  "out": "videogen/out/zappos-p04.mp4",
+  "model": "kling-v3",
+  "prompt": "The sneakers on the laptop screen slide like a carousel, a small sparkle twinkles, the lamp light flickers softly, boxes stay still. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/zappos/p04.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}
