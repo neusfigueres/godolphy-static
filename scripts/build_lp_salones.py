@@ -164,6 +164,7 @@ def domicilio_svg():
 
 EXTRA_CSS = r'''
 html{scroll-behavior:smooth;}
+.hero h1{font-size:clamp(36px,5.2vw,64px);line-height:1.04;font-weight:700;}
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
 .nav .w{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .nav img{height:26px;width:auto;}
