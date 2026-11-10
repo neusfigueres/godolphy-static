@@ -1,0 +1,14 @@
+{
+  "out": "videogen/out/neus-grok-1.mp4",
+  "model": "grok-imagine-video",
+  "prompt": "Change only the background into a bright modern office: cream walls, light-oak vertical slat panel, a green plant and a light wooden desk, soft window daylight. Keep the woman exactly the same: same face, hair, clothes, gestures, posture and lip movements. Same camera and framing.",
+  "poll": 200,
+  "body": {
+    "video_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/cb5061ee-56ef-4dd3-9651-141d0aaddff0.mp4",
+    "video": {
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CIW48WcJb0BLw3JbN9zWVoYK4r/cb5061ee-56ef-4dd3-9651-141d0aaddff0.mp4"
+    },
+    "resolution": "720p",
+    "aspect_ratio": "9:16"
+  }
+}
