@@ -10,5 +10,30 @@
     },
     "resolution": "720p",
     "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 86,
+      "billing_status": "settled",
+      "completed": 1794301152,
+      "cost": 0.512,
+      "created": 1794301066,
+      "credits_cost": 5.12,
+      "estimated_time": 100,
+      "id": "task_01M72ATZDDHYSSXC3Q2MZH1P0K",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794387552,
+            "url": [
+              "https://getapib.org/video/9998205698847924-64daae8e-99fa-467f-b51b-716c2fb303b7-video_task_01M72ATZDDHYSSXC3Q2MZH1P0K.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
   }
 }
