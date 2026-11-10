@@ -417,7 +417,7 @@ def build():
 
 {ERA_HTML.replace('{CTA_ERA}', cta('era', 'btn btn--v'))}
 
-<section class="sec sec--soft" id="neus">
+<section class="sec" id="neus">
   <div class="w story">
     <img class="rv" src="{IMG}neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
     <div class="rv">
