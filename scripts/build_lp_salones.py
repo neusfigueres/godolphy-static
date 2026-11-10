@@ -69,7 +69,7 @@ FEATURES_B = [
      ['Por día de la semana y franja horaria.',
       'Aplicable a servicios y extras.',
       'Las citas ya reservadas no cambian de precio.'],
-     ('img', 'd3', 'Precio según día y hora en Godolphy')),
+     ('img', 'precio-lista', 'Franjas de precio según día y hora en Godolphy')),
 ]
 
 TEAM = [
@@ -228,6 +228,7 @@ html{scroll-behavior:smooth;}
 .plan2 img{border-radius:22px;max-width:400px;margin:0 auto;}
 .plan2 h3{font-family:'Gabarito',sans-serif;font-size:clamp(24px,2.8vw,32px);line-height:1.15;margin:0 0 12px;}
 .plan2 p{font-size:17px;line-height:1.6;color:rgba(2,2,30,.75);margin:0 0 14px;}
+.shot{background:#fff;border:1px solid var(--line);border-radius:20px!important;box-shadow:0 24px 60px rgba(40,10,120,.16);padding:6px;}
 .big{font-family:'Gabarito',sans-serif;font-size:clamp(60px,9vw,110px);line-height:1;font-weight:800;letter-spacing:-.03em;}
 .dom{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
 .map{width:100%;height:auto;display:block;}
@@ -328,7 +329,7 @@ def reel(key, tag=''):
 
 def feature_block(n, f):
     fid, eb, t, x, bl, vis = f
-    v = reel(vis[1]) if vis[0] == 'video' else f'<img src="{IMG}{vis[1]}.webp" alt="{e(vis[2])}" width="520" height="600" loading="lazy">'
+    v = reel(vis[1]) if vis[0] == 'video' else f'<img class="shot" src="{IMG}{vis[1]}.webp" alt="{e(vis[2])}" loading="lazy">'
     lis = ''.join(f'<li>{e(b)}</li>' for b in bl)
     return f'<div class="ft rv{" rev" if n % 2 else ""}" id="{fid}"><div class="ft__img">{v}</div><div><span class="eb">{e(eb)}</span><h3>{e(t)}</h3><p>{e(x)}</p><ul>{lis}</ul></div></div>'
 
@@ -395,7 +396,7 @@ def build():
     <div class="vis"><div class="dev">
       <div class="lap"><img src="{IMG}s-ana-hero.webp" alt="Análisis con IA de Godolphy en el ordenador" width="1200" height="750" fetchpriority="high"></div>
       <div class="lap-base"></div>
-      <div class="mob"><img src="{IMG}m-cal.webp" alt="Agenda de Godolphy en el móvil" width="420" height="909"></div>
+      <div class="mob"><img src="{IMG}m-cal.webp" alt="Agenda de Godolphy en el móvil" width="780" height="1688"></div>
     </div></div>
   </div>
 </section>
@@ -450,7 +451,7 @@ def build():
         <h3>¿Cada año igual que el anterior?</h3>
         <p>Si no sabes a dónde vas, cualquier mes te parece normal. Con un plan, cada mes sabes si vas por delante o por detrás, y qué tocar para llegar.</p>
         <p>Pones tu objetivo para 2027 y Godolphy lo reparte mes a mes: citas, ticket medio, gastos y clientes nuevos. Después lo compara con lo real, solo, con tus reservas y tus cobros.</p>
-        <img src="{IMG}d2.webp" alt="Plan financiero mes a mes en Godolphy: plan, real y diferencia" width="520" height="600" loading="lazy" style="margin:18px 0 0;max-width:330px;">
+        <img class="shot" src="{IMG}plan-mes.webp" alt="Plan financiero del mes en Godolphy: plan, real y diferencia" width="744" height="1164" loading="lazy" style="margin:18px 0 0;max-width:340px;">
       </div>
     </div>
   </div>
