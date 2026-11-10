@@ -1,0 +1,6 @@
+{
+  "type": "transcribe",
+  "file": "imagegen/v3cosas/audio/vo2_tail.mp3",
+  "out": "imagegen/v3cosas/audio/vo2_tail.txt",
+  "language": "es"
+}
