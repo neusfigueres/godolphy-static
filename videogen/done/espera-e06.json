@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/espera-e06.mp4",
+  "model": "kling-v3",
+  "prompt": "The two travellers walk happily towards the camera with their suitcases, giving thumbs up, small hearts float up. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e06.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 187,
+      "billing_status": "settled",
+      "completed": 1794395383,
+      "cost": 0.448,
+      "created": 1794395196,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M754KK8YJ5DMDM8WPBXRE8J3",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794481783,
+            "url": [
+              "https://getapib.org/video/9998205604619888-53beaaf6-3d5a-4e19-9ca3-6792a4841512-video_task_01M754KK8YJ5DMDM8WPBXRE8J3.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/espera-e03.mp4",
+  "model": "kling-v3",
+  "prompt": "The baggage handlers quickly load suitcases onto the moving conveyor belt, the belt moves, passengers in the back still look annoyed. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e03.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 198,
+      "billing_status": "settled",
+      "completed": 1794395059,
+      "cost": 0.448,
+      "created": 1794394861,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7549BGBFGR2VXN7TXN57VSH",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794481459,
+            "url": [
+              "https://getapib.org/video/9998205604945066-f2dfb0ad-0455-4cfb-8de3-4e99a8c8071f-video_task_01M7549BGBFGR2VXN7TXN57VSH.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

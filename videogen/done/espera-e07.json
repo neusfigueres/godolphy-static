@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/espera-e07.mp4",
+  "model": "kling-v3",
+  "prompt": "The sand falls slowly in the hourglass, the clock pendulum swings, a soft light glows, pages flutter slightly. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e07.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 288,
+      "billing_status": "settled",
+      "completed": 1794395535,
+      "cost": 0.448,
+      "created": 1794395247,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M754N58DG9R7VPAJ8MAXCAHV",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794481935,
+            "url": [
+              "https://getapib.org/video/9998205604467546-c0640262-b248-4c00-98e6-92c8230523b0-video_task_01M754N58DG9R7VPAJ8MAXCAHV.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

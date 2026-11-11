@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/espera-e04.mp4",
+  "model": "kling-v3",
+  "prompt": "The passengers walk calmly down the long corridor away from the camera, natural steps, rolling suitcases. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e04.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 177,
+      "billing_status": "settled",
+      "completed": 1794395242,
+      "cost": 0.448,
+      "created": 1794395065,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M754FJN6DZ3HVVKGXDVQK4NQ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794481642,
+            "url": [
+              "https://getapib.org/video/9998205604761700-e3e658e4-57e7-49d6-849d-c95c6aa97a5b-video_task_01M754FJN6DZ3HVVKGXDVQK4NQ.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
