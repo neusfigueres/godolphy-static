@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/espera-e11.mp4",
+  "model": "kling-v3",
+  "prompt": "The client sips her tea and turns a page of the colour swatch book, steam rises from the cup, plants sway. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e11.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 167,
+      "billing_status": "settled",
+      "completed": 1794402018,
+      "cost": 0.448,
+      "created": 1794401851,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M75AYP0HA2MEZZJXZ200ED07",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794488418,
+            "url": [
+              "https://getapib.org/video/9998205597985420-e6e8c02e-167d-4d4f-9360-3595bc78d9d6-video_task_01M75AYP0HA2MEZZJXZ200ED07.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/espera-e12.mp4",
+  "model": "kling-v3",
+  "prompt": "The professional welcomes the client at the door with a warm gesture, the client waves and walks in, the clock shows the exact hour. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e12.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 318,
+      "billing_status": "settled",
+      "completed": 1794402338,
+      "cost": 0.448,
+      "created": 1794402020,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M75B3V0PBNZ2MV6797QRH7BX",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794488738,
+            "url": [
+              "https://getapib.org/video/9998205597664832-bc12840e-5855-4973-8a01-c5c7147ae278-video_task_01M75B3V0PBNZ2MV6797QRH7BX.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

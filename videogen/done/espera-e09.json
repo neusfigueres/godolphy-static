@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/espera-e09.mp4",
+  "model": "kling-v3",
+  "prompt": "The confused client looks around, the lime question mark gently bobs above her head. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e09.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 207,
+      "billing_status": "settled",
+      "completed": 1794402058,
+      "cost": 0.448,
+      "created": 1794401851,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M75AYP0KY3Q99V1VXJYS08C5",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794488458,
+            "url": [
+              "https://getapib.org/video/9998205597944776-e85a32a3-8b86-4b8a-bc49-d02e60c54445-video_task_01M75AYP0KY3Q99V1VXJYS08C5.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
