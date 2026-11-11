@@ -1,0 +1,14 @@
+{
+  "out": "videogen/out/espera-e10.mp4",
+  "model": "kling-v3",
+  "prompt": "The professional approaches smiling and raises her open hand with five fingers, the client smiles back relieved. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/espera/e10.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}
