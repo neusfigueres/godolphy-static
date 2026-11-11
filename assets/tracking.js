@@ -93,7 +93,9 @@
     UTM_KEYS.forEach(function (k) { if (u[k]) props[k] = u[k]; });
     var email = props.email;
     if (!email) { var inp = document.querySelector('input[type=email]'); if (inp && inp.value) email = inp.value.trim(); }
-    delete props.email; // el email nunca va en claro a GA, al píxel ni a PostHog desde aquí
+    var phone = props.phone ? String(props.phone) : '';
+    delete props.email; // el email y el teléfono nunca van en claro a GA, al píxel ni a PostHog desde aquí
+    delete props.phone;
     var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
     try { gtag('event', 'generate_lead', props); } catch (e) {}
     try { if (window.fbq) fbq('track', 'Lead', props, { eventID: eventId }); } catch (e) {}
@@ -101,7 +103,7 @@
     // Solo se llama al enviar un formulario, donde ya se ha aceptado la política de privacidad.
     try {
       var fbp = (document.cookie.match(/(?:^|; )_fbp=([^;]+)/) || [])[1];
-      var body = JSON.stringify(Object.assign({ event_name: 'Lead', event_id: eventId, email: email, fbc: window.gdGetFbc(), fbp: fbp, url: location.href }, props));
+      var body = JSON.stringify(Object.assign({ event_name: 'Lead', event_id: eventId, email: email, phone: phone || undefined, fbc: window.gdGetFbc(), fbp: fbp, url: location.href }, props));
       if (navigator.sendBeacon) navigator.sendBeacon('/api/capi', new Blob([body], { type: 'application/json' }));
       else fetch('/api/capi', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body, keepalive: true });
     } catch (e) {}

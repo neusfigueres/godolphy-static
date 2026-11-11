@@ -2,7 +2,8 @@
 // The browser calls this only when someone submits a form (lead magnet, waitlist…),
 // where they have already accepted the privacy policy. The event goes to Meta from
 // the server, so it is counted even if the person rejected cookies and the pixel never loaded.
-// The email is hashed (SHA-256) before leaving here; Meta never receives it in clear text.
+// The email and phone are hashed (SHA-256) before leaving here; Meta never receives them in clear text.
+// Phone is normalised to digits with country code and no '+' (e.g. 34600111222), as Meta requires.
 // Required env var in Vercel: META_CAPI_TOKEN (Events Manager › pixel › Settings › Conversions API).
 // Optional: META_PIXEL_ID (defaults to 'Godolphy web 2', the pixel of the ad account),
 //           META_TEST_EVENT_CODE (to see the events in Events Manager › Test events).
@@ -34,6 +35,10 @@ module.exports = async (req, res) => {
   const userData = { client_ip_address: ip, client_user_agent: ua };
   const email = b.email ? String(b.email).trim() : '';
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) userData.em = [sha256(email)];
+  let phone = b.phone ? String(b.phone).replace(/\D/g, '') : '';
+  if (phone.startsWith('00')) phone = phone.slice(2);
+  if (/^[6789]\d{8}$/.test(phone)) phone = '34' + phone; // número español sin prefijo
+  if (/^\d{8,15}$/.test(phone)) userData.ph = [sha256(phone)];
   if (b.fbc && /^fb\.1\.\d+\./.test(b.fbc)) userData.fbc = String(b.fbc).slice(0, 500);
   if (b.fbp && /^fb\.1\.\d+\./.test(b.fbp)) userData.fbp = String(b.fbp).slice(0, 200);
 

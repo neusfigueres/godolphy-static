@@ -290,7 +290,7 @@ function toggleMobileNav(){
   <div id="descargar" style="padding:60px 0 20px;">
     <div id="plantilla-form-wrapper" style="max-width:480px;margin:0 auto;background:#f8f7ff;border-radius:20px;padding:40px 32px;border:1.5px solid rgba(99,28,255,.1);">
       <h2 class="font-gabarito" style="font-size:28px;font-weight:700;color:#02021e;margin:0 0 8px;text-align:center;">Descarga la plantilla gratis</h2>
-      <p style="font-size:15px;color:rgba(2,2,30,.55);margin:0 0 28px;text-align:center;">Rellena el formulario y descarga al instante.</p>
+      <p style="font-size:15px;color:rgba(2,2,30,.55);margin:0 0 28px;text-align:center;">Te la enviamos por WhatsApp y por email, y además la descargas al instante.</p>
       <form id="plantilla-form" style="display:flex;flex-direction:column;gap:16px;" onsubmit="return handlePlantillaSubmit(event)">
         <div>
           <label for="pf-nombre" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Nombre *</label>
@@ -299,6 +299,10 @@ function toggleMobileNav(){
         <div>
           <label for="pf-email" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Email *</label>
           <input id="pf-email" name="email" type="email" required style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
+        </div>
+        <div>
+          <label for="pf-phone" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">WhatsApp *</label>
+          <input id="pf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required value="+34 " placeholder="+34 600 000 000" style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
         </div>
         <div>
           <label for="pf-negocio" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Nombre del negocio</label>
@@ -312,6 +316,10 @@ function toggleMobileNav(){
         <div style="display:flex;align-items:flex-start;gap:10px;">
           <input id="pf-consent" type="checkbox" required style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" />
           <label for="pf-consent" style="font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;">Acepto la <a href="/politica-de-privacidad/" target="_blank" style="color:#631cff;text-decoration:underline;">política de privacidad</a> y recibir comunicaciones de Godolphy.</label>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;">
+          <input id="pf-wa-consent" type="checkbox" style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" />
+          <label for="pf-wa-consent" style="font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;">Acepto que Godolphy me escriba por WhatsApp para enviarme la plantilla y hacerme seguimiento.</label>
         </div>
         <button id="pf-submit" type="submit" style="background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;border:none;cursor:pointer;font-family:inherit;margin-top:8px;">Descargar la plantilla gratis</button>
       </form>
@@ -335,7 +343,7 @@ function toggleMobileNav(){
   function plantillaDone(){
     document.getElementById('plantilla-form-wrapper').style.display='none';
     document.getElementById('plantilla-thanks').style.display='block';
-    if(!window._gdLeadSent && window.gdTrackLead){ window._gdLeadSent=true; window.gdTrackLead({form:'plantilla-facturacion'}); }
+    if(!window._gdLeadSent && window.gdTrackLead){ window._gdLeadSent=true; window.gdTrackLead({form:'plantilla-facturacion', email:document.getElementById('pf-email').value.trim(), phone:window._pfPhone||''}); }
   }
   window._show_thank_you=function(){ plantillaDone(); };
   window._show_error=function(id,message){
@@ -345,17 +353,41 @@ function toggleMobileNav(){
     if(!el){ el=document.createElement('p'); el.id='pf-error'; el.style.cssText='color:#dc2626;font-size:13px;text-align:center;margin:8px 0 0;'; btn.parentNode.insertBefore(el,btn.nextSibling); }
     el.textContent=message||'Ha ocurrido un error. Inténtalo de nuevo.';
   };
+  // Campos de ActiveCampaign (formulario 11)
+  var AC_PHONE_PARAM='phone';          // teléfono (campo estándar de contacto)
+  var AC_WA_CONSENT_FIELD='';          // id del campo personalizado del consentimiento WhatsApp; vacío = no se envía
+  // Normaliza y valida el WhatsApp: devuelve "+34600111222" o '' si no es válido.
+  function pfNormPhone(v){
+    var d=String(v||'').replace(/[^\d+]/g,'');
+    if(d.indexOf('00')===0) d='+'+d.slice(2);
+    if(d.charAt(0)!=='+'){ return /^\d{9}$/.test(d) ? '+34'+d : ''; }
+    d='+'+d.slice(1).replace(/\+/g,'');
+    if(d.indexOf('+34')===0) return /^\+34[6789]\d{8}$/.test(d) ? d : '';
+    return /^\+\d{8,15}$/.test(d) ? d : '';
+  }
+  function pfPhoneError(msg){
+    var el=document.getElementById('pf-phone-error'), inp=document.getElementById('pf-phone');
+    if(!msg){ if(el) el.remove(); inp.style.borderColor=''; return; }
+    if(!el){ el=document.createElement('p'); el.id='pf-phone-error'; el.style.cssText='color:#dc2626;font-size:13px;margin:6px 0 0;'; inp.parentNode.appendChild(el); }
+    el.textContent=msg; inp.style.borderColor='#dc2626'; inp.focus();
+  }
   function handlePlantillaSubmit(e){
     e.preventDefault();
     var btn=document.getElementById('pf-submit');
     if(btn.disabled)return false;
     if(document.getElementById('pf-website').value){ plantillaDone(); return false; } // honeypot
+    var phone=pfNormPhone(document.getElementById('pf-phone').value);
+    if(!phone){ pfPhoneError('Revisa el número: en España son 9 cifras (p. ej. +34 600 111 222). Si es de otro país, empieza por su prefijo.'); return false; }
+    pfPhoneError(''); window._pfPhone=phone;
+    var waOk=document.getElementById('pf-wa-consent').checked;
     btn.disabled=true;
     btn.textContent='Enviando...';
     var q=new URLSearchParams();
     q.append('u','11'); q.append('f','11'); q.append('s',''); q.append('c','0'); q.append('m','0'); q.append('act','sub'); q.append('v','2');
     q.append('firstname',document.getElementById('pf-nombre').value.trim());
     q.append('email',document.getElementById('pf-email').value.trim());
+    q.append(AC_PHONE_PARAM,phone);
+    if(AC_WA_CONSENT_FIELD) q.append('field['+AC_WA_CONSENT_FIELD+']', waOk?'sí':'no');
     var utm=window.gdGetUtm?window.gdGetUtm():{};
     [['14','utm_source'],['15','utm_medium'],['16','utm_campaign'],['17','utm_content'],['18','utm_term']].forEach(function(x){ if(utm[x[1]]) q.append('field['+x[0]+']',utm[x[1]]); });
     q.append('jsonp','true');
