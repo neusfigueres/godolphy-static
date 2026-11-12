@@ -1,0 +1,14 @@
+{
+  "out": "videogen/out/senuelo-s09.mp4",
+  "model": "kling-v3",
+  "prompt": "The client smiles and points happily at the highlighted option, the professional nods and smiles back. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/senuelo/s09.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}
