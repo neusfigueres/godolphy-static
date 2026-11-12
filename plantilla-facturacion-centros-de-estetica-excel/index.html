@@ -355,7 +355,8 @@ function toggleMobileNav(){
   };
   // Campos de ActiveCampaign (formulario 11)
   var AC_PHONE_PARAM='phone';          // teléfono (campo estándar de contacto)
-  var AC_WA_CONSENT_FIELD='';          // id del campo personalizado del consentimiento WhatsApp; vacío = no se envía
+  var AC_WA_CONSENT_FIELD='19';        // «Consentimiento WhatsApp» (texto Sí/No)
+  var AC_WA_DATE_FIELD='20';           // «Fecha consentimiento WhatsApp» (AAAA-MM-DD), solo si acepta
   // Normaliza y valida el WhatsApp: devuelve "+34600111222" o '' si no es válido.
   function pfNormPhone(v){
     var d=String(v||'').replace(/[^\d+]/g,'');
@@ -387,7 +388,8 @@ function toggleMobileNav(){
     q.append('firstname',document.getElementById('pf-nombre').value.trim());
     q.append('email',document.getElementById('pf-email').value.trim());
     q.append(AC_PHONE_PARAM,phone);
-    if(AC_WA_CONSENT_FIELD) q.append('field['+AC_WA_CONSENT_FIELD+']', waOk?'sí':'no');
+    if(AC_WA_CONSENT_FIELD) q.append('field['+AC_WA_CONSENT_FIELD+']', waOk?'Sí':'No');
+    if(waOk && AC_WA_DATE_FIELD) q.append('field['+AC_WA_DATE_FIELD+']', new Date().toISOString().slice(0,10));
     var utm=window.gdGetUtm?window.gdGetUtm():{};
     [['14','utm_source'],['15','utm_medium'],['16','utm_campaign'],['17','utm_content'],['18','utm_term']].forEach(function(x){ if(utm[x[1]]) q.append('field['+x[0]+']',utm[x[1]]); });
     q.append('jsonp','true');
