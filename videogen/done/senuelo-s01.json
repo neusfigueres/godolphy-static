@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/senuelo-s01.mp4",
+  "model": "kling-v3",
+  "prompt": "The economist slowly reads the magazine, turns a page and raises his eyebrow with curiosity, steam rises from the coffee cup. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/senuelo/s01.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 146,
+      "billing_status": "settled",
+      "completed": 1794485778,
+      "cost": 0.448,
+      "created": 1794485632,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M77TVFKM963Q3G4GA0SDS28H",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794572178,
+            "url": [
+              "https://getapib.org/video/9998205514224772-a6b5eaef-6910-4c85-bc1b-a5d489e28dd0-video_task_01M77TVFKM963Q3G4GA0SDS28H.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

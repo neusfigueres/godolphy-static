@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/senuelo-s04.mp4",
+  "model": "kling-v3",
+  "prompt": "The lime ribbon flutters, sparkles twinkle around the gift, the hand reaches closer and touches it. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/senuelo/s04.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 288,
+      "billing_status": "settled",
+      "completed": 1794486073,
+      "cost": 0.448,
+      "created": 1794485785,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M77V04S43WZXPQNFQ51MD4X6",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794572473,
+            "url": [
+              "https://getapib.org/video/9998205513930116-3b0b5e01-4fb3-4b12-a860-acade8397d96-video_task_01M77V04S43WZXPQNFQ51MD4X6.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

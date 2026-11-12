@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/senuelo-s05.mp4",
+  "model": "kling-v3",
+  "prompt": "The queue of people shuffles forward happily towards the glowing card, people chat and smile, the card pulses with light. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/senuelo/s05.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 146,
+      "billing_status": "settled",
+      "completed": 1794485947,
+      "cost": 0.448,
+      "created": 1794485801,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M77V0M6RK7M5EAEJ6G9ENJRJ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794572347,
+            "url": [
+              "https://getapib.org/video/9998205514056304-d4f42f9d-e13c-4cbd-a03b-6ba6bb275eee-video_task_01M77V0M6RK7M5EAEJ6G9ENJRJ.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

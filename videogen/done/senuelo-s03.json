@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/senuelo-s03.mp4",
+  "model": "kling-v3",
+  "prompt": "People walk past in the background without looking, the lonely card wobbles slightly, the cobweb trembles, a little dust falls. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/senuelo/s03.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 288,
+      "billing_status": "settled",
+      "completed": 1794485920,
+      "cost": 0.448,
+      "created": 1794485632,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M77TVFKP61EB9ZG10RD5FDPW",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794572320,
+            "url": [
+              "https://getapib.org/video/9998205514082568-4ffeeb17-26dd-48c0-a2e7-a143b4b5f198-video_task_01M77TVFKP61EB9ZG10RD5FDPW.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

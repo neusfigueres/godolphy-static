@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/senuelo-s07.mp4",
+  "model": "kling-v3",
+  "prompt": "The professional behind the reception desk smiles and gestures towards the blank price board, plants sway gently. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static or very slow lateral camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/senuelo/s07.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 156,
+      "billing_status": "settled",
+      "completed": 1794486110,
+      "cost": 0.448,
+      "created": 1794485954,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M77V59G9ASGSW1109W1707QV",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794572510,
+            "url": [
+              "https://getapib.org/video/9998205513893330-466931e6-9237-46df-b210-553ef108d5ea-video_task_01M77V59G9ASGSW1109W1707QV.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
