@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/senuelo-s06b.mp4",
+  "model": "kling-v3",
+  "prompt": "The crowd of people walks towards the tablet card, the dashed outline flickers softly. Cards stay perfectly still. Keep all text, numbers and prices exactly as in the image, sharp and unchanged. Flat 2D illustration animation, keep the exact art style and colours. Static camera, no zoom, no cuts.",
+  "frames": [
+    "imagegen/senuelo/s06b.jpg"
+  ],
+  "negative_prompt": "changing text, morphing letters, blurry numbers, zoom, camera shake, distorted faces, extra fingers",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 197,
+      "billing_status": "settled",
+      "completed": 1794487983,
+      "cost": 0.448,
+      "created": 1794487786,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M77WX6TRYT9FZAXYAARNA1Q0",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794574383,
+            "url": [
+              "https://getapib.org/video/9998205512020456-4b28949e-ed1a-41f9-bc06-e692b7cfefa9-video_task_01M77WX6TRYT9FZAXYAARNA1Q0.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

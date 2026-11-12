@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/senuelo-s08b.mp4",
+  "model": "kling-v3",
+  "prompt": "Very subtle motion only: the right card glows a little brighter with small twinkling sparkles, plants sway gently. Keep all text, numbers and prices exactly as in the image, sharp and unchanged. Flat 2D illustration animation, keep the exact art style and colours. Static camera, no zoom, no cuts.",
+  "frames": [
+    "imagegen/senuelo/s08b.jpg"
+  ],
+  "negative_prompt": "changing text, morphing letters, blurry numbers, zoom, camera shake, distorted faces, extra fingers",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 146,
+      "billing_status": "settled",
+      "completed": 1794487932,
+      "cost": 0.448,
+      "created": 1794487786,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M77WX6TQMJDHGDAN30CNMJZ0",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794574332,
+            "url": [
+              "https://getapib.org/video/9998205512070948-4f7df743-3348-46ef-a598-7e03d114a7c1-video_task_01M77WX6TQMJDHGDAN30CNMJZ0.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
