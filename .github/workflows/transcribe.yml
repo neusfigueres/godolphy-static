@@ -1,0 +1,32 @@
+name: Transcribe audio (word timestamps)
+on:
+  push:
+    branches: [main]
+    paths: ['transcribe/*.wav']
+  workflow_dispatch:
+
+concurrency:
+  group: transcribe
+  cancel-in-progress: false
+
+jobs:
+  transcribe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: pip install -q faster-whisper
+      - name: Transcribe
+        run: python3 scripts/transcribe.py
+      - name: Commit results
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A transcribe
+          if git diff --cached --quiet; then echo "Nada que guardar"; exit 0; fi
+          git commit -m "Transcripciones con marcas de tiempo por palabra"
+          git pull --rebase
+          git push
