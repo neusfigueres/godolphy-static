@@ -1,0 +1,862 @@
+[
+ {
+  "start": 0.0,
+  "end": 0.26,
+  "word": " En"
+ },
+ {
+  "start": 0.26,
+  "end": 0.44,
+  "word": " el"
+ },
+ {
+  "start": 0.44,
+  "end": 0.74,
+  "word": " capítulo"
+ },
+ {
+  "start": 0.74,
+  "end": 0.94,
+  "word": " de"
+ },
+ {
+  "start": 0.94,
+  "end": 1.12,
+  "word": " hoy"
+ },
+ {
+  "start": 1.12,
+  "end": 1.38,
+  "word": " te"
+ },
+ {
+  "start": 1.38,
+  "end": 1.74,
+  "word": " cuento"
+ },
+ {
+  "start": 1.74,
+  "end": 2.1,
+  "word": " cómo"
+ },
+ {
+  "start": 2.1,
+  "end": 2.32,
+  "word": " el"
+ },
+ {
+  "start": 2.32,
+  "end": 2.56,
+  "word": " Ritz"
+ },
+ {
+  "start": 2.56,
+  "end": 2.96,
+  "word": " Carlton"
+ },
+ {
+  "start": 2.96,
+  "end": 3.44,
+  "word": " resuelve"
+ },
+ {
+  "start": 3.44,
+  "end": 3.68,
+  "word": " las"
+ },
+ {
+  "start": 3.68,
+  "end": 3.94,
+  "word": " quejas"
+ },
+ {
+  "start": 3.94,
+  "end": 4.08,
+  "word": " de"
+ },
+ {
+  "start": 4.08,
+  "end": 4.24,
+  "word": " sus"
+ },
+ {
+  "start": 4.24,
+  "end": 4.88,
+  "word": " clientes"
+ },
+ {
+  "start": 4.88,
+  "end": 5.18,
+  "word": " sin"
+ },
+ {
+  "start": 5.18,
+  "end": 5.48,
+  "word": " que"
+ },
+ {
+  "start": 5.48,
+  "end": 5.7,
+  "word": " pasen"
+ },
+ {
+  "start": 5.7,
+  "end": 5.9,
+  "word": " por"
+ },
+ {
+  "start": 5.9,
+  "end": 6.06,
+  "word": " el"
+ },
+ {
+  "start": 6.06,
+  "end": 6.66,
+  "word": " jefe."
+ },
+ {
+  "start": 6.98,
+  "end": 7.02,
+  "word": " En"
+ },
+ {
+  "start": 7.02,
+  "end": 7.24,
+  "word": " sus"
+ },
+ {
+  "start": 7.24,
+  "end": 7.68,
+  "word": " hoteles,"
+ },
+ {
+  "start": 8.1,
+  "end": 8.3,
+  "word": " cualquier"
+ },
+ {
+  "start": 8.3,
+  "end": 8.8,
+  "word": " empleado,"
+ },
+ {
+  "start": 8.94,
+  "end": 9.12,
+  "word": " de"
+ },
+ {
+  "start": 9.12,
+  "end": 9.52,
+  "word": " recepción"
+ },
+ {
+  "start": 9.52,
+  "end": 9.68,
+  "word": " a"
+ },
+ {
+  "start": 9.68,
+  "end": 10.24,
+  "word": " limpieza,"
+ },
+ {
+  "start": 10.52,
+  "end": 10.58,
+  "word": " puede"
+ },
+ {
+  "start": 10.58,
+  "end": 11.08,
+  "word": " gastar"
+ },
+ {
+  "start": 11.08,
+  "end": 11.46,
+  "word": " hasta"
+ },
+ {
+  "start": 11.46,
+  "end": 11.78,
+  "word": " dos"
+ },
+ {
+  "start": 11.78,
+  "end": 11.94,
+  "word": " mil"
+ },
+ {
+  "start": 11.94,
+  "end": 12.3,
+  "word": " dólares"
+ },
+ {
+  "start": 12.3,
+  "end": 12.54,
+  "word": " por"
+ },
+ {
+  "start": 12.54,
+  "end": 12.94,
+  "word": " cliente"
+ },
+ {
+  "start": 12.94,
+  "end": 13.18,
+  "word": " para"
+ },
+ {
+  "start": 13.18,
+  "end": 13.5,
+  "word": " arreglar"
+ },
+ {
+  "start": 13.5,
+  "end": 13.74,
+  "word": " un"
+ },
+ {
+  "start": 13.74,
+  "end": 14.04,
+  "word": " problema,"
+ },
+ {
+  "start": 14.38,
+  "end": 14.7,
+  "word": " sin"
+ },
+ {
+  "start": 14.7,
+  "end": 15.08,
+  "word": " pedir"
+ },
+ {
+  "start": 15.08,
+  "end": 15.66,
+  "word": " permiso"
+ },
+ {
+  "start": 15.66,
+  "end": 15.94,
+  "word": " a"
+ },
+ {
+  "start": 15.94,
+  "end": 16.2,
+  "word": " nadie."
+ },
+ {
+  "start": 16.7,
+  "end": 16.86,
+  "word": " En"
+ },
+ {
+  "start": 16.86,
+  "end": 17.28,
+  "word": " Dubái,"
+ },
+ {
+  "start": 17.54,
+  "end": 17.72,
+  "word": " un"
+ },
+ {
+  "start": 17.72,
+  "end": 18.12,
+  "word": " huésped"
+ },
+ {
+  "start": 18.12,
+  "end": 18.38,
+  "word": " no"
+ },
+ {
+  "start": 18.38,
+  "end": 18.6,
+  "word": " podía"
+ },
+ {
+  "start": 18.6,
+  "end": 18.9,
+  "word": " llevar"
+ },
+ {
+  "start": 18.9,
+  "end": 19.02,
+  "word": " a"
+ },
+ {
+  "start": 19.02,
+  "end": 19.12,
+  "word": " su"
+ },
+ {
+  "start": 19.12,
+  "end": 19.46,
+  "word": " mujer,"
+ },
+ {
+  "start": 19.6,
+  "end": 19.78,
+  "word": " en"
+ },
+ {
+  "start": 19.78,
+  "end": 19.96,
+  "word": " silla"
+ },
+ {
+  "start": 19.96,
+  "end": 20.12,
+  "word": " de"
+ },
+ {
+  "start": 20.12,
+  "end": 20.46,
+  "word": " ruedas,"
+ },
+ {
+  "start": 20.64,
+  "end": 20.76,
+  "word": " hasta"
+ },
+ {
+  "start": 20.76,
+  "end": 21.0,
+  "word": " la"
+ },
+ {
+  "start": 21.0,
+  "end": 21.5,
+  "word": " playa."
+ },
+ {
+  "start": 21.72,
+  "end": 21.9,
+  "word": " De"
+ },
+ {
+  "start": 21.9,
+  "end": 22.02,
+  "word": " un"
+ },
+ {
+  "start": 22.02,
+  "end": 22.16,
+  "word": " día"
+ },
+ {
+  "start": 22.16,
+  "end": 22.42,
+  "word": " para"
+ },
+ {
+  "start": 22.42,
+  "end": 22.66,
+  "word": " otro,"
+ },
+ {
+  "start": 22.9,
+  "end": 23.02,
+  "word": " el"
+ },
+ {
+  "start": 23.02,
+  "end": 23.26,
+  "word": " equipo"
+ },
+ {
+  "start": 23.26,
+  "end": 23.86,
+  "word": " construyó"
+ },
+ {
+  "start": 23.86,
+  "end": 24.08,
+  "word": " una"
+ },
+ {
+  "start": 24.08,
+  "end": 24.58,
+  "word": " pasarela"
+ },
+ {
+  "start": 24.58,
+  "end": 24.78,
+  "word": " de"
+ },
+ {
+  "start": 24.78,
+  "end": 25.0,
+  "word": " madera"
+ },
+ {
+  "start": 25.0,
+  "end": 25.26,
+  "word": " hasta"
+ },
+ {
+  "start": 25.26,
+  "end": 25.42,
+  "word": " la"
+ },
+ {
+  "start": 25.42,
+  "end": 25.6,
+  "word": " arena."
+ },
+ {
+  "start": 26.04,
+  "end": 26.3,
+  "word": " No"
+ },
+ {
+  "start": 26.3,
+  "end": 26.48,
+  "word": " va"
+ },
+ {
+  "start": 26.48,
+  "end": 26.62,
+  "word": " de"
+ },
+ {
+  "start": 26.62,
+  "end": 27.0,
+  "word": " dinero,"
+ },
+ {
+  "start": 27.42,
+  "end": 27.74,
+  "word": " va"
+ },
+ {
+  "start": 27.74,
+  "end": 27.98,
+  "word": " de"
+ },
+ {
+  "start": 27.98,
+  "end": 28.02,
+  "word": " que"
+ },
+ {
+  "start": 28.02,
+  "end": 28.28,
+  "word": " el"
+ },
+ {
+  "start": 28.28,
+  "end": 28.52,
+  "word": " problema"
+ },
+ {
+  "start": 28.52,
+  "end": 28.82,
+  "word": " se"
+ },
+ {
+  "start": 28.82,
+  "end": 29.12,
+  "word": " resuelva"
+ },
+ {
+  "start": 29.12,
+  "end": 29.28,
+  "word": " en"
+ },
+ {
+  "start": 29.28,
+  "end": 29.46,
+  "word": " el"
+ },
+ {
+  "start": 29.46,
+  "end": 29.8,
+  "word": " momento"
+ },
+ {
+  "start": 29.8,
+  "end": 30.16,
+  "word": " y"
+ },
+ {
+  "start": 30.16,
+  "end": 30.3,
+  "word": " que"
+ },
+ {
+  "start": 30.3,
+  "end": 30.54,
+  "word": " lo"
+ },
+ {
+  "start": 30.54,
+  "end": 30.96,
+  "word": " resuelva"
+ },
+ {
+  "start": 30.96,
+  "end": 31.14,
+  "word": " quien"
+ },
+ {
+  "start": 31.14,
+  "end": 31.4,
+  "word": " lo"
+ },
+ {
+  "start": 31.4,
+  "end": 31.54,
+  "word": " tiene"
+ },
+ {
+  "start": 31.54,
+  "end": 32.08,
+  "word": " delante."
+ },
+ {
+  "start": 32.56,
+  "end": 32.62,
+  "word": " En"
+ },
+ {
+  "start": 32.62,
+  "end": 32.78,
+  "word": " tu"
+ },
+ {
+  "start": 32.78,
+  "end": 33.14,
+  "word": " centro"
+ },
+ {
+  "start": 33.14,
+  "end": 33.42,
+  "word": " no"
+ },
+ {
+  "start": 33.42,
+  "end": 33.58,
+  "word": " te"
+ },
+ {
+  "start": 33.58,
+  "end": 33.74,
+  "word": " hacen"
+ },
+ {
+  "start": 33.74,
+  "end": 34.04,
+  "word": " falta"
+ },
+ {
+  "start": 34.04,
+  "end": 34.28,
+  "word": " dos"
+ },
+ {
+  "start": 34.28,
+  "end": 34.38,
+  "word": " mil"
+ },
+ {
+  "start": 34.38,
+  "end": 34.84,
+  "word": " dólares,"
+ },
+ {
+  "start": 35.34,
+  "end": 35.6,
+  "word": " basta"
+ },
+ {
+  "start": 35.6,
+  "end": 35.86,
+  "word": " con"
+ },
+ {
+  "start": 35.86,
+  "end": 36.04,
+  "word": " que"
+ },
+ {
+  "start": 36.04,
+  "end": 36.28,
+  "word": " cada"
+ },
+ {
+  "start": 36.28,
+  "end": 36.86,
+  "word": " profesional"
+ },
+ {
+  "start": 36.86,
+  "end": 37.36,
+  "word": " sepa"
+ },
+ {
+  "start": 37.36,
+  "end": 37.58,
+  "word": " qué"
+ },
+ {
+  "start": 37.58,
+  "end": 37.82,
+  "word": " puede"
+ },
+ {
+  "start": 37.82,
+  "end": 38.08,
+  "word": " hacer"
+ },
+ {
+  "start": 38.08,
+  "end": 38.36,
+  "word": " sin"
+ },
+ {
+  "start": 38.36,
+  "end": 38.98,
+  "word": " preguntarte."
+ },
+ {
+  "start": 39.32,
+  "end": 39.48,
+  "word": " Un"
+ },
+ {
+  "start": 39.48,
+  "end": 39.8,
+  "word": " retoque"
+ },
+ {
+  "start": 39.8,
+  "end": 40.32,
+  "word": " gratis,"
+ },
+ {
+  "start": 40.5,
+  "end": 40.64,
+  "word": " un"
+ },
+ {
+  "start": 40.64,
+  "end": 41.04,
+  "word": " tratamiento"
+ },
+ {
+  "start": 41.04,
+  "end": 41.54,
+  "word": " exprés,"
+ },
+ {
+  "start": 41.82,
+  "end": 42.02,
+  "word": " un"
+ },
+ {
+  "start": 42.02,
+  "end": 42.36,
+  "word": " descuento"
+ },
+ {
+  "start": 42.36,
+  "end": 42.48,
+  "word": " en"
+ },
+ {
+  "start": 42.48,
+  "end": 42.62,
+  "word": " la"
+ },
+ {
+  "start": 42.62,
+  "end": 42.94,
+  "word": " próxima"
+ },
+ {
+  "start": 42.94,
+  "end": 43.56,
+  "word": " cita,"
+ },
+ {
+  "start": 43.9,
+  "end": 44.12,
+  "word": " ponle"
+ },
+ {
+  "start": 44.12,
+  "end": 44.26,
+  "word": " un"
+ },
+ {
+  "start": 44.26,
+  "end": 44.66,
+  "word": " límite,"
+ },
+ {
+  "start": 44.72,
+  "end": 44.9,
+  "word": " por"
+ },
+ {
+  "start": 44.9,
+  "end": 45.28,
+  "word": " ejemplo"
+ },
+ {
+  "start": 45.28,
+  "end": 45.78,
+  "word": " veinte"
+ },
+ {
+  "start": 45.78,
+  "end": 46.12,
+  "word": " euros,"
+ },
+ {
+  "start": 46.32,
+  "end": 46.64,
+  "word": " y"
+ },
+ {
+  "start": 46.64,
+  "end": 47.02,
+  "word": " confía."
+ },
+ {
+  "start": 47.48,
+  "end": 47.62,
+  "word": " La"
+ },
+ {
+  "start": 47.62,
+  "end": 48.16,
+  "word": " cliente"
+ },
+ {
+  "start": 48.16,
+  "end": 48.34,
+  "word": " se"
+ },
+ {
+  "start": 48.34,
+  "end": 48.44,
+  "word": " va"
+ },
+ {
+  "start": 48.44,
+  "end": 48.64,
+  "word": " con"
+ },
+ {
+  "start": 48.64,
+  "end": 48.86,
+  "word": " el"
+ },
+ {
+  "start": 48.86,
+  "end": 49.1,
+  "word": " problema"
+ },
+ {
+  "start": 49.1,
+  "end": 49.8,
+  "word": " resuelto"
+ },
+ {
+  "start": 49.8,
+  "end": 50.08,
+  "word": " y"
+ },
+ {
+  "start": 50.08,
+  "end": 50.38,
+  "word": " tú"
+ },
+ {
+  "start": 50.38,
+  "end": 50.84,
+  "word": " dejas"
+ },
+ {
+  "start": 50.84,
+  "end": 51.06,
+  "word": " de"
+ },
+ {
+  "start": 51.06,
+  "end": 51.14,
+  "word": " ser"
+ },
+ {
+  "start": 51.14,
+  "end": 51.34,
+  "word": " el"
+ },
+ {
+  "start": 51.34,
+  "end": 51.54,
+  "word": " cuello"
+ },
+ {
+  "start": 51.54,
+  "end": 51.7,
+  "word": " de"
+ },
+ {
+  "start": 51.7,
+  "end": 52.04,
+  "word": " botella."
+ },
+ {
+  "start": 52.04,
+  "end": 53.02,
+  "word": " Sígueme,"
+ },
+ {
+  "start": 53.36,
+  "end": 53.44,
+  "word": " en"
+ },
+ {
+  "start": 53.44,
+  "end": 53.62,
+  "word": " el"
+ },
+ {
+  "start": 53.62,
+  "end": 53.92,
+  "word": " capítulo"
+ },
+ {
+  "start": 53.92,
+  "end": 54.4,
+  "word": " 5,"
+ },
+ {
+  "start": 54.74,
+  "end": 54.8,
+  "word": " otra"
+ },
+ {
+  "start": 54.8,
+  "end": 55.32,
+  "word": " estrategia"
+ },
+ {
+  "start": 55.32,
+  "end": 55.42,
+  "word": " de"
+ },
+ {
+  "start": 55.42,
+  "end": 55.56,
+  "word": " las"
+ },
+ {
+  "start": 55.56,
+  "end": 55.86,
+  "word": " grandes."
+ }
+]
