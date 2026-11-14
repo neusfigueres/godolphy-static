@@ -1,0 +1,14 @@
+{
+  "out": "videogen/out/ritz-r04.mp4",
+  "model": "kling-v3",
+  "prompt": "The golden key card glows brighter and the banknotes flutter slightly, sparkles twinkle around the hands. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r04.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}

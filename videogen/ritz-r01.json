@@ -1,0 +1,14 @@
+{
+  "out": "videogen/out/ritz-r01.mp4",
+  "model": "kling-v3",
+  "prompt": "The doorman tips his hat, the warm windows glow, palm leaves sway gently, the revolving door turns slowly. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r01.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  }
+}
