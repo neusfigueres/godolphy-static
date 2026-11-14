@@ -42,7 +42,23 @@
       nav ul{display:none!important;}
       nav>div>div{display:none!important;}
       nav>div{padding:0 20px!important;}#nav-hamburger{display:flex!important;}
-      .hero-grid{grid-template-columns:1fr!important;}
+      .hero-grid{grid-template-columns:1fr!important;gap:18px!important;}
+      .pf-hero{padding:14px 16px 28px!important;}
+      .pf-hero h1{font-size:24px!important;line-height:1.15!important;margin:0 0 6px!important;}
+      .hero-grid{gap:12px!important;}
+      .pf-hero h1 br{display:none;}
+      .pf-badge,.pf-proof{display:none!important;}
+      .pf-lead{font-size:14px!important;line-height:1.45!important;}
+      .pf-lbl{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+      #plantilla-form-wrapper,#plantilla-thanks{padding:14px 14px!important;border-radius:16px!important;}
+      .pf-head{display:none;}
+      .pf-sub{display:none;}
+      #plantilla-form{gap:8px!important;}
+      #plantilla-form label{font-size:13px!important;margin-bottom:4px!important;}
+      #plantilla-form input[type=text],#plantilla-form input[type=email],#plantilla-form input[type=tel]{padding:10px 14px!important;font-size:16px!important;}
+      #plantilla-form label[for=pf-consent],#plantilla-form label[for=pf-wa-consent]{font-size:12px!important;line-height:1.45!important;}
+      #pf-submit{margin-top:2px!important;padding:14px 20px!important;}
+      .pf-preview{padding:40px 16px 0!important;}
       .kpi-grid{grid-template-columns:1fr!important;}
     }
   
@@ -157,27 +173,72 @@ function toggleMobileNav(){
 
 
 
-<!-- HERO -->
-<div style="background:linear-gradient(135deg,#f8f7ff 0%,#ede8ff 100%);padding:80px 40px 60px;">
+<!-- HERO: título + formulario (sin scroll en móvil) -->
+<div class="pf-hero" style="background:linear-gradient(135deg,#f8f7ff 0%,#ede8ff 100%);padding:64px 40px 64px;">
   <div style="max-width:1200px;margin:0 auto;">
-    <div class="hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;">
       <div>
-        <div style="display:inline-block;background:#631cff;color:#fff;font-size:12px;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:.05em;text-transform:uppercase;">Descarga gratuita</div>
-        <h1 class="font-gabarito" style="font-size:44px;font-weight:700;color:#02021e;line-height:1.1;margin:0 0 16px;">Plantilla excel<br/><span style="color:#631cff;">plan financiero</span><br/>centro estética 2027</h1>
-        <p style="font-size:17px;color:rgba(2,2,30,.65);line-height:1.7;margin:0 0 12px;">Calcula automáticamente tu CAC, LTV, ticket medio y beneficio. Solo rellenas tus citas, tu facturación y tus gastos; el resto se calcula solo.</p>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:32px;">
-          <div style="display:flex;align-items:center;gap:6px;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#631cff" stroke="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="none" stroke="#631cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span style="font-size:14px;color:rgba(2,2,30,.6);">Descargada más de 600 veces</span>
-          </div>
+        <div class="pf-badge" style="display:inline-block;background:#631cff;color:#fff;font-size:12px;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:.05em;text-transform:uppercase;">Descarga gratuita</div>
+        <h1 class="font-gabarito" style="font-size:44px;font-weight:700;color:#02021e;line-height:1.1;margin:0 0 16px;">Plantilla excel <br/><span style="color:#631cff;">plan financiero</span> <br/>centro estética 2027</h1>
+        <p class="pf-lead" style="font-size:17px;color:rgba(2,2,30,.65);line-height:1.6;margin:0;">Rellenas tus citas, tu facturación y tus gastos, y te calcula sola tu beneficio, ticket medio, CAC y LTV.</p>
+        <div class="pf-proof" style="display:flex;align-items:center;gap:6px;margin-top:20px;">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="none" stroke="#631cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span style="font-size:14px;color:rgba(2,2,30,.6);">Descargada más de 600 veces</span>
         </div>
-        <a href="#descargar" onclick="document.getElementById('descargar').scrollIntoView({behavior:'smooth'});return false;" style="display:inline-block;background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Descargar plantilla gratis</a>
       </div>
-      <div>
-        <img src="/wp-images/plantilla-para-plan-financiero-salones-y-peluquerias-1536x1024.jpg" alt="Plantilla plan financiero para centros de estética" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(99,28,255,.15);" / loading="lazy" width="1536" height="1024">
+      <div id="descargar" style="scroll-margin-top:90px;">
+    <div id="plantilla-form-wrapper" style="max-width:480px;margin:0 auto;background:#fff;border-radius:20px;padding:28px 28px;border:1.5px solid rgba(99,28,255,.12);box-shadow:0 20px 60px rgba(99,28,255,.15);">
+      <p class="pf-head" style="font-family:'Gabarito',sans-serif;font-size:22px;font-weight:700;color:#02021e;margin:0 0 4px;">Descárgala gratis</p>
+      <p class="pf-sub" style="font-size:14px;color:rgba(2,2,30,.55);margin:0 0 18px;">Te la enviamos por WhatsApp y por email, y además la descargas al instante.</p>
+      <form id="plantilla-form" style="display:flex;flex-direction:column;gap:14px;" onsubmit="return handlePlantillaSubmit(event)">
+        <div>
+          <label for="pf-nombre" class="pf-lbl" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Nombre *</label>
+          <input id="pf-nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre" required style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
+        </div>
+        <div>
+          <label for="pf-email" class="pf-lbl" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Email *</label>
+          <input id="pf-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
+        </div>
+        <div>
+          <label for="pf-phone" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">WhatsApp *</label>
+          <input id="pf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required value="+34 " placeholder="+34 600 000 000" style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
+        </div>
+        <!-- Honeypot -->
+        <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true">
+          <label for="pf-website">No rellenar</label>
+          <input id="pf-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;">
+          <input id="pf-consent" type="checkbox" required style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" />
+          <label for="pf-consent" style="font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;">Acepto la <a href="/politica-de-privacidad/" target="_blank" style="color:#631cff;text-decoration:underline;">política de privacidad</a> y recibir comunicaciones de Godolphy.</label>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;">
+          <input id="pf-wa-consent" type="checkbox" style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" />
+          <label for="pf-wa-consent" style="font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;">Acepto que Godolphy me escriba por WhatsApp para enviarme la plantilla y hacerme seguimiento.</label>
+        </div>
+        <button id="pf-submit" type="submit" style="background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;border:none;cursor:pointer;font-family:inherit;margin-top:8px;">Descargar la plantilla gratis</button>
+      </form>
+    </div>
+
+    <!-- Thank-you state (hidden by default) -->
+    <div id="plantilla-thanks" style="display:none;max-width:480px;margin:0 auto;background:#fff;border-radius:20px;padding:36px 28px;border:1.5px solid rgba(99,28,255,.12);box-shadow:0 20px 60px rgba(99,28,255,.15);text-align:center;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom:16px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#631cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2 class="font-gabarito" style="font-size:26px;font-weight:700;color:#02021e;margin:0 0 12px;">Gracias, ya puedes descargarla</h2>
+      <p style="font-size:15px;color:rgba(2,2,30,.55);margin:0 0 28px;">Haz clic en el botón para descargar tu plantilla en Excel.</p>
+      <a href="/descargas/plantilla-plan-financiero-centro-estetica-2027.xlsx" download="Plantilla-plan-financiero-centro-estetica-2027.xlsx" style="display:inline-block;background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Descargar plantilla</a>
+      <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(99,28,255,.12);">
+        <p style="font-size:14px;color:rgba(2,2,30,.6);margin:0 0 10px;">¿Ya tienes los números? El siguiente paso es revisar tus precios.</p>
+        <a href="/guia-precios/?utm_source=web&utm_medium=crosslink&utm_campaign=guia-precios&utm_content=plantilla-gracias" style="font-size:15px;font-weight:700;color:#631cff;text-decoration:underline;">Guía gratis: no subas los precios de tu salón sin leer esto antes →</a>
+      </div>
+    </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Vista previa de la plantilla -->
+<div class="pf-preview" style="max-width:900px;margin:0 auto;padding:64px 40px 0;">
+  <img src="/wp-images/plantilla-para-plan-financiero-salones-y-peluquerias-1536x1024.jpg" alt="Plantilla plan financiero para centros de estética" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(99,28,255,.15);" / loading="lazy" width="1536" height="1024">
 </div>
 
 <!-- BENEFITS -->
@@ -286,56 +347,10 @@ function toggleMobileNav(){
     </div>
   </div>
 
-  <!-- CTA Final / Download Form -->
-  <div id="descargar" style="padding:60px 0 20px;">
-    <div id="plantilla-form-wrapper" style="max-width:480px;margin:0 auto;background:#f8f7ff;border-radius:20px;padding:40px 32px;border:1.5px solid rgba(99,28,255,.1);">
-      <h2 class="font-gabarito" style="font-size:28px;font-weight:700;color:#02021e;margin:0 0 8px;text-align:center;">Descarga la plantilla gratis</h2>
-      <p style="font-size:15px;color:rgba(2,2,30,.55);margin:0 0 28px;text-align:center;">Te la enviamos por WhatsApp y por email, y además la descargas al instante.</p>
-      <form id="plantilla-form" style="display:flex;flex-direction:column;gap:16px;" onsubmit="return handlePlantillaSubmit(event)">
-        <div>
-          <label for="pf-nombre" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Nombre *</label>
-          <input id="pf-nombre" name="nombre" type="text" required style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
-        </div>
-        <div>
-          <label for="pf-email" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Email *</label>
-          <input id="pf-email" name="email" type="email" required style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
-        </div>
-        <div>
-          <label for="pf-phone" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">WhatsApp *</label>
-          <input id="pf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required value="+34 " placeholder="+34 600 000 000" style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
-        </div>
-        <div>
-          <label for="pf-negocio" style="display:block;font-size:14px;font-weight:500;color:#02021e;margin-bottom:6px;">Nombre del negocio</label>
-          <input id="pf-negocio" name="negocio" type="text" style="width:100%;padding:12px 16px;border:1.5px solid rgba(2,2,30,.15);border-radius:12px;font-size:15px;font-family:inherit;outline:none;box-sizing:border-box;" />
-        </div>
-        <!-- Honeypot -->
-        <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true">
-          <label for="pf-website">No rellenar</label>
-          <input id="pf-website" name="website" type="text" tabindex="-1" autocomplete="off" />
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <input id="pf-consent" type="checkbox" required style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" />
-          <label for="pf-consent" style="font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;">Acepto la <a href="/politica-de-privacidad/" target="_blank" style="color:#631cff;text-decoration:underline;">política de privacidad</a> y recibir comunicaciones de Godolphy.</label>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <input id="pf-wa-consent" type="checkbox" style="margin-top:4px;accent-color:#631cff;flex-shrink:0;" />
-          <label for="pf-wa-consent" style="font-size:13px;line-height:1.6;color:rgba(2,2,30,.6);cursor:pointer;">Acepto que Godolphy me escriba por WhatsApp para enviarme la plantilla y hacerme seguimiento.</label>
-        </div>
-        <button id="pf-submit" type="submit" style="background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;border:none;cursor:pointer;font-family:inherit;margin-top:8px;">Descargar la plantilla gratis</button>
-      </form>
-    </div>
-
-    <!-- Thank-you state (hidden by default) -->
-    <div id="plantilla-thanks" style="display:none;max-width:480px;margin:0 auto;background:#f8f7ff;border-radius:20px;padding:48px 32px;border:1.5px solid rgba(99,28,255,.1);text-align:center;">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom:16px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#631cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h2 class="font-gabarito" style="font-size:26px;font-weight:700;color:#02021e;margin:0 0 12px;">Gracias, ya puedes descargarla</h2>
-      <p style="font-size:15px;color:rgba(2,2,30,.55);margin:0 0 28px;">Haz clic en el botón para descargar tu plantilla en Excel.</p>
-      <a href="/descargas/plantilla-plan-financiero-centro-estetica-2027.xlsx" download="Plantilla-plan-financiero-centro-estetica-2027.xlsx" style="display:inline-block;background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Descargar plantilla</a>
-      <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(99,28,255,.12);">
-        <p style="font-size:14px;color:rgba(2,2,30,.6);margin:0 0 10px;">¿Ya tienes los números? El siguiente paso es revisar tus precios.</p>
-        <a href="/guia-precios/?utm_source=web&utm_medium=crosslink&utm_campaign=guia-precios&utm_content=plantilla-gracias" style="font-size:15px;font-weight:700;color:#631cff;text-decoration:underline;">Guía gratis: no subas los precios de tu salón sin leer esto antes →</a>
-      </div>
-    </div>
+  <!-- CTA final: vuelve al formulario de arriba -->
+  <div style="padding:60px 0 20px;text-align:center;">
+    <h2 class="font-gabarito" style="font-size:28px;font-weight:700;color:#02021e;margin:0 0 16px;">Descarga la plantilla gratis</h2>
+    <a href="#descargar" onclick="var d=document.getElementById('descargar');d.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){var n=document.getElementById('pf-nombre');if(n&&n.offsetParent)n.focus({preventScroll:true});},600);return false;" style="display:inline-block;background:#631cff;color:#fff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:20px;text-decoration:none;">Descargar plantilla gratis</a>
   </div>
 
   <script>
