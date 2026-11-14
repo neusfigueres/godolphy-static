@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/ritz-r10.mp4",
+  "model": "kling-v3",
+  "prompt": "The client looks at the hand mirror and frowns slightly, the professional leans in with concern. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r10.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 116,
+      "billing_status": "settled",
+      "completed": 1794675958,
+      "cost": 0.448,
+      "created": 1794675842,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7DG87TZZ7FVKG38NG3J4022",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794762358,
+            "url": [
+              "https://getapib.org/video/9998205324044724-d74494a1-c638-4e0a-ab1c-3196c651226e-video_task_01M7DG87TZZ7FVKG38NG3J4022.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

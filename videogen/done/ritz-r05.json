@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/ritz-r05.mp4",
+  "model": "kling-v3",
+  "prompt": "The employee walks confidently past the pile of forms, a few papers flutter off the pile, the lime cross pulses. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r05.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 115,
+      "billing_status": "settled",
+      "completed": 1794675720,
+      "cost": 0.448,
+      "created": 1794675605,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7DG0ZJ2J7AKKDBZ3BVD5D7N",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794762120,
+            "url": [
+              "https://getapib.org/video/9998205324282878-f85ff96e-303d-4e3b-863c-b5a003621ba4-video_task_01M7DG0ZJ2J7AKKDBZ3BVD5D7N.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

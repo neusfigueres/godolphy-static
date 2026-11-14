@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/ritz-r11.mp4",
+  "model": "kling-v3",
+  "prompt": "The three small icon bubbles float gently and glow, the professional gestures towards them, the client smiles. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r11.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 116,
+      "billing_status": "settled",
+      "completed": 1794675982,
+      "cost": 0.448,
+      "created": 1794675866,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7DG8Z4K6XBQRHH6PPEXMWRE",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794762382,
+            "url": [
+              "https://getapib.org/video/9998205324021056-109c5266-d6af-4ac3-aca0-269e8393730b-video_task_01M7DG8Z4K6XBQRHH6PPEXMWRE.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

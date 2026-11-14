@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/ritz-r06.mp4",
+  "model": "kling-v3",
+  "prompt": "The sea waves roll gently, the elderly man looks towards the sea and sighs, palm leaves sway. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r06.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 85,
+      "billing_status": "settled",
+      "completed": 1794675788,
+      "cost": 0.448,
+      "created": 1794675703,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7DG3Z99VG3GTHP9TR2RE1G6",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794762188,
+            "url": [
+              "https://getapib.org/video/9998205324214956-ff794200-bf25-464c-9f33-016d87d0301f-video_task_01M7DG3Z99VG3GTHP9TR2RE1G6.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

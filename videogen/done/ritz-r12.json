@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/ritz-r12.mp4",
+  "model": "kling-v3",
+  "prompt": "The owner hands the glowing envelope to her team member, both smile, small sparkles rise from the envelope. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r12.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 136,
+      "billing_status": "settled",
+      "completed": 1794676050,
+      "cost": 0.448,
+      "created": 1794675914,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7DGADMEBHWVAN3ABHYAK76C",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794762450,
+            "url": [
+              "https://getapib.org/video/9998205323952980-a5f3c287-824c-45d6-a579-ca5bc0f5733e-video_task_01M7DGADMEBHWVAN3ABHYAK76C.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

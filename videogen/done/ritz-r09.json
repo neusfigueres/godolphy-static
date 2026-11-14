@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/ritz-r09.mp4",
+  "model": "kling-v3",
+  "prompt": "The stopwatch hand ticks to the lime check mark, the employee hands over the gift box and the guest smiles happily. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/ritz/r09.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 116,
+      "billing_status": "settled",
+      "completed": 1794675911,
+      "cost": 0.448,
+      "created": 1794675795,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7DG6SMVBA56SVB0FGVEST8A",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1794762311,
+            "url": [
+              "https://getapib.org/video/9998205324092300-c0ca237d-c5fb-4323-8301-60d5fad3bcb7-video_task_01M7DG6SMVBA56SVB0FGVEST8A.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
