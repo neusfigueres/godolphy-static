@@ -13,6 +13,56 @@ import html, json, os
 SIGNUP = 'https://app.godolphy.com/auth/sign-up'
 DASH = 'https://dashboard.godolphy.com/'
 
+PLANTILLA = '/plantilla-facturacion-centros-de-estetica-excel/'
+
+# Palabras del hero según ?sector= (sin parámetro, la página no cambia).
+SECTORS = {
+    'estetica':   {'negocios': 'centros de estética', 'un_negocio': 'un centro de estética', 'tu_negocio': 'tu centro de estética', 'puesto_vacio': 'una cabina vacía', 'un_trat': 'un tratamiento', 'trats': 'tratamientos'},
+    'unas':       {'negocios': 'salones de uñas', 'un_negocio': 'un salón de uñas', 'tu_negocio': 'tu salón de uñas', 'puesto_vacio': 'una mesa vacía', 'un_trat': 'un servicio', 'trats': 'servicios'},
+    'peluqueria': {'negocios': 'peluquerías', 'un_negocio': 'una peluquería', 'tu_negocio': 'tu peluquería', 'puesto_vacio': 'un sillón vacío', 'un_trat': 'un servicio', 'trats': 'servicios'},
+    'barberia':   {'negocios': 'barberías', 'un_negocio': 'una barbería', 'tu_negocio': 'tu barbería', 'puesto_vacio': 'un sillón vacío', 'un_trat': 'un servicio', 'trats': 'servicios'},
+}
+
+
+def sector_text(tpl, defaults):
+    """'¿Tienes [un_negocio]…' → texto con <span data-k> que el JS cambia según ?sector=."""
+    import re
+    out, last = '', 0
+    for m in re.finditer(r'\[(\w+)\]', tpl):
+        out += html.escape(tpl[last:m.start()]) + f'<span data-k="{m.group(1)}">{html.escape(defaults[m.group(1)])}</span>'
+        last = m.end()
+    return out + html.escape(tpl[last:])
+
+
+def plain(tpl, defaults):
+    import re
+    return re.sub(r'\[(\w+)\]', lambda m: defaults[m.group(1)], tpl)
+
+
+# Primera pantalla: oferta pequeña (plantilla) + prueba como secundaria + franja de confianza.
+def hero_ctas(signup_label='Prueba gratis 30 días'):
+    return (f'<div class="hcta"><a class="btn" href="{PLANTILLA}" data-cta="hero-plantilla" data-keep-utm>Recibe gratis tu plan financiero 2027</a>'
+            f'<a class="btn btn--ghost" href="{SIGNUP}" data-cta="hero">{signup_label}</a></div>')
+
+
+TRUST = ('<div class="trust">'
+         '<p class="trust__award">🏆 Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>'
+         '<div class="trust__me"><img src="/images/neus-avatar.webp" alt="Neus, fundadora de Godolphy" width="44" height="44">'
+         '<p>Soy Neus. Tuve mi propio salón y creé Godolphy para que gestiones el tuyo como una gran empresa.</p></div></div>')
+
+SECTOR_JS = """
+(function(){
+  var S=%s, sec=null;
+  try{ sec=new URLSearchParams(location.search).get('sector'); }catch(_){}
+  sec=(sec||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z]/g,'');
+  if(sec==='peluquerias')sec='peluqueria'; if(sec==='barberias')sec='barberia'; if(sec==='una')sec='unas';
+  if(S[sec]){ document.querySelectorAll('[data-k]').forEach(function(el){ var v=S[sec][el.getAttribute('data-k')]; if(v) el.textContent=v; }); document.body.setAttribute('data-sector',sec); }
+  // la plantilla conserva las UTMs del anuncio
+  var q=[]; try{ new URLSearchParams(location.search).forEach(function(v,k){ if(/^utm_/.test(k)) q.push(encodeURIComponent(k)+'='+encodeURIComponent(v)); }); }catch(_){}
+  if(q.length) document.querySelectorAll('a[data-keep-utm]').forEach(function(a){ a.href=a.getAttribute('href').split('?')[0]+'?'+q.join('&'); });
+})();
+""" % json.dumps(SECTORS, ensure_ascii=False)
+
 PHONE_IMG = lambda src, alt: f'<div class="phone"><img src="{src}" alt="{html.escape(alt)}" width="780" height="1688" fetchpriority="high"></div>'
 
 WA_MOCK = '''<div class="phone phone--wa" aria-hidden="true"><div class="wa">
@@ -28,8 +78,8 @@ LPS = {
   'citas-perdidas': {
     'title': 'Menos clientes que no se presentan | Godolphy para centros de estética',
     'desc': 'Cobra una señal al reservar y deja que tus clientes confirmen por WhatsApp el día antes. 30 días gratis, sin tarjeta.',
-    'h1': '¿Tienes un centro de estética y hay clientes que no se presentan?',
-    'sub': 'Cada plantón es una cabina vacía y un tratamiento que ya no cobras. Con Godolphy cobras una señal al reservar y tus clientes confirman por WhatsApp el día antes.',
+    'h1': '¿Tienes [un_negocio] y hay clientes que no se presentan?',
+    'sub': 'Cada plantón es [puesto_vacio] y [un_trat] que ya no cobras. Con Godolphy cobras una señal al reservar y tus clientes confirman por WhatsApp el día antes.',
     'visual': WA_MOCK,
     'pains': ['Reservan por WhatsApp y luego no aparecen.',
               'Pierdes tiempo llamando una a una para confirmar.',
@@ -43,8 +93,8 @@ LPS = {
   'agenda-llena': {
     'title': 'Reservas 24 horas sin coger el teléfono | Godolphy para centros de estética',
     'desc': 'Tus clientes reservan solos desde Instagram, Google o tu web mientras tú trabajas. 30 días gratis, sin tarjeta.',
-    'h1': '¿Tienes un centro de estética y pierdes reservas porque no puedes coger el teléfono?',
-    'sub': 'Mientras haces un tratamiento, tus clientes reservan solos desde Instagram, Google o tu web, a cualquier hora. Tú solo miras la agenda.',
+    'h1': '¿Tienes [un_negocio] y pierdes reservas porque no puedes coger el teléfono?',
+    'sub': 'Mientras haces [un_trat], tus clientes reservan solos desde Instagram, Google o tu web, a cualquier hora. Tú solo miras la agenda.',
     'visual': PHONE_IMG('/images/producto/movil-calendario.webp', 'Agenda de Godolphy en el móvil con las citas del día por esteticista'),
     'pains': ['Te escriben para reservar a las once de la noche.',
               'Contestas mensajes entre clienta y clienta.',
@@ -57,8 +107,8 @@ LPS = {
   'cuanto-ganas': {
     'title': '¿Cuánto ganas de verdad con tu centro? | Godolphy para centros de estética',
     'desc': 'Cobros, gastos y precios en un solo sitio. La IA te dice cuánto te queda, qué tratamientos te dejan margen y qué clientes dejan de venir.',
-    'h1': '¿Tienes un centro de estética y no sabes si este mes has ganado dinero?',
-    'sub': 'Godolphy junta tus cobros y tus gastos y te dice cuánto te queda de verdad, qué tratamientos te dejan margen y qué clientes están dejando de venir.',
+    'h1': '¿Tienes [un_negocio] y no sabes si este mes has ganado dinero?',
+    'sub': 'Godolphy junta tus cobros y tus gastos y te dice cuánto te queda de verdad, qué [trats] te dejan margen y qué clientes están dejando de venir.',
     'visual': PHONE_IMG('/images/producto/movil-analisis.webp', 'Análisis con IA de Godolphy en el móvil: facturación del mes y recomendación'),
     'pains': ['Facturas, pero no sabes cuánto te queda después de pagarlo todo.',
               'Pones los precios a ojo o copiando a la competencia.',
@@ -91,6 +141,14 @@ a{color:inherit;}
 .g{font-family:'Gabarito',sans-serif;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--y);color:var(--ink);font-weight:800;font-size:17px;padding:17px 28px;border-radius:999px;text-decoration:none;box-shadow:0 10px 30px rgba(20,5,60,.25);transition:transform .15s;}
 .btn:active{transform:scale(.98);}
+.btn--ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.75);box-shadow:none;font-size:15.5px;padding:12px 22px;}
+.hcta{display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.trust{margin-top:22px;display:grid;gap:10px;max-width:520px;}
+.trust p{margin:0;}
+.trust__award{display:inline-block;justify-self:start;font-size:13.5px;font-weight:700;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 12px;border-radius:12px;line-height:1.35;}
+.trust__me{display:flex;gap:12px;align-items:center;}
+.trust__me img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:0 0 44px;border:2px solid rgba(255,255,255,.6);}
+.trust__me p{font-size:14px;line-height:1.4;color:rgba(255,255,255,.92);}
 .btn--v{background:linear-gradient(90deg,var(--v2),var(--v));color:#fff;box-shadow:0 10px 30px rgba(99,28,255,.3);}
 .note{font-size:13.5px;opacity:.8;margin-top:12px;}
 /* top */
@@ -158,10 +216,20 @@ a{color:inherit;}
 .sticky .btn{width:100%;}
 .sticky.on{display:block;}
 @media(max-width:860px){
-  .hero{padding-top:76px;}
   .hero .grid{grid-template-columns:1fr;gap:28px;}
   .hero .txt{padding-bottom:0;}
   .hero .btn{width:100%;}
+  .hcta{align-items:stretch;gap:8px;}
+  .hero{padding-top:62px;}
+  .hero h1{font-size:27px;margin:10px 0 8px;}
+  .hero .sub{font-size:15px;line-height:1.45;margin:0 0 14px;}
+  .eyebrow{font-size:11px;padding:6px 10px;}
+  .hero .btn{padding:14px 20px;font-size:16px;}
+  .hero .btn--ghost{padding:10px 18px;font-size:15px;}
+  .trust{margin-top:14px;gap:8px;}
+  .trust__award{font-size:12.5px;padding:6px 10px;}
+  .trust__me p{font-size:13px;}
+  .hero .note{display:none;}
   .steps,.extras{grid-template-columns:1fr;}
   .me{flex-direction:column;padding:26px 22px;}
   .sec{padding:52px 0;}
@@ -186,6 +254,7 @@ def page(slug, d):
     note = f'<p class="small">{html.escape(d["note"])}</p>' if d.get('note') else ''
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
     cta = lambda pos, cls='btn': f'<a class="{cls}" href="{SIGNUP}" data-cta="{pos}">Prueba gratis 30 días</a>'
+    dflt = dict(SECTORS['estetica'])
     return f'''<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -196,7 +265,7 @@ def page(slug, d):
 <meta name="description" content="{html.escape(d['desc'])}">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://www.godolphy.com/lp/{slug}/">
-<meta property="og:title" content="{html.escape(d['h1'])}">
+<meta property="og:title" content="{html.escape(plain(d['h1'], dflt))}">
 <meta property="og:description" content="{html.escape(d['desc'])}">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,11 +281,12 @@ def page(slug, d):
 <section class="hero">
   <div class="w grid">
     <div class="txt">
-      <span class="eyebrow">Para centros de estética</span>
-      <h1>{html.escape(d['h1'])}</h1>
-      <p class="sub">{html.escape(d['sub'])}</p>
-      {cta('hero')}
-      <div class="note">30 días gratis · Sin tarjeta · Sin permanencia</div>
+      <span class="eyebrow">Para <span data-k="negocios">centros de estética</span></span>
+      <h1>{sector_text(d['h1'], dflt)}</h1>
+      <p class="sub">{sector_text(d['sub'], dflt)}</p>
+      {hero_ctas()}
+      <div class="note">Prueba: 30 días gratis · Sin tarjeta · Sin permanencia</div>
+      {TRUST}
     </div>
     <div class="vis">{d['visual']}</div>
   </div>
@@ -279,16 +349,17 @@ def page(slug, d):
 
 <footer class="foot"><div class="w">© 2026 Godolphy · <a href="/politica-de-privacidad/">Privacidad</a><a href="/politica-de-cookies/">Cookies</a><a href="/aviso-legal/">Aviso legal</a></div></footer>
 
-<div class="sticky" id="sticky">{cta('sticky')}</div>
+<div class="sticky" id="sticky"><a class="btn" href="{PLANTILLA}" data-cta="sticky-plantilla" data-keep-utm>Recibe gratis tu plan financiero 2027</a></div>
 
+<script>{SECTOR_JS}</script>
 <script>
 (function(){{
   var lp=document.body.getAttribute('data-lp'),st=document.getElementById('sticky'),hero=document.querySelector('.hero');
   function upd(){{var past=hero.getBoundingClientRect().bottom<0,cookie=document.getElementById('gd-cookies');st.classList.toggle('on',past&&!cookie);}}
   window.addEventListener('scroll',upd,{{passive:true}});upd();
   document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('[data-cta]');if(!a)return;
-    try{{if(window.posthog)posthog.capture('lp_cta_click',{{lp:lp,position:a.getAttribute('data-cta')}});}}catch(_){{}}
-    try{{if(window.fbq&&a.getAttribute('data-cta')!=='dashboard')fbq('track','InitiateCheckout',{{content_name:lp}});}}catch(_){{}}
+    try{{if(window.posthog)posthog.capture('lp_cta_click',{{lp:lp,position:a.getAttribute('data-cta'),sector:document.body.getAttribute('data-sector')||''}});}}catch(_){{}}
+    try{{if(window.fbq&&a.getAttribute('data-cta')!=='dashboard'&&a.getAttribute('data-cta').indexOf('plantilla')<0)fbq('track','InitiateCheckout',{{content_name:lp}});}}catch(_){{}}
   }});
 }})();
 </script>

@@ -118,7 +118,16 @@
     d.setAttribute('role', 'dialog');
     d.setAttribute('aria-label', 'Preferencias de cookies');
     d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#02021e;color:#fff;padding:10px 14px;box-shadow:0 -6px 24px rgba(0,0,0,.18);font-family:system-ui,sans-serif;font-size:12.5px;line-height:1.4;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;';
-    d.innerHTML = '<p style="margin:0;color:rgba(255,255,255,.85);flex:1 1 220px;max-width:640px;">Usamos cookies para analizar la web y mostrarte publicidad relevante. <a href="/politica-de-cookies/" style="color:#EEFE3A;">Más info</a></p>' +
+    // En móvil: una sola línea compacta (texto corto + botones), para no tapar el CTA
+    if (!document.getElementById('gd-cookies-css')) {
+      var cs = document.createElement('style'); cs.id = 'gd-cookies-css';
+      cs.textContent = '#gd-cookies .gc-s{display:none}' +
+        '@media(max-width:600px){#gd-cookies{flex-wrap:nowrap!important;gap:8px!important;padding:8px 10px!important;font-size:12px!important;justify-content:space-between!important}' +
+        '#gd-cookies p{flex:1 1 auto!important;min-width:0}#gd-cookies .gc-l{display:none}#gd-cookies .gc-s{display:inline}' +
+        '#gd-cookies button{padding:6px 10px!important;border-radius:8px!important}#gd-cookies>div{gap:6px!important}}';
+      document.head.appendChild(cs);
+    }
+    d.innerHTML = '<p style="margin:0;color:rgba(255,255,255,.85);flex:1 1 220px;max-width:640px;"><span class="gc-l">Usamos cookies para analizar la web y mostrarte publicidad relevante.</span><span class="gc-s">Usamos cookies.</span> <a href="/politica-de-cookies/" style="color:#EEFE3A;">Más info</a></p>' +
       '<div style="display:flex;gap:8px;flex:0 0 auto;">' +
       '<button type="button" data-c="denied" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer;">Rechazar</button>' +
       '<button type="button" data-c="granted" style="background:#EEFE3A;color:#02021e;border:0;border-radius:10px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer;">Aceptar</button></div>';

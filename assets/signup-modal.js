@@ -19,6 +19,17 @@
   function tz() { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { return ''; } }
   function country(z) { if (!z) return ''; if (z.indexOf('America/Argentina/') === 0) return 'AR'; return TZ_COUNTRY[z] || ''; }
   function utm() { try { return window.gdGetUtm ? window.gdGetUtm() : {}; } catch (e) { return {}; } }
+  // PostHog: embudo del modal (abrir → enviar → error/éxito → cerrar), siempre con las UTMs
+  function ph(ev, extra) {
+    try {
+      if (!window.posthog || !posthog.capture) return;
+      var p = {}, u = utm(); Object.keys(u).forEach(function (k) { p[k] = u[k]; });
+      p.page = location.pathname;
+      if (extra) Object.keys(extra).forEach(function (k) { p[k] = extra[k]; });
+      posthog.capture(ev, p);
+    } catch (x) {}
+  }
+  var phDone = false;
 
   var css = '' +
     '#gd-su{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(2,2,30,.62);font-family:Poppins,system-ui,sans-serif}' +
@@ -104,9 +115,11 @@
     root.hidden = false; document.documentElement.style.overflow = 'hidden';
     setTimeout(function () { emailIn.focus(); }, 30);
     try { if (window.gtag) gtag('event', 'signup_modal_open'); } catch (x) {}
+    phDone = false; ph('signup_modal_open', { trigger: (e && e.target && e.target.closest && (e.target.closest('[data-cta]') || {}).getAttribute) ? e.target.closest('[data-cta]').getAttribute('data-cta') : (e ? 'click' : 'auto') });
   }
 
   function close() {
+    if (!root.hidden) ph('signup_close', { completed: phDone });
     root.hidden = true; document.documentElement.style.overflow = '';
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
@@ -115,6 +128,7 @@
 
   function success() {
     root.querySelector('.f').hidden = true; root.querySelector('.ok').hidden = false;
+    phDone = true;
     var props = {}, u = utm();
     Object.keys(u).forEach(function (k) { props[k] = u[k]; });
     try { if (window.gtag) gtag('event', 'sign_up', Object.assign({ method: 'email' }, props)); } catch (x) {}
@@ -127,8 +141,9 @@
   function submit(e) {
     e.preventDefault();
     var email = (emailIn.value || '').trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { showErr('Revisa el email: parece que no es correcto.'); emailIn.focus(); return; }
-    if (!termsIn.checked) { showErr('Para crear la cuenta tienes que aceptar los términos y la política de privacidad.'); termsIn.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { ph('signup_error', { code: 'client_invalid_email' }); showErr('Revisa el email: parece que no es correcto.'); emailIn.focus(); return; }
+    if (!termsIn.checked) { ph('signup_error', { code: 'client_terms_required' }); showErr('Para crear la cuenta tienes que aceptar los términos y la política de privacidad.'); termsIn.focus(); return; }
+    ph('signup_submit', { marketing_consent: !!mktIn.checked });
     showErr(''); btn.disabled = true; btn.textContent = 'Creando tu cuenta…';
     var z = tz(), c = country(z), u = utm();
     var body = {
@@ -142,6 +157,7 @@
       .then(function (res) {
         var code = res.d.code;
         if (res.s === 201) return success();
+        ph('signup_error', { code: code || ('http_' + res.s), status: res.s });
         if (res.s === 409 || code === 'exists') showErr('Ya tienes cuenta con este email. <a href="' + LOGIN + '">Entra aquí</a>');
         else if (code === 'invalid_email') { showErr('Revisa el email: parece que no es correcto.'); emailIn.focus(); }
         else if (code === 'terms_required') showErr('Para crear la cuenta tienes que aceptar los términos y la política de privacidad.');
@@ -150,6 +166,7 @@
         btn.disabled = false; btn.textContent = 'Crear mi cuenta gratis';
       })
       .catch(function () {
+        ph('signup_error', { code: 'network' });
         showErr('No hemos podido conectar. Revisa tu conexión e inténtalo de nuevo.');
         btn.disabled = false; btn.textContent = 'Crear mi cuenta gratis';
       });

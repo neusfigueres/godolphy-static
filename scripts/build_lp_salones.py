@@ -9,7 +9,7 @@ Uso: python3 scripts/build_lp_salones.py
 """
 import html, json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from build_lp import CSS, SIGNUP, DASH, head_common
+from build_lp import CSS, SIGNUP, DASH, head_common, PLANTILLA, SECTOR_JS, TRUST, hero_ctas
 
 SLUG = 'salones'
 IMG = f'/lp/{SLUG}/'
@@ -165,6 +165,7 @@ def domicilio_svg():
 EXTRA_CSS = r'''
 html{scroll-behavior:smooth;}
 .hero h1{font-size:clamp(36px,5.2vw,64px);line-height:1.04;font-weight:700;}
+@media(max-width:860px){.hero h1{font-size:30px;}.hero .chips{display:none;}}
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
 .nav .w{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .nav img{height:26px;width:auto;}
@@ -392,10 +393,11 @@ def build():
 <section class="hero">
   <div class="w grid">
     <div class="txt">
-      <span class="eyebrow">Software de gestión con IA para salones</span>
-      <h1>Gestiona tu salón como lo haría una gran empresa.</h1>
+      <span class="eyebrow">Software de gestión con IA para <span data-k="negocios">salones</span></span>
+      <h1>Gestiona <span data-k="tu_negocio">tu salón</span> como lo haría una gran empresa.</h1>
       <p class="sub">Reservas, cobros sin plantones, domicilios y tu equipo en un solo sitio. Y cada mes, la IA te dice dónde ganas y dónde pierdes dinero.</p>
-      {cta('hero')}
+      {hero_ctas('Prueba gratis 30 días →')}
+      {TRUST}
       <div class="chips"><span>30 días gratis</span><span>Sin tarjeta</span><span>Sin permanencia</span><span>Sin comisiones por reserva</span></div>
     </div>
     <div class="vis"><div class="dev">
@@ -603,8 +605,9 @@ def build():
 </main>
 
 <footer class="foot"><div class="w">© 2026 Godolphy · <a href="/politica-de-privacidad/">Privacidad</a><a href="/politica-de-cookies/">Cookies</a><a href="/aviso-legal/">Aviso legal</a></div></footer>
-<div class="sticky" id="sticky">{cta('sticky')}</div>
+<div class="sticky" id="sticky"><a class="btn" href="{PLANTILLA}" data-cta="sticky-plantilla" data-keep-utm>Recibe gratis tu plan financiero 2027</a></div>
 
+<script>{SECTOR_JS}</script>
 <script>
 (function(){{
   var lp=document.body.getAttribute('data-lp'),st=document.getElementById('sticky'),hero=document.querySelector('.hero');
@@ -631,8 +634,8 @@ def build():
   tabs.forEach(function(b){{b.addEventListener('click',function(){{var t=b.getAttribute('data-t');
     tabs.forEach(function(x){{x.classList.toggle('on',x===b);}});figs.forEach(function(f){{f.classList.toggle('on',f.getAttribute('data-t')===t);}});}});}});
   document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('[data-cta]');if(!a)return;
-    try{{if(window.posthog)posthog.capture('lp_cta_click',{{lp:lp,position:a.getAttribute('data-cta')}});}}catch(_){{}}
-    try{{if(window.fbq&&a.getAttribute('data-cta')!=='dashboard')fbq('track','InitiateCheckout',{{content_name:lp}});}}catch(_){{}}
+    try{{if(window.posthog)posthog.capture('lp_cta_click',{{lp:lp,position:a.getAttribute('data-cta'),sector:document.body.getAttribute('data-sector')||''}});}}catch(_){{}}
+    try{{if(window.fbq&&a.getAttribute('data-cta')!=='dashboard'&&a.getAttribute('data-cta').indexOf('plantilla')<0)fbq('track','InitiateCheckout',{{content_name:lp}});}}catch(_){{}}
   }});
 }})();
 </script>
