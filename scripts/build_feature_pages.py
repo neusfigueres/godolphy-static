@@ -21,6 +21,7 @@ ICONS = {
     'upload': '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',
     'cash': '<rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>',
     'users': '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    'hourglass': '<path d="M5 22h14M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>',
     'shield': '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
 }
 
@@ -213,6 +214,31 @@ PAGES = [
     ],
     links=[('/ayuda/precio-segun-dia-y-hora/', 'Precio según día y hora, paso a paso'), ('/funcionalidades/calculadora-de-precios/', 'Calculadora de precios')]),
 
+  dict(slug='tiempos-de-exposicion', icon='hourglass', card='Tiempos de exposición',
+    title='Tiempos de exposición: atiende a otra persona mientras actúa el tinte | Godolphy',
+    desc='Divide en tramos de trabajo y de exposición los tintes, las mechas o el lifting de pestañas. Mientras actúa el producto, la agenda deja dar otra cita a la misma persona del equipo.',
+    h1='Mientras actúa el tinte, atiende a otra persona',
+    lead='Divide los servicios en tramos de trabajo y de exposición. Durante la exposición, tu agenda deja dar otra cita, en el panel y en tu web de reservas.',
+    plan='Incluido en todos los planes.',
+    sections=[
+      ('Tramos de trabajo y de exposición.', ['Un tinte puede ser 20 min de trabajo, 35 min de exposición y 30 min de trabajo. En los 35 minutos de exposición, la misma persona del equipo puede hacer un corte o un peinado.',
+        'Nunca se pone una cita encima de un tramo de trabajo: Godolphy lo impide en la web de reservas y te avisa en el panel.'], img('/ayuda/img/exposicion-calendario.png', 'Un corte dentro del tiempo de exposición de un tinte en el calendario')),
+      ('La IA te propone los tiempos.', ['Pulsa «Proponer tiempos con IA» y Godolphy lee tus servicios: propone tramos para los tintes, las mechas, las permanentes, el lifting y tinte de pestañas o el laminado de cejas, y deja como están los que no tienen exposición.',
+        'Nada cambia en tu agenda hasta que revisas y confirmas cada propuesta. También puedes poner o ajustar los tramos a mano.'], img('/ayuda/img/exposicion-propuestas.png', 'Propuestas de tiempos de exposición de la IA')),
+      ('Lo ves de un vistazo en el calendario.', ['La parte de exposición de cada cita sale rayada, con los minutos. Así sabes en todo momento quién está en cabina y quién está esperando a que actúe el producto.',
+        'Puedes crear, editar y mover citas dentro de la exposición igual que cualquier otra.'], img('/ayuda/img/exposicion-editor.png', 'Editor de tramos de trabajo y exposición')),
+    ],
+    seo=('Agenda para peluquerías y centros de estética con tiempos de exposición', [
+      'En una peluquería, el tinte deja a la persona del equipo libre durante media hora o más. Si la agenda bloquea todo el servicio, ese tiempo se pierde cada día. Con los <strong>tiempos de exposición</strong> de Godolphy, ese hueco se puede reservar para otro servicio.',
+      'Funciona igual en un centro de estética, con el lifting y tinte de pestañas o el laminado de cejas. Los tramos se aplican a las citas en el local; las citas a <a href="/funcionalidades/servicios-a-domicilio/" style="color:#631cff;font-weight:600;text-decoration:none;">domicilio</a> se reservan siempre como un solo bloque.']),
+    faq=[
+      ('¿Mis clientes ven los tramos al reservar?', 'No. Ven las horas disponibles, que ya tienen en cuenta los tiempos de exposición.'),
+      ('¿Se pueden solapar dos tramos de trabajo?', 'No. Solo se puede poner otra cita dentro del tiempo de exposición.'),
+      ('¿Funciona con las citas a domicilio?', 'No. Las citas a domicilio se reservan siempre como un solo bloque.'),
+      ('¿Quién puede cambiar los tramos?', 'La propietaria del salón, desde Servicios › Tiempos de exposición.'),
+    ],
+    links=[('/ayuda/tiempos-de-exposicion/', 'Tiempos de exposición, paso a paso'), ('/funcionalidades/calendario/', 'Calendario y agenda'), ('/sectores/software-para-peluquerias/', 'Software para peluquerías')]),
+
   dict(slug='vacaciones-y-ausencias', icon='plane', card='Vacaciones y ausencias',
     title='Vacaciones y bajas del equipo sin llamar a nadie | Godolphy',
     desc='Marca las vacaciones, una baja o un permiso y resuelve las citas afectadas en un momento: pásalas a otra persona del equipo o envía un enlace para que cada cliente elija.',
@@ -392,5 +418,8 @@ def build_page(chrome, p):
 
 if __name__ == '__main__':
     chrome = open(SRC, encoding='utf-8').read()
+    import sys
+    only = sys.argv[1:]
     for p in PAGES:
-        print('ok', build_page(chrome, p))
+        if not only or p['slug'] in only:
+            print('ok', build_page(chrome, p))
