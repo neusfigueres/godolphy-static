@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d02.mp4",
+  "model": "kling-v3",
+  "prompt": "The worker pushes the cart slowly down the corridor, the lamp glows, the door to the park stays ajar with leaves moving. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d02.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 136,
+      "billing_status": "settled",
+      "completed": 1795033779,
+      "cost": 0.448,
+      "created": 1795033643,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R5FEJQ916A5W6R1YB1WXVT",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795292979,
+            "url": [
+              "https://getapib.org/video/9998204966223788-b7be2482-d921-4c6a-8878-a7477472d0fa-video_task_01M7R5FEJQ916A5W6R1YB1WXVT.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

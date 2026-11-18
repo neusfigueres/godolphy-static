@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d05.mp4",
+  "model": "kling-v3",
+  "prompt": "The woman steps through the doorway into the bright park, straightens up and smiles, the spotlight follows her. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d05.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 116,
+      "billing_status": "settled",
+      "completed": 1795033899,
+      "cost": 0.448,
+      "created": 1795033783,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R5KQM2KDNHY29SKF4A29HM",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795293099,
+            "url": [
+              "https://getapib.org/video/9998204966103704-1517372a-4785-405c-81d3-82292673c0b7-video_task_01M7R5KQM2KDNHY29SKF4A29HM.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

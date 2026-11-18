@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d06.mp4",
+  "model": "kling-v3",
+  "prompt": "The worker sips his coffee, the two colleagues talk and point at the clipboard, steam rises from the cup. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d06.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 115,
+      "billing_status": "settled",
+      "completed": 1795033920,
+      "cost": 0.448,
+      "created": 1795033805,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R5MC7Z4HVWST8VRQ32M97J",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795293120,
+            "url": [
+              "https://getapib.org/video/9998204966082852-d447ea78-938f-4cd8-b5c1-f8a92caa8ee0-video_task_01M7R5MC7Z4HVWST8VRQ32M97J.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

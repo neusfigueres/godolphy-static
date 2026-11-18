@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d04.mp4",
+  "model": "kling-v3",
+  "prompt": "The workers bow together, confetti falls, the spotlight shimmers, curtains sway. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d04.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 126,
+      "billing_status": "settled",
+      "completed": 1795033899,
+      "cost": 0.448,
+      "created": 1795033773,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R5KDDC4C7ZKG6199H79HX9",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795293099,
+            "url": [
+              "https://getapib.org/video/9998204966104162-f081661d-b02e-4c02-bfbd-87e4e0f478af-video_task_01M7R5KDDC4C7ZKG6199H79HX9.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
