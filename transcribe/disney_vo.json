@@ -1,0 +1,737 @@
+[
+ {
+  "start": 0.0,
+  "end": 0.24,
+  "word": " En"
+ },
+ {
+  "start": 0.24,
+  "end": 0.74,
+  "word": " Disney,"
+ },
+ {
+  "start": 1.2,
+  "end": 1.26,
+  "word": " todo"
+ },
+ {
+  "start": 1.26,
+  "end": 1.42,
+  "word": " lo"
+ },
+ {
+  "start": 1.42,
+  "end": 1.52,
+  "word": " que"
+ },
+ {
+  "start": 1.52,
+  "end": 1.62,
+  "word": " el"
+ },
+ {
+  "start": 1.62,
+  "end": 2.1,
+  "word": " cliente"
+ },
+ {
+  "start": 2.1,
+  "end": 2.32,
+  "word": " puede"
+ },
+ {
+  "start": 2.32,
+  "end": 2.58,
+  "word": " ver"
+ },
+ {
+  "start": 2.58,
+  "end": 3.0,
+  "word": " es"
+ },
+ {
+  "start": 3.0,
+  "end": 3.18,
+  "word": " el"
+ },
+ {
+  "start": 3.18,
+  "end": 3.66,
+  "word": " escenario"
+ },
+ {
+  "start": 3.66,
+  "end": 4.22,
+  "word": " y"
+ },
+ {
+  "start": 4.22,
+  "end": 4.52,
+  "word": " todo"
+ },
+ {
+  "start": 4.52,
+  "end": 4.68,
+  "word": " lo"
+ },
+ {
+  "start": 4.68,
+  "end": 4.76,
+  "word": " que"
+ },
+ {
+  "start": 4.76,
+  "end": 4.94,
+  "word": " no"
+ },
+ {
+  "start": 4.94,
+  "end": 5.1,
+  "word": " ve"
+ },
+ {
+  "start": 5.1,
+  "end": 5.52,
+  "word": " es"
+ },
+ {
+  "start": 5.52,
+  "end": 5.72,
+  "word": " el"
+ },
+ {
+  "start": 5.72,
+  "end": 6.18,
+  "word": " backstage."
+ },
+ {
+  "start": 6.74,
+  "end": 6.94,
+  "word": " Por"
+ },
+ {
+  "start": 6.94,
+  "end": 7.2,
+  "word": " eso"
+ },
+ {
+  "start": 7.2,
+  "end": 7.48,
+  "word": " no"
+ },
+ {
+  "start": 7.48,
+  "end": 7.76,
+  "word": " llaman"
+ },
+ {
+  "start": 7.76,
+  "end": 7.86,
+  "word": " a"
+ },
+ {
+  "start": 7.86,
+  "end": 8.02,
+  "word": " sus"
+ },
+ {
+  "start": 8.02,
+  "end": 8.62,
+  "word": " empleados"
+ },
+ {
+  "start": 8.62,
+  "end": 9.34,
+  "word": " empleados,"
+ },
+ {
+  "start": 9.68,
+  "end": 9.9,
+  "word": " los"
+ },
+ {
+  "start": 9.9,
+  "end": 10.32,
+  "word": " llaman"
+ },
+ {
+  "start": 10.32,
+  "end": 10.76,
+  "word": " cast"
+ },
+ {
+  "start": 10.76,
+  "end": 11.3,
+  "word": " members,"
+ },
+ {
+  "start": 11.66,
+  "end": 12.0,
+  "word": " miembros"
+ },
+ {
+  "start": 12.0,
+  "end": 12.26,
+  "word": " del"
+ },
+ {
+  "start": 12.26,
+  "end": 12.72,
+  "word": " reparto."
+ },
+ {
+  "start": 13.26,
+  "end": 13.38,
+  "word": " La"
+ },
+ {
+  "start": 13.38,
+  "end": 13.78,
+  "word": " regla"
+ },
+ {
+  "start": 13.78,
+  "end": 14.0,
+  "word": " es"
+ },
+ {
+  "start": 14.0,
+  "end": 14.34,
+  "word": " simple,"
+ },
+ {
+  "start": 14.58,
+  "end": 14.78,
+  "word": " si"
+ },
+ {
+  "start": 14.78,
+  "end": 15.0,
+  "word": " un"
+ },
+ {
+  "start": 15.0,
+  "end": 15.44,
+  "word": " cliente"
+ },
+ {
+  "start": 15.44,
+  "end": 15.7,
+  "word": " puede"
+ },
+ {
+  "start": 15.7,
+  "end": 16.02,
+  "word": " verte,"
+ },
+ {
+  "start": 16.44,
+  "end": 16.58,
+  "word": " estás"
+ },
+ {
+  "start": 16.58,
+  "end": 16.88,
+  "word": " en"
+ },
+ {
+  "start": 16.88,
+  "end": 17.18,
+  "word": " escena"
+ },
+ {
+  "start": 17.18,
+  "end": 17.76,
+  "word": " y"
+ },
+ {
+  "start": 17.76,
+  "end": 17.98,
+  "word": " lo"
+ },
+ {
+  "start": 17.98,
+  "end": 18.32,
+  "word": " menos"
+ },
+ {
+  "start": 18.32,
+  "end": 18.68,
+  "word": " mágico"
+ },
+ {
+  "start": 18.68,
+  "end": 18.84,
+  "word": " del"
+ },
+ {
+  "start": 18.84,
+  "end": 19.28,
+  "word": " trabajo,"
+ },
+ {
+  "start": 19.54,
+  "end": 19.76,
+  "word": " los"
+ },
+ {
+  "start": 19.76,
+  "end": 20.52,
+  "word": " descansos,"
+ },
+ {
+  "start": 20.62,
+  "end": 20.84,
+  "word": " las"
+ },
+ {
+  "start": 20.84,
+  "end": 21.28,
+  "word": " cajas,"
+ },
+ {
+  "start": 21.44,
+  "end": 21.66,
+  "word": " los"
+ },
+ {
+  "start": 21.66,
+  "end": 22.18,
+  "word": " problemas,"
+ },
+ {
+  "start": 22.52,
+  "end": 22.84,
+  "word": " pasa"
+ },
+ {
+  "start": 22.84,
+  "end": 23.3,
+  "word": " donde"
+ },
+ {
+  "start": 23.3,
+  "end": 23.72,
+  "word": " nadie"
+ },
+ {
+  "start": 23.72,
+  "end": 23.94,
+  "word": " lo"
+ },
+ {
+  "start": 23.94,
+  "end": 24.04,
+  "word": " ve."
+ },
+ {
+  "start": 24.64,
+  "end": 25.12,
+  "word": " Ahora"
+ },
+ {
+  "start": 25.12,
+  "end": 25.5,
+  "word": " mira"
+ },
+ {
+  "start": 25.5,
+  "end": 25.7,
+  "word": " tu"
+ },
+ {
+  "start": 25.7,
+  "end": 25.98,
+  "word": " centro"
+ },
+ {
+  "start": 25.98,
+  "end": 26.22,
+  "word": " con"
+ },
+ {
+  "start": 26.22,
+  "end": 26.36,
+  "word": " los"
+ },
+ {
+  "start": 26.36,
+  "end": 26.56,
+  "word": " ojos"
+ },
+ {
+  "start": 26.56,
+  "end": 26.74,
+  "word": " de"
+ },
+ {
+  "start": 26.74,
+  "end": 26.84,
+  "word": " tu"
+ },
+ {
+  "start": 26.84,
+  "end": 27.68,
+  "word": " cliente,"
+ },
+ {
+  "start": 27.88,
+  "end": 28.06,
+  "word": " el"
+ },
+ {
+  "start": 28.06,
+  "end": 28.34,
+  "word": " móvil"
+ },
+ {
+  "start": 28.34,
+  "end": 28.72,
+  "word": " cargando"
+ },
+ {
+  "start": 28.72,
+  "end": 28.92,
+  "word": " en"
+ },
+ {
+  "start": 28.92,
+  "end": 29.38,
+  "word": " recepción,"
+ },
+ {
+  "start": 29.84,
+  "end": 29.98,
+  "word": " la"
+ },
+ {
+  "start": 29.98,
+  "end": 30.2,
+  "word": " puerta"
+ },
+ {
+  "start": 30.2,
+  "end": 30.38,
+  "word": " de"
+ },
+ {
+  "start": 30.38,
+  "end": 30.52,
+  "word": " la"
+ },
+ {
+  "start": 30.52,
+  "end": 30.74,
+  "word": " cabina"
+ },
+ {
+  "start": 30.74,
+  "end": 31.2,
+  "word": " abierta"
+ },
+ {
+  "start": 31.2,
+  "end": 31.4,
+  "word": " con"
+ },
+ {
+  "start": 31.4,
+  "end": 31.56,
+  "word": " la"
+ },
+ {
+  "start": 31.56,
+  "end": 31.8,
+  "word": " camilla"
+ },
+ {
+  "start": 31.8,
+  "end": 32.08,
+  "word": " sin"
+ },
+ {
+  "start": 32.08,
+  "end": 32.32,
+  "word": " hacer,"
+ },
+ {
+  "start": 32.92,
+  "end": 33.16,
+  "word": " dos"
+ },
+ {
+  "start": 33.16,
+  "end": 33.66,
+  "word": " compañeras"
+ },
+ {
+  "start": 33.66,
+  "end": 33.98,
+  "word": " hablando"
+ },
+ {
+  "start": 33.98,
+  "end": 34.24,
+  "word": " de"
+ },
+ {
+  "start": 34.24,
+  "end": 34.66,
+  "word": " turnos"
+ },
+ {
+  "start": 34.66,
+  "end": 34.86,
+  "word": " en"
+ },
+ {
+  "start": 34.86,
+  "end": 35.04,
+  "word": " mitad"
+ },
+ {
+  "start": 35.04,
+  "end": 35.18,
+  "word": " de"
+ },
+ {
+  "start": 35.18,
+  "end": 35.32,
+  "word": " un"
+ },
+ {
+  "start": 35.32,
+  "end": 35.84,
+  "word": " tratamiento."
+ },
+ {
+  "start": 36.46,
+  "end": 36.66,
+  "word": " Nada"
+ },
+ {
+  "start": 36.66,
+  "end": 36.88,
+  "word": " de"
+ },
+ {
+  "start": 36.88,
+  "end": 36.96,
+  "word": " eso"
+ },
+ {
+  "start": 36.96,
+  "end": 37.18,
+  "word": " es"
+ },
+ {
+  "start": 37.18,
+  "end": 37.42,
+  "word": " grave,"
+ },
+ {
+  "start": 37.84,
+  "end": 38.06,
+  "word": " pero"
+ },
+ {
+  "start": 38.06,
+  "end": 38.44,
+  "word": " rompe"
+ },
+ {
+  "start": 38.44,
+  "end": 38.64,
+  "word": " la"
+ },
+ {
+  "start": 38.64,
+  "end": 39.04,
+  "word": " magia."
+ },
+ {
+  "start": 39.58,
+  "end": 39.76,
+  "word": " No"
+ },
+ {
+  "start": 39.76,
+  "end": 40.16,
+  "word": " necesitas"
+ },
+ {
+  "start": 40.16,
+  "end": 40.34,
+  "word": " un"
+ },
+ {
+  "start": 40.34,
+  "end": 40.84,
+  "word": " castillo,"
+ },
+ {
+  "start": 41.28,
+  "end": 41.68,
+  "word": " necesitas"
+ },
+ {
+  "start": 41.68,
+  "end": 42.28,
+  "word": " decidir"
+ },
+ {
+  "start": 42.28,
+  "end": 42.44,
+  "word": " qué"
+ },
+ {
+  "start": 42.44,
+  "end": 42.72,
+  "word": " es"
+ },
+ {
+  "start": 42.72,
+  "end": 43.16,
+  "word": " escenario"
+ },
+ {
+  "start": 43.16,
+  "end": 43.5,
+  "word": " y"
+ },
+ {
+  "start": 43.5,
+  "end": 43.7,
+  "word": " qué"
+ },
+ {
+  "start": 43.7,
+  "end": 43.98,
+  "word": " es"
+ },
+ {
+  "start": 43.98,
+  "end": 44.42,
+  "word": " backstage"
+ },
+ {
+  "start": 44.42,
+  "end": 44.82,
+  "word": " y"
+ },
+ {
+  "start": 44.82,
+  "end": 44.98,
+  "word": " que"
+ },
+ {
+  "start": 44.98,
+  "end": 45.1,
+  "word": " tu"
+ },
+ {
+  "start": 45.1,
+  "end": 45.48,
+  "word": " equipo"
+ },
+ {
+  "start": 45.48,
+  "end": 45.9,
+  "word": " lo"
+ },
+ {
+  "start": 45.9,
+  "end": 46.46,
+  "word": " sepa."
+ },
+ {
+  "start": 46.94,
+  "end": 47.14,
+  "word": " Soy"
+ },
+ {
+  "start": 47.14,
+  "end": 47.56,
+  "word": " Neus"
+ },
+ {
+  "start": 47.56,
+  "end": 47.88,
+  "word": " y"
+ },
+ {
+  "start": 47.88,
+  "end": 48.06,
+  "word": " en"
+ },
+ {
+  "start": 48.06,
+  "end": 48.18,
+  "word": " esta"
+ },
+ {
+  "start": 48.18,
+  "end": 48.48,
+  "word": " serie"
+ },
+ {
+  "start": 48.48,
+  "end": 48.7,
+  "word": " te"
+ },
+ {
+  "start": 48.7,
+  "end": 48.94,
+  "word": " traigo"
+ },
+ {
+  "start": 48.94,
+  "end": 49.28,
+  "word": " las"
+ },
+ {
+  "start": 49.28,
+  "end": 49.74,
+  "word": " estrategias"
+ },
+ {
+  "start": 49.74,
+  "end": 49.88,
+  "word": " de"
+ },
+ {
+  "start": 49.88,
+  "end": 50.08,
+  "word": " las"
+ },
+ {
+  "start": 50.08,
+  "end": 50.4,
+  "word": " grandes"
+ },
+ {
+  "start": 50.4,
+  "end": 50.88,
+  "word": " empresas"
+ },
+ {
+  "start": 50.88,
+  "end": 51.54,
+  "word": " aplicadas"
+ },
+ {
+  "start": 51.54,
+  "end": 51.72,
+  "word": " a"
+ },
+ {
+  "start": 51.72,
+  "end": 51.8,
+  "word": " tu"
+ },
+ {
+  "start": 51.8,
+  "end": 52.14,
+  "word": " salón."
+ }
+]
