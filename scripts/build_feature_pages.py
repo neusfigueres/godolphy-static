@@ -222,7 +222,7 @@ PAGES = [
     plan='Incluido en todos los planes.',
     sections=[
       ('Tramos de trabajo y de exposición.', ['Un tinte puede ser 20 min de trabajo, 35 min de exposición y 30 min de trabajo. En los 35 minutos de exposición, la misma persona del equipo puede hacer un corte o un peinado.',
-        'Nunca se pone una cita encima de un tramo de trabajo: Godolphy lo impide en la web de reservas y te avisa en el panel.'], img('/ayuda/img/exposicion-calendario.png', 'Un corte dentro del tiempo de exposición de un tinte en el calendario')),
+        'Nunca se pone una cita encima de un tramo de trabajo: Godolphy lo impide en la web de reservas y te avisa en el panel.'], img('/ayuda/img/exposicion-calendario.png', 'Otra cita dentro del tiempo de exposición de un servicio en el calendario')),
       ('La IA te propone los tiempos.', ['Pulsa «Proponer tiempos con IA» y Godolphy lee tus servicios: propone tramos para los tintes, las mechas, las permanentes, el lifting y tinte de pestañas o el laminado de cejas, y deja como están los que no tienen exposición.',
         'Nada cambia en tu agenda hasta que revisas y confirmas cada propuesta. También puedes poner o ajustar los tramos a mano.'], img('/ayuda/img/exposicion-propuestas.png', 'Propuestas de tiempos de exposición de la IA')),
       ('Lo ves de un vistazo en el calendario.', ['La parte de exposición de cada cita sale rayada, con los minutos. Así sabes en todo momento quién está en cabina y quién está esperando a que actúe el producto.',
