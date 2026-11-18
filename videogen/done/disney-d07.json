@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d07.mp4",
+  "model": "kling-v3",
+  "prompt": "The hidden door closes softly, visitors walk past chatting, flowers sway, sparkles float. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d07.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 95,
+      "billing_status": "settled",
+      "completed": 1795036773,
+      "cost": 0.448,
+      "created": 1795036678,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R8C28YAX8B93KWS44DVHHT",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795295973,
+            "url": [
+              "https://getapib.org/video/9998204963229828-c37f90d4-78ad-4c28-a76e-75dcccaa90fd-video_task_01M7R8C28YAX8B93KWS44DVHHT.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

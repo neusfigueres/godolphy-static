@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d16.mp4",
+  "model": "kling-v3",
+  "prompt": "The woman smiles at camera, the lightbulb glows brighter, leaves sway, the awning flutters. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d16.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 115,
+      "billing_status": "settled",
+      "completed": 1795037169,
+      "cost": 0.448,
+      "created": 1795037054,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R8QH8KANEEA1X9TZ0213DK",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795296369,
+            "url": [
+              "https://getapib.org/video/9998204962833788-7df016bf-1b85-4a0f-a2bb-6925061bb84b-video_task_01M7R8QH8KANEEA1X9TZ0213DK.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

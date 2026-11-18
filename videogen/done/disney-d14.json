@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d14.mp4",
+  "model": "kling-v3",
+  "prompt": "The purple curtain sways gently, the client relaxes on the bed, in the back room the coffee machine steams. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d14.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 136,
+      "billing_status": "settled",
+      "completed": 1795037027,
+      "cost": 0.448,
+      "created": 1795036891,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R8JJBG335420K7YR0CTT4Q",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795296227,
+            "url": [
+              "https://getapib.org/video/9998204962975836-fb9bd782-bfba-417c-8e9b-8a212390c232-video_task_01M7R8JJBG335420K7YR0CTT4Q.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

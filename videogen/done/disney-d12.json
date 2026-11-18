@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/disney-d12.mp4",
+  "model": "kling-v3",
+  "prompt": "The sparkle bubble cracks and shatters into falling sparkles, the client's smile fades into disappointment, the clock hand ticks. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/disney/d12.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 267,
+      "billing_status": "settled",
+      "completed": 1795037047,
+      "cost": 0.448,
+      "created": 1795036780,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7R8F5XXNPAT94BH4SJFENT1",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795296247,
+            "url": [
+              "https://getapib.org/video/9998204962955596-b0fee199-653c-4faa-83aa-d8069663f732-video_task_01M7R8F5XXNPAT94BH4SJFENT1.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
