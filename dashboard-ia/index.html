@@ -78,6 +78,9 @@
   .neus-grid .h2{margin:14px 0 18px;}
   .neus-grid p.neus-sig{font-family:'Gabarito',sans-serif;font-weight:700;font-size:18px;color:var(--v);margin:14px 0 0;}
   @media(max-width:860px){.neus{padding:64px 0 40px;}.neus-grid{grid-template-columns:1fr;gap:28px;}.neus-grid img{max-width:420px;margin:0 auto;}}
+  .vid916{max-width:340px;width:100%;margin:0 auto;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#140a3a;box-shadow:0 24px 60px rgba(60,20,160,.25);}
+  @media(max-width:860px){.in-godolphy{grid-template-columns:1fr!important;}}
+  .vid916 video{width:100%;height:100%;display:block;object-fit:cover;}
   .why{padding:20px 0 40px;}
   .why-box{max-width:820px;margin:0 auto;background:var(--soft);border:1px solid var(--line);border-radius:28px;padding:44px 48px;text-align:center;}
   .why-box h2{font-family:'Gabarito',sans-serif;font-size:clamp(28px,3.6vw,40px);line-height:1.08;margin:16px 0 16px;color:var(--ink);}
@@ -366,14 +369,14 @@
         <p>Facturación, citas, horas y € por hora de cada persona del equipo, y los clientes que más gastan en tu salón.</p>
       </article>
 
-      <article class="card c12 reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;">
+      <article class="card c12 reveal in-godolphy" style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;">
         <div>
           <span class="eyebrow" style="margin-bottom:16px;">Dentro de Godolphy</span>
           <h3 style="font-size:30px;margin-top:14px;">Y si gestionas tus reservas con Godolphy, el análisis se actualiza solo</h3>
           <p>En el panel tienes la pestaña <b>Análisis IA</b> con tus reservas reales, sin exportar nada, y además la <b>previsión del mes</b>: lo que ya tienes reservado más lo que suelen dejar tus clientes habituales y los nuevos.</p>
           <a class="link" href="/ayuda/analisis-ia/">Ver cómo funciona en el centro de ayuda →</a>
         </div>
-        <div class="frame" style="padding:8px;"><img src="/images/producto/analisis-prevision.webp" alt="Previsión del mes en Análisis IA" loading="lazy" style="border-radius:12px;"></div>
+        <div class="vid916"><video controls preload="none" playsinline poster="/videos/tu-salon-no-crece-solo-con-reservas.webp" aria-label="Vídeo: tu salón no crece solo con más reservas, crece cuando sabes tus números"><source src="/videos/tu-salon-no-crece-solo-con-reservas.mp4" type="video/mp4"></video></div>
       </article>
     </div>
   </div>
