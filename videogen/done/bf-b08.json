@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b08.mp4",
+  "model": "kling-v3",
+  "prompt": "The owner peels off the red sign and smiles, the gift envelopes sparkle on the display. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b08.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 146,
+      "billing_status": "settled",
+      "completed": 1795092553,
+      "cost": 0.448,
+      "created": 1795092407,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SXGS4VCZB6Z7S1Z915SZJK",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795351753,
+            "url": [
+              "https://getapib.org/video/9998204907449876-691c56ce-f7a6-46bd-b9e7-f31473afc7d6-video_task_01M7SXGS4VCZB6Z7S1Z915SZJK.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

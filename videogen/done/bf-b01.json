@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b01.mp4",
+  "model": "kling-v3",
+  "prompt": "The woman sticks the red sign on the window, hesitates and looks over her shoulder, shop lights glow. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b01.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 137,
+      "billing_status": "settled",
+      "completed": 1795092263,
+      "cost": 0.448,
+      "created": 1795092126,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SX872SYZ6A06XBAEE44E3Q",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795351463,
+            "url": [
+              "https://getapib.org/video/9998204907740578-902f2f11-0654-4d36-9dfb-0fedf1dea432-video_task_01M7SX872SYZ6A06XBAEE44E3Q.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

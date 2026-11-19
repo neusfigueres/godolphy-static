@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b10.mp4",
+  "model": "kling-v3",
+  "prompt": "Snow falls gently, the client walks in through the door with the gift card, scarf moving. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b10.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 207,
+      "billing_status": "settled",
+      "completed": 1795092750,
+      "cost": 0.448,
+      "created": 1795092543,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SXMXGW03J8NZT88RNDKR70",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795351950,
+            "url": [
+              "https://getapib.org/video/9998204907253840-06761ce5-0637-4009-83fd-520bc448e2fb-video_task_01M7SXMXGW03J8NZT88RNDKR70.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

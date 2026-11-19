@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b05.mp4",
+  "model": "kling-v3",
+  "prompt": "The staff member hands over the bag and the gift card envelope, the customer smiles and takes it. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b05.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 136,
+      "billing_status": "settled",
+      "completed": 1795092403,
+      "cost": 0.448,
+      "created": 1795092267,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SXCG3YGZZ80JEFX18EAR1B",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795351603,
+            "url": [
+              "https://getapib.org/video/9998204907600466-4f48b515-b2b5-4a22-8027-659ac871c091-video_task_01M7SXCG3YGZZ80JEFX18EAR1B.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

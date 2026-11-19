@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b02.mp4",
+  "model": "kling-v3",
+  "prompt": "Clients crowd and wave their phones, the staff rush around, the clock hands spin fast. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b02.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 127,
+      "billing_status": "settled",
+      "completed": 1795092253,
+      "cost": 0.448,
+      "created": 1795092126,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SX872XBC4CK8EWQV06Y8TB",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795351453,
+            "url": [
+              "https://getapib.org/video/9998204907750732-6d3e684b-5b59-4685-a282-3395837ba2a1-video_task_01M7SX872XBC4CK8EWQV06Y8TB.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

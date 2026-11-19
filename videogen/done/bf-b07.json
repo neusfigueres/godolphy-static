@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b07.mp4",
+  "model": "kling-v3",
+  "prompt": "The customer walks in through the door holding up the gift card, the staff member waves hello. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b07.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 136,
+      "billing_status": "settled",
+      "completed": 1795092538,
+      "cost": 0.448,
+      "created": 1795092402,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SXGM7AWB8HXB8C594HGNSB",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795351738,
+            "url": [
+              "https://getapib.org/video/9998204907465308-98c6c12c-8570-4c84-967e-5d85e48fcb92-video_task_01M7SXGM7AWB8HXB8C594HGNSB.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

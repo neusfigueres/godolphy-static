@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b09.mp4",
+  "model": "kling-v3",
+  "prompt": "The client taps her phone on the terminal, the receptionist hands her the envelope, both smile. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b09.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 208,
+      "billing_status": "settled",
+      "completed": 1795092747,
+      "cost": 0.448,
+      "created": 1795092539,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SXMSSZNQ92NG1T4J35D3XW",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795351947,
+            "url": [
+              "https://getapib.org/video/9998204907257320-6973ffcf-ccbc-4ed4-b55a-9916429a5dda-video_task_01M7SXMSSZNQ92NG1T4J35D3XW.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

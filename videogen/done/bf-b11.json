@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/bf-b11.mp4",
+  "model": "kling-v3",
+  "prompt": "The owner leans back relaxed and smiles, sparkles twinkle, clients relax in the treatment rooms. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/bf/b11.jpg"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 349,
+      "billing_status": "settled",
+      "completed": 1795092907,
+      "cost": 0.448,
+      "created": 1795092558,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M7SXNCK1JXBX33P2PQWWZ9GK",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795352107,
+            "url": [
+              "https://getapib.org/video/9998204907096168-e68dec62-906f-41f2-ae9c-4ffe17ab8f5a-video_task_01M7SXNCK1JXBX33P2PQWWZ9GK.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
