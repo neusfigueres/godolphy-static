@@ -1,0 +1,572 @@
+[
+ {
+  "start": 0.0,
+  "end": 0.4,
+  "word": " ¿Tienes"
+ },
+ {
+  "start": 0.4,
+  "end": 0.48,
+  "word": " un"
+ },
+ {
+  "start": 0.48,
+  "end": 0.8,
+  "word": " centro"
+ },
+ {
+  "start": 0.8,
+  "end": 1.0,
+  "word": " de"
+ },
+ {
+  "start": 1.0,
+  "end": 1.38,
+  "word": " estética"
+ },
+ {
+  "start": 1.38,
+  "end": 1.68,
+  "word": " y"
+ },
+ {
+  "start": 1.68,
+  "end": 1.88,
+  "word": " estás"
+ },
+ {
+  "start": 1.88,
+  "end": 2.38,
+  "word": " pensando"
+ },
+ {
+  "start": 2.38,
+  "end": 2.62,
+  "word": " en"
+ },
+ {
+  "start": 2.62,
+  "end": 2.74,
+  "word": " hacer"
+ },
+ {
+  "start": 2.74,
+  "end": 3.02,
+  "word": " un"
+ },
+ {
+  "start": 3.02,
+  "end": 3.3,
+  "word": " 30"
+ },
+ {
+  "start": 3.3,
+  "end": 3.72,
+  "word": "%"
+ },
+ {
+  "start": 3.72,
+  "end": 4.0,
+  "word": " de"
+ },
+ {
+  "start": 4.0,
+  "end": 4.36,
+  "word": " descuento"
+ },
+ {
+  "start": 4.36,
+  "end": 4.6,
+  "word": " este"
+ },
+ {
+  "start": 4.6,
+  "end": 4.86,
+  "word": " Black"
+ },
+ {
+  "start": 4.86,
+  "end": 5.18,
+  "word": " Friday?"
+ },
+ {
+  "start": 5.78,
+  "end": 6.38,
+  "word": " ¡Cuidado!"
+ },
+ {
+  "start": 6.76,
+  "end": 7.1,
+  "word": " Atraes"
+ },
+ {
+  "start": 7.1,
+  "end": 7.64,
+  "word": " clientes"
+ },
+ {
+  "start": 7.64,
+  "end": 7.88,
+  "word": " que"
+ },
+ {
+  "start": 7.88,
+  "end": 8.18,
+  "word": " solo"
+ },
+ {
+  "start": 8.18,
+  "end": 8.4,
+  "word": " vienen"
+ },
+ {
+  "start": 8.4,
+  "end": 8.62,
+  "word": " por"
+ },
+ {
+  "start": 8.62,
+  "end": 8.82,
+  "word": " el"
+ },
+ {
+  "start": 8.82,
+  "end": 9.16,
+  "word": " precio,"
+ },
+ {
+  "start": 9.52,
+  "end": 9.94,
+  "word": " trabajas"
+ },
+ {
+  "start": 9.94,
+  "end": 10.18,
+  "word": " más"
+ },
+ {
+  "start": 10.18,
+  "end": 10.42,
+  "word": " por"
+ },
+ {
+  "start": 10.42,
+  "end": 10.74,
+  "word": " menos"
+ },
+ {
+  "start": 10.74,
+  "end": 11.1,
+  "word": " y"
+ },
+ {
+  "start": 11.1,
+  "end": 11.56,
+  "word": " después"
+ },
+ {
+  "start": 11.56,
+  "end": 11.98,
+  "word": " no"
+ },
+ {
+  "start": 11.98,
+  "end": 12.64,
+  "word": " vuelven."
+ },
+ {
+  "start": 12.94,
+  "end": 13.14,
+  "word": " Apple"
+ },
+ {
+  "start": 13.14,
+  "end": 13.62,
+  "word": " casi"
+ },
+ {
+  "start": 13.62,
+  "end": 13.98,
+  "word": " nunca"
+ },
+ {
+  "start": 13.98,
+  "end": 14.36,
+  "word": " rebaja"
+ },
+ {
+  "start": 14.36,
+  "end": 14.54,
+  "word": " sus"
+ },
+ {
+  "start": 14.54,
+  "end": 14.9,
+  "word": " productos"
+ },
+ {
+  "start": 14.9,
+  "end": 15.1,
+  "word": " en"
+ },
+ {
+  "start": 15.1,
+  "end": 15.36,
+  "word": " Black"
+ },
+ {
+  "start": 15.36,
+  "end": 15.7,
+  "word": " Friday,"
+ },
+ {
+  "start": 16.04,
+  "end": 16.18,
+  "word": " lo"
+ },
+ {
+  "start": 16.18,
+  "end": 16.38,
+  "word": " que"
+ },
+ {
+  "start": 16.38,
+  "end": 16.58,
+  "word": " hace"
+ },
+ {
+  "start": 16.58,
+  "end": 16.98,
+  "word": " es"
+ },
+ {
+  "start": 16.98,
+  "end": 17.36,
+  "word": " regalarte"
+ },
+ {
+  "start": 17.36,
+  "end": 17.58,
+  "word": " una"
+ },
+ {
+  "start": 17.58,
+  "end": 18.02,
+  "word": " tarjeta"
+ },
+ {
+  "start": 18.02,
+  "end": 18.22,
+  "word": " para"
+ },
+ {
+  "start": 18.22,
+  "end": 18.4,
+  "word": " tu"
+ },
+ {
+  "start": 18.4,
+  "end": 18.8,
+  "word": " próxima"
+ },
+ {
+  "start": 18.8,
+  "end": 19.16,
+  "word": " compra,"
+ },
+ {
+  "start": 19.5,
+  "end": 19.68,
+  "word": " que"
+ },
+ {
+  "start": 19.68,
+  "end": 19.88,
+  "word": " no"
+ },
+ {
+  "start": 19.88,
+  "end": 20.1,
+  "word": " puedes"
+ },
+ {
+  "start": 20.1,
+  "end": 20.38,
+  "word": " usar"
+ },
+ {
+  "start": 20.38,
+  "end": 20.58,
+  "word": " ese"
+ },
+ {
+  "start": 20.58,
+  "end": 20.84,
+  "word": " mismo"
+ },
+ {
+  "start": 20.84,
+  "end": 21.12,
+  "word": " día."
+ },
+ {
+  "start": 21.64,
+  "end": 22.24,
+  "word": " Resultado,"
+ },
+ {
+  "start": 22.62,
+  "end": 22.82,
+  "word": " no"
+ },
+ {
+  "start": 22.82,
+  "end": 23.22,
+  "word": " pierde"
+ },
+ {
+  "start": 23.22,
+  "end": 23.74,
+  "word": " margen"
+ },
+ {
+  "start": 23.74,
+  "end": 24.0,
+  "word": " y"
+ },
+ {
+  "start": 24.0,
+  "end": 24.48,
+  "word": " tú"
+ },
+ {
+  "start": 24.48,
+  "end": 24.78,
+  "word": " vuelves"
+ },
+ {
+  "start": 24.78,
+  "end": 24.9,
+  "word": " a"
+ },
+ {
+  "start": 24.9,
+  "end": 25.04,
+  "word": " la"
+ },
+ {
+  "start": 25.04,
+  "end": 25.64,
+  "word": " tienda."
+ },
+ {
+  "start": 25.64,
+  "end": 26.28,
+  "word": " Aplícalo"
+ },
+ {
+  "start": 26.28,
+  "end": 26.36,
+  "word": " a"
+ },
+ {
+  "start": 26.36,
+  "end": 26.46,
+  "word": " tu"
+ },
+ {
+  "start": 26.46,
+  "end": 26.84,
+  "word": " centro."
+ },
+ {
+  "start": 27.32,
+  "end": 27.46,
+  "word": " Este"
+ },
+ {
+  "start": 27.46,
+  "end": 27.74,
+  "word": " Black"
+ },
+ {
+  "start": 27.74,
+  "end": 28.08,
+  "word": " Friday"
+ },
+ {
+  "start": 28.08,
+  "end": 28.52,
+  "word": " no"
+ },
+ {
+  "start": 28.52,
+  "end": 28.88,
+  "word": " bajes"
+ },
+ {
+  "start": 28.88,
+  "end": 29.34,
+  "word": " precios."
+ },
+ {
+  "start": 29.7,
+  "end": 29.9,
+  "word": " Quien"
+ },
+ {
+  "start": 29.9,
+  "end": 30.26,
+  "word": " reserve"
+ },
+ {
+  "start": 30.26,
+  "end": 30.52,
+  "word": " o"
+ },
+ {
+  "start": 30.52,
+  "end": 30.78,
+  "word": " compre"
+ },
+ {
+  "start": 30.78,
+  "end": 30.98,
+  "word": " un"
+ },
+ {
+  "start": 30.98,
+  "end": 31.28,
+  "word": " bono"
+ },
+ {
+  "start": 31.28,
+  "end": 31.5,
+  "word": " se"
+ },
+ {
+  "start": 31.5,
+  "end": 31.66,
+  "word": " lleva"
+ },
+ {
+  "start": 31.66,
+  "end": 31.84,
+  "word": " una"
+ },
+ {
+  "start": 31.84,
+  "end": 32.34,
+  "word": " tarjeta"
+ },
+ {
+  "start": 32.34,
+  "end": 32.62,
+  "word": " regalo"
+ },
+ {
+  "start": 32.62,
+  "end": 32.82,
+  "word": " de"
+ },
+ {
+  "start": 32.82,
+  "end": 33.1,
+  "word": " 10"
+ },
+ {
+  "start": 33.1,
+  "end": 33.38,
+  "word": " euros"
+ },
+ {
+  "start": 33.38,
+  "end": 33.64,
+  "word": " para"
+ },
+ {
+  "start": 33.64,
+  "end": 33.86,
+  "word": " usar"
+ },
+ {
+  "start": 33.86,
+  "end": 34.04,
+  "word": " en"
+ },
+ {
+  "start": 34.04,
+  "end": 34.46,
+  "word": " enero."
+ },
+ {
+  "start": 34.82,
+  "end": 35.1,
+  "word": " Cobras"
+ },
+ {
+  "start": 35.1,
+  "end": 35.36,
+  "word": " hoy"
+ },
+ {
+  "start": 35.36,
+  "end": 35.56,
+  "word": " a"
+ },
+ {
+  "start": 35.56,
+  "end": 35.72,
+  "word": " precio"
+ },
+ {
+  "start": 35.72,
+  "end": 36.18,
+  "word": " completo"
+ },
+ {
+  "start": 36.18,
+  "end": 36.6,
+  "word": " y"
+ },
+ {
+  "start": 36.6,
+  "end": 36.76,
+  "word": " te"
+ },
+ {
+  "start": 36.76,
+  "end": 37.16,
+  "word": " aseguras"
+ },
+ {
+  "start": 37.16,
+  "end": 37.38,
+  "word": " que"
+ },
+ {
+  "start": 37.38,
+  "end": 37.64,
+  "word": " vuelva"
+ },
+ {
+  "start": 37.64,
+  "end": 37.94,
+  "word": " después"
+ },
+ {
+  "start": 37.94,
+  "end": 38.08,
+  "word": " de"
+ },
+ {
+  "start": 38.08,
+  "end": 38.24,
+  "word": " las"
+ },
+ {
+  "start": 38.24,
+  "end": 38.6,
+  "word": " fiestas."
+ }
+]
