@@ -1,0 +1,7 @@
+{
+  "out": "imagegen/meme-peluquera/peluquera_v1.png",
+  "model": "nano-banana-ext",
+  "size": "9:16",
+  "no_style": true,
+  "prompt": "Candid vertical phone photo inside a bright modern hair salon in Spain. A female hairdresser about 33 years old, long wavy dark-blonde balayage hair, wearing a fitted black long-sleeve top, high-waisted blue jeans and a black leather belt, stands calmly cutting the long straight dark-brown hair of a seated client who wears a black cutting cape and is seen from behind. The hairdresser holds a lock of hair between her fingers with a white comb and silver scissors in her hands, looking down at the hair with a serene, focused, relaxed expression, as if everything is under control. Warm neutral salon interior: cream walls, light wood, large mirror station with a light grey counter and curling irons, soft afternoon sunlight through a window casting leaf shadows on the wall. She looks like a real ordinary person, not a model: natural skin texture, visible pores, slight imperfections, flyaway hairs, no beauty filter. Natural light, slight phone camera noise, documentary style. Leave the middle of the frame free of important details for overlay text. No text, no letters, no logos, no watermarks."
+}
