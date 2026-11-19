@@ -3,6 +3,37 @@
   "model": "kling-v3",
   "prompt": "Realistic handheld phone video, one single continuous shot, no cuts. Keep exactly the same hairdresser, client, salon, clothes and light as the start frame. The hairdresser calmly and confidently trims the client's long dark hair: she combs the lock down with the white comb, holds it between her fingers and makes two slow precise snips with the scissors, small strands of hair fall. She looks serene and in control, a slight relaxed smile. Very subtle natural camera sway, no zoom. The sunlight leaf shadows on the wall move gently. Natural realistic hand movement, five fingers on each hand.",
   "negative_prompt": "distorted face, different person, extra fingers, deformed hands, morphing, text, watermark, cut, scene change, zoom",
-  "frames": ["imagegen/meme-peluquera/peluquera_v1.png"],
-  "body": {"duration": 5, "mode": "std", "aspect_ratio": "9:16"}
+  "frames": [
+    "imagegen/meme-peluquera/peluquera_v1.png"
+  ],
+  "body": {
+    "duration": 5,
+    "mode": "std",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 237,
+      "billing_status": "settled",
+      "completed": 1795080265,
+      "cost": 0.336,
+      "created": 1795080028,
+      "credits_cost": 3.36,
+      "estimated_time": 300,
+      "id": "task_01M7SHQ0988ZCP1WQ66P1A6SVQ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795339465,
+            "url": [
+              "https://getapib.org/video/9998204919737892-c3f341e9-203c-4533-9d10-ad1acc2a402b-video_task_01M7SHQ0988ZCP1WQ66P1A6SVQ.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
 }
