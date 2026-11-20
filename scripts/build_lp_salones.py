@@ -9,7 +9,7 @@ Uso: python3 scripts/build_lp_salones.py
 """
 import html, json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from build_lp import CSS, SIGNUP, DASH, head_common, PLANTILLA, SECTOR_JS, TRUST, hero_ctas
+from build_lp import CSS, SIGNUP, DASH, head_common, PLANTILLA, SECTOR_JS, TRUST
 
 SLUG = 'salones'
 IMG = f'/lp/{SLUG}/'
@@ -164,8 +164,16 @@ def domicilio_svg():
 
 EXTRA_CSS = r'''
 html{scroll-behavior:smooth;}
-.hero h1{font-size:clamp(36px,5.2vw,64px);line-height:1.04;font-weight:700;}
-@media(max-width:860px){.hero h1{font-size:30px;}.hero .chips{display:none;}}
+.hero h1{font-size:clamp(32px,3.3vw,44px);line-height:1.08;font-weight:700;}
+.feat-chips{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:8px;}
+.feat-chips li{font-size:13.5px;font-weight:700;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 12px;border-radius:12px;line-height:1.35;}
+.hero-alt{font-size:14px;font-weight:600;color:rgba(255,255,255,.9);text-decoration:underline;text-underline-offset:3px;}
+.hero-alt:hover{color:#fff;}
+@media(max-width:860px){.hero h1{font-size:25px;line-height:1.12;}.hero .chips{display:none;}
+  .hero .sub{font-size:14.5px;line-height:1.45;}
+  .feat-chips{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 14px;}
+  .feat-chips li{font-size:12px;padding:6px 8px;}
+  .hero-alt{font-size:13px;text-align:center;}}
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
 .nav .w{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .nav img{height:26px;width:auto;}
@@ -394,9 +402,11 @@ def build():
   <div class="w grid">
     <div class="txt">
       <span class="eyebrow">Software de gestión con IA para <span data-k="negocios">salones</span></span>
-      <h1>Gestiona <span data-k="tu_negocio">tu salón</span> como lo haría una gran empresa.</h1>
-      <p class="sub">Reservas, cobros sin plantones, domicilios y tu equipo en un solo sitio. Y cada mes, la IA te dice dónde ganas y dónde pierdes dinero.</p>
-      {hero_ctas('Prueba gratis 30 días →')}
+      <h1>El software para <span data-k="tu_negocio">tu salón</span> que no solo gestiona tus reservas: también analiza tus números y te ayuda a crecer.</h1>
+      <p class="sub">Todo lo que necesita <span data-k="tu_negocio">tu salón</span> en un solo sitio, y además tu plan financiero, cuánto te deja cada servicio y qué clientes estás perdiendo.</p>
+      <ul class="feat-chips"><li>📅 Reservas con tu propia web</li><li>💳 Señal para evitar plantones</li><li>👥 Equipo, ausencias y bajas</li><li>📊 Análisis con IA</li></ul>
+      <div class="hcta"><a class="btn" href="{SIGNUP}" data-cta="hero">Prueba gratis 30 días</a>
+      <a class="hero-alt" href="{PLANTILLA}" data-cta="hero-plantilla" data-keep-utm>¿Aún no? Recibe gratis tu plan financiero 2027 →</a></div>
       {TRUST}
       <div class="chips"><span>30 días gratis</span><span>Sin tarjeta</span><span>Sin permanencia</span><span>Sin comisiones por reserva</span></div>
     </div>
