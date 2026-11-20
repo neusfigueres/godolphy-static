@@ -172,14 +172,6 @@
       });
   }
 
-  window.gdOpenSignup = open;
-  // Enlace directo: cualquier página con ?alta=1 abre el modal al cargar (las UTM de la URL se conservan)
-  try {
-    if (new URLSearchParams(location.search).get('alta') === '1') {
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { open(); });
-      else open();
-    }
-  } catch (e) {}
   // lp_cta_click en todas las páginas (landings, sectores, funcionalidades…): página, texto del botón y destino.
   var SIGNUP_SEL = 'a[href^="https://app.godolphy.com/auth/sign-up"]';
   function trackCta(el) {
@@ -199,6 +191,20 @@
       });
     } catch (x) {}
   }
+  window.gdOpenSignup = open;
+  // Clic retenido por tracking.js antes de que este script cargara: se registra y se abre ahora.
+  if (window.__gdQueuedSignup) {
+    var q = window.__gdQueuedSignup; window.__gdQueuedSignup = null;
+    trackCta(q);
+    open({ target: q, preventDefault: function () {} });
+  }
+  // Enlace directo: cualquier página con ?alta=1 abre el modal al cargar (las UTM de la URL se conservan)
+  try {
+    if (new URLSearchParams(location.search).get('alta') === '1') {
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { open(); });
+      else open();
+    }
+  } catch (e) {}
   document.addEventListener('click', function (e) {
     var c = e.target && e.target.closest && e.target.closest('[data-cta],[data-gd-signup],' + SIGNUP_SEL);
     if (c) trackCta(c);

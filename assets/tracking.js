@@ -1,5 +1,20 @@
 /* Godolphy · consentimiento de cookies + GA4 + Meta Pixel + TikTok Pixel + evento de lead.
    GA4 y Meta solo guardan cookies si la persona acepta (Consent Mode v2). */
+// Clic en «Prueba gratis» antes de que cargue /assets/signup-modal.js (móvil lento, Tailwind CDN bloqueando):
+// se retiene el clic y el modal se abre en cuanto el script está listo (máx. 4 s; si no, va al enlace).
+(function () {
+  var SEL = 'a[href^="https://app.godolphy.com/auth/sign-up"],[data-gd-signup]';
+  document.addEventListener('click', function (e) {
+    if (window.gdOpenSignup) return;
+    var el = e.target && e.target.closest && e.target.closest(SEL);
+    if (!el || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    window.__gdQueuedSignup = el;
+    setTimeout(function () {
+      if (!window.gdOpenSignup && window.__gdQueuedSignup === el && el.href) location.href = el.href;
+    }, 4000);
+  }, true);
+})();
 (function () {
   var GA_ID = 'G-8JZDWMXKD9';
   var META_PIXEL_ID = '1468217345164128'; // Píxel 'Godolphy web' (Godolphy Software LLC)
