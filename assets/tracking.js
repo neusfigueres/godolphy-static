@@ -102,6 +102,24 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', decorateDashboardLinks);
   else decorateDashboardLinks();
 
+  // ── Mismo visitante en godolphy.com y app.godolphy.com (PostHog, 20/11/2026) ──
+  // Sin cookies aceptadas PostHog guarda el id solo en memoria: al ir a la app se pasa
+  // por la URL (ph_did / ph_sid, y gd_c=1 si se aceptaron las cookies). La app los lee y los quita.
+  function handOver(e) {
+    var a = e.target && e.target.closest && e.target.closest('a[href*="app.godolphy.com"]');
+    if (!a || !window.posthog || !posthog.get_distinct_id) return;
+    try {
+      var url = new URL(a.href);
+      url.searchParams.set('ph_did', posthog.get_distinct_id());
+      var sid = posthog.get_session_id && posthog.get_session_id();
+      if (sid) url.searchParams.set('ph_sid', sid);
+      if (getChoice() === 'granted') url.searchParams.set('gd_c', '1');
+      a.href = url.toString();
+    } catch (x) {}
+  }
+  document.addEventListener('click', handOver, true);
+  document.addEventListener('auxclick', handOver, true);
+
   // ── Lead: alta en la lista de espera ──
   window.gdTrackLead = function (extra) {
     var props = extra || {}, u = window.gdGetUtm();
