@@ -180,12 +180,33 @@
       else open();
     }
   } catch (e) {}
+  // lp_cta_click en todas las páginas (landings, sectores, funcionalidades…): página, texto del botón y destino.
+  var SIGNUP_SEL = 'a[href^="https://app.godolphy.com/auth/sign-up"]';
+  function trackCta(el) {
+    try {
+      if (el.closest('#gd-su')) return;
+      var href = el.getAttribute('href') || '';
+      var dest = (el.hasAttribute('data-gd-signup') || el.matches(SIGNUP_SEL)) ? 'signup'
+        : /plantilla|descargas|guia-/.test(href) ? 'lead_magnet'
+        : /dashboard/.test(href) ? 'dashboard' : 'otro';
+      var m = location.pathname.match(/^\/lp\/([^\/]+)/);
+      ph('lp_cta_click', {
+        lp: m ? m[1] : '',
+        position: el.getAttribute('data-cta') || '',
+        text: (el.innerText || el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80),
+        destination: dest,
+        sector: (document.body && document.body.getAttribute('data-sector')) || ''
+      });
+    } catch (x) {}
+  }
   document.addEventListener('click', function (e) {
+    var c = e.target && e.target.closest && e.target.closest('[data-cta],[data-gd-signup],' + SIGNUP_SEL);
+    if (c) trackCta(c);
     var t = e.target && e.target.closest && e.target.closest('[data-gd-signup]');
     if (t) return open(e);
     // Links to the long sign-up page open the quick modal instead (email only).
     // Ctrl/Cmd/middle click keep the link (new tab); without JS the link still works.
-    var a = e.target && e.target.closest && e.target.closest('a[href^="https://app.godolphy.com/auth/sign-up"]');
+    var a = e.target && e.target.closest && e.target.closest(SIGNUP_SEL);
     if (a && !e.defaultPrevented && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
       e.preventDefault();
       open(e);

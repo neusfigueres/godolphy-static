@@ -634,7 +634,7 @@ def build():
   tabs.forEach(function(b){{b.addEventListener('click',function(){{var t=b.getAttribute('data-t');
     tabs.forEach(function(x){{x.classList.toggle('on',x===b);}});figs.forEach(function(f){{f.classList.toggle('on',f.getAttribute('data-t')===t);}});}});}});
   document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('[data-cta]');if(!a)return;
-    try{{if(window.posthog)posthog.capture('lp_cta_click',{{lp:lp,position:a.getAttribute('data-cta'),sector:document.body.getAttribute('data-sector')||''}});}}catch(_){{}}
+    /* lp_cta_click lo envía /assets/signup-modal.js (todas las páginas) */
     try{{if(window.fbq&&a.getAttribute('data-cta')!=='dashboard'&&a.getAttribute('data-cta').indexOf('plantilla')<0)fbq('track','InitiateCheckout',{{content_name:lp}});}}catch(_){{}}
   }});
 }})();
