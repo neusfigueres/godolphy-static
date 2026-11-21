@@ -144,26 +144,38 @@
     try { if (window.posthog) posthog.capture('waitlist_submitted', props); } catch (e) {}
   };
 
-  // ── Banner ──
+  // ── Banner (guía AEPD: aceptar y rechazar al mismo nivel y tamaño, sin cookie wall) ──
+  // No se guarda nada hasta que se pulsa un botón: si no elige, vuelve a salir en la página siguiente.
   function banner() {
+    if (!document.getElementById('gd-cookies-css')) {
+      var cs = document.createElement('style'); cs.id = 'gd-cookies-css';
+      cs.textContent =
+        '#gd-cookies{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:99999;width:calc(100% - 32px);max-width:560px;box-sizing:border-box;' +
+        'background:#fff;color:#02021e;border-radius:20px;padding:16px 20px;box-shadow:0 18px 50px rgba(30,10,90,.28),0 2px 8px rgba(30,10,90,.12);' +
+        'border:1px solid rgba(99,28,255,.14);font-family:Inter,system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;text-align:left}' +
+        '#gd-cookies .gc-t{display:block;font-family:Gabarito,Inter,system-ui,sans-serif;font-size:17px;font-weight:700;margin:0 0 4px;color:#02021e}' +
+        '#gd-cookies p{margin:0;color:rgba(2,2,30,.78)}' +
+        '#gd-cookies a{color:#631cff;font-weight:600;text-decoration:underline;text-underline-offset:2px}' +
+        '#gd-cookies .gc-b{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}' +
+        '#gd-cookies button{font:inherit;font-size:15px;font-weight:700;border-radius:12px;padding:10px 14px;cursor:pointer;min-height:44px;width:100%}' +
+        '#gd-cookies.gc-side{left:auto;right:20px;transform:none;max-width:420px}' +
+        '#gd-cookies button[data-c=granted]{background:#631cff;color:#fff;border:2px solid #631cff}' +
+        '#gd-cookies button[data-c=denied]{background:#fff;color:#3a0fa8;border:2px solid #631cff}' +
+        '#gd-cookies button:focus-visible{outline:3px solid #EEFE3A;outline-offset:2px}' +
+        '@media(max-width:600px){#gd-cookies{bottom:8px;width:calc(100% - 16px);padding:10px 12px;border-radius:16px;font-size:12px;line-height:1.36}' +
+        '#gd-cookies .gc-t{display:inline;font-size:13px;margin:0 4px 0 0}' +
+        '#gd-cookies .gc-b{margin-top:8px;gap:8px}#gd-cookies button{font-size:14px;padding:8px 10px;min-height:38px;border-radius:10px}}';
+      document.head.appendChild(cs);
+    }
     var d = document.createElement('div');
     d.id = 'gd-cookies';
     d.setAttribute('role', 'dialog');
-    d.setAttribute('aria-label', 'Preferencias de cookies');
-    d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#02021e;color:#fff;padding:10px 14px;box-shadow:0 -6px 24px rgba(0,0,0,.18);font-family:system-ui,sans-serif;font-size:12.5px;line-height:1.4;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;';
-    // En móvil: una sola línea compacta (texto corto + botones), para no tapar el CTA
-    if (!document.getElementById('gd-cookies-css')) {
-      var cs = document.createElement('style'); cs.id = 'gd-cookies-css';
-      cs.textContent = '#gd-cookies .gc-s{display:none}' +
-        '@media(max-width:600px){#gd-cookies{flex-wrap:nowrap!important;gap:8px!important;padding:8px 10px!important;font-size:12px!important;justify-content:space-between!important}' +
-        '#gd-cookies p{flex:1 1 auto!important;min-width:0}#gd-cookies .gc-l{display:none}#gd-cookies .gc-s{display:inline}' +
-        '#gd-cookies button{padding:6px 10px!important;border-radius:8px!important}#gd-cookies>div{gap:6px!important}}';
-      document.head.appendChild(cs);
-    }
-    d.innerHTML = '<p style="margin:0;color:rgba(255,255,255,.85);flex:1 1 220px;max-width:640px;"><span class="gc-l">Usamos cookies para analizar la web y mostrarte publicidad relevante.</span><span class="gc-s">Usamos cookies.</span> <a href="/politica-de-cookies/" style="color:#EEFE3A;">Más info</a></p>' +
-      '<div style="display:flex;gap:8px;flex:0 0 auto;">' +
-      '<button type="button" data-c="denied" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer;">Rechazar</button>' +
-      '<button type="button" data-c="granted" style="background:#EEFE3A;color:#02021e;border:0;border-radius:10px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer;">Aceptar</button></div>';
+    d.setAttribute('aria-modal', 'false');
+    d.setAttribute('aria-labelledby', 'gd-cookies-t');
+    d.innerHTML = '<p><strong class="gc-t" id="gd-cookies-t">¿Nos ayudas a mejorar?</strong> ' +
+      'Usamos cookies para medir qué contenido te resulta útil y mostrarte novedades para tu salón. Puedes aceptarlas o rechazarlas cuando quieras. ' +
+      '<a href="/politica-de-cookies/">Más info</a></p>' +
+      '<div class="gc-b"><button type="button" data-c="denied">Rechazar</button><button type="button" data-c="granted">Aceptar</button></div>';
     d.addEventListener('click', function (e) {
       var c = e.target && e.target.getAttribute && e.target.getAttribute('data-c');
       if (!c) return;
@@ -172,6 +184,21 @@
       d.remove();
     });
     document.body.appendChild(d);
+    // En escritorio, si la tarjeta tapa un botón de la primera pantalla, se coloca abajo a la derecha.
+    try {
+      if (window.innerWidth > 900) {
+        var cr = d.getBoundingClientRect();
+        var hit = [].some.call(document.querySelectorAll('a,button'), function (el) {
+          if (d.contains(el) || !el.offsetParent) return false;
+          var r = el.getBoundingClientRect();
+          if (r.height < 34 || r.top < 70 || r.bottom > window.innerHeight) return false;
+          var bg = getComputedStyle(el).backgroundColor;
+          if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') return false;
+          return r.left < cr.right && r.right > cr.left && r.top < cr.bottom && r.bottom > cr.top;
+        });
+        if (hit) d.classList.add('gc-side');
+      }
+    } catch (e) {}
   }
 
   var choice = getChoice();
