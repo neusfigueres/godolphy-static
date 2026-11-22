@@ -213,6 +213,7 @@
     // Links to the long sign-up page open the quick modal instead (email only).
     // Ctrl/Cmd/middle click keep the link (new tab); without JS the link still works.
     var a = e.target && e.target.closest && e.target.closest(SIGNUP_SEL);
+    if (a && a.hasAttribute('data-gd-direct')) return; // enlace que debe ir directo a la app (p. ej. ?entrada=plan)
     if (a && !e.defaultPrevented && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
       e.preventDefault();
       open(e);

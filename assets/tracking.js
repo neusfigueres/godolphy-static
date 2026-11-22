@@ -7,7 +7,7 @@
   document.addEventListener('click', function (e) {
     if (window.gdOpenSignup) return;
     var el = e.target && e.target.closest && e.target.closest(SEL);
-    if (!el || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (!el || el.hasAttribute('data-gd-direct') || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     window.__gdQueuedSignup = el;
     setTimeout(function () {
