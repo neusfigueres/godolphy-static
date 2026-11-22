@@ -156,6 +156,14 @@ a{color:inherit;}
 .pains2 b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px;}
 .close{font-family:'Gabarito',sans-serif;font-size:clamp(22px,2.8vw,30px);line-height:1.2;margin:8px 0 0;}
 .big-co{max-width:760px;text-align:center;}
+.pains2 li:last-child:nth-child(odd){grid-column:1/-1;}
+.why{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:16px;margin-top:34px;max-width:1000px;}
+.stat,.quote{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;margin:0;}
+.stat b{display:block;font-family:'Gabarito',sans-serif;font-size:44px;line-height:1;margin-bottom:8px;}
+.stat p{margin:0 0 10px;font-size:16px;line-height:1.45;color:var(--ink);}
+.stat small,.quote cite{font-size:12.5px;color:var(--muted);font-style:normal;}
+.quote{font-family:'Gabarito',sans-serif;font-size:21px;line-height:1.3;color:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:10px;}
+@media(max-width:860px){.why{grid-template-columns:1fr 1fr;}.quote{grid-column:1/-1;font-size:19px;}.stat{padding:16px;}.stat b{font-size:34px;}.stat p{font-size:14.5px;}}
 .big-co p{font-size:18px;line-height:1.6;color:var(--muted);margin:0;}
 .reel{width:min(280px,72vw);margin:0 auto;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(40,10,120,.2);background:#0c0628;aspect-ratio:9/16;}
 .reel video{width:100%;height:100%;display:block;object-fit:cover;}
@@ -216,7 +224,7 @@ a{color:inherit;}
 <section class="sec">
   <div class="w">
     <h2 class="h2">Trabajas mucho. <span class="grad">Pero no sabes si avanzas.</span></h2>
-    <ul class="pains2"><li><b>Cada año, igual que el anterior.</b>Facturas parecido y no sabes qué tocar para crecer.</li><li><b>¿Estoy ganando de verdad?</b>El dinero de casa y el del salón van juntos, y a final de mes no sabes cuánto es tuyo.</li><li><b>Diciembre a tope, agosto cerrado.</b>La facturación sube y baja, pero el alquiler y los sueldos llegan los doce meses.</li><li><b>Sin colchón.</b>Un mes flojo o un imprevisto y ya vas tarde.</li></ul>
+    <ul class="pains2"><li><b>Cada año, igual que el anterior.</b>Facturas parecido y no sabes qué tocar para crecer.</li><li><b>¿Estoy ganando de verdad?</b>El dinero de casa y el del salón van juntos, y a final de mes no sabes cuánto es tuyo.</li><li><b>Diciembre a tope, agosto cerrado.</b>La facturación sube y baja, pero el alquiler y los sueldos llegan los doce meses.</li><li><b>Sin colchón.</b>Un mes flojo o un imprevisto y ya vas tarde.</li><li><b>Agenda llena no es dinero.</b>Pensar que si la agenda está llena, el salón va bien.</li></ul>
     <p class="close">No es que trabajes poco. <span class="grad">Es que trabajas sin plan.</span></p>
   </div>
 </section>
@@ -225,6 +233,11 @@ a{color:inherit;}
   <div class="w big-co">
     <h2 class="h2">No es cosa de <span class="grad">grandes empresas</span></h2>
     <p>Las grandes marcas no improvisan: se marcan un objetivo y lo miran cada mes. Que tu salón sea pequeño no es excusa. Es justo por eso que lo necesitas.</p>
+  </div>
+  <div class="w why">
+    <div class="stat"><b class="grad">16 %</b><p>más probabilidades de que el negocio salga adelante si escribes un plan.</p><small>Harvard Business Review, 2017</small></div>
+    <div class="stat"><b class="grad">4 de cada 10</b><p>pymes en España no planifican sus finanzas.</p><small>Fundación IE, 2025</small></div>
+    <blockquote class="quote">«Los planes no sirven de nada, pero planificar lo es todo.»<cite>Dwight D. Eisenhower</cite></blockquote>
   </div>
 </section>
 
