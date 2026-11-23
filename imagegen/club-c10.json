@@ -1,0 +1,11 @@
+{
+ "out": "imagegen/club/c10.png",
+ "model": "gpt-image-2-ext",
+ "size": "9:16",
+ "no_style": true,
+ "ref_files": [
+  "imagegen/bf/b01.jpg",
+  "imagegen/bf/b05.jpg"
+ ],
+ "prompt": "A manicurist (dark curly hair in a bun, violet sweater) looks happily at a tablet on her reception desk showing a day agenda where small empty gaps between appointments fill up with little violet blocks. Flat 2D editorial illustration in the exact art style, colour palette (violet, lime green accents, warm cream) and character design of the reference images. Vertical 9:16. Leave calm empty space at the top third. No text, no letters, no numbers, no logos, no signs."
+}

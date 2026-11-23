@@ -1,0 +1,11 @@
+{
+ "out": "imagegen/club/c05.png",
+ "model": "gpt-image-2-ext",
+ "size": "9:16",
+ "no_style": true,
+ "ref_files": [
+  "imagegen/bf/b01.jpg",
+  "imagegen/bf/b05.jpg"
+ ],
+ "prompt": "A happy customer pushes an overflowing shopping trolley full of products out of a huge generic warehouse supermarket with high industrial shelves. Generic store, no brand. Flat 2D editorial illustration in the exact art style, colour palette (violet, lime green accents, warm cream) and character design of the reference images. Vertical 9:16. Leave calm empty space at the top third. No text, no letters, no numbers, no logos, no signs."
+}

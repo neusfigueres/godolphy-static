@@ -1,0 +1,11 @@
+{
+ "out": "imagegen/club/c08.png",
+ "model": "gpt-image-2-ext",
+ "size": "9:16",
+ "no_style": true,
+ "ref_files": [
+  "imagegen/bf/b01.jpg",
+  "imagegen/bf/b05.jpg"
+ ],
+ "prompt": "Close-up of hands at a manicure table: the manicurist fixes one single broken nail with a fine brush while the client's other nails are perfect and polished. Anatomically correct hands, five fingers each. Flat 2D editorial illustration in the exact art style, colour palette (violet, lime green accents, warm cream) and character design of the reference images. Vertical 9:16. Leave calm empty space at the top third. No text, no letters, no numbers, no logos, no signs."
+}
