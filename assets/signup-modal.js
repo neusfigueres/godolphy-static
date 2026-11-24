@@ -135,7 +135,20 @@
     try { if (window.fbq) fbq('track', 'CompleteRegistration', props); } catch (x) {}
     try { if (window.ttq) ttq.track('CompleteRegistration', props); } catch (x) {}
     try { if (window.posthog) posthog.capture('trial_signup', props); } catch (x) {}
+    identify((emailIn.value || '').trim());
     root.querySelector('.x').focus();
+  }
+
+  // One person on the web and in the app (24/11/2026): the salon opens the app from the
+  // email link (no ?ph_did), so both sides identify with the same SHA-256 of the email.
+  function identify(email) {
+    try {
+      if (!window.posthog || !email || !window.crypto || !crypto.subtle) return;
+      crypto.subtle.digest('SHA-256', new TextEncoder().encode(email.toLowerCase())).then(function (buf) {
+        var hex = Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+        posthog.identify('e_' + hex);
+      });
+    } catch (x) {}
   }
 
   function submit(e) {
