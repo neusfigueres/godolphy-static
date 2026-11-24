@@ -157,7 +157,7 @@ def page():
     faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in FAQ)
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
-    title = 'Ponte un objetivo: +20 % de facturación en 2027 | Godolphy'
+    title = 'Incrementa tus beneficios un 20 % este 2027 creando tu plan | Godolphy'
     desc = 'Marca tu objetivo para 2027 y Godolphy lo convierte en una cifra para cada mes, con tus datos reales. Gratis 30 días, sin tarjeta.'
     return f'''<!DOCTYPE html>
 <html lang="es">
@@ -169,7 +169,7 @@ def page():
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://www.godolphy.com/lp/{SLUG}/">
-<meta property="og:title" content="Ponte un objetivo: +20 % de facturación en 2027">
+<meta property="og:title" content="Incrementa tus beneficios un 20 % este 2027 creando tu PLAN">
 <meta property="og:description" content="{e(desc)}">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -186,7 +186,7 @@ def page():
   <div class="w grid">
     <div>
       <p class="tag"><i>●</i> Mueve el culo · Plan 2027</p>
-      <h1>Ponte un objetivo: <span class="grad big">+20 % de facturación en 2027.</span> Y llega mes a mes.</h1>
+      <h1>Incrementa tus beneficios un <span class="grad">20 %</span> este 2027 <span class="grad big">creando tu PLAN.</span></h1>
       <p class="sub">Godolphy convierte tu +20 % en una cifra para cada mes y te avisa si te desvías. <b>Empiezas hoy</b>, sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       {cta('hero')}
       <ul class="fud">{fud}</ul>
