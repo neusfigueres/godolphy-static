@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/club-c01.mp4",
+  "model": "kling-v3",
+  "prompt": "The manicurist gently paints and fixes one nail of the client, the client smiles and relaxes; plant leaves sway softly. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/club/c01.png"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 217,
+      "billing_status": "settled",
+      "completed": 1795521159,
+      "cost": 0.448,
+      "created": 1795520942,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M86P6MFKMPNMJB39K8GKGEZE",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795780359,
+            "url": [
+              "https://getapib.org/video/9998204478843756-b416316a-96d1-4fbc-9d9b-001616d1acbf-video_task_01M86P6MFKMPNMJB39K8GKGEZE.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

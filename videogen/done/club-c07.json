@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/club-c07.mp4",
+  "model": "kling-v3",
+  "prompt": "Soft light glints across the violet membership card and the golden star twinkles; the nail lamp glows gently, plant leaves sway. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/club/c07.png"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 201,
+      "billing_status": "settled",
+      "completed": 1795521441,
+      "cost": 0.448,
+      "created": 1795521240,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M86PFQK83TF4F651957NVBAJ",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795780641,
+            "url": [
+              "https://getapib.org/video/9998204478561820-371b8d5a-5264-4048-ac82-5e140d4ec02e-video_task_01M86PFQK83TF4F651957NVBAJ.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

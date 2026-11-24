@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/club-c09.mp4",
+  "model": "kling-v3",
+  "prompt": "The client walks past the first salon and turns into the next door salon, the manicurist waves and welcomes her inside. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/club/c09.png"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 193,
+      "billing_status": "settled",
+      "completed": 1795521610,
+      "cost": 0.448,
+      "created": 1795521417,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M86PN4BE26PJJAJF1WMTKCK3",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795780810,
+            "url": [
+              "https://getapib.org/video/9998204478392748-8453da9e-52a1-4a65-8de4-31aee3cae002-video_task_01M86PN4BE26PJJAJF1WMTKCK3.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

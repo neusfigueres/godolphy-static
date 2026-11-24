@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/club-c10.mp4",
+  "model": "kling-v3",
+  "prompt": "Small violet blocks pop into the empty gaps on the tablet agenda one by one, the manicurist smiles and nods. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/club/c10.png"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 282,
+      "billing_status": "settled",
+      "completed": 1795521730,
+      "cost": 0.448,
+      "created": 1795521448,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M86PP2NDQH8PB8E161GERZP9",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795780930,
+            "url": [
+              "https://getapib.org/video/9998204478272648-a540e1fb-8a3e-41d1-b2ca-dfa9bea00f67-video_task_01M86PP2NDQH8PB8E161GERZP9.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}

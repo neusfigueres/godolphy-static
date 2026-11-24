@@ -1,0 +1,39 @@
+{
+  "out": "videogen/out/club-c02.mp4",
+  "model": "kling-v3",
+  "prompt": "The client looks from one salon door to the other, thinking, shifting her weight; lights in the shop windows glow softly. Flat 2D illustration animation, keep the exact art style, colours and characters of the image. Smooth gentle motion, static camera, no zoom, no cuts, no text.",
+  "frames": [
+    "imagegen/club/c02.png"
+  ],
+  "negative_prompt": "text, letters, logos, zoom, camera shake, distorted faces, extra fingers, morphing",
+  "body": {
+    "duration": 5,
+    "mode": "pro",
+    "aspect_ratio": "9:16"
+  },
+  "task": {
+    "code": 200,
+    "data": {
+      "actual_time": 295,
+      "billing_status": "settled",
+      "completed": 1795521237,
+      "cost": 0.448,
+      "created": 1795520942,
+      "credits_cost": 4.48,
+      "estimated_time": 300,
+      "id": "task_01M86P6MPTE36HY124X3ZJ90BF",
+      "progress": 100,
+      "result": {
+        "videos": [
+          {
+            "expires_at": 1795780437,
+            "url": [
+              "https://getapib.org/video/9998204478765452-3e9d5c53-ae73-4c2b-88e8-50ccc78163da-video_task_01M86P6MPTE36HY124X3ZJ90BF.mp4"
+            ]
+          }
+        ]
+      },
+      "status": "completed"
+    }
+  }
+}
