@@ -553,7 +553,12 @@
       "permanent": true
     },
     {
-      "source": "/blog/funcionalidades/:path*",
+      "source": "/blog/funcionalidades/:slug",
+      "destination": "/funcionalidades/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades/:slug/",
       "destination": "/funcionalidades/",
       "permanent": true
     }
