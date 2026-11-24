@@ -3,12 +3,32 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/blog/funcionalidades/:slug",
+      "source": "/software-para-spa-masajes",
+      "destination": "/sectores/software-para-spa-y-masajes/",
+      "permanent": true
+    },
+    {
+      "source": "/software-para-spa-masajes/",
+      "destination": "/sectores/software-para-spa-y-masajes/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades",
+      "destination": "/funcionalidades/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades/",
+      "destination": "/funcionalidades/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades/:slug(bonos-de-sesiones|caja-y-cobros|calculadora-de-precios|calendario|chat-y-notificaciones|comisiones|cupones-y-tarjetas-regalo|equipo-y-horarios|facturacion-y-reporte|fidelizacion-ai|gastos|geolocalizacion-equipo|gestion-de-clientes|gestor-diario|importar-datos|multiples-ubicaciones|pagos-y-depositos|plan-financiero|precio-por-dia-y-hora|recepcionista-y-permisos|reservas-online|servicios-a-domicilio|tiempos-de-exposicion|vacaciones-y-ausencias)",
       "destination": "/funcionalidades/:slug/",
       "permanent": true
     },
     {
-      "source": "/blog/funcionalidades/:slug/",
+      "source": "/blog/funcionalidades/:slug(bonos-de-sesiones|caja-y-cobros|calculadora-de-precios|calendario|chat-y-notificaciones|comisiones|cupones-y-tarjetas-regalo|equipo-y-horarios|facturacion-y-reporte|fidelizacion-ai|gastos|geolocalizacion-equipo|gestion-de-clientes|gestor-diario|importar-datos|multiples-ubicaciones|pagos-y-depositos|plan-financiero|precio-por-dia-y-hora|recepcionista-y-permisos|reservas-online|servicios-a-domicilio|tiempos-de-exposicion|vacaciones-y-ausencias)/",
       "destination": "/funcionalidades/:slug/",
       "permanent": true
     },
@@ -530,6 +550,11 @@
     {
       "source": "/tag/:path*",
       "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funcionalidades/:path*",
+      "destination": "/funcionalidades/",
       "permanent": true
     }
   ],
