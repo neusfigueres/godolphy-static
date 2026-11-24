@@ -165,6 +165,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.godolphy.com/funcionalidades/tiempos-de-exposicion/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.godolphy.com/funcionalidades/vacaciones-y-ausencias/</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -775,6 +781,11 @@
   </url>
   <url>
     <loc>https://www.godolphy.com/ayuda/extras-de-servicio/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.godolphy.com/ayuda/tiempos-de-exposicion/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -59,6 +59,11 @@
           "slug": "extras-de-servicio",
           "titulo": "Extras y opciones de los servicios",
           "publicado": true
+        },
+        {
+          "slug": "tiempos-de-exposicion",
+          "titulo": "Tiempos de exposición: atiende a otra persona mientras actúa el producto",
+          "publicado": true
         }
       ]
     },
