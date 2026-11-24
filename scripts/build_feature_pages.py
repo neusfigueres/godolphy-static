@@ -153,7 +153,7 @@ PAGES = [
     plan=PRO_MAX,
     sections=[
       ('Un plan hecho con tus datos.', ['Godolphy propone cada mes a partir de tus citas reales, respetando la temporada, y de tus gastos. Tú decides cuánto quieres crecer.',
-        'Si aún no tienes citas en Godolphy, empiezas con tus números de partida en tres pasos. Después ajustas lo que quieras.'], img('/ayuda/img/plan-financiero-proponer.jpg', 'Proponer el plan con un porcentaje de crecimiento')),
+        'Si aún no tienes citas en Godolphy, sube la facturación del año pasado o escríbela mes a mes, y tu plan respetará la temporada desde el primer día.'], img('/ayuda/img/plan-financiero-proponer.jpg', 'Proponer el plan con un porcentaje de crecimiento')),
       ('O constrúyelo con tus palancas.', ['Clientes habituales, visitas al año, clientes nuevos al mes y ticket medio: muévelos y ves al momento cuántas citas y cuánta facturación salen cada mes.',
         'Godolphy reparte el año según tu temporada y te avisa si esas citas no caben en los horarios de tu equipo.'], img('/ayuda/img/plan-financiero-palancas.jpg', 'Crear el plan con tus palancas', True)),
       ('Pesimista, base y optimista.', ['Mira tu año en tres escenarios. Si en el pesimista tu caja quedaría en negativo algún mes, te lo dice antes de que pase.',
@@ -170,7 +170,7 @@ PAGES = [
       'Un <strong>plan financiero</strong> no tiene por qué ser un Excel que nadie mira. En Godolphy se crea con tus datos reales y se compara solo, cada día, con lo que pasa en tu salón.',
       'Se alimenta de tu agenda, tus cobros y tus <a href="/funcionalidades/gastos/" style="color:#631cff;font-weight:600;text-decoration:none;">gastos</a>, y se conecta con las <a href="/funcionalidades/comisiones/" style="color:#631cff;font-weight:600;text-decoration:none;">comisiones</a> de tu equipo. Si estás empezando, te ayuda también nuestra guía para <a href="/abrir-centro-de-estetica-en-espana/" style="color:#631cff;font-weight:600;text-decoration:none;">abrir un centro de estética en España</a>.']),
     faq=[
-      ('¿Necesito historial para crear el plan?', 'No. Si aún no tienes citas en Godolphy, empiezas con tus números de partida: la facturación y las citas de un mes normal y tus gastos.'),
+      ('¿Necesito historial para crear el plan?', 'No. Si aún no tienes citas en Godolphy, sube la facturación del año pasado (un Excel o tus declaraciones de IVA), escríbela mes a mes o pon un mes normal y aplicamos la temporada de tu sector.'),
       ('¿Me sirve para pedir un préstamo?', 'Sí. Simulas el préstamo y descargas un dossier en PDF con tus números para llevarlo al banco. Es orientativo: Godolphy no garantiza la aprobación.'),
       ('¿Mi equipo ve el plan?', 'No. Cada profesional ve solo su objetivo del mes y cuánto lleva.'),
       ('¿Qué periodo cubre?', 'El año natural. Si lo creas a partir de septiembre, cubre lo que queda de año y todo el siguiente.'),

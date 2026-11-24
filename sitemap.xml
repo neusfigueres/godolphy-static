@@ -737,6 +737,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.godolphy.com/integraciones/holded/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- Centro de ayuda -->
   <url>
@@ -1020,10 +1026,4 @@
     <priority>0.6</priority>
   </url>
   <!-- /Centro de ayuda -->
-  <url>
-    <loc>https://www.godolphy.com/integraciones/holded/</loc>
-    <lastmod>2026-11-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
