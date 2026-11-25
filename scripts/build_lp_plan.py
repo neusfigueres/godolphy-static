@@ -283,8 +283,8 @@ def paid_html():
 def migra_html():
     return ('<section class="sec"><div class="w"><div class="migra">'
             '<img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">'
-            '<div><h2 class="h2">¿Usas otro sistema de reservas? <span class="grad">Te lo paso yo, gratis</span></h2>'
-            '<p>Si te pasas a Godolphy desde Booksy, Fresha, Treatwell o cualquier otro, me encargo yo de la migración, sin coste.</p>'
+            '<div><h2 class="h2">¿Usas otro sistema de reservas? <span class="grad">Te hago el cambio gratis</span></h2>'
+            '<p>Si te pasas a Godolphy desde Booksy, Fresha, Treatwell o cualquier otro, me encargo yo de pasar tus datos, sin coste.</p>'
             '<p class="sig">Neus</p></div></div></div></section>')
 
 
