@@ -48,15 +48,44 @@ PAINS = [
 ]
 
 STEPS = [
-    ('Te das de alta con tu email.', None),
-    ('Pones tus números de partida.', 'Si ya usas Godolphy, partimos de tus citas y gastos reales.'),
-    ('Eliges cuánto quieres crecer', 'y tienes tu plan mes a mes, editable cuando quieras.'),
+    ('Pones tus números.', 'Tu facturación del año pasado (subes un documento o la escribes) y tus gastos. Si ya usas Godolphy, partimos de tus citas y gastos reales.'),
+    ('Eliges cuánto quieres crecer.', 'Mantenerte, +10 %, +25 % o el porcentaje que tú quieras. Godolphy te monta el plan mes a mes.'),
+    ('Haces el seguimiento mes a mes.', 'Ves lo real frente a lo planificado y, si te desvías, la IA te avisa a tiempo.'),
 ]
 
+# Iconos propios (trazo blanco sobre círculo con el degradado violeta de Godolphy), en lugar de emojis.
+_ICON_PATHS = {
+    'chart': '<path d="M5 19V11M10 19V6M15 19v-5M20 19V9"/><path d="M3 19h18"/>',
+    'bell': '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>',
+    'sync': '<path d="M20 11a8 8 0 0 0-14.5-4.5L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.5 4.5L20 16"/><path d="M20 20v-4h-4"/>',
+    'trophy': '<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4"/><path d="M12 13v4M8.5 20h7M10 17h4"/>',
+    'trend': '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+    'cal': '<rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+    'team': '<circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.5M18 19a5.5 5.5 0 0 0-3-4.8"/>',
+    'card': '<rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10.5h18M7 15h4"/>',
+    'gift': '<rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9c2 0 6 1 6-1.5S14 5 12 9"/>',
+    'spark': '<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>',
+    'sound': '<path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a7.5 7.5 0 0 1 0 11"/>',
+}
+
+
+def icon(name, cls='ico'):
+    return (f'<span class="{cls}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{_ICON_PATHS[name]}</svg></span>')
+
+
+ICON_CSS = r"""
+.ico{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);color:#fff;box-shadow:0 6px 16px rgba(99,28,255,.25);}
+.ico svg{width:21px;height:21px;}
+.ico--s{width:30px;height:30px;}.ico--s svg{width:16px;height:16px;}
+.ico--i{display:inline-flex;vertical-align:-4px;color:currentColor;}.ico--i svg{width:18px;height:18px;}
+"""
+
+
 AFTER = [
-    ('📊', 'Cada mes ves lo real frente a lo planificado.'),
-    ('🔔', 'Si un mes vas por debajo, la IA te avisa a tiempo.'),
-    ('🔄', 'Un Excel lo descargas y te olvidas. Aquí el plan se actualiza solo con tu día a día.'),
+    ('chart', 'Cada mes ves lo real frente a lo planificado.'),
+    ('bell', 'Si un mes vas por debajo, la IA te avisa a tiempo.'),
+    ('sync', 'Un Excel lo descargas y te olvidas. Aquí el plan se actualiza solo con tu día a día.'),
 ]
 
 FAQ = [
@@ -92,17 +121,131 @@ TST_CSS = r"""
 """
 
 
-VIDEO = ('<div class="vid"><video controls playsinline preload="none" data-vid="tutorial-plan" '
+SALONS = [
+    ('salon-peluqueria.webp', 'Peluquería con el equipo trabajando', 'Peluquerías'),
+    ('salon-estetica.webp', 'Cabinas de un centro de estética', 'Centros de estética'),
+    ('salon-detalle.webp', 'Plan de Godolphy en el móvil, en el tocador de un salón', 'Tu plan, también en el móvil'),
+]
+
+
+def salons_html():
+    figs = ''.join(
+        f'<figure><img src="/lp/plan-financiero-2027/{f}" alt="{html.escape(a)}" width="900" height="600" loading="lazy">'
+        f'<figcaption>{html.escape(c)}</figcaption></figure>' for f, a, c in SALONS)
+    return ('<section class="sec"><div class="w"><h2 class="h2">Hecho para salones: <span class="grad">peluquerías, centros de estética y salones de uñas</span></h2>'
+            f'<div class="salons">{figs}</div></div></section>')
+
+
+SALON_CSS = r"""
+.salons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.salons figure{margin:0;position:relative;border-radius:22px;overflow:hidden;}
+.salons img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
+.salons figcaption{position:absolute;left:14px;bottom:14px;background:rgba(2,2,30,.72);color:#fff;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;}
+@media(max-width:860px){.salons{grid-template-columns:1fr;}}
+.tsts{max-width:none;}
+"""
+
+
+WHY = [
+    ('16 %', 'más probabilidades de que el negocio salga adelante si escribes un plan.', 'Greene y Hopp, Strategic Entrepreneurship Journal, 2017 (recogido en Harvard Business Review)'),
+    ('35 años', 'de estudios sobre objetivos llegan a la misma conclusión: una meta concreta y exigente rinde más que «hacerlo lo mejor posible».', 'Locke y Latham, American Psychologist, 2002'),
+    ('4 de cada 10', 'pymes en España no planifican sus finanzas. Con un plan, ya vas por delante de casi la mitad.', 'Fundación IE, 2025'),
+    ('+', 'Planificar mejora los resultados de las pequeñas empresas: lo confirma un análisis que reúne decenas de estudios.', 'Brinckmann, Grichnik y Kapsa, Journal of Business Venturing, 2010'),
+]
+
+
+def why_cards():
+    cards = ''.join(f'<div class="stat"><b class="grad">{html.escape(n)}</b><p>{html.escape(t)}</p><small>{html.escape(src)}</small></div>'
+                    for n, t, src in WHY)
+    return (f'<div class="why4">{cards}</div>'
+            '<blockquote class="quote quote--w">«Los planes no sirven de nada, pero planificar lo es todo.»<cite>Dwight D. Eisenhower</cite></blockquote>')
+
+
+WHY_CSS = r"""
+.why4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px;}
+.why4 .stat b{font-size:40px;}
+.quote--w{margin-top:16px;text-align:center;align-items:center;}
+@media(max-width:1000px){.why4{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.why4{grid-template-columns:1fr;}}
+"""
+
+
+
+PRODUCT = [
+    ('cal', 'Reservas online 24 h', 'Tus clientes reservan solos desde tu enlace, sin llamadas ni mensajes.'),
+    ('bell', 'Recordatorios automáticos', 'Avisos antes de cada cita para que no se olviden.'),
+    ('card', 'Cobros y señal', 'Cobra la señal al reservar y despídete de los plantones.'),
+    ('team', 'Agenda y equipo', 'Horarios, ausencias y comisiones de cada profesional.'),
+    ('gift', 'Tarjetas regalo y bonos', 'Vende más con regalos y packs de sesiones.'),
+    ('spark', 'Análisis con IA cada mes', 'Qué servicios te hacen ganar dinero y qué clientes no vuelven.'),
+]
+
+
+def product_html():
+    items = ''.join(f'<div class="pitem">{icon(ic)}<div><h3>{html.escape(t)}</h3><p>{html.escape(x)}</p></div></div>'
+                    for ic, t, x in PRODUCT)
+    return ('<section class="sec sec--soft"><div class="w">'
+            '<h2 class="h2">Y no es solo un plan: <span class="grad">Godolphy es tu software de reservas y gestión con IA</span></h2>'
+            '<p class="plead">El plan financiero es una parte. Con la misma cuenta gestionas todo el día a día del salón, y cada cita que entra alimenta tu plan sola.</p>'
+            f'<div class="pgrid">{items}</div>'
+            '<p class="pmore"><a href="/funcionalidades/">Ver todas las funcionalidades →</a></p></div></section>')
+
+
+PRODUCT_CSS = r"""
+.plead{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 26px;max-width:760px;}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.pitem{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;}
+.pitem h3{font-family:'Gabarito',sans-serif;font-size:19px;margin:2px 0 6px;}
+.pitem p{margin:0;font-size:15.5px;line-height:1.5;color:var(--muted);}
+.pmore{margin:22px 0 0;font-weight:700;}.pmore a{color:var(--v);}
+@media(max-width:860px){.pgrid{grid-template-columns:1fr;}}
+"""
+
+
+
+WHAT = [
+    ('¿Qué es?', 'Tu hoja de ruta del año: cuánto quieres facturar, cuánto vas a gastar y cuánto te quedará, mes a mes.'),
+    ('¿Para qué sirve?', 'Para saber si vas bien antes de que acabe el año, decidir con números (contratar, subir precios, invertir), preparar los meses flojos y tenerlo listo si un día vas al banco.'),
+    ('¿Cuándo hacerlo?', 'Ahora, antes de que empiece 2027. Así enero arranca con un objetivo y no con un «a ver qué tal».'),
+]
+
+
+def what_html():
+    cols = ''.join(f'<div class="wcol"><h3>{html.escape(t)}</h3><p>{html.escape(x)}</p></div>' for t, x in WHAT)
+    return ('<section class="sec"><div class="w">'
+            '<h2 class="h2">Un plan financiero es tu objetivo del año, <span class="grad">convertido en números de cada mes</span></h2>'
+            f'<div class="wgrid">{cols}</div></div></section>')
+
+
+WHAT_CSS = r"""
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.wcol{border-radius:20px;padding:22px 24px;background:var(--soft);border:1px solid var(--line);}
+.wcol h3{font-family:'Gabarito',sans-serif;font-size:22px;margin:0 0 8px;color:var(--v);}
+.wcol p{margin:0;font-size:16.5px;line-height:1.55;color:var(--ink);}
+@media(max-width:860px){.wgrid{grid-template-columns:1fr;}}
+"""
+
+
+VIDEO = ('<div class="vid"><div class="vbox"><video muted playsinline loop preload="none" data-vid="tutorial-plan" '
          'poster="/lp/plan-financiero-2027/tutorial-poster.webp" width="1280" height="720">'
          '<source src="/lp/plan-financiero-2027/tutorial-plan-financiero.mp4" type="video/mp4"></video>'
+         '<button type="button" class="vsound" aria-label="Activar el sonido del vídeo">' + icon('sound', 'ico--i') + ' Activa la voz</button></div>'
          '<p>Así se crea el plan, paso a paso (2 min).</p></div>')
 
-VIDEO_JS = ("document.querySelectorAll('video[data-vid]').forEach(function(v){v.addEventListener('play',function(){"
-            "try{if(window.posthog)posthog.capture('lp_video_play',{lp:document.body.getAttribute('data-lp'),video:v.getAttribute('data-vid')});}catch(_){}"
-            "},{once:true});});")
+# Se reproduce solo y sin sonido cuando se ve en pantalla (los navegadores solo dejan
+# reproducir solos los vídeos silenciados). «Activa la voz» lo reinicia con sonido.
+VIDEO_JS = ("document.querySelectorAll('.vbox').forEach(function(box){var v=box.querySelector('video'),b=box.querySelector('.vsound'),lp=document.body.getAttribute('data-lp');"
+            "function ev(n){try{if(window.posthog)posthog.capture(n,{lp:lp,video:v.getAttribute('data-vid')});}catch(_){}}"
+            "if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(!v.muted)return;"
+            "if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});},{threshold:.5}).observe(v);}"
+            "b.addEventListener('click',function(){v.muted=false;v.currentTime=0;v.loop=false;v.controls=true;var p=v.play();if(p&&p.catch)p.catch(function(){});b.remove();ev('lp_video_unmute');});"
+            "v.addEventListener('play',function(){ev('lp_video_play');},{once:true});});")
 
 EXTRA_CSS = r'''
 .top{position:absolute;}
+.w{max-width:1280px;padding:0 32px;}
+@media(min-width:1600px){.w{max-width:1440px;}}
+@media(max-width:860px){.w{padding:0 20px;}}
 .hero2{background:var(--soft);padding:84px 0 56px;overflow:hidden;}
 .hero2 .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;}
 .hero2 .y{font-family:'Gabarito',sans-serif;font-size:clamp(84px,13vw,168px);line-height:.9;font-weight:800;letter-spacing:-.04em;margin:0 0 10px;}
@@ -146,11 +289,15 @@ EXTRA_CSS = r'''
 .after{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
 .after ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
 .after li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:16.5px;line-height:1.5;}
-.after li i{font-style:normal;font-size:22px;line-height:1.2;}
+.after li{align-items:center;}
 .after .shots{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;}
 .vid{max-width:920px;margin:0 0 30px;}
 .vid video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:18px;background:#0c0628;box-shadow:0 24px 60px rgba(40,10,120,.2);}
 .vid p{margin:10px 0 0;font-size:14px;color:var(--muted);}
+.vbox{position:relative;}
+.vsound{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);border:0;cursor:pointer;background:var(--y);color:var(--ink);font:800 16px/1 'Plus Jakarta Sans',sans-serif;padding:13px 20px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);animation:vpulse 1.8s ease-in-out infinite;}
+@keyframes vpulse{50%{transform:translateX(-50%) scale(1.06);}}
+@media(prefers-reduced-motion:reduce){.vsound{animation:none;}}
 .after .ph-wrap{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(40,10,120,.14);background:#fff;}
 .neus2{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;align-items:center;}
 .neus2 img{border-radius:24px;width:100%;max-width:360px;}
@@ -177,15 +324,15 @@ def page():
     hc = head_common()
     pains = ''.join(f'<li><b>{e(t)}</b>{e(x)}</li>' for t, x in PAINS)
     step_shots = [
-        '',
-        shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: ¿tienes la facturación del año pasado?', 'pantalla «números de partida»'),
-        shot('paso-crecer.webp', 1360, 760, 'Paso 3 del plan: cuánto quieres crecer en 2027', 'pantalla del % de crecimiento'),
+        shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: tus números de partida', 'números de partida'),
+        shot('paso-crecer.webp', 1360, 760, 'Paso 2 del plan: cuánto quieres crecer en 2027', '% de crecimiento'),
+        shot('real-vs-plan.webp', 1420, 540, 'Seguimiento mes a mes: beneficio previsto y real', 'seguimiento mes a mes'),
     ]
     steps = ''.join(
         f'<div class="step2"><span class="n grad">0{i}</span><h3>{e(t)}</h3>'
         + (f'<p>{e(x)}</p>' if x else '') + step_shots[i - 1] + '</div>'
         for i, (t, x) in enumerate(STEPS, 1))
-    after = ''.join(f'<li><i>{ic}</i><span>{e(t)}</span></li>' for ic, t in AFTER)
+    after = ''.join(f'<li>{icon(ic)}<span>{e(t)}</span></li>' for ic, t in AFTER)
     faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in FAQ)
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
@@ -208,7 +355,7 @@ def page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{EXTRA_CSS}{TST_CSS}</style>
+<style>{CSS}{EXTRA_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -233,6 +380,10 @@ def page():
 
 {testimonials_html()}
 
+{salons_html()}
+
+{what_html()}
+
 <section class="sec">
   <div class="w">
     <h2 class="h2">Trabajas mucho. <span class="grad">Pero no sabes si avanzas.</span></h2>
@@ -246,11 +397,7 @@ def page():
     <h2 class="h2">Las grandes marcas se marcan un objetivo cada año. <span class="grad">Tu salón también puede.</span></h2>
     <p>Las grandes marcas no improvisan: se marcan un objetivo y lo miran cada mes. Que tu salón sea pequeño no es excusa. Es justo por eso que lo necesitas.</p>
   </div>
-  <div class="w why">
-    <div class="stat"><b class="grad">16 %</b><p>más probabilidades de que el negocio salga adelante si escribes un plan.</p><small>Harvard Business Review, 2017</small></div>
-    <div class="stat"><b class="grad">4 de cada 10</b><p>pymes en España no planifican sus finanzas.</p><small>Fundación IE, 2025</small></div>
-    <blockquote class="quote">«Los planes no sirven de nada, pero planificar lo es todo.»<cite>Dwight D. Eisenhower</cite></blockquote>
-  </div>
+  <div class="w">{why_cards()}</div>
 </section>
 
 <section class="sec">
@@ -293,6 +440,8 @@ def page():
     <div class="faq">{faq}</div>
   </div>
 </section>
+
+{product_html()}
 
 <section class="sec">
   <div class="w">

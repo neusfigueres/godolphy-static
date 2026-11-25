@@ -16,12 +16,12 @@
 <script src="/assets/tracking.js"></script>
 <script src="/assets/signup-modal.js" async></script>
 <meta charset="UTF-8">
-<title>Incrementa tus beneficios un 20 % este 2027 creando tu plan financiero | Godolphy</title>
+<title>Incrementa tu beneficio un 20 % este 2027 creando tu plan financiero | Godolphy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Marca tu objetivo para 2027 y Godolphy lo convierte en una cifra para cada mes, con tus datos reales. Gratis 30 días, sin tarjeta.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://www.godolphy.com/lp/plan-financiero-2027-b/">
-<meta property="og:title" content="Incrementa tus beneficios un 20 % este 2027 creando tu PLAN financiero">
+<meta property="og:title" content="Incrementa tu beneficio un 20 % este 2027 creando tu PLAN financiero">
 <meta property="og:description" content="Marca tu objetivo para 2027 y Godolphy lo convierte en una cifra para cada mes, con tus datos reales. Gratis 30 días, sin tarjeta.">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,6 +134,9 @@ a{color:inherit;}
 @media(min-width:861px){.sticky{display:none!important;}}
 
 .top{position:absolute;}
+.w{max-width:1280px;padding:0 32px;}
+@media(min-width:1600px){.w{max-width:1440px;}}
+@media(max-width:860px){.w{padding:0 20px;}}
 .hero2{background:var(--soft);padding:84px 0 56px;overflow:hidden;}
 .hero2 .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;}
 .hero2 .y{font-family:'Gabarito',sans-serif;font-size:clamp(84px,13vw,168px);line-height:.9;font-weight:800;letter-spacing:-.04em;margin:0 0 10px;}
@@ -177,11 +180,15 @@ a{color:inherit;}
 .after{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
 .after ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
 .after li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:16.5px;line-height:1.5;}
-.after li i{font-style:normal;font-size:22px;line-height:1.2;}
+.after li{align-items:center;}
 .after .shots{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;}
 .vid{max-width:920px;margin:0 0 30px;}
 .vid video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:18px;background:#0c0628;box-shadow:0 24px 60px rgba(40,10,120,.2);}
 .vid p{margin:10px 0 0;font-size:14px;color:var(--muted);}
+.vbox{position:relative;}
+.vsound{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);border:0;cursor:pointer;background:var(--y);color:var(--ink);font:800 16px/1 'Plus Jakarta Sans',sans-serif;padding:13px 20px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);animation:vpulse 1.8s ease-in-out infinite;}
+@keyframes vpulse{50%{transform:translateX(-50%) scale(1.06);}}
+@media(prefers-reduced-motion:reduce){.vsound{animation:none;}}
 .after .ph-wrap{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(40,10,120,.14);background:#fff;}
 .neus2{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;align-items:center;}
 .neus2 img{border-radius:24px;width:100%;max-width:360px;}
@@ -202,6 +209,7 @@ a{color:inherit;}
   .after .shots{grid-template-columns:1fr;}
 }
 
+.nw{white-space:nowrap;}
 .tag{display:inline-flex;align-items:center;gap:8px;background:#02021e;color:#fff;font:800 13px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:9px 14px;border-radius:999px;margin:0 0 18px;}
 .tag i{font-style:normal;color:var(--y);}
 .hero2 h1 .big{display:block;}
@@ -210,7 +218,9 @@ a{color:inherit;}
 .proof{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 0;max-width:560px;}
 .proof p{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35;color:var(--ink);}
 .proof b{color:var(--v);}
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;}
+.proof p{display:flex;gap:10px;align-items:flex-start;}
+.award{display:inline-flex!important;align-items:center;gap:10px;}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .vs > div{border-radius:20px;padding:22px 24px;}
 .vs .no{background:#fff;border:1px solid var(--line);}
 .vs .si{background:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);color:#fff;}
@@ -241,6 +251,38 @@ a{color:inherit;}
 .tst figcaption img{width:56px;height:56px;border-radius:50%;object-fit:cover;}
 .tst figcaption b{display:block;color:var(--ink);font-size:15.5px;}
 @media(max-width:860px){.tsts{grid-template-columns:1fr;}}
+
+.salons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.salons figure{margin:0;position:relative;border-radius:22px;overflow:hidden;}
+.salons img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
+.salons figcaption{position:absolute;left:14px;bottom:14px;background:rgba(2,2,30,.72);color:#fff;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;}
+@media(max-width:860px){.salons{grid-template-columns:1fr;}}
+.tsts{max-width:none;}
+
+.why4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px;}
+.why4 .stat b{font-size:40px;}
+.quote--w{margin-top:16px;text-align:center;align-items:center;}
+@media(max-width:1000px){.why4{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.why4{grid-template-columns:1fr;}}
+
+.ico{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);color:#fff;box-shadow:0 6px 16px rgba(99,28,255,.25);}
+.ico svg{width:21px;height:21px;}
+.ico--s{width:30px;height:30px;}.ico--s svg{width:16px;height:16px;}
+.ico--i{display:inline-flex;vertical-align:-4px;color:currentColor;}.ico--i svg{width:18px;height:18px;}
+
+.plead{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 26px;max-width:760px;}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.pitem{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;}
+.pitem h3{font-family:'Gabarito',sans-serif;font-size:19px;margin:2px 0 6px;}
+.pitem p{margin:0;font-size:15.5px;line-height:1.5;color:var(--muted);}
+.pmore{margin:22px 0 0;font-weight:700;}.pmore a{color:var(--v);}
+@media(max-width:860px){.pgrid{grid-template-columns:1fr;}}
+
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.wcol{border-radius:20px;padding:22px 24px;background:var(--soft);border:1px solid var(--line);}
+.wcol h3{font-family:'Gabarito',sans-serif;font-size:22px;margin:0 0 8px;color:var(--v);}
+.wcol p{margin:0;font-size:16.5px;line-height:1.55;color:var(--ink);}
+@media(max-width:860px){.wgrid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body data-lp="plan-financiero-2027-b">
@@ -251,13 +293,13 @@ a{color:inherit;}
   <div class="w grid">
     <div>
       <p class="tag"><i>●</i> Mueve el culo · Plan 2027</p>
-      <h1>Incrementa tus beneficios un <span class="grad">20 %</span> este 2027 <span class="grad big">creando tu PLAN financiero.</span></h1>
+      <h1>Incrementa tu beneficio un <span class="grad">20&nbsp;%</span> <span class="nw">este 2027</span> <span class="grad big">creando tu PLAN financiero.</span></h1>
       <p class="sub">Godolphy convierte tu +20 % en una cifra para cada mes y te avisa si te desvías. <b>Empiezas hoy</b>, sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up?entrada=plan" data-cta="hero" data-gd-direct>Crear mi plan +20 % gratis →</a>
       <ul class="fud"><li>30 días gratis</li><li>Sin tarjeta</li><li>Si no eliges plan, no pagas nada</li></ul>
       <div class="proof">
-        <p>🏆 <b>Premio Emprendedores Tech 2026</b> a la mejor app del sector estética</p>
-        <p>📈 Con un plan escrito, un <b>16 % más</b> de probabilidades de que el negocio salga adelante <small>(Harvard Business Review, 2017)</small></p>
+        <p><span class="ico ico--s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4"/><path d="M12 13v4M8.5 20h7M10 17h4"/></svg></span><span><b>Premio Emprendedores Tech 2026</b> a la mejor app del sector estética</span></p>
+        <p><span class="ico ico--s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span>Con un plan escrito, un <b>16 % más</b> de probabilidades de que el negocio salga adelante <small>(Harvard Business Review, 2017)</small></span></p>
       </div>
     </div>
     <div class="devices">
@@ -270,6 +312,10 @@ a{color:inherit;}
 
 <section class="sec sec--soft"><div class="w"><h2 class="h2">Ellas ya tienen <span class="grad">su plan 2027</span></h2><div class="tsts"><figure class="tst"><blockquote>«Ha sido muy fácil configurar el plan. Creo que este será mi año.»</blockquote><figcaption><img src="/lp/plan-financiero-2027/natalia-kilova.webp" alt="Natalia Kilova" width="320" height="320" loading="lazy"><span><b>Natalia Kilova</b>Propietaria de peluquería · Barcelona</span></figcaption></figure><figure class="tst"><blockquote>«Sabía que necesitaba tener un plan financiero, pero no sabía por dónde empezar.»</blockquote><figcaption><img src="/lp/plan-financiero-2027/silvia-moreno.webp" alt="Sílvia Moreno" width="320" height="320" loading="lazy"><span><b>Sílvia Moreno</b>Propietaria de salón de uñas · Toledo</span></figcaption></figure></div></div></section>
 
+<section class="sec"><div class="w"><h2 class="h2">Hecho para salones: <span class="grad">peluquerías, centros de estética y salones de uñas</span></h2><div class="salons"><figure><img src="/lp/plan-financiero-2027/salon-peluqueria.webp" alt="Peluquería con el equipo trabajando" width="900" height="600" loading="lazy"><figcaption>Peluquerías</figcaption></figure><figure><img src="/lp/plan-financiero-2027/salon-estetica.webp" alt="Cabinas de un centro de estética" width="900" height="600" loading="lazy"><figcaption>Centros de estética</figcaption></figure><figure><img src="/lp/plan-financiero-2027/salon-detalle.webp" alt="Plan de Godolphy en el móvil, en el tocador de un salón" width="900" height="600" loading="lazy"><figcaption>Tu plan, también en el móvil</figcaption></figure></div></div></section>
+
+<section class="sec"><div class="w"><h2 class="h2">Un plan financiero es tu objetivo del año, <span class="grad">convertido en números de cada mes</span></h2><div class="wgrid"><div class="wcol"><h3>¿Qué es?</h3><p>Tu hoja de ruta del año: cuánto quieres facturar, cuánto vas a gastar y cuánto te quedará, mes a mes.</p></div><div class="wcol"><h3>¿Para qué sirve?</h3><p>Para saber si vas bien antes de que acabe el año, decidir con números (contratar, subir precios, invertir), preparar los meses flojos y tenerlo listo si un día vas al banco.</p></div><div class="wcol"><h3>¿Cuándo hacerlo?</h3><p>Ahora, antes de que empiece 2027. Así enero arranca con un objetivo y no con un «a ver qué tal».</p></div></div></div></section>
+
 <section class="sec">
   <div class="w">
     <h2 class="h2">Sin plan, 2027 será <span class="grad">igual que 2026</span></h2>
@@ -277,6 +323,13 @@ a{color:inherit;}
       <div class="no"><h3>Sin plan</h3><ul><li>Cada año, igual que el anterior.</li><li>Te enteras en diciembre de que el año ha ido flojo.</li><li>Creces «si sale».</li></ul></div>
       <div class="si"><h3>Con tu plan en Godolphy</h3><ul><li>Un objetivo claro: +20 % en 2027.</li><li>Cada mes ves si vas por delante o por detrás.</li><li>Sabes cuánto tienes que facturar cada mes para llegar.</li></ul></div>
     </div>
+  </div>
+</section>
+
+<section class="sec sec--soft">
+  <div class="w">
+    <h2 class="h2">Por qué un plan financiero: <span class="grad">quien se marca un objetivo llega más lejos</span></h2>
+    <div class="why4"><div class="stat"><b class="grad">16 %</b><p>más probabilidades de que el negocio salga adelante si escribes un plan.</p><small>Greene y Hopp, Strategic Entrepreneurship Journal, 2017 (recogido en Harvard Business Review)</small></div><div class="stat"><b class="grad">35 años</b><p>de estudios sobre objetivos llegan a la misma conclusión: una meta concreta y exigente rinde más que «hacerlo lo mejor posible».</p><small>Locke y Latham, American Psychologist, 2002</small></div><div class="stat"><b class="grad">4 de cada 10</b><p>pymes en España no planifican sus finanzas. Con un plan, ya vas por delante de casi la mitad.</p><small>Fundación IE, 2025</small></div><div class="stat"><b class="grad">+</b><p>Planificar mejora los resultados de las pequeñas empresas: lo confirma un análisis que reúne decenas de estudios.</p><small>Brinckmann, Grichnik y Kapsa, Journal of Business Venturing, 2010</small></div></div><blockquote class="quote quote--w">«Los planes no sirven de nada, pero planificar lo es todo.»<cite>Dwight D. Eisenhower</cite></blockquote>
   </div>
 </section>
 
@@ -293,29 +346,19 @@ a{color:inherit;}
 <section class="sec">
   <div class="w ben rev">
     <div>
-      <h2 class="h2">Con un objetivo concreto <span class="grad">rindes más que con un «a ver qué tal»</span></h2>
-      <p class="t">No lo decimos nosotros. Es una de las conclusiones más repetidas de la psicología del trabajo: quien se marca una meta concreta y exigente llega más lejos que quien «hace lo que puede».</p>
+      <h2 class="h2">¿Vas por detrás? <span class="grad">Lo sabes este mes, no en diciembre</span></h2>
+      <p class="t">Cada mes ves lo real frente a lo planificado. Y si un mes vas por debajo, la IA te avisa a tiempo para reaccionar.</p>
       <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up?entrada=plan" data-cta="ben2" data-gd-direct>Crear mi plan +20 % gratis →</a>
     </div>
-    <div><div class="stat"><b class="grad">35 años</b><p>de estudios sobre objetivos llegan a la misma conclusión: una meta concreta y exigente rinde más que «hacerlo lo mejor posible».</p><small>Locke y Latham, American Psychologist, 2002</small></div></div>
+    <div><div class="ph-wrap " data-ph="real-vs-plan.webp · 1420×540 px · gráfico real vs plan"><img src="/lp/plan-financiero-2027/real-vs-plan.webp" alt="Gráfico del plan 2027: beneficio previsto y real de cada mes" width="1420" height="540" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div>
   </div>
 </section>
 <section class="sec sec--soft">
   <div class="w ben">
     <div>
-      <h2 class="h2">¿Vas por detrás? <span class="grad">Lo sabes este mes, no en diciembre</span></h2>
-      <p class="t">Cada mes ves lo real frente a lo planificado. Y si un mes vas por debajo, la IA te avisa a tiempo para reaccionar.</p>
-      <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up?entrada=plan" data-cta="ben3" data-gd-direct>Crear mi plan +20 % gratis →</a>
-    </div>
-    <div><div class="ph-wrap " data-ph="real-vs-plan.webp · 1420×540 px · gráfico real vs plan"><img src="/lp/plan-financiero-2027/real-vs-plan.webp" alt="Gráfico del plan 2027: beneficio previsto y real de cada mes" width="1420" height="540" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div>
-  </div>
-</section>
-<section class="sec">
-  <div class="w ben rev">
-    <div>
       <h2 class="h2">Sin Excel <span class="grad">y sin saber de finanzas</span></h2>
       <p class="t">Un Excel lo descargas y te olvidas. Aquí el plan se actualiza solo con tu día a día: si ya usas Godolphy, partimos de tus citas y gastos reales. Tú pones los números, Godolphy hace los cálculos.</p>
-      <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up?entrada=plan" data-cta="ben4" data-gd-direct>Crear mi plan +20 % gratis →</a>
+      <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up?entrada=plan" data-cta="ben3" data-gd-direct>Crear mi plan +20 % gratis →</a>
     </div>
     <div><div class="ph-wrap " data-ph="paso-meses.webp · 1200×900 px · tabla de 12 meses"><img src="/lp/plan-financiero-2027/paso-meses.webp" alt="Facturación de los últimos 12 meses leída de un documento" width="1200" height="900" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div>
   </div>
@@ -324,8 +367,8 @@ a{color:inherit;}
 <section class="sec">
   <div class="w">
     <h2 class="h2">Tu plan 2027 en 3 pasos: <span class="grad">tú pones los números, Godolphy calcula</span></h2>
-    <div class="vid"><video controls playsinline preload="none" data-vid="tutorial-plan" poster="/lp/plan-financiero-2027/tutorial-poster.webp" width="1280" height="720"><source src="/lp/plan-financiero-2027/tutorial-plan-financiero.mp4" type="video/mp4"></video><p>Así se crea el plan, paso a paso (2 min).</p></div>
-    <div class="steps2"><div class="step2"><span class="n grad">01</span><h3>Te das de alta con tu email.</h3><p>Sin tarjeta.</p></div><div class="step2"><span class="n grad">02</span><h3>Pones tus números de partida.</h3><p>Si ya usas Godolphy, partimos de tus citas y gastos reales.</p><div class="ph-wrap " data-ph="paso-numeros.webp · 1270×650 px · números de partida"><img src="/lp/plan-financiero-2027/paso-numeros.webp" alt="Paso 1 del plan: ¿tienes la facturación del año pasado?" width="1270" height="650" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div><div class="step2"><span class="n grad">03</span><h3>Eliges +20 % (o lo que tú quieras)</h3><p>y tienes tu plan mes a mes, editable cuando quieras.</p><div class="ph-wrap " data-ph="paso-crecer.webp · 1360×760 px · % de crecimiento"><img src="/lp/plan-financiero-2027/paso-crecer.webp" alt="Paso 3 del plan: cuánto quieres crecer en 2027" width="1360" height="760" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div></div>
+    <div class="vid"><div class="vbox"><video muted playsinline loop preload="none" data-vid="tutorial-plan" poster="/lp/plan-financiero-2027/tutorial-poster.webp" width="1280" height="720"><source src="/lp/plan-financiero-2027/tutorial-plan-financiero.mp4" type="video/mp4"></video><button type="button" class="vsound" aria-label="Activar el sonido del vídeo"><span class="ico--i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a7.5 7.5 0 0 1 0 11"/></svg></span> Activa la voz</button></div><p>Así se crea el plan, paso a paso (2 min).</p></div>
+    <div class="steps2"><div class="step2"><span class="n grad">01</span><h3>Pones tus números.</h3><p>Tu facturación del año pasado (subes un documento o la escribes) y tus gastos. Si ya usas Godolphy, partimos de tus citas y gastos reales.</p><div class="ph-wrap " data-ph="paso-numeros.webp · 1270×650 px · números de partida"><img src="/lp/plan-financiero-2027/paso-numeros.webp" alt="Paso 1 del plan: tus números de partida" width="1270" height="650" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div><div class="step2"><span class="n grad">02</span><h3>Eliges +20 % (o lo que tú quieras).</h3><p>Godolphy reparte el objetivo en una cifra para cada mes.</p><div class="ph-wrap " data-ph="paso-crecer.webp · 1360×760 px · % de crecimiento"><img src="/lp/plan-financiero-2027/paso-crecer.webp" alt="Paso 2 del plan: cuánto quieres crecer en 2027" width="1360" height="760" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div><div class="step2"><span class="n grad">03</span><h3>Haces el seguimiento mes a mes.</h3><p>Ves lo real frente a lo planificado y, si te desvías, la IA te avisa a tiempo.</p><div class="ph-wrap " data-ph="real-vs-plan.webp · 1420×540 px · seguimiento mes a mes"><img src="/lp/plan-financiero-2027/real-vs-plan.webp" alt="Seguimiento mes a mes: beneficio previsto y real" width="1420" height="540" loading="lazy" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div></div>
     <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up?entrada=plan" data-cta="steps" data-gd-direct>Crear mi plan +20 % gratis →</a>
   </div>
 </section>
@@ -337,7 +380,7 @@ a{color:inherit;}
       <h2 class="h2">Detrás de Godolphy: <span class="grad">15 años en multinacionales y un salón propio</span></h2>
       <p>Soy Neus. He trabajado unos 15 años en multinacionales, donde nadie empieza el año sin un objetivo, y monté mi propio salón con una socia, donde yo llevaba la parte de negocio.</p>
       <p>Godolphy es el consultor financiero que mi salón nunca tuvo.</p>
-      <p class="award">🏆 Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
+      <p class="award"><span class="ico ico--s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4"/><path d="M12 13v4M8.5 20h7M10 17h4"/></svg></span> Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
       <p class="sig">Neus, fundadora de Godolphy</p>
     </div>
   </div>
@@ -349,6 +392,8 @@ a{color:inherit;}
     <div class="faq"><details><summary>¿El +20 % está garantizado?</summary><p>No. El +20 % es el objetivo que te marcas tú. Godolphy lo convierte en una cifra para cada mes y te enseña si vas bien, para que puedas reaccionar a tiempo. Si prefieres otro porcentaje, eliges el que quieras.</p></details><details><summary>¿Necesito saber de finanzas?</summary><p>No. Pones tus números y Godolphy hace los cálculos.</p></details><details><summary>¿Sirve si no tengo historial?</summary><p>Sí, empiezas con tus números de partida.</p></details><details><summary>¿Necesito tarjeta?</summary><p>No. Te das de alta solo con tu email.</p></details><details><summary>¿Cuánto cuesta después?</summary><p>Los primeros 30 días son gratis. Después, el plan financiero está incluido en el plan Pro, desde 45 €/mes. Si no eliges plan, no pagas nada.</p></details></div>
   </div>
 </section>
+
+<section class="sec sec--soft"><div class="w"><h2 class="h2">Y no es solo un plan: <span class="grad">Godolphy es tu software de reservas y gestión con IA</span></h2><p class="plead">El plan financiero es una parte. Con la misma cuenta gestionas todo el día a día del salón, y cada cita que entra alimenta tu plan sola.</p><div class="pgrid"><div class="pitem"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><h3>Reservas online 24 h</h3><p>Tus clientes reservan solos desde tu enlace, sin llamadas ni mensajes.</p></div></div><div class="pitem"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg></span><div><h3>Recordatorios automáticos</h3><p>Avisos antes de cada cita para que no se olviden.</p></div></div><div class="pitem"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10.5h18M7 15h4"/></svg></span><div><h3>Cobros y señal</h3><p>Cobra la señal al reservar y despídete de los plantones.</p></div></div><div class="pitem"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.5M18 19a5.5 5.5 0 0 0-3-4.8"/></svg></span><div><h3>Agenda y equipo</h3><p>Horarios, ausencias y comisiones de cada profesional.</p></div></div><div class="pitem"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9c2 0 6 1 6-1.5S14 5 12 9"/></svg></span><div><h3>Tarjetas regalo y bonos</h3><p>Vende más con regalos y packs de sesiones.</p></div></div><div class="pitem"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span><div><h3>Análisis con IA cada mes</h3><p>Qué servicios te hacen ganar dinero y qué clientes no vuelven.</p></div></div></div><p class="pmore"><a href="/funcionalidades/">Ver todas las funcionalidades →</a></p></div></section>
 
 <section class="sec">
   <div class="w">
@@ -373,7 +418,7 @@ a{color:inherit;}
   var st=document.getElementById('sticky'),hero=document.getElementById('hero'),lp=document.body.getAttribute('data-lp');
   function upd(){var past=hero.getBoundingClientRect().bottom<0,cookie=document.getElementById('gd-cookies');st.classList.toggle('on',past&&!cookie);}
   window.addEventListener('scroll',upd,{passive:true});setInterval(upd,1500);upd();
-  document.querySelectorAll('video[data-vid]').forEach(function(v){v.addEventListener('play',function(){try{if(window.posthog)posthog.capture('lp_video_play',{lp:document.body.getAttribute('data-lp'),video:v.getAttribute('data-vid')});}catch(_){}},{once:true});});
+  document.querySelectorAll('.vbox').forEach(function(box){var v=box.querySelector('video'),b=box.querySelector('.vsound'),lp=document.body.getAttribute('data-lp');function ev(n){try{if(window.posthog)posthog.capture(n,{lp:lp,video:v.getAttribute('data-vid')});}catch(_){}}if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(!v.muted)return;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});},{threshold:.5}).observe(v);}b.addEventListener('click',function(){v.muted=false;v.currentTime=0;v.loop=false;v.controls=true;var p=v.play();if(p&&p.catch)p.catch(function(){});b.remove();ev('lp_video_unmute');});v.addEventListener('play',function(){ev('lp_video_play');},{once:true});});
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cta]');if(!a)return;
     /* lp_cta_click lo envía /assets/signup-modal.js */
     try{if(window.fbq)fbq('track','InitiateCheckout',{content_name:lp});}catch(_){}

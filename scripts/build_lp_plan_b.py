@@ -21,7 +21,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from build_lp import CSS, head_common  # noqa: E402
-from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS, testimonials_html  # noqa: E402
+from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS, testimonials_html, SALON_CSS, salons_html, WHY_CSS, why_cards, ICON_CSS, icon, PRODUCT_CSS, product_html, WHAT_CSS, what_html  # noqa: E402
 
 SLUG = 'plan-financiero-2027-b'
 OUT = f'lp/{SLUG}/index.html'
@@ -56,11 +56,6 @@ BENEFITS = [
         'img': ('objetivos-mes.webp', 720, 680, 'Objetivos de un mes del plan: citas, facturación y gastos', 'objetivos del mes'),
     },
     {
-        'h': 'Con un objetivo concreto <span class="grad">rindes más que con un «a ver qué tal»</span>',
-        'p': 'No lo decimos nosotros. Es una de las conclusiones más repetidas de la psicología del trabajo: quien se marca una meta concreta y exigente llega más lejos que quien «hace lo que puede».',
-        'stat': ('35 años', 'de estudios sobre objetivos llegan a la misma conclusión: una meta concreta y exigente rinde más que «hacerlo lo mejor posible».', 'Locke y Latham, American Psychologist, 2002'),
-    },
-    {
         'h': '¿Vas por detrás? <span class="grad">Lo sabes este mes, no en diciembre</span>',
         'p': 'Cada mes ves lo real frente a lo planificado. Y si un mes vas por debajo, la IA te avisa a tiempo para reaccionar.',
         'img': ('real-vs-plan.webp', 1420, 540, 'Gráfico del plan 2027: beneficio previsto y real de cada mes', 'gráfico real vs plan'),
@@ -73,9 +68,9 @@ BENEFITS = [
 ]
 
 STEPS = [
-    ('Te das de alta con tu email.', 'Sin tarjeta.'),
-    ('Pones tus números de partida.', 'Si ya usas Godolphy, partimos de tus citas y gastos reales.'),
-    ('Eliges +20 % (o lo que tú quieras)', 'y tienes tu plan mes a mes, editable cuando quieras.'),
+    ('Pones tus números.', 'Tu facturación del año pasado (subes un documento o la escribes) y tus gastos. Si ya usas Godolphy, partimos de tus citas y gastos reales.'),
+    ('Eliges +20 % (o lo que tú quieras).', 'Godolphy reparte el objetivo en una cifra para cada mes.'),
+    ('Haces el seguimiento mes a mes.', 'Ves lo real frente a lo planificado y, si te desvías, la IA te avisa a tiempo.'),
 ]
 
 FAQ = [
@@ -87,6 +82,7 @@ FAQ = [
 ]
 
 B_CSS = r'''
+.nw{white-space:nowrap;}
 .tag{display:inline-flex;align-items:center;gap:8px;background:#02021e;color:#fff;font:800 13px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:9px 14px;border-radius:999px;margin:0 0 18px;}
 .tag i{font-style:normal;color:var(--y);}
 .hero2 h1 .big{display:block;}
@@ -95,7 +91,9 @@ B_CSS = r'''
 .proof{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 0;max-width:560px;}
 .proof p{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35;color:var(--ink);}
 .proof b{color:var(--v);}
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;}
+.proof p{display:flex;gap:10px;align-items:flex-start;}
+.award{display:inline-flex!important;align-items:center;gap:10px;}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .vs > div{border-radius:20px;padding:22px 24px;}
 .vs .no{background:#fff;border:1px solid var(--line);}
 .vs .si{background:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);color:#fff;}
@@ -148,8 +146,11 @@ def page():
   </div>
 </section>''')
     bens = '\n'.join(bens)
-    step_shots = ['', shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: ¿tienes la facturación del año pasado?', 'números de partida'),
-                  shot('paso-crecer.webp', 1360, 760, 'Paso 3 del plan: cuánto quieres crecer en 2027', '% de crecimiento')]
+    step_shots = [
+        shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: tus números de partida', 'números de partida'),
+        shot('paso-crecer.webp', 1360, 760, 'Paso 2 del plan: cuánto quieres crecer en 2027', '% de crecimiento'),
+        shot('real-vs-plan.webp', 1420, 540, 'Seguimiento mes a mes: beneficio previsto y real', 'seguimiento mes a mes'),
+    ]
     steps = ''.join(
         f'<div class="step2"><span class="n grad">0{i}</span><h3>{e(t)}</h3><p>{e(x)}</p>'
         + step_shots[i - 1] + '</div>'
@@ -157,7 +158,7 @@ def page():
     faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in FAQ)
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
-    title = 'Incrementa tus beneficios un 20 % este 2027 creando tu plan financiero | Godolphy'
+    title = 'Incrementa tu beneficio un 20 % este 2027 creando tu plan financiero | Godolphy'
     desc = 'Marca tu objetivo para 2027 y Godolphy lo convierte en una cifra para cada mes, con tus datos reales. Gratis 30 días, sin tarjeta.'
     return f'''<!DOCTYPE html>
 <html lang="es">
@@ -169,14 +170,14 @@ def page():
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://www.godolphy.com/lp/{SLUG}/">
-<meta property="og:title" content="Incrementa tus beneficios un 20 % este 2027 creando tu PLAN financiero">
+<meta property="og:title" content="Incrementa tu beneficio un 20 % este 2027 creando tu PLAN financiero">
 <meta property="og:description" content="{e(desc)}">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{A_CSS}{B_CSS}{TST_CSS}</style>
+<style>{CSS}{A_CSS}{B_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -186,13 +187,13 @@ def page():
   <div class="w grid">
     <div>
       <p class="tag"><i>●</i> Mueve el culo · Plan 2027</p>
-      <h1>Incrementa tus beneficios un <span class="grad">20 %</span> este 2027 <span class="grad big">creando tu PLAN financiero.</span></h1>
+      <h1>Incrementa tu beneficio un <span class="grad">20&nbsp;%</span> <span class="nw">este 2027</span> <span class="grad big">creando tu PLAN financiero.</span></h1>
       <p class="sub">Godolphy convierte tu +20 % en una cifra para cada mes y te avisa si te desvías. <b>Empiezas hoy</b>, sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       {cta('hero')}
       <ul class="fud">{fud}</ul>
       <div class="proof">
-        <p>🏆 <b>Premio Emprendedores Tech 2026</b> a la mejor app del sector estética</p>
-        <p>📈 Con un plan escrito, un <b>16 % más</b> de probabilidades de que el negocio salga adelante <small>(Harvard Business Review, 2017)</small></p>
+        <p>{icon('trophy', 'ico ico--s')}<span><b>Premio Emprendedores Tech 2026</b> a la mejor app del sector estética</span></p>
+        <p>{icon('trend', 'ico ico--s')}<span>Con un plan escrito, un <b>16 % más</b> de probabilidades de que el negocio salga adelante <small>(Harvard Business Review, 2017)</small></span></p>
       </div>
     </div>
     <div class="devices">
@@ -205,6 +206,10 @@ def page():
 
 {testimonials_html()}
 
+{salons_html()}
+
+{what_html()}
+
 <section class="sec">
   <div class="w">
     <h2 class="h2">Sin plan, 2027 será <span class="grad">igual que 2026</span></h2>
@@ -212,6 +217,13 @@ def page():
       <div class="no"><h3>Sin plan</h3><ul>{vs_no}</ul></div>
       <div class="si"><h3>Con tu plan en Godolphy</h3><ul>{vs_si}</ul></div>
     </div>
+  </div>
+</section>
+
+<section class="sec sec--soft">
+  <div class="w">
+    <h2 class="h2">Por qué un plan financiero: <span class="grad">quien se marca un objetivo llega más lejos</span></h2>
+    {why_cards()}
   </div>
 </section>
 
@@ -233,7 +245,7 @@ def page():
       <h2 class="h2">Detrás de Godolphy: <span class="grad">15 años en multinacionales y un salón propio</span></h2>
       <p>Soy Neus. He trabajado unos 15 años en multinacionales, donde nadie empieza el año sin un objetivo, y monté mi propio salón con una socia, donde yo llevaba la parte de negocio.</p>
       <p>Godolphy es el consultor financiero que mi salón nunca tuvo.</p>
-      <p class="award">🏆 Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
+      <p class="award">{icon('trophy', 'ico ico--s')} Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
       <p class="sig">Neus, fundadora de Godolphy</p>
     </div>
   </div>
@@ -245,6 +257,8 @@ def page():
     <div class="faq">{faq}</div>
   </div>
 </section>
+
+{product_html()}
 
 <section class="sec">
   <div class="w">
