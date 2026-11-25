@@ -26,7 +26,7 @@ from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS,
 SLUG = 'plan-financiero-2027-b'
 OUT = f'lp/{SLUG}/index.html'
 IMG = '/lp/plan-financiero-2027/'
-CTA_TXT = 'Crear mi plan +20 % gratis →'
+CTA_TXT = 'Crear mi plan gratis →'
 
 e = html.escape
 
