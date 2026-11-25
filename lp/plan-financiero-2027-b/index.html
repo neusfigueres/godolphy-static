@@ -207,8 +207,8 @@ a{color:inherit;}
 .hero2 h1 .big{display:block;}
 .fud{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--ink);font-weight:600;}
 .fud li::before{content:"✓ ";color:var(--v);font-weight:800;}
-.proof{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;}
-.proof p{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35;color:var(--ink);max-width:262px;}
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 0;max-width:560px;}
+.proof p{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35;color:var(--ink);}
 .proof b{color:var(--v);}
 .vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;}
 .vs > div{border-radius:20px;padding:22px 24px;}
@@ -230,7 +230,7 @@ a{color:inherit;}
   .vs,.ben{grid-template-columns:1fr;gap:22px;}
   .ben.rev > :first-child{order:0;}
   .ben p.t{font-size:16px;}
-  .proof p{max-width:none;flex:1 1 100%;}
+  .proof p{font-size:12.5px;padding:9px 11px;}
   .tag{margin:0 0 12px;}
 }
 
