@@ -568,5 +568,25 @@
       "source": "/api/lead/",
       "destination": "/api/lead"
     }
+  ],
+  "headers": [
+    {
+      "source": "/plan-negocio-2027/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/descargas/plan-negocio-2027.pdf",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
   ]
 }
