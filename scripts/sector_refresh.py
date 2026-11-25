@@ -209,9 +209,18 @@ def refresh(key):
         print('ya actualizada:', c['file'])
         return
     s = s.replace('</head>', HEAD_ADD + '\n</head>', 1)
+    for old, new in c.get('fixes', []):
+        assert old in s, ('arreglo no encontrado', old[:60])
+        s = s.replace(old, new)
+    for h in c.get('drop_sections', []):
+        i = s.find('>' + h + '<'); assert i > 0, ('sección a quitar no encontrada', h)
+        a0 = s.rfind('<section', 0, i); a1 = s.find('</section>', i) + len('</section>')
+        s = s[:a0] + s[a1:]
     s = hero_photo(s, c)
     # Títulos
     for old, new in c['h2']:
+        if old in c.get('drop_sections', []):
+            continue
         n = s.count('>' + old + '<')
         assert n >= 1, ('título no encontrado', old)
         s = s.replace('>' + old + '<', '>' + new + '<')
@@ -221,11 +230,13 @@ def refresh(key):
     a = '<li>Días de descanso y vacaciones bloqueadas</li>'
     assert a in s
     s = s.replace(a, a + c['baja_li'], 1)
-    s = s.replace('Configura el horario de cada profesional, sus días libres y vacaciones. La agenda se actualiza sola.',
-                  'Configura el horario de cada profesional, sus días libres, vacaciones y bajas. Las citas afectadas se resuelven en un momento.', 1)
+    s, n = re.subn(r'Configura el horario de cada ([^,<]+), sus días libres y vacaciones\. La agenda se actualiza sola\.',
+                   r'Configura el horario de cada \1, sus días libres, vacaciones y bajas. Las citas afectadas se resuelven en un momento.', s, count=1)
+    assert n == 1, 'texto de horarios no encontrado'
     # Recepcionista en el bloque de equipo (mini FAQ)
-    a = c['equipo_faq_after'] + '</p></div></div>'
-    assert a in s
+    m = re.search(r'Sí\. Cada [^<]+ tiene su propio acceso y solo ve su agenda y sus clientes asignados\.</p></div></div>', s)
+    assert m, 'mini FAQ de equipo no encontrada'
+    a = m.group(0)
     q, ans = c['equipo_faq_new']
     mini = ('\n        <div style="border-bottom:1px solid rgba(2,2,30,.1);padding:16px 0;"><button onclick="var b=this.nextElementSibling;b.classList.toggle(\'open\');'
             'this.querySelector(\'.mini-faq-icon\').classList.toggle(\'open\')" style="width:100%;background:none;border:none;text-align:left;cursor:pointer;display:flex;'
@@ -247,7 +258,7 @@ def refresh(key):
     j = s.find('</div>\n', s.find('</p></div>', i)) if False else s.find('</p></div>', i) + len('</p></div>')
     s = s[:j] + '\n' + ''.join(feat_card(*f) for f in c['feats']) + s[j:]
     # FAQ visibles (antes de «¿Hay periodo de prueba gratuito?») + JSON-LD
-    a = '    <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Hay periodo de prueba gratuito?'
+    a = '<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span style="color:#02021e;font-size:17px;font-weight:600;">¿Hay periodo de prueba gratuito?'
     assert a in s
     s = s.replace(a, ''.join(faq_item(q, x) for q, x in c['faq_new']) + a, 1)
     a = '    {\n      "@type": "Question",\n      "name": "¿Hay periodo de prueba gratuito?",'
@@ -260,6 +271,131 @@ def refresh(key):
     s = parts[0] + ''.join(('>Prueba gratis 30 días</a>' if k < 2 or k == last else '>Prueba Godolphy gratis 30 días</a>') + p for k, p in enumerate(parts[1:]))
     open(c['file'], 'w', encoding='utf-8').write(s)
     print('ok', c['file'])
+
+
+COMMON_FEATS = SECTORS['peluquerias']['feats']
+COMMON_FAQ = SECTORS['peluquerias']['faq_new']
+
+
+def sector(file, negocio, negocios, art, h1_old, h1_new, dom_old, dom_new, func_old, final_old, seo_old, seo_new,
+           lp_plan, img, pos, notifs, gestor, calc, riesgo, extras_new, precio_txt, fixes=(), drop=(), extra_h2=()):
+    """Configuración de un sector a partir de los textos de su página."""
+    return {
+        'file': file, 'negocio': negocio, 'lp_plan': lp_plan, 'hero_img': img, 'hero_pos': pos, 'notifs': notifs,
+        'mas_lead': f'Además de reservas y agenda, Godolphy analiza tu {negocio} y te avisa de lo que hace que ganes más o pierdas dinero.',
+        'precio_txt': precio_txt, 'gestor': gestor, 'calc': calc, 'riesgo': riesgo,
+        'fixes': list(fixes), 'drop_sections': list(drop),
+        'h2': [
+            (h1_old, h1_new),
+            ('Una agenda con IA que incrementa tus beneficios',
+             f'Reservas, agenda, equipo y análisis IA: {it("así se ve Godolphy")} en tu {negocio}'),
+            ('Descubre dónde estás perdiendo dinero y cómo recuperarlo.',
+             f'Descubre dónde estás {ci("perdiendo dinero")} y cómo recuperarlo'),
+            ('Los clientes reservan sin interrumpir tu tiempo.',
+             f'Reservas online 24 h: tus clientes reservan {it("sin llamarte")}'),
+            ('¡Qué no te dejen colgado/a! Solicita depósito.',
+             f'Cobra una señal al reservar y {it("adiós a los plantones")}'),
+            ('Y todo lo que necesitas para el día a día, <span class="gx-grad">en el mismo sitio.</span>',
+             f'Recordatorios, horarios y bajas, tarjetas regalo y varios centros: {it("todo en la misma cuenta")}'),
+            ('Gestión de horarios y vacaciones.', 'Horarios, vacaciones y bajas del equipo.'),
+            ('Envía recordatorios vía whatsapp e email.', 'Recordatorios por WhatsApp y email.'),
+            (dom_old, dom_new),
+            ('Tus empleados siempre tendrán trabajo.',
+             f'Cada profesional ve {it("su agenda")}; la recepción lleva el día sin tocar la configuración'),
+            (func_old, f'Todo lo que incluye Godolphy para {it(art + " " + negocio)}'),
+            ('Preguntas frecuentes', f'Lo que te preguntas {it("antes de cambiar de programa")}'),
+            (final_old, f'Prueba Godolphy 30 días gratis {it("con tu equipo y tus servicios reales", True)}'),
+            (seo_old, seo_new),
+        ] + list(extra_h2),
+        'extras_h2': (SECTORS['peluquerias']['extras_h2'][0], extras_new),
+        'baja_li': SECTORS['peluquerias']['baja_li'],
+        'equipo_faq_new': SECTORS['peluquerias']['equipo_faq_new'],
+        'feats': COMMON_FEATS, 'faq_new': COMMON_FAQ,
+    }
+
+
+U = 'https://images.unsplash.com/{}?w=2000&q=75&auto=format&fit=crop'
+EXTRAS_STD = f'Extras al reservar: {it("la agenda suma el tiempo y el precio")} sola'
+LAS_CLIENTES = [('Las clientes reservan sin interrumpir tu tiempo.', 'Los clientes reservan sin interrumpir tu tiempo.'),
+                ('Sí. Las clientes pueden seleccionar', 'Sí. Los clientes pueden seleccionar')]
+
+SECTORS['barberias'] = sector(
+    'sectores/software-para-barberias/index.html', 'barbería', 'barberías', 'tu',
+    'Software para barberías — Reservas online y gestión de agenda',
+    f'Software para barberías: {it("reservas online y agenda", True)} sin llamadas',
+    'Y si realizas servicios de barbería <span class="gx-grad">a domicilio</span>',
+    f'Barbería a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
+    'Funcionalidades específicas para tu barbería.',
+    'Da de alta tu barbería y empieza a optimizar tu tiempo',
+    'Software para barberías: lo que de verdad necesitas',
+    'Software para barberías: lo que de verdad necesitas en 2027',
+    '/lp/plan-financiero-2027/', U.format('photo-1705976062088-5433328c2dcd'), '62% center',
+    [('Nueva reserva', 'Carlos · Corte + barba · vie. 19:30', 'ahora'),
+     ('Recordatorio enviado', 'WhatsApp a Javi · mañana 10:00 ✓', '2 min'),
+     ('Señal cobrada', '5,00 € · reserva de Adrián', '6 min')],
+    ['2 citas de ayer sin cobrar', 'Sábado lleno: sube el precio de 10:00 a 14:00', '11 clientes llevan 6 semanas sin venir'],
+    [('Corte degradado', 52), ('Arreglo de barba', 14)], 31, EXTRAS_STD,
+    'Un recargo el sábado por la mañana, cuando todos quieren venir, o un descuento para llenar los martes. El cliente ve el precio final al reservar.')
+
+SECTORS['estetica'] = sector(
+    'sectores/software-para-centro-de-estetica-y-salones/index.html', 'centro de estética', 'centros de estética', 'tu',
+    'Software para centros de estética — Reservas, pagos y fidelización con IA',
+    f'Software para centros de estética: {it("reservas, cobros y clientes que vuelven", True)}',
+    'Y si realizas tratamientos <span class="gx-grad">a domicilio</span>',
+    f'Tratamientos a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
+    'Funcionalidades específicas para tu centro de estética.',
+    'Da de alta tu centro de estética y empieza a optimizar tu tiempo',
+    'El software para centros de estética que digitaliza tu negocio en 2026',
+    'El software para centros de estética que digitaliza tu negocio en 2027',
+    '/lp/plan-financiero-2027/', U.format('photo-1570172619644-dfd03ed5d881'), '62% center',
+    [('Nueva reserva', 'Lucía · Higiene facial · jue. 17:00', 'ahora'),
+     ('Bono vendido', '10 sesiones de presoterapia · 350 €', '3 min'),
+     ('Recordatorio enviado', 'WhatsApp a Elena · mañana 12:00 ✓', '8 min')],
+    ['4 sesiones de bono caducan esta semana', 'Mañana tienes la cabina 2 libre de 10 a 13', '15 clientes llevan 3 meses sin venir'],
+    [('Higiene facial', 44), ('Radiofrecuencia', 11)], 27,
+    f'Extras y tiempos de exposición: {it("la agenda calcula los tiempos")} por ti',
+    'Un recargo el viernes por la tarde o un descuento para llenar las mañanas de entre semana. El cliente ve el precio final al reservar.',
+    fixes=LAS_CLIENTES + [('¿Las clientes pueden elegir esteticista específica?', '¿Los clientes pueden elegir a su esteticista?')])
+
+SECTORS['unas'] = sector(
+    'sectores/software-para-salones-de-unas/index.html', 'salón de uñas', 'salones de uñas', 'tu',
+    'Software para salones de uñas — Agenda online y gestión de clientes',
+    f'Software para salones de uñas: {it("agenda online y clientes que repiten", True)}',
+    'Y si realizas manicuras <span class="gx-grad">a domicilio</span>',
+    f'Manicura a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
+    'Funcionalidades específicas para tu salón de uñas.',
+    'Da de alta tu salón de uñas y empieza a optimizar tu tiempo',
+    'Software para salones de uñas — Gestiona tu negocio sin caos en 2026',
+    'Software para salones de uñas: gestiona tu negocio sin caos en 2027',
+    '/lp/plan-financiero-2027/', U.format('photo-1659391542239-9648f307c0b1'), '55% center',
+    [('Nueva reserva', 'Sara · Semipermanente + nail art · sáb. 12:00', 'ahora'),
+     ('Recordatorio enviado', 'WhatsApp a Paula · relleno en 3 semanas ✓', '4 min'),
+     ('Señal cobrada', '8,00 € · reserva de Irene', '7 min')],
+    ['3 citas de ayer sin cobrar', 'Mañana tienes 2 huecos: 16:00 y 17:30', '19 clientes no han vuelto a por su relleno'],
+    [('Semipermanente', 46), ('Uñas acrílicas', 12)], 19, EXTRAS_STD,
+    'Un recargo el sábado o un descuento para llenar las mañanas de entre semana. El cliente ve el precio final al reservar.',
+    fixes=LAS_CLIENTES + [('¿Las clientes pueden elegir nail artist específica?', '¿Los clientes pueden elegir a su nail artist?')],
+    drop=['Tus empleados siempre tendrán trabajo.'],
+    extra_h2=[('Tus nail artists siempre tendrán trabajo.',
+               f'Cada nail artist ve {it("su agenda")}; la recepción lleva el día sin tocar la configuración')])
+
+SECTORS['spa'] = sector(
+    'sectores/software-para-spa-y-masajes/index.html', 'centro', 'spas y centros de masaje', 'tu',
+    'Software para spas y centros de masajes — Reservas y gestión integral',
+    f'Software para spas y centros de masaje: {it("reservas, cabinas y bonos", True)} en orden',
+    'Y si ofreces masajes y tratamientos <span class="gx-grad">a domicilio</span>',
+    f'Masajes a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
+    'Funcionalidades específicas para tu centro de spa y masajes.',
+    'Da de alta tu spa y empieza a optimizar tu tiempo',
+    'Software para spas y centros de masajes — Gestión profesional en 2026',
+    'Software para spas y centros de masaje: gestión profesional en 2027',
+    '/lp/plan-financiero-2027/', U.format('photo-1598901986949-f593ff2a31a6'), '60% center',
+    [('Nueva reserva', 'Marta · Masaje relajante 60 min · dom. 11:00', 'ahora'),
+     ('Tarjeta regalo vendida', 'Circuito spa para 2 · 120 €', '3 min'),
+     ('Recordatorio enviado', 'WhatsApp a Pablo · mañana 18:00 ✓', '9 min')],
+    ['2 sesiones de ayer sin cobrar', 'El domingo por la tarde tienes 3 huecos', '12 clientes llevan 2 meses sin venir'],
+    [('Masaje relajante 60 min', 49), ('Ritual de 90 min', 13)], 12, EXTRAS_STD,
+    'Un recargo el fin de semana o un descuento para llenar las mañanas de entre semana. El cliente ve el precio final al reservar.')
 
 
 if __name__ == '__main__':
