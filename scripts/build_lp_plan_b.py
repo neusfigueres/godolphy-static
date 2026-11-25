@@ -21,7 +21,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from build_lp import CSS, head_common  # noqa: E402
-from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS  # noqa: E402
+from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS, testimonials_html  # noqa: E402
 
 SLUG = 'plan-financiero-2027-b'
 OUT = f'lp/{SLUG}/index.html'
@@ -176,7 +176,7 @@ def page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{A_CSS}{B_CSS}</style>
+<style>{CSS}{A_CSS}{B_CSS}{TST_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -202,6 +202,8 @@ def page():
     </div>
   </div>
 </section>
+
+{testimonials_html()}
 
 <section class="sec">
   <div class="w">

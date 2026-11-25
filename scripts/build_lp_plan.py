@@ -66,6 +66,32 @@ FAQ = [
     ('¿Cuánto cuesta después?', 'Los primeros 30 días son gratis. Después, el plan financiero está incluido en el plan Pro, desde 45 €/mes. Si no eliges plan, no pagas nada.'),
 ]
 
+TESTIMONIALS = [
+    ('natalia-kilova.webp', 'Natalia Kilova', 'Barcelona', 'Ha sido muy fácil configurar el plan. Creo que este será mi año.'),
+    ('silvia-moreno.webp', 'Sílvia Moreno', 'Toledo', 'Sabía que necesitaba tener un plan financiero, pero no sabía por dónde empezar.'),
+]
+
+
+def testimonials_html(title='Ya lo han hecho'):
+    cards = ''.join(
+        f'<figure class="tst"><blockquote>«{html.escape(q)}»</blockquote>'
+        f'<figcaption><img src="/lp/plan-financiero-2027/{f}" alt="{html.escape(n)}" width="320" height="320" loading="lazy">'
+        f'<span><b>{html.escape(n)}</b>{html.escape(c)}</span></figcaption></figure>'
+        for f, n, c, q in TESTIMONIALS)
+    return f'<section class="sec sec--soft"><div class="w"><h2 class="h2">{title}</h2><div class="tsts">{cards}</div></div></section>'
+
+
+TST_CSS = r"""
+.tsts{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:980px;}
+.tst{margin:0;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;}
+.tst blockquote{margin:0;font-family:'Gabarito',sans-serif;font-size:clamp(19px,2.2vw,23px);line-height:1.3;color:var(--ink);}
+.tst figcaption{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--muted);}
+.tst figcaption img{width:56px;height:56px;border-radius:50%;object-fit:cover;}
+.tst figcaption b{display:block;color:var(--ink);font-size:15.5px;}
+@media(max-width:860px){.tsts{grid-template-columns:1fr;}}
+"""
+
+
 VIDEO = ('<div class="vid"><video controls playsinline preload="none" data-vid="tutorial-plan" '
          'poster="/lp/plan-financiero-2027/tutorial-poster.webp" width="1280" height="720">'
          '<source src="/lp/plan-financiero-2027/tutorial-plan-financiero.mp4" type="video/mp4"></video>'
@@ -182,7 +208,7 @@ def page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{EXTRA_CSS}</style>
+<style>{CSS}{EXTRA_CSS}{TST_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -204,6 +230,8 @@ def page():
     </div>
   </div>
 </section>
+
+{testimonials_html()}
 
 <section class="sec">
   <div class="w">
