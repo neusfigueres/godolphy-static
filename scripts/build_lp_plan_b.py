@@ -208,7 +208,7 @@ def page():
 
 {salons_html()}
 
-{what_html()}
+{what_html(cta('what'))}
 
 <section class="sec">
   <div class="w">
@@ -224,6 +224,7 @@ def page():
   <div class="w">
     <h2 class="h2">Por qué un plan financiero: <span class="grad">quien se marca un objetivo llega más lejos</span></h2>
     {why_cards()}
+    <div class="mcta">{cta('why')}</div>
   </div>
 </section>
 
@@ -258,7 +259,7 @@ def page():
   </div>
 </section>
 
-{product_html()}
+{product_html('<div class="mcta">' + cta('product') + '</div>')}
 
 <section class="sec">
   <div class="w">

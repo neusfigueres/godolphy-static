@@ -181,14 +181,15 @@ PRODUCT = [
 ]
 
 
-def product_html():
+def product_html(cta_html=''):
     items = ''.join(f'<div class="pitem">{icon(ic)}<div><h3>{html.escape(t)}</h3><p>{html.escape(x)}</p></div></div>'
                     for ic, t, x in PRODUCT)
     return ('<section class="sec sec--soft"><div class="w">'
             '<h2 class="h2">Y no es solo un plan: <span class="grad">Godolphy es tu software de reservas y gestión con IA</span></h2>'
             '<p class="plead">El plan financiero es una parte. Con la misma cuenta gestionas todo el día a día del salón, y cada cita que entra alimenta tu plan sola.</p>'
             f'<div class="pgrid">{items}</div>'
-            '<p class="pmore"><a href="/funcionalidades/">Ver todas las funcionalidades →</a></p></div></section>')
+            '<p class="pmore"><a href="/funcionalidades/">Ver todas las funcionalidades →</a></p>'
+            f'{cta_html}</div></section>')
 
 
 PRODUCT_CSS = r"""
@@ -197,6 +198,7 @@ PRODUCT_CSS = r"""
 .pitem{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;}
 .pitem h3{font-family:'Gabarito',sans-serif;font-size:19px;margin:2px 0 6px;}
 .pitem p{margin:0;font-size:15.5px;line-height:1.5;color:var(--muted);}
+.mcta{margin-top:26px;text-align:center;}
 .pmore{margin:22px 0 0;font-weight:700;}.pmore a{color:var(--v);}
 @media(max-width:860px){.pgrid{grid-template-columns:1fr;}}
 """
@@ -210,11 +212,11 @@ WHAT = [
 ]
 
 
-def what_html():
+def what_html(cta_html=''):
     cols = ''.join(f'<div class="wcol"><h3>{html.escape(t)}</h3><p>{html.escape(x)}</p></div>' for t, x in WHAT)
     return ('<section class="sec"><div class="w">'
             '<h2 class="h2">Un plan financiero es tu objetivo del año, <span class="grad">convertido en números de cada mes</span></h2>'
-            f'<div class="wgrid">{cols}</div></div></section>')
+            f'<div class="wgrid">{cols}</div><div class="mcta">{cta_html}</div></div></section>')
 
 
 WHAT_CSS = r"""
@@ -409,7 +411,7 @@ def page():
 
 {salons_html()}
 
-{what_html()}
+{what_html(cta('what'))}
 
 <section class="sec">
   <div class="w">
@@ -424,7 +426,7 @@ def page():
     <h2 class="h2">Las grandes marcas se marcan un objetivo cada año. <span class="grad">Tu salón también puede.</span></h2>
     <p>Las grandes marcas no improvisan: se marcan un objetivo y lo miran cada mes. Que tu salón sea pequeño no es excusa. Es justo por eso que lo necesitas.</p>
   </div>
-  <div class="w">{why_cards()}</div>
+  <div class="w">{why_cards()}<div class="mcta">{cta('why')}</div></div>
 </section>
 
 <section class="sec">
@@ -441,6 +443,7 @@ def page():
     <div>
       <h2 class="h2">Cada mes sabes si vas <span class="grad">por delante o por detrás</span></h2>
       <ul>{after}</ul>
+      <div style="margin-top:22px;">{cta('after')}</div>
     </div>
     <div class="shots">
       {shot('real-vs-plan.webp', 1420, 540, 'Gráfico del plan 2027: beneficio previsto y real de cada mes', 'gráfico real vs plan')}
@@ -468,7 +471,7 @@ def page():
   </div>
 </section>
 
-{product_html()}
+{product_html('<div class="mcta">' + cta('product') + '</div>')}
 
 <section class="sec">
   <div class="w">
