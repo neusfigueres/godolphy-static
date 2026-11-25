@@ -21,7 +21,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from build_lp import CSS, head_common  # noqa: E402
-from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL  # noqa: E402
+from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS  # noqa: E402
 
 SLUG = 'plan-financiero-2027-b'
 OUT = f'lp/{SLUG}/index.html'
@@ -53,7 +53,7 @@ BENEFITS = [
     {
         'h': 'Tu +20 % convertido en <span class="grad">una cifra para cada mes</span>',
         'p': '«Facturar más» no se puede perseguir. «Facturar X este mes» sí. Pones tus números de partida, eliges el +20 % y Godolphy te dice cuánto te toca facturar cada mes para llegar.',
-        'img': ('paso-crecer.webp', 780, 1100, 'Elegir cuánto quieres crecer en 2027', 'pantalla del % de crecimiento'),
+        'img': ('objetivos-mes.webp', 720, 680, 'Objetivos de un mes del plan: citas, facturación y gastos', 'objetivos del mes'),
     },
     {
         'h': 'Con un objetivo concreto <span class="grad">rindes más que con un «a ver qué tal»</span>',
@@ -63,13 +63,12 @@ BENEFITS = [
     {
         'h': '¿Vas por detrás? <span class="grad">Lo sabes este mes, no en diciembre</span>',
         'p': 'Cada mes ves lo real frente a lo planificado. Y si un mes vas por debajo, la IA te avisa a tiempo para reaccionar.',
-        'imgs': [('real-vs-plan.webp', 780, 1100, 'Este mes: real frente al plan', 'tarjeta «real vs plan»'),
-                 ('aviso-ia.webp', 780, 1100, 'Aviso de la IA cuando el mes va por debajo del plan', 'aviso de la IA')],
+        'img': ('real-vs-plan.webp', 1420, 540, 'Gráfico del plan 2027: beneficio previsto y real de cada mes', 'gráfico real vs plan'),
     },
     {
         'h': 'Sin Excel <span class="grad">y sin saber de finanzas</span>',
         'p': 'Un Excel lo descargas y te olvidas. Aquí el plan se actualiza solo con tu día a día: si ya usas Godolphy, partimos de tus citas y gastos reales. Tú pones los números, Godolphy hace los cálculos.',
-        'img': ('paso-numeros.webp', 780, 1100, 'Números de partida del plan financiero', 'pantalla «números de partida»'),
+        'img': ('paso-meses.webp', 1200, 900, 'Facturación de los últimos 12 meses leída de un documento', 'tabla de 12 meses'),
     },
 ]
 
@@ -108,7 +107,7 @@ B_CSS = r'''
 .ben.rev > :first-child{order:2;}
 .ben p.t{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 22px;}
 .ben .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;}
-.ben .ph-wrap{border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(40,10,120,.14);background:#fff;max-width:360px;margin:0 auto;}
+.ben .ph-wrap{border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(40,10,120,.14);background:#fff;margin:0 auto;}
 .ben .ph-wrap img{width:100%;height:auto;display:block;}
 .ben .stat{max-width:420px;margin:0 auto;}
 .award{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:15px;margin:0 0 16px;}
@@ -149,10 +148,11 @@ def page():
   </div>
 </section>''')
     bens = '\n'.join(bens)
-    step_shot = shot('paso-alta.webp', 780, 1100, 'Alta en Godolphy con tu email', 'pantalla de alta')
+    step_shots = ['', shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: ¿tienes la facturación del año pasado?', 'números de partida'),
+                  shot('paso-crecer.webp', 1360, 760, 'Paso 3 del plan: cuánto quieres crecer en 2027', '% de crecimiento')]
     steps = ''.join(
         f'<div class="step2"><span class="n grad">0{i}</span><h3>{e(t)}</h3><p>{e(x)}</p>'
-        + (step_shot if i == 1 else '') + '</div>'
+        + step_shots[i - 1] + '</div>'
         for i, (t, x) in enumerate(STEPS, 1))
     faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in FAQ)
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -218,6 +218,7 @@ def page():
 <section class="sec">
   <div class="w">
     <h2 class="h2">Tu plan 2027, <span class="grad">en 3 pasos</span></h2>
+    {VIDEO}
     <div class="steps2">{steps}</div>
     {cta('steps')}
   </div>
@@ -266,6 +267,7 @@ def page():
   var st=document.getElementById('sticky'),hero=document.getElementById('hero'),lp=document.body.getAttribute('data-lp');
   function upd(){{var past=hero.getBoundingClientRect().bottom<0,cookie=document.getElementById('gd-cookies');st.classList.toggle('on',past&&!cookie);}}
   window.addEventListener('scroll',upd,{{passive:true}});setInterval(upd,1500);upd();
+  {VIDEO_JS}
   document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('[data-cta]');if(!a)return;
     /* lp_cta_click lo envía /assets/signup-modal.js */
     try{{if(window.fbq)fbq('track','InitiateCheckout',{{content_name:lp}});}}catch(_){{}}

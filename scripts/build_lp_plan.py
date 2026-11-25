@@ -66,6 +66,15 @@ FAQ = [
     ('¿Cuánto cuesta después?', 'Los primeros 30 días son gratis. Después, el plan financiero está incluido en el plan Pro, desde 45 €/mes. Si no eliges plan, no pagas nada.'),
 ]
 
+VIDEO = ('<div class="vid"><video controls playsinline preload="none" data-vid="tutorial-plan" '
+         'poster="/lp/plan-financiero-2027/tutorial-poster.webp" width="1280" height="720">'
+         '<source src="/lp/plan-financiero-2027/tutorial-plan-financiero.mp4" type="video/mp4"></video>'
+         '<p>Así se crea el plan, paso a paso (2 min).</p></div>')
+
+VIDEO_JS = ("document.querySelectorAll('video[data-vid]').forEach(function(v){v.addEventListener('play',function(){"
+            "try{if(window.posthog)posthog.capture('lp_video_play',{lp:document.body.getAttribute('data-lp'),video:v.getAttribute('data-vid')});}catch(_){}"
+            "},{once:true});});")
+
 EXTRA_CSS = r'''
 .top{position:absolute;}
 .hero2{background:var(--soft);padding:84px 0 56px;overflow:hidden;}
@@ -112,7 +121,10 @@ EXTRA_CSS = r'''
 .after ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
 .after li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:16.5px;line-height:1.5;}
 .after li i{font-style:normal;font-size:22px;line-height:1.2;}
-.after .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;}
+.after .shots{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;}
+.vid{max-width:920px;margin:0 0 30px;}
+.vid video{width:100%;aspect-ratio:16/9;display:block;border-radius:18px;background:#0c0628;box-shadow:0 24px 60px rgba(40,10,120,.2);}
+.vid p{margin:10px 0 0;font-size:14px;color:var(--muted);}
 .after .ph-wrap{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(40,10,120,.14);background:#fff;}
 .neus2{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;align-items:center;}
 .neus2 img{border-radius:24px;width:100%;max-width:360px;}
@@ -130,7 +142,7 @@ EXTRA_CSS = r'''
   .micro{text-align:center;}
   .pains2,.steps2,.after,.after .shots,.big-co,.neus2{grid-template-columns:1fr;}
   .neus2 img{max-width:260px;}
-  .after .shots{grid-template-columns:1fr 1fr;}
+  .after .shots{grid-template-columns:1fr;}
 }
 '''
 
@@ -139,9 +151,9 @@ def page():
     hc = head_common()
     pains = ''.join(f'<li><b>{e(t)}</b>{e(x)}</li>' for t, x in PAINS)
     step_shots = [
-        shot('paso-alta.webp', 780, 1100, 'Alta en Godolphy con tu email', 'pantalla de alta'),
-        shot('paso-numeros.webp', 780, 1100, 'Números de partida del plan financiero', 'pantalla «números de partida»'),
-        shot('paso-crecer.webp', 780, 1100, 'Elegir cuánto quieres crecer en 2027', 'pantalla del % de crecimiento'),
+        '',
+        shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: ¿tienes la facturación del año pasado?', 'pantalla «números de partida»'),
+        shot('paso-crecer.webp', 1360, 760, 'Paso 3 del plan: cuánto quieres crecer en 2027', 'pantalla del % de crecimiento'),
     ]
     steps = ''.join(
         f'<div class="step2"><span class="n grad">0{i}</span><h3>{e(t)}</h3>'
@@ -216,6 +228,7 @@ def page():
 <section class="sec">
   <div class="w">
     <h2 class="h2">Cómo funciona</h2>
+    {VIDEO}
     <div class="steps2">{steps}</div>
     {cta('steps')}
   </div>
@@ -228,8 +241,8 @@ def page():
       <ul>{after}</ul>
     </div>
     <div class="shots">
-      {shot('real-vs-plan.webp', 780, 1100, 'Este mes: real frente al plan', 'tarjeta «real vs plan»')}
-      {shot('aviso-ia.webp', 780, 1100, 'Aviso de la IA cuando el mes va por debajo del plan', 'aviso de la IA')}
+      {shot('real-vs-plan.webp', 1420, 540, 'Gráfico del plan 2027: beneficio previsto y real de cada mes', 'gráfico real vs plan')}
+      {shot('objetivos-mes.webp', 720, 680, 'Objetivos de un mes del plan, editables', 'objetivos del mes')}
     </div>
   </div>
 </section>
@@ -277,6 +290,7 @@ def page():
   var st=document.getElementById('sticky'),hero=document.getElementById('hero'),lp=document.body.getAttribute('data-lp');
   function upd(){{var past=hero.getBoundingClientRect().bottom<0,cookie=document.getElementById('gd-cookies');st.classList.toggle('on',past&&!cookie);}}
   window.addEventListener('scroll',upd,{{passive:true}});setInterval(upd,1500);upd();
+  {VIDEO_JS}
   document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('[data-cta]');if(!a)return;
     /* lp_cta_click lo envía /assets/signup-modal.js */
     try{{if(window.fbq)fbq('track','InitiateCheckout',{{content_name:lp}});}}catch(_){{}}

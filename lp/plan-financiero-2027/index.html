@@ -178,7 +178,10 @@ a{color:inherit;}
 .after ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
 .after li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:16.5px;line-height:1.5;}
 .after li i{font-style:normal;font-size:22px;line-height:1.2;}
-.after .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;}
+.after .shots{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;}
+.vid{max-width:920px;margin:0 0 30px;}
+.vid video{width:100%;aspect-ratio:16/9;display:block;border-radius:18px;background:#0c0628;box-shadow:0 24px 60px rgba(40,10,120,.2);}
+.vid p{margin:10px 0 0;font-size:14px;color:var(--muted);}
 .after .ph-wrap{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(40,10,120,.14);background:#fff;}
 .neus2{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;align-items:center;}
 .neus2 img{border-radius:24px;width:100%;max-width:360px;}
@@ -196,7 +199,7 @@ a{color:inherit;}
   .micro{text-align:center;}
   .pains2,.steps2,.after,.after .shots,.big-co,.neus2{grid-template-columns:1fr;}
   .neus2 img{max-width:260px;}
-  .after .shots{grid-template-columns:1fr 1fr;}
+  .after .shots{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -244,7 +247,8 @@ a{color:inherit;}
 <section class="sec">
   <div class="w">
     <h2 class="h2">Cómo funciona</h2>
-    <div class="steps2"><div class="step2"><span class="n grad">01</span><h3>Te das de alta con tu email.</h3><div class="ph-wrap " data-ph="paso-alta.webp · 780×1100 px · pantalla de alta"><img src="/lp/plan-financiero-2027/paso-alta.webp" alt="Alta en Godolphy con tu email" width="780" height="1100" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div><div class="step2"><span class="n grad">02</span><h3>Pones tus números de partida.</h3><p>Si ya usas Godolphy, partimos de tus citas y gastos reales.</p><div class="ph-wrap " data-ph="paso-numeros.webp · 780×1100 px · pantalla «números de partida»"><img src="/lp/plan-financiero-2027/paso-numeros.webp" alt="Números de partida del plan financiero" width="780" height="1100" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div><div class="step2"><span class="n grad">03</span><h3>Eliges cuánto quieres crecer</h3><p>y tienes tu plan mes a mes, editable cuando quieras.</p><div class="ph-wrap " data-ph="paso-crecer.webp · 780×1100 px · pantalla del % de crecimiento"><img src="/lp/plan-financiero-2027/paso-crecer.webp" alt="Elegir cuánto quieres crecer en 2027" width="780" height="1100" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div></div>
+    <div class="vid"><video controls playsinline preload="none" data-vid="tutorial-plan" poster="/lp/plan-financiero-2027/tutorial-poster.webp" width="1280" height="720"><source src="/lp/plan-financiero-2027/tutorial-plan-financiero.mp4" type="video/mp4"></video><p>Así se crea el plan, paso a paso (2 min).</p></div>
+    <div class="steps2"><div class="step2"><span class="n grad">01</span><h3>Te das de alta con tu email.</h3></div><div class="step2"><span class="n grad">02</span><h3>Pones tus números de partida.</h3><p>Si ya usas Godolphy, partimos de tus citas y gastos reales.</p><div class="ph-wrap " data-ph="paso-numeros.webp · 1270×650 px · pantalla «números de partida»"><img src="/lp/plan-financiero-2027/paso-numeros.webp" alt="Paso 1 del plan: ¿tienes la facturación del año pasado?" width="1270" height="650" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div><div class="step2"><span class="n grad">03</span><h3>Eliges cuánto quieres crecer</h3><p>y tienes tu plan mes a mes, editable cuando quieras.</p><div class="ph-wrap " data-ph="paso-crecer.webp · 1360×760 px · pantalla del % de crecimiento"><img src="/lp/plan-financiero-2027/paso-crecer.webp" alt="Paso 3 del plan: cuánto quieres crecer en 2027" width="1360" height="760" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div></div></div>
     <a class="btn btn--v" href="https://app.godolphy.com/auth/sign-up?entrada=plan" data-cta="steps" data-gd-direct>Crear mi plan 2027 gratis →</a>
   </div>
 </section>
@@ -256,8 +260,8 @@ a{color:inherit;}
       <ul><li><i>📊</i><span>Cada mes ves lo real frente a lo planificado.</span></li><li><i>🔔</i><span>Si un mes vas por debajo, la IA te avisa a tiempo.</span></li><li><i>🔄</i><span>Un Excel lo descargas y te olvidas. Aquí el plan se actualiza solo con tu día a día.</span></li></ul>
     </div>
     <div class="shots">
-      <div class="ph-wrap " data-ph="real-vs-plan.webp · 780×1100 px · tarjeta «real vs plan»"><img src="/lp/plan-financiero-2027/real-vs-plan.webp" alt="Este mes: real frente al plan" width="780" height="1100" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div>
-      <div class="ph-wrap " data-ph="aviso-ia.webp · 780×1100 px · aviso de la IA"><img src="/lp/plan-financiero-2027/aviso-ia.webp" alt="Aviso de la IA cuando el mes va por debajo del plan" width="780" height="1100" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div>
+      <div class="ph-wrap " data-ph="real-vs-plan.webp · 1420×540 px · gráfico real vs plan"><img src="/lp/plan-financiero-2027/real-vs-plan.webp" alt="Gráfico del plan 2027: beneficio previsto y real de cada mes" width="1420" height="540" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div>
+      <div class="ph-wrap " data-ph="objetivos-mes.webp · 720×680 px · objetivos del mes"><img src="/lp/plan-financiero-2027/objetivos-mes.webp" alt="Objetivos de un mes del plan, editables" width="720" height="680" loading="eager" onerror="this.parentNode.classList.add('ph');this.remove();"></div>
     </div>
   </div>
 </section>
@@ -305,6 +309,7 @@ a{color:inherit;}
   var st=document.getElementById('sticky'),hero=document.getElementById('hero'),lp=document.body.getAttribute('data-lp');
   function upd(){var past=hero.getBoundingClientRect().bottom<0,cookie=document.getElementById('gd-cookies');st.classList.toggle('on',past&&!cookie);}
   window.addEventListener('scroll',upd,{passive:true});setInterval(upd,1500);upd();
+  document.querySelectorAll('video[data-vid]').forEach(function(v){v.addEventListener('play',function(){try{if(window.posthog)posthog.capture('lp_video_play',{lp:document.body.getAttribute('data-lp'),video:v.getAttribute('data-vid')});}catch(_){}},{once:true});});
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cta]');if(!a)return;
     /* lp_cta_click lo envía /assets/signup-modal.js */
     try{if(window.fbq)fbq('track','InitiateCheckout',{content_name:lp});}catch(_){}
