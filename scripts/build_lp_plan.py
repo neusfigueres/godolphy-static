@@ -226,6 +226,33 @@ WHAT_CSS = r"""
 """
 
 
+
+# Trazos «a mano alzada»: círculo alrededor de una palabra y subrayado tipo rotulador.
+CIRCLE_SVG = ('<svg class="circ-svg" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true">'
+              '<path d="M52 16C128 2 262 4 291 38c22 34-78 60-170 58C46 94 4 76 10 48 16 22 78 10 168 8"/></svg>')
+
+
+def circ(text):
+    return f'<span class="circ">{text}{CIRCLE_SVG}</span>'
+
+
+def mark(text):
+    return f'<span class="mark">{text}</span>'
+
+
+HAND_CSS = r"""
+.mark{position:relative;z-index:0;font-style:italic;white-space:nowrap;padding:0 .06em;}
+.mark::before{content:"";position:absolute;z-index:-1;left:-.08em;right:-.12em;bottom:.06em;height:.46em;background:var(--y);border-radius:.25em .6em .35em .7em;transform:rotate(-1.6deg) skewX(-8deg);transform-origin:left;animation:mk .7s .25s ease-out both;}
+@keyframes mk{from{transform:rotate(-1.6deg) skewX(-8deg) scaleX(0);}}
+.circ{position:relative;display:inline-block;white-space:nowrap;margin:0 .12em;}
+.circ-svg{position:absolute;left:-5%;top:-16%;width:110%;height:134%;overflow:visible;pointer-events:none;}
+.circ-svg path{fill:none;stroke:var(--v);stroke-width:3.2;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:900;stroke-dashoffset:900;animation:cdraw 1.1s .5s ease-out forwards;}
+@keyframes cdraw{to{stroke-dashoffset:0;}}
+.h2 .grad{font-style:italic;padding-right:.08em;}
+@media(prefers-reduced-motion:reduce){.mark::before,.circ-svg path{animation:none;stroke-dashoffset:0;}}
+"""
+
+
 VIDEO = ('<div class="vid"><div class="vbox"><video muted playsinline loop preload="none" data-vid="tutorial-plan" '
          'poster="/lp/plan-financiero-2027/tutorial-poster.webp" width="1280" height="720">'
          '<source src="/lp/plan-financiero-2027/tutorial-plan-financiero.mp4" type="video/mp4"></video>'
@@ -291,7 +318,7 @@ EXTRA_CSS = r'''
 .after li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:16.5px;line-height:1.5;}
 .after li{align-items:center;}
 .after .shots{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;}
-.vid{max-width:920px;margin:0 0 30px;}
+.vid{max-width:1040px;margin:0 auto 34px;text-align:center;}
 .vid video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:18px;background:#0c0628;box-shadow:0 24px 60px rgba(40,10,120,.2);}
 .vid p{margin:10px 0 0;font-size:14px;color:var(--muted);}
 .vbox{position:relative;}
@@ -355,7 +382,7 @@ def page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{EXTRA_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}</style>
+<style>{CSS}{EXTRA_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}{HAND_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -365,7 +392,7 @@ def page():
   <div class="w grid">
     <div>
       <div class="y grad" aria-hidden="true">2027</div>
-      <h1>Mueve el culo y crea el plan financiero de tu salón para 2027</h1>
+      <h1>{mark('Mueve el culo')} y crea el {circ('plan financiero')} de tu salón para 2027</h1>
       <p class="sub"><span id="cd" hidden>Quedan <b id="cd-n"></b> para enero. </span>Mete tus números y Godolphy te monta el plan mes a mes, con tus datos reales.</p>
       {cta('hero')}
       <p class="micro">Gratis 30 días.</p>

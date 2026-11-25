@@ -21,7 +21,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from build_lp import CSS, head_common  # noqa: E402
-from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS, testimonials_html, SALON_CSS, salons_html, WHY_CSS, why_cards, ICON_CSS, icon, PRODUCT_CSS, product_html, WHAT_CSS, what_html  # noqa: E402
+from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS, testimonials_html, SALON_CSS, salons_html, WHY_CSS, why_cards, ICON_CSS, icon, PRODUCT_CSS, product_html, WHAT_CSS, what_html, HAND_CSS, circ, mark  # noqa: E402
 
 SLUG = 'plan-financiero-2027-b'
 OUT = f'lp/{SLUG}/index.html'
@@ -177,7 +177,7 @@ def page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{A_CSS}{B_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}</style>
+<style>{CSS}{A_CSS}{B_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}{HAND_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -187,7 +187,7 @@ def page():
   <div class="w grid">
     <div>
       <p class="tag"><i>●</i> Mueve el culo · Plan 2027</p>
-      <h1>Incrementa tu beneficio un <span class="grad">20&nbsp;%</span> <span class="nw">este 2027</span> <span class="grad big">creando tu PLAN financiero.</span></h1>
+      <h1>Incrementa tu {mark('beneficio')} un {mark('20&nbsp;%')} <span class="nw">este 2027</span> <span class="big">creando tu <span class="nw">{circ('<span class="grad">PLAN financiero</span>')}.</span></span></h1>
       <p class="sub">Godolphy convierte tu +20 % en una cifra para cada mes y te avisa si te desvías. <b>Empiezas hoy</b>, sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       {cta('hero')}
       <ul class="fud">{fud}</ul>
