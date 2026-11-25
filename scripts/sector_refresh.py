@@ -367,7 +367,7 @@ SECTORS['unas'] = sector(
     'Da de alta tu salón de uñas y empieza a optimizar tu tiempo',
     'Software para salones de uñas — Gestiona tu negocio sin caos en 2026',
     'Software para salones de uñas: gestiona tu negocio sin caos en 2027',
-    '/lp/plan-financiero-2027/', U.format('photo-1659391542239-9648f307c0b1'), '55% center',
+    '/lp/plan-financiero-2027/', U.format('photo-1632345031435-8727f6897d53'), '55% center',
     [('Nueva reserva', 'Sara · Semipermanente + nail art · sáb. 12:00', 'ahora'),
      ('Recordatorio enviado', 'WhatsApp a Paula · relleno en 3 semanas ✓', '4 min'),
      ('Señal cobrada', '8,00 € · reserva de Irene', '7 min')],
