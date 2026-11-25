@@ -149,7 +149,7 @@ EXTRA_CSS = r'''
 .after li i{font-style:normal;font-size:22px;line-height:1.2;}
 .after .shots{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;}
 .vid{max-width:920px;margin:0 0 30px;}
-.vid video{width:100%;aspect-ratio:16/9;display:block;border-radius:18px;background:#0c0628;box-shadow:0 24px 60px rgba(40,10,120,.2);}
+.vid video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:18px;background:#0c0628;box-shadow:0 24px 60px rgba(40,10,120,.2);}
 .vid p{margin:10px 0 0;font-size:14px;color:var(--muted);}
 .after .ph-wrap{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(40,10,120,.14);background:#fff;}
 .neus2{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;align-items:center;}
