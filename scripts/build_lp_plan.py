@@ -23,7 +23,7 @@ SLUG = 'plan-financiero-2027'
 OUT = f'lp/{SLUG}/index.html'
 IMG = f'/lp/{SLUG}/'
 CTA_URL = 'https://app.godolphy.com/auth/sign-up?entrada=plan'
-CTA_TXT = 'Crear mi plan 2027 gratis →'
+CTA_TXT = 'Haz tu plan financiero 2027 gratis →'
 
 e = html.escape
 
@@ -50,7 +50,7 @@ PAINS = [
 STEPS = [
     ('Pones tus números.', 'Tu facturación del año pasado (subes un documento o la escribes) y tus gastos. Si ya usas Godolphy, partimos de tus citas y gastos reales.'),
     ('Eliges cuánto quieres crecer.', 'Mantenerte, +10 %, +25 % o el porcentaje que tú quieras. Godolphy te monta el plan mes a mes.'),
-    ('Haces el seguimiento mes a mes.', 'Ves lo real frente a lo planificado y, si te desvías, la IA te avisa a tiempo.'),
+    ('Tienes tu plan mes a mes.', 'Lo ves y lo editas cuando quieras, gratis para siempre.'),
 ]
 
 # Iconos propios (trazo blanco sobre círculo con el degradado violeta de Godolphy), en lugar de emojis.
@@ -65,6 +65,7 @@ _ICON_PATHS = {
     'card': '<rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10.5h18M7 15h4"/>',
     'gift': '<rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9c2 0 6 1 6-1.5S14 5 12 9"/>',
     'spark': '<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>',
+    'bank': '<path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/>',
     'sound': '<path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a7.5 7.5 0 0 1 0 11"/>',
 }
 
@@ -92,7 +93,8 @@ FAQ = [
     ('¿Necesito saber de finanzas?', 'No. Pones tus números y Godolphy hace los cálculos.'),
     ('¿Sirve si no tengo historial?', 'Sí, empiezas con tus números de partida.'),
     ('¿Lo puedo cambiar?', 'Sí, cada mes es editable.'),
-    ('¿Cuánto cuesta después?', 'Los primeros 30 días son gratis. Después, el plan financiero está incluido en el plan Pro, desde 45 €/mes. Si no eliges plan, no pagas nada.'),
+    ('¿Es gratis de verdad?', 'Sí. Crear, ver y editar tu plan financiero es gratis para siempre, sin tarjeta.'),
+    ('¿Qué es de pago?', 'El seguimiento automático con tus reservas, los avisos de la IA, «Preparar para el banco» y el resto de Godolphy (reservas, booking…). Está en los planes Pro y Max, desde 45 €/mes, con 30 días de prueba.'),
 ]
 
 TESTIMONIALS = [
@@ -207,7 +209,7 @@ PRODUCT_CSS = r"""
 
 WHAT = [
     ('¿Qué es?', 'Tu hoja de ruta del año: cuánto quieres facturar, cuánto vas a gastar y cuánto te quedará, mes a mes.'),
-    ('¿Para qué sirve?', 'Para saber si vas bien antes de que acabe el año, decidir con números (contratar, subir precios, invertir), preparar los meses flojos y tenerlo listo si un día vas al banco.'),
+    ('¿Para qué sirve?', 'Para saber si vas bien antes de que acabe el año, decidir con números (contratar, subir precios, invertir), y preparar los meses flojos.'),
     ('¿Cuándo hacerlo?', 'Ahora, antes de que empiece 2027. Así enero arranca con un objetivo y no con un «a ver qué tal».'),
 ]
 
@@ -252,6 +254,49 @@ HAND_CSS = r"""
 @keyframes cdraw{to{stroke-dashoffset:0;}}
 .h2 .grad{font-style:italic;padding-right:.08em;}
 @media(prefers-reduced-motion:reduce){.mark::before,.circ-svg path{animation:none;stroke-dashoffset:0;}}
+"""
+
+
+
+FREE_MICRO = 'Gratis para siempre · Sin tarjeta'
+
+PAID = [
+    ('chart', 'Real frente a plan, actualizado solo con tus reservas.'),
+    ('bell', 'Avisos de la IA si un mes va por debajo, a tiempo para reaccionar.'),
+    ('bank', '«Preparar para el banco»: tu plan listo para presentar si pides financiación.'),
+]
+
+
+def paid_html():
+    items = ''.join(f'<li>{icon(ic)}<span>{html.escape(t)}</span></li>' for ic, t in PAID)
+    return ('<section class="sec sec--soft"><div class="w after">'
+            '<div><h2 class="h2">Con Godolphy, tu plan se actualiza solo <span class="grad">cada día con tus reservas reales</span></h2>'
+            '<p class="plead">El plan lo haces gratis. Si además gestionas tus citas con Godolphy, cada reserva cuenta sola: '
+            'ves cómo vas frente al plan sin apuntar nada.</p>'
+            f'<ul>{items}</ul>'
+            '<p class="paidnote">Incluido en los planes Pro y Max. Pruébalo 30 días gratis.</p></div>'
+            '<div class="shots">'
+            + shot('real-vs-plan.webp', 1420, 540, 'Gráfico del plan 2027: beneficio previsto y real de cada mes', 'gráfico real vs plan')
+            + '</div></div></section>')
+
+
+def migra_html():
+    return ('<section class="sec"><div class="w"><div class="migra">'
+            '<img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">'
+            '<div><h2 class="h2">¿Usas otro sistema de reservas? <span class="grad">Te lo paso yo, gratis</span></h2>'
+            '<p>Si te pasas a Godolphy desde Booksy, Fresha, Treatwell o cualquier otro, me encargo yo de la migración, sin coste.</p>'
+            '<p class="sig">Neus</p></div></div></div></section>')
+
+
+FREE_CSS = r"""
+.micro2{margin:12px 0 0;font-size:14.5px;font-weight:700;color:var(--ink);}
+.micro2::before{content:"✓ ";color:var(--v);}
+.paidnote{margin:18px 0 0;font-size:14.5px;font-weight:700;color:var(--v);}
+.migra{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 30px;max-width:980px;}
+.migra img{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:top;}
+.migra p{margin:0 0 6px;font-size:17px;line-height:1.55;color:var(--muted);}
+.migra .h2{margin-bottom:10px;}
+@media(max-width:860px){.migra{grid-template-columns:1fr;text-align:left;padding:22px;}.migra img{width:84px;height:84px;}}
 """
 
 
@@ -355,7 +400,7 @@ def page():
     step_shots = [
         shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: tus números de partida', 'números de partida'),
         shot('paso-crecer.webp', 1360, 760, 'Paso 2 del plan: cuánto quieres crecer en 2027', '% de crecimiento'),
-        shot('real-vs-plan.webp', 1420, 540, 'Seguimiento mes a mes: beneficio previsto y real', 'seguimiento mes a mes'),
+        shot('objetivos-mes.webp', 720, 680, 'Objetivos de un mes del plan, editables', 'objetivos del mes'),
     ]
     steps = ''.join(
         f'<div class="step2"><span class="n grad">0{i}</span><h3>{e(t)}</h3>'
@@ -366,7 +411,7 @@ def page():
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
     title = 'Crea el plan financiero de tu salón para 2027 | Godolphy'
-    desc = 'Mete tus números y Godolphy te monta el plan financiero de tu salón para 2027, mes a mes, con tus datos reales. Gratis 30 días.'
+    desc = 'Mete tus números y Godolphy te monta el plan financiero de tu salón para 2027, mes a mes, con tus datos reales. Gratis para siempre, sin tarjeta.'
     return f'''<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -384,7 +429,7 @@ def page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{EXTRA_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}{HAND_CSS}</style>
+<style>{CSS}{EXTRA_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}{HAND_CSS}{FREE_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -397,7 +442,7 @@ def page():
       <h1>{mark('Mueve el culo')} y crea el {circ('plan financiero')} de tu salón para 2027</h1>
       <p class="sub"><span id="cd" hidden>Quedan <b id="cd-n"></b> para enero. </span>Mete tus números y Godolphy te monta el plan mes a mes, con tus datos reales.</p>
       {cta('hero')}
-      <p class="micro">Gratis 30 días.</p>
+      <p class="micro2">{FREE_MICRO}</p>
     </div>
     <div class="devices">
       <div class="lap">{shot('plan-portatil.webp', 1600, 1000, 'Plan financiero 2027 en el panel de Godolphy (ordenador)', 'captura del plan en el ordenador')}</div>
@@ -438,19 +483,9 @@ def page():
   </div>
 </section>
 
-<section class="sec sec--soft">
-  <div class="w after">
-    <div>
-      <h2 class="h2">Cada mes sabes si vas <span class="grad">por delante o por detrás</span></h2>
-      <ul>{after}</ul>
-      <div style="margin-top:22px;">{cta('after')}</div>
-    </div>
-    <div class="shots">
-      {shot('real-vs-plan.webp', 1420, 540, 'Gráfico del plan 2027: beneficio previsto y real de cada mes', 'gráfico real vs plan')}
-      {shot('objetivos-mes.webp', 720, 680, 'Objetivos de un mes del plan, editables', 'objetivos del mes')}
-    </div>
-  </div>
-</section>
+{paid_html()}
+
+{migra_html()}
 
 <section class="sec" id="neus">
   <div class="w neus2">
@@ -466,17 +501,17 @@ def page():
 
 <section class="sec sec--soft">
   <div class="w">
-    <h2 class="h2">¿Dudas? <span class="grad">30 días gratis y sin tarjeta</span></h2>
+    <h2 class="h2">¿Dudas? <span class="grad">Tu plan es gratis para siempre</span></h2>
     <div class="faq">{faq}</div>
   </div>
 </section>
 
-{product_html('<div class="mcta">' + cta('product') + '</div>')}
 
 <section class="sec">
   <div class="w">
     <div class="final">
-      <h2 style="margin-bottom:22px;">Enero llega igual. Que te pille con un plan.</h2>
+      <h2 style="margin-bottom:12px;">Enero llega igual. Que te pille con un plan.</h2>
+      <p>{FREE_MICRO}</p>
       {cta('final', 'btn')}
     </div>
   </div>

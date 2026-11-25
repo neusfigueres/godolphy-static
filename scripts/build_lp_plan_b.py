@@ -21,12 +21,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from build_lp import CSS, head_common  # noqa: E402
-from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS, testimonials_html, SALON_CSS, salons_html, WHY_CSS, why_cards, ICON_CSS, icon, PRODUCT_CSS, product_html, WHAT_CSS, what_html, HAND_CSS, circ, mark  # noqa: E402
+from build_lp_plan import EXTRA_CSS as A_CSS, CTA_URL, VIDEO, VIDEO_JS, TST_CSS, testimonials_html, SALON_CSS, salons_html, WHY_CSS, why_cards, ICON_CSS, icon, PRODUCT_CSS, product_html, FREE_CSS, FREE_MICRO, paid_html, migra_html, WHAT_CSS, what_html, HAND_CSS, circ, mark  # noqa: E402
 
 SLUG = 'plan-financiero-2027-b'
 OUT = f'lp/{SLUG}/index.html'
 IMG = '/lp/plan-financiero-2027/'
-CTA_TXT = 'Crear mi plan gratis →'
+CTA_TXT = 'Haz tu plan financiero 2027 gratis →'
 
 e = html.escape
 
@@ -41,11 +41,11 @@ def shot(file, w, h, alt, label, cls=''):
             f'loading="lazy" onerror="this.parentNode.classList.add(\'ph\');this.remove();"></div>')
 
 
-FUD = ['30 días gratis', 'Sin tarjeta', 'Si no eliges plan, no pagas nada']
+FUD = ['Gratis para siempre', 'Sin tarjeta']
 
 CONTRAST = [
     ('Cada año, igual que el anterior.', 'Un objetivo claro: +20 % en 2027.'),
-    ('Te enteras en diciembre de que el año ha ido flojo.', 'Cada mes ves si vas por delante o por detrás.'),
+    ('Te enteras en diciembre de que el año ha ido flojo.', 'Un plan que respeta tu temporada: agosto no es diciembre.'),
     ('Creces «si sale».', 'Sabes cuánto tienes que facturar cada mes para llegar.'),
 ]
 
@@ -56,13 +56,8 @@ BENEFITS = [
         'img': ('objetivos-mes.webp', 720, 680, 'Objetivos de un mes del plan: citas, facturación y gastos', 'objetivos del mes'),
     },
     {
-        'h': '¿Vas por detrás? <span class="grad">Lo sabes este mes, no en diciembre</span>',
-        'p': 'Cada mes ves lo real frente a lo planificado. Y si un mes vas por debajo, la IA te avisa a tiempo para reaccionar.',
-        'img': ('real-vs-plan.webp', 1420, 540, 'Gráfico del plan 2027: beneficio previsto y real de cada mes', 'gráfico real vs plan'),
-    },
-    {
         'h': 'Sin Excel <span class="grad">y sin saber de finanzas</span>',
-        'p': 'Un Excel lo descargas y te olvidas. Aquí el plan se actualiza solo con tu día a día: si ya usas Godolphy, partimos de tus citas y gastos reales. Tú pones los números, Godolphy hace los cálculos.',
+        'p': 'Tú pones los números y Godolphy hace los cálculos y reparte tu objetivo por meses según tu temporada.',
         'img': ('paso-meses.webp', 1200, 900, 'Facturación de los últimos 12 meses leída de un documento', 'tabla de 12 meses'),
     },
 ]
@@ -70,15 +65,15 @@ BENEFITS = [
 STEPS = [
     ('Pones tus números.', 'Tu facturación del año pasado (subes un documento o la escribes) y tus gastos. Si ya usas Godolphy, partimos de tus citas y gastos reales.'),
     ('Eliges +20 % (o lo que tú quieras).', 'Godolphy reparte el objetivo en una cifra para cada mes.'),
-    ('Haces el seguimiento mes a mes.', 'Ves lo real frente a lo planificado y, si te desvías, la IA te avisa a tiempo.'),
+    ('Tienes tu plan mes a mes.', 'Lo ves y lo editas cuando quieras, gratis para siempre.'),
 ]
 
 FAQ = [
-    ('¿El +20 % está garantizado?', 'No. El +20 % es el objetivo que te marcas tú. Godolphy lo convierte en una cifra para cada mes y te enseña si vas bien, para que puedas reaccionar a tiempo. Si prefieres otro porcentaje, eliges el que quieras.'),
+    ('¿El +20 % está garantizado?', 'No. El +20 % es el objetivo que te marcas tú. Godolphy lo convierte en una cifra para cada mes, para que sepas a qué apuntar. Si prefieres otro porcentaje, eliges el que quieras.'),
     ('¿Necesito saber de finanzas?', 'No. Pones tus números y Godolphy hace los cálculos.'),
     ('¿Sirve si no tengo historial?', 'Sí, empiezas con tus números de partida.'),
-    ('¿Necesito tarjeta?', 'No. Te das de alta solo con tu email.'),
-    ('¿Cuánto cuesta después?', 'Los primeros 30 días son gratis. Después, el plan financiero está incluido en el plan Pro, desde 45 €/mes. Si no eliges plan, no pagas nada.'),
+    ('¿Es gratis de verdad?', 'Sí. Crear, ver y editar tu plan financiero es gratis para siempre, sin tarjeta.'),
+    ('¿Qué es de pago?', 'El seguimiento automático con tus reservas, los avisos de la IA, «Preparar para el banco» y el resto de Godolphy (reservas, booking…). Está en los planes Pro y Max, desde 45 €/mes, con 30 días de prueba.'),
 ]
 
 B_CSS = r'''
@@ -149,7 +144,7 @@ def page():
     step_shots = [
         shot('paso-numeros.webp', 1270, 650, 'Paso 1 del plan: tus números de partida', 'números de partida'),
         shot('paso-crecer.webp', 1360, 760, 'Paso 2 del plan: cuánto quieres crecer en 2027', '% de crecimiento'),
-        shot('real-vs-plan.webp', 1420, 540, 'Seguimiento mes a mes: beneficio previsto y real', 'seguimiento mes a mes'),
+        '',
     ]
     steps = ''.join(
         f'<div class="step2"><span class="n grad">0{i}</span><h3>{e(t)}</h3><p>{e(x)}</p>'
@@ -159,7 +154,7 @@ def page():
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
     title = 'Incrementa tu beneficio un 20 % este 2027 creando tu plan financiero | Godolphy'
-    desc = 'Marca tu objetivo para 2027 y Godolphy lo convierte en una cifra para cada mes, con tus datos reales. Gratis 30 días, sin tarjeta.'
+    desc = 'Marca tu objetivo para 2027 y Godolphy lo convierte en una cifra para cada mes, con tus datos reales. Gratis para siempre, sin tarjeta.'
     return f'''<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -177,7 +172,7 @@ def page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>{CSS}{A_CSS}{B_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}{HAND_CSS}</style>
+<style>{CSS}{A_CSS}{B_CSS}{TST_CSS}{SALON_CSS}{WHY_CSS}{ICON_CSS}{PRODUCT_CSS}{WHAT_CSS}{HAND_CSS}{FREE_CSS}</style>
 </head>
 <body data-lp="{SLUG}">
 <header class="top"><div class="w"><img src="/wp-images/logo-gradient.png" alt="Godolphy" style="height:30px;width:auto;"></div></header>
@@ -188,7 +183,7 @@ def page():
     <div>
       <p class="tag"><i>●</i> Mueve el culo · Plan 2027</p>
       <h1>Incrementa tu {mark('beneficio')} un {mark('20&nbsp;%')} <span class="nw">este 2027</span> <span class="big">creando tu <span class="nw">{circ('<span class="grad">PLAN financiero</span>')}.</span></span></h1>
-      <p class="sub">Godolphy convierte tu +20 % en una cifra para cada mes y te avisa si te desvías. <b>Empiezas hoy</b>, sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
+      <p class="sub">Godolphy convierte tu +20 % en una cifra para cada mes. Lo haces hoy, <b>gratis y sin saber de finanzas</b>.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       {cta('hero')}
       <ul class="fud">{fud}</ul>
       <div class="proof">
@@ -239,6 +234,10 @@ def page():
   </div>
 </section>
 
+{paid_html()}
+
+{migra_html()}
+
 <section class="sec sec--soft" id="neus">
   <div class="w neus2">
     <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
@@ -254,18 +253,17 @@ def page():
 
 <section class="sec">
   <div class="w">
-    <h2 class="h2">¿Dudas? <span class="grad">30 días gratis y sin tarjeta</span></h2>
+    <h2 class="h2">¿Dudas? <span class="grad">Tu plan es gratis para siempre</span></h2>
     <div class="faq">{faq}</div>
   </div>
 </section>
 
-{product_html('<div class="mcta">' + cta('product') + '</div>')}
 
 <section class="sec">
   <div class="w">
     <div class="final">
       <h2 style="margin-bottom:12px;">Enero llega igual. Que te pille con un objetivo.</h2>
-      <p>30 días gratis · Sin tarjeta</p>
+      <p>{FREE_MICRO}</p>
       {cta('final', 'btn')}
     </div>
   </div>
