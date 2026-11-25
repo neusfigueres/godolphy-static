@@ -219,7 +219,7 @@ def page():
 
 <section class="sec">
   <div class="w">
-    <h2 class="h2">Tu plan 2027, <span class="grad">en 3 pasos</span></h2>
+    <h2 class="h2">Tu plan 2027 en 3 pasos: <span class="grad">tú pones los números, Godolphy calcula</span></h2>
     {VIDEO}
     <div class="steps2">{steps}</div>
     {cta('steps')}
@@ -230,7 +230,7 @@ def page():
   <div class="w neus2">
     <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
     <div>
-      <h2 class="h2">Las grandes empresas no improvisan. <span class="grad">Tu salón tampoco debería.</span></h2>
+      <h2 class="h2">Detrás de Godolphy: <span class="grad">15 años en multinacionales y un salón propio</span></h2>
       <p>Soy Neus. He trabajado unos 15 años en multinacionales, donde nadie empieza el año sin un objetivo, y monté mi propio salón con una socia, donde yo llevaba la parte de negocio.</p>
       <p>Godolphy es el consultor financiero que mi salón nunca tuvo.</p>
       <p class="award">🏆 Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
@@ -241,7 +241,7 @@ def page():
 
 <section class="sec">
   <div class="w">
-    <h2 class="h2">Preguntas</h2>
+    <h2 class="h2">¿Dudas? <span class="grad">30 días gratis y sin tarjeta</span></h2>
     <div class="faq">{faq}</div>
   </div>
 </section>

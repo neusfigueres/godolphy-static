@@ -72,7 +72,7 @@ TESTIMONIALS = [
 ]
 
 
-def testimonials_html(title='Ya lo han hecho'):
+def testimonials_html(title='Ellas ya tienen <span class="grad">su plan 2027</span>'):
     cards = ''.join(
         f'<figure class="tst"><blockquote>«{html.escape(q)}»</blockquote>'
         f'<figcaption><img src="/lp/plan-financiero-2027/{f}" alt="{html.escape(n)}" width="320" height="320" loading="lazy">'
@@ -243,7 +243,7 @@ def page():
 
 <section class="sec sec--soft">
   <div class="w big-co">
-    <h2 class="h2">No es cosa de <span class="grad">grandes empresas</span></h2>
+    <h2 class="h2">Las grandes marcas se marcan un objetivo cada año. <span class="grad">Tu salón también puede.</span></h2>
     <p>Las grandes marcas no improvisan: se marcan un objetivo y lo miran cada mes. Que tu salón sea pequeño no es excusa. Es justo por eso que lo necesitas.</p>
   </div>
   <div class="w why">
@@ -255,7 +255,7 @@ def page():
 
 <section class="sec">
   <div class="w">
-    <h2 class="h2">Cómo funciona</h2>
+    <h2 class="h2">Tu plan 2027 en 3 pasos, <span class="grad">sin saber de finanzas</span></h2>
     {VIDEO}
     <div class="steps2">{steps}</div>
     {cta('steps')}
@@ -265,7 +265,7 @@ def page():
 <section class="sec sec--soft">
   <div class="w after">
     <div>
-      <h2 class="h2">Y después, <span class="grad">no se queda en un cajón</span></h2>
+      <h2 class="h2">Cada mes sabes si vas <span class="grad">por delante o por detrás</span></h2>
       <ul>{after}</ul>
     </div>
     <div class="shots">
@@ -279,7 +279,7 @@ def page():
   <div class="w neus2">
     <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
     <div>
-      <h2 class="h2">Quién está detrás</h2>
+      <h2 class="h2">Detrás de Godolphy: <span class="grad">15 años en multinacionales y un salón propio</span></h2>
       <p>Soy Neus. He trabajado unos 15 años en multinacionales y monté mi propio salón con una socia, donde yo llevaba la parte de negocio.</p>
       <p>Godolphy es el consultor financiero que mi salón nunca tuvo.</p>
       <p class="sig">Neus, fundadora de Godolphy</p>
@@ -289,7 +289,7 @@ def page():
 
 <section class="sec sec--soft">
   <div class="w">
-    <h2 class="h2">Preguntas</h2>
+    <h2 class="h2">¿Dudas? <span class="grad">30 días gratis y sin tarjeta</span></h2>
     <div class="faq">{faq}</div>
   </div>
 </section>
