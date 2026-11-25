@@ -347,7 +347,7 @@ SECTORS['estetica'] = sector(
     'Da de alta tu centro de estética y empieza a optimizar tu tiempo',
     'El software para centros de estética que digitaliza tu negocio en 2026',
     'El software para centros de estética que digitaliza tu negocio en 2027',
-    '/lp/plan-financiero-2027/', U.format('photo-1570172619644-dfd03ed5d881'), '62% center',
+    '/lp/plan-financiero-2027/', '/images/sectores/hero/estetica-cabina.webp', '80% center',
     [('Nueva reserva', 'Lucía · Higiene facial · jue. 17:00', 'ahora'),
      ('Bono vendido', '10 sesiones de presoterapia · 350 €', '3 min'),
      ('Recordatorio enviado', 'WhatsApp a Elena · mañana 12:00 ✓', '8 min')],
