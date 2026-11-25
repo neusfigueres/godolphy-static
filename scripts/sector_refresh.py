@@ -35,7 +35,7 @@ def ci(t, v=False):
 
 HEAD_ADD = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
             '<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">'
-            '<link rel="stylesheet" href="/assets/gx-motion.css?v=3">'
+            '<link rel="stylesheet" href="/assets/gx-motion.css?v=4">'
             '<script src="/assets/gx-motion.js?v=3" defer></script>')
 
 FEAT_ICON = ('<div style="width:36px;height:36px;background:#f0ebff;border-radius:10px;display:flex;align-items:center;'
