@@ -67,8 +67,8 @@ FAQ = [
 ]
 
 TESTIMONIALS = [
-    ('natalia-kilova.webp', 'Natalia Kilova', 'Barcelona', 'Ha sido muy fácil configurar el plan. Creo que este será mi año.'),
-    ('silvia-moreno.webp', 'Sílvia Moreno', 'Toledo', 'Sabía que necesitaba tener un plan financiero, pero no sabía por dónde empezar.'),
+    ('natalia-kilova.webp', 'Natalia Kilova', 'Propietaria de peluquería · Barcelona', 'Ha sido muy fácil configurar el plan. Creo que este será mi año.'),
+    ('silvia-moreno.webp', 'Sílvia Moreno', 'Propietaria de salón de uñas · Toledo', 'Sabía que necesitaba tener un plan financiero, pero no sabía por dónde empezar.'),
 ]
 
 
