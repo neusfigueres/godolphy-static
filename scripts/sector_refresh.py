@@ -118,11 +118,31 @@ def more_than_agenda(c):
 '''
 
 
+def hero_photo(s, c):
+    """Cabecera: foto real del sector a todo el ancho + notificaciones de la app (HTML animado)."""
+    a = '<section class="hero-bg" style="position:relative;'
+    assert a in s
+    s = s.replace(a, f'<section class="hero-bg hero-photo" style="--hero:url(\'{c["hero_img"]}\');--hero-pos:{c.get("hero_pos", "70% center")};position:relative;', 1)
+    i = s.find('<section class="hero-bg hero-photo"')
+    k = s.find('<div style="flex:1;display:flex;justify-content:flex-end;">', i)
+    assert k > 0
+    e = s.find('</div>', k) + len('</div>')
+    cards = ''.join(f'<div class="hn"><img src="/favicon-32.png" alt="" width="32" height="32"><div><b>{t}</b><span>{x}</span></div><small>{w}</small></div>'
+                    for t, x, w in c['notifs'])
+    return s[:k] + f'<div class="hero-notifs" aria-hidden="true">{cards}</div>' + s[e:]
+
+
 SECTORS = {
     'peluquerias': {
         'file': 'sectores/software-para-peluquerias/index.html',
         'negocio': 'peluquería',
         'lp_plan': '/lp/plan-financiero-2027-peluquerias/',
+        # Foto real (Unsplash, licencia gratuita para uso comercial)
+        'hero_img': 'https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=2000&q=75&auto=format&fit=crop',
+        'hero_pos': '65% center',
+        'notifs': [('Nueva reserva', 'Laura · Mechas + corte · sáb. 11:00', 'ahora'),
+                   ('Recordatorio enviado', 'WhatsApp a Marta · mañana 16:00 ✓', '2 min'),
+                   ('Señal cobrada', '10,00 € · reserva de Ana', '5 min')],
         'mas_lead': 'Además de reservas y agenda, Godolphy analiza tu peluquería y te avisa de lo que hace que ganes más o pierdas dinero.',
         'precio_txt': 'Un recargo los sábados por la mañana o un descuento para llenar las horas flojas del martes. El cliente ve el precio final al reservar.',
         'gestor': ['3 citas de ayer sin cobrar', 'Mañana tienes 2 huecos: 11:00 y 12:30', '8 clientes llevan 3 meses sin venir'],
@@ -189,6 +209,7 @@ def refresh(key):
         print('ya actualizada:', c['file'])
         return
     s = s.replace('</head>', HEAD_ADD + '\n</head>', 1)
+    s = hero_photo(s, c)
     # Títulos
     for old, new in c['h2']:
         n = s.count('>' + old + '<')

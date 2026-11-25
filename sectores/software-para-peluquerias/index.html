@@ -328,7 +328,7 @@ function toggleMobileNav(){
 
 <!-- HERO -->
 <main>
-<section class="hero-bg" style="position:relative;padding:130px 40px 100px;overflow:hidden;">
+<section class="hero-bg hero-photo" style="--hero:url('https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=2000&q=75&auto=format&fit=crop');--hero-pos:65% center;position:relative;padding:130px 40px 100px;overflow:hidden;">
   <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:60px;">
     <div style="flex:1;max-width:580px;">
       <div style="display:inline-block;background:rgba(255,255,255,.15);color:#EEFE3A;font-size:13px;font-weight:600;letter-spacing:.08em;padding:6px 18px;border-radius:20px;margin-bottom:24px;border:1px solid rgba(238,254,58,.3);">PELUQUERÍAS</div>
@@ -341,9 +341,7 @@ function toggleMobileNav(){
       <p style="color:rgba(255,255,255,.6);font-size:13px;margin:16px 0 0;">30 días gratis · Sin tarjeta de crédito</p>
       <a href="/verifactu/" title="Facturación con VERI*FACTU" class="gx-vf-hero" style="display:inline-block;margin-top:22px;"><img src="/assets/verifactu-white-sm.png" alt="VERI*FACTU" width="123" height="30" style="display:block;height:28px;width:auto;opacity:.9;"></a>
     </div>
-    <div style="flex:1;display:flex;justify-content:flex-end;">
-      <img src="/images/sectores/v3/hero-peluqueria.webp" alt="Peluquera en la recepción de su salón con la agenda de Godolphy en el ordenador" style="width:100%;max-width:540px;aspect-ratio:4/3;object-fit:cover;border-radius:24px;box-shadow:0 30px 80px rgba(20,5,60,.35);border:6px solid rgba(255,255,255,.18);" width="1100" height="825">
-    </div>
+    <div class="hero-notifs" aria-hidden="true"><div class="hn"><img src="/favicon-32.png" alt="" width="32" height="32"><div><b>Nueva reserva</b><span>Laura · Mechas + corte · sáb. 11:00</span></div><small>ahora</small></div><div class="hn"><img src="/favicon-32.png" alt="" width="32" height="32"><div><b>Recordatorio enviado</b><span>WhatsApp a Marta · mañana 16:00 ✓</span></div><small>2 min</small></div><div class="hn"><img src="/favicon-32.png" alt="" width="32" height="32"><div><b>Señal cobrada</b><span>10,00 € · reserva de Ana</span></div><small>5 min</small></div></div>
   </div>
   <div style="position:absolute;bottom:-1px;left:0;right:0;overflow:hidden;height:80px;">
     <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="width:100%;height:100%;display:block;" fill="white"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/></svg>
