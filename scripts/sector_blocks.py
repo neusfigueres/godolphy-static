@@ -171,6 +171,8 @@ def porque(c):
          'El análisis con IA, la calculadora de precios y el plan financiero te dicen qué servicios te hacen perder dinero, qué clientes no vuelven y cómo va el mes.'),
         ('card', 'Si no viene, no lo pierdes',
          'El cliente deja su tarjeta al reservar. Si no se presenta, puedes cobrarle con esa tarjeta desde el panel.'),
+        ('sync', 'Tus clientes cambian o cancelan solos',
+         'Desde su reserva, el cliente cambia la hora o cancela sin llamarte ni escribirte, dentro del plazo que tú marques en tu política de cancelación.'),
         ('gift', 'La señal no te cuesta comisión',
          'En las citas de los próximos 6 días, la señal es una retención en la tarjeta, no un cobro: si el cliente viene, se libera y no pagas comisión por ella.'),
     ]

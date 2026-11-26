@@ -131,7 +131,7 @@
 /* ¿Por qué Godolphy? */
 .py-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;}
 .py-card{grid-column:span 2;background:#f8f7ff;border:1px solid #ece6ff;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px;}
-.py-card:nth-child(4),.py-card:nth-child(5){grid-column:span 3;}
+
 .py-card h3{font-family:'Gabarito',sans-serif;font-size:21px;line-height:1.2;margin:4px 0 0;color:#02021e;}
 .py-card p{margin:0;font-size:15.5px;line-height:1.6;color:rgba(2,2,30,.65);}
 .py-cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:36px;}
@@ -143,7 +143,7 @@
   .bm-phone figcaption{font-size:12px;}
   .cx-wrap{grid-template-columns:1fr;gap:32px;}.cx-text h2{font-size:30px;}
   .cx-card{padding:16px;}
-  .py-grid{grid-template-columns:1fr;}.py-card,.py-card:nth-child(4),.py-card:nth-child(5){grid-column:auto;}
+  .py-grid{grid-template-columns:1fr;}.py-card{grid-column:auto;}
 }
 @media(prefers-reduced-motion:reduce){.cx-row{transition:none!important;opacity:1;transform:none;}.cx-apply{animation:none!important;}}
 /* Cabecera: «Ver demo» y «Pide una demo con Neus» */
@@ -156,3 +156,26 @@
 .gd-demo-neus a:hover{text-decoration:underline;}
 /* Vídeo con las personas en el centro: en escritorio se amplía desde la izquierda para que queden a la derecha, fuera del velo */
 @media(min-width:861px){.hero-bg.hero-photo > .hero-vid--shift{transform:scale(1.32);transform-origin:0 50%;}}
+
+/* Tiempos de exposición (sector_exposicion.py) */
+.ex-sec{background:#fff;}
+.ex-wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;}
+.ex-text h2{font-family:'Gabarito',sans-serif;font-size:40px;line-height:1.12;font-weight:700;color:#02021e;margin:0 0 18px;}
+.ex-text>p{font-size:17px;line-height:1.65;color:rgba(2,2,30,.68);margin:0 0 22px;}
+.ex-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+.ex-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:rgba(2,2,30,.82);}
+.ex-list .check{width:20px;height:20px;flex:0 0 auto;fill:#631cff;margin-top:2px;}
+.ex-card{background:#f8f7ff;padding:24px;box-shadow:0 24px 50px rgba(40,10,110,.10);}
+.ex-head{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;color:rgba(2,2,30,.55);margin-bottom:6px;}
+.ex-head b{font-family:'Gabarito',sans-serif;font-size:20px;color:#02021e;}
+.ex-track{display:flex;gap:4px;height:74px;}
+.ex-seg,.ex-fit{display:flex;flex-direction:column;justify-content:center;border-radius:12px;padding:0 10px;font-style:normal;overflow:hidden;white-space:nowrap;min-width:0;}
+.ex-seg b,.ex-fit b{font-size:13px;}.ex-seg small,.ex-fit small{font-size:11.5px;opacity:.8;}
+.ex-work{background:linear-gradient(160deg,#9B4FE8,#631cff);color:#fff;}
+.ex-wait{background:repeating-linear-gradient(135deg,#ece6ff 0 8px,#f8f7ff 8px 16px);border:1.5px dashed #b9a6ff;color:#631cff;}
+.ex-track2{margin-top:10px;height:64px;}
+.ex-fit{background:#EEFE3A;color:#02021e;box-shadow:0 10px 24px rgba(99,28,255,.18);opacity:0;transform:translateY(-26px);transition:opacity .5s ease .5s,transform .7s cubic-bezier(.2,.8,.2,1) .5s;}
+.gd-on .ex-fit{opacity:1;transform:none;}
+.ex-note{margin:16px 0 0;font-size:14.5px;color:rgba(2,2,30,.7);}
+@media(max-width:860px){.ex-wrap{grid-template-columns:1fr;gap:32px;}.ex-text h2{font-size:30px;}.ex-card{padding:16px;}.ex-seg,.ex-fit{padding:0 6px;}.ex-seg b,.ex-fit b{font-size:11.5px;}}
+@media(prefers-reduced-motion:reduce){.ex-fit{transition:none!important;opacity:1;transform:none;}}
