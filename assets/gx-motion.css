@@ -154,3 +154,5 @@
 .gd-demo-neus{color:rgba(255,255,255,.75);font-size:14px;margin:10px 0 0;}
 .gd-demo-neus a{color:#EEFE3A;font-weight:700;text-decoration:none;}
 .gd-demo-neus a:hover{text-decoration:underline;}
+/* Vídeo con las personas en el centro: en escritorio se amplía desde la izquierda para que queden a la derecha, fuera del velo */
+@media(min-width:861px){.hero-bg.hero-photo > .hero-vid--shift{transform:scale(1.32);transform-origin:0 50%;}}

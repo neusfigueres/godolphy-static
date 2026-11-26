@@ -69,7 +69,7 @@ SECTORS = {
         desc='Software para maquilladoras profesionales: reservas a domicilio con el desplazamiento calculado, señal para asegurar la fecha, extras y recordatorios por WhatsApp. Prueba gratis 30 días.',
         h1=f'Software para maquilladoras: {it("reservas a domicilio", True)} con el desplazamiento calculado',
         sub='Tus clientes reservan desde el móvil, ponen su dirección y ven el precio con el desplazamiento incluido. Con señal para asegurar la fecha y recordatorios automáticos.',
-        hero='https://images.unsplash.com/photo-1613966802194-d46a163af70d?w=2000&q=75&auto=format&fit=crop', pos='70% center',
+        hero='/images/sectores/hero/maquilladora-poster.webp', pos='50% center', video='/images/sectores/hero/maquilladora',
         notifs=[('Nueva reserva a domicilio', 'Novia · Maquillaje + prueba · sáb. 9:00', 'ahora'),
                 ('Señal cobrada', '60,00 € · boda de Clara', '4 min'),
                 ('Desplazamiento calculado', '12,4 km · +8,50 €', '9 min')],
@@ -132,6 +132,10 @@ def build(key):
                     for t, x, w in c['notifs'])
     body = re.sub(r'<div class="hero-notifs" aria-hidden="true">(?:<div class="hn">.*?</small></div>)+</div>', '<div class="hero-notifs" aria-hidden="true">' + cards + '</div>', body, 1, re.S)
     assert c['notifs'][0][1] in body
+    if c.get('video'):
+        j = body.find('>', body.find('<section class="hero-bg hero-photo"')) + 1
+        body = body[:j] + (f'<video class="hero-vid hero-vid--shift" autoplay muted loop playsinline preload="auto" poster="{c["hero"]}" aria-hidden="true">'
+                           f'<source src="{c["video"]}.webm" type="video/webm"><source src="{c["video"]}.mp4" type="video/mp4"></video>') + body[j:]
     body = body.replace('data-sector="Centro de estética"', f'data-sector="{c["tipo"]}"')
 
     # --- gestor diario y márgenes ---
