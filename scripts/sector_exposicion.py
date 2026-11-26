@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-EXTRAS_H2 = 'Extras al reservar: <span class="it">la agenda suma el tiempo y el precio</span> sola'
+EXTRAS_H2 = 'Extras opcionales u obligatorios: <span class="it">la agenda suma el tiempo y el precio</span> sola'
 
 
 def it(t):
@@ -102,7 +102,7 @@ for p in sorted((ROOT / 'sectores').glob('software-para-*/index.html')):
     key = p.parent.name.replace('software-para-', '')
     s = p.read_text()
     # extras: solo extras
-    m = re.search(r'(<h2[^>]*>)Extras (?:y tiempos de exposición|al reservar):.*?(</h2>)', s, re.S)
+    m = re.search(r'(<h2[^>]*>)Extras (?:y tiempos de exposición|al reservar|opcionales u obligatorios):.*?(</h2>)', s, re.S)
     if not m:
         print(key, 'sin extras'); continue
     s = s[:m.start()] + m.group(1) + EXTRAS_H2 + m.group(2) + s[m.end():]
