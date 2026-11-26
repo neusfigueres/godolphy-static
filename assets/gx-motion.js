@@ -17,7 +17,7 @@
   }
   var els=[].slice.call(d.querySelectorAll('.mk,.ci,.gd-card'));
   if(!('IntersectionObserver' in window)){els.forEach(fire);return;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fire(e.target);io.unobserve(e.target);}});},{threshold:.35});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fire(e.target);io.unobserve(e.target);}});},{threshold:.2});
   els.forEach(function(el){io.observe(el);});
 })();
 (function(){

@@ -84,3 +84,65 @@
 .hero-photo{isolation:isolate;}
 .hero-bg.hero-photo > .hero-vid{position:absolute!important;inset:0;width:100%;height:100%;max-width:none;border-radius:0;margin:0;object-fit:cover;object-position:var(--hero-pos,62% center);z-index:-1;pointer-events:none;}
 @media(max-width:860px){.hero-vid{object-position:var(--hero-pos-m,var(--hero-pos,62% center));}}
+/* ===== Bloques de sector (sector_blocks.py) ===== */
+.ico{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(160deg,#9B4FE8 0%,#631cff 70%);color:#fff;box-shadow:0 6px 16px rgba(99,28,255,.25);}
+.ico svg{width:21px;height:21px;}.ico--s{width:30px;height:30px;}.ico--s svg{width:16px;height:16px;}
+.gd-more{display:inline-block;margin-top:18px;font-size:15px;font-weight:700;color:#631cff;text-decoration:none;}
+.gd-more:hover{text-decoration:underline;}
+.gd-cta2 .gd-more{margin-top:0;}
+/* Reserva desde el móvil */
+.bm-col{flex:1.15;min-width:0;}
+.bm-phones{display:flex;gap:18px;justify-content:center;align-items:flex-start;}
+.bm-phone{margin:0;flex:1;max-width:210px;display:flex;flex-direction:column;align-items:center;gap:12px;}
+.bm-phone:nth-child(2){margin-top:36px;}
+.bm-screen{width:100%;aspect-ratio:600/1133;border-radius:30px;border:7px solid #15122b;background:#15122b;overflow:hidden;box-shadow:0 24px 50px rgba(40,10,110,.22);}
+.bm-screen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;border-radius:23px;}
+.bm-phone figcaption{font-size:13.5px;line-height:1.35;color:rgba(2,2,30,.65);text-align:center;max-width:180px;}
+.bm-note{text-align:center;font-size:12.5px;color:rgba(2,2,30,.45);margin:18px 0 0;}
+/* Calculadora de precios */
+.cx-sec{background:#f8f7ff;}
+.cx-wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;}
+.cx-kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#631cff;background:#ece6ff;border-radius:99px;padding:6px 12px;margin-bottom:16px;}
+.cx-text h2{font-family:'Gabarito',sans-serif;font-size:40px;line-height:1.12;font-weight:700;color:#02021e;margin:0 0 18px;}
+.cx-text>p{font-size:17px;line-height:1.65;color:rgba(2,2,30,.68);margin:0 0 22px;}
+.cx-list{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:12px;}
+.cx-list li{display:flex;gap:12px;align-items:center;font-size:16px;color:rgba(2,2,30,.82);}
+.cx-foot{font-size:13px;color:rgba(2,2,30,.5);margin:14px 0 0;}
+.cx-card{background:#fff;padding:22px;box-shadow:0 24px 50px rgba(40,10,110,.10);}
+.cx-head{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;color:rgba(2,2,30,.55);}
+.cx-head b{font-family:'Gabarito',sans-serif;font-size:22px;color:#02021e;}
+.cx-rows{list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+.cx-row{border:1px solid #ece6ff;border-radius:16px;padding:14px 16px;opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s;}
+.gd-on .cx-row{opacity:1;transform:none;}
+.gd-on .cx-row:nth-child(2){transition-delay:.25s}.gd-on .cx-row:nth-child(3){transition-delay:.5s}
+.cx-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;}
+.cx-top b{display:block;font-size:15.5px;color:#02021e;}.cx-top small{font-size:12.5px;color:rgba(2,2,30,.5);}
+.cx-tag{flex:0 0 auto;font-size:12px;font-weight:700;border-radius:99px;padding:4px 10px;}
+.cx-bad .cx-tag{background:#ffe7e7;color:#c62828;}.cx-mid .cx-tag{background:#fff4d6;color:#8a5a00;}.cx-ok .cx-tag{background:#e3f7ea;color:#1b7a3d;}
+.cx-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px;font-size:12px;color:rgba(2,2,30,.5);}
+.cx-nums b{display:block;font-size:15px;color:#02021e;margin-top:2px;}
+.cx-bad .cx-ben{color:#c62828;}.cx-ok .cx-ben{color:#1b7a3d;}
+.cx-rec{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px dashed #ece6ff;font-size:13px;color:rgba(2,2,30,.6);}
+.cx-rec b{color:#631cff;font-size:15px;}
+.cx-apply{margin-left:auto;background:#631cff;color:#fff;font-weight:700;font-size:13px;border-radius:99px;padding:6px 14px;}
+.gd-on .cx-bad .cx-apply{animation:cxPulse 1.6s ease-in-out 1.2s 2;}
+@keyframes cxPulse{50%{box-shadow:0 0 0 7px rgba(99,28,255,.18);}}
+.cx-ex{text-align:right;font-size:12px;color:rgba(2,2,30,.4);margin:10px 0 0;}
+/* ¿Por qué Godolphy? */
+.py-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;}
+.py-card{grid-column:span 2;background:#f8f7ff;border:1px solid #ece6ff;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px;}
+.py-card:nth-child(4),.py-card:nth-child(5){grid-column:span 3;}
+.py-card h3{font-family:'Gabarito',sans-serif;font-size:21px;line-height:1.2;margin:4px 0 0;color:#02021e;}
+.py-card p{margin:0;font-size:15.5px;line-height:1.6;color:rgba(2,2,30,.65);}
+.py-cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:36px;}
+.py-cta small{font-size:13px;color:rgba(2,2,30,.5);}
+@media(max-width:860px){
+  .bm-col{width:100%;}
+  .bm-phones{gap:10px;}.bm-phone{max-width:none;}.bm-phone:nth-child(2){margin-top:22px;}
+  .bm-screen{border-width:5px;border-radius:20px;}.bm-screen img{border-radius:15px;}
+  .bm-phone figcaption{font-size:12px;}
+  .cx-wrap{grid-template-columns:1fr;gap:32px;}.cx-text h2{font-size:30px;}
+  .cx-card{padding:16px;}
+  .py-grid{grid-template-columns:1fr;}.py-card,.py-card:nth-child(4),.py-card:nth-child(5){grid-column:auto;}
+}
+@media(prefers-reduced-motion:reduce){.cx-row{transition:none!important;opacity:1;transform:none;}.cx-apply{animation:none!important;}}
