@@ -65,7 +65,7 @@
 .hn:nth-child(1){animation-delay:.5s;margin-right:40px;}.hn:nth-child(2){animation-delay:1.3s;}.hn:nth-child(3){animation-delay:2.1s;margin-right:24px;}
 .hn img{width:38px;height:38px;border-radius:10px;background:#fff;padding:5px;flex:0 0 auto;}
 .hn b{display:block;font-size:14px;}.hn span{display:block;font-size:13px;opacity:.85;line-height:1.35;}
-.hn small{margin-left:auto;align-self:flex-start;font-size:11px;opacity:.65;}
+.hn small{white-space:nowrap;margin-left:auto;align-self:flex-start;font-size:11px;opacity:.65;}
 @keyframes hnIn{to{opacity:1;transform:none;}}
 @media(max-width:860px){
   .hero-photo{background-position:var(--hero-pos-m,var(--hero-pos,70% center))!important;}
@@ -74,3 +74,9 @@
   .hn:nth-child(3){display:none;}
 }
 @media(prefers-reduced-motion:reduce){.hn{animation:none;opacity:1;transform:none;}}
+/* Notificaciones en bucle: entra una nueva arriba, las demás bajan y la última se va por detrás */
+.hero-notifs.hn-loop{position:relative;display:block;}
+.hn-loop .hn{position:absolute;top:0;right:0;margin:0!important;animation:none;opacity:0;
+  transition:transform .75s cubic-bezier(.2,.8,.2,1),opacity .6s ease,filter .6s ease;will-change:transform,opacity;}
+.hn-loop .hn.hn-noanim{transition:none;}
+@media(max-width:860px){.hero-notifs.hn-loop{flex:none;width:100%;align-self:stretch;}.hn-loop .hn{left:0;right:auto;width:100%;}.hn-loop .hn:nth-child(3){display:flex;}}
