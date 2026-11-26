@@ -4,8 +4,8 @@
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function countUp(el){
     var to=parseFloat(el.getAttribute('data-count'))||0,suf=el.getAttribute('data-suf')||'',t0=null,dur=1100;
-    if(reduce){el.textContent=to+suf;return;}
-    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=v+suf;if(p<1)requestAnimationFrame(step);}
+    if(reduce){el.textContent=String(to).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+suf;return;}
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=String(v).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+suf;if(p<1)requestAnimationFrame(step);}
     requestAnimationFrame(step);
   }
   function fire(el){

@@ -179,3 +179,13 @@
 .ex-note{margin:16px 0 0;font-size:14.5px;color:rgba(2,2,30,.7);}
 @media(max-width:860px){.ex-wrap{grid-template-columns:1fr;gap:32px;}.ex-text h2{font-size:30px;}.ex-card{padding:16px;}.ex-seg,.ex-fit{padding:0 6px;}.ex-seg b,.ex-fit b{font-size:11.5px;}}
 @media(prefers-reduced-motion:reduce){.ex-fit{transition:none!important;opacity:1;transform:none;}}
+
+/* Comisiones (sector_comisiones.py) */
+.cm-sec{background:#f8f7ff;}.cm-sec .ex-card{background:#fff;}
+.cm-rows{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px;}
+.cm-row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;border:1px solid #ece6ff;border-radius:16px;padding:14px 16px;}
+.cm-row b{display:block;font-size:15.5px;color:#02021e;}.cm-row small{font-size:12.5px;color:rgba(2,2,30,.5);}
+.cm-row span{font-size:13px;color:rgba(2,2,30,.55);white-space:nowrap;}
+.cm-row strong{font-family:'Gabarito',sans-serif;font-size:24px;color:#631cff;white-space:nowrap;}
+@media(max-width:860px){.cm-row{grid-template-columns:1fr auto;}.cm-row span{grid-column:1;grid-row:2;}.cm-row strong{grid-row:1 / span 2;grid-column:2;}}
+.ex-text>p.cx-foot{font-size:13px;color:rgba(2,2,30,.5);margin:14px 0 0;}
