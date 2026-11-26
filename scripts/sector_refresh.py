@@ -35,8 +35,8 @@ def ci(t, v=False):
 
 HEAD_ADD = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
             '<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">'
-            '<link rel="stylesheet" href="/assets/gx-motion.css?v=9">'
-            '<script src="/assets/gx-motion.js?v=9" defer></script>')
+            '<link rel="stylesheet" href="/assets/gx-motion.css?v=11">'
+            '<script src="/assets/gx-motion.js?v=11" defer></script>')
 
 FEAT_ICON = ('<div style="width:36px;height:36px;background:#f0ebff;border-radius:10px;display:flex;align-items:center;'
              'justify-content:center;margin-bottom:12px;"><svg width="18" height="18" fill="none" stroke="#631cff" '
@@ -157,7 +157,7 @@ SECTORS = {
         'h2': [
             # (texto actual exacto del interior del <h2>/<h1>/<h3>, texto nuevo)
             ('Software para peluquerías — Reservas, agenda y gestión con IA',
-             f'Software para peluquerías: {it("reservas, agenda y números", True)} en un solo sitio'),
+             f'Software para peluquerías: {it("reservas, negocio y crecimiento", True)}'),
             ('Una agenda con IA que incrementa tus beneficios',
              f'Reservas, agenda, equipo y análisis IA: {it("así se ve Godolphy")} en tu peluquería'),
             ('Descubre dónde estás perdiendo dinero y cómo recuperarlo.',
@@ -328,7 +328,7 @@ LAS_CLIENTES = [('Las clientes reservan sin interrumpir tu tiempo.', 'Los client
 SECTORS['barberias'] = sector(
     'sectores/software-para-barberias/index.html', 'barbería', 'barberías', 'tu',
     'Software para barberías — Reservas online y gestión de agenda',
-    f'Software para barberías: {it("reservas online y agenda", True)} sin llamadas',
+    f'Software para barberías: {it("reservas, negocio y crecimiento", True)}',
     'Y si realizas servicios de barbería <span class="gx-grad">a domicilio</span>',
     f'Barbería a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
     'Funcionalidades específicas para tu barbería.',
@@ -347,7 +347,7 @@ SECTORS['barberias']['hero_video'] = '/images/sectores/hero/barberia'
 SECTORS['estetica'] = sector(
     'sectores/software-para-centro-de-estetica-y-salones/index.html', 'centro de estética', 'centros de estética', 'tu',
     'Software para centros de estética — Reservas, pagos y fidelización con IA',
-    f'Software para centros de estética: {it("reservas, cobros y clientes que vuelven", True)}',
+    f'Software para centros de estética: {it("reservas, negocio y crecimiento", True)}',
     'Y si realizas tratamientos <span class="gx-grad">a domicilio</span>',
     f'Tratamientos a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
     'Funcionalidades específicas para tu centro de estética.',
@@ -367,7 +367,7 @@ SECTORS['estetica'] = sector(
 SECTORS['unas'] = sector(
     'sectores/software-para-salones-de-unas/index.html', 'salón de uñas', 'salones de uñas', 'tu',
     'Software para salones de uñas — Agenda online y gestión de clientes',
-    f'Software para salones de uñas: {it("agenda online y clientes que repiten", True)}',
+    f'Software para salones de uñas: {it("reservas, negocio y crecimiento", True)}',
     'Y si realizas manicuras <span class="gx-grad">a domicilio</span>',
     f'Manicura a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
     'Funcionalidades específicas para tu salón de uñas.',
@@ -389,7 +389,7 @@ SECTORS['unas'] = sector(
 SECTORS['spa'] = sector(
     'sectores/software-para-spa-y-masajes/index.html', 'centro', 'spas y centros de masaje', 'tu',
     'Software para spas y centros de masajes — Reservas y gestión integral',
-    f'Software para spas y centros de masaje: {it("reservas, cabinas y bonos", True)} en orden',
+    f'Software para spas y centros de masaje: {it("reservas, negocio y crecimiento", True)}',
     'Y si ofreces masajes y tratamientos <span class="gx-grad">a domicilio</span>',
     f'Masajes a domicilio: {it("el desplazamiento se calcula y se cobra solo")}',
     'Funcionalidades específicas para tu centro de spa y masajes.',
