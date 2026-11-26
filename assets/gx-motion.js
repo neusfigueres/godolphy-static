@@ -11,7 +11,7 @@
   function fire(el){
     if(el.classList.contains('mk')||el.classList.contains('ci')) el.classList.add('on');
     if(el.classList.contains('gd-card')) el.classList.add('gd-on');
-    el.querySelectorAll('.gd-bars span[data-h]').forEach(function(s){s.style.height=s.getAttribute('data-h')+'%';});
+    el.querySelectorAll('.gd-bars span[data-h],.pf-pair span[data-h]').forEach(function(s){s.style.height=s.getAttribute('data-h')+'%';});
     el.querySelectorAll('.gd-meter i[data-w]').forEach(function(s){s.style.width=s.getAttribute('data-w')+'%';});
     el.querySelectorAll('[data-count]').forEach(countUp);
   }
