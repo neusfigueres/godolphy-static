@@ -55,3 +55,5 @@
     window.addEventListener('resize',function(){if(shown)layout();});
   });
 })();
+/* Vídeo de cabecera: sin movimiento si el sistema lo pide */
+(function(){if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){[].forEach.call(document.querySelectorAll('.hero-vid'),function(v){v.removeAttribute('autoplay');v.pause();});}})();

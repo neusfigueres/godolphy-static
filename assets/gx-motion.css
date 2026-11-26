@@ -68,7 +68,7 @@
 .hn small{white-space:nowrap;margin-left:auto;align-self:flex-start;font-size:11px;opacity:.65;}
 @keyframes hnIn{to{opacity:1;transform:none;}}
 @media(max-width:860px){
-  .hero-photo{background-position:var(--hero-pos-m,var(--hero-pos,70% center))!important;}
+  .hero-photo{background-position:var(--hero-pos-m,var(--hero-pos,70% center))!important;padding-bottom:130px!important;}
   .hero-bg.hero-photo::before{background:linear-gradient(180deg,rgba(20,5,55,.93) 0%,rgba(30,8,85,.86) 52%,rgba(30,8,85,.45) 74%,rgba(30,8,85,.2) 100%)!important;}
   .hero-notifs{align-items:stretch;margin-top:40px;}.hn{max-width:none;margin-right:0!important;}
   .hn:nth-child(3){display:none;}
@@ -79,4 +79,8 @@
 .hn-loop .hn{position:absolute;top:0;right:0;margin:0!important;animation:none;opacity:0;
   transition:transform .75s cubic-bezier(.2,.8,.2,1),opacity .6s ease,filter .6s ease;will-change:transform,opacity;}
 .hn-loop .hn.hn-noanim{transition:none;}
-@media(max-width:860px){.hero-notifs.hn-loop{flex:none;width:100%;align-self:stretch;}.hn-loop .hn{left:0;right:auto;width:100%;}.hn-loop .hn:nth-child(3){display:flex;}}
+@media(max-width:860px){.hero-notifs.hn-loop{flex:0 0 auto!important;width:100%;align-self:stretch;margin-bottom:70px;}.hn-loop .hn{left:0;right:auto;width:100%;}.hn-loop .hn:nth-child(3){display:flex;}}
+/* Vídeo de fondo de la cabecera (barberías) */
+.hero-photo{isolation:isolate;}
+.hero-bg.hero-photo > .hero-vid{position:absolute!important;inset:0;width:100%;height:100%;max-width:none;border-radius:0;margin:0;object-fit:cover;object-position:var(--hero-pos,62% center);z-index:-1;pointer-events:none;}
+@media(max-width:860px){.hero-vid{object-position:var(--hero-pos-m,var(--hero-pos,62% center));}}

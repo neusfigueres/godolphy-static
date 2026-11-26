@@ -35,8 +35,8 @@ def ci(t, v=False):
 
 HEAD_ADD = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
             '<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">'
-            '<link rel="stylesheet" href="/assets/gx-motion.css?v=4">'
-            '<script src="/assets/gx-motion.js?v=4" defer></script>')
+            '<link rel="stylesheet" href="/assets/gx-motion.css?v=6">'
+            '<script src="/assets/gx-motion.js?v=6" defer></script>')
 
 FEAT_ICON = ('<div style="width:36px;height:36px;background:#f0ebff;border-radius:10px;display:flex;align-items:center;'
              'justify-content:center;margin-bottom:12px;"><svg width="18" height="18" fill="none" stroke="#631cff" '
@@ -129,7 +129,13 @@ def hero_photo(s, c):
     e = s.find('</div>', k) + len('</div>')
     cards = ''.join(f'<div class="hn"><img src="/favicon-32.png" alt="" width="32" height="32"><div><b>{t}</b><span>{x}</span></div><small>{w}</small></div>'
                     for t, x, w in c['notifs'])
-    return s[:k] + f'<div class="hero-notifs" aria-hidden="true">{cards}</div>' + s[e:]
+    s = s[:k] + f'<div class="hero-notifs" aria-hidden="true">{cards}</div>' + s[e:]
+    if c.get('hero_video'):  # vídeo de fondo (sin sonido, en bucle) con la foto como póster
+        j = s.find('>', s.find('<section class="hero-bg hero-photo"')) + 1
+        v = c['hero_video']
+        s = s[:j] + (f'<video class="hero-vid" autoplay muted loop playsinline preload="auto" poster="{c["hero_img"]}" aria-hidden="true">'
+                     f'<source src="{v}.webm" type="video/webm"><source src="{v}.mp4" type="video/mp4"></video>') + s[j:]
+    return s
 
 
 SECTORS = {
@@ -329,13 +335,14 @@ SECTORS['barberias'] = sector(
     'Da de alta tu barbería y empieza a optimizar tu tiempo',
     'Software para barberías: lo que de verdad necesitas',
     'Software para barberías: lo que de verdad necesitas en 2027',
-    '/lp/plan-financiero-2027/', U.format('photo-1705976062088-5433328c2dcd'), '62% center',
+    '/lp/plan-financiero-2027/', '/images/sectores/hero/barberia-poster.webp', '62% center',
     [('Nueva reserva', 'Carlos · Corte + barba · vie. 19:30', 'ahora'),
      ('Recordatorio enviado', 'WhatsApp a Javi · mañana 10:00 ✓', '2 min'),
      ('Señal cobrada', '5,00 € · reserva de Adrián', '6 min')],
     ['2 citas de ayer sin cobrar', 'Sábado lleno: sube el precio de 10:00 a 14:00', '11 clientes llevan 6 semanas sin venir'],
     [('Corte degradado', 52), ('Arreglo de barba', 14)], 31, EXTRAS_STD,
     'Un recargo el sábado por la mañana, cuando todos quieren venir, o un descuento para llenar los martes. El cliente ve el precio final al reservar.')
+SECTORS['barberias']['hero_video'] = '/images/sectores/hero/barberia'
 
 SECTORS['estetica'] = sector(
     'sectores/software-para-centro-de-estetica-y-salones/index.html', 'centro de estética', 'centros de estética', 'tu',
