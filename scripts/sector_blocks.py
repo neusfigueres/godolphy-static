@@ -35,23 +35,23 @@ def recomendado(coste):
 
 
 SECTORES = {
-    'peluquerias': dict(
+    'peluquerias': dict(tipo='Peluquería',
         file='sectores/software-para-peluquerias/index.html', negocio='peluquería', pro='peluquero/a',
         corto='un lavar y peinar o un flequillo',
         servicios=[('Lavar y peinar', '30 min', 14, 13.20), ('Corte caballero', '30 min', 15, 9.40), ('Mechas balayage', '2 h 30 min', 95, 48)]),
-    'barberias': dict(
+    'barberias': dict(tipo='Barbería',
         file='sectores/software-para-barberias/index.html', negocio='barbería', pro='barbero',
         corto='un arreglo de barba',
         servicios=[('Arreglo de barba', '15 min', 8, 7.10), ('Corte + barba', '45 min', 22, 14.10), ('Corte degradado', '40 min', 20, 10.20)]),
-    'estetica': dict(
+    'estetica': dict(tipo='Centro de estética',
         file='sectores/software-para-centro-de-estetica-y-salones/index.html', negocio='centro', pro='esteticista',
         corto='una depilación pequeña',
         servicios=[('Depilación labio', '10 min', 6, 5.30), ('Presoterapia', '45 min', 30, 18.60), ('Higiene facial', '60 min', 55, 26)]),
-    'unas': dict(
+    'unas': dict(tipo='Salón de uñas',
         file='sectores/software-para-salones-de-unas/index.html', negocio='salón', pro='nail artist',
         corto='una decoración o una retirada',
         servicios=[('Decoración por uña', '10 min', 3, 2.79), ('Retirada de semipermanente', '20 min', 10, 6.90), ('Semipermanente', '45 min', 25, 12.40)]),
-    'spa': dict(
+    'spa': dict(tipo='Spa y masajes',
         file='sectores/software-para-spa-y-masajes/index.html', negocio='spa', pro='terapeuta',
         corto='un ritual corto',
         servicios=[('Ritual de pies', '20 min', 18, 16.20), ('Masaje 30 min', '30 min', 35, 21), ('Masaje relajante 60 min', '60 min', 60, 30)]),
@@ -59,6 +59,24 @@ SECTORES = {
 
 PHONES = [('portada', 'Eliges en el local o a domicilio'), ('servicios', 'Ves cada servicio con su foto, precio y duración'),
           ('resumen', 'Confirmas día, hora y profesional')]
+
+
+# ---------- 0. Cabecera: «Ver demo» y «Pide una demo con Neus» (assets/gx-demo.js) ----------
+def hero_demo(s, c):
+    if 'data-gd-demo' in s:
+        return s
+    i = s.find('<section class="hero-bg hero-photo"')
+    a = s.find('>Prueba Godolphy gratis 30 días</a>', i) + len('>Prueba Godolphy gratis 30 días</a>')
+    assert a > i
+    t = c['tipo']
+    s = s[:a] + (f'<a href="#demo" class="gd-demo-btn" data-gd-demo="video" data-sector="{t}">'
+                 '<span class="gd-play" aria-hidden="true"></span>Ver demo (1:30)</a>') + s[a:]
+    p = s.find('30 días gratis · Sin tarjeta de crédito</p>', a) + len('30 días gratis · Sin tarjeta de crédito</p>')
+    s = s[:p] + (f'<p class="gd-demo-neus">¿Prefieres que te lo enseñe en directo? '
+                 f'<a href="#demo-neus" data-gd-demo="neus" data-sector="{t}">Pide una demo con Neus →</a></p>') + s[p:]
+    if '/assets/gx-demo.js' not in s:
+        s = s.replace('<script src="/assets/gx-pages.js"', '<script src="/assets/gx-demo.js?v=2" defer></script>\n<script src="/assets/gx-pages.js"', 1)
+    return s
 
 
 # ---------- 1. Reserva desde el móvil ----------
@@ -176,6 +194,7 @@ def apply(key):
     c = SECTORES[key]
     p = ROOT / c['file']
     s = p.read_text()
+    s = hero_demo(s, c)
     s = booking_movil(s, c)
     if 'gd-blocks:calculadora' not in s:
         a = '<section class="gx-steps-sec">'

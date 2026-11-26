@@ -146,3 +146,11 @@
   .py-grid{grid-template-columns:1fr;}.py-card,.py-card:nth-child(4),.py-card:nth-child(5){grid-column:auto;}
 }
 @media(prefers-reduced-motion:reduce){.cx-row{transition:none!important;opacity:1;transform:none;}.cx-apply{animation:none!important;}}
+/* Cabecera: «Ver demo» y «Pide una demo con Neus» */
+.gd-demo-btn{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:16px;font-weight:600;padding:13px 24px;border-radius:20px;border:1.5px solid rgba(255,255,255,.55);text-decoration:none;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .2s;}
+.gd-demo-btn:hover{background:rgba(255,255,255,.16);}
+.gd-play{width:22px;height:22px;border-radius:50%;background:#EEFE3A;position:relative;flex:0 0 auto;}
+.gd-play::after{content:"";position:absolute;left:8px;top:6px;border-left:8px solid #02021e;border-top:5px solid transparent;border-bottom:5px solid transparent;}
+.gd-demo-neus{color:rgba(255,255,255,.75);font-size:14px;margin:10px 0 0;}
+.gd-demo-neus a{color:#EEFE3A;font-weight:700;text-decoration:none;}
+.gd-demo-neus a:hover{text-decoration:underline;}
