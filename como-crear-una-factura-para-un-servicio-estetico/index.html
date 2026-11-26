@@ -17,8 +17,8 @@
 <script src="/assets/signup-modal.js" async></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cómo hacer una factura de estética: datos y ejemplo</title>
-  <meta name="description" content="Qué datos obligatorios lleva la factura de un servicio estético, un ejemplo con IVA del 21% y cómo registrarla y guardarla." />
+  <title>Factura de estética: datos, IVA 21 % y ejemplo</title>
+  <meta name="description" content="Qué datos lleva la factura de un servicio estético, un ejemplo con IVA del 21 % y cómo guardarla. Y por qué no lleva retención de IRPF." />
   <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -238,7 +238,7 @@ function toggleMobileNav(){
       <li>Descripción clara del servicio prestado (ej.: tratamiento facial, manicura)</li>
       <li>Base imponible (importe antes de impuestos)</li>
       <li>Tipo de IVA y cuota (21% para servicios estéticos)</li>
-      <li>Retención de IRPF si corresponde (15% en facturas superiores a 300 € a empresas o profesionales)</li>
+      <li>Sin retención de IRPF: las actividades de estética (epígrafe 972.2 del IAE) son empresariales, así que la factura no lleva retención</li>
       <li>Importe total a pagar</li>
       <li>Forma de pago</li>
     </ul>
@@ -284,12 +284,8 @@ function toggleMobileNav(){
           <td>21,00 €</td>
         </tr>
         <tr>
-          <td><strong>Retención IRPF (15%)</strong></td>
-          <td>-15,00 €</td>
-        </tr>
-        <tr>
           <td><strong>Total a pagar</strong></td>
-          <td>106,00 €</td>
+          <td>121,00 €</td>
         </tr>
         <tr>
           <td><strong>Forma de pago</strong></td>
@@ -309,8 +305,8 @@ function toggleMobileNav(){
 
     <ul>
       <li><strong>Declaración de IVA (Modelo 303):</strong> presentación trimestral.</li>
-      <li><strong>Retenciones de IRPF (Modelo 111):</strong> presentación trimestral.</li>
-      <li><strong>Resúmenes anuales (Modelos 390 y 190):</strong> presentación a fin de año.</li>
+      <li><strong>Retenciones de IRPF (Modelo 111):</strong> presentación trimestral, solo si tienes empleados o pagas a profesionales con retención.</li>
+      <li><strong>Resúmenes anuales (Modelo 390 y, si presentas el 111, Modelo 190):</strong> presentación a fin de año.</li>
     </ul>
 
     <h2>¿Puedo automatizar la facturación?</h2>
