@@ -27,7 +27,7 @@
     var orig=[].slice.call(box.querySelectorAll('.hn'));
     if(reduce||orig.length<2)return;
     var cards=orig.slice();
-    orig.forEach(function(c){var k=c.cloneNode(true);box.appendChild(k);cards.push(k);});
+    if(orig.length<5)orig.forEach(function(c){var k=c.cloneNode(true);box.appendChild(k);cards.push(k);});
     var times=['ahora','2 min','5 min'],offs=[40,0,24],gap=14,q=cards.slice().reverse();
     box.classList.add('hn-loop');
     function vis(){return window.innerWidth<=860?2:3;}
