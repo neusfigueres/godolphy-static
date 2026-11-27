@@ -164,7 +164,7 @@ def page():
   <div class="w grid">
     <div>
       <p class="tag"><i>●</i> Plan 2027</p>
-      <h1>Cada año trabajas más. {circ('<span class="grad">¿Por qué tu salón no crece?</span>')}</h1>
+      <h1>Cada año trabajas más. <span class="grad">¿Por qué tu salón</span> <span class="nw">{circ('<span class="grad">no crece</span>')}<span class="grad">?</span></span></h1>
       <p class="sub">Con Godolphy te haces tu <b>plan financiero 2027</b>: eliges cuánto quieres crecer y cada mes sabes si vas bien. Sin Excel y sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       {cta('hero')}
       <ul class="fud">{fud}</ul>
