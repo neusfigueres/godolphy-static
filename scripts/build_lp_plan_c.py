@@ -347,7 +347,50 @@ def page():
 '''
 
 
+# ---------- Copia para peluquerías (mismo contenido, textos y fotos del sector) ----------
+PU = 'https://images.unsplash.com/{}?w=700&q=70&auto=format&fit=crop'
+SECTOR_PELU = dict(
+    slug='plan-financiero-2027-historia-peluquerias',
+    textos=[  # (texto de la master, texto del sector), en este orden
+        ('<i>●</i> Plan 2027', '<i>●</i> Peluquerías · Plan 2027'),
+        ('Este año ibas a hacer crecer tu salón.', 'Este año ibas a hacer crecer tu peluquería.'),
+        ('Sabes peinar, maquillar o hacer unas uñas perfectas.', 'Sabes cortar, peinar y dar color como nadie.'),
+        ('a mirar tu salón como un negocio', 'a mirar tu peluquería como un negocio'),
+        ('el del salón van juntos', 'el de la peluquería van juntos'),
+        ('Tu salón es un negocio, no solo un trabajo', 'Tu peluquería es un negocio, no solo un trabajo'),
+        ('Que el salón te pague a ti primero', 'Que la peluquería te pague a ti primero'),
+        ('todo el día a día del salón', 'todo el día a día de la peluquería'),
+        ('quieres pasar tu salón a Godolphy', 'quieres pasar tu peluquería a Godolphy'),
+        ('Ellas ya han empezado', 'Ellas ya han empezado'),
+    ],
+    # fotos del año: todas de peluquería (Unsplash, no IA)
+    fotos={'Enero': PU.format('photo-1562322140-8baeececf3df'), 'Marzo': PU.format('photo-1707979577466-2d6109c68a45'),
+           'Agosto': PU.format('photo-1633681926022-84c23e8cb2d6'), 'Octubre': PU.format('photo-1629397685944-7073f5589754'),
+           'Diciembre': PU.format('photo-1580618672591-eb180b1a973f')},
+)
+
+
+def sector_page(cfg):
+    import re as _re
+    h = page()
+    for a, b in cfg['textos']:
+        assert a in h, a
+        h = h.replace(a, b)
+    for mes, src in cfg['fotos'].items():
+        h, n = _re.subn(r'(<div class="ym"><b>' + mes + r'</b><img src=")[^"]*(" alt=")[^"]*(" style="object-position:)[^"]*',
+                        lambda m: m.group(1) + src + m.group(2) + 'Peluquería' + m.group(3) + '50% center', h)
+        assert n == 1, mes
+    h = h.replace(f'href="https://www.godolphy.com/lp/{SLUG}/"', f'href="https://www.godolphy.com/lp/{cfg["slug"]}/"')
+    h = h.replace(f'data-lp="{SLUG}"', f'data-lp="{cfg["slug"]}"')
+    h = h.replace('Este año ibas a hacer crecer tu salón. ¿Qué ha pasado?', 'Este año ibas a hacer crecer tu peluquería. ¿Qué ha pasado?')
+    return h
+
+
 if __name__ == '__main__':
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, 'w', encoding='utf-8').write(page())
     print('ok', OUT)
+    out2 = f'lp/{SECTOR_PELU["slug"]}/index.html'
+    os.makedirs(os.path.dirname(out2), exist_ok=True)
+    open(out2, 'w', encoding='utf-8').write(sector_page(SECTOR_PELU))
+    print('ok', out2)
