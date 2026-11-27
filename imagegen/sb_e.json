@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/neus/sb_e.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "A film storyboard sheet with exactly 2 vertical panels side by side, thin white gutter, light grey background. Each panel has a large bold black number in its top-left corner: 4 (left) and 5 (right). No other text anywhere. Photorealistic cinematic frames, consistent with the reference images: lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow #EEFE3A square. Characters: NEUS = the woman from the reference images (identical face, long straight dark-brown hair with center part, black leather suit, gold hoops). THE DOUBLE = the exact same woman, same face and same straight hair slightly messy, beige oversized chunky knit sweater, unsure look. Both panels: camera lying ON THE FLOOR, extreme low-angle worm's-eye view (contrapicado), wide-angle lens, very shallow depth of field, cinematic lighting, glossy reflections on the floor. Panel 4: in the extreme foreground, huge out-of-focus nail polish bottles (lilac, deep violet, neon-lime) toppling over toward the lens; in the background, sharp, THE DOUBLE kneeling at the far end of the board, towering from below, pushing a black knight forward, looking down at the camera. Panel 5: in the extreme foreground, huge out-of-focus glossy black chess pieces (pawns, a rook); in the background, sharp, NEUS lying on her stomach at the far end of the board, arm stretched toward the lens, fingertips just missing a rolling deep violet bottle, intense look. Correct anatomy and hands.",
+ "size": "4:3",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/sb_d.png",
+  "imagegen/refs/neus/neus_liberrima.jpg"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
