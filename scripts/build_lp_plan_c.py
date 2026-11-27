@@ -57,11 +57,11 @@ PHOTOS = {
 FUD = ['30 días gratis', 'Sin tarjeta', 'Sin saber de finanzas']
 
 YEAR = [  # (mes, texto con las palabras clave resaltadas, foto)
-    ('Enero', 'Te dices que este año será <mark class="hl">distinto</mark>: subir precios, llenar los martes, guardar un colchón.', 'pelu'),
-    ('Marzo', 'La agenda va llena. Vas tan a tope que los números los dejas <mark class="hl">«para cuando tenga un rato»</mark>.', 'unas'),
-    ('Agosto', 'Cierras dos semanas. El alquiler y los sueldos <mark class="hl">llegan igual</mark>.', 'spa'),
-    ('Octubre', 'Llega una factura que no esperabas y tiras de <mark class="hl">la cuenta de casa</mark>.', 'barber'),
-    ('Diciembre', 'Haces cuentas en una libreta y la conclusión es la de cada año: <mark class="hl">«más o menos como el anterior»</mark>.', 'estetica'),
+    ('Enero', 'Te dices que <mark class="hl">este año será distinto</mark>: subir precios, llenar los martes, guardar un colchón.', 'pelu'),
+    ('Marzo', 'La agenda va llena. <mark class="hl">Vas tan a tope que los números los dejas</mark> «para cuando tenga un rato».', 'unas'),
+    ('Agosto', 'Cierras dos semanas. <mark class="hl">El alquiler y los sueldos llegan igual</mark>.', 'spa'),
+    ('Octubre', 'Llega una <mark class="hl">factura que no esperabas</mark> y tiras de la cuenta de casa.', 'barber'),
+    ('Diciembre', 'Haces cuentas en una libreta y la conclusión es la de cada año: <mark class="hl">«más o menos como el año anterior»</mark>.', 'estetica'),
 ]
 
 AGITATE = [
