@@ -216,20 +216,8 @@ def page():
   </div>
 </section>
 
-<!-- 3. Problema y agitación -->
-<section class="sec">
-  <div class="w">
-    <h2 class="h2">No es que trabajes poco. Es que <span class="grad">nadie te ha dado un mapa</span>.</h2>
-    <div class="story">
-      <p>Sabes peinar, maquillar o hacer unas uñas perfectas. Lo que nadie te enseñó es a mirar tu salón como un negocio: cuánto tienes que facturar, cuánto puedes gastar y cuánto te queda a ti.</p>
-    </div>
-    <div class="agit">{agit}</div>
-    <p class="turn">Tu salón es un negocio, no solo un trabajo. Y un negocio se lleva {mark('con un plan')}.</p>
-  </div>
-</section>
-
 <!-- 3b. Qué significa crecer -->
-<section class="sec sec--soft">
+<section class="sec">
   <div class="w">
     <h2 class="h2">¿Qué significa <span class="grad">crecer</span> para ti?</h2>
     <div class="goals">{goals}</div>
@@ -294,6 +282,18 @@ def page():
 </section>
 
 {product_html('<div class="mcta">' + cta('product') + '</div>')}
+
+<!-- 3. Problema y agitación -->
+<section class="sec sec--soft">
+  <div class="w">
+    <h2 class="h2">No es que trabajes poco. Es que <span class="grad">nadie te ha dado un mapa</span>.</h2>
+    <div class="story">
+      <p>Sabes peinar, maquillar o hacer unas uñas perfectas. Lo que nadie te enseñó es a mirar tu salón como un negocio: cuánto tienes que facturar, cuánto puedes gastar y cuánto te queda a ti.</p>
+    </div>
+    <div class="agit">{agit}</div>
+    <p class="turn">Tu salón es un negocio, no solo un trabajo. Y un negocio se lleva {mark('con un plan')}.</p>
+  </div>
+</section>
 
 <!-- 4. La mentora -->
 <section class="sec sec--soft" id="neus">
