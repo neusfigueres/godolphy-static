@@ -1,0 +1,15 @@
+{
+ "out": "videogen/out/escacs_ungles_apropa.mp4",
+ "model": "kling-v3",
+ "prompt": "Surreal Tim Burton style moment. The camera stays completely static and locked at floor level. The kneeling woman slowly and smoothly leans forward toward the lens, her face moving closer and closer until it fills the frame in an extreme fisheye close-up, keeping the same serious, intense, hypnotic stare straight into the lens without blinking. Her body movement is slow, eerie and theatrical. The lilac room and checkerboard floor stay identical behind her. No camera zoom, no camera movement, no cuts, no text.",
+ "negative_prompt": "camera zoom, camera shake, smiling, talking, face morphing, distorted hands, extra fingers, text, logos",
+ "frames": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/escacs_ungles_E_primerpla.png"
+ ],
+ "body": {
+  "duration": 5,
+  "mode": "pro",
+  "aspect_ratio": "9:16"
+ }
+}
