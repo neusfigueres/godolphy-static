@@ -429,22 +429,6 @@ def build():
 
 {ERA_HTML.replace('{CTA_ERA}', cta('era', 'btn btn--v'))}
 
-<section class="sec" id="neus">
-  <div class="w story">
-    <img class="rv" src="{IMG}neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
-    <div class="rv">
-      <span class="eb">Quién hay detrás</span>
-      <h2 class="h2">Hola, soy Neus.</h2>
-      <p>Llevo unos 15 años trabajando en marketing en multinacionales, en campañas para empresas grandes. Allí aprendí cómo funciona un negocio que crece: <b>mira sus números cada mes, sabe qué le da dinero y trabaja para que el cliente vuelva.</b></p>
-      <p>Después monté mi propio salón con una socia. Yo llevaba la parte de negocio y apliqué lo mismo que hacen las grandes empresas.</p>
-      <p>Ahí vi el problema: <b>un salón pequeño no crece porque nadie le aplica esas estrategias.</b> Se trata como un oficio, no como una empresa. Y los programas de reservas que existen solo te dan una agenda.</p>
-      <p>Por eso he creado Godolphy: el software de gestión que me habría gustado tener. Todo lo que aprendí en las grandes empresas, metido en un solo sitio y pensado para salones pequeños y medianos.</p>
-      <blockquote>«Hemos mejorado muchísimo el tiempo de transporte entre servicios y aumentado el número de servicios diarios por profesional.»<small>Probado primero en mi propio salón</small></blockquote>
-      <p class="sig2">Neus, fundadora de Godolphy</p>
-    </div>
-  </div>
-</section>
-
 <section class="sec sec--soft" id="funciones">
   <div class="w">
     <div class="ctr rv"><span class="eb">Todo en un solo software</span>
@@ -599,6 +583,22 @@ def build():
   <div class="w">
     <h2 class="h2">Preguntas antes de empezar</h2>
     <div class="faq">{faq}</div>
+  </div>
+</section>
+
+<section class="sec sec--soft" id="neus">
+  <div class="w story">
+    <img class="rv" src="{IMG}neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
+    <div class="rv">
+      <span class="eb">Quién hay detrás</span>
+      <h2 class="h2">Hola, soy Neus.</h2>
+      <p>Llevo unos 15 años trabajando en marketing en multinacionales, en campañas para empresas grandes. Allí aprendí cómo funciona un negocio que crece: <b>mira sus números cada mes, sabe qué le da dinero y trabaja para que el cliente vuelva.</b></p>
+      <p>Después monté mi propio salón con una socia. Yo llevaba la parte de negocio y apliqué lo mismo que hacen las grandes empresas.</p>
+      <p>Ahí vi el problema: <b>un salón pequeño no crece porque nadie le aplica esas estrategias.</b> Se trata como un oficio, no como una empresa. Y los programas de reservas que existen solo te dan una agenda.</p>
+      <p>Por eso he creado Godolphy: el software de gestión que me habría gustado tener. Todo lo que aprendí en las grandes empresas, metido en un solo sitio y pensado para salones pequeños y medianos.</p>
+      <blockquote>«Hemos mejorado muchísimo el tiempo de transporte entre servicios y aumentado el número de servicios diarios por profesional.»<small>Probado primero en mi propio salón</small></blockquote>
+      <p class="sig2">Neus, fundadora de Godolphy</p>
+    </div>
   </div>
 </section>
 

@@ -238,20 +238,6 @@ def page():
   </div>
 </section>
 
-<!-- 4. La mentora -->
-<section class="sec" id="neus">
-  <div class="w neus2">
-    <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
-    <div>
-      <h2 class="h2">Sé lo que es llevar un salón: <span class="grad">yo también tuve el mío</span></h2>
-      <p>Soy Neus. Trabajé unos 15 años en multinacionales, donde nadie empieza el año sin un objetivo. Después monté mi propio salón con una socia, y yo llevaba la parte de negocio.</p>
-      <p>Por eso he creado Godolphy: el consultor financiero que mi salón nunca tuvo.</p>
-      <p class="award">{icon('trophy', 'ico ico--s')} Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
-      <p class="sig">Neus, fundadora de Godolphy</p>
-    </div>
-  </div>
-</section>
-
 <!-- 5. El puente: antes → después -->
 <section class="sec">
   <div class="w">
@@ -308,6 +294,20 @@ def page():
 </section>
 
 {product_html('<div class="mcta">' + cta('product') + '</div>')}
+
+<!-- 4. La mentora -->
+<section class="sec sec--soft" id="neus">
+  <div class="w neus2">
+    <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
+    <div>
+      <h2 class="h2">Sé lo que es llevar un salón: <span class="grad">yo también tuve el mío</span></h2>
+      <p>Soy Neus. Trabajé unos 15 años en multinacionales, donde nadie empieza el año sin un objetivo. Después monté mi propio salón con una socia, y yo llevaba la parte de negocio.</p>
+      <p>Por eso he creado Godolphy: el consultor financiero que mi salón nunca tuvo.</p>
+      <p class="award">{icon('trophy', 'ico ico--s')} Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
+      <p class="sig">Neus, fundadora de Godolphy</p>
+    </div>
+  </div>
+</section>
 
 <section class="sec">
   <div class="w">

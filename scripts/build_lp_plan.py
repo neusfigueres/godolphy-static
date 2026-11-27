@@ -452,7 +452,16 @@ def page():
   </div>
 </section>
 
-<section class="sec" id="neus">
+<section class="sec sec--soft">
+  <div class="w">
+    <h2 class="h2">¿Dudas? <span class="grad">30 días gratis y sin tarjeta</span></h2>
+    <div class="faq">{faq}</div>
+  </div>
+</section>
+
+{product_html('<div class="mcta">' + cta('product') + '</div>')}
+
+<section class="sec sec--soft" id="neus">
   <div class="w neus2">
     <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
     <div>
@@ -463,15 +472,6 @@ def page():
     </div>
   </div>
 </section>
-
-<section class="sec sec--soft">
-  <div class="w">
-    <h2 class="h2">¿Dudas? <span class="grad">30 días gratis y sin tarjeta</span></h2>
-    <div class="faq">{faq}</div>
-  </div>
-</section>
-
-{product_html('<div class="mcta">' + cta('product') + '</div>')}
 
 <section class="sec">
   <div class="w">
