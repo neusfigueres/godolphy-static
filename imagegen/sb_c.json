@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/neus/sb_c.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "A professional film storyboard sheet: a clean grid of 6 panels arranged in 2 rows of 3 columns, thin white gutters, light grey paper background. Each panel has a large bold black number in its top-left corner: 15, 16, 17, 18, 19, 20. No other text, letters or numbers anywhere. Full-colour photorealistic cinematic frames, consistent with the reference images: lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow #EEFE3A square, nail polish bottles in lilac, deep violet, near-black and neon-lime. Characters: (A) NEUS = the woman from the reference images, identical face, long straight dark-brown hair, sleek black leather suit, gold hoops, serious confident look. (B) THE DOUBLE = the exact same woman (same face) but in a beige oversized chunky knit sweater, messy hair, confused unsure look. Opponent chess pieces are real glossy black chess pieces. Strange, surreal, Tim Burton-like staging, correct anatomy and hands. Panel 15: extreme close-up of one of NEUS's eyes and eyebrow, a small neon-lime notification glow reflected in the eye. Panel 16: NEUS sitting cross-legged on the board facing the camera, calm, talking (the only normal shot). Panel 17: NEUS mid-somersault across the checkerboard, motion blur, hair flying. Panel 18: NEUS lying on her side, cheek on the floor, pushing the deep violet bottle with one finger toward a glossy black king; THE DOUBLE kneeling behind the king, watching. Panel 19: the deep violet bottle knocks the black king over onto the neon-lime square with a burst of light; THE DOUBLE smiles softly and is fading, translucent. Panel 20: wide shot, NEUS alone standing in the centre of the cube, confident, the board in front of her, empty space at the bottom of the frame.",
+ "size": "4:3",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/escacs_ungles_E_primerpla.png",
+  "imagegen/refs/neus/neus_liberrima.jpg"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}

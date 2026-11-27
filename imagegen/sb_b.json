@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/neus/sb_b.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "A professional film storyboard sheet: a clean grid of 6 panels arranged in 2 rows of 3 columns, thin white gutters, light grey paper background. Each panel has a large bold black number in its top-left corner: 9, 10, 11, 12, 13, 14. No other text, letters or numbers anywhere. Full-colour photorealistic cinematic frames, consistent with the reference images: lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow #EEFE3A square, nail polish bottles in lilac, deep violet, near-black and neon-lime. Characters: (A) NEUS = the woman from the reference images, identical face, long straight dark-brown hair, sleek black leather suit, gold hoops, serious confident look. (B) THE DOUBLE = the exact same woman (same face) but in a beige oversized chunky knit sweater, messy hair, confused unsure look. Opponent chess pieces are real glossy black chess pieces. Strange, surreal, Tim Burton-like staging, correct anatomy and hands. Panel 9: a giant smartphone standing upright on the checkerboard like a monolith, screen showing a clean white app dashboard with violet accents (no readable text); NEUS leaning her shoulder on it, arms crossed. Panel 10: close view of the giant phone screen: a slider and twelve violet monthly bars growing (no readable text). Panel 11: the giant phone screen with three cards with simple icons (calendar, person, receipt); NEUS's hand pointing at them. Panel 12: Ames room illusion: NEUS gigantic in the right corner, head touching the ceiling, holding a neon-lime bottle like a chess queen; THE DOUBLE tiny in the left corner. Panel 13: panel split into 4 quick mini frames of NEUS from strange angles: worm's-eye view, over-the-shoulder, extreme side profile, bird's-eye view, each with a glowing square. Panel 14: the giant phone screen with a line chart: a violet plan line and a red real line dipping below it (no readable text).",
+ "size": "4:3",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/escacs_ungles_E_primerpla.png",
+  "imagegen/refs/neus/neus_liberrima.jpg"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
