@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/neus/storyboard_escacs_ungles.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "A professional film storyboard sheet: a clean grid of 6 vertical 9:16 panels arranged in 2 rows of 3 columns, thin white gutters between panels, light grey paper background. Each panel has a large bold black number in its top-left corner (1 to 6). No other text anywhere. Style: semi-realistic cinematic storyboard frames in full colour, consistent with the reference images: lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow square, the same woman (identical face, long straight dark-brown hair, black leather suit, gold hoops). Slightly whimsical Tim Burton mood. Panel 1: exactly like the first reference image, low floor-level fisheye, she kneels and places a deep violet nail polish bottle on the yellow square, serious stare; a small motion arrow shows her leaning toward camera. Panel 2: low floor-level shot, a nail polish bottle tipping over and rolling off the checkerboard, a nail file sliding away, chaos, her blurred in background. Panel 3: top-down view of the checkerboard, her hand moving the violet bottle forward several squares like a chess move, other polish bottles as chess pieces. Panel 4: the checkerboard squares lighting up one by one in lime like 12 months; a laptop sitting on the board showing a simple financial plan dashboard with charts in violet and white. Panel 5: medium shot, she sits on the floor of the lilac cube in her black leather suit, talking calmly to camera, hands relaxed. Panel 6: close-up of the deep violet bottle landing on the neon-lime yellow square with a little glow, checkmate moment. Photorealistic faces, correct hands, cohesive colour palette.",
+ "size": "4:3",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/escacs_ungles_E_primerpla.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
