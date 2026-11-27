@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/neus/sb_d.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "A professional film storyboard sheet: a clean grid of 6 panels arranged in 2 rows of 3 columns, thin white gutters, light grey paper background. Each panel has a large bold black number in its top-left corner: 3, 4, 5, 12, 17, 18. No other text, letters or numbers anywhere. Full-colour photorealistic cinematic frames, consistent with the reference images: lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow #EEFE3A square. Characters: (A) NEUS = the woman from the reference images, identical face, long straight dark-brown hair with a center part, sleek black leather suit, gold hoops, confident. (B) THE DOUBLE = the EXACT same woman with the SAME face and the SAME long straight hair with center part, only slightly messy, wearing a beige oversized chunky knit sweater, unsure expression. They must be instantly recognizable as the same person. RULE: they always sit at OPPOSITE ENDS of the chessboard, facing each other like two chess players; NEUS's side has nail polish bottles (lilac, deep violet, near-black, neon-lime), THE DOUBLE's side has real glossy black chess pieces. Panel 3: MIRROR SHOT, side profile, wide: both women kneel at opposite ends of the board and lean over it toward each other in the exact same mirrored pose, nose to nose in the middle, the whole board between them. Panel 4: over-the-shoulder shot from behind NEUS (we see her back and hair): across the board, THE DOUBLE pushes a black knight that knocks NEUS's polish bottles over. Panel 5: reverse shot from behind THE DOUBLE (we see her beige sweater back): across the board, NEUS lies on her stomach, arm stretched, fingertips just missing a rolling bottle. Panel 12: Ames room illusion, wide: NEUS gigantic in the far right corner, head touching the ceiling, holding a neon-lime bottle like a queen; THE DOUBLE tiny in the opposite far left corner; the board between them. Panel 17: low side-profile shot at floor level: NEUS lying on her side at her end, cheek on the floor, pushing a deep violet bottle with one finger toward a black king in the centre; THE DOUBLE at the opposite end, kneeling, watching worried. Panel 18: side profile wide: the deep violet bottle knocks the black king over onto the neon-lime square with a burst of light, the bottle stays upright; at the opposite end THE DOUBLE smiles softly and fades, translucent; NEUS at her end, calm. Correct anatomy and hands, cohesive palette.",
+ "size": "4:3",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/escacs_ungles_E_primerpla.png",
+  "imagegen/refs/neus/neus_liberrima.jpg"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
