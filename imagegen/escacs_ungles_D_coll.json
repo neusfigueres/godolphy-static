@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/neus/escacs_ungles_D_coll.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Edit the reference image into a surreal Tim Burton style scene. Keep EVERYTHING identical: same lilac room, same checkerboard floor and yellow square, same objects and their positions, same camera and fisheye lens, and her body in exactly the same kneeling pose, same black leather suit, same hand placing the deep violet bottle on the yellow square, same position of her body in the room. The ONLY change: her neck is impossibly elongated, long and thin like a Tim Burton character, stretching forward and slightly down so her head floats close to the camera in the upper-middle of the frame, her face much bigger and closer to the lens, still clearly the same woman (identical face, hair falling along the long neck, gold hoop earrings). Same serious, intense stare straight into the lens, not smiling. Eerie, theatrical, whimsical gothic mood but photorealistic. Vertical 9:16. No text, no logos.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
