@@ -43,14 +43,25 @@ def shot(file, w, h, alt, label, cls='', eager=False):
             f'loading="{"eager" if eager else "lazy"}" onerror="this.parentNode.classList.add(\'ph\');this.remove();"></div>')
 
 
+U = 'https://images.unsplash.com/{}?w=700&q=70&auto=format&fit=crop'
+PHOTOS = {
+    'pelu': (U.format('photo-1634449571010-02389ed0f9b0'), 'Peluquerías', '65% center'),
+    'barber': ('/images/sectores/hero/barberia-poster.webp', 'Barberías', '62% center'),
+    'estetica': ('/images/sectores/hero/estetica-cabina.webp', 'Centros de estética', '80% center'),
+    'unas': ('/images/sectores/hero/unas-manicurista-2.webp', 'Salones de uñas', '75% center'),
+    'spa': ('/images/sectores/hero/spa-3.webp', 'Spas y masajes', '65% center'),
+    'lash': (U.format('photo-1735151226446-1d364b4adc2f'), 'Lashistas', '60% center'),
+    'mu': ('/images/sectores/hero/maquilladora-poster.webp', 'Maquilladoras', '50% center'),
+}
+
 FUD = ['30 días gratis', 'Sin tarjeta', 'Sin saber de finanzas']
 
-YEAR = [
-    ('Enero', 'Te dices que este año será distinto: subir precios, llenar los martes, guardar un colchón.'),
-    ('Marzo', 'La agenda va llena. Vas tan a tope que los números los dejas «para cuando tenga un rato».'),
-    ('Agosto', 'Cierras dos semanas. El alquiler y los sueldos llegan igual.'),
-    ('Octubre', 'Llega una factura que no esperabas y tiras de la cuenta de casa.'),
-    ('Diciembre', 'Haces cuentas en una libreta y la conclusión es la de cada año: «más o menos como el anterior».'),
+YEAR = [  # (mes, texto, foto)
+    ('Enero', 'Te dices que este año será distinto: subir precios, llenar los martes, guardar un colchón.', 'pelu'),
+    ('Marzo', 'La agenda va llena. Vas tan a tope que los números los dejas «para cuando tenga un rato».', 'unas'),
+    ('Agosto', 'Cierras dos semanas. El alquiler y los sueldos llegan igual.', 'spa'),
+    ('Octubre', 'Llega una factura que no esperabas y tiras de la cuenta de casa.', 'barber'),
+    ('Diciembre', 'Haces cuentas en una libreta y la conclusión es la de cada año: «más o menos como el anterior».', 'estetica'),
 ]
 
 AGITATE = [
@@ -90,7 +101,8 @@ C_CSS = r'''
 .ym.on{opacity:1;transform:none;}
 .ym b{position:relative;display:inline-block;background:#fff;border:2px solid var(--v);color:var(--v);font:800 13px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:12px 14px;border-radius:999px;}
 .ym:last-child b{background:var(--v);color:#fff;}
-.ym p{margin:14px 0 0;font-size:16px;line-height:1.5;color:var(--ink);}
+.ym img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-top:14px;}
+.ym p{margin:12px 0 0;font-size:16px;line-height:1.5;color:var(--ink);}
 .agit{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;}
 .agit div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--v);border-radius:16px;padding:18px 20px;}
 .agit b{display:block;font-family:'Gabarito',sans-serif;font-size:20px;margin-bottom:6px;}
@@ -105,7 +117,16 @@ C_CSS = r'''
 .elix p{font-size:18px;line-height:1.6;margin:0 0 12px;color:rgba(255,255,255,.92);}
 .elix .ph-wrap{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.25);}
 .elix .ph-wrap img{width:100%;height:auto;display:block;}
+.strip-sec{padding-top:10px;padding-bottom:10px;}
+.strip-t{text-align:center;font-weight:700;color:var(--muted);font-size:15px;margin:0 0 14px;}
+.strip{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;}
+.strip figure{margin:0;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;}
+.strip img{width:100%;height:100%;object-fit:cover;display:block;}
+.strip figcaption{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(2,2,30,.72);color:#fff;font-weight:700;font-size:12px;line-height:1.2;padding:6px 8px;border-radius:10px;text-align:center;}
 @media(max-width:900px){
+  .strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:42%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;}
+  .strip figure{scroll-snap-align:start;}
+  .ym img{max-width:320px;}
   .year{grid-template-columns:1fr;gap:18px;}.year::before{left:21px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--line),var(--v));}
   .ym{padding-left:0;}.agit{grid-template-columns:1fr;}
   .bridge{grid-template-columns:1fr;}.bridge .arrow{max-width:none;flex-direction:row;}.bridge .arrow span{transform:rotate(90deg);}
@@ -119,7 +140,10 @@ C_CSS = r'''
 def page():
     hc = head_common()
     fud = ''.join(f'<li>{e(x)}</li>' for x in FUD)
-    year = ''.join(f'<div class="ym"><b>{e(m)}</b><p>{e(t)}</p></div>' for m, t in YEAR)
+    year = ''.join(f'<div class="ym"><b>{e(m)}</b><img src="{PHOTOS[k][0]}" alt="{e(PHOTOS[k][1])}" style="object-position:{PHOTOS[k][2]}" loading="lazy"><p>{e(t)}</p></div>'
+                   for m, t, k in YEAR)
+    strip = ''.join(f'<figure><img src="{src}" alt="{e(c)}" style="object-position:{pos}" loading="lazy"><figcaption>{e(c)}</figcaption></figure>'
+                    for src, c, pos in PHOTOS.values())
     agit = ''.join(f'<div><b>{e(t)}</b><p>{e(x)}</p></div>' for t, x in AGITATE)
     vs_no = ''.join(f'<li>{e(a)}</li>' for a, _ in CONTRAST)
     vs_si = ''.join(f'<li>{e(b)}</li>' for _, b in CONTRAST)
@@ -178,6 +202,13 @@ def page():
       <div class="lap-base"></div>
       <div class="mob2"><div class="ph-wrap"><img src="/lp/salones/plan-mes.webp" alt="Plan financiero del mes en el móvil: plan, real y diferencia" width="744" height="1164" loading="eager"></div></div>
     </div>
+  </div>
+</section>
+
+<section class="sec strip-sec">
+  <div class="w">
+    <p class="strip-t">Para peluquerías, barberías, centros de estética, uñas, spa, pestañas y maquillaje</p>
+    <div class="strip">{strip}</div>
   </div>
 </section>
 

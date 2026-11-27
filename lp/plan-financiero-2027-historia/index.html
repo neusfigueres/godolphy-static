@@ -290,7 +290,8 @@ a{color:inherit;}
 .ym.on{opacity:1;transform:none;}
 .ym b{position:relative;display:inline-block;background:#fff;border:2px solid var(--v);color:var(--v);font:800 13px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:12px 14px;border-radius:999px;}
 .ym:last-child b{background:var(--v);color:#fff;}
-.ym p{margin:14px 0 0;font-size:16px;line-height:1.5;color:var(--ink);}
+.ym img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-top:14px;}
+.ym p{margin:12px 0 0;font-size:16px;line-height:1.5;color:var(--ink);}
 .agit{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;}
 .agit div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--v);border-radius:16px;padding:18px 20px;}
 .agit b{display:block;font-family:'Gabarito',sans-serif;font-size:20px;margin-bottom:6px;}
@@ -305,7 +306,16 @@ a{color:inherit;}
 .elix p{font-size:18px;line-height:1.6;margin:0 0 12px;color:rgba(255,255,255,.92);}
 .elix .ph-wrap{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.25);}
 .elix .ph-wrap img{width:100%;height:auto;display:block;}
+.strip-sec{padding-top:10px;padding-bottom:10px;}
+.strip-t{text-align:center;font-weight:700;color:var(--muted);font-size:15px;margin:0 0 14px;}
+.strip{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;}
+.strip figure{margin:0;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;}
+.strip img{width:100%;height:100%;object-fit:cover;display:block;}
+.strip figcaption{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(2,2,30,.72);color:#fff;font-weight:700;font-size:12px;line-height:1.2;padding:6px 8px;border-radius:10px;text-align:center;}
 @media(max-width:900px){
+  .strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:42%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;}
+  .strip figure{scroll-snap-align:start;}
+  .ym img{max-width:320px;}
   .year{grid-template-columns:1fr;gap:18px;}.year::before{left:21px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--line),var(--v));}
   .ym{padding-left:0;}.agit{grid-template-columns:1fr;}
   .bridge{grid-template-columns:1fr;}.bridge .arrow{max-width:none;flex-direction:row;}.bridge .arrow span{transform:rotate(90deg);}
@@ -341,11 +351,18 @@ a{color:inherit;}
   </div>
 </section>
 
+<section class="sec strip-sec">
+  <div class="w">
+    <p class="strip-t">Para peluquerías, barberías, centros de estética, uñas, spa, pestañas y maquillaje</p>
+    <div class="strip"><figure><img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=700&q=70&auto=format&fit=crop" alt="Peluquerías" style="object-position:65% center" loading="lazy"><figcaption>Peluquerías</figcaption></figure><figure><img src="/images/sectores/hero/barberia-poster.webp" alt="Barberías" style="object-position:62% center" loading="lazy"><figcaption>Barberías</figcaption></figure><figure><img src="/images/sectores/hero/estetica-cabina.webp" alt="Centros de estética" style="object-position:80% center" loading="lazy"><figcaption>Centros de estética</figcaption></figure><figure><img src="/images/sectores/hero/unas-manicurista-2.webp" alt="Salones de uñas" style="object-position:75% center" loading="lazy"><figcaption>Salones de uñas</figcaption></figure><figure><img src="/images/sectores/hero/spa-3.webp" alt="Spas y masajes" style="object-position:65% center" loading="lazy"><figcaption>Spas y masajes</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1735151226446-1d364b4adc2f?w=700&q=70&auto=format&fit=crop" alt="Lashistas" style="object-position:60% center" loading="lazy"><figcaption>Lashistas</figcaption></figure><figure><img src="/images/sectores/hero/maquilladora-poster.webp" alt="Maquilladoras" style="object-position:50% center" loading="lazy"><figcaption>Maquilladoras</figcaption></figure></div>
+  </div>
+</section>
+
 <!-- 2. Momentos concretos -->
 <section class="sec sec--soft">
   <div class="w">
     <h2 class="h2">¿Te suena <span class="grad">este año</span>?</h2>
-    <div class="year" id="year"><div class="ym"><b>Enero</b><p>Te dices que este año será distinto: subir precios, llenar los martes, guardar un colchón.</p></div><div class="ym"><b>Marzo</b><p>La agenda va llena. Vas tan a tope que los números los dejas «para cuando tenga un rato».</p></div><div class="ym"><b>Agosto</b><p>Cierras dos semanas. El alquiler y los sueldos llegan igual.</p></div><div class="ym"><b>Octubre</b><p>Llega una factura que no esperabas y tiras de la cuenta de casa.</p></div><div class="ym"><b>Diciembre</b><p>Haces cuentas en una libreta y la conclusión es la de cada año: «más o menos como el anterior».</p></div></div>
+    <div class="year" id="year"><div class="ym"><b>Enero</b><img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=700&q=70&auto=format&fit=crop" alt="Peluquerías" style="object-position:65% center" loading="lazy"><p>Te dices que este año será distinto: subir precios, llenar los martes, guardar un colchón.</p></div><div class="ym"><b>Marzo</b><img src="/images/sectores/hero/unas-manicurista-2.webp" alt="Salones de uñas" style="object-position:75% center" loading="lazy"><p>La agenda va llena. Vas tan a tope que los números los dejas «para cuando tenga un rato».</p></div><div class="ym"><b>Agosto</b><img src="/images/sectores/hero/spa-3.webp" alt="Spas y masajes" style="object-position:65% center" loading="lazy"><p>Cierras dos semanas. El alquiler y los sueldos llegan igual.</p></div><div class="ym"><b>Octubre</b><img src="/images/sectores/hero/barberia-poster.webp" alt="Barberías" style="object-position:62% center" loading="lazy"><p>Llega una factura que no esperabas y tiras de la cuenta de casa.</p></div><div class="ym"><b>Diciembre</b><img src="/images/sectores/hero/estetica-cabina.webp" alt="Centros de estética" style="object-position:80% center" loading="lazy"><p>Haces cuentas en una libreta y la conclusión es la de cada año: «más o menos como el anterior».</p></div></div>
   </div>
 </section>
 
