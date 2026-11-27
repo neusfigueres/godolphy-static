@@ -134,8 +134,8 @@ def page():
     faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in FAQ)
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
-    title = 'Que 2027 no sea «más o menos como el anterior»: crea tu plan financiero | Godolphy'
-    desc = 'Te haces tu plan financiero 2027 con tus números reales y cada mes sabes si vas bien. Sin Excel y sin saber de finanzas. Gratis 30 días, sin tarjeta.'
+    title = 'Cada año trabajas más. ¿Por qué tu salón no crece? Crea tu plan financiero 2027 | Godolphy'
+    desc = 'Te haces tu plan financiero 2027: eliges cuánto quieres crecer y cada mes sabes si vas bien. Sin Excel y sin saber de finanzas. Gratis 30 días, sin tarjeta.'
     return f'''<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -164,8 +164,8 @@ def page():
   <div class="w grid">
     <div>
       <p class="tag"><i>●</i> Plan 2027</p>
-      <h1>Llevas todo el año a tope. ¿Por qué no sabes si {circ('<span class="grad">has ganado dinero</span>')}?</h1>
-      <p class="sub">Con Godolphy te haces tu <b>plan financiero 2027</b> con tus números reales y cada mes sabes si vas bien. Sin Excel y sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
+      <h1>Cada año trabajas más. {circ('<span class="grad">¿Por qué tu salón no crece?</span>')}</h1>
+      <p class="sub">Con Godolphy te haces tu <b>plan financiero 2027</b>: eliges cuánto quieres crecer y cada mes sabes si vas bien. Sin Excel y sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       {cta('hero')}
       <ul class="fud">{fud}</ul>
       <div class="proof">
