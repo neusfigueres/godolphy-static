@@ -1,0 +1,14 @@
+{
+ "out": "imagegen/neus/escacs_ungles_gpt.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "Use the woman from the FIRST reference photo as the exact same person: keep her face 100% identical (same facial proportions, nose, eyes, eyebrows, skin texture), same long straight dark-brown hair with center part. Do not beautify, do not make her younger. Recreate the composition and pose of the SECOND reference image: editorial fashion campaign photo, vertical 9:16, wide-angle camera very low at floor level, slight fisheye. She crouches inside a closed minimalist cube room, reaching one arm toward the camera and sliding a nail polish bottle across the floor like a chess piece. Serious, confident, intense expression looking straight into the lens, NOT smiling, lips closed. She wears a sleek black leather blazer suit and gold hoop earrings, no sunglasses, face clearly visible. Colours (brand palette): walls and ceiling flat lilac #A99BFF with soft top light; glossy floor of large checkerboard tiles alternating near-black #02021E and cream #FBF6F1; exactly ONE square in neon-lime yellow #EEFE3A right in front of her, where she places the bottle. Professional manicure tools arranged on the board like chess pieces: nail polish bottles in lilac, deep violet, near-black and neon-lime shades, nail files, cuticle nippers, a glass with nail art brushes. Premium, high-end, sharp focus, realistic skin, anatomically correct hands with five fingers and a nude manicure. No text, no logos, no watermark.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/refs/neus/neus_liberrima.jpg",
+  "imagegen/refs/escacs_ref.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
