@@ -56,12 +56,12 @@ PHOTOS = {
 
 FUD = ['30 días gratis', 'Sin tarjeta', 'Sin saber de finanzas']
 
-YEAR = [  # (mes, texto, foto)
-    ('Enero', 'Te dices que este año será distinto: subir precios, llenar los martes, guardar un colchón.', 'pelu'),
-    ('Marzo', 'La agenda va llena. Vas tan a tope que los números los dejas «para cuando tenga un rato».', 'unas'),
-    ('Agosto', 'Cierras dos semanas. El alquiler y los sueldos llegan igual.', 'spa'),
-    ('Octubre', 'Llega una factura que no esperabas y tiras de la cuenta de casa.', 'barber'),
-    ('Diciembre', 'Haces cuentas en una libreta y la conclusión es la de cada año: «más o menos como el anterior».', 'estetica'),
+YEAR = [  # (mes, texto con las palabras clave resaltadas, foto)
+    ('Enero', 'Te dices que este año será <mark class="hl">distinto</mark>: subir precios, llenar los martes, guardar un colchón.', 'pelu'),
+    ('Marzo', 'La agenda va llena. Vas tan a tope que los números los dejas <mark class="hl">«para cuando tenga un rato»</mark>.', 'unas'),
+    ('Agosto', 'Cierras dos semanas. El alquiler y los sueldos <mark class="hl">llegan igual</mark>.', 'spa'),
+    ('Octubre', 'Llega una factura que no esperabas y tiras de <mark class="hl">la cuenta de casa</mark>.', 'barber'),
+    ('Diciembre', 'Haces cuentas en una libreta y la conclusión es la de cada año: <mark class="hl">«más o menos como el anterior»</mark>.', 'estetica'),
 ]
 
 AGITATE = [
@@ -102,6 +102,7 @@ C_CSS = r'''
 .ym b{position:relative;display:inline-block;background:#fff;border:2px solid var(--v);color:var(--v);font:800 13px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:12px 14px;border-radius:999px;}
 .ym:last-child b{background:var(--v);color:#fff;}
 .ym img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-top:14px;}
+.hl{background:linear-gradient(transparent 55%,var(--y) 55%);color:inherit;font-weight:700;padding:0 .08em;}
 .ym p{margin:12px 0 0;font-size:16px;line-height:1.5;color:var(--ink);}
 .agit{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;}
 .agit div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--v);border-radius:16px;padding:18px 20px;}
@@ -117,15 +118,7 @@ C_CSS = r'''
 .elix p{font-size:18px;line-height:1.6;margin:0 0 12px;color:rgba(255,255,255,.92);}
 .elix .ph-wrap{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.25);}
 .elix .ph-wrap img{width:100%;height:auto;display:block;}
-.strip-sec{padding-top:10px;padding-bottom:10px;}
-.strip-t{text-align:center;font-weight:700;color:var(--muted);font-size:15px;margin:0 0 14px;}
-.strip{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;}
-.strip figure{margin:0;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;}
-.strip img{width:100%;height:100%;object-fit:cover;display:block;}
-.strip figcaption{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(2,2,30,.72);color:#fff;font-weight:700;font-size:12px;line-height:1.2;padding:6px 8px;border-radius:10px;text-align:center;}
 @media(max-width:900px){
-  .strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:42%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;}
-  .strip figure{scroll-snap-align:start;}
   .year{grid-template-columns:1fr;gap:26px;}.year::before{display:none;}
   .ym{padding-left:0;}.agit{grid-template-columns:1fr;}
   .bridge{grid-template-columns:1fr;}.bridge .arrow{max-width:none;flex-direction:row;}.bridge .arrow span{transform:rotate(90deg);}
@@ -139,10 +132,8 @@ C_CSS = r'''
 def page():
     hc = head_common()
     fud = ''.join(f'<li>{e(x)}</li>' for x in FUD)
-    year = ''.join(f'<div class="ym"><b>{e(m)}</b><img src="{PHOTOS[k][0]}" alt="{e(PHOTOS[k][1])}" style="object-position:{PHOTOS[k][2]}" loading="lazy"><p>{e(t)}</p></div>'
+    year = ''.join(f'<div class="ym"><b>{e(m)}</b><img src="{PHOTOS[k][0]}" alt="{e(PHOTOS[k][1])}" style="object-position:{PHOTOS[k][2]}" loading="lazy"><p>{t}</p></div>'
                    for m, t, k in YEAR)
-    strip = ''.join(f'<figure><img src="{src}" alt="{e(c)}" style="object-position:{pos}" loading="lazy"><figcaption>{e(c)}</figcaption></figure>'
-                    for src, c, pos in PHOTOS.values())
     agit = ''.join(f'<div><b>{e(t)}</b><p>{e(x)}</p></div>' for t, x in AGITATE)
     vs_no = ''.join(f'<li>{e(a)}</li>' for a, _ in CONTRAST)
     vs_si = ''.join(f'<li>{e(b)}</li>' for _, b in CONTRAST)
@@ -201,13 +192,6 @@ def page():
       <div class="lap-base"></div>
       <div class="mob2"><div class="ph-wrap"><img src="/lp/salones/plan-mes.webp" alt="Plan financiero del mes en el móvil: plan, real y diferencia" width="744" height="1164" loading="eager"></div></div>
     </div>
-  </div>
-</section>
-
-<section class="sec strip-sec">
-  <div class="w">
-    <p class="strip-t">Para peluquerías, barberías, centros de estética, uñas, spa, pestañas y maquillaje</p>
-    <div class="strip">{strip}</div>
   </div>
 </section>
 
