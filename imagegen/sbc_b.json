@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/neus/sbc_b.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "A professional film storyboard sheet: a clean grid of 6 panels in 2 rows of 3 columns (if fewer panels are listed, leave the extra slots plain light grey), thin white gutters, light grey background. Each panel has a large bold black number in its top-left corner: 9, 10, 11, 12, 13, 14. No other text, letters or numbers anywhere. HIGHLY CINEMATIC frames, like stills from a Tim Burton / Wes Anderson feature film: dramatic motivated lighting with a strong top key light and soft violet rim light, light haze in the air, deep shadows graded toward deep violet, glossy reflections on the floor, subtle film grain, anamorphic lens feel, very shallow depth of field, bold unusual camera angles (worm's-eye, extreme low angle, dutch angle, extreme macro). Set: lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow #EEFE3A square. NEUS's side of the board has nail polish bottles (lilac, deep violet, near-black, neon-lime); the opposite side has real glossy black chess pieces. Characters: NEUS = the woman from the reference images (identical face, long straight dark-brown hair with center part, sleek black leather suit, gold hoops, confident). THE DOUBLE = the exact same woman, same face and same straight hair slightly messy, beige oversized chunky knit sweater, unsure look. When both appear they are at OPPOSITE ends of the board. Correct anatomy and hands, photorealistic. Panel 9: dutch angle, dynamic: NEUS grabs the edge of the whole checkerboard floor and flips it up like a giant card, the board mid-rotation, polish bottles and chess pieces flying in slow motion, light bursting from underneath. Panel 10: the underside of the board is revealed: the entire floor is now a giant glowing white app screen with violet charts and twelve monthly bars (no readable text); NEUS stands on it, seen from a high angle. Panel 11: low angle across the giant floor screen: NEUS slides four huge nail polish bottles along four glowing slider lanes like levers, determined. Panel 12: Ames room illusion, wide, symmetrical: NEUS gigantic standing in the far right corner, her head bent against the ceiling, holding a neon-lime bottle like a queen; THE DOUBLE tiny standing in the far left corner; the board between them. Panel 13: panel split into 4 quick mini frames of NEUS from strange angles (worm's-eye, over-the-shoulder, extreme side profile, bird's-eye), each with a glowing lime square. Panel 14: low angle on the giant floor screen: a huge violet plan line and a red real line dipping below it run across the floor; THE DOUBLE at the far end stares at the red line, worried.",
+ "size": "4:3",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/sb_e.png",
+  "imagegen/refs/neus/neus_liberrima.jpg"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
