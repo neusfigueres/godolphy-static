@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/neus/escacs_ungles_C.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Use the woman from the FIRST reference image as the exact same person: keep her face 100% identical (same face shape, nose, eyes, eyebrows, lips, skin texture), same long straight dark-brown hair with center part, same black leather blazer suit and gold hoop earrings. Do not beautify, do not make her thinner or older. Keep the same room, colours, camera, lighting and floor as the FIRST reference image: lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow #EEFE3A square in front of her, low wide-angle fisheye camera at floor level. Change her POSE to match the SECOND reference image: she kneels with both knees on the floor, leaning forward, one hand resting flat on the floor, the other arm reaching toward the camera, placing a nail polish bottle on the neon-lime yellow square with her fingertips. Natural, relaxed posture. The bottle she places on the yellow square is DEEP VIOLET (#5B2A86) with a black cap — not red. All nail polish bottles on the board are only lilac, deep violet, near-black or neon-lime; no red anywhere. Keep the other manicure tools: nail files, cuticle nippers, a glass with nail art brushes. Serious, confident expression looking straight into the lens, not smiling, lips closed. Anatomically correct hands with five fingers, nude manicure. Vertical 9:16, premium editorial photo, sharp focus. No text, no logos, no watermark.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_nb.png",
+  "imagegen/neus/escacs_ungles_gpt.png",
+  "imagegen/refs/neus/neus_liberrima.jpg"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
