@@ -84,6 +84,13 @@ STEPS = [
     ('Haces el seguimiento mes a mes.', 'Ves lo real frente a lo planificado y, si te desvías, la IA te avisa a tiempo.'),
 ]
 
+GOALS = [
+    ('trend', 'Ganar más sin trabajar más horas', 'Más beneficio, no más agenda: subir el ticket, ajustar precios y llenar los huecos.'),
+    ('card', 'Pagarte un sueldo y tener un colchón', 'Que el salón te pague a ti primero y que un mes flojo no te pille sin reservas.'),
+    ('team', 'Ampliar el equipo', 'Saber cuándo te salen los números para contratar a alguien más.'),
+    ('spark', 'Abrir un segundo local', 'El gran objetivo. Para eso casi siempre necesitarás financiación, y lo primero que te pedirá el banco es un plan financiero. Con Godolphy ya lo tienes hecho.'),
+]
+
 FAQ = [
     ('¿Necesito saber de finanzas?', 'No. Pones tus números y Godolphy hace los cálculos.'),
     ('¿Sirve si no tengo historial?', 'Sí, empiezas con tus números de partida.'),
@@ -109,6 +116,11 @@ C_CSS = r'''
 .agit b{display:block;font-family:'Gabarito',sans-serif;font-size:20px;margin-bottom:6px;}
 .agit p{margin:0;font-size:16px;line-height:1.5;color:var(--muted);}
 .turn{margin:30px 0 0;font-family:'Gabarito',sans-serif;font-size:clamp(24px,3vw,32px);line-height:1.25;color:var(--ink);max-width:820px;}
+.goals{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px;}
+.goal{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:10px;}
+.goal h3{font-family:'Gabarito',sans-serif;font-size:20px;line-height:1.2;margin:4px 0 0;}
+.goal p{margin:0;font-size:15.5px;line-height:1.55;color:var(--muted);}
+.goal:last-child{border:2px solid var(--v);}
 .bridge{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch;}
 .bridge .vs{display:block;}
 .bridge .arrow{align-self:center;display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:800;color:var(--v);font-size:14px;text-align:center;max-width:150px;}
@@ -120,7 +132,7 @@ C_CSS = r'''
 .elix .ph-wrap img{width:100%;height:auto;display:block;}
 @media(max-width:900px){
   .year{grid-template-columns:1fr;gap:26px;}.year::before{display:none;}
-  .ym{padding-left:0;}.agit{grid-template-columns:1fr;}
+  .ym{padding-left:0;}.agit{grid-template-columns:1fr;}.goals{grid-template-columns:1fr 1fr;}
   .bridge{grid-template-columns:1fr;}.bridge .arrow{max-width:none;flex-direction:row;}.bridge .arrow span{transform:rotate(90deg);}
   .elix{grid-template-columns:1fr;padding:26px;}
   .story{font-size:17px;}
@@ -145,10 +157,11 @@ def page():
     steps = ''.join(
         f'<div class="step2"><span class="n grad">0{i}</span><h3>{e(t)}</h3><p>{e(x)}</p>' + step_shots[i - 1] + '</div>'
         for i, (t, x) in enumerate(STEPS, 1))
+    goals = ''.join(f'<div class="goal">{icon(ic)}<h3>{e(t)}</h3><p>{e(x)}</p></div>' for ic, t, x in GOALS)
     faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in FAQ)
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
-    title = 'Cada año trabajas más. ¿Por qué tu salón no crece? Crea tu plan financiero 2027 | Godolphy'
+    title = 'Este año ibas a hacer crecer tu salón. ¿Qué ha pasado? Crea tu plan financiero 2027 | Godolphy'
     desc = 'Te haces tu plan financiero 2027: eliges cuánto quieres crecer y cada mes sabes si vas bien. Sin Excel y sin saber de finanzas. Gratis 30 días, sin tarjeta.'
     return f'''<!DOCTYPE html>
 <html lang="es">
@@ -178,8 +191,8 @@ def page():
   <div class="w grid">
     <div>
       <p class="tag"><i>●</i> Plan 2027</p>
-      <h1>Cada año trabajas más. <span class="grad">¿Por qué tu salón</span> <span class="nw">{circ('<span class="grad">no crece</span>')}<span class="grad">?</span></span></h1>
-      <p class="sub">Con Godolphy te haces tu <b>plan financiero 2027</b>: eliges cuánto quieres crecer y cada mes sabes si vas bien. Sin Excel y sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
+      <h1>Este año ibas a hacer crecer tu salón. <span class="nw">{circ('<span class="grad">¿Qué ha pasado?</span>')}</span></h1>
+      <p class="sub">Más horas, más gastos y, a final de año, más o menos igual. Con tu <b>plan financiero 2027</b> sabes cuánto tienes que facturar cada mes para crecer de verdad. Sin Excel y sin saber de finanzas.<span id="cd" hidden> Quedan <b id="cd-n"></b> para enero.</span></p>
       {cta('hero')}
       <ul class="fud">{fud}</ul>
       <div class="proof">
@@ -215,8 +228,18 @@ def page():
   </div>
 </section>
 
+<!-- 3b. Qué significa crecer -->
+<section class="sec sec--soft">
+  <div class="w">
+    <h2 class="h2">¿Qué significa <span class="grad">crecer</span> para ti?</h2>
+    <div class="goals">{goals}</div>
+    <p class="turn">Elijas el que elijas, el plan te dice {mark('cuánto facturar')} cada mes para llegar.</p>
+    <div class="mcta">{cta('goals')}</div>
+  </div>
+</section>
+
 <!-- 4. La mentora -->
-<section class="sec sec--soft" id="neus">
+<section class="sec" id="neus">
   <div class="w neus2">
     <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
     <div>
