@@ -1,0 +1,13 @@
+{
+ "out": "imagegen/neus/escacs_ungles_E_primerpla.png",
+ "model": "gemini-3.1-flash-image-preview",
+ "prompt": "Use the woman from the reference image as the exact same person: identical face, long straight dark-brown hair with center part, gold hoop earrings, black leather blazer. Do not beautify. New shot in the SAME scene and same colours (lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, neon-lime yellow square, nail polish bottles): she has leaned in very close to the camera, extreme close-up of her face filling the upper two thirds of the vertical 9:16 frame, slight wide-angle fisheye distortion that makes her face feel close to the lens, slightly theatrical Tim Burton mood. Serious, intense, hypnotic stare straight into the lens, not smiling, lips closed. Behind her, slightly out of focus, the lilac room and the checkerboard floor are still visible. Hands not visible. Photorealistic, sharp focus on the eyes, realistic skin texture. No text, no logos, no watermark.",
+ "size": "9:16",
+ "ref_files": [
+  "imagegen/neus/escacs_ungles_C.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
