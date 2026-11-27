@@ -300,9 +300,9 @@ def page():
   <div class="w neus2">
     <img src="/lp/salones/neus.webp" alt="Neus, fundadora de Godolphy" width="798" height="997" loading="lazy">
     <div>
-      <h2 class="h2">Sé lo que es llevar un salón: <span class="grad">yo también tuve el mío</span></h2>
-      <p>Soy Neus. Trabajé unos 15 años en multinacionales, donde nadie empieza el año sin un objetivo. Después monté mi propio salón con una socia, y yo llevaba la parte de negocio.</p>
-      <p>Por eso he creado Godolphy: el consultor financiero que mi salón nunca tuvo.</p>
+      <h2 class="h2">Detrás de Godolphy hay una persona, <span class="grad">no un call center</span></h2>
+      <p>Soy Neus. He trabajado unos 15 años en multinacionales y he llevado mi propio salón con una socia.</p>
+      <p>Si te atascas con tu plan o quieres pasar tu salón a Godolphy desde otro programa, te ayudo yo. Y el cambio te lo hago gratis.</p>
       <p class="award">{icon('trophy', 'ico ico--s')} Premio Emprendedores Tech 2026 a la mejor app del sector estética</p>
       <p class="sig">Neus, fundadora de Godolphy</p>
     </div>
