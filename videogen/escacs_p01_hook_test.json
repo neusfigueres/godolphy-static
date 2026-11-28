@@ -1,0 +1,16 @@
+{
+ "out": "videogen/out/escacs_p01_hook_test.mp4",
+ "model": "kling-v3",
+ "prompt": "Context: first shot of a surreal Tim Burton-style short ad. A woman in a black leather suit kneels on a giant checkerboard floor inside a lilac cube room, placing a nail polish bottle on the yellow square like a chess move. Action: she looks straight into the lens with a serious, intense stare and slowly leans toward the camera until her face fills the frame in a fisheye close-up, while she says in Spanish, clearly and calmly, lips perfectly synced: \"¿Tienes un salón de uñas y cada año mueves ficha sin saber hacia dónde?\" VOICE: mature woman around 45 years old, warm, low-medium pitch, confident and slightly mysterious; native Castilian Spanish from Spain (Madrid accent, peninsular pronunciation with the 'z/c' as 'th'); NOT Latin American, NOT young. Camera completely static, no zoom. Only her voice, very subtle room tone, no music.",
+ "negative_prompt": "Latin American accent, young voice, high-pitched voice, music, camera zoom, smiling, distorted face, extra fingers, text",
+ "frames": [
+  "imagegen/neus/escacs_ungles_C.png",
+  "imagegen/neus/escacs_ungles_E_primerpla.png"
+ ],
+ "body": {
+  "duration": 5,
+  "mode": "pro",
+  "aspect_ratio": "9:16",
+  "audio": true
+ }
+}
