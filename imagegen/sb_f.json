@@ -1,0 +1,15 @@
+{
+ "out": "imagegen/neus/sb_f.png",
+ "model": "gpt-image-2-ext",
+ "prompt": "A film storyboard sheet with exactly 3 panels side by side in one row, thin white gutters, light grey background. Each panel has a large bold black number in its top-left corner: 9, 10, 11. No other text anywhere. EXACT same visual style as the reference storyboard images: bright, clean, even studio lighting, flat lilac #A99BFF cube room, glossy near-black and cream checkerboard floor, one neon-lime yellow #EEFE3A square, photorealistic, no haze, no dramatic shadows. NEUS = the woman from the references (identical face, long straight dark-brown hair with center part, black leather suit, gold hoops). Panel 9: NEUS grabs the edge of the whole checkerboard floor and flips it up like a giant card, the board mid-rotation, nail polish bottles and black chess pieces flying in the air. Panel 10: the underside of the board is revealed: the whole floor is now a giant white app screen with violet bar charts and twelve monthly bars (no readable text); NEUS stands on it, slight high angle. Panel 11: low angle across the giant floor screen: NEUS slides four nail polish bottles (lilac, deep violet, near-black, neon-lime) along four glowing violet slider lanes like levers. Correct anatomy and hands.",
+ "size": "16:9",
+ "ref_files": [
+  "imagegen/neus/sb_a.png",
+  "imagegen/neus/sb_e.png",
+  "imagegen/neus/escacs_ungles_C.png"
+ ],
+ "extra": {
+  "resolution": "2K"
+ },
+ "no_style": true
+}
